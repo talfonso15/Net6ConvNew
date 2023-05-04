@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="if_button_cancel_19393" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_cancel_1939.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contract (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\contract (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1493082053_1-04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1493082053_1-04.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2682803_attention_erro_exclamation_mark_warn_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2682803_attention_erro_exclamation_mark_warn_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_gtk-cancel_39042" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_gtk-cancel_39042.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6351930_eye_password_see_view_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\6351930_eye_password_see_view_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="49576_new_add_plus_user_icon (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\49576_new_add_plus_user_icon (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_button_cancel_1939" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_cancel_1939.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Cute Ball - Stop_321411" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Cute Ball - Stop_32141.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_button_cancel_19391" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_cancel_1939.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_compose_1055085" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_compose_1055085.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1496272894_pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1496272894_pdf.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Help_1493288" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\Help_1493288.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Cute Ball - Go_32133" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Cute Ball - Go_32133.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1495732376_circle-no-forbidden-outline-glyph" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495732376_circle-no-forbidden-outline-glyph.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_icon-57_667370" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_icon-57_667370.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\next.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_print_16_22615" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_print_16_22615.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_email_forward_407711" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_email_forward_40771.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_check_70974" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_check_70974.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1495732510_Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495732510_Stop.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="step1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\step1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_pdf_272705" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_pdf_272705.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1495734626_db_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495734626_db_update.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contract (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\contract (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_folder_email_40784" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_folder_email_40784.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Help2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\Help2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_digital_signature_pen_92643" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_digital_signature_pen_92643.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Eye_see_unview_hide_optical_blind_invisible_1886933" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_Eye_see_unview_hide_optical_blind_invisible_1886933.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_information_14516" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_information_14516.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_search_user_6184" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_search_user_6184.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1495734391_gtk-refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495734391_gtk-refresh.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\paper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1891023_cancel_cercle_close_delete_dismiss_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1891023_cancel_cercle_close_delete_dismiss_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_info_11086" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_info_11086.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_check_1055094" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_check_1055094.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="49576_new_add_plus_user_icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\49576_new_add_plus_user_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_button_cancel_684" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_cancel_684.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_cancel_48_10277" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_cancel_48_10277.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4021466_lock_password_protect_security_shield_icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4021466_lock_password_protect_security_shield_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_add1-_32378 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_add1-_32378 (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Dele" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Dele.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Cute Ball - Stop_32141" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Cute Ball - Stop_32141.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Stop_89027" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Stop_89027.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Accept_check_data_storage_folder_ok_1886032" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Accept_check_data_storage_folder_ok_1886032.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_button_cancel_1939(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_cancel_1939(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4021466_lock_password_protect_security_shield_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4021466_lock_password_protect_security_shield_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="49576_new_add_plus_user_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\49576_new_add_plus_user_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_window_suppressed_2053" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_window_suppressed_2053.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_314Arrow_film_movie_play_player_start_video_1886030" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_314Arrow_film_movie_play_player_start_video_1886030.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_window_suppressed_7808" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_window_suppressed_7808.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="49576_new_add_plus_user_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\49576_new_add_plus_user_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_go-back_60181" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_go-back_60181.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Symbol_-_Check_58687" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Symbol_-_Check_58687.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_drawing_pen_45378" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_drawing_pen_45378.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Step2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\Step2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_signature_4113" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_signature_4113.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_kpdf_1371" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_kpdf_1371.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contract (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\contract (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_033_95870" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_033_95870.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_off_100592" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_off_100592.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Change_edit_options_pencil_settings_tools_write_1886543" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Change_edit_options_pencil_settings_tools_write_1886543.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\copy icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="step 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\step 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_button_13_61444" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_13_61444.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_11_330397" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_11_330397.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_netvibes_12939" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_netvibes_12939.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4021466_lock_password_protect_security_shield_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4021466_lock_password_protect_security_shield_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_icon-21-eye-hidden_314753" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_icon-21-eye-hidden_314753.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_edit_102008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_edit_102008.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1493081629_081_Pen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1493081629_081_Pen.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1495047519_Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495047519_Save.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_6_408050" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_6_408050.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contract" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\contract.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1495734510_stock_update-data" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495734510_stock_update-data.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_1229050" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\image_1229050.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_office-16_3045441" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_office-16_3045441.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_5_330396" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_5_330396.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_pdf_1644" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_pdf_1644.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contract (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\contract (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_archive_40681" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_archive_40681.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="49576_new_add_plus_user_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\49576_new_add_plus_user_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="change status" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\change status.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_disk_52761" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_disk_5276.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Replay_2001891" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_Replay_2001891.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_button_cancel_1939(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_cancel_1939(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Artboard_1_1790655" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_Artboard_1_1790655.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_close_61762" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_close_61762.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_file_pdf_50196" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_file_pdf_50196.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_button_blue_repeat_4071922" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_button_blue_repeat_4071922.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_pencil_1055013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_pencil_1055013.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_button_cancel_1709" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_cancel_1709.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_edit-notes_46798" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_edit-notes_46798.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_1229052" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\image_1229052.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1493421169_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1493421169_Delete.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_folder_1287526 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_folder_1287526 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_ok_61805" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_ok_61805.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_edit_83434" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_edit_83434.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_1-02_511559" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_1-02_511559.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Archive_document_check_ok_success_folder_ml_1886354" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_Archive_document_check_ok_success_folder_ml_1886354.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1493081488_pen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1493081488_pen.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_check_10550941" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_check_1055094.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1496272791_View" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1496272791_View.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_General_Office_09_2530835" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_General_Office_09_2530835.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="step11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\step11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contract1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\contract.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_edit-delete_118920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_edit-delete_118920.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1495733170_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495733170_24.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_disk_5276" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_disk_5276.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Gnome-Emblem-Default-64_55596" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Gnome-Emblem-Default-64_55596.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\calc.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_folder_1287526 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_folder_1287526 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_email_forward_40771" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_email_forward_40771.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Eye_see_unview_hide_optical_blind_invisible_1886933 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_Eye_see_unview_hide_optical_blind_invisible_1886933 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_gtk-refresh_48111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_gtk-refresh_48111.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="signature" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\signature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_com.apple.mobilenotes_34083" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_com.apple.mobilenotes_34083.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_button_cancel_19392" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_cancel_1939.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="23203_add user_new user_user_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\23203_add user_new user_user_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_button_blue_repeat_40719" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_button_blue_repeat_40719.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1891023_cancel_cercle_close_delete_dismiss_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1891023_cancel_cercle_close_delete_dismiss_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Archive_archives_files_hosting_database_server_storage_1886359" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_Archive_archives_files_hosting_database_server_storage_1886359.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_quit_37278" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_quit_37278.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Close_1891023" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Close_1891023.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7023958_password_account_security_reset_safety_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7023958_password_account_security_reset_safety_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Apple_Mail_2697658" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Apple_Mail_2697658.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_stock_refresh_94689" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_stock_refresh_94689.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1496272438_magnifyingglass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1496272438_magnifyingglass.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1496097664_reload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1496097664_reload.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="step111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\step111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4900847_card_credit_debit_payment_verify_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4900847_card_credit_debit_payment_verify_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\copy icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_1229051" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\image_1229051.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="step22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\step22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1496272606_view6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1496272606_view6.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_add_3855641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_add_3855641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Artboard_1_1790663" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Artboard_1_1790663.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Shutdown_Box_Red_34246" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Shutdown_Box_Red_34246.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1737385_e-mail_email_mail_message_messagesent_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1737385_e-mail_email_mail_message_messagesent_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_archive_406811" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_archive_40681.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1496272468_Magnifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1496272468_Magnifier.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contract (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\contract (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Archive_docs_folder_Clipboard_document_file_list_report_1886356" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_Archive_docs_folder_Clipboard_document_file_list_report_1886356.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2308977-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\2308977-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1494979605_sign-add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1494979605_sign-add.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Button White Check_58494" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Button White Check_58494.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contract (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\contract (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_circle-edit-search_1494924" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_circle-edit-search_1494924.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1495733136_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495733136_24.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_icon-21-eye-hidden_314753 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\iconfinder_icon-21-eye-hidden_314753 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Change status 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\Change status 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
