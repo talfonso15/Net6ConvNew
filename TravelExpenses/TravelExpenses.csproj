@@ -1,19 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6CBD259D-8647-47E5-B7EC-9DB16DC74382}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TravelExpenses</RootNamespace>
-    <AssemblyName>TravelExpenses</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>\\LCMCDSQL\ServiceRequest_Test\Travel Expenses\</PublishUrl>
     <Install>true</Install>
@@ -34,25 +23,9 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>B9744396F0D2FF3CE33FBD442D61E54A3640D265</ManifestCertificateThumbprint>
@@ -109,620 +82,30 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\office\15.0.0.0__71e9bce111e9429c\OFFICE.DLL</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admins\ArchivedTravels.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\ArchivedTravels.Designer.cs">
-      <DependentUpon>ArchivedTravels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\ArchivedAuthorizations.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\ArchivedAuthorizations.Designer.cs">
-      <DependentUpon>ArchivedAuthorizations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\CalculatePerDiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\CalculatePerDiem.Designer.cs">
-      <DependentUpon>CalculatePerDiem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main\CreateNewAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\CreateNewAccount.Designer.cs">
-      <DependentUpon>CreateNewAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditMileageRate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditMileageRate.Designer.cs">
-      <DependentUpon>EditMileageRate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Travel Items\frmMealsPerDiemHelp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\frmMealsPerDiemHelp.Designer.cs">
-      <DependentUpon>frmMealsPerDiemHelp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main\frmResetPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\frmResetPassword.Designer.cs">
-      <DependentUpon>frmResetPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Misc\LodgingSelection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\LodgingSelection.Designer.cs">
-      <DependentUpon>LodgingSelection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Misc\AirfareSelection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\AirfareSelection.Designer.cs">
-      <DependentUpon>AirfareSelection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Misc\CarRentalSelection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\CarRentalSelection.Designer.cs">
-      <DependentUpon>CarRentalSelection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditThirdPartyAuthorizationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditThirdPartyAuthorizationForm.Designer.cs">
-      <DependentUpon>EditThirdPartyAuthorizationForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditThirdPartyTravel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditThirdPartyTravel.Designer.cs">
-      <DependentUpon>EditThirdPartyTravel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main\AddTravelItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\AddTravelItem.Designer.cs">
-      <DependentUpon>AddTravelItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\Admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\AdminAuthorization.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\AdminAuthorization.Designer.cs">
-      <DependentUpon>AdminAuthorization.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Misc\OtherExpensesSelection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\OtherExpensesSelection.Designer.cs">
-      <DependentUpon>OtherExpensesSelection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\Travel By Date.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\Travel By Date.Designer.cs">
-      <DependentUpon>Travel By Date.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Misc\ReviewSteps.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\ReviewSteps.Designer.cs">
-      <DependentUpon>ReviewSteps.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Travel Items\AirFare.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\AirFare.Designer.cs">
-      <DependentUpon>AirFare.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Estimate travel\AllEstimates.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estimate travel\AllEstimates.Designer.cs">
-      <DependentUpon>AllEstimates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\CFOReview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\CFOReview.Designer.cs">
-      <DependentUpon>CFOReview.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\AirFarecl.cs" />
-    <Compile Include="Travel Items\CarRental.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\CarRental.Designer.cs">
-      <DependentUpon>CarRental.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\CarRentalcl.cs" />
-    <Compile Include="Classes\CommonVariables.cs" />
-    <Compile Include="Main\CreateSignature.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\CreateSignature.Designer.cs">
-      <DependentUpon>CreateSignature.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditOtherExpenses.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditOtherExpenses.Designer.cs">
-      <DependentUpon>EditOtherExpenses.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditAirFare.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditAirFare.Designer.cs">
-      <DependentUpon>EditAirFare.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditCarRental.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditCarRental.Designer.cs">
-      <DependentUpon>EditCarRental.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditLodging.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditLodging.Designer.cs">
-      <DependentUpon>EditLodging.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditMileage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditMileage.Designer.cs">
-      <DependentUpon>EditMileage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditMeals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditMeals.Designer.cs">
-      <DependentUpon>EditMeals.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditRegistration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditRegistration.Designer.cs">
-      <DependentUpon>EditRegistration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditTravel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditTravel.Designer.cs">
-      <DependentUpon>EditTravel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditPassword.Designer.cs">
-      <DependentUpon>EditPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\EditUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\EditUser.Designer.cs">
-      <DependentUpon>EditUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Estimate travel\EstimateTravel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estimate travel\EstimateTravel.Designer.cs">
-      <DependentUpon>EstimateTravel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\EstimateTravelcl.cs" />
-    <Compile Include="Main\ListAllTravels.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\ListAllTravels.Designer.cs">
-      <DependentUpon>ListAllTravels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Travel Items\Lodging.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\Lodging.Designer.cs">
-      <DependentUpon>Lodging.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\Lodgingcl.cs" />
-    <Compile Include="Main\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main\Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Travel Items\Meals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\Meals.Designer.cs">
-      <DependentUpon>Meals.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\Mealscl.cs" />
-    <Compile Include="Classes\MealsDatecl.cs" />
-    <Compile Include="Travel Items\Mileage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\Mileage.Designer.cs">
-      <DependentUpon>Mileage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\Mileagecl.cs" />
-    <Compile Include="Travel Items\MileageCalculator.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\MileageCalculator.Designer.cs">
-      <DependentUpon>MileageCalculator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Travel Items\OtherExpenses.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\OtherExpenses.Designer.cs">
-      <DependentUpon>OtherExpenses.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\OtherExpensescl.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Main\Progress Bar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\Progress Bar.Designer.cs">
-      <DependentUpon>Progress Bar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\Registartioncl.cs" />
-    <Compile Include="Travel Items\RegisterTravel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\RegisterTravel.Designer.cs">
-      <DependentUpon>RegisterTravel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Travel Items\Registration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\Registration.Designer.cs">
-      <DependentUpon>Registration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit\SelectItemsEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit\SelectItemsEdit.Designer.cs">
-      <DependentUpon>SelectItemsEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Travel Items\Summary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\Summary.Designer.cs">
-      <DependentUpon>Summary.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\SuperAdminAuthorization.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\SuperAdminAuthorization.Designer.cs">
-      <DependentUpon>SuperAdminAuthorization.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\SuperAdminTravels.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\SuperAdminTravels.Designer.cs">
-      <DependentUpon>SuperAdminTravels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\Supervisor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\Supervisor.Designer.cs">
-      <DependentUpon>Supervisor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admins\SupervisorList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\SupervisorList.Designer.cs">
-      <DependentUpon>SupervisorList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main\Sync.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\Sync.Designer.cs">
-      <DependentUpon>Sync.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\Travel.cs" />
-    <Compile Include="Admins\TP_Travel_Person.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admins\TP_Travel_Person.Designer.cs">
-      <DependentUpon>TP_Travel_Person.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TravelExpensesDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TravelExpensesDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TravelExpensesDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TravelExpensesDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Travel Items\TravelItems.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Travel Items\TravelItems.Designer.cs">
-      <DependentUpon>TravelItems.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main\User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\User.Designer.cs">
-      <DependentUpon>User.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main\ViewPDF.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\ViewPDF.Designer.cs">
-      <DependentUpon>ViewPDF.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main\ViewTravel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main\ViewTravel.Designer.cs">
-      <DependentUpon>ViewTravel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\Travels by Date and Employee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\Travels by Date and Employee.Designer.cs">
-      <DependentUpon>Travels by Date and Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Misc\UserHistory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\UserHistory.Designer.cs">
-      <DependentUpon>UserHistory.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Admins\ArchivedAuthorizations.resx">
-      <DependentUpon>ArchivedAuthorizations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\ArchivedTravels.resx">
-      <DependentUpon>ArchivedTravels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\CalculatePerDiem.resx">
-      <DependentUpon>CalculatePerDiem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\CreateNewAccount.resx">
-      <DependentUpon>CreateNewAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditMileageRate.resx">
-      <DependentUpon>EditMileageRate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\frmMealsPerDiemHelp.resx">
-      <DependentUpon>frmMealsPerDiemHelp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\frmResetPassword.resx">
-      <DependentUpon>frmResetPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc\LodgingSelection.resx">
-      <DependentUpon>LodgingSelection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc\AirfareSelection.resx">
-      <DependentUpon>AirfareSelection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc\CarRentalSelection.resx">
-      <DependentUpon>CarRentalSelection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditThirdPartyAuthorizationForm.resx">
-      <DependentUpon>EditThirdPartyAuthorizationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditThirdPartyTravel.resx">
-      <DependentUpon>EditThirdPartyTravel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\AddTravelItem.resx">
-      <DependentUpon>AddTravelItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\AdminAuthorization.resx">
-      <DependentUpon>AdminAuthorization.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc\OtherExpensesSelection.resx">
-      <DependentUpon>OtherExpensesSelection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Travel By Date.resx">
-      <DependentUpon>Travel By Date.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc\ReviewSteps.resx">
-      <DependentUpon>ReviewSteps.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\AirFare.resx">
-      <DependentUpon>AirFare.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estimate travel\AllEstimates.resx">
-      <DependentUpon>AllEstimates.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\CarRental.resx">
-      <DependentUpon>CarRental.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\CFOReview.resx">
-      <DependentUpon>CFOReview.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\CreateSignature.resx">
-      <DependentUpon>CreateSignature.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditOtherExpenses.resx">
-      <DependentUpon>EditOtherExpenses.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditAirFare.resx">
-      <DependentUpon>EditAirFare.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditCarRental.resx">
-      <DependentUpon>EditCarRental.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditLodging.resx">
-      <DependentUpon>EditLodging.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditMileage.resx">
-      <DependentUpon>EditMileage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditMeals.resx">
-      <DependentUpon>EditMeals.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditRegistration.resx">
-      <DependentUpon>EditRegistration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditTravel.resx">
-      <DependentUpon>EditTravel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditPassword.resx">
-      <DependentUpon>EditPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\EditUser.resx">
-      <DependentUpon>EditUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estimate travel\EstimateTravel.resx">
-      <DependentUpon>EstimateTravel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\ListAllTravels.resx">
-      <DependentUpon>ListAllTravels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\Lodging.resx">
-      <DependentUpon>Lodging.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\Meals.resx">
-      <DependentUpon>Meals.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\Mileage.resx">
-      <DependentUpon>Mileage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\MileageCalculator.resx">
-      <DependentUpon>MileageCalculator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\OtherExpenses.resx">
-      <DependentUpon>OtherExpenses.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\Progress Bar.resx">
-      <DependentUpon>Progress Bar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="Travel Items\RegisterTravel.resx">
-      <DependentUpon>RegisterTravel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\Registration.resx">
-      <DependentUpon>Registration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit\SelectItemsEdit.resx">
-      <DependentUpon>SelectItemsEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\Summary.resx">
-      <DependentUpon>Summary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\SuperAdminAuthorization.resx">
-      <DependentUpon>SuperAdminAuthorization.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\SuperAdminTravels.resx">
-      <DependentUpon>SuperAdminTravels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\Supervisor.resx">
-      <DependentUpon>Supervisor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\SupervisorList.resx">
-      <DependentUpon>SupervisorList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\Sync.resx">
-      <DependentUpon>Sync.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admins\TP_Travel_Person.resx">
-      <DependentUpon>TP_Travel_Person.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Travel Items\TravelItems.resx">
-      <DependentUpon>TravelItems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\User.resx">
-      <DependentUpon>User.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\ViewPDF.resx">
-      <DependentUpon>ViewPDF.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\ViewTravel.resx">
-      <DependentUpon>ViewTravel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Travels by Date and Employee.resx">
-      <DependentUpon>Travels by Date and Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc\UserHistory.resx">
-      <DependentUpon>UserHistory.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="app.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <None Include="TravelExpensesDataSet.xsc">
+    <None Update="TravelExpensesDataSet.xsc">
       <DependentUpon>TravelExpensesDataSet.xsd</DependentUpon>
     </None>
-    <None Include="TravelExpensesDataSet.xsd">
+    <None Update="TravelExpensesDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>TravelExpensesDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="TravelExpensesDataSet.xss">
+    <None Update="TravelExpensesDataSet.xss">
       <DependentUpon>TravelExpensesDataSet.xsd</DependentUpon>
     </None>
-    <None Include="TravelExpensesDataSet1.xsc">
+    <None Update="TravelExpensesDataSet1.xsc">
       <DependentUpon>TravelExpensesDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="TravelExpensesDataSet1.xsd">
+    <None Update="TravelExpensesDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>TravelExpensesDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="TravelExpensesDataSet1.xss">
+    <None Update="TravelExpensesDataSet1.xss">
       <DependentUpon>TravelExpensesDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="TravelExpenses_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -753,152 +136,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1491947336_icon-58.ico" />
-    <None Include="icons\Change status 1.png" />
-    <None Include="icons\change status.png" />
-    <None Include="icons\copy icon2.png" />
-    <None Include="icons\copy icon.png" />
-    <None Include="icons\6351930_eye_password_see_view_icon.png" />
-    <None Include="Resources\2682803_attention_erro_exclamation_mark_warn_icon.png" />
+    <Content Include="appsettings.json" />
     <None Include="Resources\49576_new_add_plus_user_icon %283%29.png" />
-    <None Include="Resources\49576_new_add_plus_user_icon1.png" />
     <None Include="Resources\49576_new_add_plus_user_icon %282%29.png" />
-    <None Include="Resources\1891023_cancel_cercle_close_delete_dismiss_icon.png" />
     <None Include="Resources\1891023_cancel_cercle_close_delete_dismiss_icon %281%29.png" />
     <None Include="Resources\23203_add user_new user_user_icon %281%29.png" />
     <None Include="Resources\49576_new_add_plus_user_icon %281%29.png" />
-    <None Include="Resources\49576_new_add_plus_user_icon.png" />
-    <None Include="Resources\4900847_card_credit_debit_payment_verify_icon.png" />
-    <None Include="Resources\1737385_e-mail_email_mail_message_messagesent_icon.png" />
-    <None Include="Resources\7023958_password_account_security_reset_safety_icon.png" />
     <None Include="Resources\4021466_lock_password_protect_security_shield_icon %282%29.png" />
     <None Include="Resources\4021466_lock_password_protect_security_shield_icon %281%29.png" />
-    <None Include="Resources\4021466_lock_password_protect_security_shield_icon.png" />
     <None Include="icons\iconfinder_folder_1287526 %282%29.png" />
     <None Include="icons\iconfinder_folder_1287526 %281%29.png" />
-    <None Include="icons\step 3.png" />
-    <None Include="icons\step22.png" />
-    <None Include="icons\Step2.png" />
-    <None Include="icons\step111.png" />
-    <None Include="icons\step11.png" />
-    <None Include="icons\step1.png" />
-    <None Include="icons\Help2.png" />
-    <None Include="icons\Help_1493288.png" />
-    <None Include="icons\iconfinder_archive_40681.png" />
-    <None Include="icons\iconfinder_Archive_document_check_ok_success_folder_ml_1886354.ico" />
-    <None Include="icons\iconfinder_Artboard_1_1790655.ico" />
-    <None Include="icons\iconfinder_Archive_docs_folder_Clipboard_document_file_list_report_1886356.ico" />
-    <None Include="icons\iconfinder_archive_40681.ico" />
-    <None Include="icons\iconfinder_Archive_archives_files_hosting_database_server_storage_1886359.ico" />
-    <None Include="icons\iconfinder_Replay_2001891.png" />
-    <None Include="icons\iconfinder_button_blue_repeat_4071922.png" />
-    <None Include="icons\iconfinder_button_blue_repeat_40719.ico" />
-    <None Include="icons\iconfinder_stock_refresh_94689.png" />
-    <None Include="icons\iconfinder_gtk-refresh_48111.ico" />
-    <None Include="Resources\iconfinder_add_3855641.png" />
     <None Include="icons\iconfinder_Eye_see_unview_hide_optical_blind_invisible_1886933 %281%29.png" />
-    <None Include="icons\iconfinder_Eye_see_unview_hide_optical_blind_invisible_1886933.png" />
     <None Include="icons\iconfinder_icon-21-eye-hidden_314753 %281%29.png" />
-    <None Include="icons\iconfinder_icon-21-eye-hidden_314753.png" />
-    <None Include="icons\if_314Arrow_film_movie_play_player_start_video_1886030.ico" />
-    <None Include="icons\if_button_13_61444.ico" />
-    <None Include="icons\if_go-back_60181.ico" />
-    <None Include="icons\if_print_16_22615.ico" />
-    <None Include="icons\if_11_330397.ico" />
-    <None Include="icons\image_1229052.gif" />
-    <None Include="icons\image_1229051.gif" />
-    <None Include="icons\image_1229050.gif" />
-    <None Include="icons\contract.png" />
     <None Include="icons\contract %284%29.png" />
     <None Include="icons\contract %283%29.png" />
     <None Include="icons\contract %282%29.png" />
     <None Include="icons\contract %281%29.png" />
-    <None Include="icons\paper.png" />
-    <None Include="icons\if_signature_4113.ico" />
-    <None Include="icons\if_office-16_3045441.ico" />
-    <None Include="icons\if_digital_signature_pen_92643.ico" />
-    <None Include="icons\if_drawing_pen_45378.ico" />
-    <None Include="icons\signature.png" />
-    <None Include="icons\if_disk_5276.ico" />
-    <None Include="icons\if_Dele.ico" />
     <None Include="icons\if_add1-_32378 %281%29.ico" />
-    <None Include="icons\if_netvibes_12939.ico" />
-    <None Include="icons\2308977-24.png" />
-    <None Include="icons\if_5_330396.ico" />
-    <None Include="icons\if_General_Office_09_2530835.ico" />
-    <None Include="icons\if_6_408050.png" />
-    <None Include="icons\if_com.apple.mobilenotes_34083.png" />
-    <None Include="icons\if_circle-edit-search_1494924.ico" />
-    <None Include="icons\if_Change_edit_options_pencil_settings_tools_write_1886543.ico" />
-    <None Include="icons\if_edit_83434.ico" />
-    <None Include="icons\if_edit-notes_46798.ico" />
-    <None Include="icons\if_edit_102008.gif" />
-    <None Include="icons\if_pencil_1055013.ico" />
-    <None Include="icons\if_compose_1055085.ico" />
-    <None Include="icons\if_Shutdown_Box_Red_34246.ico" />
-    <None Include="icons\if_off_100592.ico" />
-    <None Include="icons\if_close_61762.ico" />
-    <None Include="icons\if_cancel_48_10277.ico" />
-    <None Include="icons\if_button_cancel_684.ico" />
-    <None Include="Resources\if_edit-delete_118920.ico" />
-    <None Include="icons\if_gtk-cancel_39042.ico" />
     <None Include="icons\if_button_cancel_1939%282%29.png" />
     <None Include="icons\if_button_cancel_1939%281%29.png" />
-    <None Include="icons\if_button_cancel_1939.png" />
-    <None Include="icons\if_button_cancel_1939.ico" />
-    <None Include="icons\if_button_cancel_1709.ico" />
-    <None Include="icons\if_Cute Ball - Stop_32141.png" />
-    <None Include="icons\if_ok_61805.ico" />
-    <None Include="icons\if_folder_email_40784.ico" />
-    <None Include="icons\if_email_forward_40771.ico" />
-    <None Include="icons\if_Apple_Mail_2697658.ico" />
-    <None Include="icons\if_check_70974.ico" />
-    <None Include="icons\if_Accept_check_data_storage_folder_ok_1886032.ico" />
-    <None Include="icons\if_Button White Check_58494.ico" />
-    <None Include="icons\if_Symbol_-_Check_58687.ico" />
-    <None Include="icons\if_check_1055094.ico" />
-    <None Include="icons\if_Gnome-Emblem-Default-64_55596.ico" />
-    <None Include="icons\if_Cute Ball - Go_32133.ico" />
-    <None Include="icons\if_icon-57_667370.ico" />
-    <None Include="icons\if_information_14516.ico" />
-    <None Include="icons\if_info_11086.ico" />
-    <None Include="icons\calc.ico" />
-    <None Include="icons\if_quit_37278.png" />
-    <None Include="icons\if_Close_1891023.ico" />
-    <None Include="icons\if_window_suppressed_2053.ico" />
-    <None Include="icons\if_window_suppressed_7808.ico" />
-    <None Include="icons\if_Cute Ball - Stop_32141.ico" />
-    <None Include="icons\if_Artboard_1_1790663.ico" />
-    <None Include="icons\if_Stop_89027.ico" />
-    <None Include="icons\if_pdf_1644.ico" />
-    <None Include="icons\if_pdf_272705.ico" />
-    <None Include="icons\if_1-02_511559.ico" />
-    <None Include="icons\if_file_pdf_50196.ico" />
-    <None Include="icons\if_kpdf_1371.ico" />
-    <None Include="icons\if_search_user_6184.ico" />
-    <None Include="icons\if_033_95870.ico" />
-    <None Include="Resources\1496272894_pdf.ico" />
-    <None Include="Resources\1496272791_View.ico" />
-    <None Include="Resources\1496272606_view6.ico" />
-    <None Include="Resources\1496272438_magnifyingglass.ico" />
-    <None Include="Resources\1496272468_Magnifier.ico" />
-    <None Include="Resources\User.ico" />
-    <None Include="Resources\1496097664_reload.ico" />
-    <None Include="Resources\login.ico" />
-    <None Include="Resources\back.ico" />
-    <None Include="Resources\next.ico" />
-    <None Include="Resources\1495734626_db_update.ico" />
-    <None Include="Resources\1495734510_stock_update-data.ico" />
-    <None Include="Resources\1495734391_gtk-refresh.ico" />
-    <None Include="Resources\1495733170_24.ico" />
-    <None Include="Resources\1495733136_24.ico" />
-    <None Include="Resources\1495732510_Stop.ico" />
-    <None Include="Resources\1495732376_circle-no-forbidden-outline-glyph.ico" />
-    <None Include="Resources\1495047519_Save.ico" />
-    <None Include="Resources\1494979605_sign-add.ico" />
-    <None Include="Resources\1493421169_Delete.ico" />
-    <None Include="Resources\1493082053_1-04.ico" />
-    <None Include="Resources\1493081629_081_Pen.ico" />
-    <None Include="Resources\1493081488_pen.ico" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">
@@ -931,13 +187,15 @@
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="RawPrint" Version="0.2.0.0" />
+  </ItemGroup>
 </Project>

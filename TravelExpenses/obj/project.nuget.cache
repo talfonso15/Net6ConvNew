@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "QL5q8nlydovICdjowtW8gq8TRVC0RJnhmPNWSaheBLniNAQiOBKWQ1MwA1jqezcPSWUvBcJNGBwR1ZxzmGQHqw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Thaisa\\Desktop\\Travel Expenses Conv\\TravelExpenses\\TravelExpenses.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Thaisa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Thaisa\\.nuget\\packages\\microsoft.dotnet.upgradeassistant.extensions.default.analyzers\\0.4.421302\\microsoft.dotnet.upgradeassistant.extensions.default.analyzers.0.4.421302.nupkg.sha512",
+    "C:\\Users\\Thaisa\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Thaisa\\.nuget\\packages\\rawprint\\0.2.0\\rawprint.0.2.0.nupkg.sha512",
+    "C:\\Users\\Thaisa\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\Thaisa\\.nuget\\packages\\system.directoryservices\\7.0.1\\system.directoryservices.7.0.1.nupkg.sha512",
+    "C:\\Users\\Thaisa\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\Thaisa\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Thaisa\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RawPrint 0.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RawPrint",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
+}
