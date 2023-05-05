@@ -54,17 +54,21 @@
               "target": "Package",
               "version": "[0.4.421302, )"
             },
+            "Microsoft.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
             "RawPrint": {
               "target": "Package",
-              "version": "[0.2.0, )"
+              "version": "[0.5.0, )"
             },
             "System.Data.DataSetExtensions": {
               "target": "Package",
               "version": "[4.5.0, )"
             },
-            "System.DirectoryServices": {
+            "itext7": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.2.5, )"
             }
           },
           "imports": [

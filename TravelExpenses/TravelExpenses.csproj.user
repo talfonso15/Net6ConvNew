@@ -13,4 +13,183 @@
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Admins\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\AdminAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\ArchivedAuthorizations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\ArchivedTravels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\CalculatePerDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\CFOReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\SuperAdminAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\SuperAdminTravels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\Supervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\SupervisorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admins\TP_Travel_Person.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditAirFare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditCarRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditLodging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditMeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditMileage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditMileageRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditOtherExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditThirdPartyAuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditThirdPartyTravel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditTravel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Edit\SelectItemsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estimate travel\AllEstimates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Estimate travel\EstimateTravel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\AddTravelItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\CreateNewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\CreateSignature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\ListAllTravels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\Progress Bar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\Sync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\ViewPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main\ViewTravel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Misc\AirfareSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Misc\CarRentalSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Misc\LodgingSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Misc\OtherExpensesSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Misc\ReviewSteps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Misc\UserHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Travel By Date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Travels by Date and Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\AirFare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\CarRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\frmMealsPerDiemHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\Lodging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\Meals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\Mileage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\MileageCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\OtherExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\RegisterTravel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Travel Items\TravelItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
