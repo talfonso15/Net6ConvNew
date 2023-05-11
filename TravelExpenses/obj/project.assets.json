@@ -2,13 +2,12 @@
   "version": 3,
   "targets": {
     "net7.0-windows7.0": {
-      "itext7/7.2.5": {
+      "itext7/8.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.DotNet.PlatformAbstractions": "1.1.0",
           "Microsoft.Extensions.DependencyModel": "1.1.0",
           "Microsoft.Extensions.Logging": "5.0.0",
-          "Portable.BouncyCastle": "1.8.9",
           "System.Collections.NonGeneric": "4.3.0",
           "System.Diagnostics.Process": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
@@ -20,10 +19,13 @@
           "System.Threading.Thread": "4.3.0",
           "System.Threading.ThreadPool": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0",
-          "itext7.commons": "7.2.5"
+          "itext7.commons": "8.0.0"
         },
         "compile": {
           "lib/netstandard2.0/itext.barcodes.dll": {
+            "related": ".xml"
+          },
+          "lib/netstandard2.0/itext.bouncy-castle-connector.dll": {
             "related": ".xml"
           },
           "lib/netstandard2.0/itext.forms.dll": {
@@ -55,6 +57,9 @@
           "lib/netstandard2.0/itext.barcodes.dll": {
             "related": ".xml"
           },
+          "lib/netstandard2.0/itext.bouncy-castle-connector.dll": {
+            "related": ".xml"
+          },
           "lib/netstandard2.0/itext.forms.dll": {
             "related": ".xml"
           },
@@ -81,7 +86,7 @@
           }
         }
       },
-      "itext7.commons/7.2.5": {
+      "itext7.commons/8.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging": "5.0.0",
@@ -423,20 +428,7 @@
           }
         }
       },
-      "Portable.BouncyCastle/1.8.9": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "RawPrint/0.5.0": {
+      "RawPrint/0.2.0": {
         "type": "package",
         "compile": {
           "lib/net40/RawPrint.dll": {}
@@ -2491,20 +2483,22 @@
     }
   },
   "libraries": {
-    "itext7/7.2.5": {
-      "sha512": "S4R7fN3AqbIUJe3BKSRDP2byU+G/rnY8rX3muYuv6VEMQhswlEytjVBvJSloZ6lN24kgm6ZFDkPKdjqSaSEFsw==",
+    "itext7/8.0.0": {
+      "sha512": "HWdCvclpwMXKA2slBzgxKOdCHOUch9+wq0mj5ec3AL46ZDU4j2XbojVB4Zy9j1yecDJdLJeMeD39f7ZPmZ9j5Q==",
       "type": "package",
-      "path": "itext7/7.2.5",
+      "path": "itext7/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
         "LICENSE.md",
         "gnu-agpl-v3.0.md",
-        "itext7.7.2.5.nupkg.sha512",
+        "itext7.8.0.0.nupkg.sha512",
         "itext7.nuspec",
         "lib/net461/itext.barcodes.dll",
         "lib/net461/itext.barcodes.xml",
+        "lib/net461/itext.bouncy-castle-connector.dll",
+        "lib/net461/itext.bouncy-castle-connector.xml",
         "lib/net461/itext.forms.dll",
         "lib/net461/itext.forms.xml",
         "lib/net461/itext.io.dll",
@@ -2523,6 +2517,8 @@
         "lib/net461/itext.svg.xml",
         "lib/netstandard2.0/itext.barcodes.dll",
         "lib/netstandard2.0/itext.barcodes.xml",
+        "lib/netstandard2.0/itext.bouncy-castle-connector.dll",
+        "lib/netstandard2.0/itext.bouncy-castle-connector.xml",
         "lib/netstandard2.0/itext.forms.dll",
         "lib/netstandard2.0/itext.forms.xml",
         "lib/netstandard2.0/itext.io.dll",
@@ -2541,15 +2537,15 @@
         "lib/netstandard2.0/itext.svg.xml"
       ]
     },
-    "itext7.commons/7.2.5": {
-      "sha512": "SGOVNpmPgtrQrwRxnLPObxhp0dytIirRVJGJ6KqrEI2GKQuoINfHv5ymTpQm2odOkz+Iuxaptqv8vLwFXG2blg==",
+    "itext7.commons/8.0.0": {
+      "sha512": "YPraDCzJKy+xX79WkHd0FevrTtbRmHyuhF0oS9c7s12Qe+3xlCnWqaPMGQ4batr3aarDU8E4Tquj4idcuJqrWg==",
       "type": "package",
-      "path": "itext7.commons/7.2.5",
+      "path": "itext7.commons/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
-        "itext7.commons.7.2.5.nupkg.sha512",
+        "itext7.commons.8.0.0.nupkg.sha512",
         "itext7.commons.nuspec",
         "lib/net461/itext.commons.dll",
         "lib/net461/itext.commons.xml",
@@ -3071,31 +3067,15 @@
         "packageIcon.png"
       ]
     },
-    "Portable.BouncyCastle/1.8.9": {
-      "sha512": "wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+    "RawPrint/0.2.0": {
+      "sha512": "RPGgVWQhFAslnh6f4Lz+dglnN/WswIFsSEFntFNWF3/XHSWW9VO3xEfHesspujNGsWbLt59d0Q1YPkB/ayEjNQ==",
       "type": "package",
-      "path": "portable.bouncycastle/1.8.9",
+      "path": "rawprint/0.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net40/BouncyCastle.Crypto.dll",
-        "lib/net40/BouncyCastle.Crypto.xml",
-        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
-        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
-        "portable.bouncycastle.1.8.9.nupkg.sha512",
-        "portable.bouncycastle.nuspec"
-      ]
-    },
-    "RawPrint/0.5.0": {
-      "sha512": "MbQu5siz3sXUXht1IeXIQbb5daTPDmEOxo6Crms+b5N2F7tqCOXl3Rn6r5Y+ystz/Cy8lRBPfkMDpZGQnzzxcQ==",
-      "type": "package",
-      "path": "rawprint/0.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
         "lib/net40/RawPrint.dll",
-        "rawprint.0.5.0.nupkg.sha512",
+        "rawprint.0.2.0.nupkg.sha512",
         "rawprint.nuspec"
       ]
     },
@@ -7574,9 +7554,9 @@
       "Microsoft.CSharp >= 4.7.0",
       "Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers >= 0.4.421302",
       "Microsoft.Windows.Compatibility >= 7.0.1",
-      "RawPrint >= 0.5.0",
+      "RawPrint >= 0.2.0",
       "System.Data.DataSetExtensions >= 4.5.0",
-      "itext7 >= 7.2.5"
+      "itext7 >= 8.0.0"
     ]
   },
   "packageFolders": {
@@ -7639,7 +7619,7 @@
           },
           "RawPrint": {
             "target": "Package",
-            "version": "[0.5.0, )"
+            "version": "[0.2.0, )"
           },
           "System.Data.DataSetExtensions": {
             "target": "Package",
@@ -7647,7 +7627,7 @@
           },
           "itext7": {
             "target": "Package",
-            "version": "[7.2.5, )"
+            "version": "[8.0.0, )"
           }
         },
         "imports": [
@@ -7678,7 +7658,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'RawPrint 0.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0-windows7.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'RawPrint 0.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "RawPrint",
       "targetGraphs": [
         "net7.0-windows7.0"

@@ -60,7 +60,7 @@
             },
             "RawPrint": {
               "target": "Package",
-              "version": "[0.5.0, )"
+              "version": "[0.2.0, )"
             },
             "System.Data.DataSetExtensions": {
               "target": "Package",
@@ -68,7 +68,7 @@
             },
             "itext7": {
               "target": "Package",
-              "version": "[7.2.5, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
