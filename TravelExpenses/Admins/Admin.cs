@@ -1130,14 +1130,14 @@ namespace TravelExpenses
             //end of new code
 
             PdfReader pdfReader = new PdfReader(pdfTemplate);
-            
-            /*PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
+
+            /*PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create)); //commented for net6
             AcroFields pdfFormFields = pdfStamper.AcroFields;*/ //commented for net6
 
 
 
             //user details
-            
+
             /*pdfFormFields.SetField("Full Name", fullName);
             pdfFormFields.SetField("District", district);
             pdfFormFields.SetField("Department", department);*/ //commented for net6
