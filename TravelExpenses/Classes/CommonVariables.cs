@@ -8,13 +8,21 @@ using System.Net;
 using System.Net.Mail;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
-using iTextSharp;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.text.xml;
+//using iTextSharp; //commented for net6
+//using iTextSharp.text; //commented for net6
+//using iTextSharp.text.pdf; //commented for net6
+//using iTextSharp.text.xml; //commented for net6
 using System.IO;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using iText.Kernel.Pdf;
+using iText.Kernel.XMP;
+using iText.Kernel;
+using iText.Forms;
+using iText.Forms.Fields;
+using iText.IO.Font;
+using iText.Kernel.Font;
+using iText.IO.Font.Constants;
 
 
 
