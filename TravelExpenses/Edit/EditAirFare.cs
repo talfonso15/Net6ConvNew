@@ -9,16 +9,24 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using TravelExpenses.Properties;
-using iTextSharp;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.text.xml;
+//using iTextSharp;
+//using iTextSharp.text;
+//using iTextSharp.text.pdf;
+//using iTextSharp.text.xml;
 using System.IO;
 using System.Globalization;
 using System.Net;
 using System.Net.Mail;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
+using iText.Kernel.Pdf;
+using iText.Kernel.XMP;
+using iText.Kernel;
+using iText.Forms;
+using iText.Forms.Fields;
+using iText.IO.Font;
+using iText.Kernel.Font;
+using iText.IO.Font.Constants;
 
 namespace TravelExpenses
 {
