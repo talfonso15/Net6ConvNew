@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
-using Microsoft.SqlServer.Replication;
-using Microsoft.SqlServer.Management.Common;
+//using Microsoft.SqlServer.Replication; //commented for net6
+//using Microsoft.SqlServer.Management.Common; //commented for net6
 
 namespace TravelExpenses
 {
@@ -19,7 +19,7 @@ namespace TravelExpenses
         string publicationName = "TravelExpenses";
         string subscriptionDbName = "TravelExpenses";
         string publicationDbName = "TravelExpenses";
-        MergeSynchronizationAgent agent;
+        //MergeSynchronizationAgent agent; //commented for net6
         BackgroundWorker syncBackgroundWorker;
         public Sync()
         {
@@ -103,79 +103,79 @@ namespace TravelExpenses
 
         void syncBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            SynchronizeMergePullSubscriptionViaRMO();
+            //SynchronizeMergePullSubscriptionViaRMO(); //commented for net6
         }
 
-        public void SynchronizeMergePullSubscriptionViaRMO()
-        {
-            // Create a connection to the Subscriber.
-            ServerConnection conn = new ServerConnection(subscriberName);
-            conn.LoginSecure = false;
-            conn.Login = "Administrator";
-            conn.Password = "insectary";
+        /* public void SynchronizeMergePullSubscriptionViaRMO() //commented for net6
+         {
+             // Create a connection to the Subscriber.
+             ServerConnection conn = new ServerConnection(subscriberName);
+             conn.LoginSecure = false;
+             conn.Login = "Administrator";
+             conn.Password = "insectary";
 
-            MergePullSubscription subscription;
+             MergePullSubscription subscription;
 
-            try
-            {
-                // Connect to the Subscriber.
-                conn.Connect();
+             try
+             {
+                 // Connect to the Subscriber.
+                 conn.Connect();
 
-                // Define the pull subscription.
-                subscription = new MergePullSubscription();
-                subscription.ConnectionContext = conn;
-                subscription.DatabaseName = subscriptionDbName;
-                subscription.PublisherName = publisherName;
-                subscription.PublicationDBName = publicationDbName;
-                subscription.PublicationName = publicationName;
+                 // Define the pull subscription.
+                 subscription = new MergePullSubscription();
+                 subscription.ConnectionContext = conn;
+                 subscription.DatabaseName = subscriptionDbName;
+                 subscription.PublisherName = publisherName;
+                 subscription.PublicationDBName = publicationDbName;
+                 subscription.PublicationName = publicationName;
 
-                // If the pull subscription exists, then start the synchronization.
-                if (subscription.LoadProperties())
-                {
-                    // Get the agent for the subscription.
-                    agent = subscription.SynchronizationAgent;
+                 // If the pull subscription exists, then start the synchronization.
+                 if (subscription.LoadProperties())
+                 {
+                     // Get the agent for the subscription.
+                     agent = subscription.SynchronizationAgent;
 
-                    // Set the required properties that could not be returned
-                    // from the MSsubscription_properties table.
-                    agent.PublisherSecurityMode = SecurityMode.Integrated;
-                    agent.DistributorSecurityMode = SecurityMode.Integrated;
-                    agent.Distributor = publisherName;
+                     // Set the required properties that could not be returned
+                     // from the MSsubscription_properties table.
+                     agent.PublisherSecurityMode = SecurityMode.Integrated;
+                     agent.DistributorSecurityMode = SecurityMode.Integrated;
+                     agent.Distributor = publisherName;
 
-                    // Enable agent output to the console.
-                    //agent.OutputVerboseLevel = 4;
-                    //agent.Output = "C:\\TEMP\\mergeagent.log";
+                     // Enable agent output to the console.
+                     //agent.OutputVerboseLevel = 4;
+                     //agent.Output = "C:\\TEMP\\mergeagent.log";
 
-                    agent.Status += new AgentCore.StatusEventHandler(agent_Status);
+                     agent.Status += new AgentCore.StatusEventHandler(agent_Status);
 
-                    // Synchronously start the Merge Agent for the subscription.
-                    agent.Synchronize();
-                }
-                else
-                {
-                    // Do something here if the pull subscription does not exist.
-                    throw new ApplicationException(String.Format(
-                        "A subscription to '{0}' does not exist on {1}",
-                        publicationName, subscriberName));
-                }
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message);       
-                //// Implement appropriate error handling here.
-                throw new ApplicationException("The subscription could not be " +
-                    "synchronized. Verify that the subscription has " +
-                    "been defined correctly.", ex);
-            }
-            finally
-            {
-                conn.Disconnect();
-            }
-        }
+                     // Synchronously start the Merge Agent for the subscription.
+                     agent.Synchronize();
+                 }
+                 else
+                 {
+                     // Do something here if the pull subscription does not exist.
+                     throw new ApplicationException(String.Format(
+                         "A subscription to '{0}' does not exist on {1}",
+                         publicationName, subscriberName));
+                 }
+             }
+             catch (Exception ex)
+             {
+                 //MessageBox.Show(ex.Message);       
+                 //// Implement appropriate error handling here.
+                 throw new ApplicationException("The subscription could not be " +
+                     "synchronized. Verify that the subscription has " +
+                     "been defined correctly.", ex);
+             }
+             finally
+             {
+                 conn.Disconnect();
+             }
+         }*/ //commented for net6
 
-        public void agent_Status(object sender, StatusEventArgs e)
+        /*public void agent_Status(object sender, StatusEventArgs e) //commented for net6
         {
             syncBackgroundWorker.ReportProgress(Convert.ToInt32(e.PercentCompleted), e.Message.ToString());
-        }
+        }*/
         private void ScrollToEnd()
         {
             // Scroll to end
