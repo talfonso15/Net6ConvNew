@@ -8,10 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using iTextSharp;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.text.xml;
+//using iTextSharp; //commented for net6
+//using iTextSharp.text; //commented for net6
+//using iTextSharp.text.pdf; //commented for net6
+//using iTextSharp.text.xml; //commented for net6
 using System.IO;
 
 namespace TravelExpenses
