@@ -1,4 +1,4 @@
-﻿using Org.BouncyCastle.X509;
+﻿//using Org.BouncyCastle.X509; //commented for net6
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

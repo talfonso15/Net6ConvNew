@@ -245,7 +245,7 @@
             this.saveAndSendAccountingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBackSummary = new System.Windows.Forms.Button();
-            this.btnSaveSplitTravel = new ComponentOwl.BetterSplitButton.BetterSplitButton();
+            //this.btnSaveSplitTravel = new ComponentOwl.BetterSplitButton.BetterSplitButton(); //commented for net6
             this.btnCancelSummary = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
@@ -2722,7 +2722,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tableLayoutPanel4.Controls.Add(this.btnBackSummary, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnSaveSplitTravel, 1, 0);
+            //this.tableLayoutPanel4.Controls.Add(this.btnSaveSplitTravel, 1, 0);// commented for net6
             this.tableLayoutPanel4.Location = new System.Drawing.Point(407, 374);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -2747,7 +2747,7 @@
             // 
             // btnSaveSplitTravel
             // 
-            this.btnSaveSplitTravel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            /*this.btnSaveSplitTravel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSaveSplitTravel.ContextMenuStrip = this.contextMenuStrip1;
             this.btnSaveSplitTravel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveSplitTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2759,7 +2759,7 @@
             this.btnSaveSplitTravel.TabIndex = 6;
             this.btnSaveSplitTravel.Text = "Save";
             this.btnSaveSplitTravel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveSplitTravel.Click += new System.EventHandler(this.btnSaveSplitTravel_Click);
+            this.btnSaveSplitTravel.Click += new System.EventHandler(this.btnSaveSplitTravel_Click);*///commented for net6
             // 
             // btnCancelSummary
             // 
@@ -3038,7 +3038,7 @@
         private System.Windows.Forms.Label lblPCardPaid4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.ToolStripMenuItem saveAndSendAccountingToolStripMenuItem;
-        private ComponentOwl.BetterSplitButton.BetterSplitButton btnSaveSplitTravel;
+        //private ComponentOwl.BetterSplitButton.BetterSplitButton btnSaveSplitTravel;
         private System.Windows.Forms.TextBox txtDescription5;
         private System.Windows.Forms.Label lblPCardPaid5;
         private System.Windows.Forms.TextBox txtExpensesAmount5;
