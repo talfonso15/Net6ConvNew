@@ -3167,7 +3167,7 @@ namespace TravelExpenses
         private void btnBackSummary_Click(object sender, EventArgs e)
         {
             CommonVariables.isSummary = false;
-            FormCollection fc = Application.OpenForms;
+            FormCollection fc = System.Net.Mime.MediaTypeNames.Application.OpenForms;
             Form main = new Form();
             foreach (Form frm in fc)
             {
@@ -3376,7 +3376,7 @@ namespace TravelExpenses
             SmtpServer.Credentials = new System.Net.NetworkCredential("xerox@lchcd.org", "Pa$$w0rd1");
             SmtpServer.EnableSsl = true;
 
-            MailMessage mail = new MailMessage();
+            System.Net.Mail.MailMessage mail = new MailMessage();
             mail.From = new MailAddress(email);
             mail.To.Add("collins@lcmcd.org," + CommonVariables.supervisorEmail);
             mail.Subject = "Review the travel of" + " " + fullname;
@@ -3442,7 +3442,7 @@ namespace TravelExpenses
         private void btnBackMeal_Click(object sender, EventArgs e)
         {
             CommonVariables.isSummary = true;
-            FormCollection fc = Application.OpenForms;
+            FormCollection fc = System.Windows.Forms.Application.OpenForms; // change for net6
             Form main = new Form();
             foreach (Form frm in fc)
             {
@@ -4792,6 +4792,85 @@ namespace TravelExpenses
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             CommonVariables.sendChangesNotification(travId);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (CommonVariables.addingItems)
+            {
+                if (travelUpdate)
+                {
+                    //generateDetailPDFUp();
+                    //generateSummarizedPDFUp();
+                    generatePDFUpd();
+                }
+                else
+                {
+                    addTravelItems();
+                    // generateDetailPDFUp();
+                    // generateSummarizedPDFUp();
+                    generatePDFUpd();
+                }
+
+                //adding to the history trace table
+                localCon.Open();
+                Guid loginUser = new Guid(CommonVariables.user);
+                SqlDataAdapter tadpt = new SqlDataAdapter();
+                tadpt.InsertCommand = new SqlCommand("INSERT INTO [TravelExpenses].[dbo].[User_History_Trace] ([UserID],[Action],[Date]) VALUES (@UserID ,@Action,@Date)", localCon);
+                tadpt.InsertCommand.Parameters.Add("@UserID", SqlDbType.UniqueIdentifier).Value = loginUser;
+                tadpt.InsertCommand.Parameters.Add("@Action", SqlDbType.NVarChar).Value = "Item added to travel";
+                tadpt.InsertCommand.Parameters.Add("@Date", SqlDbType.NVarChar).Value = DateTime.Now;
+                tadpt.InsertCommand.ExecuteNonQuery();
+                localCon.Close();
+            }
+            else
+            {
+
+                if (travelSaved)
+                {
+                    //generateSummarizedPDF();
+                    //generateDetailPDF();
+                    generatePDF();
+                }
+                else
+                {
+                    CommonVariables.showSignButton = true;
+
+                    saveTravel();
+                    if (!CommonVariables.is_TPT)
+                    {
+                        // generateSummarizedPDF();
+                        // generateDetailPDF();
+                        generatePDF();
+                    }
+                }
+
+                //adding to the history trace table
+                localCon.Open();
+                Guid loginUser = new Guid(CommonVariables.user);
+                SqlDataAdapter tadpt = new SqlDataAdapter();
+                tadpt.InsertCommand = new SqlCommand("INSERT INTO [TravelExpenses].[dbo].[User_History_Trace] ([UserID],[Action],[Date]) VALUES (@UserID ,@Action,@Date)", localCon);
+                tadpt.InsertCommand.Parameters.Add("@UserID", SqlDbType.UniqueIdentifier).Value = loginUser;
+                tadpt.InsertCommand.Parameters.Add("@Action", SqlDbType.NVarChar).Value = "Travel created";
+                tadpt.InsertCommand.Parameters.Add("@Date", SqlDbType.NVarChar).Value = DateTime.Now;
+                tadpt.InsertCommand.ExecuteNonQuery();
+                localCon.Close();
+            }
+
+            CommonVariables.isSummary = false;
+            btnSaveSplitTravel.Enabled = false;
+            btnBackSummary.Enabled = false;
+            if (!CommonVariables.is_TPT)
+            {
+                ViewPDF vpdf = new ViewPDF();
+                vpdf.Show();
+            }
+
+            CommonVariables.is_TPT = false;
+            CommonVariables.isGroup = false;
+            CommonVariables.usersID = new List<string>();
+            CommonVariables.tpt_UserID = "";
+            CommonVariables.tpt_Type = "";
         }
     }
 }
