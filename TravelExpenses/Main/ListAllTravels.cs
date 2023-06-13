@@ -1368,7 +1368,9 @@ namespace TravelExpenses
                     }
                     else
                     {
-                        pdfFormFields.SetField("District Pay Registration", "No");
+                        //pdfFormFields.SetField("District Pay Registration", "No"); //commented for net6
+                        fields.TryGetValue("District Pay Registration", out toSet);
+                        toSet.SetValue("No");
 
                         //setting the value for the registration reimbursement
                         registratiorReimbursement = Convert.ToDouble(drRegis["RegistrationAMount"].ToString());
@@ -1397,41 +1399,78 @@ namespace TravelExpenses
                     }
 
                     //details
-                    pdfFormFields.SetField("Facility Name" + rowLod, drLod["FacilityName"].ToString());
-                    pdfFormFields.SetField("Facility Total Cost" + rowLod, drLod["TotalLodging"].ToString());
+                    
+                    //pdfFormFields.SetField("Facility Name" + rowLod, drLod["FacilityName"].ToString()); //commented for net6
+                    fields.TryGetValue("Facility Name" + rowLod, out toSet);
+                    toSet.SetValue(drLod["FacilityName"].ToString());
+
+                    //pdfFormFields.SetField("Facility Total Cost" + rowLod, drLod["TotalLodging"].ToString()); //commented for net6
+                    fields.TryGetValue("Facility Total Cost" + rowLod, out toSet);
+                    toSet.SetValue(drLod["TotalLodging"].ToString());
+
                     //totalLod = totalLod + Convert.ToDouble(drLod["TotalLodging"].ToString());
-                    pdfFormFields.SetField("Lodging Nights" + rowLod, drLod["NumberOfNights"].ToString());
-                    pdfFormFields.SetField("Lodging Night Cost" + rowLod, drLod["CostPerNight"].ToString());
+                    
+                    //pdfFormFields.SetField("Lodging Nights" + rowLod, drLod["NumberOfNights"].ToString()); //commented for net6
+                    fields.TryGetValue("Lodging Nights" + rowLod, out toSet);
+                    toSet.SetValue(drLod["NumberOfNights"].ToString());
+
+                    //pdfFormFields.SetField("Lodging Night Cost" + rowLod, drLod["CostPerNight"].ToString()); //commented for net6
+                    fields.TryGetValue("Lodging Night Cost" + rowLod, out toSet);
+                    toSet.SetValue(drLod["CostPerNight"].ToString());
+
                     //pdfFormFields.SetField("Lodging Taxes Fees" + rowLod, drLod["TaxesAndFees"].ToString());
                     if (drLod["DistrictPay"].ToString() == "True")
                     {
-                        pdfFormFields.SetField("Lodging District Pay" + rowLod, "Yes");
-                        pdfFormFields.SetField("Lodging Director Approval" + rowLod, "");
+                        //pdfFormFields.SetField("Lodging District Pay" + rowLod, "Yes"); //commented for net6
+                        fields.TryGetValue("Lodging District Pay" + rowLod, out toSet);
+                        toSet.SetValue("Yes");
+
+                        //pdfFormFields.SetField("Lodging Director Approval" + rowLod, ""); //commented for net6
+                        fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet);
+                        toSet.SetValue("");
                     }
                     else
                     {
-                        pdfFormFields.SetField("Lodging District Pay" + rowLod, "No");
+                        //pdfFormFields.SetField("Lodging District Pay" + rowLod, "No"); //commented for net6
+                        fields.TryGetValue("Lodging District Pay" + rowLod, out toSet);
+                        toSet.SetValue("No");
+
                         if (drLod["DirectorApproved"].ToString() == "True")
                         {
-                            pdfFormFields.SetField("Lodging Director Approval" + rowLod, "Yes");
+                            //pdfFormFields.SetField("Lodging Director Approval" + rowLod, "Yes"); //commented for net6
+                            fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet);
+                            toSet.SetValue("Yes");
 
                             //setting the value for the lodging reimbursement
                             lodgingReimbursement += Convert.ToDouble(drLod["TotalLodging"].ToString());
                         }
                         else
                         {
-                            pdfFormFields.SetField("Lodging Director Approval" + rowLod, "No");
+                            //pdfFormFields.SetField("Lodging Director Approval" + rowLod, "No"); //commented for net6
+                            fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet);
+                            toSet.SetValue("No");
                         }
                     }
-                    pdfFormFields.SetField("Facility  Notes" + rowLod, drLod["Notes"].ToString());
+                    //pdfFormFields.SetField("Facility  Notes" + rowLod, drLod["Notes"].ToString()); //commented for net6
+                    fields.TryGetValue("Facility  Notes" + rowLod, out toSet);
+                    toSet.SetValue(drLod["Notes"].ToString());
+                    
                     rowLod++;
                 }
                 drLod.Close();
                 string lodgCost = totalLod.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                pdfFormFields.SetField("CostLodgings", lodgCost);
-                pdfFormFields.SetField("NotesLodgings", notes);
+                
+                //pdfFormFields.SetField("CostLodgings", lodgCost); //commented for net6
+                fields.TryGetValue("CostLodgings", out toSet);
+                toSet.SetValue(lodgCost);
 
-                pdfFormFields.SetField("Lodging Total", lodgCost);
+                //pdfFormFields.SetField("NotesLodgings", notes); //commented for net6
+                fields.TryGetValue("NotesLodgings", out toSet);
+                toSet.SetValue(notes);
+
+                //pdfFormFields.SetField("Lodging Total", lodgCost); //commented for net6
+                fields.TryGetValue("Lodging Total", out toSet);
+                toSet.SetValue(lodgCost);
             }
 
             //Car Rental Details
@@ -1454,41 +1493,81 @@ namespace TravelExpenses
 
                     //details
                     DateTime pickUp = Convert.ToDateTime(drCR["PickUPDate"].ToString());
-                    pdfFormFields.SetField("Pick up Date" + carRow, pickUp.ToShortDateString());
+                    
+                    //pdfFormFields.SetField("Pick up Date" + carRow, pickUp.ToShortDateString()); //commented for net6
+                    fields.TryGetValue("Pick up Date" + carRow, out toSet);
+                    toSet.SetValue(pickUp.ToShortDateString());
+
                     DateTime dropOff = Convert.ToDateTime(drCR["DropOffDate"].ToString());
-                    pdfFormFields.SetField("Drop off Date" + carRow, dropOff.ToShortDateString());
-                    pdfFormFields.SetField("Car_Day Cost" + carRow, drCR["CostPerDay"].ToString());
-                    pdfFormFields.SetField("Car Total" + carRow, drCR["TotalCarRental"].ToString());
+                    //pdfFormFields.SetField("Drop off Date" + carRow, dropOff.ToShortDateString()); //commented for net6
+                    fields.TryGetValue("Drop off Date" + carRow, out toSet);
+                    toSet.SetValue(dropOff.ToShortDateString());
+
+                    //pdfFormFields.SetField("Car_Day Cost" + carRow, drCR["CostPerDay"].ToString()); //commented for net6
+                    fields.TryGetValue("Car_Day Cost" + carRow, out toSet);
+                    toSet.SetValue(drCR["CostPerDay"].ToString());
+
+                    //pdfFormFields.SetField("Car Total" + carRow, drCR["TotalCarRental"].ToString()); //commented for net6
+                    fields.TryGetValue("Car Total" + carRow, out toSet);
+                    toSet.SetValue(drCR["TotalCarRental"].ToString());
+
                     //totalCR = totalCR + Convert.ToDouble(drCR["TotalCarRental"].ToString());
-                    pdfFormFields.SetField("Car Type" + carRow, drCR["CarType"].ToString());
-                    pdfFormFields.SetField("Rental Company" + carRow, drCR["Company"].ToString());
-                    pdfFormFields.SetField("Car Rental Days" + carRow, drCR["Days"].ToString());
+                    
+                    //pdfFormFields.SetField("Car Type" + carRow, drCR["CarType"].ToString()); //commented for net6
+                    fields.TryGetValue("Car Type" + carRow, out toSet);
+                    toSet.SetValue(drCR["CarType"].ToString());
+
+                    //pdfFormFields.SetField("Rental Company" + carRow, drCR["Company"].ToString()); //commented for net6
+                    fields.TryGetValue("Rental Company" + carRow, out toSet);
+                    toSet.SetValue(drCR["Company"].ToString());
+
+                    //pdfFormFields.SetField("Car Rental Days" + carRow, drCR["Days"].ToString()); //commented for net6
+                    fields.TryGetValue("Car Rental Days" + carRow, out toSet);
+                    toSet.SetValue(drCR["Days"].ToString());
+
                     //pdfFormFields.SetField("Car Rental Taxes Fees" + carRow, drCR["TaxesAndFees"].ToString());
                     //pdfFormFields.SetField("LDW Insurance" + carRow, drCR["LDWInsuranse"].ToString());
                     //pdfFormFields.SetField("Supplemental Insurance" + carRow, drCR["SupplementalInsurance"].ToString());
                     //pdfFormFields.SetField("Extra Insurance" + carRow, drCR["ExtarInsuranceAmount"].ToString());
                     if (drCR["DistrictPay"].ToString() == "True")
                     {
-                        pdfFormFields.SetField("Car District Pay" + carRow, "Yes");
+                        //pdfFormFields.SetField("Car District Pay" + carRow, "Yes"); //commented for net6
+                        fields.TryGetValue("Car District Pay" + carRow, out toSet);
+                        toSet.SetValue("Yes");
                     }
                     else
                     {
-                        pdfFormFields.SetField("Car District Pay" + carRow, "No");
+                        //pdfFormFields.SetField("Car District Pay" + carRow, "No"); //commented for net6
+                        fields.TryGetValue("Car District Pay" + carRow, out toSet);
+                        toSet.SetValue("No");
 
                         //setting the value for the car rental reimbursement
                         carRentalReimbursement += Convert.ToDouble(drCR["TotalCarRental"].ToString());
                     }
-                    pdfFormFields.SetField("Car Personal Amount" + carRow, drCR["PersonalAmount"].ToString());
-                    pdfFormFields.SetField("Car Notes" + carRow, drCR["Notes"].ToString());
+                    //pdfFormFields.SetField("Car Personal Amount" + carRow, drCR["PersonalAmount"].ToString()); //commented for net6
+                    fields.TryGetValue("Car Personal Amount" + carRow, out toSet);
+                    toSet.SetValue(drCR["PersonalAmount"].ToString());
+
+                    //pdfFormFields.SetField("Car Notes" + carRow, drCR["Notes"].ToString()); //commented for net6
+                    fields.TryGetValue("Car Notes" + carRow, out toSet);
+                    toSet.SetValue(drCR["Notes"].ToString());
 
                     carRow++;
                 }
                 drCR.Close();
                 string carCost = totalCR.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                pdfFormFields.SetField("CostCar Rental", carCost);
-                pdfFormFields.SetField("NotesCar Rental", notesCR);
+                
+                //pdfFormFields.SetField("CostCar Rental", carCost); //commented for net6
+                fields.TryGetValue("CostCar Rental", out toSet);
+                toSet.SetValue(carCost);
 
-                pdfFormFields.SetField("Car Rental Total", carCost);
+                //pdfFormFields.SetField("NotesCar Rental", notesCR); //commented for net6
+                fields.TryGetValue("NotesCar Rental", out toSet);
+                toSet.SetValue(notesCR);
+
+                //pdfFormFields.SetField("Car Rental Total", carCost); //commented for net6
+                fields.TryGetValue("Car Rental Total", out toSet);
+                toSet.SetValue(carCost);
             }
 
             //AirFare Details
@@ -1511,37 +1590,62 @@ namespace TravelExpenses
 
                     //details
                     DateTime depDateFligh = Convert.ToDateTime(drAF["DepartureDate"].ToString());
-                    pdfFormFields.SetField("Flight_Departure Date" + flightRow, depDateFligh.ToShortDateString());
+                    //pdfFormFields.SetField("Flight_Departure Date" + flightRow, depDateFligh.ToShortDateString()); //commented for net6
+                    fields.TryGetValue("Flight_Departure Date" + flightRow, out toSet);
+                    toSet.SetValue(depDateFligh.ToShortDateString());
+
                     if (drAF["ReturnDate"].ToString() != "")
                     {
                         DateTime rd = Convert.ToDateTime(drAF["ReturnDate"].ToString());
-                        pdfFormFields.SetField("Flight_Return Date" + flightRow, rd.ToShortDateString());
+                        //pdfFormFields.SetField("Flight_Return Date" + flightRow, rd.ToShortDateString()); //commented for net6
+                        fields.TryGetValue("Flight_Return Date" + flightRow, out toSet);
+                        toSet.SetValue(rd.ToShortDateString());
                     }
-                    pdfFormFields.SetField("Flight Total" + flightRow, drAF["AirFareTotal"].ToString());
+                    //pdfFormFields.SetField("Flight Total" + flightRow, drAF["AirFareTotal"].ToString()); //commented for net6
+                    fields.TryGetValue("Flight Total" + flightRow, out toSet);
+                    toSet.SetValue(drAF["AirFareTotal"].ToString());
+
                     //totalAF = totalAF + Convert.ToDouble(drAF["AirFareTotal"].ToString());
                     //pdfFormFields.SetField("Flight Taxes  Fees" + flightRow, drAF["TaxesAndFees"].ToString());
                     if (drAF["DistrictPay"].ToString() == "True")
                     {
-                        pdfFormFields.SetField("Flight District Pay" + flightRow, "Yes");
+                        //pdfFormFields.SetField("Flight District Pay" + flightRow, "Yes"); //commented for net6
+                        fields.TryGetValue("Flight District Pay" + flightRow, out toSet);
+                        toSet.SetValue("Yes");
                     }
                     else
                     {
-                        pdfFormFields.SetField("Flight District Pay" + flightRow, "No");
+                        //pdfFormFields.SetField("Flight District Pay" + flightRow, "No"); //commented for net6
+                        fields.TryGetValue("Flight District Pay" + flightRow, out toSet);
+                        toSet.SetValue("No");
 
                         //setting the value for the airfare reimbursement
                         airfareReimbursement += Convert.ToDouble(drAF["AirFareTotal"].ToString());
                     }
-                    pdfFormFields.SetField("Flight Personal Amount" + flightRow, drAF["PersonalUseAmount"].ToString());
-                    pdfFormFields.SetField("Air Fare Notes" + flightRow, drAF["Notes"].ToString());
+                    //pdfFormFields.SetField("Flight Personal Amount" + flightRow, drAF["PersonalUseAmount"].ToString()); //commented for net6
+                    fields.TryGetValue("Flight Personal Amount" + flightRow, out toSet);
+                    toSet.SetValue(drAF["PersonalUseAmount"].ToString());
+
+                    //pdfFormFields.SetField("Air Fare Notes" + flightRow, drAF["Notes"].ToString()); //commented for net6
+                    fields.TryGetValue("Air Fare Notes" + flightRow, out toSet);
+                    toSet.SetValue(drAF["Notes"].ToString());
 
                     flightRow++;
                 }
                 drAF.Close();
                 string flightCost = totalAF.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                pdfFormFields.SetField("CostAir Fare", flightCost);
-                pdfFormFields.SetField("NotesAir Fare", notesAF);
+                
+                //pdfFormFields.SetField("CostAir Fare", flightCost); //commented for net6
+                fields.TryGetValue("CostAir Fare", out toSet);
+                toSet.SetValue(flightCost);
 
-                pdfFormFields.SetField("Air Fare Total", flightCost);
+                //pdfFormFields.SetField("NotesAir Fare", notesAF); //commented for net6
+                fields.TryGetValue("NotesAir Fare", out toSet);
+                toSet.SetValue(notesAF);
+
+                //pdfFormFields.SetField("Air Fare Total", flightCost); //commented for net6
+                fields.TryGetValue("Air Fare Total", out toSet);
+                toSet.SetValue(flightCost);
             }
 
             //Mileage Details
@@ -1554,34 +1658,61 @@ namespace TravelExpenses
                 {
                     double milCostValue = Convert.ToDouble(drMi["TotalMileage"].ToString());
                     string milcost = milCostValue.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    pdfFormFields.SetField("CostMileage", milcost);
-                    pdfFormFields.SetField("NotesMileage", drMi["Notes"].ToString());
+                    
+                    //pdfFormFields.SetField("CostMileage", milcost); //commented for net6
+                    fields.TryGetValue("CostMileage", out toSet);
+                    toSet.SetValue(milcost);
+
+                    //pdfFormFields.SetField("NotesMileage", drMi["Notes"].ToString()); //commented for net6
+                    fields.TryGetValue("NotesMileage", out toSet);
+                    toSet.SetValue(drMi["Notes"].ToString());
 
                     //details
-                    pdfFormFields.SetField("Map Mileage", drMi["MapMileage"].ToString());
-                    pdfFormFields.SetField("Vicinity Mileage", drMi["VicinityMileage"].ToString());
+                    
+                    //pdfFormFields.SetField("Map Mileage", drMi["MapMileage"].ToString()); //commented for net6
+                    fields.TryGetValue("Map Mileage", out toSet);
+                    toSet.SetValue(drMi["MapMileage"].ToString());
+
+                    //pdfFormFields.SetField("Vicinity Mileage", drMi["VicinityMileage"].ToString()); //commented for net6
+                    fields.TryGetValue("Vicinity Mileage", out toSet);
+                    toSet.SetValue(drMi["VicinityMileage"].ToString());
+
                     string milCost = Convert.ToDouble(drMi["TotalMileage"].ToString()).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    pdfFormFields.SetField("Mileage Cost", milCost);
+                    //pdfFormFields.SetField("Mileage Cost", milCost); //commented for net6
+                    fields.TryGetValue("Mileage Cost", out toSet);
+                    toSet.SetValue(milCost);
+
                     if (drMi["DistrictVehicleProvided"].ToString() == "True")
                     {
-                        pdfFormFields.SetField("Provided Vehicle", "Yes");
+                        //pdfFormFields.SetField("Provided Vehicle", "Yes"); //commented for net6
+                        fields.TryGetValue("Provided Vehicle", out toSet);
+                        toSet.SetValue("Yes");
                     }
                     else
                     {
-                        pdfFormFields.SetField("Provided Vehicle", "No");
+                        //pdfFormFields.SetField("Provided Vehicle", "No"); //commented for net6
+                        fields.TryGetValue("Provided Vehicle", out toSet);
+                        toSet.SetValue("No");
+
                         if (drMi["DirectorApprovedPersonal"].ToString() == "True")
                         {
-                            pdfFormFields.SetField("Mileage Director Approval", "Yes");
+                            //pdfFormFields.SetField("Mileage Director Approval", "Yes"); //commented for net6
+                            fields.TryGetValue("Mileage Director Approval", out toSet);
+                            toSet.SetValue("Yes");
 
                             //setting the value for the mileage reimbursement
                             mileagReimbursement = Convert.ToDouble(drMi["TotalMileage"].ToString());
                         }
                         else
                         {
-                            pdfFormFields.SetField("Mileage Director Approval", "No");
+                            //pdfFormFields.SetField("Mileage Director Approval", "No"); //commented for net6
+                            fields.TryGetValue("Mileage Director Approval", out toSet);
+                            toSet.SetValue("No");
                         }
                     }
-                    pdfFormFields.SetField("Mileage Notes", drMi["Notes"].ToString());
+                    //pdfFormFields.SetField("Mileage Notes", drMi["Notes"].ToString()); //commented for net6
+                    fields.TryGetValue("Mileage Notes", out toSet);
+                    toSet.SetValue(drMi["Notes"].ToString());
                 }
                 drMi.Close();
             }
@@ -1604,18 +1735,32 @@ namespace TravelExpenses
                     }
 
                     //details
-                    pdfFormFields.SetField("ExpDescription" + oxRow, drOE["Description"].ToString());
-                    pdfFormFields.SetField("ExpCost" + oxRow, drOE["Amount"].ToString());
+                    
+                    //pdfFormFields.SetField("ExpDescription" + oxRow, drOE["Description"].ToString()); //commented for net6
+                    fields.TryGetValue("ExpDescription" + oxRow, out toSet);
+                    toSet.SetValue(drOE["Description"].ToString());
+
+                    //pdfFormFields.SetField("ExpCost" + oxRow, drOE["Amount"].ToString()); //commented for net6
+                    fields.TryGetValue("ExpCost" + oxRow, out toSet);
+                    toSet.SetValue(drOE["Amount"].ToString());
+
                     //totalOE = totalOE + Convert.ToDouble(drOE["Amount"].ToString());
-                    pdfFormFields.SetField("ExpNotes" + oxRow, drOE["Notes"].ToString());
+                    
+                    //pdfFormFields.SetField("ExpNotes" + oxRow, drOE["Notes"].ToString()); //commented for net6
+                    fields.TryGetValue("ExpNotes" + oxRow, out toSet);
+                    toSet.SetValue(drOE["Notes"].ToString());
 
                     if (drOE["Prepaid"].ToString() == "True")
                     {
-                        pdfFormFields.SetField("ExpCard" + oxRow, "Yes");
+                        //pdfFormFields.SetField("ExpCard" + oxRow, "Yes"); //commented for net6
+                        fields.TryGetValue("ExpCard" + oxRow, out toSet);
+                        toSet.SetValue("Yes");
                     }
                     else
                     {
-                        pdfFormFields.SetField("ExpCard" + oxRow, "No");
+                        //pdfFormFields.SetField("ExpCard" + oxRow, "No"); //commented for net6
+                        fields.TryGetValue("ExpCard" + oxRow, out toSet);
+                        toSet.SetValue("No");
 
                         //setting the value for the other expenses reimbursement
                         otherExpenseReimbursement += Convert.ToDouble(drOE["Amount"].ToString());
@@ -1625,27 +1770,61 @@ namespace TravelExpenses
                 }
                 drOE.Close();
                 string oeCost = totalOE.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                pdfFormFields.SetField("CostOther Expenses", oeCost);
-                pdfFormFields.SetField("NotesOther Expenses", notesOE);
+                
+                //pdfFormFields.SetField("CostOther Expenses", oeCost); //commented for net6
+                fields.TryGetValue("CostOther Expenses", out toSet);
+                toSet.SetValue(oeCost);
 
-                pdfFormFields.SetField("Other Expenses Total", oeCost);
+                //pdfFormFields.SetField("NotesOther Expenses", notesOE); //commented for net6
+                fields.TryGetValue("NotesOther Expenses", out toSet);
+                toSet.SetValue(notesOE);
+
+                //pdfFormFields.SetField("Other Expenses Total", oeCost); //commented for net6
+                fields.TryGetValue("Other Expenses Total", out toSet);
+                toSet.SetValue(oeCost);
             }
 
             //Accounting accounts
             string travACC = travelACC.ToString("C", CultureInfo.CurrentCulture);
-            pdfFormFields.SetField("Travel4000", travACC);
+            //pdfFormFields.SetField("Travel4000", travACC); //commented for net6
+            fields.TryGetValue("Travel4000", out toSet);
+            toSet.SetValue(travACC);
+
             string trainACC = trainingACC.ToString("C", CultureInfo.CurrentCulture);
-            pdfFormFields.SetField("Training5500", trainACC);
+            //pdfFormFields.SetField("Training5500", trainACC); //commented for net6
+            fields.TryGetValue("Training5500", out toSet);
+            toSet.SetValue(trainACC);
 
 
             //Reimbursement Table
-            pdfFormFields.SetField("Meals_Reimbursement", mealsReimbursement.ToString());
-            pdfFormFields.SetField("Registration_Reimbursement", registratiorReimbursement.ToString());
-            pdfFormFields.SetField("Lodgings_Reimbursement", lodgingReimbursement.ToString());
-            pdfFormFields.SetField("CarRental_Reimbursement", carRentalReimbursement.ToString());
-            pdfFormFields.SetField("Airfare_Reimbursement", airfareReimbursement.ToString());
-            pdfFormFields.SetField("Mileage_Reimbursement", mileagReimbursement.ToString());
-            pdfFormFields.SetField("OtherExpenses_Reimbursement", otherExpenseReimbursement.ToString());
+            
+            //pdfFormFields.SetField("Meals_Reimbursement", mealsReimbursement.ToString()); //commented for net6
+            fields.TryGetValue("Meals_Reimbursement", out toSet);
+            toSet.SetValue(mealsReimbursement.ToString());
+
+            //pdfFormFields.SetField("Registration_Reimbursement", registratiorReimbursement.ToString()); //commented for net6
+            fields.TryGetValue("Registration_Reimbursement", out toSet);
+            toSet.SetValue(registratiorReimbursement.ToString());
+
+            //pdfFormFields.SetField("Lodgings_Reimbursement", lodgingReimbursement.ToString()); //commented for net6
+            fields.TryGetValue("Lodgings_Reimbursement", out toSet);
+            toSet.SetValue(lodgingReimbursement.ToString());
+
+            //pdfFormFields.SetField("CarRental_Reimbursement", carRentalReimbursement.ToString()); //commented for net6
+            fields.TryGetValue("CarRental_Reimbursement", out toSet);
+            toSet.SetValue(carRentalReimbursement.ToString());
+
+            //pdfFormFields.SetField("Airfare_Reimbursement", airfareReimbursement.ToString()); //commented for net6
+            fields.TryGetValue("Airfare_Reimbursement", out toSet);
+            toSet.SetValue(airfareReimbursement.ToString());
+
+            //pdfFormFields.SetField("Mileage_Reimbursement", mileagReimbursement.ToString()); //commented for net6
+            fields.TryGetValue("Mileage_Reimbursement", out toSet);
+            toSet.SetValue(mileagReimbursement.ToString());
+
+            //pdfFormFields.SetField("OtherExpenses_Reimbursement", otherExpenseReimbursement.ToString()); //commented for net6
+            fields.TryGetValue("OtherExpenses_Reimbursement", out toSet);
+            toSet.SetValue(otherExpenseReimbursement.ToString());
 
             //Signatures
             SqlCommand cmdPDF = new SqlCommand("SELECT a.TravelID,a.UserID,a.UserType,a.TravelType,a.SignatureDate,b.FontType,b.SignatureText FROM [TravelExpenses].[dbo].[TravelSignatures] as a inner join TravelExpenses.dbo.UserSignature as b on b.UserID = a.UserID where a.TravelID = '" + travID + "'  AND a.TravelType = 'Travel'", localCon);
@@ -1655,53 +1834,79 @@ namespace TravelExpenses
                 while (drPDF.Read())
                 {
 
-                    BaseFont bf = BaseFont.CreateFont();
+                    //BaseFont bf = BaseFont.CreateFont(); //commented for net6
+                    PdfFont font = PdfFontFactory.CreateFont();
                     if (drPDF["FontType"].ToString() == "Mistral")
                     {
-                        bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\MISTRAL.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        //bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\MISTRAL.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); //commented for net6
+                        font = PdfFontFactory.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\MISTRAL.TTF");
                     }
                     if (drPDF["FontType"].ToString() == "Rage Italic")
                     {
-                        bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\Rage Italic.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        //bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\Rage Italic.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); //commented for net6
+                        font = PdfFontFactory.CreateFont(@"\\LCMHCD\Employees\Travel Temp\Rage Italic.ttf");
                     }
                     if (drPDF["FontType"].ToString() == "MV Boli")
                     {
-                        bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\mvboli.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        //bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\mvboli.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); //commented for net6
+                        font = PdfFontFactory.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\mvboli.ttf");
                     }
                     if (drPDF["FontType"].ToString() == "Bradley Hand ITC")
                     {
-                        bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\BRADHITC.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        //bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\BRADHITC.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); //commented for net6
+                        font = PdfFontFactory.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\BRADHITC.TTF");
                     }
                     if (drPDF["FontType"].ToString() == "Script MT Bold")
                     {
-                        bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\SCRIPTBL.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        //bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\SCRIPTBL.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); //commented for net6
+                        font = PdfFontFactory.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\SCRIPTBL.TTF");
                     }
 
                     DateTime sigDate = Convert.ToDateTime(drPDF["SignatureDate"].ToString());
                     if (drPDF["UserType"].ToString() == "Accounting")
                     {
-                        pdfFormFields.SetFieldProperty("Finance Review Siganature", "textfont", bf, null);
-                        pdfFormFields.SetField("Finance Review Siganature", drPDF["SignatureText"].ToString());
-                        pdfFormFields.SetField("Finance Review", sigDate.ToShortDateString());
+                        //pdfFormFields.SetFieldProperty("Finance Review Siganature", "textfont", bf, null); //commented for net6
+                        //pdfFormFields.SetField("Finance Review Siganature", drPDF["SignatureText"].ToString()); //commented for net6
+                        fields.TryGetValue("Finance Review Siganature", out toSet);
+                        toSet.SetFont(font);
+                        toSet.SetValue(drPDF["SignatureText"].ToString());
+
+                        //pdfFormFields.SetField("Finance Review", sigDate.ToShortDateString()); //commented for net6
+                        fields.TryGetValue("Finance Review", out toSet);
+                        toSet.SetValue(sigDate.ToShortDateString());
                     }
                     if (drPDF["UserType"].ToString() == "Supervisor")
                     {
-                        pdfFormFields.SetFieldProperty("Supervisor Signature", "textfont", bf, null);
-                        pdfFormFields.SetField("Supervisor Signature", drPDF["SignatureText"].ToString());
-                        pdfFormFields.SetField("Supervisor Date", sigDate.ToShortDateString());
+                        //pdfFormFields.SetFieldProperty("Supervisor Signature", "textfont", bf, null); //commented for net6
+                        //pdfFormFields.SetField("Supervisor Signature", drPDF["SignatureText"].ToString()); //commented for net6
+                        fields.TryGetValue("Supervisor Signature", out toSet);
+                        toSet.SetFont(font);
+                        toSet.SetValue(drPDF["SignatureText"].ToString());
+
+                        //pdfFormFields.SetField("Supervisor Date", sigDate.ToShortDateString()); //commented for net6
+                        fields.TryGetValue("Supervisor Date", out toSet);
+                        toSet.SetValue(sigDate.ToShortDateString());
                     }
                     if (drPDF["UserType"].ToString() == "Employee")
                     {
-                        pdfFormFields.SetFieldProperty("Employee Signature", "textfont", bf, null);
-                        pdfFormFields.SetField("Employee Signature", drPDF["SignatureText"].ToString());
-                        pdfFormFields.SetField("Employee Date", sigDate.ToShortDateString());
+                        //pdfFormFields.SetFieldProperty("Employee Signature", "textfont", bf, null);
+                        //pdfFormFields.SetField("Employee Signature", drPDF["SignatureText"].ToString());
+                        fields.TryGetValue("Employee Signature", out toSet);
+                        toSet.SetFont(font);
+                        toSet.SetValue(drPDF["SignatureText"].ToString());
+
+                        //pdfFormFields.SetField("Employee Date", sigDate.ToShortDateString()); //commented for net6
+                        fields.TryGetValue("Employee Date", out toSet);
+                        toSet.SetValue(sigDate.ToShortDateString());
                     }
 
                 }
             }
             drPDF.Close();
 
-            pdfStamper.Close();
+            //pdfStamper.Close();
+            form.FlattenFields();
+            pdfDoc.Close();
             localCon.Close();
 
 
