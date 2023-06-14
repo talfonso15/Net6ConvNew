@@ -25,8 +25,10 @@ using iText.Forms;
 using iText.Forms.Fields;
 using iText.IO.Font;
 using iText.Kernel.Font;
+using iText.Bouncycastleconnector;
 using iText.IO.Font.Constants;
 using Microsoft.Office.Interop.Word;
+using Org.BouncyCastle.X509;
 
 
 namespace TravelExpenses
@@ -958,7 +960,7 @@ namespace TravelExpenses
             //System.Net.Mail.Attachment attachment;
             //attachment = new System.Net.Mail.Attachment(CommonVariables.filePath);
             //mail.Attachments.Add(attachment);
-            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
+            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, System.Security.Cryptography.X509Certificates.X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
 
 
 
@@ -1052,7 +1054,7 @@ namespace TravelExpenses
             CommonVariables.filePath = newFile;
 
             //new code for net 6
-            PdfDocument pdfDoc = new PdfDocument(new PdfReader(pdfTemplate), new PdfWriter(newFile));
+            PdfDocument pdfDoc = new(new PdfReader(pdfTemplate), new PdfWriter(newFile));
             PdfAcroForm form = PdfAcroForm.GetAcroForm(pdfDoc, true);
             IDictionary<String, PdfFormField> fields = form.GetAllFormFields();
             PdfFormField toSet;
@@ -1088,7 +1090,7 @@ namespace TravelExpenses
                 toSet.SetValue(drTD["TravelEvent"].ToString());
 
                 //pdfFormFields.SetField("Travel Purpose", drTD["TravelPurpose"].ToString()); //commented for net6
-                fields.TryGetValue("Travel Purposet", out toSet);
+                fields.TryGetValue("Travel Purpose", out toSet);
                 toSet.SetValue(drTD["TravelPurpose"].ToString());
 
                 DateTime dd = Convert.ToDateTime(drTD["DepartureDate"].ToString());
@@ -1145,20 +1147,20 @@ namespace TravelExpenses
                 toSet.SetValue(reimCost);
 
                 //pdfFormFields.SetField("No Reimbursed", noReimCost); //commented for net6
-                fields.TryGetValue("No Reimbursed", out toSet);
-                toSet.SetValue(noReimCost);
+                //fields.TryGetValue("No Reimbursed", out toSet); //commented for net6
+                //toSet.SetValue(noReimCost); //commented for net6
 
                 //pdfFormFields.SetField("Travel Total Cost", travCost); //commented for net6
-                fields.TryGetValue("Travel Total Cost", out toSet);
-                toSet.SetValue(travCost);
+                //fields.TryGetValue("Travel Total Cost", out toSet); //commented for net6
+                //toSet.SetValue(travCost); //commented for net6
 
                 //pdfFormFields.SetField("Reimbursement", reimCost); //commented for net6
-                fields.TryGetValue("Reimbursement", out toSet);
-                toSet.SetValue(reimCost);
+                //fields.TryGetValue("Reimbursement", out toSet); //commented for net6
+                //toSet.SetValue(reimCost); //commented for net6
 
                 //pdfFormFields.SetField("No Reimbursed Total", noReimCost); //commented for net6
-                fields.TryGetValue("No Reimbursed Total", out toSet);
-                toSet.SetValue(noReimCost);
+                //fields.TryGetValue("No Reimbursed Total", out toSet); //commented for net6
+                //toSet.SetValue(noReimCost); //commented for net6
 
 
                 //set up the travel common variables
@@ -1409,25 +1411,25 @@ namespace TravelExpenses
                     toSet.SetValue(drLod["TotalLodging"].ToString());
 
                     //totalLod = totalLod + Convert.ToDouble(drLod["TotalLodging"].ToString());
-                    
+
                     //pdfFormFields.SetField("Lodging Nights" + rowLod, drLod["NumberOfNights"].ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Nights" + rowLod, out toSet);
-                    toSet.SetValue(drLod["NumberOfNights"].ToString());
+                    //fields.TryGetValue("Lodging Nights" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["NumberOfNights"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Lodging Night Cost" + rowLod, drLod["CostPerNight"].ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Night Cost" + rowLod, out toSet);
-                    toSet.SetValue(drLod["CostPerNight"].ToString());
+                    //fields.TryGetValue("Lodging Night Cost" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["CostPerNight"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Lodging Taxes Fees" + rowLod, drLod["TaxesAndFees"].ToString());
                     if (drLod["DistrictPay"].ToString() == "True")
                     {
                         //pdfFormFields.SetField("Lodging District Pay" + rowLod, "Yes"); //commented for net6
-                        fields.TryGetValue("Lodging District Pay" + rowLod, out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Lodging District Pay" + rowLod, out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
 
                         //pdfFormFields.SetField("Lodging Director Approval" + rowLod, ""); //commented for net6
-                        fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet);
-                        toSet.SetValue("");
+                        //fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet); //commented for net6
+                        //toSet.SetValue(""); //commented for net6
                     }
                     else
                     {
@@ -1452,9 +1454,9 @@ namespace TravelExpenses
                         }
                     }
                     //pdfFormFields.SetField("Facility  Notes" + rowLod, drLod["Notes"].ToString()); //commented for net6
-                    fields.TryGetValue("Facility  Notes" + rowLod, out toSet);
-                    toSet.SetValue(drLod["Notes"].ToString());
-                    
+                    //fields.TryGetValue("Facility  Notes" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["Notes"].ToString()); //commented for net6
+
                     rowLod++;
                 }
                 drLod.Close();
@@ -1504,8 +1506,8 @@ namespace TravelExpenses
                     toSet.SetValue(dropOff.ToShortDateString());
 
                     //pdfFormFields.SetField("Car_Day Cost" + carRow, drCR["CostPerDay"].ToString()); //commented for net6
-                    fields.TryGetValue("Car_Day Cost" + carRow, out toSet);
-                    toSet.SetValue(drCR["CostPerDay"].ToString());
+                    //fields.TryGetValue("Car_Day Cost" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["CostPerDay"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Car Total" + carRow, drCR["TotalCarRental"].ToString()); //commented for net6
                     fields.TryGetValue("Car Total" + carRow, out toSet);
@@ -1522,8 +1524,8 @@ namespace TravelExpenses
                     toSet.SetValue(drCR["Company"].ToString());
 
                     //pdfFormFields.SetField("Car Rental Days" + carRow, drCR["Days"].ToString()); //commented for net6
-                    fields.TryGetValue("Car Rental Days" + carRow, out toSet);
-                    toSet.SetValue(drCR["Days"].ToString());
+                    //fields.TryGetValue("Car Rental Days" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["Days"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Car Rental Taxes Fees" + carRow, drCR["TaxesAndFees"].ToString());
                     //pdfFormFields.SetField("LDW Insurance" + carRow, drCR["LDWInsuranse"].ToString());
@@ -1532,8 +1534,8 @@ namespace TravelExpenses
                     if (drCR["DistrictPay"].ToString() == "True")
                     {
                         //pdfFormFields.SetField("Car District Pay" + carRow, "Yes"); //commented for net6
-                        fields.TryGetValue("Car District Pay" + carRow, out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Car District Pay" + carRow, out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
                     }
                     else
                     {
@@ -1545,12 +1547,12 @@ namespace TravelExpenses
                         carRentalReimbursement += Convert.ToDouble(drCR["TotalCarRental"].ToString());
                     }
                     //pdfFormFields.SetField("Car Personal Amount" + carRow, drCR["PersonalAmount"].ToString()); //commented for net6
-                    fields.TryGetValue("Car Personal Amount" + carRow, out toSet);
-                    toSet.SetValue(drCR["PersonalAmount"].ToString());
+                    //fields.TryGetValue("Car Personal Amount" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["PersonalAmount"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Car Notes" + carRow, drCR["Notes"].ToString()); //commented for net6
-                    fields.TryGetValue("Car Notes" + carRow, out toSet);
-                    toSet.SetValue(drCR["Notes"].ToString());
+                    //fields.TryGetValue("Car Notes" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["Notes"].ToString()); //commented for net6
 
                     carRow++;
                 }
@@ -1627,8 +1629,8 @@ namespace TravelExpenses
                     toSet.SetValue(drAF["PersonalUseAmount"].ToString());
 
                     //pdfFormFields.SetField("Air Fare Notes" + flightRow, drAF["Notes"].ToString()); //commented for net6
-                    fields.TryGetValue("Air Fare Notes" + flightRow, out toSet);
-                    toSet.SetValue(drAF["Notes"].ToString());
+                    //fields.TryGetValue("Air Fare Notes" + flightRow, out toSet); //commented for net6
+                    //toSet.SetValue(drAF["Notes"].ToString()); //commented for net6
 
                     flightRow++;
                 }
@@ -1685,8 +1687,8 @@ namespace TravelExpenses
                     if (drMi["DistrictVehicleProvided"].ToString() == "True")
                     {
                         //pdfFormFields.SetField("Provided Vehicle", "Yes"); //commented for net6
-                        fields.TryGetValue("Provided Vehicle", out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Provided Vehicle", out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
                     }
                     else
                     {

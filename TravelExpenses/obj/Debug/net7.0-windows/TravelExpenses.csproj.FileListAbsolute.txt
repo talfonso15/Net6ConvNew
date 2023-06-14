@@ -191,3 +191,5 @@ C:\Users\Thaisa\Desktop\Travel Expenses Conv\TravelExpenses\obj\Debug\net7.0-win
 C:\Users\Thaisa\Desktop\Travel Expenses Conv\TravelExpenses\obj\Debug\net7.0-windows\TravelExpenses.pdb
 C:\Users\Thaisa\Desktop\Travel Expenses Conv\TravelExpenses\obj\Debug\net7.0-windows\TravelExpenses.genruntimeconfig.cache
 C:\Users\Thaisa\Desktop\Travel Expenses Conv\TravelExpenses\obj\Debug\net7.0-windows\ref\TravelExpenses.dll
+C:\Users\Thaisa\Desktop\Travel Expenses Conv\TravelExpenses\bin\Debug\net7.0-windows\itext.bouncy-castle-adapter.dll
+C:\Users\Thaisa\Desktop\Travel Expenses Conv\TravelExpenses\bin\Debug\net7.0-windows\BouncyCastle.Crypto.dll
