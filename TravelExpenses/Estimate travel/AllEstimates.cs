@@ -43,10 +43,10 @@ namespace TravelExpenses
 
         private void AllEstimates_Load(object sender, EventArgs e)
         {
-         
+
             localCon.Open();
             Guid userID = new Guid(CommonVariables.user);
-            SqlCommand cmd = new SqlCommand("SELECT [TravelEstimateID],[DepartureDate],[ReturnDate],[TravelEvent],[TravelPurpose],[BudgetedTravel],[EstimatedTravelCost] FROM [TravelExpenses].[dbo].[EstimateTravel] where UserID = '"+ userID + "' order by DepartureDate desc", localCon);
+            SqlCommand cmd = new SqlCommand("SELECT [TravelEstimateID],[DepartureDate],[ReturnDate],[TravelEvent],[TravelPurpose],[BudgetedTravel],[EstimatedTravelCost] FROM [TravelExpenses].[dbo].[EstimateTravel] where UserID = '" + userID + "' order by DepartureDate desc", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())
@@ -66,7 +66,7 @@ namespace TravelExpenses
             for (int i = 0; i < dgvAllEstimates.RowCount; i++)
             {
                 Guid idEst = new Guid(dgvAllEstimates.Rows[i].Cells[6].Value.ToString());
-                SqlCommand approved = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelID = '"+ idEst + "' AND UserType = 'Employee'", localCon);
+                SqlCommand approved = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelID = '" + idEst + "' AND UserType = 'Employee'", localCon);
                 SqlDataReader approvedDR = approved.ExecuteReader();
                 if (approvedDR.HasRows)
                 {
@@ -80,7 +80,7 @@ namespace TravelExpenses
             }
             localCon.Close();
 
-            this.Size = new System.Drawing.Size(776, 254);
+            this.Size = new System.Drawing.Size(1269, 471);
             canE = dgvAllEstimates.RowCount;
         }
 
@@ -152,7 +152,7 @@ namespace TravelExpenses
                 }
                 dr.Close();
                 localCon.Close();
-                this.Size = new System.Drawing.Size(776, 813);
+                this.Size = new System.Drawing.Size(1312, 1586);
                 tlOptionButtons.Visible = false;
                 dgvAllEstimates.Enabled = false;
                 loadingData = false;
@@ -191,7 +191,7 @@ namespace TravelExpenses
 
             tlOptionButtons.Visible = true;
             dgvAllEstimates.Enabled = true;
-            this.Size = new System.Drawing.Size(776, 254);
+            this.Size = new System.Drawing.Size(1308, 467);
 
             dtpDepartureDateValue.Enabled = false;
             dtpReturnDateValue.Enabled = false;
@@ -220,7 +220,7 @@ namespace TravelExpenses
 
         private void btnEstimatePDF_Click(object sender, EventArgs e)
         {
-            
+
             if (canE > 0)
             {
                 this.Hide();
@@ -266,7 +266,7 @@ namespace TravelExpenses
                 //end of new code
 
                 PdfReader pdfReader = new PdfReader(pdfTemplate);
-                
+
                 /*PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
                 AcroFields pdfFormFields = pdfStamper.AcroFields;*/
 
@@ -599,7 +599,7 @@ namespace TravelExpenses
                         }
                     }
 
-                   
+
                 }
                 localCon.Close();
             }
@@ -702,7 +702,7 @@ namespace TravelExpenses
                 dr.Close();
                 localCon.Close();
 
-                this.Size = new System.Drawing.Size(776, 813);
+                this.Size = new System.Drawing.Size(1312, 1586);
                 tlOptionButtons.Visible = false;
                 dgvAllEstimates.Enabled = false;
                 loadingData = false;
@@ -885,7 +885,7 @@ namespace TravelExpenses
                     tlOptionButtons.Visible = true;
                     dgvAllEstimates.Enabled = true;
                     refreshData();
-                    this.Size = new System.Drawing.Size(776, 254);
+                    this.Size = new System.Drawing.Size(1308, 467);
                 }
                 else
                 {
@@ -893,7 +893,7 @@ namespace TravelExpenses
                     localCon.Close();
                 }
             }
-            
+
         }
 
         private void refreshData()
@@ -1131,7 +1131,7 @@ namespace TravelExpenses
             }
             else
             {
-                mail.Body = "Please review the travel authorization form of " + username + " from "+ depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + " in order to attend to " + travEvent + " event.";
+                mail.Body = "Please review the travel authorization form of " + username + " from " + depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + " in order to attend to " + travEvent + " event.";
             }
 
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
@@ -1166,12 +1166,12 @@ namespace TravelExpenses
             double totalMeals = 0;
             if (txtMealsPerDiemRate.Text != "")
             {
-                
+
                 TimeSpan difference = dtpReturnDateValue.Value.Subtract(dtpDepartureDateValue.Value);
                 int totalDays = (int)difference.TotalDays;
                 totalDays = totalDays + 1;
                 totalMeals = totalDays * Convert.ToDouble(txtMealsPerDiemRate.Text);
-                
+
             }
             return totalMeals;
         }
@@ -1186,7 +1186,7 @@ namespace TravelExpenses
                     txtMealsCost.Text = "";
                     txtMealsCost.Text = CalculateMealsCost().ToString();
                 }
-                else 
+                else
                 {
                     MessageBox.Show("Enter a value for the Meals Per Diem Rate.");
                 }
@@ -1202,7 +1202,7 @@ namespace TravelExpenses
                     txtMealsCost.Text = "";
                     txtMealsCost.Text = CalculateMealsCost().ToString();
                 }
-                else 
+                else
                 {
                     MessageBox.Show("Enter a value for the Meals Per Diem Rate.");
                 }
@@ -1239,7 +1239,7 @@ namespace TravelExpenses
             }
         }
 
-        private bool validateMealsData() 
+        private bool validateMealsData()
         {
             if (txtMealsCost.Text != "" && txtMealsPerDiemRate.Text == "")
             {
