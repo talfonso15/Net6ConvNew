@@ -124,13 +124,13 @@
             dgvAllEstimates.AllowUserToAddRows = false;
             dgvAllEstimates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAllEstimates.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { DepartureDate, ReturnDate, TravelEvent, TravelPurpose, BudgetedTravel, EstimatedTravelCost, TravelEstomatedID, Approved });
-            dgvAllEstimates.Location = new System.Drawing.Point(21, 87);
-            dgvAllEstimates.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            dgvAllEstimates.Location = new System.Drawing.Point(15, 52);
+            dgvAllEstimates.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             dgvAllEstimates.MultiSelect = false;
             dgvAllEstimates.Name = "dgvAllEstimates";
             dgvAllEstimates.RowHeadersWidth = 62;
             dgvAllEstimates.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            dgvAllEstimates.Size = new System.Drawing.Size(1131, 275);
+            dgvAllEstimates.Size = new System.Drawing.Size(792, 165);
             dgvAllEstimates.TabIndex = 1;
             // 
             // DepartureDate
@@ -200,15 +200,15 @@
             // tlOptionButtons
             // 
             tlOptionButtons.ColumnCount = 9;
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.6666679F));
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.4444447F));
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.88889F));
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.8421059F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0451126F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.11278F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            tlOptionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             tlOptionButtons.Controls.Add(btnCancel, 0, 0);
             tlOptionButtons.Controls.Add(btnEstimatePDF, 2, 0);
             tlOptionButtons.Controls.Add(btnApproval, 4, 0);
@@ -218,12 +218,12 @@
             tlOptionButtons.Controls.Add(btnViewEstimate, 8, 0);
             tlOptionButtons.Controls.Add(btnEdit, 6, 0);
             tlOptionButtons.Controls.Add(label4, 7, 0);
-            tlOptionButtons.Location = new System.Drawing.Point(745, 2);
-            tlOptionButtons.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            tlOptionButtons.Location = new System.Drawing.Point(490, 1);
+            tlOptionButtons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tlOptionButtons.Name = "tlOptionButtons";
             tlOptionButtons.RowCount = 1;
             tlOptionButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tlOptionButtons.Size = new System.Drawing.Size(424, 82);
+            tlOptionButtons.Size = new System.Drawing.Size(329, 49);
             tlOptionButtons.TabIndex = 2;
             // 
             // btnCancel
@@ -233,10 +233,10 @@
             btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnCancel.Image = (System.Drawing.Image)resources.GetObject("btnCancel.Image");
-            btnCancel.Location = new System.Drawing.Point(7, 7);
-            btnCancel.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            btnCancel.Location = new System.Drawing.Point(4, 4);
+            btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new System.Drawing.Size(46, 68);
+            btnCancel.Size = new System.Drawing.Size(36, 41);
             btnCancel.TabIndex = 2;
             btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             toolTip1.SetToolTip(btnCancel, "Close Window");
@@ -250,10 +250,10 @@
             btnEstimatePDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnEstimatePDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnEstimatePDF.Image = (System.Drawing.Image)resources.GetObject("btnEstimatePDF.Image");
-            btnEstimatePDF.Location = new System.Drawing.Point(94, 7);
-            btnEstimatePDF.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            btnEstimatePDF.Location = new System.Drawing.Point(76, 4);
+            btnEstimatePDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnEstimatePDF.Name = "btnEstimatePDF";
-            btnEstimatePDF.Size = new System.Drawing.Size(44, 68);
+            btnEstimatePDF.Size = new System.Drawing.Size(31, 41);
             btnEstimatePDF.TabIndex = 1;
             btnEstimatePDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             toolTip1.SetToolTip(btnEstimatePDF, "Create PDF");
@@ -268,10 +268,10 @@
             btnApproval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnApproval.Image = (System.Drawing.Image)resources.GetObject("btnApproval.Image");
             btnApproval.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnApproval.Location = new System.Drawing.Point(179, 7);
-            btnApproval.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            btnApproval.Location = new System.Drawing.Point(149, 4);
+            btnApproval.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnApproval.Name = "btnApproval";
-            btnApproval.Size = new System.Drawing.Size(54, 68);
+            btnApproval.Size = new System.Drawing.Size(38, 41);
             btnApproval.TabIndex = 5;
             btnApproval.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             toolTip1.SetToolTip(btnApproval, "Approve & Sign");
@@ -283,10 +283,10 @@
             label3.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(245, 23);
-            label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label3.Location = new System.Drawing.Point(195, 12);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(16, 36);
+            label3.Size = new System.Drawing.Size(13, 25);
             label3.TabIndex = 6;
             label3.Text = "|";
             label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,10 +296,10 @@
             label2.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(150, 23);
-            label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label2.Location = new System.Drawing.Point(123, 12);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(17, 36);
+            label2.Size = new System.Drawing.Size(18, 25);
             label2.TabIndex = 4;
             label2.Text = "|";
             label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,10 +309,10 @@
             label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(66, 23);
-            label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label1.Location = new System.Drawing.Point(48, 12);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(16, 36);
+            label1.Size = new System.Drawing.Size(13, 25);
             label1.TabIndex = 3;
             label1.Text = "|";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -324,10 +324,10 @@
             btnViewEstimate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnViewEstimate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnViewEstimate.Image = (System.Drawing.Image)resources.GetObject("btnViewEstimate.Image");
-            btnViewEstimate.Location = new System.Drawing.Point(361, 7);
-            btnViewEstimate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            btnViewEstimate.Location = new System.Drawing.Point(284, 4);
+            btnViewEstimate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnViewEstimate.Name = "btnViewEstimate";
-            btnViewEstimate.Size = new System.Drawing.Size(57, 68);
+            btnViewEstimate.Size = new System.Drawing.Size(40, 41);
             btnViewEstimate.TabIndex = 0;
             btnViewEstimate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             toolTip1.SetToolTip(btnViewEstimate, "View Details");
@@ -340,10 +340,10 @@
             btnEdit.FlatAppearance.BorderSize = 0;
             btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnEdit.Image = (System.Drawing.Image)resources.GetObject("btnEdit.Image");
-            btnEdit.Location = new System.Drawing.Point(273, 7);
-            btnEdit.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            btnEdit.Location = new System.Drawing.Point(217, 4);
+            btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new System.Drawing.Size(47, 68);
+            btnEdit.Size = new System.Drawing.Size(33, 41);
             btnEdit.TabIndex = 7;
             toolTip1.SetToolTip(btnEdit, "Edit Authorization");
             btnEdit.UseVisualStyleBackColor = true;
@@ -354,10 +354,10 @@
             label4.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(332, 23);
-            label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label4.Location = new System.Drawing.Point(259, 12);
+            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(17, 36);
+            label4.Size = new System.Drawing.Size(16, 25);
             label4.TabIndex = 8;
             label4.Text = "|";
             label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -367,21 +367,21 @@
             pEstimateDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pEstimateDetails.Controls.Add(gbTravelDetails);
             pEstimateDetails.Controls.Add(gbTravelItems);
-            pEstimateDetails.Location = new System.Drawing.Point(57, 448);
-            pEstimateDetails.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            pEstimateDetails.Location = new System.Drawing.Point(40, 269);
+            pEstimateDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             pEstimateDetails.Name = "pEstimateDetails";
-            pEstimateDetails.Size = new System.Drawing.Size(1175, 925);
+            pEstimateDetails.Size = new System.Drawing.Size(823, 556);
             pEstimateDetails.TabIndex = 3;
             // 
             // gbTravelDetails
             // 
             gbTravelDetails.Controls.Add(tableLayoutPanel2);
             gbTravelDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            gbTravelDetails.Location = new System.Drawing.Point(40, 22);
-            gbTravelDetails.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            gbTravelDetails.Location = new System.Drawing.Point(28, 13);
+            gbTravelDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             gbTravelDetails.Name = "gbTravelDetails";
-            gbTravelDetails.Padding = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            gbTravelDetails.Size = new System.Drawing.Size(1094, 323);
+            gbTravelDetails.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            gbTravelDetails.Size = new System.Drawing.Size(766, 194);
             gbTravelDetails.TabIndex = 3;
             gbTravelDetails.TabStop = false;
             gbTravelDetails.Text = "Travel Details";
@@ -409,15 +409,15 @@
             tableLayoutPanel2.Controls.Add(txtDestination, 1, 3);
             tableLayoutPanel2.Controls.Add(lblMealsPerDiemRate, 2, 3);
             tableLayoutPanel2.Controls.Add(txtMealsPerDiemRate, 3, 3);
-            tableLayoutPanel2.Location = new System.Drawing.Point(20, 37);
-            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            tableLayoutPanel2.Location = new System.Drawing.Point(14, 22);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 4;
             tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            tableLayoutPanel2.Size = new System.Drawing.Size(1007, 275);
+            tableLayoutPanel2.Size = new System.Drawing.Size(705, 165);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // lblDepartureDate
@@ -425,10 +425,10 @@
             lblDepartureDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblDepartureDate.AutoSize = true;
             lblDepartureDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblDepartureDate.Location = new System.Drawing.Point(6, 24);
-            lblDepartureDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblDepartureDate.Location = new System.Drawing.Point(4, 14);
+            lblDepartureDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblDepartureDate.Name = "lblDepartureDate";
-            lblDepartureDate.Size = new System.Drawing.Size(184, 20);
+            lblDepartureDate.Size = new System.Drawing.Size(129, 13);
             lblDepartureDate.TabIndex = 0;
             lblDepartureDate.Text = "Departure Date:";
             // 
@@ -437,10 +437,10 @@
             lblReturnDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblReturnDate.AutoSize = true;
             lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblReturnDate.Location = new System.Drawing.Point(486, 24);
-            lblReturnDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblReturnDate.Location = new System.Drawing.Point(339, 14);
+            lblReturnDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblReturnDate.Name = "lblReturnDate";
-            lblReturnDate.Size = new System.Drawing.Size(215, 20);
+            lblReturnDate.Size = new System.Drawing.Size(151, 13);
             lblReturnDate.TabIndex = 1;
             lblReturnDate.Text = "Return Date:";
             // 
@@ -449,10 +449,10 @@
             lblTravelEvent.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblTravelEvent.AutoSize = true;
             lblTravelEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblTravelEvent.Location = new System.Drawing.Point(6, 92);
-            lblTravelEvent.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblTravelEvent.Location = new System.Drawing.Point(4, 55);
+            lblTravelEvent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblTravelEvent.Name = "lblTravelEvent";
-            lblTravelEvent.Size = new System.Drawing.Size(184, 20);
+            lblTravelEvent.Size = new System.Drawing.Size(129, 13);
             lblTravelEvent.TabIndex = 4;
             lblTravelEvent.Text = "Travel Event:";
             // 
@@ -460,13 +460,13 @@
             // 
             txtTravelEvent.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             txtTravelEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            txtTravelEvent.Location = new System.Drawing.Point(202, 76);
-            txtTravelEvent.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtTravelEvent.Location = new System.Drawing.Point(141, 45);
+            txtTravelEvent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtTravelEvent.Multiline = true;
             txtTravelEvent.Name = "txtTravelEvent";
             txtTravelEvent.ReadOnly = true;
             txtTravelEvent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtTravelEvent.Size = new System.Drawing.Size(272, 52);
+            txtTravelEvent.Size = new System.Drawing.Size(190, 33);
             txtTravelEvent.TabIndex = 5;
             // 
             // lblTravelPurpose
@@ -474,10 +474,10 @@
             lblTravelPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblTravelPurpose.AutoSize = true;
             lblTravelPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblTravelPurpose.Location = new System.Drawing.Point(486, 92);
-            lblTravelPurpose.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblTravelPurpose.Location = new System.Drawing.Point(339, 55);
+            lblTravelPurpose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblTravelPurpose.Name = "lblTravelPurpose";
-            lblTravelPurpose.Size = new System.Drawing.Size(215, 20);
+            lblTravelPurpose.Size = new System.Drawing.Size(151, 13);
             lblTravelPurpose.TabIndex = 6;
             lblTravelPurpose.Text = "Travel Purpose:";
             // 
@@ -485,13 +485,13 @@
             // 
             txtTravelPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             txtTravelPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            txtTravelPurpose.Location = new System.Drawing.Point(713, 76);
-            txtTravelPurpose.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtTravelPurpose.Location = new System.Drawing.Point(498, 45);
+            txtTravelPurpose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtTravelPurpose.Multiline = true;
             txtTravelPurpose.Name = "txtTravelPurpose";
             txtTravelPurpose.ReadOnly = true;
             txtTravelPurpose.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtTravelPurpose.Size = new System.Drawing.Size(288, 52);
+            txtTravelPurpose.Size = new System.Drawing.Size(203, 33);
             txtTravelPurpose.TabIndex = 7;
             // 
             // lblTravelBudgeted
@@ -499,10 +499,10 @@
             lblTravelBudgeted.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblTravelBudgeted.AutoSize = true;
             lblTravelBudgeted.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblTravelBudgeted.Location = new System.Drawing.Point(6, 160);
-            lblTravelBudgeted.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblTravelBudgeted.Location = new System.Drawing.Point(4, 96);
+            lblTravelBudgeted.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblTravelBudgeted.Name = "lblTravelBudgeted";
-            lblTravelBudgeted.Size = new System.Drawing.Size(184, 20);
+            lblTravelBudgeted.Size = new System.Drawing.Size(129, 13);
             lblTravelBudgeted.TabIndex = 8;
             lblTravelBudgeted.Text = "Travel Budgeted:";
             // 
@@ -511,10 +511,10 @@
             lblTravelEstTotal.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblTravelEstTotal.AutoSize = true;
             lblTravelEstTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblTravelEstTotal.Location = new System.Drawing.Point(486, 160);
-            lblTravelEstTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblTravelEstTotal.Location = new System.Drawing.Point(339, 96);
+            lblTravelEstTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblTravelEstTotal.Name = "lblTravelEstTotal";
-            lblTravelEstTotal.Size = new System.Drawing.Size(215, 20);
+            lblTravelEstTotal.Size = new System.Drawing.Size(151, 13);
             lblTravelEstTotal.TabIndex = 10;
             lblTravelEstTotal.Text = "Estimated Total:";
             // 
@@ -523,10 +523,10 @@
             lblEstimatedTotalValue.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblEstimatedTotalValue.AutoSize = true;
             lblEstimatedTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblEstimatedTotalValue.Location = new System.Drawing.Point(713, 160);
-            lblEstimatedTotalValue.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblEstimatedTotalValue.Location = new System.Drawing.Point(498, 96);
+            lblEstimatedTotalValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEstimatedTotalValue.Name = "lblEstimatedTotalValue";
-            lblEstimatedTotalValue.Size = new System.Drawing.Size(288, 20);
+            lblEstimatedTotalValue.Size = new System.Drawing.Size(203, 13);
             lblEstimatedTotalValue.TabIndex = 11;
             // 
             // dtpDepartureDateValue
@@ -534,10 +534,10 @@
             dtpDepartureDateValue.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             dtpDepartureDateValue.Enabled = false;
             dtpDepartureDateValue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            dtpDepartureDateValue.Location = new System.Drawing.Point(202, 21);
-            dtpDepartureDateValue.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            dtpDepartureDateValue.Location = new System.Drawing.Point(141, 10);
+            dtpDepartureDateValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             dtpDepartureDateValue.Name = "dtpDepartureDateValue";
-            dtpDepartureDateValue.Size = new System.Drawing.Size(272, 26);
+            dtpDepartureDateValue.Size = new System.Drawing.Size(190, 20);
             dtpDepartureDateValue.TabIndex = 12;
             dtpDepartureDateValue.ValueChanged += dtpDepartureDateValue_ValueChanged;
             // 
@@ -546,10 +546,10 @@
             dtpReturnDateValue.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             dtpReturnDateValue.Enabled = false;
             dtpReturnDateValue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            dtpReturnDateValue.Location = new System.Drawing.Point(713, 21);
-            dtpReturnDateValue.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            dtpReturnDateValue.Location = new System.Drawing.Point(498, 10);
+            dtpReturnDateValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             dtpReturnDateValue.Name = "dtpReturnDateValue";
-            dtpReturnDateValue.Size = new System.Drawing.Size(288, 26);
+            dtpReturnDateValue.Size = new System.Drawing.Size(203, 20);
             dtpReturnDateValue.TabIndex = 13;
             dtpReturnDateValue.ValueChanged += dtpReturnDateValue_ValueChanged;
             // 
@@ -558,19 +558,19 @@
             pTravelBudget.Controls.Add(rbNo);
             pTravelBudget.Controls.Add(rbYes);
             pTravelBudget.Enabled = false;
-            pTravelBudget.Location = new System.Drawing.Point(202, 143);
-            pTravelBudget.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            pTravelBudget.Location = new System.Drawing.Point(141, 86);
+            pTravelBudget.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             pTravelBudget.Name = "pTravelBudget";
-            pTravelBudget.Size = new System.Drawing.Size(271, 54);
+            pTravelBudget.Size = new System.Drawing.Size(190, 32);
             pTravelBudget.TabIndex = 14;
             // 
             // rbNo
             // 
             rbNo.AutoSize = true;
-            rbNo.Location = new System.Drawing.Point(169, 13);
-            rbNo.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            rbNo.Location = new System.Drawing.Point(118, 8);
+            rbNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             rbNo.Name = "rbNo";
-            rbNo.Size = new System.Drawing.Size(57, 24);
+            rbNo.Size = new System.Drawing.Size(41, 17);
             rbNo.TabIndex = 1;
             rbNo.TabStop = true;
             rbNo.Text = "No";
@@ -579,10 +579,10 @@
             // rbYes
             // 
             rbYes.AutoSize = true;
-            rbYes.Location = new System.Drawing.Point(60, 13);
-            rbYes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            rbYes.Location = new System.Drawing.Point(42, 8);
+            rbYes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             rbYes.Name = "rbYes";
-            rbYes.Size = new System.Drawing.Size(65, 24);
+            rbYes.Size = new System.Drawing.Size(46, 17);
             rbYes.TabIndex = 0;
             rbYes.TabStop = true;
             rbYes.Text = "Yes";
@@ -592,10 +592,10 @@
             // 
             lblDestination.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblDestination.AutoSize = true;
-            lblDestination.Location = new System.Drawing.Point(6, 229);
-            lblDestination.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblDestination.Location = new System.Drawing.Point(4, 137);
+            lblDestination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblDestination.Name = "lblDestination";
-            lblDestination.Size = new System.Drawing.Size(184, 20);
+            lblDestination.Size = new System.Drawing.Size(129, 13);
             lblDestination.TabIndex = 15;
             lblDestination.Text = "City / State:";
             // 
@@ -603,34 +603,34 @@
             // 
             txtDestination.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             txtDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            txtDestination.Location = new System.Drawing.Point(202, 212);
-            txtDestination.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtDestination.Location = new System.Drawing.Point(141, 127);
+            txtDestination.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtDestination.Multiline = true;
             txtDestination.Name = "txtDestination";
             txtDestination.ReadOnly = true;
             txtDestination.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtDestination.Size = new System.Drawing.Size(272, 54);
+            txtDestination.Size = new System.Drawing.Size(190, 34);
             txtDestination.TabIndex = 16;
             // 
             // lblMealsPerDiemRate
             // 
             lblMealsPerDiemRate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblMealsPerDiemRate.AutoSize = true;
-            lblMealsPerDiemRate.Location = new System.Drawing.Point(486, 229);
-            lblMealsPerDiemRate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblMealsPerDiemRate.Location = new System.Drawing.Point(339, 137);
+            lblMealsPerDiemRate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblMealsPerDiemRate.Name = "lblMealsPerDiemRate";
-            lblMealsPerDiemRate.Size = new System.Drawing.Size(215, 20);
+            lblMealsPerDiemRate.Size = new System.Drawing.Size(151, 13);
             lblMealsPerDiemRate.TabIndex = 17;
             lblMealsPerDiemRate.Text = "Meals Per Diem Rate:";
             // 
             // txtMealsPerDiemRate
             // 
             txtMealsPerDiemRate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtMealsPerDiemRate.Location = new System.Drawing.Point(713, 226);
-            txtMealsPerDiemRate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtMealsPerDiemRate.Location = new System.Drawing.Point(498, 134);
+            txtMealsPerDiemRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtMealsPerDiemRate.Name = "txtMealsPerDiemRate";
             txtMealsPerDiemRate.ReadOnly = true;
-            txtMealsPerDiemRate.Size = new System.Drawing.Size(288, 26);
+            txtMealsPerDiemRate.Size = new System.Drawing.Size(203, 20);
             txtMealsPerDiemRate.TabIndex = 18;
             txtMealsPerDiemRate.TextChanged += txtMealsPerDiemRate_TextChanged;
             txtMealsPerDiemRate.KeyPress += txtMealsPerDiemRate_KeyPress;
@@ -639,11 +639,11 @@
             // 
             gbTravelItems.Controls.Add(tableLayoutPanel3);
             gbTravelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            gbTravelItems.Location = new System.Drawing.Point(40, 362);
-            gbTravelItems.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            gbTravelItems.Location = new System.Drawing.Point(28, 217);
+            gbTravelItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             gbTravelItems.Name = "gbTravelItems";
-            gbTravelItems.Padding = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            gbTravelItems.Size = new System.Drawing.Size(1049, 542);
+            gbTravelItems.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            gbTravelItems.Size = new System.Drawing.Size(734, 325);
             gbTravelItems.TabIndex = 2;
             gbTravelItems.TabStop = false;
             gbTravelItems.Text = "Travel Items";
@@ -678,8 +678,8 @@
             tableLayoutPanel3.Controls.Add(txtCarRentalCost, 1, 4);
             tableLayoutPanel3.Controls.Add(txtAirfareCost, 1, 5);
             tableLayoutPanel3.Controls.Add(txtOtherExpensesCost, 1, 7);
-            tableLayoutPanel3.Location = new System.Drawing.Point(20, 40);
-            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            tableLayoutPanel3.Location = new System.Drawing.Point(14, 24);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 8;
             tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -690,26 +690,26 @@
             tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            tableLayoutPanel3.Size = new System.Drawing.Size(1007, 483);
+            tableLayoutPanel3.Size = new System.Drawing.Size(705, 290);
             tableLayoutPanel3.TabIndex = 1;
             // 
             // panel2
             // 
             panel2.Controls.Add(button1);
             panel2.Controls.Add(txtMileageCost);
-            panel2.Location = new System.Drawing.Point(169, 367);
-            panel2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            panel2.Location = new System.Drawing.Point(118, 220);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(156, 46);
+            panel2.Size = new System.Drawing.Size(109, 28);
             panel2.TabIndex = 7;
             // 
             // button1
             // 
             button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button1.Location = new System.Drawing.Point(6, 3);
-            button1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            button1.Location = new System.Drawing.Point(4, 2);
+            button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(50, 40);
+            button1.Size = new System.Drawing.Size(35, 24);
             button1.TabIndex = 30;
             button1.Text = "+";
             button1.UseVisualStyleBackColor = true;
@@ -718,11 +718,11 @@
             // txtMileageCost
             // 
             txtMileageCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtMileageCost.Location = new System.Drawing.Point(57, 7);
-            txtMileageCost.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtMileageCost.Location = new System.Drawing.Point(40, 4);
+            txtMileageCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtMileageCost.Name = "txtMileageCost";
             txtMileageCost.ReadOnly = true;
-            txtMileageCost.Size = new System.Drawing.Size(91, 26);
+            txtMileageCost.Size = new System.Drawing.Size(65, 20);
             txtMileageCost.TabIndex = 29;
             txtMileageCost.KeyPress += txtMileageCost_KeyPress;
             // 
@@ -730,10 +730,10 @@
             // 
             lblName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblName.AutoSize = true;
-            lblName.Location = new System.Drawing.Point(6, 20);
-            lblName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblName.Location = new System.Drawing.Point(4, 11);
+            lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblName.Name = "lblName";
-            lblName.Size = new System.Drawing.Size(151, 20);
+            lblName.Size = new System.Drawing.Size(106, 13);
             lblName.TabIndex = 0;
             lblName.Text = "Item";
             // 
@@ -741,10 +741,10 @@
             // 
             lblCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblCost.AutoSize = true;
-            lblCost.Location = new System.Drawing.Point(169, 20);
-            lblCost.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblCost.Location = new System.Drawing.Point(118, 11);
+            lblCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblCost.Name = "lblCost";
-            lblCost.Size = new System.Drawing.Size(156, 20);
+            lblCost.Size = new System.Drawing.Size(109, 13);
             lblCost.TabIndex = 1;
             lblCost.Text = "Cost";
             // 
@@ -752,10 +752,10 @@
             // 
             lblNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblNotes.AutoSize = true;
-            lblNotes.Location = new System.Drawing.Point(337, 20);
-            lblNotes.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblNotes.Location = new System.Drawing.Point(235, 11);
+            lblNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblNotes.Name = "lblNotes";
-            lblNotes.Size = new System.Drawing.Size(664, 20);
+            lblNotes.Size = new System.Drawing.Size(466, 13);
             lblNotes.TabIndex = 2;
             lblNotes.Text = "Notes";
             // 
@@ -764,10 +764,10 @@
             lblMeals.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblMeals.AutoSize = true;
             lblMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblMeals.Location = new System.Drawing.Point(6, 80);
-            lblMeals.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblMeals.Location = new System.Drawing.Point(4, 47);
+            lblMeals.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblMeals.Name = "lblMeals";
-            lblMeals.Size = new System.Drawing.Size(151, 20);
+            lblMeals.Size = new System.Drawing.Size(106, 13);
             lblMeals.TabIndex = 3;
             lblMeals.Text = "Meals";
             // 
@@ -776,10 +776,10 @@
             lblRegistration.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblRegistration.AutoSize = true;
             lblRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblRegistration.Location = new System.Drawing.Point(6, 140);
-            lblRegistration.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblRegistration.Location = new System.Drawing.Point(4, 83);
+            lblRegistration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblRegistration.Name = "lblRegistration";
-            lblRegistration.Size = new System.Drawing.Size(151, 20);
+            lblRegistration.Size = new System.Drawing.Size(106, 13);
             lblRegistration.TabIndex = 4;
             lblRegistration.Text = "Registration";
             // 
@@ -788,10 +788,10 @@
             lblLodging.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblLodging.AutoSize = true;
             lblLodging.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblLodging.Location = new System.Drawing.Point(6, 200);
-            lblLodging.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblLodging.Location = new System.Drawing.Point(4, 119);
+            lblLodging.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblLodging.Name = "lblLodging";
-            lblLodging.Size = new System.Drawing.Size(151, 20);
+            lblLodging.Size = new System.Drawing.Size(106, 13);
             lblLodging.TabIndex = 5;
             lblLodging.Text = "Lodging";
             // 
@@ -800,10 +800,10 @@
             lblCarRental.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblCarRental.AutoSize = true;
             lblCarRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblCarRental.Location = new System.Drawing.Point(6, 260);
-            lblCarRental.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblCarRental.Location = new System.Drawing.Point(4, 155);
+            lblCarRental.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblCarRental.Name = "lblCarRental";
-            lblCarRental.Size = new System.Drawing.Size(151, 20);
+            lblCarRental.Size = new System.Drawing.Size(106, 13);
             lblCarRental.TabIndex = 6;
             lblCarRental.Text = "Car Rental";
             // 
@@ -812,10 +812,10 @@
             lblAirfare.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblAirfare.AutoSize = true;
             lblAirfare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblAirfare.Location = new System.Drawing.Point(6, 320);
-            lblAirfare.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblAirfare.Location = new System.Drawing.Point(4, 191);
+            lblAirfare.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblAirfare.Name = "lblAirfare";
-            lblAirfare.Size = new System.Drawing.Size(151, 20);
+            lblAirfare.Size = new System.Drawing.Size(106, 13);
             lblAirfare.TabIndex = 7;
             lblAirfare.Text = "Airfare";
             // 
@@ -824,10 +824,10 @@
             lblMileage.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblMileage.AutoSize = true;
             lblMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblMileage.Location = new System.Drawing.Point(6, 380);
-            lblMileage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblMileage.Location = new System.Drawing.Point(4, 227);
+            lblMileage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblMileage.Name = "lblMileage";
-            lblMileage.Size = new System.Drawing.Size(151, 20);
+            lblMileage.Size = new System.Drawing.Size(106, 13);
             lblMileage.TabIndex = 8;
             lblMileage.Text = "Mileage";
             // 
@@ -836,160 +836,160 @@
             lblOtherExpenses.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblOtherExpenses.AutoSize = true;
             lblOtherExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblOtherExpenses.Location = new System.Drawing.Point(6, 441);
-            lblOtherExpenses.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblOtherExpenses.Location = new System.Drawing.Point(4, 264);
+            lblOtherExpenses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblOtherExpenses.Name = "lblOtherExpenses";
-            lblOtherExpenses.Size = new System.Drawing.Size(151, 20);
+            lblOtherExpenses.Size = new System.Drawing.Size(106, 13);
             lblOtherExpenses.TabIndex = 9;
             lblOtherExpenses.Text = "Other Expenses";
             // 
             // txtMealsNotes
             // 
             txtMealsNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtMealsNotes.Location = new System.Drawing.Point(337, 68);
-            txtMealsNotes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtMealsNotes.Location = new System.Drawing.Point(235, 40);
+            txtMealsNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtMealsNotes.Multiline = true;
             txtMealsNotes.Name = "txtMealsNotes";
             txtMealsNotes.ReadOnly = true;
             txtMealsNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtMealsNotes.Size = new System.Drawing.Size(664, 44);
+            txtMealsNotes.Size = new System.Drawing.Size(466, 28);
             txtMealsNotes.TabIndex = 17;
             // 
             // txtRegistrationNotes
             // 
             txtRegistrationNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtRegistrationNotes.Location = new System.Drawing.Point(337, 128);
-            txtRegistrationNotes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtRegistrationNotes.Location = new System.Drawing.Point(235, 76);
+            txtRegistrationNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtRegistrationNotes.Multiline = true;
             txtRegistrationNotes.Name = "txtRegistrationNotes";
             txtRegistrationNotes.ReadOnly = true;
             txtRegistrationNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtRegistrationNotes.Size = new System.Drawing.Size(664, 44);
+            txtRegistrationNotes.Size = new System.Drawing.Size(466, 28);
             txtRegistrationNotes.TabIndex = 18;
             // 
             // txtLodgingNotes
             // 
             txtLodgingNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtLodgingNotes.Location = new System.Drawing.Point(337, 188);
-            txtLodgingNotes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtLodgingNotes.Location = new System.Drawing.Point(235, 112);
+            txtLodgingNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtLodgingNotes.Multiline = true;
             txtLodgingNotes.Name = "txtLodgingNotes";
             txtLodgingNotes.ReadOnly = true;
             txtLodgingNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtLodgingNotes.Size = new System.Drawing.Size(664, 44);
+            txtLodgingNotes.Size = new System.Drawing.Size(466, 28);
             txtLodgingNotes.TabIndex = 19;
             // 
             // txtCarRentalNotes
             // 
             txtCarRentalNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtCarRentalNotes.Location = new System.Drawing.Point(337, 248);
-            txtCarRentalNotes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtCarRentalNotes.Location = new System.Drawing.Point(235, 148);
+            txtCarRentalNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtCarRentalNotes.Multiline = true;
             txtCarRentalNotes.Name = "txtCarRentalNotes";
             txtCarRentalNotes.ReadOnly = true;
             txtCarRentalNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtCarRentalNotes.Size = new System.Drawing.Size(664, 44);
+            txtCarRentalNotes.Size = new System.Drawing.Size(466, 28);
             txtCarRentalNotes.TabIndex = 20;
             // 
             // txtAirfareNotes
             // 
             txtAirfareNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtAirfareNotes.Location = new System.Drawing.Point(337, 308);
-            txtAirfareNotes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtAirfareNotes.Location = new System.Drawing.Point(235, 184);
+            txtAirfareNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtAirfareNotes.Multiline = true;
             txtAirfareNotes.Name = "txtAirfareNotes";
             txtAirfareNotes.ReadOnly = true;
             txtAirfareNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtAirfareNotes.Size = new System.Drawing.Size(664, 44);
+            txtAirfareNotes.Size = new System.Drawing.Size(466, 28);
             txtAirfareNotes.TabIndex = 21;
             // 
             // txtMileageNotes
             // 
             txtMileageNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtMileageNotes.Location = new System.Drawing.Point(337, 368);
-            txtMileageNotes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtMileageNotes.Location = new System.Drawing.Point(235, 220);
+            txtMileageNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtMileageNotes.Multiline = true;
             txtMileageNotes.Name = "txtMileageNotes";
             txtMileageNotes.ReadOnly = true;
             txtMileageNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtMileageNotes.Size = new System.Drawing.Size(664, 44);
+            txtMileageNotes.Size = new System.Drawing.Size(466, 28);
             txtMileageNotes.TabIndex = 22;
             // 
             // txtOtherExpNotes
             // 
             txtOtherExpNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtOtherExpNotes.Location = new System.Drawing.Point(337, 428);
-            txtOtherExpNotes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtOtherExpNotes.Location = new System.Drawing.Point(235, 256);
+            txtOtherExpNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtOtherExpNotes.Multiline = true;
             txtOtherExpNotes.Name = "txtOtherExpNotes";
             txtOtherExpNotes.ReadOnly = true;
             txtOtherExpNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            txtOtherExpNotes.Size = new System.Drawing.Size(664, 47);
+            txtOtherExpNotes.Size = new System.Drawing.Size(466, 30);
             txtOtherExpNotes.TabIndex = 23;
             // 
             // txtMealsCost
             // 
             txtMealsCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtMealsCost.Location = new System.Drawing.Point(169, 77);
-            txtMealsCost.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtMealsCost.Location = new System.Drawing.Point(118, 44);
+            txtMealsCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtMealsCost.Name = "txtMealsCost";
             txtMealsCost.ReadOnly = true;
-            txtMealsCost.Size = new System.Drawing.Size(156, 26);
+            txtMealsCost.Size = new System.Drawing.Size(109, 20);
             txtMealsCost.TabIndex = 24;
             txtMealsCost.KeyPress += txtMealsCost_KeyPress;
             // 
             // txtRegistrationCost
             // 
             txtRegistrationCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtRegistrationCost.Location = new System.Drawing.Point(169, 137);
-            txtRegistrationCost.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtRegistrationCost.Location = new System.Drawing.Point(118, 80);
+            txtRegistrationCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtRegistrationCost.Name = "txtRegistrationCost";
             txtRegistrationCost.ReadOnly = true;
-            txtRegistrationCost.Size = new System.Drawing.Size(156, 26);
+            txtRegistrationCost.Size = new System.Drawing.Size(109, 20);
             txtRegistrationCost.TabIndex = 25;
             txtRegistrationCost.KeyPress += txtRegistrationCost_KeyPress;
             // 
             // txtLodgingCost
             // 
             txtLodgingCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtLodgingCost.Location = new System.Drawing.Point(169, 197);
-            txtLodgingCost.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtLodgingCost.Location = new System.Drawing.Point(118, 116);
+            txtLodgingCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtLodgingCost.Name = "txtLodgingCost";
             txtLodgingCost.ReadOnly = true;
-            txtLodgingCost.Size = new System.Drawing.Size(156, 26);
+            txtLodgingCost.Size = new System.Drawing.Size(109, 20);
             txtLodgingCost.TabIndex = 26;
             txtLodgingCost.KeyPress += txtLodgingCost_KeyPress;
             // 
             // txtCarRentalCost
             // 
             txtCarRentalCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtCarRentalCost.Location = new System.Drawing.Point(169, 257);
-            txtCarRentalCost.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtCarRentalCost.Location = new System.Drawing.Point(118, 152);
+            txtCarRentalCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtCarRentalCost.Name = "txtCarRentalCost";
             txtCarRentalCost.ReadOnly = true;
-            txtCarRentalCost.Size = new System.Drawing.Size(156, 26);
+            txtCarRentalCost.Size = new System.Drawing.Size(109, 20);
             txtCarRentalCost.TabIndex = 27;
             txtCarRentalCost.KeyPress += txtCarRentalCost_KeyPress;
             // 
             // txtAirfareCost
             // 
             txtAirfareCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtAirfareCost.Location = new System.Drawing.Point(169, 317);
-            txtAirfareCost.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtAirfareCost.Location = new System.Drawing.Point(118, 188);
+            txtAirfareCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtAirfareCost.Name = "txtAirfareCost";
             txtAirfareCost.ReadOnly = true;
-            txtAirfareCost.Size = new System.Drawing.Size(156, 26);
+            txtAirfareCost.Size = new System.Drawing.Size(109, 20);
             txtAirfareCost.TabIndex = 28;
             txtAirfareCost.KeyPress += txtAirfareCost_KeyPress;
             // 
             // txtOtherExpensesCost
             // 
             txtOtherExpensesCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            txtOtherExpensesCost.Location = new System.Drawing.Point(169, 438);
-            txtOtherExpensesCost.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            txtOtherExpensesCost.Location = new System.Drawing.Point(118, 261);
+            txtOtherExpensesCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             txtOtherExpensesCost.Name = "txtOtherExpensesCost";
             txtOtherExpensesCost.ReadOnly = true;
-            txtOtherExpensesCost.Size = new System.Drawing.Size(156, 26);
+            txtOtherExpensesCost.Size = new System.Drawing.Size(109, 20);
             txtOtherExpensesCost.TabIndex = 30;
             txtOtherExpensesCost.KeyPress += txtOtherExpensesCost_KeyPress;
             // 
@@ -1001,20 +1001,20 @@
             panel1.Controls.Add(btnInfo);
             panel1.Controls.Add(tlOptionButtons);
             panel1.Controls.Add(dgvAllEstimates);
-            panel1.Location = new System.Drawing.Point(57, 23);
-            panel1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            panel1.Location = new System.Drawing.Point(40, 14);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(1175, 369);
+            panel1.Size = new System.Drawing.Size(823, 222);
             panel1.TabIndex = 5;
             // 
             // lblNotifications
             // 
             lblNotifications.AutoSize = true;
             lblNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblNotifications.Location = new System.Drawing.Point(134, 48);
-            lblNotifications.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            lblNotifications.Location = new System.Drawing.Point(94, 29);
+            lblNotifications.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblNotifications.Name = "lblNotifications";
-            lblNotifications.Size = new System.Drawing.Size(261, 20);
+            lblNotifications.Size = new System.Drawing.Size(178, 13);
             lblNotifications.TabIndex = 5;
             lblNotifications.Text = "Sending Notification Emails....";
             lblNotifications.Visible = false;
@@ -1022,10 +1022,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new System.Drawing.Point(93, 31);
-            pictureBox1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            pictureBox1.Location = new System.Drawing.Point(55, 5);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(36, 49);
+            pictureBox1.Size = new System.Drawing.Size(39, 43);
             pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -1036,10 +1036,10 @@
             btnInfo.FlatAppearance.BorderSize = 0;
             btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnInfo.Image = (System.Drawing.Image)resources.GetObject("btnInfo.Image");
-            btnInfo.Location = new System.Drawing.Point(19, 49);
-            btnInfo.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            btnInfo.Location = new System.Drawing.Point(13, 25);
+            btnInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnInfo.Name = "btnInfo";
-            btnInfo.Size = new System.Drawing.Size(29, 33);
+            btnInfo.Size = new System.Drawing.Size(23, 25);
             btnInfo.TabIndex = 3;
             toolTip1.SetToolTip(btnInfo, "Select one travel authorization and then make a click on one of the options:");
             btnInfo.UseVisualStyleBackColor = true;
@@ -1058,10 +1058,10 @@
             btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnUpdate.Image = (System.Drawing.Image)resources.GetObject("btnUpdate.Image");
             btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnUpdate.Location = new System.Drawing.Point(1083, 1405);
-            btnUpdate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            btnUpdate.Location = new System.Drawing.Point(753, 854);
+            btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new System.Drawing.Size(132, 77);
+            btnUpdate.Size = new System.Drawing.Size(110, 46);
             btnUpdate.TabIndex = 6;
             btnUpdate.Text = "Update";
             btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1077,10 +1077,10 @@
             btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
             btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnClose.Location = new System.Drawing.Point(51, 1405);
-            btnClose.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            btnClose.Location = new System.Drawing.Point(56, 846);
+            btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnClose.Name = "btnClose";
-            btnClose.Size = new System.Drawing.Size(136, 77);
+            btnClose.Size = new System.Drawing.Size(108, 62);
             btnClose.TabIndex = 4;
             btnClose.Text = "Cancel";
             btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1094,16 +1094,16 @@
             // 
             // AllEstimates
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1218, 1458);
+            ClientSize = new System.Drawing.Size(902, 929);
             ControlBox = false;
             Controls.Add(btnUpdate);
             Controls.Add(panel1);
             Controls.Add(btnClose);
             Controls.Add(pEstimateDetails);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             Name = "AllEstimates";
             ShowIcon = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

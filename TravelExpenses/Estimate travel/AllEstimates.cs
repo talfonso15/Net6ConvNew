@@ -80,7 +80,7 @@ namespace TravelExpenses
             }
             localCon.Close();
 
-            this.Size = new System.Drawing.Size(1269, 471);
+            this.Size = new System.Drawing.Size(918, 285);
             canE = dgvAllEstimates.RowCount;
         }
 
@@ -152,7 +152,7 @@ namespace TravelExpenses
                 }
                 dr.Close();
                 localCon.Close();
-                this.Size = new System.Drawing.Size(1312, 1586);
+                this.Size = new System.Drawing.Size(918, 968);
                 tlOptionButtons.Visible = false;
                 dgvAllEstimates.Enabled = false;
                 loadingData = false;
@@ -191,7 +191,7 @@ namespace TravelExpenses
 
             tlOptionButtons.Visible = true;
             dgvAllEstimates.Enabled = true;
-            this.Size = new System.Drawing.Size(1308, 467);
+            this.Size = new System.Drawing.Size(918, 285);
 
             dtpDepartureDateValue.Enabled = false;
             dtpReturnDateValue.Enabled = false;
@@ -702,7 +702,7 @@ namespace TravelExpenses
                 dr.Close();
                 localCon.Close();
 
-                this.Size = new System.Drawing.Size(1312, 1586);
+                this.Size = new System.Drawing.Size(918, 968);
                 tlOptionButtons.Visible = false;
                 dgvAllEstimates.Enabled = false;
                 loadingData = false;
@@ -885,7 +885,7 @@ namespace TravelExpenses
                     tlOptionButtons.Visible = true;
                     dgvAllEstimates.Enabled = true;
                     refreshData();
-                    this.Size = new System.Drawing.Size(1308, 467);
+                    this.Size = new System.Drawing.Size(919, 285);
                 }
                 else
                 {
