@@ -127,6 +127,9 @@
   <data name="1493082053_1-04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1493082053_1-04.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pdf_round_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pdf_round_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2682803_attention_erro_exclamation_mark_warn_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2682803_attention_erro_exclamation_mark_warn_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +150,9 @@
   </data>
   <data name="if_button_cancel_19391" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_button_cancel_1939.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf_icon10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pdf_icon10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_compose_1055085" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_compose_1055085.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +184,8 @@
   <data name="if_check_70974" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_check_70974.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1495732510_Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1495732510_Stop.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="detail_icon11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\detail_icon11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="step1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\step1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,11 +229,17 @@
   <data name="if_info_11086" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_info_11086.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_Shutdown_Box_Red_34246" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Shutdown_Box_Red_34246.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="if_check_1055094" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_check_1055094.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="49576_new_add_plus_user_icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\49576_new_add_plus_user_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf_icon12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pdf_icon12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_button_cancel_684" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_button_cancel_684.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,8 +262,8 @@
   <data name="if_Cute Ball - Stop_32141" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_Cute Ball - Stop_32141.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_Stop_89027" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\if_Stop_89027.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shutdown_icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\shutdown_icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_Accept_check_data_storage_folder_ok_1886032" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_Accept_check_data_storage_folder_ok_1886032.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,8 +271,8 @@
   <data name="if_button_cancel_1939(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_button_cancel_1939(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4021466_lock_password_protect_security_shield_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4021466_lock_password_protect_security_shield_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="49576_new_add_plus_user_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\49576_new_add_plus_user_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="49576_new_add_plus_user_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\49576_new_add_plus_user_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,11 +289,11 @@
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_window_suppressed_7808" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\if_window_suppressed_7808.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4021466_lock_password_protect_security_shield_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4021466_lock_password_protect_security_shield_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="49576_new_add_plus_user_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\49576_new_add_plus_user_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pdf_icon14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pdf_icon14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_go-back_60181" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_go-back_60181.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,6 +307,9 @@
   <data name="Step2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\Step2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1496272606_view6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1496272606_view6.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="if_signature_4113" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_signature_4113.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -304,11 +319,17 @@
   <data name="contract (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\contract (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_button_13_61444" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_button_13_61444.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="if_033_95870" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_033_95870.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_off_100592" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_off_100592.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf_icon15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pdf_icon15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_Change_edit_options_pencil_settings_tools_write_1886543" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_Change_edit_options_pencil_settings_tools_write_1886543.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,8 +340,8 @@
   <data name="step 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\step 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_button_13_61444" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\if_button_13_61444.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pdf_icon13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pdf_icon13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_11_330397" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_11_330397.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -354,6 +375,9 @@
   </data>
   <data name="image_1229050" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\image_1229050.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Change status 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\Change status 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_office-16_3045441" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_office-16_3045441.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -427,6 +451,9 @@
   <data name="iconfinder_Archive_document_check_ok_success_folder_ml_1886354" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\iconfinder_Archive_document_check_ok_success_folder_ml_1886354.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_window_suppressed_7808" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_window_suppressed_7808.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1493081488_pen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1493081488_pen.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -465,6 +492,9 @@
   </data>
   <data name="if_email_forward_40771" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_email_forward_40771.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Stop_89027" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\if_Stop_89027.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_Eye_see_unview_hide_optical_blind_invisible_1886933 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\iconfinder_Eye_see_unview_hide_optical_blind_invisible_1886933 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -520,17 +550,17 @@
   <data name="4900847_card_credit_debit_payment_verify_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4900847_card_credit_debit_payment_verify_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="copy icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\copy icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="image_1229051" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\image_1229051.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="step22" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\step22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1496272606_view6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1496272606_view6.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1495732510_Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1495732510_Stop.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="approved__icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\approved__icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_add_3855641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_add_3855641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -538,8 +568,8 @@
   <data name="if_Artboard_1_1790663" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\if_Artboard_1_1790663.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_Shutdown_Box_Red_34246" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\if_Shutdown_Box_Red_34246.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="copy icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\copy icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1737385_e-mail_email_mail_message_messagesent_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1737385_e-mail_email_mail_message_messagesent_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -577,7 +607,7 @@
   <data name="iconfinder_icon-21-eye-hidden_314753 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icons\iconfinder_icon-21-eye-hidden_314753 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Change status 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\Change status 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pdf_icon16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pdf_icon16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

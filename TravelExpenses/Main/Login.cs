@@ -29,18 +29,21 @@ namespace TravelExpenses
             string password = txtPassword.Text;
             string email = "";
             bool active = false;
-            try {
-                SqlCommand cmd = new SqlCommand("SELECT  a.UserID as UserID, a.AccessLevel as AccessLevel,b.Email as Email,b.Active as Active FROM [TravelExpenses].[dbo].[User] as a inner join [TravelExpenses].[dbo].[User_Email_Title] as b on b.UserID = a.UserID where Username = '" + username +"' AND Password = '"+ password+ "' AND b.Active = '1'", localCon);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT  a.UserID as UserID, a.AccessLevel as AccessLevel,b.Email as Email,b.Active as Active FROM [TravelExpenses].[dbo].[User] as a inner join [TravelExpenses].[dbo].[User_Email_Title] as b on b.UserID = a.UserID where Username = '" + username + "' AND Password = '" + password + "' AND b.Active = '1'", localCon);
 
                 SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read()) {
+                while (dr.Read())
+                {
 
                     user = dr["UserID"].ToString();
                     accesslevel = Convert.ToInt32(dr["AccessLevel"].ToString());
                     email = dr["Email"].ToString();
                     active = Convert.ToBoolean(dr["Active"].ToString());
 
-                } dr.Close();
+                }
+                dr.Close();
 
                 if (user != "" && active)
                 {
@@ -62,21 +65,23 @@ namespace TravelExpenses
                     m.Show();
                     this.Hide();
                 }
-                else {
+                else
+                {
                     if (!active)
                     {
                         MessageBox.Show("The account is not active. Contact the administrator", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    else 
+                    else
                     {
                         MessageBox.Show("The username or password is incorrect", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                   
+
                     txtPassword.Text = "";
                     txtUsername.Text = "";
                 }
             }
-            catch(Exception ex ){
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             localCon.Close();
@@ -84,9 +89,9 @@ namespace TravelExpenses
             txtUsername.Text = "";
 
 
-           /* Main m = new Main();
-            m.Show();
-            this.Hide();*/
+            /* Main m = new Main();
+             m.Show();
+             this.Hide();*/
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

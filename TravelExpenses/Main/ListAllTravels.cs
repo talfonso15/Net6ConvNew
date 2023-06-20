@@ -73,7 +73,7 @@ namespace TravelExpenses
             for (int i = 0; i < dgvAllTravels.RowCount; i++)
             {
                 Guid idTravApp = new Guid(dgvAllTravels.Rows[i].Cells[8].Value.ToString());
-                SqlCommand approved = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelID = '"+ idTravApp + "' AND UserType = 'Employee'", localCon);
+                SqlCommand approved = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelID = '" + idTravApp + "' AND UserType = 'Employee'", localCon);
                 SqlDataReader approvedDR = approved.ExecuteReader();
                 if (approvedDR.HasRows)
                 {
@@ -121,13 +121,13 @@ namespace TravelExpenses
                     {
                         MessageBox.Show("This travel is final already", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                  }
                 }
-                else
-                {
-                    MessageBox.Show("There are no travels on the list", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            
+            }
+            else
+            {
+                MessageBox.Show("There are no travels on the list", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
 
         private void refreshTravels()
@@ -230,7 +230,7 @@ namespace TravelExpenses
                 //end of new code
 
                 PdfReader pdfReader = new PdfReader(pdfTemplate);
-                
+
                 /*PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create)); //commented for net6
                 AcroFields pdfFormFields = pdfStamper.AcroFields;*/ //commented for net6
 
@@ -401,7 +401,7 @@ namespace TravelExpenses
                             toSet.SetValue("No");
                         }
                         string mealcost = Convert.ToDouble(drMeals["TotalMeals"].ToString()).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                        
+
                         //pdfFormFields.SetField("Meals_Total", mealcost); //commented for net6
                         fields.TryGetValue("Meals_Total", out toSet);
                         toSet.SetValue(mealcost);
@@ -419,7 +419,7 @@ namespace TravelExpenses
                     while (drRegis.Read())
                     {
                         string regCost = Convert.ToDouble(drRegis["RegistrationAMount"].ToString()).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                        
+
                         //pdfFormFields.SetField("Registration Cost", regCost); //commented for net6
                         fields.TryGetValue("Registration Cost", out toSet);
                         toSet.SetValue(regCost);
@@ -498,7 +498,7 @@ namespace TravelExpenses
                     }
                     drLod.Close();
                     string logCost = totalLod.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("Lodging Total", logCost); //commented for net6
                     fields.TryGetValue("Lodging Total" + row, out toSet);
                     toSet.SetValue(logCost);
@@ -585,7 +585,7 @@ namespace TravelExpenses
                     }
                     drCR.Close();
                     string carCost = totalCR.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("Car Rental Total", carCost); //commented for net6
                     fields.TryGetValue("Car Rental Total", out toSet);
                     toSet.SetValue(carCost);
@@ -669,7 +669,7 @@ namespace TravelExpenses
                         toSet.SetValue(drMi["VicinityMileage"].ToString());
 
                         string milCost = Convert.ToDouble(drMi["TotalMileage"].ToString()).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                        
+
                         //pdfFormFields.SetField("Mileage Cost", milCost); //commented for net6
                         fields.TryGetValue("Mileage Cost", out toSet);
                         toSet.SetValue(milCost);
@@ -776,61 +776,61 @@ namespace TravelExpenses
         {
             if (canT > 0)
             {
-               
-
-                    localCon.Open();
-
-                    int rowIndex = dgvAllTravels.CurrentRow.Index;
-                    string travIDValue = dgvAllTravels.Rows[rowIndex].Cells[8].Value.ToString();
-                    Guid travID = new Guid(travIDValue);
-                    bool isApproved = false;
-                    Guid userID = new Guid(CommonVariables.user);
 
 
-                    SqlCommand cmd = new SqlCommand("SELECT [TravelID],[UserID],[UserType],[TravelType] FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelID = '" + travID + "'  AND UserType = 'Employee' AND TravelType = 'Travel'", localCon);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    if (dr.HasRows)
+                localCon.Open();
+
+                int rowIndex = dgvAllTravels.CurrentRow.Index;
+                string travIDValue = dgvAllTravels.Rows[rowIndex].Cells[8].Value.ToString();
+                Guid travID = new Guid(travIDValue);
+                bool isApproved = false;
+                Guid userID = new Guid(CommonVariables.user);
+
+
+                SqlCommand cmd = new SqlCommand("SELECT [TravelID],[UserID],[UserType],[TravelType] FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelID = '" + travID + "'  AND UserType = 'Employee' AND TravelType = 'Travel'", localCon);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    isApproved = true;
+                    MessageBox.Show("This travel was already approved", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                dr.Close();
+
+                if (!isApproved)
+                {
+                    DialogResult appTravel = MessageBox.Show("Do you really want approve this Travel Expense Report?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (appTravel == DialogResult.Yes)
                     {
-                        isApproved = true;
-                        MessageBox.Show("This travel was already approved", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    dr.Close();
-
-                    if (!isApproved)
-                    {
-                        DialogResult appTravel = MessageBox.Show("Do you really want approve this Travel Expense Report?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                        if (appTravel == DialogResult.Yes)
+                        SqlDataAdapter da = new SqlDataAdapter();
+                        da.InsertCommand = new SqlCommand("INSERT INTO [TravelExpenses].[dbo].[TravelSignatures] ([TravelID],[UserID],[UserType],[TravelType],[SignatureDate]) VALUES (@TravelID,@UserID,@UserType,@TravelType,@SignatureDate)", localCon);
+                        da.InsertCommand.Parameters.Add("@TravelID", SqlDbType.UniqueIdentifier).Value = travID;
+                        da.InsertCommand.Parameters.Add("@UserID", SqlDbType.UniqueIdentifier).Value = userID;
+                        da.InsertCommand.Parameters.Add("@UserType", SqlDbType.VarChar).Value = "Employee";
+                        da.InsertCommand.Parameters.Add("@TravelType", SqlDbType.VarChar).Value = "Travel";
+                        da.InsertCommand.Parameters.Add("@SignatureDate", SqlDbType.DateTime).Value = DateTime.Today;
+                        int row = da.InsertCommand.ExecuteNonQuery();
+                        if (row > 0)
                         {
-                            SqlDataAdapter da = new SqlDataAdapter();
-                            da.InsertCommand = new SqlCommand("INSERT INTO [TravelExpenses].[dbo].[TravelSignatures] ([TravelID],[UserID],[UserType],[TravelType],[SignatureDate]) VALUES (@TravelID,@UserID,@UserType,@TravelType,@SignatureDate)", localCon);
-                            da.InsertCommand.Parameters.Add("@TravelID", SqlDbType.UniqueIdentifier).Value = travID;
-                            da.InsertCommand.Parameters.Add("@UserID", SqlDbType.UniqueIdentifier).Value = userID;
-                            da.InsertCommand.Parameters.Add("@UserType", SqlDbType.VarChar).Value = "Employee";
-                            da.InsertCommand.Parameters.Add("@TravelType", SqlDbType.VarChar).Value = "Travel";
-                            da.InsertCommand.Parameters.Add("@SignatureDate", SqlDbType.DateTime).Value = DateTime.Today;
-                            int row = da.InsertCommand.ExecuteNonQuery();
-                            if (row > 0)
-                            {
-                                pictureBox1.Visible = true;
-                                lblSendingEmail.Visible = true;
-                                tableLayoutPanel1.Enabled = false;
-                                dgvAllTravels.Enabled = false;
-                                localCon.Close();
-                                MessageBox.Show("This travel has been successfully approved", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            pictureBox1.Visible = true;
+                            lblSendingEmail.Visible = true;
+                            tableLayoutPanel1.Enabled = false;
+                            dgvAllTravels.Enabled = false;
+                            localCon.Close();
+                            MessageBox.Show("This travel has been successfully approved", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                if (backgroundWorker1.IsBusy != true)
-                                {
-                                    backgroundWorker1.RunWorkerAsync();
-                                }
+                            if (backgroundWorker1.IsBusy != true)
+                            {
+                                backgroundWorker1.RunWorkerAsync();
                             }
                         }
+                    }
                 }
 
-           localCon.Close();
+                localCon.Close();
 
-              
-                
-                
+
+
+
             }
             else
             {
@@ -887,71 +887,71 @@ namespace TravelExpenses
 
         private void sendEMail()
         {
-           
-                localCon.Open();
-                Guid userID = new Guid(CommonVariables.user);
-                string email = "";
-                //string supEmail = "";
-                string fullname = "";
-                string department = "";
-                int rowIndex = index;
-                Guid travID = new Guid(dgvAllTravels.Rows[rowIndex].Cells[8].Value.ToString());
-                //user
-                SqlCommand user = new SqlCommand("SELECT b.Email as Email, a.Name as Name, a.LastName as LastName, a.Department as Department  FROM [TravelExpenses].[dbo].[User] as a inner join TravelExpenses.dbo.User_Email_Title as b on b.UserID = a.UserID where a.UserID = '" + userID + "'", localCon);
-                SqlDataReader userDR = user.ExecuteReader();
-                while (userDR.Read())
+
+            localCon.Open();
+            Guid userID = new Guid(CommonVariables.user);
+            string email = "";
+            //string supEmail = "";
+            string fullname = "";
+            string department = "";
+            int rowIndex = index;
+            Guid travID = new Guid(dgvAllTravels.Rows[rowIndex].Cells[8].Value.ToString());
+            //user
+            SqlCommand user = new SqlCommand("SELECT b.Email as Email, a.Name as Name, a.LastName as LastName, a.Department as Department  FROM [TravelExpenses].[dbo].[User] as a inner join TravelExpenses.dbo.User_Email_Title as b on b.UserID = a.UserID where a.UserID = '" + userID + "'", localCon);
+            SqlDataReader userDR = user.ExecuteReader();
+            while (userDR.Read())
+            {
+                email = userDR["Email"].ToString();
+                fullname = userDR["Name"].ToString() + " " + userDR["LastName"].ToString();
+                department = userDR["Department"].ToString();
+            }
+            userDR.Close();
+
+            string accPrEmail = "";
+            SqlCommand accEmail = new SqlCommand("SELECT [Email] FROM [TravelExpenses].[dbo].[User_Email_Title] where Title = 'Accounting Processor'", localCon);
+            SqlDataReader accEmailDR = accEmail.ExecuteReader();
+            if (accEmailDR.HasRows)
+            {
+                while (accEmailDR.Read())
                 {
-                    email = userDR["Email"].ToString();
-                    fullname = userDR["Name"].ToString() + " " + userDR["LastName"].ToString();
-                    department = userDR["Department"].ToString();
+                    accPrEmail = accEmailDR["Email"].ToString();
                 }
-                userDR.Close();
-
-                string accPrEmail = "";
-                SqlCommand accEmail = new SqlCommand("SELECT [Email] FROM [TravelExpenses].[dbo].[User_Email_Title] where Title = 'Accounting Processor'", localCon);
-                SqlDataReader accEmailDR = accEmail.ExecuteReader();
-                if (accEmailDR.HasRows)
-                {
-                    while (accEmailDR.Read())
-                    {
-                        accPrEmail = accEmailDR["Email"].ToString();
-                    }
-                }
-                accEmailDR.Close();
+            }
+            accEmailDR.Close();
 
 
-                SmtpClient SmtpServer = new SmtpClient("mail.lcmcd.org", 587);
-                SmtpServer.Credentials = new System.Net.NetworkCredential("xerox@lchcd.org", "Pa$$w0rd1");
-                SmtpServer.EnableSsl = true;
+            SmtpClient SmtpServer = new SmtpClient("mail.lcmcd.org", 587);
+            SmtpServer.Credentials = new System.Net.NetworkCredential("xerox@lchcd.org", "Pa$$w0rd1");
+            SmtpServer.EnableSsl = true;
 
-                System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
-                mail.From = new MailAddress("travelAlert@lcmcd.org");
-                mail.To.Add(accPrEmail);
-                mail.Subject = "Review the travel of" + " " + fullname;
+            System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
+            mail.From = new MailAddress("travelAlert@lcmcd.org");
+            mail.To.Add(accPrEmail);
+            mail.Subject = "Review the travel of" + " " + fullname;
 
-                
+
 
 
             //travel
             DateTime depDate = Convert.ToDateTime(dgvAllTravels.Rows[rowIndex].Cells[0].Value.ToString());
-                DateTime retDate = Convert.ToDateTime(dgvAllTravels.Rows[rowIndex].Cells[1].Value.ToString());
-                string travEvent = dgvAllTravels.Rows[rowIndex].Cells[2].Value.ToString();
-                string destination = dgvAllTravels.Rows[rowIndex].Cells[5].Value.ToString();
+            DateTime retDate = Convert.ToDateTime(dgvAllTravels.Rows[rowIndex].Cells[1].Value.ToString());
+            string travEvent = dgvAllTravels.Rows[rowIndex].Cells[2].Value.ToString();
+            string destination = dgvAllTravels.Rows[rowIndex].Cells[5].Value.ToString();
 
-                System.Net.Mail.MailMessage empMail = new System.Net.Mail.MailMessage(); //change made for net6
-                empMail.From = new MailAddress("travelAlert@lcmcd.org");
-                empMail.To.Add(email);
-                empMail.Subject = "Travel to " + destination;
+            System.Net.Mail.MailMessage empMail = new System.Net.Mail.MailMessage(); //change made for net6
+            empMail.From = new MailAddress("travelAlert@lcmcd.org");
+            empMail.To.Add(email);
+            empMail.Subject = "Travel to " + destination;
 
             if (depDate.ToShortDateString() == retDate.ToShortDateString())
-                {
-                    mail.Body = "Please enter to the travel program and review the travel of" + " " + fullname + " " + "on" + " " + depDate.ToShortDateString() + " in order to " + "attend to " + travEvent + " event, arriving to " + destination;
+            {
+                mail.Body = "Please enter to the travel program and review the travel of" + " " + fullname + " " + "on" + " " + depDate.ToShortDateString() + " in order to " + "attend to " + travEvent + " event, arriving to " + destination;
 
-                }
-                else
-                {
-                    mail.Body = "Please enter to the travel program and review the travel of" + " " + fullname + " " + "on" + " " + depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + " in order to attend to " + travEvent + " event, arriving to " + destination;
-                }
+            }
+            else
+            {
+                mail.Body = "Please enter to the travel program and review the travel of" + " " + fullname + " " + "on" + " " + depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + " in order to attend to " + travEvent + " event, arriving to " + destination;
+            }
 
             string bodyText = "In reference to the above travel that you just electronically signed, please bring to Jessica Collins all invoices/ receipts, in order for her to review your expense report(do not send them via email)." + System.Environment.NewLine + "Important: Please keep a copy of all invoices / receipts." + System.Environment.NewLine + "Thank you";
             empMail.Body = bodyText;
@@ -964,18 +964,18 @@ namespace TravelExpenses
 
 
 
-                try
-                {
-                    SmtpServer.Send(mail);
-                    SmtpServer.Send(empMail);
+            try
+            {
+                SmtpServer.Send(mail);
+                SmtpServer.Send(empMail);
                 MessageBox.Show("The email was sent successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                localCon.Close();
-            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            localCon.Close();
+
 
         }
 
@@ -1206,7 +1206,7 @@ namespace TravelExpenses
                     double mealCostValue = Convert.ToDouble(drMeals["TotalMeals"].ToString());
                     mealIDvalue = drMeals["MealsID"].ToString();
                     string mealCost = mealCostValue.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                   
+
                     //pdfFormFields.SetField("CostMeals", mealCost); //commented for net6
                     fields.TryGetValue("CostMeals", out toSet);
                     toSet.SetValue(mealCost);
@@ -1216,7 +1216,7 @@ namespace TravelExpenses
                     toSet.SetValue(drMeals["Notes"].ToString());
 
                     //details
-                    
+
                     //pdfFormFields.SetField("BreakfastQuantity", drMeals["Breakfast"].ToString()); //commented for net6
                     fields.TryGetValue("BreakfastQuantity", out toSet);
                     toSet.SetValue(drMeals["Breakfast"].ToString());
@@ -1281,7 +1281,7 @@ namespace TravelExpenses
                         toSet.SetValue("No");
                     }
                     //string mealCost = Convert.ToDouble(drMeals["TotalMeals"].ToString()).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("Meals_Total", mealCost); //commented for net6
                     fields.TryGetValue("Meals_Total", out toSet);
                     toSet.SetValue(mealCost);
@@ -1300,7 +1300,7 @@ namespace TravelExpenses
                 while (meadDateDR.Read())
                 {
                     DateTime date = Convert.ToDateTime(meadDateDR["Date"].ToString());
-                    
+
                     //pdfFormFields.SetField("MealDate" + rowInc, date.ToShortDateString()); //commented for net6
                     fields.TryGetValue("MealDate" + rowInc, out toSet);
                     toSet.SetValue(date.ToShortDateString());
@@ -1343,7 +1343,7 @@ namespace TravelExpenses
                         travelACC = travelACC * -1;
                     }
                     string totalReg = trainingACC.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("CostRegistration", totalReg); //commented for net6
                     fields.TryGetValue("CostRegistration", out toSet);
                     toSet.SetValue(totalReg);
@@ -1353,7 +1353,7 @@ namespace TravelExpenses
                     toSet.SetValue(drRegis["Notes"].ToString());
 
                     //details
-                    
+
                     //pdfFormFields.SetField("Registration Cost", totalReg); //commented for net6
                     fields.TryGetValue("Registration Cost", out toSet);
                     toSet.SetValue(totalReg);
@@ -1401,7 +1401,7 @@ namespace TravelExpenses
                     }
 
                     //details
-                    
+
                     //pdfFormFields.SetField("Facility Name" + rowLod, drLod["FacilityName"].ToString()); //commented for net6
                     fields.TryGetValue("Facility Name" + rowLod, out toSet);
                     toSet.SetValue(drLod["FacilityName"].ToString());
@@ -1461,7 +1461,7 @@ namespace TravelExpenses
                 }
                 drLod.Close();
                 string lodgCost = totalLod.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostLodgings", lodgCost); //commented for net6
                 fields.TryGetValue("CostLodgings", out toSet);
                 toSet.SetValue(lodgCost);
@@ -1495,7 +1495,7 @@ namespace TravelExpenses
 
                     //details
                     DateTime pickUp = Convert.ToDateTime(drCR["PickUPDate"].ToString());
-                    
+
                     //pdfFormFields.SetField("Pick up Date" + carRow, pickUp.ToShortDateString()); //commented for net6
                     fields.TryGetValue("Pick up Date" + carRow, out toSet);
                     toSet.SetValue(pickUp.ToShortDateString());
@@ -1514,7 +1514,7 @@ namespace TravelExpenses
                     toSet.SetValue(drCR["TotalCarRental"].ToString());
 
                     //totalCR = totalCR + Convert.ToDouble(drCR["TotalCarRental"].ToString());
-                    
+
                     //pdfFormFields.SetField("Car Type" + carRow, drCR["CarType"].ToString()); //commented for net6
                     fields.TryGetValue("Car Type" + carRow, out toSet);
                     toSet.SetValue(drCR["CarType"].ToString());
@@ -1558,7 +1558,7 @@ namespace TravelExpenses
                 }
                 drCR.Close();
                 string carCost = totalCR.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostCar Rental", carCost); //commented for net6
                 fields.TryGetValue("CostCar Rental", out toSet);
                 toSet.SetValue(carCost);
@@ -1636,7 +1636,7 @@ namespace TravelExpenses
                 }
                 drAF.Close();
                 string flightCost = totalAF.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostAir Fare", flightCost); //commented for net6
                 fields.TryGetValue("CostAir Fare", out toSet);
                 toSet.SetValue(flightCost);
@@ -1660,7 +1660,7 @@ namespace TravelExpenses
                 {
                     double milCostValue = Convert.ToDouble(drMi["TotalMileage"].ToString());
                     string milcost = milCostValue.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("CostMileage", milcost); //commented for net6
                     fields.TryGetValue("CostMileage", out toSet);
                     toSet.SetValue(milcost);
@@ -1670,7 +1670,7 @@ namespace TravelExpenses
                     toSet.SetValue(drMi["Notes"].ToString());
 
                     //details
-                    
+
                     //pdfFormFields.SetField("Map Mileage", drMi["MapMileage"].ToString()); //commented for net6
                     fields.TryGetValue("Map Mileage", out toSet);
                     toSet.SetValue(drMi["MapMileage"].ToString());
@@ -1737,7 +1737,7 @@ namespace TravelExpenses
                     }
 
                     //details
-                    
+
                     //pdfFormFields.SetField("ExpDescription" + oxRow, drOE["Description"].ToString()); //commented for net6
                     fields.TryGetValue("ExpDescription" + oxRow, out toSet);
                     toSet.SetValue(drOE["Description"].ToString());
@@ -1747,7 +1747,7 @@ namespace TravelExpenses
                     toSet.SetValue(drOE["Amount"].ToString());
 
                     //totalOE = totalOE + Convert.ToDouble(drOE["Amount"].ToString());
-                    
+
                     //pdfFormFields.SetField("ExpNotes" + oxRow, drOE["Notes"].ToString()); //commented for net6
                     fields.TryGetValue("ExpNotes" + oxRow, out toSet);
                     toSet.SetValue(drOE["Notes"].ToString());
@@ -1772,7 +1772,7 @@ namespace TravelExpenses
                 }
                 drOE.Close();
                 string oeCost = totalOE.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostOther Expenses", oeCost); //commented for net6
                 fields.TryGetValue("CostOther Expenses", out toSet);
                 toSet.SetValue(oeCost);
@@ -1799,7 +1799,7 @@ namespace TravelExpenses
 
 
             //Reimbursement Table
-            
+
             //pdfFormFields.SetField("Meals_Reimbursement", mealsReimbursement.ToString()); //commented for net6
             fields.TryGetValue("Meals_Reimbursement", out toSet);
             toSet.SetValue(mealsReimbursement.ToString());
@@ -1918,5 +1918,5 @@ namespace TravelExpenses
 
 
     }
-        
+
 }
