@@ -50,18 +50,18 @@ namespace TravelExpenses
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            
+
             cbtravels.SelectedItem = "All";
             cbDepartments.SelectedItem = "Accounting/Purchasing 101";
             string un = Environment.UserName;
-            pnCriteria.Size = new System.Drawing.Size(631, 47);
+            pnCriteria.Size = new System.Drawing.Size(850, 60);
             localCon.Open();
             SqlCommand cmd = new SqlCommand("SELECT a.TravelID as TravelID, a.DepartureDate as DepartureDate,a.ReturnDate as ReturnDate,a.TravelEvent as TravelEvent,a.TravelPurpose as TravelPurpose,a.Origin as Origin,a.Destination as Destination,a.TotalTravelAmount as TotalTravelAmount,b.Status as  Status, a.UserID as UserID,c.Name as Name,c.LastName as Lastname FROM [TravelExpenses].[dbo].[Travel] as a inner join [TravelExpenses].[dbo].TravelStatus as b on a.TravelID = b.TravelID inner join [TravelExpenses].[dbo].[User] as c on a.UserID = c.UserID where b.Status != 'Final' order by a.DepartureDate desc", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 string travelID = dr["TravelID"].ToString();
-                DateTime depDate = Convert.ToDateTime( dr["DepartureDate"].ToString());
+                DateTime depDate = Convert.ToDateTime(dr["DepartureDate"].ToString());
                 DateTime retDate = Convert.ToDateTime(dr["ReturnDate"].ToString());
                 string travEvent = dr["TravelEvent"].ToString();
                 string travPurpose = dr["TravelPurpose"].ToString();
@@ -75,31 +75,31 @@ namespace TravelExpenses
             }
             dr.Close();
 
-             SqlCommand em = new SqlCommand("SELECT a.UserID,a.Name,a.LastName FROM [TravelExpenses].[dbo].[User] as a inner join [TravelExpenses].[dbo].[User_Email_Title] as b on a.UserID = b.UserID where b.Active = '1' order by LastName", localCon);
-             SqlDataReader emDR = em.ExecuteReader();
-             if (emDR.HasRows)
-             {
+            SqlCommand em = new SqlCommand("SELECT a.UserID,a.Name,a.LastName FROM [TravelExpenses].[dbo].[User] as a inner join [TravelExpenses].[dbo].[User_Email_Title] as b on a.UserID = b.UserID where b.Active = '1' order by LastName", localCon);
+            SqlDataReader emDR = em.ExecuteReader();
+            if (emDR.HasRows)
+            {
                 cbEmployee.DisplayMember = "Text";
                 cbEmployee.ValueMember = "Value";
-                List<Object> items = new List<object>(); 
-                 while (emDR.Read())
-                 {
-                     string name = emDR["LastName"].ToString() + "," + emDR["Name"].ToString();
-                     string id = emDR["UserID"].ToString();
+                List<Object> items = new List<object>();
+                while (emDR.Read())
+                {
+                    string name = emDR["LastName"].ToString() + "," + emDR["Name"].ToString();
+                    string id = emDR["UserID"].ToString();
                     items.Add(new { Text = name, Value = id });
 
 
-                 }
+                }
                 cbEmployee.DataSource = items;
-             }
-            
+            }
+
             emDR.Close();
-            
+
             for (int i = 0; i < dgvTravels.RowCount; i++)
             {
                 Guid travID = new Guid(dgvTravels.Rows[i].Cells[8].Value.ToString());
                 Guid accUser = new Guid(CommonVariables.user);
-                SqlCommand signAcc = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Accounting' AND TravelID = '"+ travID + "' AND UserID = '"+ accUser + "'", localCon);
+                SqlCommand signAcc = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Accounting' AND TravelID = '" + travID + "' AND UserID = '" + accUser + "'", localCon);
                 SqlDataReader signAccDR = signAcc.ExecuteReader();
                 if (signAccDR.HasRows)
                 {
@@ -112,7 +112,7 @@ namespace TravelExpenses
                 signAccDR.Close();
             }
 
-            SqlCommand isJess = new SqlCommand("SELECT [UserID],[Name],[LastName] FROM [TravelExpenses].[dbo].[User] where UserID = '"+ CommonVariables.user +"'", localCon);
+            SqlCommand isJess = new SqlCommand("SELECT [UserID],[Name],[LastName] FROM [TravelExpenses].[dbo].[User] where UserID = '" + CommonVariables.user + "'", localCon);
             SqlDataReader isJessDR = isJess.ExecuteReader();
             if (isJessDR.HasRows)
             {
@@ -144,11 +144,11 @@ namespace TravelExpenses
             }
             isJessDR.Close();
 
-                localCon.Close();
+            localCon.Close();
 
 
 
-            
+
         }
 
         private void cbtravels_SelectedIndexChanged(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace TravelExpenses
                 lblDepartments.Visible = false;
                 cbDepartments.Visible = false;
                 tableLayoutPanel4.Visible = false;
-                pnCriteria.Size = new System.Drawing.Size(631, 74);
+                pnCriteria.Size = new System.Drawing.Size(850, 76);
 
             }
             else if (cbtravels.SelectedItem.ToString() == "Department")
@@ -173,7 +173,7 @@ namespace TravelExpenses
                 lblEmployee.Visible = false;
                 cbEmployee.Visible = false;
                 tableLayoutPanel4.Visible = false;
-                pnCriteria.Size = new System.Drawing.Size(631, 109);
+                pnCriteria.Size = new System.Drawing.Size(850, 113);
             }
             else if (cbtravels.SelectedItem.ToString() == "Employee + Date Range")
             {
@@ -183,7 +183,7 @@ namespace TravelExpenses
 
                 lblDepartments.Visible = false;
                 cbDepartments.Visible = false;
-                pnCriteria.Size = new System.Drawing.Size(631, 129);
+                pnCriteria.Size = new System.Drawing.Size(850, 149);
             }
             else if (cbtravels.SelectedItem.ToString() == "Department + Date Range")
             {
@@ -193,7 +193,7 @@ namespace TravelExpenses
 
                 lblEmployee.Visible = false;
                 cbEmployee.Visible = false;
-                pnCriteria.Size = new System.Drawing.Size(631, 129);
+                pnCriteria.Size = new System.Drawing.Size(850, 149);
             }
             else if (cbtravels.SelectedItem.ToString() == "All")
             {
@@ -203,15 +203,15 @@ namespace TravelExpenses
                 lblEmployee.Visible = false;
                 cbEmployee.Visible = false;
 
-                pnCriteria.Size = new System.Drawing.Size(631, 46);
+                pnCriteria.Size = new System.Drawing.Size(850, 45);
             }
-            
+
 
         }
 
         private void cbEmployee_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -264,7 +264,7 @@ namespace TravelExpenses
                 while (dr.Read())
                 {
                     string travelID = dr["TravelID"].ToString();
-                    DateTime depDate = Convert.ToDateTime( dr["DepartureDate"].ToString());
+                    DateTime depDate = Convert.ToDateTime(dr["DepartureDate"].ToString());
                     DateTime retDate = Convert.ToDateTime(dr["ReturnDate"].ToString());
                     string travEvent = dr["TravelEvent"].ToString();
                     string travPurpose = dr["TravelPurpose"].ToString();
@@ -274,7 +274,7 @@ namespace TravelExpenses
                     string status = dr["Status"].ToString();
                     string userID = dr["UserID"].ToString();
                     string username = dr["Name"].ToString() + " " + dr["Lastname"].ToString();
-                    dgvTravels.Rows.Add(depDate.ToShortDateString(), retDate.ToShortDateString(), travEvent, travPurpose, status, origin, destination,  travTotal, travelID, userID, username);
+                    dgvTravels.Rows.Add(depDate.ToShortDateString(), retDate.ToShortDateString(), travEvent, travPurpose, status, origin, destination, travTotal, travelID, userID, username);
                 }
                 dr.Close();
             }
@@ -287,8 +287,8 @@ namespace TravelExpenses
                 while (dr.Read())
                 {
                     string travelID = dr["TravelID"].ToString();
-                    DateTime depDate = Convert.ToDateTime( dr["DepartureDate"].ToString());
-                    DateTime retDate = Convert.ToDateTime( dr["ReturnDate"].ToString());
+                    DateTime depDate = Convert.ToDateTime(dr["DepartureDate"].ToString());
+                    DateTime retDate = Convert.ToDateTime(dr["ReturnDate"].ToString());
                     string travEvent = dr["TravelEvent"].ToString();
                     string travPurpose = dr["TravelPurpose"].ToString();
                     string origin = dr["Origin"].ToString();
@@ -297,7 +297,7 @@ namespace TravelExpenses
                     string status = dr["Status"].ToString();
                     string userID = dr["UserID"].ToString();
                     string username = dr["Name"].ToString() + " " + dr["Lastname"].ToString();
-                    dgvTravels.Rows.Add(depDate.ToShortDateString(), retDate.ToShortDateString(), travEvent, travPurpose, status, origin, destination,  travTotal, travelID, userID, username);
+                    dgvTravels.Rows.Add(depDate.ToShortDateString(), retDate.ToShortDateString(), travEvent, travPurpose, status, origin, destination, travTotal, travelID, userID, username);
                 }
                 dr.Close();
 
@@ -310,8 +310,8 @@ namespace TravelExpenses
                 while (dr.Read())
                 {
                     string travelID = dr["TravelID"].ToString();
-                    DateTime depDate = Convert.ToDateTime( dr["DepartureDate"].ToString());
-                    DateTime retDate = Convert.ToDateTime( dr["ReturnDate"].ToString());
+                    DateTime depDate = Convert.ToDateTime(dr["DepartureDate"].ToString());
+                    DateTime retDate = Convert.ToDateTime(dr["ReturnDate"].ToString());
                     string travEvent = dr["TravelEvent"].ToString();
                     string travPurpose = dr["TravelPurpose"].ToString();
                     string origin = dr["Origin"].ToString();
@@ -321,7 +321,7 @@ namespace TravelExpenses
                     string status = dr["Status"].ToString();
                     string username = dr["Name"].ToString() + " " + dr["Lastname"].ToString();
 
-                    dgvTravels.Rows.Add(depDate.ToShortDateString(), retDate.ToShortDateString(), travEvent, travPurpose, status, origin, destination,  travTotal, travelID, userID, username);
+                    dgvTravels.Rows.Add(depDate.ToShortDateString(), retDate.ToShortDateString(), travEvent, travPurpose, status, origin, destination, travTotal, travelID, userID, username);
 
                 }
                 dr.Close();
@@ -329,7 +329,7 @@ namespace TravelExpenses
             if (cbtravels.SelectedItem.ToString() == "Department + Date Range")
             {
                 string dept = cbDepartments.SelectedItem.ToString();
-                SqlCommand cmd = new SqlCommand("SELECT a.TravelID as TravelID, a.DepartureDate as DepartureDate,a.ReturnDate as ReturnDate,a.TravelEvent as TravelEvent,a.TravelPurpose as TravelPurpose,a.Origin as Origin,a.Destination as Destination,a.TotalTravelAmount as TotalTravelAmount,a.UserID as UserID,b.Status as  Status,a.UserID as UserID,c.Name as Name,c.LastName as Lastname FROM [TravelExpenses].[dbo].[Travel] as a inner join [TravelExpenses].[dbo].TravelStatus as b on a.TravelID = b.TravelID inner join [TravelExpenses].[dbo].[User] as c on a.UserID = c.UserID where c.Department = '"+ dept +"' AND a.DepartureDate Between '"+ dtpStartDate.Value +"' AND '"+ dtpEndDate.Value + "' AND b.Status != 'Final' order by a.DepartureDate desc", localCon);
+                SqlCommand cmd = new SqlCommand("SELECT a.TravelID as TravelID, a.DepartureDate as DepartureDate,a.ReturnDate as ReturnDate,a.TravelEvent as TravelEvent,a.TravelPurpose as TravelPurpose,a.Origin as Origin,a.Destination as Destination,a.TotalTravelAmount as TotalTravelAmount,a.UserID as UserID,b.Status as  Status,a.UserID as UserID,c.Name as Name,c.LastName as Lastname FROM [TravelExpenses].[dbo].[Travel] as a inner join [TravelExpenses].[dbo].TravelStatus as b on a.TravelID = b.TravelID inner join [TravelExpenses].[dbo].[User] as c on a.UserID = c.UserID where c.Department = '" + dept + "' AND a.DepartureDate Between '" + dtpStartDate.Value + "' AND '" + dtpEndDate.Value + "' AND b.Status != 'Final' order by a.DepartureDate desc", localCon);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -354,7 +354,7 @@ namespace TravelExpenses
             {
                 string idUser = cbEmployee.SelectedValue.ToString();
 
-                SqlCommand cmd = new SqlCommand("SELECT a.TravelID as TravelID, a.DepartureDate as DepartureDate,a.ReturnDate as ReturnDate,a.TravelEvent as TravelEvent,a.TravelPurpose as TravelPurpose,a.Origin as Origin,a.Destination as Destination,a.TotalTravelAmount as TotalTravelAmount,b.Status as  Status,a.UserID as UserID,c.Name as Name,c.LastName as Lastname FROM [TravelExpenses].[dbo].[Travel] as a inner join [TravelExpenses].[dbo].TravelStatus as b on a.TravelID = b.TravelID inner join [TravelExpenses].[dbo].[User] as c on a.UserID = c.UserID where a.UserID = '"+ idUser +"' AND a.DepartureDate BETWEEN '"+ dtpStartDate.Value + "' AND '"+ dtpEndDate.Value + "' AND b.Status != 'Final' order by a.DepartureDate desc", localCon);
+                SqlCommand cmd = new SqlCommand("SELECT a.TravelID as TravelID, a.DepartureDate as DepartureDate,a.ReturnDate as ReturnDate,a.TravelEvent as TravelEvent,a.TravelPurpose as TravelPurpose,a.Origin as Origin,a.Destination as Destination,a.TotalTravelAmount as TotalTravelAmount,b.Status as  Status,a.UserID as UserID,c.Name as Name,c.LastName as Lastname FROM [TravelExpenses].[dbo].[Travel] as a inner join [TravelExpenses].[dbo].TravelStatus as b on a.TravelID = b.TravelID inner join [TravelExpenses].[dbo].[User] as c on a.UserID = c.UserID where a.UserID = '" + idUser + "' AND a.DepartureDate BETWEEN '" + dtpStartDate.Value + "' AND '" + dtpEndDate.Value + "' AND b.Status != 'Final' order by a.DepartureDate desc", localCon);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -752,7 +752,7 @@ namespace TravelExpenses
             ViewTravel vt = new ViewTravel();
             this.Hide();
             vt.ShowDialog();
-           
+
         }
 
         private void Admin_FormClosed(object sender, FormClosedEventArgs e)
@@ -800,7 +800,7 @@ namespace TravelExpenses
             }
             travUserDR.Close();
 
-            
+
 
             //insert approval
             if (!isApproved)
@@ -861,7 +861,7 @@ namespace TravelExpenses
             Guid travID = new Guid(travIDValue);
 
             localCon.Open();
-            SqlCommand cmd = new SqlCommand("SELECT *  FROM [TravelExpenses].[dbo].[Travel] where TravelID = '"+ travID +"'", localCon);
+            SqlCommand cmd = new SqlCommand("SELECT *  FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + travID + "'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -898,7 +898,7 @@ namespace TravelExpenses
 
             if (meals)
             {
-                SqlCommand cmMealdID = new SqlCommand("select MealsID from TravelExpenses.dbo.Meals where TravelID ='"+ travID + "'", localCon);
+                SqlCommand cmMealdID = new SqlCommand("select MealsID from TravelExpenses.dbo.Meals where TravelID ='" + travID + "'", localCon);
                 SqlDataReader MealdIDdr = cmMealdID.ExecuteReader();
                 while (MealdIDdr.Read())
                 {
@@ -906,7 +906,7 @@ namespace TravelExpenses
                 }
                 MealdIDdr.Close();
 
-                SqlCommand delMealDates = new SqlCommand("delete from TravelExpenses.dbo.MealDate where MealsID = '"+ mealID + "'", localCon);
+                SqlCommand delMealDates = new SqlCommand("delete from TravelExpenses.dbo.MealDate where MealsID = '" + mealID + "'", localCon);
                 delMealDates.ExecuteNonQuery();
 
                 SqlCommand delMeal = new SqlCommand("delete from TravelExpenses.dbo.Meals where TravelID = '" + mealID + "'", localCon);
@@ -924,7 +924,7 @@ namespace TravelExpenses
                 delOther.ExecuteNonQuery();
             }
 
-            SqlCommand delStatus = new SqlCommand("delete from TravelExpenses.dbo.TravelStatus where TravelID = '"+ travID + "'", localCon);
+            SqlCommand delStatus = new SqlCommand("delete from TravelExpenses.dbo.TravelStatus where TravelID = '" + travID + "'", localCon);
             delStatus.ExecuteNonQuery();
 
             if (airfare)
@@ -948,7 +948,7 @@ namespace TravelExpenses
                 delCar.ExecuteNonQuery();
             }
 
-            SqlCommand delTravel = new SqlCommand("delete from [TravelExpenses].[dbo].[Travel]  where TravelID ='"+ travID + "'", localCon);
+            SqlCommand delTravel = new SqlCommand("delete from [TravelExpenses].[dbo].[Travel]  where TravelID ='" + travID + "'", localCon);
             int row = delTravel.ExecuteNonQuery();
 
             SqlCommand delSignatures = new SqlCommand("delete from TravelExpenses.dbo.TravelSignatures where TravelID ='" + travID + "'", localCon);
@@ -971,7 +971,7 @@ namespace TravelExpenses
             string destination = dgvTravels.Rows[index].Cells[6].Value.ToString();
             string travUserIDValue = dgvTravels.Rows[index].Cells[9].Value.ToString();
             Guid travUserID = new Guid(travUserIDValue);
-            
+
 
             //recovery of the supervisor info
             string supEmail = "";
@@ -1121,7 +1121,7 @@ namespace TravelExpenses
             string newFile = @"\\LCMHCD\Home\" + winUser + "\\" + "travel\\travel_form_" + pdfName;
             CommonVariables.filePath = newFile;
 
-            
+
             //new code for net 6
             PdfDocument pdfDoc = new PdfDocument(new PdfReader(pdfTemplate), new PdfWriter(newFile));
             PdfAcroForm form = PdfAcroForm.GetAcroForm(pdfDoc, true);
@@ -1217,20 +1217,20 @@ namespace TravelExpenses
                 toSet.SetValue(reimCost);
 
                 //pdfFormFields.SetField("No Reimbursed", noReimCost); //commented for net6
-                fields.TryGetValue("No Reimbursed", out toSet);
-                toSet.SetValue(noReimCost);
+                //fields.TryGetValue("No Reimbursed", out toSet); //commented for net6
+                //toSet.SetValue(noReimCost); //commented for net6
 
                 //pdfFormFields.SetField("Travel Total Cost", travCost); //commented for net6
-                fields.TryGetValue("Travel Total Cost", out toSet);
-                toSet.SetValue(travCost);
+                //fields.TryGetValue("Travel Total Cost", out toSet); //commented for net6
+                //toSet.SetValue(travCost); //commented for net6
 
                 //pdfFormFields.SetField("Reimbursement", reimCost); //commented for net6
-                fields.TryGetValue("Reimbursement", out toSet);
-                toSet.SetValue(reimCost);
+                //fields.TryGetValue("Reimbursement", out toSet); //commented for net6
+                //toSet.SetValue(reimCost); //commented for net6
 
                 //pdfFormFields.SetField("No Reimbursed Total", noReimCost); //commented for net6
-                fields.TryGetValue("No Reimbursed Total", out toSet);
-                toSet.SetValue(noReimCost);
+                //fields.TryGetValue("No Reimbursed Total", out toSet); //commented for net6
+                //toSet.SetValue(noReimCost); //commented for net6
 
                 //set up the travel common variables
                 if (drTD["Melas"].ToString() == "True")
@@ -1478,26 +1478,26 @@ namespace TravelExpenses
 
                     //totalLod = totalLod + Convert.ToDouble(drLod["TotalLodging"].ToString());
                     //pdfFormFields.SetField("Lodging Nights" + rowLod, drLod["NumberOfNights"].ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Nights" + rowLod, out toSet);
-                    toSet.SetValue(drLod["NumberOfNights"].ToString());
+                    //fields.TryGetValue("Lodging Nights" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["NumberOfNights"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Lodging Night Cost" + rowLod, drLod["CostPerNight"].ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Night Cost" + rowLod, out toSet);
-                    toSet.SetValue(drLod["CostPerNight"].ToString());
+                    //fields.TryGetValue("Lodging Night Cost" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["CostPerNight"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Lodging Taxes Fees" + rowLod, drLod["TaxesAndFees"].ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Taxes Fees" + rowLod, out toSet);
-                    toSet.SetValue(drLod["TaxesAndFees"].ToString());
+                    //fields.TryGetValue("Lodging Taxes Fees" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["TaxesAndFees"].ToString()); //commented for net6
 
                     if (drLod["DistrictPay"].ToString() == "True")
                     {
                         //pdfFormFields.SetField("Lodging District Pay" + rowLod, "Yes"); //commented for net6
-                        fields.TryGetValue("Lodging District Pay" + rowLod, out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Lodging District Pay" + rowLod, out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
 
                         //pdfFormFields.SetField("Lodging Director Approval" + rowLod, ""); //commented for net6
-                        fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet);
-                        toSet.SetValue("");
+                        //fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet); //commented for net6
+                        //toSet.SetValue(""); //commented for net6
                     }
                     else
                     {
@@ -1522,8 +1522,8 @@ namespace TravelExpenses
                         }
                     }
                     //pdfFormFields.SetField("Facility  Notes" + rowLod, drLod["Notes"].ToString()); //commented for net6
-                    fields.TryGetValue("Facility  Notes" + rowLod, out toSet);
-                    toSet.SetValue(drLod["Notes"].ToString());
+                    //fields.TryGetValue("Facility  Notes" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["Notes"].ToString()); //commented for net6
 
                     rowLod++;
                 }
@@ -1739,7 +1739,7 @@ namespace TravelExpenses
                 {
                     double milCostValue = Convert.ToDouble(drMi["TotalMileage"].ToString());
                     string milcost = milCostValue.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("CostMileage", milcost); //commented for net6
                     fields.TryGetValue("CostMileage", out toSet);
                     toSet.SetValue(milcost);
@@ -2075,7 +2075,7 @@ namespace TravelExpenses
             System.Net.Mail.MailMessage empMail = new System.Net.Mail.MailMessage();//change for net 6
             empMail.From = new MailAddress("travelAlert@lcmcd.org");
             empMail.To.Add(email);
-            empMail.Subject = "Travel to " + travEvent +  ", "+ destination;
+            empMail.Subject = "Travel to " + travEvent + ", " + destination;
 
             string bodyText = "In reference to the above travel, this is a reminder to bring to Jessica Collins all invoices/ receipts, in order for her to review your expense report( do not send them via email)." + System.Environment.NewLine + "Important: Please keep a copy of all invoices / receipts." + System.Environment.NewLine + "Thank you";
             empMail.Body = bodyText;
@@ -2117,7 +2117,7 @@ namespace TravelExpenses
             this.Close();
             SelectItemsEdit si = new SelectItemsEdit();
             si.ShowDialog();
-            
+
         }
     }
 }
