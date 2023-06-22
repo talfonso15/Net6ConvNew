@@ -28,312 +28,299 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dgvEstimates = new System.Windows.Forms.DataGridView();
-            this.Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Return = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Purpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Budgeted = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstimatedTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstimatedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCFOApproval = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnEmailDirector = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnView = new System.Windows.Forms.Button();
-            this.lblEmailSending = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tlpOptions = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstimates)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tlpOptions.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CFOReview));
+            dgvEstimates = new System.Windows.Forms.DataGridView();
+            Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Return = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Purpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Budgeted = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            EstimatedTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            EstimatedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            btnCFOApproval = new System.Windows.Forms.Button();
+            btnCancel = new System.Windows.Forms.Button();
+            btnEmailDirector = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            toolTip1 = new System.Windows.Forms.ToolTip(components);
+            btnView = new System.Windows.Forms.Button();
+            lblEmailSending = new System.Windows.Forms.Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            tlpOptions = new System.Windows.Forms.TableLayoutPanel();
+            label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)dgvEstimates).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tlpOptions.SuspendLayout();
+            SuspendLayout();
             // 
             // dgvEstimates
             // 
-            this.dgvEstimates.AllowUserToAddRows = false;
-            this.dgvEstimates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstimates.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Departure,
-            this.Return,
-            this.Purpose,
-            this.Event,
-            this.Budgeted,
-            this.User,
-            this.EstimatedTotal,
-            this.EstimatedID,
-            this.UserID,
-            this.Status});
-            this.dgvEstimates.Location = new System.Drawing.Point(30, 91);
-            this.dgvEstimates.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dgvEstimates.MultiSelect = false;
-            this.dgvEstimates.Name = "dgvEstimates";
-            this.dgvEstimates.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstimates.Size = new System.Drawing.Size(1296, 474);
-            this.dgvEstimates.TabIndex = 0;
-            this.dgvEstimates.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvEstimates_CellBeginEdit);
-            this.dgvEstimates.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstimates_CellClick);
-            this.dgvEstimates.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstimates_CellContentClick);
-            this.dgvEstimates.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstimates_CellEndEdit);
-            this.dgvEstimates.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEstimates_CellMouseClick);
-            this.dgvEstimates.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstimates_CellValueChanged);
-            this.dgvEstimates.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvEstimates_CurrentCellDirtyStateChanged);
+            dgvEstimates.AllowUserToAddRows = false;
+            dgvEstimates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEstimates.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Departure, Return, Purpose, Event, Budgeted, User, EstimatedTotal, EstimatedID, UserID, Status });
+            dgvEstimates.Location = new System.Drawing.Point(23, 68);
+            dgvEstimates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            dgvEstimates.MultiSelect = false;
+            dgvEstimates.Name = "dgvEstimates";
+            dgvEstimates.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvEstimates.Size = new System.Drawing.Size(1008, 356);
+            dgvEstimates.TabIndex = 0;
+            dgvEstimates.CellBeginEdit += dgvEstimates_CellBeginEdit;
+            dgvEstimates.CellClick += dgvEstimates_CellClick;
+            dgvEstimates.CellContentClick += dgvEstimates_CellContentClick;
+            dgvEstimates.CellEndEdit += dgvEstimates_CellEndEdit;
+            dgvEstimates.CellMouseClick += dgvEstimates_CellMouseClick;
+            dgvEstimates.CellValueChanged += dgvEstimates_CellValueChanged;
+            dgvEstimates.CurrentCellDirtyStateChanged += dgvEstimates_CurrentCellDirtyStateChanged;
             // 
             // Departure
             // 
-            this.Departure.HeaderText = "Departure";
-            this.Departure.Name = "Departure";
-            this.Departure.ReadOnly = true;
-            this.Departure.Width = 80;
+            Departure.HeaderText = "Departure";
+            Departure.Name = "Departure";
+            Departure.ReadOnly = true;
+            Departure.Width = 80;
             // 
             // Return
             // 
-            this.Return.HeaderText = "Return";
-            this.Return.Name = "Return";
-            this.Return.ReadOnly = true;
-            this.Return.Width = 80;
+            Return.HeaderText = "Return";
+            Return.Name = "Return";
+            Return.ReadOnly = true;
+            Return.Width = 80;
             // 
             // Purpose
             // 
-            this.Purpose.HeaderText = "Purpose";
-            this.Purpose.Name = "Purpose";
-            this.Purpose.ReadOnly = true;
-            this.Purpose.Visible = false;
-            this.Purpose.Width = 175;
+            Purpose.HeaderText = "Purpose";
+            Purpose.Name = "Purpose";
+            Purpose.ReadOnly = true;
+            Purpose.Visible = false;
+            Purpose.Width = 175;
             // 
             // Event
             // 
-            this.Event.HeaderText = "Event";
-            this.Event.Name = "Event";
-            this.Event.ReadOnly = true;
-            this.Event.Width = 175;
+            Event.HeaderText = "Event";
+            Event.Name = "Event";
+            Event.ReadOnly = true;
+            Event.Width = 175;
             // 
             // Budgeted
             // 
-            this.Budgeted.HeaderText = "Budgeted";
-            this.Budgeted.Name = "Budgeted";
-            this.Budgeted.Width = 60;
+            Budgeted.HeaderText = "Budgeted";
+            Budgeted.Name = "Budgeted";
+            Budgeted.Width = 60;
             // 
             // User
             // 
-            this.User.HeaderText = "User";
-            this.User.Name = "User";
-            this.User.Width = 170;
+            User.HeaderText = "User";
+            User.Name = "User";
+            User.Width = 170;
             // 
             // EstimatedTotal
             // 
-            this.EstimatedTotal.HeaderText = "Cost";
-            this.EstimatedTotal.Name = "EstimatedTotal";
-            this.EstimatedTotal.ReadOnly = true;
-            this.EstimatedTotal.Width = 75;
+            EstimatedTotal.HeaderText = "Cost";
+            EstimatedTotal.Name = "EstimatedTotal";
+            EstimatedTotal.ReadOnly = true;
+            EstimatedTotal.Width = 75;
             // 
             // EstimatedID
             // 
-            this.EstimatedID.HeaderText = "EstimatedID";
-            this.EstimatedID.Name = "EstimatedID";
-            this.EstimatedID.Visible = false;
+            EstimatedID.HeaderText = "EstimatedID";
+            EstimatedID.Name = "EstimatedID";
+            EstimatedID.Visible = false;
             // 
             // UserID
             // 
-            this.UserID.HeaderText = "UserID";
-            this.UserID.Name = "UserID";
-            this.UserID.Visible = false;
+            UserID.HeaderText = "UserID";
+            UserID.Name = "UserID";
+            UserID.Visible = false;
             // 
             // Status
             // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.Visible = false;
+            Status.HeaderText = "Status";
+            Status.Name = "Status";
+            Status.Visible = false;
             // 
             // btnCFOApproval
             // 
-            this.btnCFOApproval.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCFOApproval.FlatAppearance.BorderSize = 0;
-            this.btnCFOApproval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCFOApproval.Image = global::TravelExpenses.Properties.Resources.if_check_70974;
-            this.btnCFOApproval.Location = new System.Drawing.Point(173, 5);
-            this.btnCFOApproval.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCFOApproval.Name = "btnCFOApproval";
-            this.btnCFOApproval.Size = new System.Drawing.Size(49, 58);
-            this.btnCFOApproval.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnCFOApproval, "Mark Travel as Reviewd by CFO");
-            this.btnCFOApproval.UseVisualStyleBackColor = true;
-            this.btnCFOApproval.Click += new System.EventHandler(this.btnCFOApproval_Click);
+            btnCFOApproval.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnCFOApproval.FlatAppearance.BorderSize = 0;
+            btnCFOApproval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCFOApproval.Image = (System.Drawing.Image)resources.GetObject("btnCFOApproval.Image");
+            btnCFOApproval.Location = new System.Drawing.Point(132, 4);
+            btnCFOApproval.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnCFOApproval.Name = "btnCFOApproval";
+            btnCFOApproval.Size = new System.Drawing.Size(38, 43);
+            btnCFOApproval.TabIndex = 1;
+            toolTip1.SetToolTip(btnCFOApproval, "Mark Travel as Reviewd by CFO");
+            btnCFOApproval.UseVisualStyleBackColor = true;
+            btnCFOApproval.Click += btnCFOApproval_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Image = global::TravelExpenses.Properties.Resources.if_Shutdown_Box_Red_34246;
-            this.btnCancel.Location = new System.Drawing.Point(88, 7);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(46, 54);
-            this.btnCancel.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnCancel, "Close");
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancel.Image = (System.Drawing.Image)resources.GetObject("btnCancel.Image");
+            btnCancel.Location = new System.Drawing.Point(67, 5);
+            btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(35, 40);
+            btnCancel.TabIndex = 2;
+            toolTip1.SetToolTip(btnCancel, "Close");
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnEmailDirector
             // 
-            this.btnEmailDirector.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEmailDirector.FlatAppearance.BorderSize = 0;
-            this.btnEmailDirector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmailDirector.Image = global::TravelExpenses.Properties.Resources.if_Apple_Mail_2697658;
-            this.btnEmailDirector.Location = new System.Drawing.Point(4, 5);
-            this.btnEmailDirector.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEmailDirector.Name = "btnEmailDirector";
-            this.btnEmailDirector.Size = new System.Drawing.Size(48, 58);
-            this.btnEmailDirector.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btnEmailDirector, "Send Email for Director\'s Approval");
-            this.btnEmailDirector.UseVisualStyleBackColor = true;
-            this.btnEmailDirector.Visible = false;
-            this.btnEmailDirector.Click += new System.EventHandler(this.btnEmailDirector_Click);
+            btnEmailDirector.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEmailDirector.FlatAppearance.BorderSize = 0;
+            btnEmailDirector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEmailDirector.Image = (System.Drawing.Image)resources.GetObject("btnEmailDirector.Image");
+            btnEmailDirector.Location = new System.Drawing.Point(3, 4);
+            btnEmailDirector.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnEmailDirector.Name = "btnEmailDirector";
+            btnEmailDirector.Size = new System.Drawing.Size(37, 43);
+            btnEmailDirector.TabIndex = 0;
+            toolTip1.SetToolTip(btnEmailDirector, "Send Email for Director's Approval");
+            btnEmailDirector.UseVisualStyleBackColor = true;
+            btnEmailDirector.Visible = false;
+            btnEmailDirector.Click += btnEmailDirector_Click;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(142, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 22);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "|";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(108, 14);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(18, 22);
+            label1.TabIndex = 3;
+            label1.Text = "|";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 22);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "|";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Visible = false;
+            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(46, 14);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(15, 22);
+            label2.TabIndex = 4;
+            label2.Text = "|";
+            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.Visible = false;
             // 
             // toolTip1
             // 
-            this.toolTip1.AutomaticDelay = 200;
+            toolTip1.AutomaticDelay = 200;
             // 
             // btnView
             // 
-            this.btnView.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnView.FlatAppearance.BorderSize = 0;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Image = global::TravelExpenses.Properties.Resources.if_5_330396;
-            this.btnView.Location = new System.Drawing.Point(262, 5);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(51, 57);
-            this.btnView.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.btnView, "View Details");
-            this.btnView.UseVisualStyleBackColor = true;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            btnView.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnView.FlatAppearance.BorderSize = 0;
+            btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnView.Image = (System.Drawing.Image)resources.GetObject("btnView.Image");
+            btnView.Location = new System.Drawing.Point(202, 4);
+            btnView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnView.Name = "btnView";
+            btnView.Size = new System.Drawing.Size(40, 43);
+            btnView.TabIndex = 6;
+            toolTip1.SetToolTip(btnView, "View Details");
+            btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
             // 
             // lblEmailSending
             // 
-            this.lblEmailSending.AutoSize = true;
-            this.lblEmailSending.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailSending.Location = new System.Drawing.Point(96, 51);
-            this.lblEmailSending.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEmailSending.Name = "lblEmailSending";
-            this.lblEmailSending.Size = new System.Drawing.Size(182, 13);
-            this.lblEmailSending.TabIndex = 3;
-            this.lblEmailSending.Text = "Sending Notification Emails.....";
-            this.lblEmailSending.Visible = false;
+            lblEmailSending.AutoSize = true;
+            lblEmailSending.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblEmailSending.Location = new System.Drawing.Point(75, 38);
+            lblEmailSending.Name = "lblEmailSending";
+            lblEmailSending.Size = new System.Drawing.Size(182, 13);
+            lblEmailSending.TabIndex = 3;
+            lblEmailSending.Text = "Sending Notification Emails.....";
+            lblEmailSending.Visible = false;
             // 
             // backgroundWorker1
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+            backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TravelExpenses.Properties.Resources.image_1229052;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 55);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            pictureBox1.Image = Properties.Resources.image_1229052;
+            pictureBox1.Location = new System.Drawing.Point(23, 28);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(44, 41);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
             // 
             // tlpOptions
             // 
-            this.tlpOptions.ColumnCount = 7;
-            this.tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
-            this.tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.42857F));
-            this.tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.30159F));
-            this.tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.61307F));
-            this.tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.55276F));
-            this.tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tlpOptions.Controls.Add(this.label1, 3, 0);
-            this.tlpOptions.Controls.Add(this.label2, 1, 0);
-            this.tlpOptions.Controls.Add(this.label3, 5, 0);
-            this.tlpOptions.Controls.Add(this.btnView, 6, 0);
-            this.tlpOptions.Controls.Add(this.btnCFOApproval, 4, 0);
-            this.tlpOptions.Controls.Add(this.btnCancel, 2, 0);
-            this.tlpOptions.Controls.Add(this.btnEmailDirector, 0, 0);
-            this.tlpOptions.Location = new System.Drawing.Point(1020, 18);
-            this.tlpOptions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tlpOptions.Name = "tlpOptions";
-            this.tlpOptions.RowCount = 1;
-            this.tlpOptions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpOptions.Size = new System.Drawing.Size(323, 68);
-            this.tlpOptions.TabIndex = 5;
+            tlpOptions.ColumnCount = 7;
+            tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
+            tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.42857F));
+            tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.30159F));
+            tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.61307F));
+            tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.55276F));
+            tlpOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            tlpOptions.Controls.Add(label1, 3, 0);
+            tlpOptions.Controls.Add(label2, 1, 0);
+            tlpOptions.Controls.Add(label3, 5, 0);
+            tlpOptions.Controls.Add(btnView, 6, 0);
+            tlpOptions.Controls.Add(btnCFOApproval, 4, 0);
+            tlpOptions.Controls.Add(btnCancel, 2, 0);
+            tlpOptions.Controls.Add(btnEmailDirector, 0, 0);
+            tlpOptions.Location = new System.Drawing.Point(793, 14);
+            tlpOptions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tlpOptions.Name = "tlpOptions";
+            tlpOptions.RowCount = 1;
+            tlpOptions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tlpOptions.Size = new System.Drawing.Size(251, 51);
+            tlpOptions.TabIndex = 5;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(230, 23);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 22);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "|";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label3.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(176, 14);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(14, 22);
+            label3.TabIndex = 5;
+            label3.Text = "|";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CFOReview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1352, 609);
-            this.ControlBox = false;
-            this.Controls.Add(this.tlpOptions);
-            this.Controls.Add(this.lblEmailSending);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dgvEstimates);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "CFOReview";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CFO Travel Authorization Review";
-            this.Load += new System.EventHandler(this.CFOReview_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstimates)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tlpOptions.ResumeLayout(false);
-            this.tlpOptions.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1052, 457);
+            ControlBox = false;
+            Controls.Add(tlpOptions);
+            Controls.Add(lblEmailSending);
+            Controls.Add(pictureBox1);
+            Controls.Add(dgvEstimates);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "CFOReview";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "CFO Travel Authorization Review";
+            Load += CFOReview_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvEstimates).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tlpOptions.ResumeLayout(false);
+            tlpOptions.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

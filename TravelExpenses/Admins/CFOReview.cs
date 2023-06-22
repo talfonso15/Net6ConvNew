@@ -55,7 +55,7 @@ namespace TravelExpenses
                 }
 
             }
-            
+
         }
 
         private void CFOReview_Load(object sender, EventArgs e)
@@ -163,11 +163,11 @@ namespace TravelExpenses
                             tadpt.InsertCommand.Parameters.Add("@Action", SqlDbType.NVarChar).Value = "CFO Approved and Signed Travel Authorization";
                             tadpt.InsertCommand.Parameters.Add("@Date", SqlDbType.NVarChar).Value = DateTime.Now;
                             tadpt.InsertCommand.ExecuteNonQuery();
-                            
+
 
                             MessageBox.Show("The travel authorization has been reviewed by the CFO", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            
+
                         }
                     }
                     else
@@ -188,7 +188,7 @@ namespace TravelExpenses
                             tadpt.InsertCommand.ExecuteNonQuery();
 
                             MessageBox.Show("The travel authorization has been reviewed by the CFO", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            
+
                         }
                     }
                     pictureBox1.Image = TravelExpenses.Properties.Resources.image_1229052;
@@ -203,17 +203,17 @@ namespace TravelExpenses
                     {
                         backgroundWorker1.RunWorkerAsync();
                     }
-                    
+
                 }
 
             }
         }
 
-        
+
 
         private void dgvEstimates_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void updateDGV()
@@ -267,7 +267,7 @@ namespace TravelExpenses
 
         private void sendEmail()
         {
-            
+
             int index = dgvEstimates.CurrentRow.Index;
             Guid estID = new Guid(dgvEstimates.Rows[index].Cells[7].Value.ToString());
             string status = "";
@@ -287,7 +287,7 @@ namespace TravelExpenses
                 email = dr["Email"].ToString();
             }
             dr.Close();
-            SqlCommand selStatus = new SqlCommand("SELECT [Status] FROM [TravelExpenses].[dbo].[EstimateTravel_Status] where TravelEstimateID = '"+ estID + "'", localCon);
+            SqlCommand selStatus = new SqlCommand("SELECT [Status] FROM [TravelExpenses].[dbo].[EstimateTravel_Status] where TravelEstimateID = '" + estID + "'", localCon);
             SqlDataReader selStatusDR = selStatus.ExecuteReader();
             while (selStatusDR.Read())
             {
@@ -316,7 +316,8 @@ namespace TravelExpenses
                 {
                     asstDirectorEmail = asstDirDR["Email"].ToString();
                 }
-            }asstDirDR.Close();
+            }
+            asstDirDR.Close();
 
             localCon.Close();
 
@@ -347,18 +348,18 @@ namespace TravelExpenses
                     mailAcc.Body = "The travel authorization form of " + fullname + " from " + startDate + " to " + endDate + " in order to " + "attend to " + travelEvent + " event, has been completed and approved by the CFO.";
                 }
             }*/
-            
-                mail.To.Add(email);
-                mail.Subject = "Your travel authorization has been reviewed by the CFO";
-                if (startDate == endDate)
-                {
-                    mail.Body = "Your travel authorizations for the travel on " + startDate + " in order to attend to " + travelEvent + " event,has been reviewed by the CFO.";
-                }
-                else
-                {
-                    mail.Body = "Your travel authorizations for the travel on " + startDate + " to " + endDate + " in order to attend to " + travelEvent + " event,has been reviewed by the CFO.";
 
-                }
+            mail.To.Add(email);
+            mail.Subject = "Your travel authorization has been reviewed by the CFO";
+            if (startDate == endDate)
+            {
+                mail.Body = "Your travel authorizations for the travel on " + startDate + " in order to attend to " + travelEvent + " event,has been reviewed by the CFO.";
+            }
+            else
+            {
+                mail.Body = "Your travel authorizations for the travel on " + startDate + " to " + endDate + " in order to attend to " + travelEvent + " event,has been reviewed by the CFO.";
+
+            }
 
             if (!budgetedTrav)
             {
@@ -381,16 +382,16 @@ namespace TravelExpenses
             try
             {
                 SmtpServer.Send(mail);
-                if (!budgetedTrav) 
+                if (!budgetedTrav)
                 {
                     SmtpServer.Send(maild);
                 }
-               /* if (status == "Final" && budgetedTrav)
-                {
-                    SmtpServer.Send(mailAcc);
-                }*/
+                /* if (status == "Final" && budgetedTrav)
+                 {
+                     SmtpServer.Send(mailAcc);
+                 }*/
                 pictureBox1.Image = Properties.Resources.if_11_330397;
-                
+
 
             }
             catch (Exception e)
@@ -404,8 +405,8 @@ namespace TravelExpenses
             BackgroundWorker worker = sender as BackgroundWorker;
             sendEmail();
             rowIndex = 0;
-            
-            
+
+
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -476,7 +477,7 @@ namespace TravelExpenses
 
         private void dgvEstimates_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-           
+
         }
 
         private void dgvEstimates_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
@@ -486,7 +487,7 @@ namespace TravelExpenses
         private void dgvEstimates_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            
+
         }
 
         private void btnView_Click(object sender, EventArgs e)
@@ -511,7 +512,7 @@ namespace TravelExpenses
             }
         }
 
-        private void sendEmailToDirector() 
+        private void sendEmailToDirector()
         {
             if (dgvEstimates.RowCount > 0)
             {
@@ -524,7 +525,7 @@ namespace TravelExpenses
                 int index = dgvEstimates.CurrentRow.Index;
                 rowIndex = index;
                 Guid estID = new Guid(dgvEstimates.Rows[index].Cells[7].Value.ToString());
-               // localCon.Open();
+                // localCon.Open();
                 SqlDataAdapter upStat = new SqlDataAdapter();
                 upStat.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[EstimateTravel_Status] SET [Status] = @Status WHERE TravelEstimateID = '" + estID + "'", localCon);
                 upStat.UpdateCommand.Parameters.Add("@Status", SqlDbType.NVarChar).Value = "Sent for Director Approval";
