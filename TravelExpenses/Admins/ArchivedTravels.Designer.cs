@@ -28,276 +28,275 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvArchivedTravels = new System.Windows.Forms.DataGridView();
-            this.Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Return = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pupose = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TravelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Approved = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnPDF = new System.Windows.Forms.Button();
-            this.lblSeparator = new System.Windows.Forms.Label();
-            this.pnSearch = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.cbEmployee = new System.Windows.Forms.ComboBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArchivedTravels)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.pnSearch.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchivedTravels));
+            dgvArchivedTravels = new System.Windows.Forms.DataGridView();
+            Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Return = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Pupose = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TravelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Approved = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            btnClose = new System.Windows.Forms.Button();
+            btnPDF = new System.Windows.Forms.Button();
+            lblSeparator = new System.Windows.Forms.Label();
+            pnSearch = new System.Windows.Forms.Panel();
+            btnSearch = new System.Windows.Forms.Button();
+            cbEmployee = new System.Windows.Forms.ComboBox();
+            lblSearch = new System.Windows.Forms.Label();
+            panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)dgvArchivedTravels).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
+            pnSearch.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // dgvArchivedTravels
             // 
-            this.dgvArchivedTravels.AllowUserToAddRows = false;
-            this.dgvArchivedTravels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArchivedTravels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Departure,
-            this.Return,
-            this.Event,
-            this.Pupose,
-            this.Status,
-            this.Origin,
-            this.Destination,
-            this.Total,
-            this.TravelID,
-            this.UserID,
-            this.User,
-            this.Approved});
-            this.dgvArchivedTravels.Location = new System.Drawing.Point(28, 132);
-            this.dgvArchivedTravels.MultiSelect = false;
-            this.dgvArchivedTravels.Name = "dgvArchivedTravels";
-            this.dgvArchivedTravels.ReadOnly = true;
-            this.dgvArchivedTravels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArchivedTravels.Size = new System.Drawing.Size(733, 584);
-            this.dgvArchivedTravels.TabIndex = 0;
+            dgvArchivedTravels.AllowUserToAddRows = false;
+            dgvArchivedTravels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvArchivedTravels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Departure, Return, Event, Pupose, Status, Origin, Destination, Total, TravelID, UserID, User, Approved });
+            dgvArchivedTravels.Location = new System.Drawing.Point(33, 152);
+            dgvArchivedTravels.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dgvArchivedTravels.MultiSelect = false;
+            dgvArchivedTravels.Name = "dgvArchivedTravels";
+            dgvArchivedTravels.ReadOnly = true;
+            dgvArchivedTravels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvArchivedTravels.Size = new System.Drawing.Size(855, 674);
+            dgvArchivedTravels.TabIndex = 0;
             // 
             // Departure
             // 
-            this.Departure.HeaderText = "Departure";
-            this.Departure.Name = "Departure";
-            this.Departure.ReadOnly = true;
-            this.Departure.Width = 80;
+            Departure.HeaderText = "Departure";
+            Departure.Name = "Departure";
+            Departure.ReadOnly = true;
+            Departure.Width = 80;
             // 
             // Return
             // 
-            this.Return.HeaderText = "Return";
-            this.Return.Name = "Return";
-            this.Return.ReadOnly = true;
-            this.Return.Width = 80;
+            Return.HeaderText = "Return";
+            Return.Name = "Return";
+            Return.ReadOnly = true;
+            Return.Width = 80;
             // 
             // Event
             // 
-            this.Event.HeaderText = "Event";
-            this.Event.Name = "Event";
-            this.Event.ReadOnly = true;
-            this.Event.Width = 200;
+            Event.HeaderText = "Event";
+            Event.Name = "Event";
+            Event.ReadOnly = true;
+            Event.Width = 200;
             // 
             // Pupose
             // 
-            this.Pupose.HeaderText = "Purpose";
-            this.Pupose.Name = "Pupose";
-            this.Pupose.ReadOnly = true;
-            this.Pupose.Visible = false;
+            Pupose.HeaderText = "Purpose";
+            Pupose.Name = "Pupose";
+            Pupose.ReadOnly = true;
+            Pupose.Visible = false;
             // 
             // Status
             // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
-            this.Status.Width = 80;
+            Status.HeaderText = "Status";
+            Status.Name = "Status";
+            Status.ReadOnly = true;
+            Status.Visible = false;
+            Status.Width = 80;
             // 
             // Origin
             // 
-            this.Origin.HeaderText = "Origin";
-            this.Origin.Name = "Origin";
-            this.Origin.ReadOnly = true;
-            this.Origin.Visible = false;
+            Origin.HeaderText = "Origin";
+            Origin.Name = "Origin";
+            Origin.ReadOnly = true;
+            Origin.Visible = false;
             // 
             // Destination
             // 
-            this.Destination.HeaderText = "Destination";
-            this.Destination.Name = "Destination";
-            this.Destination.ReadOnly = true;
-            this.Destination.Visible = false;
+            Destination.HeaderText = "Destination";
+            Destination.Name = "Destination";
+            Destination.ReadOnly = true;
+            Destination.Visible = false;
             // 
             // Total
             // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Visible = false;
+            Total.HeaderText = "Total";
+            Total.Name = "Total";
+            Total.ReadOnly = true;
+            Total.Visible = false;
             // 
             // TravelID
             // 
-            this.TravelID.HeaderText = "TravelID";
-            this.TravelID.Name = "TravelID";
-            this.TravelID.ReadOnly = true;
-            this.TravelID.Visible = false;
+            TravelID.HeaderText = "TravelID";
+            TravelID.Name = "TravelID";
+            TravelID.ReadOnly = true;
+            TravelID.Visible = false;
             // 
             // UserID
             // 
-            this.UserID.HeaderText = "UserID";
-            this.UserID.Name = "UserID";
-            this.UserID.ReadOnly = true;
-            this.UserID.Visible = false;
+            UserID.HeaderText = "UserID";
+            UserID.Name = "UserID";
+            UserID.ReadOnly = true;
+            UserID.Visible = false;
             // 
             // User
             // 
-            this.User.HeaderText = "User";
-            this.User.Name = "User";
-            this.User.ReadOnly = true;
-            this.User.Width = 150;
+            User.HeaderText = "User";
+            User.Name = "User";
+            User.ReadOnly = true;
+            User.Width = 150;
             // 
             // Approved
             // 
-            this.Approved.HeaderText = "Approved by Accounting";
-            this.Approved.Name = "Approved";
-            this.Approved.ReadOnly = true;
-            this.Approved.Width = 150;
+            Approved.HeaderText = "Approved by Accounting";
+            Approved.Name = "Approved";
+            Approved.ReadOnly = true;
+            Approved.Width = 150;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.60584F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.90909F));
-            this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnPDF, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblSeparator, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 6);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(110, 37);
-            this.tableLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.60584F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.90909F));
+            tableLayoutPanel1.Controls.Add(btnClose, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnPDF, 2, 0);
+            tableLayoutPanel1.Controls.Add(lblSeparator, 1, 0);
+            tableLayoutPanel1.Location = new System.Drawing.Point(9, 7);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(128, 43);
+            tableLayoutPanel1.TabIndex = 1;
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TravelExpenses.Properties.Resources.if_Shutdown_Box_Red_34246;
-            this.btnClose.Location = new System.Drawing.Point(3, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(39, 31);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
+            btnClose.Location = new System.Drawing.Point(4, 3);
+            btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new System.Drawing.Size(44, 36);
+            btnClose.TabIndex = 0;
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // btnPDF
             // 
-            this.btnPDF.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPDF.FlatAppearance.BorderSize = 0;
-            this.btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPDF.Image = global::TravelExpenses.Properties.Resources.if_pdf_1644;
-            this.btnPDF.Location = new System.Drawing.Point(67, 3);
-            this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(40, 31);
-            this.btnPDF.TabIndex = 1;
-            this.btnPDF.UseVisualStyleBackColor = true;
-            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            btnPDF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnPDF.FlatAppearance.BorderSize = 0;
+            btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnPDF.Image = (System.Drawing.Image)resources.GetObject("btnPDF.Image");
+            btnPDF.Location = new System.Drawing.Point(79, 3);
+            btnPDF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnPDF.Name = "btnPDF";
+            btnPDF.Size = new System.Drawing.Size(45, 36);
+            btnPDF.TabIndex = 1;
+            btnPDF.UseVisualStyleBackColor = true;
+            btnPDF.Click += btnPDF_Click;
             // 
             // lblSeparator
             // 
-            this.lblSeparator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSeparator.AutoSize = true;
-            this.lblSeparator.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeparator.Location = new System.Drawing.Point(48, 6);
-            this.lblSeparator.Name = "lblSeparator";
-            this.lblSeparator.Size = new System.Drawing.Size(13, 25);
-            this.lblSeparator.TabIndex = 2;
-            this.lblSeparator.Text = "|";
-            this.lblSeparator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSeparator.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblSeparator.AutoSize = true;
+            lblSeparator.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblSeparator.Location = new System.Drawing.Point(56, 9);
+            lblSeparator.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblSeparator.Name = "lblSeparator";
+            lblSeparator.Size = new System.Drawing.Size(15, 25);
+            lblSeparator.TabIndex = 2;
+            lblSeparator.Text = "|";
+            lblSeparator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnSearch
             // 
-            this.pnSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnSearch.Controls.Add(this.btnSearch);
-            this.pnSearch.Controls.Add(this.cbEmployee);
-            this.pnSearch.Controls.Add(this.lblSearch);
-            this.pnSearch.Location = new System.Drawing.Point(28, 76);
-            this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Size = new System.Drawing.Size(433, 50);
-            this.pnSearch.TabIndex = 2;
+            pnSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pnSearch.Controls.Add(btnSearch);
+            pnSearch.Controls.Add(cbEmployee);
+            pnSearch.Controls.Add(lblSearch);
+            pnSearch.Location = new System.Drawing.Point(33, 88);
+            pnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pnSearch.Name = "pnSearch";
+            pnSearch.Size = new System.Drawing.Size(505, 57);
+            pnSearch.TabIndex = 2;
             // 
             // btnSearch
             // 
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = global::TravelExpenses.Properties.Resources._1496272438_magnifyingglass;
-            this.btnSearch.Location = new System.Drawing.Point(380, 10);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(48, 35);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            btnSearch.FlatAppearance.BorderSize = 0;
+            btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSearch.Image = (System.Drawing.Image)resources.GetObject("btnSearch.Image");
+            btnSearch.Location = new System.Drawing.Point(443, 12);
+            btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new System.Drawing.Size(56, 40);
+            btnSearch.TabIndex = 2;
+            btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // cbEmployee
             // 
-            this.cbEmployee.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbEmployee.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbEmployee.FormattingEnabled = true;
-            this.cbEmployee.Location = new System.Drawing.Point(161, 17);
-            this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(203, 21);
-            this.cbEmployee.TabIndex = 1;
+            cbEmployee.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            cbEmployee.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            cbEmployee.FormattingEnabled = true;
+            cbEmployee.Location = new System.Drawing.Point(188, 20);
+            cbEmployee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbEmployee.Name = "cbEmployee";
+            cbEmployee.Size = new System.Drawing.Size(236, 23);
+            cbEmployee.TabIndex = 1;
             // 
             // lblSearch
             // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(13, 18);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(133, 17);
-            this.lblSearch.TabIndex = 0;
-            this.lblSearch.Text = "Select Employee:";
+            lblSearch.AutoSize = true;
+            lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblSearch.Location = new System.Drawing.Point(15, 21);
+            lblSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new System.Drawing.Size(133, 17);
+            lblSearch.TabIndex = 0;
+            lblSearch.Text = "Select Employee:";
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(634, 76);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(126, 50);
-            this.panel1.TabIndex = 3;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(tableLayoutPanel1);
+            panel1.Location = new System.Drawing.Point(740, 88);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(147, 57);
+            panel1.TabIndex = 3;
             // 
             // ArchivedTravels
             // 
-            this.AcceptButton = this.btnSearch;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 746);
-            this.ControlBox = false;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnSearch);
-            this.Controls.Add(this.dgvArchivedTravels);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "ArchivedTravels";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Archived Travels";
-            this.Load += new System.EventHandler(this.ArchivedTravels_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArchivedTravels)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.pnSearch.ResumeLayout(false);
-            this.pnSearch.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AcceptButton = btnSearch;
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(923, 861);
+            ControlBox = false;
+            Controls.Add(panel1);
+            Controls.Add(pnSearch);
+            Controls.Add(dgvArchivedTravels);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "ArchivedTravels";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Archived Travels";
+            Load += ArchivedTravels_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvArchivedTravels).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            pnSearch.ResumeLayout(false);
+            pnSearch.PerformLayout();
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
