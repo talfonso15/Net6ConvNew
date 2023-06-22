@@ -40,7 +40,7 @@ namespace TravelExpenses
 
         private void SuperAdminAuthorization_Load(object sender, EventArgs e)
         {
-            
+
             refreshTravels();
         }
 
@@ -73,7 +73,7 @@ namespace TravelExpenses
                         dgvAthorizations.Rows.Add(depDate.ToShortDateString(), retDate.ToShortDateString(), travEvent, travPurpose, budgeted, user, estTotal, estimateID, userID, district, department, personalMileage);
                     }
                     dr.Close();
-                } 
+                }
                 else if (title == "Deputy Director Mosquito" || title == "Assistant Director")
                 {
                     SqlCommand cmd = new SqlCommand("SELECT  a.TravelEstimateID,a.UserID,a.DepartureDate,a.ReturnDate,a.TravelEvent,a.TravelPurpose,a.BudgetedTravel,a.EstimatedTravelCost,a.MileagePersonal,(b.Name + ' ' + b.LastName) as Name,b.District,b.Department FROM [TravelExpenses].[dbo].[EstimateTravel] as a inner join [TravelExpenses].[dbo].[User] as b on b.UserID = a.UserID inner join TravelExpenses.dbo.EstimateTravel_Status as c on c.TravelEstimateID = a.TravelEstimateID where c.Status != 'Final' AND (b.Department = 'Mosquito Group 106' or b.Department = 'Field Validation 105' or b.Department = 'Scientific Intelligence 108') order by a.ReturnDate desc", localCon);
@@ -96,7 +96,7 @@ namespace TravelExpenses
                         dgvAthorizations.Rows.Add(depDate.ToShortDateString(), retDate.ToShortDateString(), travEvent, travPurpose, budgeted, user, estTotal, estimateID, userID, district, department, personalMileage);
                     }
                     dr.Close();
-                }  
+                }
                 else if (title == "Deputy Director Hyacinth")
                 {
                     SqlCommand cmd = new SqlCommand("SELECT  a.TravelEstimateID,a.UserID,a.DepartureDate,a.ReturnDate,a.TravelEvent,a.TravelPurpose,a.BudgetedTravel,a.EstimatedTravelCost,a.MileagePersonal,(b.Name + ' ' + b.LastName) as Name,b.District,b.Department FROM [TravelExpenses].[dbo].[EstimateTravel] as a inner join [TravelExpenses].[dbo].[User] as b on b.UserID = a.UserID inner join TravelExpenses.dbo.EstimateTravel_Status as c on c.TravelEstimateID = a.TravelEstimateID where c.Status != 'Final' AND b.Department = 'Hyacinth' order by a.ReturnDate desc", localCon);
@@ -279,7 +279,7 @@ namespace TravelExpenses
                     toSet.SetValue(travTotal);
 
                     //string[] chxvalues = pdfFormFields.GetAppearanceStates("Travel_Budgeted_No"); //commented for net6
-                    
+
                     if (budgeted == "True")
                     {
                         //pdfFormFields.SetField("Travel_Budgeted_Yes", "Choice1"); //commented for net6
@@ -424,7 +424,7 @@ namespace TravelExpenses
 
                             //BaseFont bf = BaseFont.CreateFont(); //commented for net6 
                             PdfFont font = PdfFontFactory.CreateFont();
-                            
+
                             if (drPDF["FontType"].ToString() == "Mistral")
                             {
                                 //bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\MISTRAL.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); //commented for net6 
@@ -554,7 +554,7 @@ namespace TravelExpenses
             localCon.Open();
 
             Guid logUser = new Guid(CommonVariables.user);
-            SqlCommand userInfo = new SqlCommand("SELECT [Title],b.Username FROM [TravelExpenses].[dbo].[User_Email_Title] as a inner join TravelExpenses.dbo.[User] as b on a.UserID = b.UserID where a.UserID = '"+ logUser +"'", localCon);
+            SqlCommand userInfo = new SqlCommand("SELECT [Title],b.Username FROM [TravelExpenses].[dbo].[User_Email_Title] as a inner join TravelExpenses.dbo.[User] as b on a.UserID = b.UserID where a.UserID = '" + logUser + "'", localCon);
             SqlDataReader userInfoDR = userInfo.ExecuteReader();
             while (userInfoDR.Read())
             {
@@ -766,19 +766,19 @@ namespace TravelExpenses
             if (dgvAthorizations.Rows.Count > 0)
             {
                 DialogResult delAuth = MessageBox.Show("Do you really want to delete this Authorization?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (delAuth == DialogResult.Yes) 
+                if (delAuth == DialogResult.Yes)
                 {
                     int rowIndex = dgvAthorizations.CurrentRow.Index;
                     string estID = dgvAthorizations.Rows[rowIndex].Cells[7].Value.ToString();
                     localCon.Open();
-                    
-                    SqlCommand delSign = new SqlCommand("delete TravelExpenses.dbo.TravelSignatures where TravelID = '"+ estID +"' AND TravelType = 'Estimate'", localCon);
+
+                    SqlCommand delSign = new SqlCommand("delete TravelExpenses.dbo.TravelSignatures where TravelID = '" + estID + "' AND TravelType = 'Estimate'", localCon);
                     int signRow = delSign.ExecuteNonQuery();
 
-                    SqlCommand delStatus = new SqlCommand("delete TravelExpenses.dbo.EstimateTravel_Status where TravelEstimateID = '"+ estID + "'", localCon);
+                    SqlCommand delStatus = new SqlCommand("delete TravelExpenses.dbo.EstimateTravel_Status where TravelEstimateID = '" + estID + "'", localCon);
                     int statusRows = delStatus.ExecuteNonQuery();
 
-                    SqlCommand delAutho = new SqlCommand("delete [TravelExpenses].[dbo].[EstimateTravel] where TravelEstimateID = '"+ estID +"'", localCon);
+                    SqlCommand delAutho = new SqlCommand("delete [TravelExpenses].[dbo].[EstimateTravel] where TravelEstimateID = '" + estID + "'", localCon);
                     int authRows = delAutho.ExecuteNonQuery();
 
                     localCon.Close();
@@ -788,7 +788,7 @@ namespace TravelExpenses
                         MessageBox.Show("The Travel Authorization was successfully deleted", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         refreshTravels();
                     }
-                    
+
 
                 }
             }
