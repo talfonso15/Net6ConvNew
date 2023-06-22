@@ -95,7 +95,7 @@ namespace TravelExpenses
                     query = "SELECT concat(b.LastName,' ,', Name) as Name, a.UserID as UserID FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join [TravelExpenses].[dbo].[User_Email_Title] as c on b.UserID = c.UserID where (SupervisorID = '" + CommonVariables.user + "' or SupervisorID = '" + asstDirectorID + "') AND c.Active = '1' order by Name asc";
                     authQuery = "Select b.TravelEstimateID,a.UserID,b.DepartureDate,b.ReturnDate,b.TravelEvent,b.TravelPurpose,b.BudgetedTravel,b.EstimatedTravelCost,b.MileagePersonal,(c.Name + '' + c.LastName) as Name,c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where a.SupervisorID = '" + CommonVariables.user + "' or a.SupervisorID = '" + asstDirectorID + "' order by b.DepartureDate desc";
                 }
-                else 
+                else
                 {
                     query = "SELECT concat(b.LastName,' ,', Name) as Name, a.UserID as UserID FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join [TravelExpenses].[dbo].[User_Email_Title] as c on b.UserID = c.UserID where SupervisorID = '" + CommonVariables.user + "' AND c.Active = '1' order by Name asc";
                     authQuery = "Select b.TravelEstimateID,a.UserID,b.DepartureDate,b.ReturnDate,b.TravelEvent,b.TravelPurpose,b.BudgetedTravel,b.EstimatedTravelCost,b.MileagePersonal,(c.Name + '' + c.LastName) as Name,c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where a.SupervisorID = '" + CommonVariables.user + "' order by b.DepartureDate desc";
@@ -119,7 +119,7 @@ namespace TravelExpenses
                 cbEmployee.SelectedValue = "-1";
                 emplDR.Close();
 
-                
+
 
 
                 SqlCommand cmd = new SqlCommand(authQuery, localCon);
@@ -146,7 +146,7 @@ namespace TravelExpenses
                 for (int i = 0; i < dgvAthorizations.RowCount; i++)
                 {
                     Guid idTrav = new Guid(dgvAthorizations.Rows[i].Cells[7].Value.ToString());
-                    SqlCommand approval = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where UserType = 'Supervisor' AND TravelID = '"+ idTrav +"'", localCon);
+                    SqlCommand approval = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where UserType = 'Supervisor' AND TravelID = '" + idTrav + "'", localCon);
                     SqlDataReader approvalDR = approval.ExecuteReader();
                     if (approvalDR.HasRows)
                     {
@@ -222,12 +222,12 @@ namespace TravelExpenses
                     {
                         query = "Select b.TravelEstimateID, a.UserID, b.DepartureDate, b.ReturnDate, b.TravelEvent, b.TravelPurpose, b.BudgetedTravel, b.EstimatedTravelCost, b.MileagePersonal, (c.Name + '' + c.LastName) as Name, c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where a.SupervisorID = '" + CommonVariables.user + "' or a.SupervisorID = '" + asstDirectorID + "'  order by b.DepartureDate desc";
                     }
-                    else 
+                    else
                     {
                         query = "Select b.TravelEstimateID, a.UserID, b.DepartureDate, b.ReturnDate, b.TravelEvent, b.TravelPurpose, b.BudgetedTravel, b.EstimatedTravelCost, b.MileagePersonal, (c.Name + '' + c.LastName) as Name, c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where a.SupervisorID = '" + CommonVariables.user + "' order by b.DepartureDate desc";
                     }
 
-                        SqlCommand cmd = new SqlCommand(query, localCon);
+                    SqlCommand cmd = new SqlCommand(query, localCon);
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -295,14 +295,14 @@ namespace TravelExpenses
 
                     if (userTitle == "Executive Director")
                     {
-                        query = "Select b.TravelEstimateID, a.UserID, b.DepartureDate, b.ReturnDate, b.TravelEvent, b.TravelPurpose, b.BudgetedTravel, b.EstimatedTravelCost, b.MileagePersonal, (c.Name + '' + c.LastName) as Name, c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where (a.SupervisorID = '" + CommonVariables.user + "' or a.SupervisorID = '"+ asstDirectorID +"') AND c.UserID = '" + cbEmployee.SelectedValue.ToString() + "' order by b.DepartureDate desc";
+                        query = "Select b.TravelEstimateID, a.UserID, b.DepartureDate, b.ReturnDate, b.TravelEvent, b.TravelPurpose, b.BudgetedTravel, b.EstimatedTravelCost, b.MileagePersonal, (c.Name + '' + c.LastName) as Name, c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where (a.SupervisorID = '" + CommonVariables.user + "' or a.SupervisorID = '" + asstDirectorID + "') AND c.UserID = '" + cbEmployee.SelectedValue.ToString() + "' order by b.DepartureDate desc";
                     }
-                    else 
+                    else
                     {
                         query = "Select b.TravelEstimateID, a.UserID, b.DepartureDate, b.ReturnDate, b.TravelEvent, b.TravelPurpose, b.BudgetedTravel, b.EstimatedTravelCost, b.MileagePersonal, (c.Name + '' + c.LastName) as Name, c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where a.SupervisorID = '" + CommonVariables.user + "' AND c.UserID = '" + cbEmployee.SelectedValue.ToString() + "' order by b.DepartureDate desc";
                     }
 
-                        SqlCommand cmd = new SqlCommand(query, localCon);
+                    SqlCommand cmd = new SqlCommand(query, localCon);
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -431,10 +431,10 @@ namespace TravelExpenses
                 //end of new code
 
                 PdfReader pdfReader = new PdfReader(pdfTemplate);
-               
+
                 /* PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
                 AcroFields pdfFormFields = pdfStamper.AcroFields;*/
-               
+
                 try
                 {
                     //user details
@@ -748,7 +748,7 @@ namespace TravelExpenses
                         da.InsertCommand.Parameters.Add("@TravelType", SqlDbType.VarChar).Value = "Estimate";
                         da.InsertCommand.Parameters.Add("@SignatureDate", SqlDbType.DateTime).Value = DateTime.Today;
                         int row = da.InsertCommand.ExecuteNonQuery();
-                        
+
                         if (row > 0)
                         {
                             //updating authorization status
@@ -800,7 +800,7 @@ namespace TravelExpenses
                         int row = da.InsertCommand.ExecuteNonQuery();
 
                         SqlDataAdapter datwo = new SqlDataAdapter();
-                        datwo.UpdateCommand = new SqlCommand("UPDATE [dbo].[EstimateTravel_Status] SET [Status] = @Status WHERE TravelEstimateID = '"+ travIDValue + "'", localCon);
+                        datwo.UpdateCommand = new SqlCommand("UPDATE [dbo].[EstimateTravel_Status] SET [Status] = @Status WHERE TravelEstimateID = '" + travIDValue + "'", localCon);
                         datwo.UpdateCommand.Parameters.Add("@Status", SqlDbType.VarChar).Value = "Final";
                         int row1 = datwo.UpdateCommand.ExecuteNonQuery();
 
@@ -830,9 +830,9 @@ namespace TravelExpenses
                     dgvAthorizations.Enabled = false;
                     if (backgroundWorker1.IsBusy != true)
                     {
-                       backgroundWorker1.RunWorkerAsync();
+                        backgroundWorker1.RunWorkerAsync();
                     }
-                   
+
                 }
             }
         }
@@ -868,7 +868,7 @@ namespace TravelExpenses
             SmtpServer.EnableSsl = true;
 
             System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();// change it for net6
-           
+
             mail.From = new MailAddress("travelAlert@lcmcd.org");
             mail.To.Add(email);
             mail.Subject = "Your travel authorization was approved by " + userType;
@@ -895,11 +895,11 @@ namespace TravelExpenses
                 mailCFO.Subject = "Travel Authorization Form Review";
                 if (depDate.ToShortDateString() == retDate.ToShortDateString())
                 {
-                    mailCFO.Body = "The travel authorization form of " + username + " for the "+ travEvent + " event on " + depDate.ToShortDateString() + " , has been approved by his supervisor, please review it, Thanks";
+                    mailCFO.Body = "The travel authorization form of " + username + " for the " + travEvent + " event on " + depDate.ToShortDateString() + " , has been approved by his supervisor, please review it, Thanks";
                 }
                 else
                 {
-                    mailCFO.Body = "The travel authorization form of " + username + " for the " + travEvent + " event from " + depDate.ToShortDateString() +" to " + retDate.ToShortDateString() + ", has been approved by his supervisor, please review it, Thanks";
+                    mailCFO.Body = "The travel authorization form of " + username + " for the " + travEvent + " event from " + depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + ", has been approved by his supervisor, please review it, Thanks";
                 }
             }
 
@@ -907,17 +907,17 @@ namespace TravelExpenses
             System.Net.Mail.MailMessage mailAcc = new System.Net.Mail.MailMessage();
             if (userType == "Director")
             {
-               /* mailAcc.From = new MailAddress("travelAlert@lcmcd.org");
-                mailAcc.To.Add("collins@lcmcd.org");
-                mailAcc.Subject = "Travel authorization form of " + username + " is completed.";
-                if (depDate.ToShortDateString() == retDate.ToShortDateString())
-                {
-                    mailAcc.Body = "The travel authorization form of " + username + " for the " + travEvent + " event on " + depDate.ToShortDateString() + ", has been completed and approved by the Director.";
-                }
-                else
-                {
-                    mailAcc.Body = "The travel authorization form of " + username + " for the " + travEvent + " event, from " + depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + ", has been completed and approved by the Director.";
-                }*/
+                /* mailAcc.From = new MailAddress("travelAlert@lcmcd.org");
+                 mailAcc.To.Add("collins@lcmcd.org");
+                 mailAcc.Subject = "Travel authorization form of " + username + " is completed.";
+                 if (depDate.ToShortDateString() == retDate.ToShortDateString())
+                 {
+                     mailAcc.Body = "The travel authorization form of " + username + " for the " + travEvent + " event on " + depDate.ToShortDateString() + ", has been completed and approved by the Director.";
+                 }
+                 else
+                 {
+                     mailAcc.Body = "The travel authorization form of " + username + " for the " + travEvent + " event, from " + depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + ", has been completed and approved by the Director.";
+                 }*/
 
             }
 
@@ -979,7 +979,7 @@ namespace TravelExpenses
             dgvAthorizations.Rows.Clear();
             if (CommonVariables.isSupervisor)
             {
-                
+
                 this.Text = "Supervisor Authorizations";
                 toolTip1.SetToolTip(btnApprEstimateDirector, "Supervisor Approval");
 
@@ -1002,15 +1002,15 @@ namespace TravelExpenses
 
                 if (userTitle == "Executive Director")
                 {
-                    query = "Select b.TravelEstimateID,a.UserID,b.DepartureDate,b.ReturnDate,b.TravelEvent,b.TravelPurpose,b.BudgetedTravel,b.EstimatedTravelCost,b.MileagePersonal,(c.Name + '' + c.LastName) as Name,c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where a.SupervisorID = '" + CommonVariables.user + "' or a.SupervisorID = '"+ asstDirectorID + "' order by b.DepartureDate desc";
+                    query = "Select b.TravelEstimateID,a.UserID,b.DepartureDate,b.ReturnDate,b.TravelEvent,b.TravelPurpose,b.BudgetedTravel,b.EstimatedTravelCost,b.MileagePersonal,(c.Name + '' + c.LastName) as Name,c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where a.SupervisorID = '" + CommonVariables.user + "' or a.SupervisorID = '" + asstDirectorID + "' order by b.DepartureDate desc";
                 }
-                else 
+                else
                 {
                     query = "Select b.TravelEstimateID,a.UserID,b.DepartureDate,b.ReturnDate,b.TravelEvent,b.TravelPurpose,b.BudgetedTravel,b.EstimatedTravelCost,b.MileagePersonal,(c.Name + '' + c.LastName) as Name,c.District, c.Department from TravelExpenses.dbo.Supervisor_Employee as a inner join TravelExpenses.dbo.EstimateTravel as b on a.UserID = b.UserID inner join TravelExpenses.dbo.[User] as c on a.UserID = c.UserID where a.SupervisorID = '" + CommonVariables.user + "' order by b.DepartureDate desc";
                 }
 
 
-                    SqlCommand cmd = new SqlCommand(query, localCon);
+                SqlCommand cmd = new SqlCommand(query, localCon);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {

@@ -35,9 +35,9 @@ namespace TravelExpenses
             string name = "";
             string id = "";
 
-            SqlCommand loggedUser = new SqlCommand("SELECT  a.UserID as UserID,[Name],[LastName],a.Username as Username FROM [dbo].[User] as a inner join User_Email_Title as b on a.UserID = b.UserID where a.UserID = '" + CommonVariables.user +"'", localCon);
+            SqlCommand loggedUser = new SqlCommand("SELECT  a.UserID as UserID,[Name],[LastName],a.Username as Username FROM [dbo].[User] as a inner join User_Email_Title as b on a.UserID = b.UserID where a.UserID = '" + CommonVariables.user + "'", localCon);
             SqlDataReader loggedUserDR = loggedUser.ExecuteReader();
-            if (loggedUserDR.HasRows) 
+            if (loggedUserDR.HasRows)
             {
                 while (loggedUserDR.Read())
                 {
@@ -65,6 +65,7 @@ namespace TravelExpenses
             }
             drSup.Close();
             cbSupervisor.DataSource = items;
+            this.Size = new System.Drawing.Size(832, 344);
             localCon.Close();
         }
 
@@ -79,7 +80,7 @@ namespace TravelExpenses
             int index = disCOunt - 1;
 
             localCon.Open();
-            SqlCommand sup = new SqlCommand("SELECT [SupervisorID] FROM [TravelExpenses].[dbo].[Supervisor_Employee] where UserID = '"+ userIDEdit + "'", localCon);
+            SqlCommand sup = new SqlCommand("SELECT [SupervisorID] FROM [TravelExpenses].[dbo].[Supervisor_Employee] where UserID = '" + userIDEdit + "'", localCon);
             SqlDataReader drSup = sup.ExecuteReader();
             if (drSup.HasRows)
             {
@@ -92,8 +93,10 @@ namespace TravelExpenses
             drSup.Close();
             localCon.Close();
 
-            while (disCOunt > 0) {
-                if (cbDistrict.Items[index].ToString() == dgvUsers.Rows[userIndex].Cells[1].Value.ToString()) {
+            while (disCOunt > 0)
+            {
+                if (cbDistrict.Items[index].ToString() == dgvUsers.Rows[userIndex].Cells[1].Value.ToString())
+                {
                     cbDistrict.SelectedItem = cbDistrict.Items[index];
                     break;
                 }
@@ -103,8 +106,10 @@ namespace TravelExpenses
 
             int depCount = cbDepartment.Items.Count;
             int dePIndex = depCount - 1;
-            while (depCount > 0) {
-                if (cbDepartment.Items[dePIndex].ToString() == dgvUsers.Rows[userIndex].Cells[2].Value.ToString()) {
+            while (depCount > 0)
+            {
+                if (cbDepartment.Items[dePIndex].ToString() == dgvUsers.Rows[userIndex].Cells[2].Value.ToString())
+                {
                     cbDepartment.SelectedItem = cbDepartment.Items[dePIndex];
                     break;
                 }
@@ -116,8 +121,10 @@ namespace TravelExpenses
             txtPassword.Text = dgvUsers.Rows[userIndex].Cells[5].Value.ToString();
             int accCount = cbAccessLevel.Items.Count;
             int accIndex = accCount - 1;
-            while (accCount > 0) {
-                if (cbAccessLevel.Items[accIndex].ToString() == dgvUsers.Rows[userIndex].Cells[6].Value.ToString()) {
+            while (accCount > 0)
+            {
+                if (cbAccessLevel.Items[accIndex].ToString() == dgvUsers.Rows[userIndex].Cells[6].Value.ToString())
+                {
                     cbAccessLevel.SelectedItem = cbAccessLevel.Items[accIndex];
                     break;
                 }
@@ -171,13 +178,13 @@ namespace TravelExpenses
 
             gbUserData.Visible = true;
             gbUserData.Enabled = true;
-            this.Size = new System.Drawing.Size(728, 712);
-            
+            this.Size = new System.Drawing.Size(832, 807);
+
             dgvUsers.Enabled = false;
             tlButtons.Visible = true;
             tlSelectButtons.Visible = false;
             tlDeleteUser.Visible = false;
-            
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -189,12 +196,13 @@ namespace TravelExpenses
         {
             Clean();
             loadUsers();
-            
+
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
-            if (Validate()) {
+            if (Validate())
+            {
                 localCon.Open();
                 Guid userIDEd = new Guid(userIDEdit);
 
@@ -247,7 +255,7 @@ namespace TravelExpenses
                 }
 
                 SqlDataAdapter cmdEditUser = new SqlDataAdapter();
-                cmdEditUser.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[User] SET [Name] = @Name ,[LastName] = @LastName ,[District] = @District ,[Department] = @Department ,[Username] = @Username ,[Password] = @Password ,[AccessLevel] = @AccessLevel WHERE UserID = '"+ userIDEd + "'", localCon);
+                cmdEditUser.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[User] SET [Name] = @Name ,[LastName] = @LastName ,[District] = @District ,[Department] = @Department ,[Username] = @Username ,[Password] = @Password ,[AccessLevel] = @AccessLevel WHERE UserID = '" + userIDEd + "'", localCon);
                 cmdEditUser.UpdateCommand.Parameters.Add("@Name", SqlDbType.NVarChar).Value = txtFirstName.Text;
                 cmdEditUser.UpdateCommand.Parameters.Add("@LastName", SqlDbType.NVarChar).Value = txtLastName.Text;
                 cmdEditUser.UpdateCommand.Parameters.Add("@District", SqlDbType.NVarChar).Value = cbDistrict.SelectedItem.ToString();
@@ -278,11 +286,11 @@ namespace TravelExpenses
                     cmdDeleteEmail.ExecuteNonQuery();
                 }
 
-                
+
                 SqlDataAdapter cmdEditTitle = new SqlDataAdapter();
                 cmdEditTitle.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[User_Email_Title] SET [Title] = @Title, [Active] = @Active WHERE[UserID] = '" + userIDEd + "'", localCon);
-                
-                
+
+
                 cmdEditTitle.UpdateCommand.Parameters.Add("@Title", SqlDbType.NVarChar).Value = title;
                 cmdEditTitle.UpdateCommand.Parameters.Add("@Active", SqlDbType.Bit).Value = chxActiveUser.Checked;
 
@@ -316,7 +324,8 @@ namespace TravelExpenses
                     sup.UpdateCommand.ExecuteNonQuery();
                 }
 
-                if (ra > 0) {
+                if (ra > 0)
+                {
                     MessageBox.Show("User edited successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -329,28 +338,34 @@ namespace TravelExpenses
 
         }
 
-        private bool Validate() {
+        private bool Validate()
+        {
 
-            if (txtFirstName.Text == "") {
+            if (txtFirstName.Text == "")
+            {
                 MessageBox.Show("Please provide a First Name", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtLastName.Text == "") {
+            if (txtLastName.Text == "")
+            {
                 MessageBox.Show("Please provide a Last Name", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtUsername.Text == "") {
+            if (txtUsername.Text == "")
+            {
                 MessageBox.Show("Please provide a Username", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtPassword.Text == "") {
+            if (txtPassword.Text == "")
+            {
                 MessageBox.Show("Please provide a Password", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
         }
 
-        private void Clean() {
+        private void Clean()
+        {
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtUsername.Text = "";
@@ -380,7 +395,7 @@ namespace TravelExpenses
             txtSearch.Text = "";
             chxActiveUser.Checked = false;
             txtPassword.PasswordChar = '*';
-            if (loggedUsername == "TPineda") 
+            if (loggedUsername == "TPineda")
             {
                 tlDeleteUser.Visible = true;
             }
@@ -405,7 +420,8 @@ namespace TravelExpenses
             localCon.Close();
         }
 
-        private void loadUsers() {
+        private void loadUsers()
+        {
             dgvUsers.Rows.Clear();
             localCon.Open();
             SqlCommand cmdUsers = new SqlCommand("SELECT  a.*,b.Email as Email,b.Title as Title,b.Active as Active FROM [TravelExpenses].[dbo].[User] as a LEFT JOIN TravelExpenses.dbo.User_Email_Title as b on b.UserID = a.UserID order by a.Name", localCon);
@@ -414,20 +430,20 @@ namespace TravelExpenses
             while (dr.Read())
             {
                 string title = "";
-                bool active =Convert.ToBoolean(dr["Active"].ToString());
+                bool active = Convert.ToBoolean(dr["Active"].ToString());
                 if (dr["Title"].ToString() != "")
                 {
                     title = dr["Title"].ToString();
                 }
                 string name = dr["Name"].ToString() + " " + dr["LastName"].ToString();
-                dgvUsers.Rows.Add(name, dr["District"].ToString(), dr["Department"].ToString(), dr["UserID"].ToString(), dr["Username"].ToString(), dr["Password"].ToString(), dr["AccessLevel"].ToString(), dr["Name"].ToString(), dr["LastName"].ToString(),dr["Email"].ToString(),"", title, active);
+                dgvUsers.Rows.Add(name, dr["District"].ToString(), dr["Department"].ToString(), dr["UserID"].ToString(), dr["Username"].ToString(), dr["Password"].ToString(), dr["AccessLevel"].ToString(), dr["Name"].ToString(), dr["LastName"].ToString(), dr["Email"].ToString(), "", title, active);
             }
             dr.Close();
 
             for (int i = 0; i < dgvUsers.RowCount; i++)
             {
                 Guid currentID = new Guid(dgvUsers.Rows[i].Cells[3].Value.ToString());
-                SqlCommand signatures = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[UserSignature] where UserID = '"+ currentID + "'", localCon);
+                SqlCommand signatures = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[UserSignature] where UserID = '" + currentID + "'", localCon);
                 SqlDataReader signaturesDR = signatures.ExecuteReader();
                 if (signaturesDR.HasRows)
                 {
@@ -441,7 +457,7 @@ namespace TravelExpenses
             }
 
             localCon.Close();
-            this.Size = new System.Drawing.Size(728, 304);
+            this.Size = new System.Drawing.Size(832, 344);
         }
 
         private void btnCreateSignature_Click(object sender, EventArgs e)
@@ -476,7 +492,7 @@ namespace TravelExpenses
             {
                 dgvUsers.Rows.Clear();
                 localCon.Open();
-                SqlCommand cmdUsers = new SqlCommand("SELECT  a.*,b.Email as Email,b.Title as Title,b.Active as Active FROM [TravelExpenses].[dbo].[User] as a LEFT JOIN TravelExpenses.dbo.User_Email_Title as b on b.UserID = a.UserID where a.Name like '"+ txtSearch.Text +"%' order by a.Name", localCon);
+                SqlCommand cmdUsers = new SqlCommand("SELECT  a.*,b.Email as Email,b.Title as Title,b.Active as Active FROM [TravelExpenses].[dbo].[User] as a LEFT JOIN TravelExpenses.dbo.User_Email_Title as b on b.UserID = a.UserID where a.Name like '" + txtSearch.Text + "%' order by a.Name", localCon);
                 SqlDataReader dr = cmdUsers.ExecuteReader();
 
                 while (dr.Read())
@@ -488,7 +504,7 @@ namespace TravelExpenses
                     }
                     string name = dr["Name"].ToString() + " " + dr["LastName"].ToString();
                     bool active = Convert.ToBoolean(dr["Active"].ToString());
-                    dgvUsers.Rows.Add(name, dr["District"].ToString(), dr["Department"].ToString(), dr["UserID"].ToString(), dr["Username"].ToString(), dr["Password"].ToString(), dr["AccessLevel"].ToString(), dr["Name"].ToString(), dr["LastName"].ToString(), dr["Email"].ToString(), "", title,active);
+                    dgvUsers.Rows.Add(name, dr["District"].ToString(), dr["Department"].ToString(), dr["UserID"].ToString(), dr["Username"].ToString(), dr["Password"].ToString(), dr["AccessLevel"].ToString(), dr["Name"].ToString(), dr["LastName"].ToString(), dr["Email"].ToString(), "", title, active);
                 }
                 dr.Close();
 
@@ -570,20 +586,20 @@ namespace TravelExpenses
             {
                 MessageBox.Show("This user has travels and authorizations associates with it, can't be deleted.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else 
+            else
             {
                 DialogResult delUser = MessageBox.Show("Do you really want to delete this user?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (delUser == DialogResult.Yes)
                 {
                     localCon.Open();
-                    
-                    SqlCommand delSignature = new SqlCommand("DELETE FROM [TravelExpenses].[dbo].[UserSignature] WHERE UserID = '"+ userIDDel + "'", localCon);
+
+                    SqlCommand delSignature = new SqlCommand("DELETE FROM [TravelExpenses].[dbo].[UserSignature] WHERE UserID = '" + userIDDel + "'", localCon);
                     delSignature.ExecuteNonQuery();
 
-                    SqlCommand delDetails = new SqlCommand("DELETE FROM [TravelExpenses].[dbo].[User_Email_Title] WHERE UserID = '"+ userIDDel + "'", localCon);
+                    SqlCommand delDetails = new SqlCommand("DELETE FROM [TravelExpenses].[dbo].[User_Email_Title] WHERE UserID = '" + userIDDel + "'", localCon);
                     delDetails.ExecuteNonQuery();
 
-                    SqlCommand deleteUser = new SqlCommand("DELETE FROM [TravelExpenses].[dbo].[User] WHERE UserID = '"+ userIDDel + "'", localCon);
+                    SqlCommand deleteUser = new SqlCommand("DELETE FROM [TravelExpenses].[dbo].[User] WHERE UserID = '" + userIDDel + "'", localCon);
                     deleteUser.ExecuteNonQuery();
                     localCon.Close();
 
@@ -592,7 +608,7 @@ namespace TravelExpenses
                 }
             }
 
-            
+
         }
 
         private void tlButtons_Paint(object sender, PaintEventArgs e)
