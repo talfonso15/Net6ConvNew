@@ -47,11 +47,11 @@ namespace TravelExpenses
                 string returnDate = "";
                 string departureTime = "";
                 string returnTime = "";
-                
-                    departureDate = dtpDepartureDate.Value.ToShortDateString();
-                    returnDate = dtpReturnDate.Value.ToShortDateString();
-                    departureTime = dtpDepartureTime.Value.ToShortTimeString();
-                    returnTime = dtpReturnTime.Value.ToShortTimeString();
+
+                departureDate = dtpDepartureDate.Value.ToShortDateString();
+                returnDate = dtpReturnDate.Value.ToShortDateString();
+                departureTime = dtpDepartureTime.Value.ToShortTimeString();
+                returnTime = dtpReturnTime.Value.ToShortTimeString();
 
                 //TimeSpan difference = CommonVariables.travelReturnDate.Subtract(CommonVariables.travelDepartureDate);
                 TimeSpan difference = Convert.ToDateTime(returnDate).Subtract(Convert.ToDateTime(departureDate));
@@ -383,7 +383,7 @@ namespace TravelExpenses
                     dtgMeals.Rows[rowIndex].Cells[4].Value = rowTotal.ToString();
                     rowValue = false;
                     //btnNextMeal.Enabled = true;
-                   // pbUncheckMeal.Visible = false;
+                    // pbUncheckMeal.Visible = false;
 
                 }
             }
@@ -404,7 +404,7 @@ namespace TravelExpenses
                     dtgMeals.Rows[rowIndex].Cells[4].Value = rowTotal.ToString();
                     rowValue = false;
                     //btnNextMeal.Enabled = true;
-                   // pbUncheckMeal.Visible = false;
+                    // pbUncheckMeal.Visible = false;
 
                 }
 
