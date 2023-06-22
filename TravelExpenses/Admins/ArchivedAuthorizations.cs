@@ -133,7 +133,7 @@ namespace TravelExpenses
                 string userIDValue = cbEmployee.SelectedValue.ToString();
                 Guid useridConv = new Guid(userIDValue);
 
-                SqlCommand auth = new SqlCommand("SELECT  a.TravelEstimateID,a.UserID,a.DepartureDate,a.ReturnDate,a.TravelEvent,a.TravelPurpose,a.BudgetedTravel,a.EstimatedTravelCost,a.MileagePersonal,(b.Name + ' ' + b.LastName) as Name,b.District,b.Department FROM [TravelExpenses].[dbo].[EstimateTravel] as a inner join [TravelExpenses].[dbo].[User] as b on b.UserID = a.UserID inner join TravelExpenses.dbo.EstimateTravel_Status as c on c.TravelEstimateID = a.TravelEstimateID where c.Status = 'Final' AND a.UserID = '"+ useridConv + "' order by a.ReturnDate desc", localCon);
+                SqlCommand auth = new SqlCommand("SELECT  a.TravelEstimateID,a.UserID,a.DepartureDate,a.ReturnDate,a.TravelEvent,a.TravelPurpose,a.BudgetedTravel,a.EstimatedTravelCost,a.MileagePersonal,(b.Name + ' ' + b.LastName) as Name,b.District,b.Department FROM [TravelExpenses].[dbo].[EstimateTravel] as a inner join [TravelExpenses].[dbo].[User] as b on b.UserID = a.UserID inner join TravelExpenses.dbo.EstimateTravel_Status as c on c.TravelEstimateID = a.TravelEstimateID where c.Status = 'Final' AND a.UserID = '" + useridConv + "' order by a.ReturnDate desc", localCon);
                 SqlDataReader authDR = auth.ExecuteReader();
                 if (authDR.HasRows)
                 {
@@ -210,7 +210,7 @@ namespace TravelExpenses
                 //end of new code
 
                 PdfReader pdfReader = new PdfReader(pdfTemplate);
-                
+
                 /*PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
                 AcroFields pdfFormFields = pdfStamper.AcroFields;*/ //commented for net6
                 try
