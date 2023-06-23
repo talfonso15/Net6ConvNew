@@ -76,9 +76,9 @@ namespace TravelExpenses
             {
                 edittravelID = new Guid(CommonVariables.editTravelID.ToString());
             }
-            
 
-            SqlCommand cmd = new SqlCommand("SELECT TOP 1000 [AirFareID],[DepartureDate],[ReturnDate],[AirFareCost],[TaxesAndFees],[DistrictPay],[PersonalUse],[PersonalUseAmount],[AirFareTotal],[Notes]FROM [TravelExpenses].[dbo].[AirFare] where TravelID = '"+ edittravelID +"'", localCon);
+
+            SqlCommand cmd = new SqlCommand("SELECT TOP 1000 [AirFareID],[DepartureDate],[ReturnDate],[AirFareCost],[TaxesAndFees],[DistrictPay],[PersonalUse],[PersonalUseAmount],[AirFareTotal],[Notes]FROM [TravelExpenses].[dbo].[AirFare] where TravelID = '" + edittravelID + "'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())
@@ -248,7 +248,7 @@ namespace TravelExpenses
                         personalUse = false;
                         personalUseAmount = 0;
                     }
-                    
+
                     notes = txtNotes.Text;
 
                     SqlDataAdapter addFlight = new SqlDataAdapter();
@@ -326,7 +326,8 @@ namespace TravelExpenses
                     }
 
                 }
-                else {
+                else
+                {
 
                     bool oriDistricPay = true;
                     double oriFlightTotal = 0;
@@ -400,7 +401,7 @@ namespace TravelExpenses
                     notes = txtNotes.Text;
 
                     SqlDataAdapter upFlight = new SqlDataAdapter();
-                    upFlight.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[AirFare] SET [DepartureDate] = @DepartureDate,[ReturnDate] = @ReturnDate,[AirFareCost] = @AirFareCost,[TaxesAndFees] = @TaxesAndFees,[DistrictPay] = @DistrictPay,[PersonalUse] = @PersonalUse,[PersonalUseAmount] = @PersonalUseAmount,[AirFareTotal] = @AirFareTotal,[Notes] = @Notes WHERE AirFareID =  '"+ editFlightID +"'", localCon);
+                    upFlight.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[AirFare] SET [DepartureDate] = @DepartureDate,[ReturnDate] = @ReturnDate,[AirFareCost] = @AirFareCost,[TaxesAndFees] = @TaxesAndFees,[DistrictPay] = @DistrictPay,[PersonalUse] = @PersonalUse,[PersonalUseAmount] = @PersonalUseAmount,[AirFareTotal] = @AirFareTotal,[Notes] = @Notes WHERE AirFareID =  '" + editFlightID + "'", localCon);
                     upFlight.UpdateCommand.Parameters.Add("@DepartureDate", SqlDbType.DateTime).Value = departureDate;
                     if (roundTrip)
                     {
@@ -487,7 +488,8 @@ namespace TravelExpenses
             txtNotes.Text = "";
         }
 
-        private bool validateData() {
+        private bool validateData()
+        {
 
             if (txtFlightCost.Text == "")
             {
@@ -514,7 +516,7 @@ namespace TravelExpenses
                 MessageBox.Show("Provide the amount of the flight that you used for personal issues", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            
+
             return true;
         }
 
@@ -547,7 +549,8 @@ namespace TravelExpenses
             {
                 btnDeleteFlight.Enabled = false;
             }
-            else {
+            else
+            {
 
                 btnDeleteFlight.Enabled = true;
             }
@@ -605,7 +608,7 @@ namespace TravelExpenses
                     }
                 }
             }
-            
+
         }
 
         private void btnDeleteFlight_Click(object sender, EventArgs e)
@@ -771,7 +774,7 @@ namespace TravelExpenses
             }
             userInfoDR.Close();
 
-            SqlCommand travelData = new SqlCommand("SELECT [ReturnDate],[DepartureDate],[TravelEvent],[Destination] FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + edittravelID +"'", localCon);
+            SqlCommand travelData = new SqlCommand("SELECT [ReturnDate],[DepartureDate],[TravelEvent],[Destination] FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + edittravelID + "'", localCon);
             SqlDataReader travelDataDR = travelData.ExecuteReader();
             if (travelDataDR.HasRows)
             {
@@ -785,7 +788,7 @@ namespace TravelExpenses
             }
             travelDataDR.Close();
 
-           SqlCommand accEmailSearch = new SqlCommand("SELECT [Email] FROM [TravelExpenses].[dbo].[User_Email_Title] where Title = 'Accounting Processor'", localCon);
+            SqlCommand accEmailSearch = new SqlCommand("SELECT [Email] FROM [TravelExpenses].[dbo].[User_Email_Title] where Title = 'Accounting Processor'", localCon);
             SqlDataReader accEmailSearchDR = accEmailSearch.ExecuteReader();
             if (accEmailSearchDR.HasRows)
             {
@@ -809,15 +812,15 @@ namespace TravelExpenses
             mail.To.Add(accEmail);
             mail.Subject = "Review travel of " + username;
 
-           /* MailMessage empMail = new MailMessage();
-            empMail.From = new MailAddress("travelAlert@lcmcd.org");
-            empMail.To.Add(emailEmp);
-            empMail.Subject = "Travel to " + destination;*/
+            /* MailMessage empMail = new MailMessage();
+             empMail.From = new MailAddress("travelAlert@lcmcd.org");
+             empMail.To.Add(emailEmp);
+             empMail.Subject = "Travel to " + destination;*/
 
 
             if (departureDate.ToShortDateString() == returnDate.ToShortDateString())
             {
-                mail.Body = "Travel Event: " + travelEvent + " on " + departureDate.ToShortDateString() + " was updated by "+ username ;
+                mail.Body = "Travel Event: " + travelEvent + " on " + departureDate.ToShortDateString() + " was updated by " + username;
             }
             else
             {
@@ -825,16 +828,16 @@ namespace TravelExpenses
 
             }
 
-           /* string bodyText = "In reference to the above travel that you just electronically signed, please bring to Jessica Collins all invoices/ receipts, in order for her to review your expense report(do not send them via email)." + System.Environment.NewLine + "Important: Please keep a copy of all invoices / receipts." + System.Environment.NewLine + "Thank you";
-            // bodyText = bodyText.Replace("@", " " + System.Environment.NewLine);
-            empMail.Body = bodyText;*/
+            /* string bodyText = "In reference to the above travel that you just electronically signed, please bring to Jessica Collins all invoices/ receipts, in order for her to review your expense report(do not send them via email)." + System.Environment.NewLine + "Important: Please keep a copy of all invoices / receipts." + System.Environment.NewLine + "Thank you";
+             // bodyText = bodyText.Replace("@", " " + System.Environment.NewLine);
+             empMail.Body = bodyText;*/
 
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
 
             try
             {
                 SmtpServer.Send(mail);
-               // SmtpServer.Send(empMail);
+                // SmtpServer.Send(empMail);
             }
             catch (Exception ex)
             {
