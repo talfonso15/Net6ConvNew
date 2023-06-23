@@ -62,11 +62,11 @@ namespace TravelExpenses
         {
             localCon.Open();
             dgvTravels.Rows.Clear();
-            
+
 
             //checking if the user is the director
-            
-            SqlCommand titlecmd = new SqlCommand("SELECT [Title] FROM [TravelExpenses].[dbo].[User_Email_Title] where UserID = '" + CommonVariables.user + "'",localCon);
+
+            SqlCommand titlecmd = new SqlCommand("SELECT [Title] FROM [TravelExpenses].[dbo].[User_Email_Title] where UserID = '" + CommonVariables.user + "'", localCon);
             SqlDataReader titlecmdDR = titlecmd.ExecuteReader();
             if (titlecmdDR.HasRows)
             {
@@ -91,7 +91,7 @@ namespace TravelExpenses
                 query = "SELECT b.Name as name , b.LastName as lastname, a.UserID as UserID FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join [TravelExpenses].[dbo].[User_Email_Title] as c on b.UserID = c.UserID where (SupervisorID = '" + CommonVariables.user + "' or SupervisorID = '" + asstDirectorID + "') AND c.Active = 1 order by b.LastName asc";
                 travQuery = "SELECT c.TravelID as TravelID, c.DepartureDate as DepartureDate,c.ReturnDate as ReturnDate,c.TravelEvent as TravelEvent,c.TravelPurpose as TravelPurpose,c.Origin as Origin,c.Destination as Destination,c.TravelState as TravelState,a.UserID as UserID,c.TotalTravelAmount as TotalTravelAmount, d.Status as Status,b.Name as Name,b.LastName as LastName,b.Department as Department FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join TravelExpenses.dbo.Travel as c on c.UserID = a.UserID inner join TravelExpenses.dbo.TravelStatus as d on d.TravelID = c.TravelID  inner join TravelExpenses.dbo.TravelSignatures as e on c.TravelID = e.TravelID AND e.UserType = 'Accounting' inner join [TravelExpenses].[dbo].[User_Email_Title] as f on b.UserID = f.UserID where (SupervisorID =  '" + CommonVariables.user + "' or SupervisorID = '" + asstDirectorID + "') AND f.Active = 1  order by c.DepartureDate desc";
             }
-            else 
+            else
             {
                 query = "SELECT b.Name as name , b.LastName as lastname, a.UserID as UserID FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join [TravelExpenses].[dbo].[User_Email_Title] as c on b.UserID = c.UserID where SupervisorID = '" + CommonVariables.user + "' AND c.Active = 1 order by b.LastName asc";
                 travQuery = "SELECT c.TravelID as TravelID, c.DepartureDate as DepartureDate,c.ReturnDate as ReturnDate,c.TravelEvent as TravelEvent,c.TravelPurpose as TravelPurpose,c.Origin as Origin,c.Destination as Destination,c.TravelState as TravelState,a.UserID as UserID,c.TotalTravelAmount as TotalTravelAmount, d.Status as Status,b.Name as Name,b.LastName as LastName,b.Department as Department FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join TravelExpenses.dbo.Travel as c on c.UserID = a.UserID inner join TravelExpenses.dbo.TravelStatus as d on d.TravelID = c.TravelID  inner join TravelExpenses.dbo.TravelSignatures as e on c.TravelID = e.TravelID AND e.UserType = 'Accounting' inner join [TravelExpenses].[dbo].[User_Email_Title] as f on b.UserID = f.UserID where SupervisorID =  '" + CommonVariables.user + "' AND f.Active = 1 order by c.DepartureDate desc";
@@ -105,9 +105,9 @@ namespace TravelExpenses
             List<Object> items = new List<object>();
             while (emplDR.Read())
             {
-                    string name = emplDR["lastname"].ToString() + "," + emplDR["name"].ToString();
-                    string id = emplDR["UserID"].ToString();
-                    items.Add(new { Text = name, Value = id });
+                string name = emplDR["lastname"].ToString() + "," + emplDR["name"].ToString();
+                string id = emplDR["UserID"].ToString();
+                items.Add(new { Text = name, Value = id });
             }
 
             items.Add(new { Text = "All", Value = "-1" });
@@ -145,9 +145,9 @@ namespace TravelExpenses
 
                 if (userTitle == "Executive Director")
                 {
-                    aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND (UserID = '" + userIDApproved + "' or UserID = '"+ asstDirectorID + "')";
+                    aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND (UserID = '" + userIDApproved + "' or UserID = '" + asstDirectorID + "')";
                 }
-                else 
+                else
                 {
                     aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND UserID = '" + userIDApproved + "'";
                 }
@@ -172,7 +172,7 @@ namespace TravelExpenses
             cantR = dgvTravels.RowCount;
 
         }
-        
+
         public void selectTravels()
         {
             localCon.Close();
@@ -208,13 +208,13 @@ namespace TravelExpenses
 
                 if (userTitle == "Executive Director")
                 {
-                    aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND (UserID = '" + userIDApproved + "' or UserID = '"+ asstDirectorID +"')";
+                    aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND (UserID = '" + userIDApproved + "' or UserID = '" + asstDirectorID + "')";
                 }
-                else 
+                else
                 {
                     aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND UserID = '" + userIDApproved + "'";
                 }
-                
+
                 SqlCommand supApproved = new SqlCommand(aprovQuery, localCon);
                 SqlDataReader supApprovedDR = supApproved.ExecuteReader();
                 if (supApprovedDR.HasRows)
@@ -249,7 +249,7 @@ namespace TravelExpenses
                 {
                     query = "SELECT c.TravelID as TravelID, c.DepartureDate as DepartureDate,c.ReturnDate as ReturnDate,c.TravelEvent as TravelEvent,c.TravelPurpose as TravelPurpose,c.Origin as Origin,c.Destination as Destination,c.TravelState as TravelState,a.UserID as UserID,c.TotalTravelAmount as TotalTravelAmount, d.Status as Status,b.Name as Name,b.LastName as LastName,b.Department as Department FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join TravelExpenses.dbo.Travel as c on c.UserID = a.UserID inner join TravelExpenses.dbo.TravelStatus as d on d.TravelID = c.TravelID  inner join TravelExpenses.dbo.TravelSignatures as e on c.TravelID = e.TravelID AND e.UserType = 'Accounting' inner join [TravelExpenses].[dbo].[User_Email_Title] as f on b.UserID = f.UserID where (SupervisorID =  '" + CommonVariables.user + "' or SupervisorID = '" + asstDirectorID + "') AND f.Active = 1 order by c.DepartureDate desc";
                 }
-                else 
+                else
                 {
                     query = "SELECT c.TravelID as TravelID, c.DepartureDate as DepartureDate,c.ReturnDate as ReturnDate,c.TravelEvent as TravelEvent,c.TravelPurpose as TravelPurpose,c.Origin as Origin,c.Destination as Destination,c.TravelState as TravelState,a.UserID as UserID,c.TotalTravelAmount as TotalTravelAmount, d.Status as Status,b.Name as Name,b.LastName as LastName,b.Department as Department FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join TravelExpenses.dbo.Travel as c on c.UserID = a.UserID inner join TravelExpenses.dbo.TravelStatus as d on d.TravelID = c.TravelID  inner join TravelExpenses.dbo.TravelSignatures as e on c.TravelID = e.TravelID AND e.UserType = 'Accounting' inner join [TravelExpenses].[dbo].[User_Email_Title] as f on b.UserID = f.UserID where SupervisorID =  '" + CommonVariables.user + "' AND f.Active = 1 order by c.DepartureDate desc";
                 }
@@ -282,13 +282,13 @@ namespace TravelExpenses
 
                     if (userTitle == "Executive Director")
                     {
-                        aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND (UserID = '" + userIDApproved + "' or UserID ='"+ asstDirectorID +"')";
+                        aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND (UserID = '" + userIDApproved + "' or UserID ='" + asstDirectorID + "')";
                     }
-                    else 
+                    else
                     {
                         aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND UserID = '" + userIDApproved + "'";
                     }
-                    
+
                     SqlCommand supApproved = new SqlCommand(aprovQuery, localCon);
                     SqlDataReader supApprovedDR = supApproved.ExecuteReader();
                     if (supApprovedDR.HasRows)
@@ -314,7 +314,7 @@ namespace TravelExpenses
 
         private void btnView_Click(object sender, EventArgs e)
         {
-          
+
             if (cantR > 0)
             {
                 this.Hide();
@@ -326,7 +326,7 @@ namespace TravelExpenses
 
                 ViewTravel vt = new ViewTravel();
                 vt.ShowDialog();
-                
+
             }
             else
             {
@@ -400,9 +400,9 @@ namespace TravelExpenses
             {
                 if (userTitle == "Executive Director")
                 {
-                    query = "SELECT c.TravelID as TravelID, c.DepartureDate as DepartureDate,c.ReturnDate as ReturnDate,c.TravelEvent as TravelEvent,c.TravelPurpose as TravelPurpose,c.Origin as Origin,c.Destination as Destination,c.TravelState as TravelState,a.UserID as UserID,c.TotalTravelAmount as TotalTravelAmount, d.Status as Status,b.Name as Name,b.LastName as LastName,b.Department as Department FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join TravelExpenses.dbo.Travel as c on c.UserID = a.UserID inner join TravelExpenses.dbo.TravelStatus as d on d.TravelID = c.TravelID  inner join TravelExpenses.dbo.TravelSignatures as e on c.TravelID = e.TravelID AND e.UserType = 'Accounting' inner join [TravelExpenses].[dbo].[User_Email_Title] as f on b.UserID = f.UserID where (SupervisorID =  '" + CommonVariables.user + "' or SupervisorID = '"+ asstDirectorID +"') AND f.Active = 1 order by c.DepartureDate desc";
+                    query = "SELECT c.TravelID as TravelID, c.DepartureDate as DepartureDate,c.ReturnDate as ReturnDate,c.TravelEvent as TravelEvent,c.TravelPurpose as TravelPurpose,c.Origin as Origin,c.Destination as Destination,c.TravelState as TravelState,a.UserID as UserID,c.TotalTravelAmount as TotalTravelAmount, d.Status as Status,b.Name as Name,b.LastName as LastName,b.Department as Department FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join TravelExpenses.dbo.Travel as c on c.UserID = a.UserID inner join TravelExpenses.dbo.TravelStatus as d on d.TravelID = c.TravelID  inner join TravelExpenses.dbo.TravelSignatures as e on c.TravelID = e.TravelID AND e.UserType = 'Accounting' inner join [TravelExpenses].[dbo].[User_Email_Title] as f on b.UserID = f.UserID where (SupervisorID =  '" + CommonVariables.user + "' or SupervisorID = '" + asstDirectorID + "') AND f.Active = 1 order by c.DepartureDate desc";
                 }
-                else 
+                else
                 {
                     query = "SELECT c.TravelID as TravelID, c.DepartureDate as DepartureDate,c.ReturnDate as ReturnDate,c.TravelEvent as TravelEvent,c.TravelPurpose as TravelPurpose,c.Origin as Origin,c.Destination as Destination,c.TravelState as TravelState,a.UserID as UserID,c.TotalTravelAmount as TotalTravelAmount, d.Status as Status,b.Name as Name,b.LastName as LastName,b.Department as Department FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join [TravelExpenses].[dbo].[User] as b on a.UserID = b.UserID inner join TravelExpenses.dbo.Travel as c on c.UserID = a.UserID inner join TravelExpenses.dbo.TravelStatus as d on d.TravelID = c.TravelID  inner join TravelExpenses.dbo.TravelSignatures as e on c.TravelID = e.TravelID AND e.UserType = 'Accounting' inner join [TravelExpenses].[dbo].[User_Email_Title] as f on b.UserID = f.UserID where SupervisorID =  '" + CommonVariables.user + "' AND f.Active = 1 order by c.DepartureDate desc";
                 }
@@ -435,9 +435,9 @@ namespace TravelExpenses
 
                     if (userTitle == "Executive Director")
                     {
-                        aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND (UserID = '" + userIDApproved + "' or UserID ='"+ asstDirectorID +"')";
+                        aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND (UserID = '" + userIDApproved + "' or UserID ='" + asstDirectorID + "')";
                     }
-                    else 
+                    else
                     {
                         aprovQuery = "SELECT * FROM [TravelExpenses].[dbo].[TravelSignatures] where TravelType = 'Travel' And UserType = 'Supervisor' AND TravelID = '" + travIDApproved + "' AND UserID = '" + userIDApproved + "'";
                     }
@@ -456,7 +456,8 @@ namespace TravelExpenses
                     supApprovedDR.Close();
                 }
             }
-            else {
+            else
+            {
                 selectTravels();
             }
             localCon.Close();
@@ -499,7 +500,7 @@ namespace TravelExpenses
 
                 //get reimbursement amount
                 double reimb = 0;
-                SqlCommand reim = new SqlCommand("SELECT  TotalTravelReimbursed FROM [TravelExpenses].[dbo].[Travel] where TravelID = '"+ travID + "'", localCon);
+                SqlCommand reim = new SqlCommand("SELECT  TotalTravelReimbursed FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader reimDR = reim.ExecuteReader();
                 while (reimDR.Read())
                 {
@@ -569,11 +570,11 @@ namespace TravelExpenses
                         {
                             backgroundWorker1.RunWorkerAsync();
                         }
-                        
+
                     }
 
                 }
-               
+
             }
             else
             {
@@ -600,12 +601,12 @@ namespace TravelExpenses
 
         private void sendNotifications()
         {
-            
+
             localCon.Open();
             string username = "";
             string accEmail = "";
             Guid idUser = new Guid(travUserIDValue);
-            SqlCommand userInfo = new SqlCommand("SELECT [Name],[LastName] FROM [TravelExpenses].[dbo].[User] where UserID = '"+ idUser + "'", localCon);
+            SqlCommand userInfo = new SqlCommand("SELECT [Name],[LastName] FROM [TravelExpenses].[dbo].[User] where UserID = '" + idUser + "'", localCon);
             SqlDataReader userInfoDR = userInfo.ExecuteReader();
             while (userInfoDR.Read())
             {
@@ -827,20 +828,20 @@ namespace TravelExpenses
                 toSet.SetValue(reimCost);
 
                 //pdfFormFields.SetField("No Reimbursed", noReimCost); //commented for net6
-                fields.TryGetValue("No Reimbursed", out toSet);
-                toSet.SetValue(noReimCost);
+                //fields.TryGetValue("No Reimbursed", out toSet); //commented for net6
+                //toSet.SetValue(noReimCost); //commented for net6
 
                 //pdfFormFields.SetField("Travel Total Cost", travCost); //commented for net6
-                fields.TryGetValue("Travel Total Cost", out toSet);
-                toSet.SetValue(travCost);
+                //fields.TryGetValue("Travel Total Cost", out toSet); //commented for net6
+                //toSet.SetValue(travCost); //commented for net6
 
                 //pdfFormFields.SetField("Reimbursement", reimCost); //commented for net6
-                fields.TryGetValue("Reimbursement", out toSet);
-                toSet.SetValue(reimCost);
+                //fields.TryGetValue("Reimbursement", out toSet); //commented for net6
+                //toSet.SetValue(reimCost); //commented for net6
 
                 //pdfFormFields.SetField("No Reimbursed Total", noReimCost); //commented for net6
-                fields.TryGetValue("No Reimbursed Total", out toSet);
-                toSet.SetValue(noReimCost);
+                //fields.TryGetValue("No Reimbursed Total", out toSet); //commented for net6
+                //toSet.SetValue(noReimCost); //commented for net6
 
 
                 //set up the travel common variables
@@ -886,7 +887,7 @@ namespace TravelExpenses
                     double mealCostValue = Convert.ToDouble(drMeals["TotalMeals"].ToString());
                     mealIDvalue = drMeals["MealsID"].ToString();
                     string mealCost = mealCostValue.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("CostMeals", mealCost); //commented for net6
                     fields.TryGetValue("CostMeals", out toSet);
                     toSet.SetValue(mealCost);
@@ -960,7 +961,7 @@ namespace TravelExpenses
                         toSet.SetValue("No");
                     }
                     //string mealCost = Convert.ToDouble(drMeals["TotalMeals"].ToString()).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("Meals_Total", mealCost); //commented for net6
                     fields.TryGetValue("Meals_Total", out toSet);
                     toSet.SetValue(mealCost);
@@ -979,7 +980,7 @@ namespace TravelExpenses
                 while (meadDateDR.Read())
                 {
                     DateTime date = Convert.ToDateTime(meadDateDR["Date"].ToString());
-                    
+
                     //pdfFormFields.SetField("MealDate" + rowInc, date.ToShortDateString()); //commented for net6
                     fields.TryGetValue("MealDate" + rowInc, out toSet);
                     toSet.SetValue(date.ToShortDateString());
@@ -1088,26 +1089,26 @@ namespace TravelExpenses
 
                     //totalLod = totalLod + Convert.ToDouble(drLod["TotalLodging"].ToString());
                     //pdfFormFields.SetField("Lodging Nights" + rowLod, drLod["NumberOfNights"].ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Nights" + rowLod, out toSet);
-                    toSet.SetValue(drLod["NumberOfNights"].ToString());
+                    //fields.TryGetValue("Lodging Nights" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["NumberOfNights"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Lodging Night Cost" + rowLod, drLod["CostPerNight"].ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Night Cost" + rowLod, out toSet);
-                    toSet.SetValue(drLod["CostPerNight"].ToString());
+                    //fields.TryGetValue("Lodging Night Cost" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["CostPerNight"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Lodging Taxes Fees" + rowLod, drLod["TaxesAndFees"].ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Taxes Fees" + rowLod, out toSet);
-                    toSet.SetValue(drLod["TaxesAndFees"].ToString());
+                    //fields.TryGetValue("Lodging Taxes Fees" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["TaxesAndFees"].ToString()); //commented for net6
 
                     if (drLod["DistrictPay"].ToString() == "True")
                     {
                         //pdfFormFields.SetField("Lodging District Pay" + rowLod, "Yes"); //commented for net6
-                        fields.TryGetValue("Lodging District Pay" + rowLod, out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Lodging District Pay" + rowLod, out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
 
                         //pdfFormFields.SetField("Lodging Director Approval" + rowLod, ""); //commented for net6
-                        fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet);
-                        toSet.SetValue("");
+                        //fields.TryGetValue("Lodging Director Approval" + rowLod, out toSet); //commented for net6
+                        //toSet.SetValue(""); //commented for net6
                     }
                     else
                     {
@@ -1133,14 +1134,14 @@ namespace TravelExpenses
                         }
                     }
                     //pdfFormFields.SetField("Facility  Notes" + rowLod, drLod["Notes"].ToString()); //commented for net6
-                    fields.TryGetValue("Facility  Notes" + rowLod, out toSet);
-                    toSet.SetValue(drLod["Notes"].ToString());
+                    //fields.TryGetValue("Facility  Notes" + rowLod, out toSet); //commented for net6
+                    //toSet.SetValue(drLod["Notes"].ToString()); //commented for net6
 
                     rowLod++;
                 }
                 drLod.Close();
                 string lodgCost = totalLod.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostLodgings", lodgCost); //commented for net6
                 fields.TryGetValue("CostLodgings", out toSet);
                 toSet.SetValue(lodgCost);
@@ -1184,8 +1185,8 @@ namespace TravelExpenses
                     toSet.SetValue(dropOff.ToShortDateString());
 
                     //pdfFormFields.SetField("Car_Day Cost" + carRow, drCR["CostPerDay"].ToString()); //commented for net6
-                    fields.TryGetValue("Car_Day Cost" + carRow, out toSet);
-                    toSet.SetValue(drCR["CostPerDay"].ToString());
+                    //fields.TryGetValue("Car_Day Cost" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["CostPerDay"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Car Total" + carRow, drCR["TotalCarRental"].ToString()); //commented for net6
                     fields.TryGetValue("Car Total" + carRow, out toSet);
@@ -1201,30 +1202,30 @@ namespace TravelExpenses
                     toSet.SetValue(drCR["Company"].ToString());
 
                     //pdfFormFields.SetField("Car Rental Days" + carRow, drCR["Days"].ToString()); //commented for net6
-                    fields.TryGetValue("Car Rental Days" + carRow, out toSet);
-                    toSet.SetValue(drCR["Days"].ToString());
+                    //fields.TryGetValue("Car Rental Days" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["Days"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Car Rental Taxes Fees" + carRow, drCR["TaxesAndFees"].ToString()); //commented for net6
-                    fields.TryGetValue("Car Rental Taxes Fees" + carRow, out toSet);
-                    toSet.SetValue(drCR["TaxesAndFees"].ToString());
+                    //fields.TryGetValue("Car Rental Taxes Fees" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["TaxesAndFees"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("LDW Insurance" + carRow, drCR["LDWInsuranse"].ToString()); //commented for net6
-                    fields.TryGetValue("LDW Insurance" + carRow, out toSet);
-                    toSet.SetValue(drCR["LDWInsuranse"].ToString());
+                    //fields.TryGetValue("LDW Insurance" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["LDWInsuranse"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Supplemental Insurance" + carRow, drCR["SupplementalInsurance"].ToString()); //commented for net6
-                    fields.TryGetValue("Supplemental Insurance" + carRow, out toSet);
-                    toSet.SetValue(drCR["SupplementalInsurance"].ToString());
+                    //fields.TryGetValue("Supplemental Insurance" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["SupplementalInsurance"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Extra Insurance" + carRow, drCR["ExtarInsuranceAmount"].ToString()); //commented for net6
-                    fields.TryGetValue("Extra Insurance" + carRow, out toSet);
-                    toSet.SetValue(drCR["ExtarInsuranceAmount"].ToString());
+                    //fields.TryGetValue("Extra Insurance" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["ExtarInsuranceAmount"].ToString()); //commented for net6
 
                     if (drCR["DistrictPay"].ToString() == "True")
                     {
                         //pdfFormFields.SetField("Car District Pay" + carRow, "Yes"); //commented for net6
-                        fields.TryGetValue("Car District Pay" + carRow, out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Car District Pay" + carRow, out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
                     }
                     else
                     {
@@ -1236,12 +1237,12 @@ namespace TravelExpenses
                         carRentalReimbursement += Convert.ToDouble(drCR["TotalCarRental"].ToString());
                     }
                     //pdfFormFields.SetField("Car Personal Amount" + carRow, drCR["PersonalAmount"].ToString()); //commented for net6
-                    fields.TryGetValue("Car Personal Amount" + carRow, out toSet);
-                    toSet.SetValue(drCR["PersonalAmount"].ToString());
+                    //fields.TryGetValue("Car Personal Amount" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["PersonalAmount"].ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Car Notes" + carRow, drCR["Notes"].ToString()); //commented for net6
-                    fields.TryGetValue("Car Notes" + carRow, out toSet);
-                    toSet.SetValue(drCR["Notes"].ToString());
+                    //fields.TryGetValue("Car Notes" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(drCR["Notes"].ToString()); //commented for net6
 
                     carRow++;
                 }
@@ -1294,10 +1295,10 @@ namespace TravelExpenses
                     //pdfFormFields.SetField("Flight Total" + flightRow, drAF["AirFareTotal"].ToString());drAF["AirFareTotal"].ToString()
 
                     //totalAF = totalAF + Convert.ToDouble(drAF["AirFareTotal"].ToString());
-                    
+
                     //pdfFormFields.SetField("Flight Taxes  Fees" + flightRow, drAF["TaxesAndFees"].ToString()); //commented for net6
-                    fields.TryGetValue("Flight Taxes  Fees" + flightRow, out toSet);
-                    toSet.SetValue(drAF["TaxesAndFees"].ToString());
+                    //fields.TryGetValue("Flight Taxes  Fees" + flightRow, out toSet); //commented for net6
+                    //toSet.SetValue(drAF["TaxesAndFees"].ToString()); //commented for net6
 
                     if (drAF["DistrictPay"].ToString() == "True")
                     {
@@ -1319,8 +1320,8 @@ namespace TravelExpenses
                     toSet.SetValue(drAF["PersonalUseAmount"].ToString());
 
                     //pdfFormFields.SetField("Air Fare Notes" + flightRow, drAF["Notes"].ToString()); //commented for net6
-                    fields.TryGetValue("Air Fare Notes" + flightRow, out toSet);
-                    toSet.SetValue(drAF["Notes"].ToString());
+                    //fields.TryGetValue("Air Fare Notes" + flightRow, out toSet); //commented for net6
+                    //toSet.SetValue(drAF["Notes"].ToString()); //commented for net6
 
                     flightRow++;
                 }
@@ -1349,7 +1350,7 @@ namespace TravelExpenses
                 {
                     double milCostValue = Convert.ToDouble(drMi["TotalMileage"].ToString());
                     string milcost = milCostValue.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("CostMileage", milcost); //commented for net6
                     fields.TryGetValue("CostMileage", out toSet);
                     toSet.SetValue(milcost);
@@ -1375,8 +1376,8 @@ namespace TravelExpenses
                     if (drMi["DistrictVehicleProvided"].ToString() == "True")
                     {
                         //pdfFormFields.SetField("Provided Vehicle", "Yes"); //commented for net6
-                        fields.TryGetValue("Provided Vehicle", out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Provided Vehicle", out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
                     }
                     else
                     {
@@ -1432,9 +1433,9 @@ namespace TravelExpenses
                     //pdfFormFields.SetField("ExpCost" + oxRow, drOE["Amount"].ToString()); //commented for net6
                     fields.TryGetValue("ExpCost" + oxRow, out toSet);
                     toSet.SetValue(drOE["Amount"].ToString());
-                    
+
                     //totalOE = totalOE + Convert.ToDouble(drOE["Amount"].ToString());
-                    
+
                     //pdfFormFields.SetField("ExpNotes" + oxRow, drOE["Notes"].ToString()); //commented for net6
                     fields.TryGetValue("ExpNotes" + oxRow, out toSet);
                     toSet.SetValue(drOE["Notes"].ToString());
@@ -1459,7 +1460,7 @@ namespace TravelExpenses
                 }
                 drOE.Close();
                 string oeCost = totalOE.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostOther Expenses", oeCost); //commented for net6
                 fields.TryGetValue("CostOther Expenses", out toSet);
                 toSet.SetValue(oeCost);
@@ -1475,13 +1476,13 @@ namespace TravelExpenses
 
             //Accounting accounts
             string travACC = travelACC.ToString("C", CultureInfo.CurrentCulture);
-            
+
             //pdfFormFields.SetField("Travel4000", travACC); //commented for net6
             fields.TryGetValue("Travel4000", out toSet);
             toSet.SetValue(travACC);
 
             string trainACC = trainingACC.ToString("C", CultureInfo.CurrentCulture);
-            
+
             //pdfFormFields.SetField("Training5500", trainACC); //commented for net6
             fields.TryGetValue("Training5500", out toSet);
             toSet.SetValue(trainACC);
