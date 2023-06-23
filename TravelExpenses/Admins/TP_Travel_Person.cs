@@ -35,12 +35,12 @@ namespace TravelExpenses
             {
                 dgvEmployees.MultiSelect = false;
             }
-            
+
 
 
             SqlCommand users = new SqlCommand("SELECT  [UserID] ,CONCAT([Name],' ',[LastName]) as Name ,[Department] FROM [TravelExpenses].[dbo].[User] order by Name", localCon);
             SqlDataReader usersDR = users.ExecuteReader();
-            
+
             while (usersDR.Read())
             {
                 name = usersDR["Name"].ToString();
@@ -111,7 +111,7 @@ namespace TravelExpenses
                         CommonVariables.usersID.Add(userID);
                     }
                 }
-               // int cant = CommonVariables.usersID.Count;
+                // int cant = CommonVariables.usersID.Count;
             }
             else
             {
@@ -135,7 +135,7 @@ namespace TravelExpenses
                 {
                     main = frm;
                     Form[] childs = frm.MdiChildren;
-                  
+
                 }
             }
 
@@ -146,14 +146,14 @@ namespace TravelExpenses
                 et.Show();
                 this.Close();
             }
-            else if(CommonVariables.tpt_Type == "Travel")
+            else if (CommonVariables.tpt_Type == "Travel")
             {
                 RegisterTravel rt = new RegisterTravel();
                 rt.MdiParent = main;
                 rt.Show();
                 this.Close();
             }
-            
+
         }
     }
 }
