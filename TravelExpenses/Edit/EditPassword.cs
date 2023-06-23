@@ -23,10 +23,11 @@ namespace TravelExpenses
         private void EditPassword_Load(object sender, EventArgs e)
         {
             localCon.Open();
-            
-            SqlCommand cmdUser = new SqlCommand("SELECT [Username] ,[Password] FROM [TravelExpenses].[dbo].[User] where UserID = '"+ ui + "'", localCon);
+
+            SqlCommand cmdUser = new SqlCommand("SELECT [Username] ,[Password] FROM [TravelExpenses].[dbo].[User] where UserID = '" + ui + "'", localCon);
             SqlDataReader dr = cmdUser.ExecuteReader();
-            while (dr.Read()) {
+            while (dr.Read())
+            {
                 lblUsernameValue.Text = dr["Username"].ToString();
                 txtPassword.Text = dr["Password"].ToString();
             }
@@ -54,9 +55,27 @@ namespace TravelExpenses
                 localCon.Close();
                 this.Close();
             }
-            else {
+            else
+            {
                 MessageBox.Show("Your password is empty", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnViewPassword_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '*')
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else if (txtPassword.PasswordChar == '\0')
+            {
+                txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtPassword.Text);
         }
     }
 }
