@@ -28,442 +28,442 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.pnCriteria = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblShowBy = new System.Windows.Forms.Label();
-            this.lblEmployee = new System.Windows.Forms.Label();
-            this.lblDepartments = new System.Windows.Forms.Label();
-            this.cbtravels = new System.Windows.Forms.ComboBox();
-            this.cbEmployee = new System.Windows.Forms.ComboBox();
-            this.cbDepartments = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dgvTravels = new System.Windows.Forms.DataGridView();
-            this.Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Return = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TravelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnShow = new System.Windows.Forms.Button();
-            this.btnChangeStatus = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnPDF = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.pnCriteria.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTravels)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuperAdminTravels));
+            pnCriteria = new System.Windows.Forms.Panel();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            lblShowBy = new System.Windows.Forms.Label();
+            lblEmployee = new System.Windows.Forms.Label();
+            lblDepartments = new System.Windows.Forms.Label();
+            cbtravels = new System.Windows.Forms.ComboBox();
+            cbEmployee = new System.Windows.Forms.ComboBox();
+            cbDepartments = new System.Windows.Forms.ComboBox();
+            btnShow = new System.Windows.Forms.Button();
+            panel2 = new System.Windows.Forms.Panel();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            btnChangeStatus = new System.Windows.Forms.Button();
+            btnClose = new System.Windows.Forms.Button();
+            label3 = new System.Windows.Forms.Label();
+            btnPDF = new System.Windows.Forms.Button();
+            label2 = new System.Windows.Forms.Label();
+            btnView = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            btnDelete = new System.Windows.Forms.Button();
+            dgvTravels = new System.Windows.Forms.DataGridView();
+            Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Return = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TravelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            toolTip1 = new System.Windows.Forms.ToolTip(components);
+            pnCriteria.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            panel2.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTravels).BeginInit();
+            SuspendLayout();
             // 
             // pnCriteria
             // 
-            this.pnCriteria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnCriteria.Controls.Add(this.tableLayoutPanel1);
-            this.pnCriteria.Controls.Add(this.btnShow);
-            this.pnCriteria.Location = new System.Drawing.Point(21, 30);
-            this.pnCriteria.Name = "pnCriteria";
-            this.pnCriteria.Size = new System.Drawing.Size(631, 109);
-            this.pnCriteria.TabIndex = 0;
+            pnCriteria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pnCriteria.Controls.Add(tableLayoutPanel1);
+            pnCriteria.Controls.Add(btnShow);
+            pnCriteria.Location = new System.Drawing.Point(24, 35);
+            pnCriteria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pnCriteria.Name = "pnCriteria";
+            pnCriteria.Size = new System.Drawing.Size(736, 125);
+            pnCriteria.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.28685F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.71315F));
-            this.tableLayoutPanel1.Controls.Add(this.lblShowBy, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblEmployee, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblDepartments, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cbtravels, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cbEmployee, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbDepartments, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 11);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(502, 86);
-            this.tableLayoutPanel1.TabIndex = 2;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.28685F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.71315F));
+            tableLayoutPanel1.Controls.Add(lblShowBy, 0, 0);
+            tableLayoutPanel1.Controls.Add(lblEmployee, 0, 1);
+            tableLayoutPanel1.Controls.Add(lblDepartments, 0, 2);
+            tableLayoutPanel1.Controls.Add(cbtravels, 1, 0);
+            tableLayoutPanel1.Controls.Add(cbEmployee, 1, 1);
+            tableLayoutPanel1.Controls.Add(cbDepartments, 1, 2);
+            tableLayoutPanel1.Location = new System.Drawing.Point(21, 13);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(586, 99);
+            tableLayoutPanel1.TabIndex = 2;
             // 
             // lblShowBy
             // 
-            this.lblShowBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblShowBy.AutoSize = true;
-            this.lblShowBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowBy.Location = new System.Drawing.Point(3, 5);
-            this.lblShowBy.Name = "lblShowBy";
-            this.lblShowBy.Size = new System.Drawing.Size(135, 17);
-            this.lblShowBy.TabIndex = 0;
-            this.lblShowBy.Text = "Filter travels by:";
+            lblShowBy.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblShowBy.AutoSize = true;
+            lblShowBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblShowBy.Location = new System.Drawing.Point(4, 8);
+            lblShowBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblShowBy.Name = "lblShowBy";
+            lblShowBy.Size = new System.Drawing.Size(157, 17);
+            lblShowBy.TabIndex = 0;
+            lblShowBy.Text = "Filter travels by:";
             // 
             // lblEmployee
             // 
-            this.lblEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmployee.AutoSize = true;
-            this.lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployee.Location = new System.Drawing.Point(3, 34);
-            this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(135, 15);
-            this.lblEmployee.TabIndex = 1;
-            this.lblEmployee.Text = "Select Employee:";
+            lblEmployee.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblEmployee.AutoSize = true;
+            lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblEmployee.Location = new System.Drawing.Point(4, 42);
+            lblEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblEmployee.Name = "lblEmployee";
+            lblEmployee.Size = new System.Drawing.Size(157, 15);
+            lblEmployee.TabIndex = 1;
+            lblEmployee.Text = "Select Employee:";
             // 
             // lblDepartments
             // 
-            this.lblDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDepartments.AutoSize = true;
-            this.lblDepartments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartments.Location = new System.Drawing.Point(3, 63);
-            this.lblDepartments.Name = "lblDepartments";
-            this.lblDepartments.Size = new System.Drawing.Size(135, 15);
-            this.lblDepartments.TabIndex = 2;
-            this.lblDepartments.Text = "Select Department:";
+            lblDepartments.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDepartments.AutoSize = true;
+            lblDepartments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDepartments.Location = new System.Drawing.Point(4, 75);
+            lblDepartments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDepartments.Name = "lblDepartments";
+            lblDepartments.Size = new System.Drawing.Size(157, 15);
+            lblDepartments.TabIndex = 2;
+            lblDepartments.Text = "Select Department:";
             // 
             // cbtravels
             // 
-            this.cbtravels.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbtravels.FormattingEnabled = true;
-            this.cbtravels.Items.AddRange(new object[] {
-            "All",
-            "Department",
-            "Employee"});
-            this.cbtravels.Location = new System.Drawing.Point(144, 3);
-            this.cbtravels.Name = "cbtravels";
-            this.cbtravels.Size = new System.Drawing.Size(355, 21);
-            this.cbtravels.TabIndex = 3;
-            this.cbtravels.SelectedIndexChanged += new System.EventHandler(this.cbtravels_SelectedIndexChanged);
+            cbtravels.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbtravels.FormattingEnabled = true;
+            cbtravels.Items.AddRange(new object[] { "All", "Department", "Employee" });
+            cbtravels.Location = new System.Drawing.Point(169, 5);
+            cbtravels.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbtravels.Name = "cbtravels";
+            cbtravels.Size = new System.Drawing.Size(413, 23);
+            cbtravels.TabIndex = 3;
+            cbtravels.SelectedIndexChanged += cbtravels_SelectedIndexChanged;
             // 
             // cbEmployee
             // 
-            this.cbEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbEmployee.FormattingEnabled = true;
-            this.cbEmployee.Location = new System.Drawing.Point(144, 31);
-            this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(355, 21);
-            this.cbEmployee.TabIndex = 4;
+            cbEmployee.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbEmployee.FormattingEnabled = true;
+            cbEmployee.Location = new System.Drawing.Point(169, 38);
+            cbEmployee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbEmployee.Name = "cbEmployee";
+            cbEmployee.Size = new System.Drawing.Size(413, 23);
+            cbEmployee.TabIndex = 4;
             // 
             // cbDepartments
             // 
-            this.cbDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDepartments.FormattingEnabled = true;
-            this.cbDepartments.Items.AddRange(new object[] {
-            "Accounting/Purchasing 101",
-            "Air/Flee/Bldg & Grounds 102",
-            "Educ & Communication 103",
-            "Executive 104",
-            "Field Validation 105",
-            "Mosquito Group 106",
-            "Pilots 107",
-            "Scientific Intelligence 108",
-            "Hyacinth",
-            "Commissioners"});
-            this.cbDepartments.Location = new System.Drawing.Point(144, 60);
-            this.cbDepartments.Name = "cbDepartments";
-            this.cbDepartments.Size = new System.Drawing.Size(355, 21);
-            this.cbDepartments.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tableLayoutPanel2);
-            this.panel2.Controls.Add(this.dgvTravels);
-            this.panel2.Location = new System.Drawing.Point(21, 167);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(996, 412);
-            this.panel2.TabIndex = 1;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 9;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78919F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263062F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78919F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263062F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78919F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.262537F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78906F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.265651F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78906F));
-            this.tableLayoutPanel2.Controls.Add(this.btnChangeStatus, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnClose, 8, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 7, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnPDF, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnView, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnDelete, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(698, 12);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(291, 41);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(9, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "|";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(9, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "|";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(228, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(9, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "|";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgvTravels
-            // 
-            this.dgvTravels.AllowUserToAddRows = false;
-            this.dgvTravels.AllowUserToResizeRows = false;
-            this.dgvTravels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTravels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Departure,
-            this.Return,
-            this.Event,
-            this.Destination,
-            this.Employee,
-            this.Status,
-            this.Total,
-            this.TravelID,
-            this.UserID});
-            this.dgvTravels.Location = new System.Drawing.Point(18, 59);
-            this.dgvTravels.MultiSelect = false;
-            this.dgvTravels.Name = "dgvTravels";
-            this.dgvTravels.ReadOnly = true;
-            this.dgvTravels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTravels.Size = new System.Drawing.Size(958, 332);
-            this.dgvTravels.TabIndex = 0;
-            // 
-            // Departure
-            // 
-            this.Departure.HeaderText = "Departure";
-            this.Departure.Name = "Departure";
-            this.Departure.ReadOnly = true;
-            this.Departure.Width = 80;
-            // 
-            // Return
-            // 
-            this.Return.HeaderText = "Return";
-            this.Return.Name = "Return";
-            this.Return.ReadOnly = true;
-            this.Return.Width = 80;
-            // 
-            // Event
-            // 
-            this.Event.HeaderText = "Event";
-            this.Event.Name = "Event";
-            this.Event.ReadOnly = true;
-            this.Event.Width = 250;
-            // 
-            // Destination
-            // 
-            this.Destination.HeaderText = "Destination";
-            this.Destination.Name = "Destination";
-            this.Destination.ReadOnly = true;
-            this.Destination.Width = 225;
-            // 
-            // Employee
-            // 
-            this.Employee.HeaderText = "Employee";
-            this.Employee.Name = "Employee";
-            this.Employee.ReadOnly = true;
-            this.Employee.Width = 140;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 70;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 60;
-            // 
-            // TravelID
-            // 
-            this.TravelID.HeaderText = "TravelID";
-            this.TravelID.Name = "TravelID";
-            this.TravelID.ReadOnly = true;
-            this.TravelID.Visible = false;
-            // 
-            // UserID
-            // 
-            this.UserID.HeaderText = "UserID";
-            this.UserID.Name = "UserID";
-            this.UserID.ReadOnly = true;
-            this.UserID.Visible = false;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.AutomaticDelay = 100;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(48, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(9, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "|";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Visible = false;
+            cbDepartments.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbDepartments.FormattingEnabled = true;
+            cbDepartments.Items.AddRange(new object[] { "Accounting/Purchasing 101", "Air/Flee/Bldg & Grounds 102", "Educ & Communication 103", "Executive 104", "Field Validation 105", "Mosquito Group 106", "Pilots 107", "Scientific Intelligence 108", "Hyacinth", "Commissioners" });
+            cbDepartments.Location = new System.Drawing.Point(169, 71);
+            cbDepartments.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbDepartments.Name = "cbDepartments";
+            cbDepartments.Size = new System.Drawing.Size(413, 23);
+            cbDepartments.TabIndex = 5;
             // 
             // btnShow
             // 
-            this.btnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShow.FlatAppearance.BorderSize = 0;
-            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShow.Image = global::TravelExpenses.Properties.Resources.if_kpdf_1371;
-            this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(532, 71);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(91, 33);
-            this.btnShow.TabIndex = 1;
-            this.btnShow.Text = "Show";
-            this.btnShow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            btnShow.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            btnShow.FlatAppearance.BorderSize = 0;
+            btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnShow.Image = (System.Drawing.Image)resources.GetObject("btnShow.Image");
+            btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnShow.Location = new System.Drawing.Point(621, 82);
+            btnShow.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnShow.Name = "btnShow";
+            btnShow.Size = new System.Drawing.Size(106, 38);
+            btnShow.TabIndex = 1;
+            btnShow.Text = "Show";
+            btnShow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnShow.UseVisualStyleBackColor = true;
+            btnShow.Click += btnShow_Click;
+            // 
+            // panel2
+            // 
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(tableLayoutPanel2);
+            panel2.Controls.Add(dgvTravels);
+            panel2.Location = new System.Drawing.Point(24, 193);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(1162, 475);
+            panel2.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 9;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78919F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263062F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78919F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.263062F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78919F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.262537F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78906F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.265651F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78906F));
+            tableLayoutPanel2.Controls.Add(btnChangeStatus, 0, 0);
+            tableLayoutPanel2.Controls.Add(btnClose, 8, 0);
+            tableLayoutPanel2.Controls.Add(label3, 7, 0);
+            tableLayoutPanel2.Controls.Add(btnPDF, 6, 0);
+            tableLayoutPanel2.Controls.Add(label2, 5, 0);
+            tableLayoutPanel2.Controls.Add(btnView, 4, 0);
+            tableLayoutPanel2.Controls.Add(label1, 3, 0);
+            tableLayoutPanel2.Controls.Add(label4, 1, 0);
+            tableLayoutPanel2.Controls.Add(btnDelete, 2, 0);
+            tableLayoutPanel2.Location = new System.Drawing.Point(814, 14);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(340, 47);
+            tableLayoutPanel2.TabIndex = 1;
             // 
             // btnChangeStatus
             // 
-            this.btnChangeStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnChangeStatus.FlatAppearance.BorderSize = 0;
-            this.btnChangeStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangeStatus.Image = global::TravelExpenses.Properties.Resources.Change_status_1;
-            this.btnChangeStatus.Location = new System.Drawing.Point(3, 3);
-            this.btnChangeStatus.Name = "btnChangeStatus";
-            this.btnChangeStatus.Size = new System.Drawing.Size(39, 35);
-            this.btnChangeStatus.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.btnChangeStatus, "Change Status");
-            this.btnChangeStatus.UseVisualStyleBackColor = true;
-            this.btnChangeStatus.Visible = false;
-            this.btnChangeStatus.Click += new System.EventHandler(this.btnChangeStatus_Click);
+            btnChangeStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnChangeStatus.FlatAppearance.BorderSize = 0;
+            btnChangeStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnChangeStatus.Image = (System.Drawing.Image)resources.GetObject("btnChangeStatus.Image");
+            btnChangeStatus.Location = new System.Drawing.Point(4, 3);
+            btnChangeStatus.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnChangeStatus.Name = "btnChangeStatus";
+            btnChangeStatus.Size = new System.Drawing.Size(45, 40);
+            btnChangeStatus.TabIndex = 8;
+            toolTip1.SetToolTip(btnChangeStatus, "Change Status");
+            btnChangeStatus.UseVisualStyleBackColor = true;
+            btnChangeStatus.Visible = false;
+            btnChangeStatus.Click += btnChangeStatus_Click;
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TravelExpenses.Properties.Resources.if_Shutdown_Box_Red_34246;
-            this.btnClose.Location = new System.Drawing.Point(246, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(39, 35);
-            this.btnClose.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnClose, "Close");
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
+            btnClose.Location = new System.Drawing.Point(287, 3);
+            btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new System.Drawing.Size(46, 40);
+            btnClose.TabIndex = 2;
+            toolTip1.SetToolTip(btnClose, "Close");
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
+            // 
+            // label3
+            // 
+            label3.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(267, 15);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(9, 17);
+            label3.TabIndex = 5;
+            label3.Text = "|";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPDF
             // 
-            this.btnPDF.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPDF.FlatAppearance.BorderSize = 0;
-            this.btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPDF.Image = global::TravelExpenses.Properties.Resources.if_pdf_1644;
-            this.btnPDF.Location = new System.Drawing.Point(183, 3);
-            this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(39, 35);
-            this.btnPDF.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnPDF, "Generate PDF");
-            this.btnPDF.UseVisualStyleBackColor = true;
-            this.btnPDF.Click += new System.EventHandler(this.button1_Click);
+            btnPDF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnPDF.FlatAppearance.BorderSize = 0;
+            btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnPDF.Image = (System.Drawing.Image)resources.GetObject("btnPDF.Image");
+            btnPDF.Location = new System.Drawing.Point(214, 3);
+            btnPDF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnPDF.Name = "btnPDF";
+            btnPDF.Size = new System.Drawing.Size(45, 40);
+            btnPDF.TabIndex = 1;
+            toolTip1.SetToolTip(btnPDF, "Generate PDF");
+            btnPDF.UseVisualStyleBackColor = true;
+            btnPDF.Click += button1_Click;
+            // 
+            // label2
+            // 
+            label2.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(197, 15);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(9, 17);
+            label2.TabIndex = 4;
+            label2.Text = "|";
+            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnView
             // 
-            this.btnView.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnView.FlatAppearance.BorderSize = 0;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Image = global::TravelExpenses.Properties.Resources.if_5_330396;
-            this.btnView.Location = new System.Drawing.Point(123, 3);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(39, 35);
-            this.btnView.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btnView, "View Details");
-            this.btnView.UseVisualStyleBackColor = true;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            btnView.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnView.FlatAppearance.BorderSize = 0;
+            btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnView.Image = (System.Drawing.Image)resources.GetObject("btnView.Image");
+            btnView.Location = new System.Drawing.Point(144, 3);
+            btnView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnView.Name = "btnView";
+            btnView.Size = new System.Drawing.Size(45, 40);
+            btnView.TabIndex = 0;
+            toolTip1.SetToolTip(btnView, "View Details");
+            btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
+            // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(127, 15);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(9, 17);
+            label1.TabIndex = 3;
+            label1.Text = "|";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Visible = false;
+            // 
+            // label4
+            // 
+            label4.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label4.Location = new System.Drawing.Point(57, 15);
+            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(9, 17);
+            label4.TabIndex = 7;
+            label4.Text = "|";
+            label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label4.Visible = false;
             // 
             // btnDelete
             // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = global::TravelExpenses.Properties.Resources.if_edit_delete_118920;
-            this.btnDelete.Location = new System.Drawing.Point(63, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(39, 35);
-            this.btnDelete.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.btnDelete, "Delete Travel");
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Visible = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDelete.FlatAppearance.BorderSize = 0;
+            btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDelete.Image = (System.Drawing.Image)resources.GetObject("btnDelete.Image");
+            btnDelete.Location = new System.Drawing.Point(74, 3);
+            btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new System.Drawing.Size(45, 40);
+            btnDelete.TabIndex = 6;
+            toolTip1.SetToolTip(btnDelete, "Delete Travel");
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Visible = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // dgvTravels
+            // 
+            dgvTravels.AllowUserToAddRows = false;
+            dgvTravels.AllowUserToResizeRows = false;
+            dgvTravels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTravels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Departure, Return, Event, Destination, Employee, Status, Total, TravelID, UserID });
+            dgvTravels.Location = new System.Drawing.Point(21, 68);
+            dgvTravels.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dgvTravels.MultiSelect = false;
+            dgvTravels.Name = "dgvTravels";
+            dgvTravels.ReadOnly = true;
+            dgvTravels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvTravels.Size = new System.Drawing.Size(1118, 383);
+            dgvTravels.TabIndex = 0;
+            // 
+            // Departure
+            // 
+            Departure.HeaderText = "Departure";
+            Departure.Name = "Departure";
+            Departure.ReadOnly = true;
+            Departure.Width = 80;
+            // 
+            // Return
+            // 
+            Return.HeaderText = "Return";
+            Return.Name = "Return";
+            Return.ReadOnly = true;
+            Return.Width = 80;
+            // 
+            // Event
+            // 
+            Event.HeaderText = "Event";
+            Event.Name = "Event";
+            Event.ReadOnly = true;
+            Event.Width = 250;
+            // 
+            // Destination
+            // 
+            Destination.HeaderText = "Destination";
+            Destination.Name = "Destination";
+            Destination.ReadOnly = true;
+            Destination.Width = 225;
+            // 
+            // Employee
+            // 
+            Employee.HeaderText = "Employee";
+            Employee.Name = "Employee";
+            Employee.ReadOnly = true;
+            Employee.Width = 140;
+            // 
+            // Status
+            // 
+            Status.HeaderText = "Status";
+            Status.Name = "Status";
+            Status.ReadOnly = true;
+            Status.Width = 70;
+            // 
+            // Total
+            // 
+            Total.HeaderText = "Total";
+            Total.Name = "Total";
+            Total.ReadOnly = true;
+            Total.Width = 60;
+            // 
+            // TravelID
+            // 
+            TravelID.HeaderText = "TravelID";
+            TravelID.Name = "TravelID";
+            TravelID.ReadOnly = true;
+            TravelID.Visible = false;
+            // 
+            // UserID
+            // 
+            UserID.HeaderText = "UserID";
+            UserID.Name = "UserID";
+            UserID.ReadOnly = true;
+            UserID.Visible = false;
+            // 
+            // toolTip1
+            // 
+            toolTip1.AutomaticDelay = 100;
             // 
             // SuperAdminTravels
             // 
-            this.AcceptButton = this.btnShow;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 603);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnCriteria);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "SuperAdminTravels";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Super Admin Travels";
-            this.Load += new System.EventHandler(this.SuperAdminTravels_Load);
-            this.pnCriteria.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTravels)).EndInit();
-            this.ResumeLayout(false);
-
+            AcceptButton = btnShow;
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1222, 696);
+            Controls.Add(panel2);
+            Controls.Add(pnCriteria);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "SuperAdminTravels";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Super Admin Travels";
+            Load += SuperAdminTravels_Load;
+            pnCriteria.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTravels).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
