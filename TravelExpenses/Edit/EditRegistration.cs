@@ -29,16 +29,19 @@ namespace TravelExpenses
             edittravelID = new Guid(CommonVariables.editTravelID.ToString());
             SqlCommand cmd = new SqlCommand("SELECT [RegistrationAMount],[DistrictPay],[Notes] FROM [TravelExpenses].[dbo].[Registration] where TravelID = '" + edittravelID + "'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.HasRows) {
-                while (dr.Read()) {
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
                     txtRegistrationCost.Text = dr["RegistrationAMount"].ToString();
-                    registAmount = Convert.ToDouble( dr["RegistrationAMount"].ToString());
+                    registAmount = Convert.ToDouble(dr["RegistrationAMount"].ToString());
                     districtPay = Convert.ToBoolean(dr["DistrictPay"].ToString());
                     if (districtPay)
                     {
                         rbYesDistraictPay.Checked = true;
                     }
-                    else {
+                    else
+                    {
                         rbNoDistrictPay.Checked = true;
                     }
                     txtNotes.Text = dr["Notes"].ToString();
@@ -65,23 +68,28 @@ namespace TravelExpenses
 
             //deleting the old registration from the travel total and reimbursement
             travelAmount = travelAmount - registAmount;
-            if (!districtPay) {
+            if (!districtPay)
+            {
                 travelReim = travelReim - registAmount;
             }
 
             SqlDataAdapter cmdEditReg = new SqlDataAdapter();
-            cmdEditReg.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Registration] SET [RegistrationAMount] = @RegistrationAMount,[DistrictPay] = @DistrictPay, [Notes] = @Notes WHERE TravelID = '"+ edittravelID +"'", localCon);
+            cmdEditReg.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Registration] SET [RegistrationAMount] = @RegistrationAMount,[DistrictPay] = @DistrictPay, [Notes] = @Notes WHERE TravelID = '" + edittravelID + "'", localCon);
             cmdEditReg.UpdateCommand.Parameters.Add("@RegistrationAMount", SqlDbType.Float).Value = Convert.ToDouble(txtRegistrationCost.Text);
-            if (rbYesDistraictPay.Checked) {
+            if (rbYesDistraictPay.Checked)
+            {
                 cmdEditReg.UpdateCommand.Parameters.Add("@DistrictPay", SqlDbType.Bit).Value = true;
-            } else if (rbNoDistrictPay.Checked) {
+            }
+            else if (rbNoDistrictPay.Checked)
+            {
                 cmdEditReg.UpdateCommand.Parameters.Add("@DistrictPay", SqlDbType.Bit).Value = false;
                 districtpay = false;
             }
             cmdEditReg.UpdateCommand.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotes.Text;
             int ru = cmdEditReg.UpdateCommand.ExecuteNonQuery();
 
-            if (ru > 0) {
+            if (ru > 0)
+            {
                 SqlDataAdapter upTravel = new SqlDataAdapter();
                 upTravel.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET [TotalTravelAmount] = @TotalTravelAmount ,[TotalTravelReimbursed] = @TotalTravelReimbursed WHERE TravelID ='" + edittravelID + "'", localCon);
                 upTravel.UpdateCommand.Parameters.Add("@TotalTravelAmount", SqlDbType.Float).Value = travelAmount + Convert.ToDouble(txtRegistrationCost.Text);
@@ -95,7 +103,8 @@ namespace TravelExpenses
                 }
 
                 int rut = upTravel.UpdateCommand.ExecuteNonQuery();
-                if (rut > 0) {
+                if (rut > 0)
+                {
                     MessageBox.Show("The registration has been updated successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (backgroundWorker1.IsBusy != true)
                     {

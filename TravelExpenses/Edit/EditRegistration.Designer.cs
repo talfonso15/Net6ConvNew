@@ -28,239 +28,255 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblRegistrationCost = new System.Windows.Forms.Label();
-            this.lblDistrictPay = new System.Windows.Forms.Label();
-            this.txtRegistrationCost = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbNoDistrictPay = new System.Windows.Forms.RadioButton();
-            this.rbYesDistraictPay = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblNotes = new System.Windows.Forms.Label();
-            this.txtNotes = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnUpdateRegistration = new System.Windows.Forms.Button();
-            this.btnCancelRegistration = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditRegistration));
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            lblRegistrationCost = new System.Windows.Forms.Label();
+            lblDistrictPay = new System.Windows.Forms.Label();
+            txtRegistrationCost = new System.Windows.Forms.TextBox();
+            panel2 = new System.Windows.Forms.Panel();
+            rbNoDistrictPay = new System.Windows.Forms.RadioButton();
+            rbYesDistraictPay = new System.Windows.Forms.RadioButton();
+            panel1 = new System.Windows.Forms.Panel();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            lblNotes = new System.Windows.Forms.Label();
+            txtNotes = new System.Windows.Forms.TextBox();
+            panel3 = new System.Windows.Forms.Panel();
+            tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            btnUpdateRegistration = new System.Windows.Forms.Button();
+            btnCancelRegistration = new System.Windows.Forms.Button();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            tableLayoutPanel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            panel3.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.85102F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.14898F));
-            this.tableLayoutPanel1.Controls.Add(this.lblRegistrationCost, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblDistrictPay, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtRegistrationCost, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 21);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(443, 93);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.85102F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.14898F));
+            tableLayoutPanel1.Controls.Add(lblRegistrationCost, 0, 0);
+            tableLayoutPanel1.Controls.Add(lblDistrictPay, 0, 1);
+            tableLayoutPanel1.Controls.Add(txtRegistrationCost, 1, 0);
+            tableLayoutPanel1.Controls.Add(panel2, 1, 1);
+            tableLayoutPanel1.Location = new System.Drawing.Point(15, 24);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(517, 107);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // lblRegistrationCost
             // 
-            this.lblRegistrationCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRegistrationCost.AutoSize = true;
-            this.lblRegistrationCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrationCost.Location = new System.Drawing.Point(3, 16);
-            this.lblRegistrationCost.Name = "lblRegistrationCost";
-            this.lblRegistrationCost.Size = new System.Drawing.Size(268, 13);
-            this.lblRegistrationCost.TabIndex = 0;
-            this.lblRegistrationCost.Text = "Registration Cost:";
+            lblRegistrationCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblRegistrationCost.AutoSize = true;
+            lblRegistrationCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblRegistrationCost.Location = new System.Drawing.Point(4, 20);
+            lblRegistrationCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblRegistrationCost.Name = "lblRegistrationCost";
+            lblRegistrationCost.Size = new System.Drawing.Size(311, 13);
+            lblRegistrationCost.TabIndex = 0;
+            lblRegistrationCost.Text = "Registration Cost:";
             // 
             // lblDistrictPay
             // 
-            this.lblDistrictPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDistrictPay.AutoSize = true;
-            this.lblDistrictPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrictPay.Location = new System.Drawing.Point(3, 63);
-            this.lblDistrictPay.Name = "lblDistrictPay";
-            this.lblDistrictPay.Size = new System.Drawing.Size(268, 13);
-            this.lblDistrictPay.TabIndex = 1;
-            this.lblDistrictPay.Text = "Did the district pay for your registration cost?";
+            lblDistrictPay.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDistrictPay.AutoSize = true;
+            lblDistrictPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDistrictPay.Location = new System.Drawing.Point(4, 73);
+            lblDistrictPay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDistrictPay.Name = "lblDistrictPay";
+            lblDistrictPay.Size = new System.Drawing.Size(311, 13);
+            lblDistrictPay.TabIndex = 1;
+            lblDistrictPay.Text = "Did the district pay for your registration cost?";
             // 
             // txtRegistrationCost
             // 
-            this.txtRegistrationCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRegistrationCost.Location = new System.Drawing.Point(277, 13);
-            this.txtRegistrationCost.Name = "txtRegistrationCost";
-            this.txtRegistrationCost.Size = new System.Drawing.Size(163, 20);
-            this.txtRegistrationCost.TabIndex = 2;
-            this.txtRegistrationCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegistrationCost_KeyPress);
+            txtRegistrationCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtRegistrationCost.Location = new System.Drawing.Point(323, 15);
+            txtRegistrationCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtRegistrationCost.Name = "txtRegistrationCost";
+            txtRegistrationCost.Size = new System.Drawing.Size(190, 23);
+            txtRegistrationCost.TabIndex = 2;
+            txtRegistrationCost.KeyPress += txtRegistrationCost_KeyPress;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.rbNoDistrictPay);
-            this.panel2.Controls.Add(this.rbYesDistraictPay);
-            this.panel2.Location = new System.Drawing.Point(277, 49);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(163, 41);
-            this.panel2.TabIndex = 3;
+            panel2.Controls.Add(rbNoDistrictPay);
+            panel2.Controls.Add(rbYesDistraictPay);
+            panel2.Location = new System.Drawing.Point(323, 56);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(190, 47);
+            panel2.TabIndex = 3;
             // 
             // rbNoDistrictPay
             // 
-            this.rbNoDistrictPay.AutoSize = true;
-            this.rbNoDistrictPay.Location = new System.Drawing.Point(102, 13);
-            this.rbNoDistrictPay.Name = "rbNoDistrictPay";
-            this.rbNoDistrictPay.Size = new System.Drawing.Size(39, 17);
-            this.rbNoDistrictPay.TabIndex = 1;
-            this.rbNoDistrictPay.TabStop = true;
-            this.rbNoDistrictPay.Text = "No";
-            this.rbNoDistrictPay.UseVisualStyleBackColor = true;
+            rbNoDistrictPay.AutoSize = true;
+            rbNoDistrictPay.Location = new System.Drawing.Point(119, 15);
+            rbNoDistrictPay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbNoDistrictPay.Name = "rbNoDistrictPay";
+            rbNoDistrictPay.Size = new System.Drawing.Size(41, 19);
+            rbNoDistrictPay.TabIndex = 1;
+            rbNoDistrictPay.TabStop = true;
+            rbNoDistrictPay.Text = "No";
+            rbNoDistrictPay.UseVisualStyleBackColor = true;
             // 
             // rbYesDistraictPay
             // 
-            this.rbYesDistraictPay.AutoSize = true;
-            this.rbYesDistraictPay.Location = new System.Drawing.Point(32, 13);
-            this.rbYesDistraictPay.Name = "rbYesDistraictPay";
-            this.rbYesDistraictPay.Size = new System.Drawing.Size(43, 17);
-            this.rbYesDistraictPay.TabIndex = 0;
-            this.rbYesDistraictPay.TabStop = true;
-            this.rbYesDistraictPay.Text = "Yes";
-            this.rbYesDistraictPay.UseVisualStyleBackColor = true;
+            rbYesDistraictPay.AutoSize = true;
+            rbYesDistraictPay.Location = new System.Drawing.Point(37, 15);
+            rbYesDistraictPay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbYesDistraictPay.Name = "rbYesDistraictPay";
+            rbYesDistraictPay.Size = new System.Drawing.Size(42, 19);
+            rbYesDistraictPay.TabIndex = 0;
+            rbYesDistraictPay.TabStop = true;
+            rbYesDistraictPay.Text = "Yes";
+            rbYesDistraictPay.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(12, 30);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(470, 134);
-            this.panel1.TabIndex = 1;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(tableLayoutPanel1);
+            panel1.Location = new System.Drawing.Point(14, 35);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(548, 154);
+            panel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.4183F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.5817F));
-            this.tableLayoutPanel2.Controls.Add(this.lblNotes, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtNotes, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 9);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(459, 49);
-            this.tableLayoutPanel2.TabIndex = 2;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.4183F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.5817F));
+            tableLayoutPanel2.Controls.Add(lblNotes, 0, 0);
+            tableLayoutPanel2.Controls.Add(txtNotes, 1, 0);
+            tableLayoutPanel2.Location = new System.Drawing.Point(7, 10);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(536, 57);
+            tableLayoutPanel2.TabIndex = 2;
             // 
             // lblNotes
             // 
-            this.lblNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNotes.AutoSize = true;
-            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotes.Location = new System.Drawing.Point(3, 18);
-            this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(50, 13);
-            this.lblNotes.TabIndex = 0;
-            this.lblNotes.Text = "Notes:";
+            lblNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblNotes.AutoSize = true;
+            lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblNotes.Location = new System.Drawing.Point(4, 22);
+            lblNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new System.Drawing.Size(58, 13);
+            lblNotes.TabIndex = 0;
+            lblNotes.Text = "Notes:";
             // 
             // txtNotes
             // 
-            this.txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNotes.Location = new System.Drawing.Point(59, 3);
-            this.txtNotes.Multiline = true;
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNotes.Size = new System.Drawing.Size(397, 43);
-            this.txtNotes.TabIndex = 1;
+            txtNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtNotes.Location = new System.Drawing.Point(70, 4);
+            txtNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtNotes.Multiline = true;
+            txtNotes.Name = "txtNotes";
+            txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtNotes.Size = new System.Drawing.Size(462, 49);
+            txtNotes.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Location = new System.Drawing.Point(12, 182);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(470, 68);
-            this.panel3.TabIndex = 3;
+            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel3.Controls.Add(tableLayoutPanel2);
+            panel3.Location = new System.Drawing.Point(14, 210);
+            panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(548, 78);
+            panel3.TabIndex = 3;
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.btnUpdateRegistration, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnCancelRegistration, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(219, 265);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(263, 56);
-            this.tableLayoutPanel3.TabIndex = 4;
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(btnUpdateRegistration, 1, 0);
+            tableLayoutPanel3.Controls.Add(btnCancelRegistration, 0, 0);
+            tableLayoutPanel3.Location = new System.Drawing.Point(255, 306);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(307, 65);
+            tableLayoutPanel3.TabIndex = 4;
             // 
             // btnUpdateRegistration
             // 
-            this.btnUpdateRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpdateRegistration.FlatAppearance.BorderSize = 0;
-            this.btnUpdateRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateRegistration.Image = global::TravelExpenses.Properties.Resources._1495734626_db_update;
-            this.btnUpdateRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateRegistration.Location = new System.Drawing.Point(149, 7);
-            this.btnUpdateRegistration.Name = "btnUpdateRegistration";
-            this.btnUpdateRegistration.Size = new System.Drawing.Size(95, 42);
-            this.btnUpdateRegistration.TabIndex = 0;
-            this.btnUpdateRegistration.Text = "Update";
-            this.btnUpdateRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateRegistration.UseVisualStyleBackColor = true;
-            this.btnUpdateRegistration.Click += new System.EventHandler(this.btnUpdateRegistration_Click);
+            btnUpdateRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnUpdateRegistration.FlatAppearance.BorderSize = 0;
+            btnUpdateRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnUpdateRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnUpdateRegistration.Image = (System.Drawing.Image)resources.GetObject("btnUpdateRegistration.Image");
+            btnUpdateRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnUpdateRegistration.Location = new System.Drawing.Point(184, 8);
+            btnUpdateRegistration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnUpdateRegistration.Name = "btnUpdateRegistration";
+            btnUpdateRegistration.Size = new System.Drawing.Size(92, 48);
+            btnUpdateRegistration.TabIndex = 0;
+            btnUpdateRegistration.Text = "Update";
+            btnUpdateRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnUpdateRegistration.UseVisualStyleBackColor = true;
+            btnUpdateRegistration.Click += btnUpdateRegistration_Click;
             // 
             // btnCancelRegistration
             // 
-            this.btnCancelRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelRegistration.FlatAppearance.BorderSize = 0;
-            this.btnCancelRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelRegistration.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnCancelRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelRegistration.Location = new System.Drawing.Point(23, 7);
-            this.btnCancelRegistration.Name = "btnCancelRegistration";
-            this.btnCancelRegistration.Size = new System.Drawing.Size(85, 42);
-            this.btnCancelRegistration.TabIndex = 1;
-            this.btnCancelRegistration.Text = "Close";
-            this.btnCancelRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelRegistration.UseVisualStyleBackColor = true;
-            this.btnCancelRegistration.Click += new System.EventHandler(this.btnCancelRegistration_Click);
+            btnCancelRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnCancelRegistration.FlatAppearance.BorderSize = 0;
+            btnCancelRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancelRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancelRegistration.Image = (System.Drawing.Image)resources.GetObject("btnCancelRegistration.Image");
+            btnCancelRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCancelRegistration.Location = new System.Drawing.Point(34, 8);
+            btnCancelRegistration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancelRegistration.Name = "btnCancelRegistration";
+            btnCancelRegistration.Size = new System.Drawing.Size(85, 48);
+            btnCancelRegistration.TabIndex = 1;
+            btnCancelRegistration.Text = "Close";
+            btnCancelRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancelRegistration.UseVisualStyleBackColor = true;
+            btnCancelRegistration.Click += btnCancelRegistration_Click;
             // 
             // backgroundWorker1
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
             // 
             // EditRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 343);
-            this.ControlBox = false;
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Name = "EditRegistration";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit Registration";
-            this.Load += new System.EventHandler(this.EditRegistration_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(576, 396);
+            ControlBox = false;
+            Controls.Add(tableLayoutPanel3);
+            Controls.Add(panel3);
+            Controls.Add(panel1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "EditRegistration";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Edit Registration";
+            Load += EditRegistration_Load;
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
