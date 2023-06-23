@@ -28,515 +28,541 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvEditMeals = new System.Windows.Forms.DataGridView();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Breakfast = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Lunch = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Dinner = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MealsDateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTotalMeals = new System.Windows.Forms.Label();
-            this.txtMealsTotal = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblNotes = new System.Windows.Forms.Label();
-            this.txtNotes = new System.Windows.Forms.TextBox();
-            this.pProvidedMeals = new System.Windows.Forms.Panel();
-            this.rbNoProvidedMeal = new System.Windows.Forms.RadioButton();
-            this.rbYesProvidedMeal = new System.Windows.Forms.RadioButton();
-            this.lblMelasProvided = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnUpdateMeals = new System.Windows.Forms.Button();
-            this.btnCancelUpdateMeals = new System.Windows.Forms.Button();
-            this.lblTotalPerDiemRateValue = new System.Windows.Forms.Label();
-            this.lblTotalPerDiemRate = new System.Windows.Forms.Label();
-            this.lblDinner = new System.Windows.Forms.Label();
-            this.txtDinner = new System.Windows.Forms.TextBox();
-            this.lblLunch = new System.Windows.Forms.Label();
-            this.txtLunch = new System.Windows.Forms.TextBox();
-            this.lblBreakfast = new System.Windows.Forms.Label();
-            this.btnCalculateMeals = new System.Windows.Forms.Button();
-            this.txtMealsPerDiemRate = new System.Windows.Forms.TextBox();
-            this.lblMealsPerDiemRate = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblZipCode = new System.Windows.Forms.Label();
-            this.txtZipCode = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblInfoLink = new System.Windows.Forms.Label();
-            this.linkLabelMealPerDiemRate = new System.Windows.Forms.LinkLabel();
-            this.lblWarninglabel1 = new System.Windows.Forms.Label();
-            this.pWarning = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditMeals)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.pProvidedMeals.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.pWarning.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditMeals));
+            dgvEditMeals = new System.Windows.Forms.DataGridView();
+            Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Breakfast = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            Lunch = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            Dinner = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            MealsDateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            lblTotalMeals = new System.Windows.Forms.Label();
+            txtMealsTotal = new System.Windows.Forms.TextBox();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            lblNotes = new System.Windows.Forms.Label();
+            txtNotes = new System.Windows.Forms.TextBox();
+            pProvidedMeals = new System.Windows.Forms.Panel();
+            rbNoProvidedMeal = new System.Windows.Forms.RadioButton();
+            rbYesProvidedMeal = new System.Windows.Forms.RadioButton();
+            lblMelasProvided = new System.Windows.Forms.Label();
+            tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            btnUpdateMeals = new System.Windows.Forms.Button();
+            btnCancelUpdateMeals = new System.Windows.Forms.Button();
+            lblTotalPerDiemRateValue = new System.Windows.Forms.Label();
+            lblTotalPerDiemRate = new System.Windows.Forms.Label();
+            lblDinner = new System.Windows.Forms.Label();
+            txtDinner = new System.Windows.Forms.TextBox();
+            lblLunch = new System.Windows.Forms.Label();
+            txtLunch = new System.Windows.Forms.TextBox();
+            lblBreakfast = new System.Windows.Forms.Label();
+            btnCalculateMeals = new System.Windows.Forms.Button();
+            txtMealsPerDiemRate = new System.Windows.Forms.TextBox();
+            lblMealsPerDiemRate = new System.Windows.Forms.Label();
+            tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            lblZipCode = new System.Windows.Forms.Label();
+            txtZipCode = new System.Windows.Forms.TextBox();
+            panel1 = new System.Windows.Forms.Panel();
+            lblInfoLink = new System.Windows.Forms.Label();
+            linkLabelMealPerDiemRate = new System.Windows.Forms.LinkLabel();
+            lblWarninglabel1 = new System.Windows.Forms.Label();
+            pWarning = new System.Windows.Forms.Panel();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)dgvEditMeals).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            pProvidedMeals.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
+            panel1.SuspendLayout();
+            pWarning.SuspendLayout();
+            SuspendLayout();
             // 
             // dgvEditMeals
             // 
-            this.dgvEditMeals.AllowUserToAddRows = false;
-            this.dgvEditMeals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditMeals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.Breakfast,
-            this.Lunch,
-            this.Dinner,
-            this.Total,
-            this.MealsDateID});
-            this.dgvEditMeals.Location = new System.Drawing.Point(27, 181);
-            this.dgvEditMeals.Name = "dgvEditMeals";
-            this.dgvEditMeals.Size = new System.Drawing.Size(543, 202);
-            this.dgvEditMeals.TabIndex = 0;
-            this.dgvEditMeals.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditMeals_CellContentClick);
+            dgvEditMeals.AllowUserToAddRows = false;
+            dgvEditMeals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEditMeals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Date, Breakfast, Lunch, Dinner, Total, MealsDateID });
+            dgvEditMeals.Location = new System.Drawing.Point(31, 209);
+            dgvEditMeals.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dgvEditMeals.Name = "dgvEditMeals";
+            dgvEditMeals.Size = new System.Drawing.Size(634, 233);
+            dgvEditMeals.TabIndex = 0;
+            dgvEditMeals.CellContentClick += dgvEditMeals_CellContentClick;
             // 
             // Date
             // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
+            Date.HeaderText = "Date";
+            Date.Name = "Date";
             // 
             // Breakfast
             // 
-            this.Breakfast.HeaderText = "Breakfast";
-            this.Breakfast.Name = "Breakfast";
+            Breakfast.HeaderText = "Breakfast";
+            Breakfast.Name = "Breakfast";
             // 
             // Lunch
             // 
-            this.Lunch.HeaderText = "Lunch";
-            this.Lunch.Name = "Lunch";
+            Lunch.HeaderText = "Lunch";
+            Lunch.Name = "Lunch";
             // 
             // Dinner
             // 
-            this.Dinner.HeaderText = "Dinner";
-            this.Dinner.Name = "Dinner";
+            Dinner.HeaderText = "Dinner";
+            Dinner.Name = "Dinner";
             // 
             // Total
             // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
+            Total.HeaderText = "Total";
+            Total.Name = "Total";
             // 
             // MealsDateID
             // 
-            this.MealsDateID.HeaderText = "MealsDateID";
-            this.MealsDateID.Name = "MealsDateID";
-            this.MealsDateID.Visible = false;
+            MealsDateID.HeaderText = "MealsDateID";
+            MealsDateID.Name = "MealsDateID";
+            MealsDateID.Visible = false;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.82301F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.17699F));
-            this.tableLayoutPanel1.Controls.Add(this.lblTotalMeals, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtMealsTotal, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 389);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(543, 30);
-            this.tableLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.82301F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.17699F));
+            tableLayoutPanel1.Controls.Add(lblTotalMeals, 0, 0);
+            tableLayoutPanel1.Controls.Add(txtMealsTotal, 1, 0);
+            tableLayoutPanel1.Location = new System.Drawing.Point(31, 449);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(634, 35);
+            tableLayoutPanel1.TabIndex = 1;
             // 
             // lblTotalMeals
             // 
-            this.lblTotalMeals.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTotalMeals.AutoSize = true;
-            this.lblTotalMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalMeals.Location = new System.Drawing.Point(380, 6);
-            this.lblTotalMeals.Name = "lblTotalMeals";
-            this.lblTotalMeals.Size = new System.Drawing.Size(50, 17);
-            this.lblTotalMeals.TabIndex = 0;
-            this.lblTotalMeals.Text = "Total:";
+            lblTotalMeals.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            lblTotalMeals.AutoSize = true;
+            lblTotalMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTotalMeals.Location = new System.Drawing.Point(452, 9);
+            lblTotalMeals.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTotalMeals.Name = "lblTotalMeals";
+            lblTotalMeals.Size = new System.Drawing.Size(50, 17);
+            lblTotalMeals.TabIndex = 0;
+            lblTotalMeals.Text = "Total:";
             // 
             // txtMealsTotal
             // 
-            this.txtMealsTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMealsTotal.Location = new System.Drawing.Point(436, 5);
-            this.txtMealsTotal.Name = "txtMealsTotal";
-            this.txtMealsTotal.ReadOnly = true;
-            this.txtMealsTotal.Size = new System.Drawing.Size(104, 20);
-            this.txtMealsTotal.TabIndex = 1;
+            txtMealsTotal.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtMealsTotal.Location = new System.Drawing.Point(510, 6);
+            txtMealsTotal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtMealsTotal.Name = "txtMealsTotal";
+            txtMealsTotal.ReadOnly = true;
+            txtMealsTotal.Size = new System.Drawing.Size(120, 23);
+            txtMealsTotal.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.1547F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.84531F));
-            this.tableLayoutPanel2.Controls.Add(this.lblNotes, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtNotes, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(27, 466);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(543, 52);
-            this.tableLayoutPanel2.TabIndex = 2;
+            tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.1547F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.84531F));
+            tableLayoutPanel2.Controls.Add(lblNotes, 0, 0);
+            tableLayoutPanel2.Controls.Add(txtNotes, 1, 0);
+            tableLayoutPanel2.Location = new System.Drawing.Point(31, 538);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(634, 60);
+            tableLayoutPanel2.TabIndex = 2;
             // 
             // lblNotes
             // 
-            this.lblNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNotes.AutoSize = true;
-            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotes.Location = new System.Drawing.Point(4, 17);
-            this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(59, 17);
-            this.lblNotes.TabIndex = 0;
-            this.lblNotes.Text = "Notes:";
+            lblNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblNotes.AutoSize = true;
+            lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblNotes.Location = new System.Drawing.Point(5, 21);
+            lblNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new System.Drawing.Size(68, 17);
+            lblNotes.TabIndex = 0;
+            lblNotes.Text = "Notes:";
             // 
             // txtNotes
             // 
-            this.txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNotes.Location = new System.Drawing.Point(70, 4);
-            this.txtNotes.Multiline = true;
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNotes.Size = new System.Drawing.Size(469, 44);
-            this.txtNotes.TabIndex = 1;
+            txtNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtNotes.Location = new System.Drawing.Point(82, 5);
+            txtNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtNotes.Multiline = true;
+            txtNotes.Name = "txtNotes";
+            txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtNotes.Size = new System.Drawing.Size(547, 50);
+            txtNotes.TabIndex = 1;
             // 
             // pProvidedMeals
             // 
-            this.pProvidedMeals.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pProvidedMeals.Controls.Add(this.rbNoProvidedMeal);
-            this.pProvidedMeals.Controls.Add(this.rbYesProvidedMeal);
-            this.pProvidedMeals.Controls.Add(this.lblMelasProvided);
-            this.pProvidedMeals.Location = new System.Drawing.Point(27, 425);
-            this.pProvidedMeals.Name = "pProvidedMeals";
-            this.pProvidedMeals.Size = new System.Drawing.Size(543, 35);
-            this.pProvidedMeals.TabIndex = 3;
+            pProvidedMeals.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pProvidedMeals.Controls.Add(rbNoProvidedMeal);
+            pProvidedMeals.Controls.Add(rbYesProvidedMeal);
+            pProvidedMeals.Controls.Add(lblMelasProvided);
+            pProvidedMeals.Location = new System.Drawing.Point(31, 490);
+            pProvidedMeals.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pProvidedMeals.Name = "pProvidedMeals";
+            pProvidedMeals.Size = new System.Drawing.Size(633, 40);
+            pProvidedMeals.TabIndex = 3;
             // 
             // rbNoProvidedMeal
             // 
-            this.rbNoProvidedMeal.AutoSize = true;
-            this.rbNoProvidedMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNoProvidedMeal.Location = new System.Drawing.Point(495, 9);
-            this.rbNoProvidedMeal.Name = "rbNoProvidedMeal";
-            this.rbNoProvidedMeal.Size = new System.Drawing.Size(41, 17);
-            this.rbNoProvidedMeal.TabIndex = 2;
-            this.rbNoProvidedMeal.TabStop = true;
-            this.rbNoProvidedMeal.Text = "No";
-            this.rbNoProvidedMeal.UseVisualStyleBackColor = true;
+            rbNoProvidedMeal.AutoSize = true;
+            rbNoProvidedMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rbNoProvidedMeal.Location = new System.Drawing.Point(578, 10);
+            rbNoProvidedMeal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbNoProvidedMeal.Name = "rbNoProvidedMeal";
+            rbNoProvidedMeal.Size = new System.Drawing.Size(41, 17);
+            rbNoProvidedMeal.TabIndex = 2;
+            rbNoProvidedMeal.TabStop = true;
+            rbNoProvidedMeal.Text = "No";
+            rbNoProvidedMeal.UseVisualStyleBackColor = true;
             // 
             // rbYesProvidedMeal
             // 
-            this.rbYesProvidedMeal.AutoSize = true;
-            this.rbYesProvidedMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbYesProvidedMeal.Location = new System.Drawing.Point(446, 9);
-            this.rbYesProvidedMeal.Name = "rbYesProvidedMeal";
-            this.rbYesProvidedMeal.Size = new System.Drawing.Size(46, 17);
-            this.rbYesProvidedMeal.TabIndex = 1;
-            this.rbYesProvidedMeal.TabStop = true;
-            this.rbYesProvidedMeal.Text = "Yes";
-            this.rbYesProvidedMeal.UseVisualStyleBackColor = true;
+            rbYesProvidedMeal.AutoSize = true;
+            rbYesProvidedMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            rbYesProvidedMeal.Location = new System.Drawing.Point(520, 10);
+            rbYesProvidedMeal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbYesProvidedMeal.Name = "rbYesProvidedMeal";
+            rbYesProvidedMeal.Size = new System.Drawing.Size(46, 17);
+            rbYesProvidedMeal.TabIndex = 1;
+            rbYesProvidedMeal.TabStop = true;
+            rbYesProvidedMeal.Text = "Yes";
+            rbYesProvidedMeal.UseVisualStyleBackColor = true;
             // 
             // lblMelasProvided
             // 
-            this.lblMelasProvided.AutoSize = true;
-            this.lblMelasProvided.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMelasProvided.Location = new System.Drawing.Point(3, 9);
-            this.lblMelasProvided.Name = "lblMelasProvided";
-            this.lblMelasProvided.Size = new System.Drawing.Size(412, 17);
-            this.lblMelasProvided.TabIndex = 0;
-            this.lblMelasProvided.Text = "Were any of the checked meals above provided to you?";
+            lblMelasProvided.AutoSize = true;
+            lblMelasProvided.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblMelasProvided.Location = new System.Drawing.Point(4, 10);
+            lblMelasProvided.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMelasProvided.Name = "lblMelasProvided";
+            lblMelasProvided.Size = new System.Drawing.Size(412, 17);
+            lblMelasProvided.TabIndex = 0;
+            lblMelasProvided.Text = "Were any of the checked meals above provided to you?";
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.btnUpdateMeals, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnCancelUpdateMeals, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(274, 533);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(296, 54);
-            this.tableLayoutPanel3.TabIndex = 4;
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(btnUpdateMeals, 1, 0);
+            tableLayoutPanel3.Controls.Add(btnCancelUpdateMeals, 0, 0);
+            tableLayoutPanel3.Location = new System.Drawing.Point(320, 615);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(345, 62);
+            tableLayoutPanel3.TabIndex = 4;
             // 
             // btnUpdateMeals
             // 
-            this.btnUpdateMeals.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpdateMeals.FlatAppearance.BorderSize = 0;
-            this.btnUpdateMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateMeals.Image = global::TravelExpenses.Properties.Resources._1495734626_db_update;
-            this.btnUpdateMeals.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateMeals.Location = new System.Drawing.Point(174, 6);
-            this.btnUpdateMeals.Name = "btnUpdateMeals";
-            this.btnUpdateMeals.Size = new System.Drawing.Size(95, 42);
-            this.btnUpdateMeals.TabIndex = 0;
-            this.btnUpdateMeals.Text = "Update";
-            this.btnUpdateMeals.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateMeals.UseVisualStyleBackColor = true;
-            this.btnUpdateMeals.Click += new System.EventHandler(this.btnUpdateMeals_Click);
+            btnUpdateMeals.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnUpdateMeals.FlatAppearance.BorderSize = 0;
+            btnUpdateMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnUpdateMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnUpdateMeals.Image = (System.Drawing.Image)resources.GetObject("btnUpdateMeals.Image");
+            btnUpdateMeals.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnUpdateMeals.Location = new System.Drawing.Point(213, 7);
+            btnUpdateMeals.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnUpdateMeals.Name = "btnUpdateMeals";
+            btnUpdateMeals.Size = new System.Drawing.Size(91, 48);
+            btnUpdateMeals.TabIndex = 0;
+            btnUpdateMeals.Text = "Update";
+            btnUpdateMeals.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnUpdateMeals.UseVisualStyleBackColor = true;
+            btnUpdateMeals.Click += btnUpdateMeals_Click;
             // 
             // btnCancelUpdateMeals
             // 
-            this.btnCancelUpdateMeals.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelUpdateMeals.FlatAppearance.BorderSize = 0;
-            this.btnCancelUpdateMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelUpdateMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelUpdateMeals.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnCancelUpdateMeals.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelUpdateMeals.Location = new System.Drawing.Point(32, 6);
-            this.btnCancelUpdateMeals.Name = "btnCancelUpdateMeals";
-            this.btnCancelUpdateMeals.Size = new System.Drawing.Size(84, 42);
-            this.btnCancelUpdateMeals.TabIndex = 1;
-            this.btnCancelUpdateMeals.Text = "Close";
-            this.btnCancelUpdateMeals.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelUpdateMeals.UseVisualStyleBackColor = true;
-            this.btnCancelUpdateMeals.Click += new System.EventHandler(this.btnCancelUpdateMeals_Click);
+            btnCancelUpdateMeals.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnCancelUpdateMeals.FlatAppearance.BorderSize = 0;
+            btnCancelUpdateMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancelUpdateMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancelUpdateMeals.Image = (System.Drawing.Image)resources.GetObject("btnCancelUpdateMeals.Image");
+            btnCancelUpdateMeals.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCancelUpdateMeals.Location = new System.Drawing.Point(43, 7);
+            btnCancelUpdateMeals.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancelUpdateMeals.Name = "btnCancelUpdateMeals";
+            btnCancelUpdateMeals.Size = new System.Drawing.Size(86, 48);
+            btnCancelUpdateMeals.TabIndex = 1;
+            btnCancelUpdateMeals.Text = "Close";
+            btnCancelUpdateMeals.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancelUpdateMeals.UseVisualStyleBackColor = true;
+            btnCancelUpdateMeals.Click += btnCancelUpdateMeals_Click;
             // 
             // lblTotalPerDiemRateValue
             // 
-            this.lblTotalPerDiemRateValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalPerDiemRateValue.AutoSize = true;
-            this.lblTotalPerDiemRateValue.Location = new System.Drawing.Point(387, 35);
-            this.lblTotalPerDiemRateValue.Name = "lblTotalPerDiemRateValue";
-            this.lblTotalPerDiemRateValue.Size = new System.Drawing.Size(58, 13);
-            this.lblTotalPerDiemRateValue.TabIndex = 29;
-            this.lblTotalPerDiemRateValue.Text = "0";
-            this.lblTotalPerDiemRateValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblTotalPerDiemRateValue.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTotalPerDiemRateValue.AutoSize = true;
+            lblTotalPerDiemRateValue.Location = new System.Drawing.Point(452, 40);
+            lblTotalPerDiemRateValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTotalPerDiemRateValue.Name = "lblTotalPerDiemRateValue";
+            lblTotalPerDiemRateValue.Size = new System.Drawing.Size(67, 15);
+            lblTotalPerDiemRateValue.TabIndex = 29;
+            lblTotalPerDiemRateValue.Text = "0";
+            lblTotalPerDiemRateValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTotalPerDiemRate
             // 
-            this.lblTotalPerDiemRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalPerDiemRate.AutoSize = true;
-            this.lblTotalPerDiemRate.Location = new System.Drawing.Point(387, 7);
-            this.lblTotalPerDiemRate.Name = "lblTotalPerDiemRate";
-            this.lblTotalPerDiemRate.Size = new System.Drawing.Size(58, 13);
-            this.lblTotalPerDiemRate.TabIndex = 28;
-            this.lblTotalPerDiemRate.Text = "Total";
-            this.lblTotalPerDiemRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblTotalPerDiemRate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTotalPerDiemRate.AutoSize = true;
+            lblTotalPerDiemRate.Location = new System.Drawing.Point(452, 8);
+            lblTotalPerDiemRate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTotalPerDiemRate.Name = "lblTotalPerDiemRate";
+            lblTotalPerDiemRate.Size = new System.Drawing.Size(67, 15);
+            lblTotalPerDiemRate.TabIndex = 28;
+            lblTotalPerDiemRate.Text = "Total";
+            lblTotalPerDiemRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDinner
             // 
-            this.lblDinner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDinner.AutoSize = true;
-            this.lblDinner.Location = new System.Drawing.Point(308, 7);
-            this.lblDinner.Name = "lblDinner";
-            this.lblDinner.Size = new System.Drawing.Size(73, 13);
-            this.lblDinner.TabIndex = 27;
-            this.lblDinner.Text = "Dinner";
-            this.lblDinner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblDinner.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDinner.AutoSize = true;
+            lblDinner.Location = new System.Drawing.Point(360, 8);
+            lblDinner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDinner.Name = "lblDinner";
+            lblDinner.Size = new System.Drawing.Size(84, 15);
+            lblDinner.TabIndex = 27;
+            lblDinner.Text = "Dinner";
+            lblDinner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtDinner
             // 
-            this.txtDinner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDinner.Location = new System.Drawing.Point(308, 32);
-            this.txtDinner.Name = "txtDinner";
-            this.txtDinner.Size = new System.Drawing.Size(73, 20);
-            this.txtDinner.TabIndex = 26;
-            this.txtDinner.TextChanged += new System.EventHandler(this.txtDinner_TextChanged);
-            this.txtDinner.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDinner_KeyPress);
+            txtDinner.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtDinner.Location = new System.Drawing.Point(360, 36);
+            txtDinner.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtDinner.Name = "txtDinner";
+            txtDinner.Size = new System.Drawing.Size(84, 23);
+            txtDinner.TabIndex = 26;
+            txtDinner.TextChanged += txtDinner_TextChanged;
+            txtDinner.KeyPress += txtDinner_KeyPress;
             // 
             // lblLunch
             // 
-            this.lblLunch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLunch.AutoSize = true;
-            this.lblLunch.Location = new System.Drawing.Point(230, 7);
-            this.lblLunch.Name = "lblLunch";
-            this.lblLunch.Size = new System.Drawing.Size(72, 13);
-            this.lblLunch.TabIndex = 25;
-            this.lblLunch.Text = "Lunch";
-            this.lblLunch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblLunch.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblLunch.AutoSize = true;
+            lblLunch.Location = new System.Drawing.Point(269, 8);
+            lblLunch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblLunch.Name = "lblLunch";
+            lblLunch.Size = new System.Drawing.Size(83, 15);
+            lblLunch.TabIndex = 25;
+            lblLunch.Text = "Lunch";
+            lblLunch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtLunch
             // 
-            this.txtLunch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLunch.Location = new System.Drawing.Point(230, 32);
-            this.txtLunch.Name = "txtLunch";
-            this.txtLunch.Size = new System.Drawing.Size(72, 20);
-            this.txtLunch.TabIndex = 24;
-            this.txtLunch.TextChanged += new System.EventHandler(this.txtLunch_TextChanged);
-            this.txtLunch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLunch_KeyPress);
+            txtLunch.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtLunch.Location = new System.Drawing.Point(269, 36);
+            txtLunch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtLunch.Name = "txtLunch";
+            txtLunch.Size = new System.Drawing.Size(83, 23);
+            txtLunch.TabIndex = 24;
+            txtLunch.TextChanged += txtLunch_TextChanged;
+            txtLunch.KeyPress += txtLunch_KeyPress;
             // 
             // lblBreakfast
             // 
-            this.lblBreakfast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBreakfast.AutoSize = true;
-            this.lblBreakfast.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblBreakfast.Location = new System.Drawing.Point(151, 7);
-            this.lblBreakfast.Name = "lblBreakfast";
-            this.lblBreakfast.Size = new System.Drawing.Size(73, 13);
-            this.lblBreakfast.TabIndex = 23;
-            this.lblBreakfast.Text = "Breakfast";
-            this.lblBreakfast.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblBreakfast.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblBreakfast.AutoSize = true;
+            lblBreakfast.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            lblBreakfast.Location = new System.Drawing.Point(177, 8);
+            lblBreakfast.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblBreakfast.Name = "lblBreakfast";
+            lblBreakfast.Size = new System.Drawing.Size(84, 15);
+            lblBreakfast.TabIndex = 23;
+            lblBreakfast.Text = "Breakfast";
+            lblBreakfast.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCalculateMeals
             // 
-            this.btnCalculateMeals.Enabled = false;
-            this.btnCalculateMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculateMeals.ForeColor = System.Drawing.Color.Green;
-            this.btnCalculateMeals.Location = new System.Drawing.Point(459, 89);
-            this.btnCalculateMeals.Name = "btnCalculateMeals";
-            this.btnCalculateMeals.Size = new System.Drawing.Size(72, 23);
-            this.btnCalculateMeals.TabIndex = 22;
-            this.btnCalculateMeals.Text = "Calculate";
-            this.btnCalculateMeals.UseVisualStyleBackColor = true;
-            this.btnCalculateMeals.Click += new System.EventHandler(this.btnCalculateMeals_Click);
+            btnCalculateMeals.Enabled = false;
+            btnCalculateMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCalculateMeals.ForeColor = System.Drawing.Color.Green;
+            btnCalculateMeals.Location = new System.Drawing.Point(536, 103);
+            btnCalculateMeals.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCalculateMeals.Name = "btnCalculateMeals";
+            btnCalculateMeals.Size = new System.Drawing.Size(84, 27);
+            btnCalculateMeals.TabIndex = 22;
+            btnCalculateMeals.Text = "Calculate";
+            btnCalculateMeals.UseVisualStyleBackColor = true;
+            btnCalculateMeals.Click += btnCalculateMeals_Click;
             // 
             // txtMealsPerDiemRate
             // 
-            this.txtMealsPerDiemRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMealsPerDiemRate.Location = new System.Drawing.Point(151, 32);
-            this.txtMealsPerDiemRate.Name = "txtMealsPerDiemRate";
-            this.txtMealsPerDiemRate.Size = new System.Drawing.Size(73, 20);
-            this.txtMealsPerDiemRate.TabIndex = 21;
-            this.txtMealsPerDiemRate.TextChanged += new System.EventHandler(this.txtMealsPerDiemRate_TextChanged);
-            this.txtMealsPerDiemRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMealsPerDiemRate_KeyPress);
+            txtMealsPerDiemRate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtMealsPerDiemRate.Location = new System.Drawing.Point(177, 36);
+            txtMealsPerDiemRate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtMealsPerDiemRate.Name = "txtMealsPerDiemRate";
+            txtMealsPerDiemRate.Size = new System.Drawing.Size(84, 23);
+            txtMealsPerDiemRate.TabIndex = 21;
+            txtMealsPerDiemRate.TextChanged += txtMealsPerDiemRate_TextChanged;
+            txtMealsPerDiemRate.KeyPress += txtMealsPerDiemRate_KeyPress;
             // 
             // lblMealsPerDiemRate
             // 
-            this.lblMealsPerDiemRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMealsPerDiemRate.AutoSize = true;
-            this.lblMealsPerDiemRate.Location = new System.Drawing.Point(3, 35);
-            this.lblMealsPerDiemRate.Name = "lblMealsPerDiemRate";
-            this.lblMealsPerDiemRate.Size = new System.Drawing.Size(142, 13);
-            this.lblMealsPerDiemRate.TabIndex = 20;
-            this.lblMealsPerDiemRate.Text = "Meals Per Diem Rate:";
+            lblMealsPerDiemRate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblMealsPerDiemRate.AutoSize = true;
+            lblMealsPerDiemRate.Location = new System.Drawing.Point(4, 40);
+            lblMealsPerDiemRate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMealsPerDiemRate.Name = "lblMealsPerDiemRate";
+            lblMealsPerDiemRate.Size = new System.Drawing.Size(165, 15);
+            lblMealsPerDiemRate.TabIndex = 20;
+            lblMealsPerDiemRate.Text = "Meals Per Diem Rate:";
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 5;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.03571F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.63393F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.41072F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.63393F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.0625F));
-            this.tableLayoutPanel4.Controls.Add(this.lblBreakfast, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblTotalPerDiemRateValue, 4, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lblLunch, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtDinner, 3, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lblTotalPerDiemRate, 4, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtLunch, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lblDinner, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblMealsPerDiemRate, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.txtMealsPerDiemRate, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lblZipCode, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.txtZipCode, 1, 2);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(5, 26);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(448, 84);
-            this.tableLayoutPanel4.TabIndex = 30;
+            tableLayoutPanel4.ColumnCount = 5;
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.03571F));
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.63393F));
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.41072F));
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.63393F));
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.0625F));
+            tableLayoutPanel4.Controls.Add(lblBreakfast, 1, 0);
+            tableLayoutPanel4.Controls.Add(lblTotalPerDiemRateValue, 4, 1);
+            tableLayoutPanel4.Controls.Add(lblLunch, 2, 0);
+            tableLayoutPanel4.Controls.Add(txtDinner, 3, 1);
+            tableLayoutPanel4.Controls.Add(lblTotalPerDiemRate, 4, 0);
+            tableLayoutPanel4.Controls.Add(txtLunch, 2, 1);
+            tableLayoutPanel4.Controls.Add(lblDinner, 3, 0);
+            tableLayoutPanel4.Controls.Add(lblMealsPerDiemRate, 0, 1);
+            tableLayoutPanel4.Controls.Add(txtMealsPerDiemRate, 1, 1);
+            tableLayoutPanel4.Controls.Add(lblZipCode, 0, 2);
+            tableLayoutPanel4.Controls.Add(txtZipCode, 1, 2);
+            tableLayoutPanel4.Location = new System.Drawing.Point(6, 30);
+            tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 3;
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            tableLayoutPanel4.Size = new System.Drawing.Size(523, 97);
+            tableLayoutPanel4.TabIndex = 30;
             // 
             // lblZipCode
             // 
-            this.lblZipCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblZipCode.AutoSize = true;
-            this.lblZipCode.Location = new System.Drawing.Point(3, 63);
-            this.lblZipCode.Name = "lblZipCode";
-            this.lblZipCode.Size = new System.Drawing.Size(142, 13);
-            this.lblZipCode.TabIndex = 30;
-            this.lblZipCode.Text = "Travel Location Zip Code:";
+            lblZipCode.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblZipCode.AutoSize = true;
+            lblZipCode.Location = new System.Drawing.Point(4, 73);
+            lblZipCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblZipCode.Name = "lblZipCode";
+            lblZipCode.Size = new System.Drawing.Size(165, 15);
+            lblZipCode.TabIndex = 30;
+            lblZipCode.Text = "Travel Location Zip Code:";
             // 
             // txtZipCode
             // 
-            this.txtZipCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtZipCode.Location = new System.Drawing.Point(151, 60);
-            this.txtZipCode.Name = "txtZipCode";
-            this.txtZipCode.Size = new System.Drawing.Size(73, 20);
-            this.txtZipCode.TabIndex = 31;
+            txtZipCode.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtZipCode.Location = new System.Drawing.Point(177, 69);
+            txtZipCode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtZipCode.Name = "txtZipCode";
+            txtZipCode.Size = new System.Drawing.Size(84, 23);
+            txtZipCode.TabIndex = 31;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lblInfoLink);
-            this.panel1.Controls.Add(this.linkLabelMealPerDiemRate);
-            this.panel1.Controls.Add(this.tableLayoutPanel4);
-            this.panel1.Controls.Add(this.btnCalculateMeals);
-            this.panel1.Location = new System.Drawing.Point(27, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(543, 121);
-            this.panel1.TabIndex = 31;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(lblInfoLink);
+            panel1.Controls.Add(linkLabelMealPerDiemRate);
+            panel1.Controls.Add(tableLayoutPanel4);
+            panel1.Controls.Add(btnCalculateMeals);
+            panel1.Location = new System.Drawing.Point(31, 20);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(633, 139);
+            panel1.TabIndex = 31;
+            panel1.Paint += panel1_Paint;
             // 
             // lblInfoLink
             // 
-            this.lblInfoLink.AutoSize = true;
-            this.lblInfoLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoLink.Location = new System.Drawing.Point(8, 6);
-            this.lblInfoLink.Name = "lblInfoLink";
-            this.lblInfoLink.Size = new System.Drawing.Size(213, 13);
-            this.lblInfoLink.TabIndex = 31;
-            this.lblInfoLink.Text = "Link for checking the Meals Per Diem Rate:";
+            lblInfoLink.AutoSize = true;
+            lblInfoLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblInfoLink.Location = new System.Drawing.Point(9, 7);
+            lblInfoLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblInfoLink.Name = "lblInfoLink";
+            lblInfoLink.Size = new System.Drawing.Size(213, 13);
+            lblInfoLink.TabIndex = 31;
+            lblInfoLink.Text = "Link for checking the Meals Per Diem Rate:";
             // 
             // linkLabelMealPerDiemRate
             // 
-            this.linkLabelMealPerDiemRate.AutoSize = true;
-            this.linkLabelMealPerDiemRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelMealPerDiemRate.Location = new System.Drawing.Point(227, 6);
-            this.linkLabelMealPerDiemRate.Name = "linkLabelMealPerDiemRate";
-            this.linkLabelMealPerDiemRate.Size = new System.Drawing.Size(262, 13);
-            this.linkLabelMealPerDiemRate.TabIndex = 32;
-            this.linkLabelMealPerDiemRate.TabStop = true;
-            this.linkLabelMealPerDiemRate.Text = "https://www.gsa.gov/travel/plan-book/per-diem-rates";
-            this.linkLabelMealPerDiemRate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMealPerDiemRate_LinkClicked);
+            linkLabelMealPerDiemRate.AutoSize = true;
+            linkLabelMealPerDiemRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            linkLabelMealPerDiemRate.Location = new System.Drawing.Point(265, 7);
+            linkLabelMealPerDiemRate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            linkLabelMealPerDiemRate.Name = "linkLabelMealPerDiemRate";
+            linkLabelMealPerDiemRate.Size = new System.Drawing.Size(262, 13);
+            linkLabelMealPerDiemRate.TabIndex = 32;
+            linkLabelMealPerDiemRate.TabStop = true;
+            linkLabelMealPerDiemRate.Text = "https://www.gsa.gov/travel/plan-book/per-diem-rates";
+            linkLabelMealPerDiemRate.LinkClicked += linkLabelMealPerDiemRate_LinkClicked;
             // 
             // lblWarninglabel1
             // 
-            this.lblWarninglabel1.AutoSize = true;
-            this.lblWarninglabel1.BackColor = System.Drawing.Color.Transparent;
-            this.lblWarninglabel1.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblWarninglabel1.Location = new System.Drawing.Point(5, 6);
-            this.lblWarninglabel1.Name = "lblWarninglabel1";
-            this.lblWarninglabel1.Size = new System.Drawing.Size(545, 13);
-            this.lblWarninglabel1.TabIndex = 33;
-            this.lblWarninglabel1.Text = "If you change a Per Diem value, please hit calculate to refresh the data,otherwis" +
-    "e your changes will not be saved. ";
+            lblWarninglabel1.AutoSize = true;
+            lblWarninglabel1.BackColor = System.Drawing.Color.Transparent;
+            lblWarninglabel1.ForeColor = System.Drawing.Color.DarkRed;
+            lblWarninglabel1.Location = new System.Drawing.Point(6, 7);
+            lblWarninglabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblWarninglabel1.Name = "lblWarninglabel1";
+            lblWarninglabel1.Size = new System.Drawing.Size(600, 15);
+            lblWarninglabel1.TabIndex = 33;
+            lblWarninglabel1.Text = "If you change a Per Diem value, please hit calculate to refresh the data,otherwise your changes will not be saved. ";
             // 
             // pWarning
             // 
-            this.pWarning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pWarning.Controls.Add(this.lblWarninglabel1);
-            this.pWarning.Location = new System.Drawing.Point(22, 144);
-            this.pWarning.Name = "pWarning";
-            this.pWarning.Size = new System.Drawing.Size(558, 27);
-            this.pWarning.TabIndex = 33;
+            pWarning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pWarning.Controls.Add(lblWarninglabel1);
+            pWarning.Location = new System.Drawing.Point(26, 166);
+            pWarning.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pWarning.Name = "pWarning";
+            pWarning.Size = new System.Drawing.Size(651, 31);
+            pWarning.TabIndex = 33;
             // 
             // backgroundWorker1
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
             // 
             // EditMeals
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 597);
-            this.ControlBox = false;
-            this.Controls.Add(this.pWarning);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.pProvidedMeals);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.dgvEditMeals);
-            this.Name = "EditMeals";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit Meals";
-            this.Load += new System.EventHandler(this.EditMeals_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditMeals)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.pProvidedMeals.ResumeLayout(false);
-            this.pProvidedMeals.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.pWarning.ResumeLayout(false);
-            this.pWarning.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(693, 689);
+            ControlBox = false;
+            Controls.Add(pWarning);
+            Controls.Add(panel1);
+            Controls.Add(tableLayoutPanel3);
+            Controls.Add(pProvidedMeals);
+            Controls.Add(tableLayoutPanel2);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(dgvEditMeals);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "EditMeals";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Edit Meals";
+            Load += EditMeals_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvEditMeals).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            pProvidedMeals.ResumeLayout(false);
+            pProvidedMeals.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel4.ResumeLayout(false);
+            tableLayoutPanel4.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            pWarning.ResumeLayout(false);
+            pWarning.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

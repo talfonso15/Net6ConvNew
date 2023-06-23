@@ -280,7 +280,8 @@ namespace TravelExpenses
                updateTotalMeals();
            }*/
 
-        public void createDatagridview() {
+        public void createDatagridview()
+        {
 
             localCon.Open();
             SqlCommand cmd = new SqlCommand("SELECT [Date],[Breaksfast],[Lunch],[Dinner],[MealDateId] FROM [TravelExpenses].[dbo].[MealDate] where MealsID = '" + mealsID + "'", localCon);
@@ -343,12 +344,13 @@ namespace TravelExpenses
                     totalReibursement = Convert.ToDouble(dr["TotalTravelReimbursed"].ToString());
                 }
                 dr.Close();
-                
+
 
                 SqlCommand cmd2 = new SqlCommand("SELECT [MealsID] ,[ProvidedMeal] ,[Notes],[TotalMeals],[BreakfastPerDiemRate],[LunchPerDiemRate],[DinnerPerDiemRate],[TotalPerDiemRate],[PerDiemLoactionZipCode] FROM [TravelExpenses].[dbo].[Meals] where TravelID = '" + edittravelID + "'", localCon);
                 SqlDataReader dr2 = cmd2.ExecuteReader();
 
-                while (dr2.Read()) {
+                while (dr2.Read())
+                {
                     mealsID = new Guid(dr2["MealsID"].ToString());
                     providedMeal = Convert.ToBoolean(dr2["ProvidedMeal"].ToString());
                     txtNotes.Text = dr2["Notes"].ToString();
@@ -367,7 +369,8 @@ namespace TravelExpenses
                         rbYesProvidedMeal.Checked = true;
                         pProvidedMeals.Enabled = false;
                     }
-                    else {
+                    else
+                    {
                         rbNoProvidedMeal.Checked = true;
                     }
                     txtMealsTotal.Text = dr2["TotalMeals"].ToString();
@@ -396,7 +399,7 @@ namespace TravelExpenses
             {
                 Guid mealDateID = new Guid(dgvEditMeals.Rows[i].Cells[5].Value.ToString());
                 SqlDataAdapter upMealDate = new SqlDataAdapter();
-                upMealDate.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[MealDate] SET [Breaksfast] = @Breaksfast,[Lunch] = @Lunch,[Dinner] = @Dinner WHERE MealsID = '" + mealsID +"' and MealDateId = '"+ mealDateID + "'", localCon);
+                upMealDate.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[MealDate] SET [Breaksfast] = @Breaksfast,[Lunch] = @Lunch,[Dinner] = @Dinner WHERE MealsID = '" + mealsID + "' and MealDateId = '" + mealDateID + "'", localCon);
                 upMealDate.UpdateCommand.Parameters.Add("@Breaksfast", SqlDbType.Bit).Value = Convert.ToBoolean(dgvEditMeals.Rows[i].Cells[1].Value);
                 upMealDate.UpdateCommand.Parameters.Add("@Lunch", SqlDbType.Bit).Value = Convert.ToBoolean(dgvEditMeals.Rows[i].Cells[2].Value);
                 upMealDate.UpdateCommand.Parameters.Add("@Dinner", SqlDbType.Bit).Value = Convert.ToBoolean(dgvEditMeals.Rows[i].Cells[3].Value);
@@ -419,7 +422,7 @@ namespace TravelExpenses
             }
             totalMeals = Convert.ToDouble(txtMealsTotal.Text);
 
-            
+
             SqlDataAdapter cmdEditMeals = new SqlDataAdapter();
             if (perDiemChanged)
             {
@@ -444,7 +447,7 @@ namespace TravelExpenses
                 }
                 cmdEditMeals.UpdateCommand.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotes.Text;
             }
-            else 
+            else
             {
                 cmdEditMeals.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Meals] SET [Breakfast] = @Breakfast,[Lunch] = @Lunch,[Dinner] = @Dinner,[ProvidedMeal] = @ProvidedMeal,[TotalMeals] = @TotalMeals,[Notes] = @Notes,[PerDiemLoactionZipCode] = @PerDiemLoactionZipCode WHERE MealsID = '" + mealsID + "'  AND TravelID = '" + edittravelID + "'", localCon);
                 cmdEditMeals.UpdateCommand.Parameters.Add("@Breakfast", SqlDbType.Int).Value = totalBreakfast;
@@ -464,7 +467,8 @@ namespace TravelExpenses
                 cmdEditMeals.UpdateCommand.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotes.Text;
             }
             int ru = cmdEditMeals.UpdateCommand.ExecuteNonQuery();
-            if (ru > 0) {
+            if (ru > 0)
+            {
                 totalTravel = totalTravel - oldMealTotal;
                 totalTravel = totalTravel + totalMeals;
                 totalReibursement = totalReibursement - oldMealTotal;
@@ -509,8 +513,8 @@ namespace TravelExpenses
                     rowTotal = rowTotal - breakfastPDRate;
                     dgvEditMeals.Rows[rowIndex].Cells[4].Value = rowTotal.ToString();
                     rowValue = false;
-                    
-                    
+
+
 
                 }
             }
@@ -551,7 +555,7 @@ namespace TravelExpenses
                     rowTotal = rowTotal - dinnerPDRate;
                     dgvEditMeals.Rows[rowIndex].Cells[4].Value = rowTotal.ToString();
                     rowValue = false;
-                    
+
 
                 }
             }
@@ -632,7 +636,7 @@ namespace TravelExpenses
 
         private void enableCalculateButton()
         {
-           
+
             if (txtMealsPerDiemRate.Text != "" && txtLunch.Text != "" && txtDinner.Text != "")
             {
                 btnCalculateMeals.Enabled = true;
