@@ -19,7 +19,7 @@ namespace TravelExpenses
         Guid editLodgingID;
         int quantityLod = 0;
         bool isNew = false;
-        
+
         public EditLodging()
         {
             InitializeComponent();
@@ -57,8 +57,8 @@ namespace TravelExpenses
             {
                 edittravelID = new Guid(CommonVariables.editTravelID.ToString());
             }
-            
-            SqlCommand cmd = new SqlCommand("SELECT [LodgingID],[FacilityName],[NumberOfNIghts],[CostPerNight],[TaxesAndFees],[TaxesAndFeesPerNight],[DistrictPay],[DirectorApproved],[TotalLodging],[Notes] FROM [TravelExpenses].[dbo].[Lodging] where TravelID = '"+ edittravelID +"'", localCon);
+
+            SqlCommand cmd = new SqlCommand("SELECT [LodgingID],[FacilityName],[NumberOfNIghts],[CostPerNight],[TaxesAndFees],[TaxesAndFeesPerNight],[DistrictPay],[DirectorApproved],[TotalLodging],[Notes] FROM [TravelExpenses].[dbo].[Lodging] where TravelID = '" + edittravelID + "'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())
@@ -85,7 +85,8 @@ namespace TravelExpenses
                 quantityLod++;
             }
             dr.Close();
-            if (quantityLod <= 1) {
+            if (quantityLod <= 1)
+            {
                 btnDeleteLod.Enabled = false;
             }
             this.Size = new System.Drawing.Size(731, 295);
@@ -125,7 +126,8 @@ namespace TravelExpenses
                 {
                     rbYesDIrectorApp.Checked = true;
                 }
-                else {
+                else
+                {
                     rbNoDirectorApp.Checked = true;
                 }
             }
@@ -139,7 +141,8 @@ namespace TravelExpenses
 
         private void rbYesDistrictPay_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbYesDistrictPay.Checked) {
+            if (rbYesDistrictPay.Checked)
+            {
                 pDirectorApp.Enabled = false;
                 rbYesDIrectorApp.Checked = false;
                 rbNoDirectorApp.Checked = false;
@@ -206,7 +209,7 @@ namespace TravelExpenses
 
                 localCon.Close();
 
-            } 
+            }
         }
 
         private void refreshLodgings()
@@ -237,11 +240,12 @@ namespace TravelExpenses
             {
                 btnDeleteLod.Enabled = false;
             }
-            else {
+            else
+            {
                 btnDeleteLod.Enabled = true;
             }
             localCon.Close();
-            
+
         }
 
         private void btnSaveLod_Click(object sender, EventArgs e)
@@ -337,7 +341,7 @@ namespace TravelExpenses
                     bool oriDirectorApp = false;
                     double oriTotalLod = 0;
 
-                    SqlCommand cmd = new SqlCommand("SELECT [DistrictPay],[DirectorApproved],[TotalLodging] FROM [TravelExpenses].[dbo].[Lodging] where LodgingID = '"+ editLodgingID +"'", localCon);
+                    SqlCommand cmd = new SqlCommand("SELECT [DistrictPay],[DirectorApproved],[TotalLodging] FROM [TravelExpenses].[dbo].[Lodging] where LodgingID = '" + editLodgingID + "'", localCon);
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -382,7 +386,7 @@ namespace TravelExpenses
                     }
 
                     SqlDataAdapter upLod = new SqlDataAdapter();
-                    upLod.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Lodging] SET [FacilityName] = @FacilityName,[NumberOfNIghts] = @NumberOfNIghts,[CostPerNight] = @CostPerNight,[TaxesAndFees] = @TaxesAndFees,[TaxesAndFeesPerNight] = @TaxesAndFeesPerNight,[DistrictPay] = @DistrictPay,[DirectorApproved] = @DirectorApproved,[TotalLodging] = @TotalLodging,[Notes] = @Notes WHERE LodgingID = '"+ editLodgingID +"'", localCon);
+                    upLod.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Lodging] SET [FacilityName] = @FacilityName,[NumberOfNIghts] = @NumberOfNIghts,[CostPerNight] = @CostPerNight,[TaxesAndFees] = @TaxesAndFees,[TaxesAndFeesPerNight] = @TaxesAndFeesPerNight,[DistrictPay] = @DistrictPay,[DirectorApproved] = @DirectorApproved,[TotalLodging] = @TotalLodging,[Notes] = @Notes WHERE LodgingID = '" + editLodgingID + "'", localCon);
                     upLod.UpdateCommand.Parameters.Add("@FacilityName", SqlDbType.VarChar).Value = facilityName;
                     upLod.UpdateCommand.Parameters.Add("@NumberOfNIghts", SqlDbType.Int).Value = numberNights;
                     upLod.UpdateCommand.Parameters.Add("@CostPerNight", SqlDbType.Float).Value = costNight;
@@ -393,7 +397,8 @@ namespace TravelExpenses
                     upLod.UpdateCommand.Parameters.Add("@TotalLodging", SqlDbType.Float).Value = totalLod;
                     upLod.UpdateCommand.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = notes;
                     int ru = upLod.UpdateCommand.ExecuteNonQuery();
-                    if (ru > 0) {
+                    if (ru > 0)
+                    {
 
                         travelAmount = travelAmount + totalLod;
                         if (!districtPay && directorApp)
@@ -429,7 +434,7 @@ namespace TravelExpenses
             }
 
             localCon.Close();
-            
+
         }
 
         private void btnAddNewLod_Click(object sender, EventArgs e)
@@ -473,8 +478,8 @@ namespace TravelExpenses
                 MessageBox.Show("Answer the question about the approval of the director", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            
-                return true;
+
+            return true;
         }
 
         private void clearData()
@@ -523,7 +528,7 @@ namespace TravelExpenses
                     }
                 }
             }
-            
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -640,9 +645,9 @@ namespace TravelExpenses
         {
             double costPerNight = 0;
 
-            if (nudNumberOfNights.Value.ToString() != "0" && txtTotalLod.Text != "") 
+            if (nudNumberOfNights.Value.ToString() != "0" && txtTotalLod.Text != "")
             {
-                costPerNight = Math.Round( Convert.ToDouble(txtTotalLod.Text) / Convert.ToInt32( nudNumberOfNights.Value.ToString()),2);
+                costPerNight = Math.Round(Convert.ToDouble(txtTotalLod.Text) / Convert.ToInt32(nudNumberOfNights.Value.ToString()), 2);
                 txtCostPerNight.Text = costPerNight.ToString();
             }
         }
