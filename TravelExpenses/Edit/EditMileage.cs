@@ -39,9 +39,9 @@ namespace TravelExpenses
             {
                 edittravelID = new Guid(CommonVariables.editTravelID.ToString());
             }
-            
+
             localCon.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Mileage] where TravelID = '"+ edittravelID +"'", localCon);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Mileage] where TravelID = '" + edittravelID + "'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.HasRows)
@@ -50,12 +50,12 @@ namespace TravelExpenses
                 {
                     txtMapMileage.Text = dr["MapMileage"].ToString();
                     txtVicicnityMileage.Text = dr["VicinityMileage"].ToString();
-                    mileageAmount = Convert.ToDouble( dr["TotalMileage"].ToString());
+                    mileageAmount = Convert.ToDouble(dr["TotalMileage"].ToString());
                     if (dr["DistrictVehicleProvided"].ToString() == "True")
                     {
                         rbYesDistrictVehicle.Checked = true;
                         pDirectorApp.Enabled = false;
-                       
+
                     }
                     else if (dr["DirectorApprovedPersonal"].ToString() == "True")
                     {
@@ -65,7 +65,8 @@ namespace TravelExpenses
                         directorAppOri = true;
                         districtVehicleOri = false;
                         directorAppNullOri = false;
-                    } else if(dr["DirectorApprovedPersonal"].ToString() == "False")
+                    }
+                    else if (dr["DirectorApprovedPersonal"].ToString() == "False")
                     {
                         pDirectorApp.Enabled = true;
                         rbNoDirectorApproval.Checked = true;
@@ -81,7 +82,8 @@ namespace TravelExpenses
 
         private void rbNoDistrictVehicle_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbNoDistrictVehicle.Checked) {
+            if (rbNoDistrictVehicle.Checked)
+            {
                 pDirectorApp.Enabled = true;
             }
         }
@@ -101,13 +103,14 @@ namespace TravelExpenses
                 directorAppNull = false;
                 directorApp = true;
             }
-            
-            
+
+
         }
 
         private void rbNoDirectorApproval_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbNoDirectorApproval.Checked) {
+            if (rbNoDirectorApproval.Checked)
+            {
                 directorAppNull = false;
                 directorApp = false;
             }
@@ -140,8 +143,8 @@ namespace TravelExpenses
             }
             milageRateDR.Close();
 
-           //deleting the old mileage from the travel total and reimbursement
-           travelAmount = travelAmount - mileageAmount;
+            //deleting the old mileage from the travel total and reimbursement
+            travelAmount = travelAmount - mileageAmount;
             if (!districtVehicleOri && directorAppOri)
             {
                 travelReim = travelReim - mileageAmount;
@@ -149,14 +152,15 @@ namespace TravelExpenses
 
             //Calculating the new milaege total
             double vicinity = 0;
-            if (txtVicicnityMileage.Text != "") {
+            if (txtVicicnityMileage.Text != "")
+            {
                 vicinity = Convert.ToDouble(txtVicicnityMileage.Text);
             }
 
             newMilAmount = (Convert.ToDouble(txtMapMileage.Text) + vicinity) * milRate;
 
             SqlDataAdapter delMileage = new SqlDataAdapter();
-            delMileage.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Mileage] SET [DistrictVehicleProvided] = @DistrictVehicleProvided,[DirectorApprovedPersonal] = @DirectorApprovedPersonal,[MapMileage] = @MapMileage,[VicinityMileage] = @VicinityMileage,[TotalMileage] = @TotalMileage,[Notes] = @Notes WHERE TravelID = '"+ edittravelID +"'", localCon);
+            delMileage.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Mileage] SET [DistrictVehicleProvided] = @DistrictVehicleProvided,[DirectorApprovedPersonal] = @DirectorApprovedPersonal,[MapMileage] = @MapMileage,[VicinityMileage] = @VicinityMileage,[TotalMileage] = @TotalMileage,[Notes] = @Notes WHERE TravelID = '" + edittravelID + "'", localCon);
             delMileage.UpdateCommand.Parameters.Add("@MapMileage", SqlDbType.Float).Value = Convert.ToDouble(txtMapMileage.Text);
             delMileage.UpdateCommand.Parameters.Add("@VicinityMileage", SqlDbType.Float).Value = vicinity;
             delMileage.UpdateCommand.Parameters.Add("@TotalMileage", SqlDbType.Float).Value = newMilAmount;
@@ -170,14 +174,16 @@ namespace TravelExpenses
                 delMileage.UpdateCommand.Parameters.Add("@DistrictVehicleProvided", SqlDbType.Bit).Value = false;
                 delMileage.UpdateCommand.Parameters.Add("@DirectorApprovedPersonal", SqlDbType.Bit).Value = true;
             }
-            else if (rbNoDirectorApproval.Checked) {
+            else if (rbNoDirectorApproval.Checked)
+            {
                 delMileage.UpdateCommand.Parameters.Add("@DistrictVehicleProvided", SqlDbType.Bit).Value = false;
                 delMileage.UpdateCommand.Parameters.Add("@DirectorApprovedPersonal", SqlDbType.Bit).Value = false;
             }
             delMileage.UpdateCommand.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = txtNotes.Text;
 
             int ru = delMileage.UpdateCommand.ExecuteNonQuery();
-            if (ru > 0) {
+            if (ru > 0)
+            {
 
                 SqlDataAdapter upTravel = new SqlDataAdapter();
                 upTravel.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET [TotalTravelAmount] = @TotalTravelAmount ,[TotalTravelReimbursed] = @TotalTravelReimbursed WHERE TravelID ='" + edittravelID + "'", localCon);
@@ -203,7 +209,7 @@ namespace TravelExpenses
                 }
             }
 
-            
+
             localCon.Close();
             closeAll();
         }
@@ -244,7 +250,7 @@ namespace TravelExpenses
                     }
                 }
             }
-            
+
         }
 
         private void txtMapMileage_KeyPress(object sender, KeyPressEventArgs e)
