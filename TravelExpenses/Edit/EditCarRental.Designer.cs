@@ -28,966 +28,998 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvEditCar = new System.Windows.Forms.DataGridView();
-            this.PickUpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DropOffDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CarCostperDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DistrictPay = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CarType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RentalCompany = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Days = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaxesAndFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LDWInsurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupplementalInsurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExtraInsurance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ExtraInsuranceAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonalIssues = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.PersonalIssuesAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CarRentalID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tlEditButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAddCar = new System.Windows.Forms.Button();
-            this.btnDeleteCar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCancelEditCar = new System.Windows.Forms.Button();
-            this.btnEditCar = new System.Windows.Forms.Button();
-            this.pCarData = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblNotes = new System.Windows.Forms.Label();
-            this.txtNotes = new System.Windows.Forms.TextBox();
-            this.pPersonalIssuesAmount = new System.Windows.Forms.Panel();
-            this.txtPersonalUseAmount = new System.Windows.Forms.TextBox();
-            this.lblPersonalIssuesAmount = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbNoPersonalIssues = new System.Windows.Forms.RadioButton();
-            this.rbYesPeronalIssues = new System.Windows.Forms.RadioButton();
-            this.lblPesonalIssues = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rbNoDistrictPay = new System.Windows.Forms.RadioButton();
-            this.rbYesDistrictPay = new System.Windows.Forms.RadioButton();
-            this.lblDistrictPay = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblPickUpDate = new System.Windows.Forms.Label();
-            this.lblDropOffDate = new System.Windows.Forms.Label();
-            this.lblCarType = new System.Windows.Forms.Label();
-            this.lblRentalCompany = new System.Windows.Forms.Label();
-            this.lblDays = new System.Windows.Forms.Label();
-            this.lblCarCost = new System.Windows.Forms.Label();
-            this.dtpPickUpDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpDropOffDate = new System.Windows.Forms.DateTimePicker();
-            this.cbCarType = new System.Windows.Forms.ComboBox();
-            this.cbRentalCompany = new System.Windows.Forms.ComboBox();
-            this.nudDays = new System.Windows.Forms.NumericUpDown();
-            this.txtCarCost = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.txtTotalCar = new System.Windows.Forms.TextBox();
-            this.lblTaxesAndFees = new System.Windows.Forms.Label();
-            this.txtExtraInsuranceAmount = new System.Windows.Forms.TextBox();
-            this.lblExtraInsuranceAmount = new System.Windows.Forms.Label();
-            this.chxExtraInsurance = new System.Windows.Forms.CheckBox();
-            this.lblExtraInsurance = new System.Windows.Forms.Label();
-            this.txtTaxesAndFees = new System.Windows.Forms.TextBox();
-            this.txtSupplementalInsurance = new System.Windows.Forms.TextBox();
-            this.lblSupplementalInsurance = new System.Windows.Forms.Label();
-            this.lblLDWInsurance = new System.Windows.Forms.Label();
-            this.txtLDWInsurance = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSaveCar = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditCar)).BeginInit();
-            this.tlEditButtons.SuspendLayout();
-            this.pCarData.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.pPersonalIssuesAmount.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDays)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditCarRental));
+            dgvEditCar = new System.Windows.Forms.DataGridView();
+            PickUpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            DropOffDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            CarCostperDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            DistrictPay = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            CarType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            RentalCompany = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Days = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TaxesAndFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            LDWInsurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            SupplementalInsurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ExtraInsurance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            ExtraInsuranceAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            PersonalIssues = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            PersonalIssuesAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            CarRentalID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tlEditButtons = new System.Windows.Forms.TableLayoutPanel();
+            btnAddCar = new System.Windows.Forms.Button();
+            btnDeleteCar = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            btnCancelEditCar = new System.Windows.Forms.Button();
+            btnEditCar = new System.Windows.Forms.Button();
+            pCarData = new System.Windows.Forms.Panel();
+            tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            lblNotes = new System.Windows.Forms.Label();
+            txtNotes = new System.Windows.Forms.TextBox();
+            pPersonalIssuesAmount = new System.Windows.Forms.Panel();
+            txtPersonalUseAmount = new System.Windows.Forms.TextBox();
+            lblPersonalIssuesAmount = new System.Windows.Forms.Label();
+            panel2 = new System.Windows.Forms.Panel();
+            rbNoPersonalIssues = new System.Windows.Forms.RadioButton();
+            rbYesPeronalIssues = new System.Windows.Forms.RadioButton();
+            lblPesonalIssues = new System.Windows.Forms.Label();
+            panel1 = new System.Windows.Forms.Panel();
+            rbNoDistrictPay = new System.Windows.Forms.RadioButton();
+            rbYesDistrictPay = new System.Windows.Forms.RadioButton();
+            lblDistrictPay = new System.Windows.Forms.Label();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            lblPickUpDate = new System.Windows.Forms.Label();
+            lblDropOffDate = new System.Windows.Forms.Label();
+            lblCarType = new System.Windows.Forms.Label();
+            lblRentalCompany = new System.Windows.Forms.Label();
+            lblDays = new System.Windows.Forms.Label();
+            lblCarCost = new System.Windows.Forms.Label();
+            dtpPickUpDate = new System.Windows.Forms.DateTimePicker();
+            dtpDropOffDate = new System.Windows.Forms.DateTimePicker();
+            cbCarType = new System.Windows.Forms.ComboBox();
+            cbRentalCompany = new System.Windows.Forms.ComboBox();
+            nudDays = new System.Windows.Forms.NumericUpDown();
+            txtCarCost = new System.Windows.Forms.TextBox();
+            lblTotal = new System.Windows.Forms.Label();
+            txtTotalCar = new System.Windows.Forms.TextBox();
+            lblTaxesAndFees = new System.Windows.Forms.Label();
+            txtExtraInsuranceAmount = new System.Windows.Forms.TextBox();
+            lblExtraInsuranceAmount = new System.Windows.Forms.Label();
+            chxExtraInsurance = new System.Windows.Forms.CheckBox();
+            lblExtraInsurance = new System.Windows.Forms.Label();
+            txtTaxesAndFees = new System.Windows.Forms.TextBox();
+            txtSupplementalInsurance = new System.Windows.Forms.TextBox();
+            lblSupplementalInsurance = new System.Windows.Forms.Label();
+            lblLDWInsurance = new System.Windows.Forms.Label();
+            txtLDWInsurance = new System.Windows.Forms.TextBox();
+            tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            btnSaveCar = new System.Windows.Forms.Button();
+            btnCancel = new System.Windows.Forms.Button();
+            button1 = new System.Windows.Forms.Button();
+            toolTip1 = new System.Windows.Forms.ToolTip(components);
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)dgvEditCar).BeginInit();
+            tlEditButtons.SuspendLayout();
+            pCarData.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            pPersonalIssuesAmount.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudDays).BeginInit();
+            SuspendLayout();
             // 
             // dgvEditCar
             // 
-            this.dgvEditCar.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEditCar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvEditCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PickUpDate,
-            this.DropOffDate,
-            this.CarCostperDay,
-            this.DistrictPay,
-            this.Total,
-            this.CarType,
-            this.RentalCompany,
-            this.Days,
-            this.TaxesAndFees,
-            this.LDWInsurance,
-            this.SupplementalInsurance,
-            this.ExtraInsurance,
-            this.ExtraInsuranceAmount,
-            this.PersonalIssues,
-            this.PersonalIssuesAmount,
-            this.CarRentalID,
-            this.Notes});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEditCar.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvEditCar.Location = new System.Drawing.Point(26, 56);
-            this.dgvEditCar.Name = "dgvEditCar";
-            this.dgvEditCar.ReadOnly = true;
-            this.dgvEditCar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEditCar.Size = new System.Drawing.Size(614, 105);
-            this.dgvEditCar.TabIndex = 0;
-            this.dgvEditCar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditCar_CellContentClick);
+            dgvEditCar.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvEditCar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvEditCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEditCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { PickUpDate, DropOffDate, CarCostperDay, DistrictPay, Total, CarType, RentalCompany, Days, TaxesAndFees, LDWInsurance, SupplementalInsurance, ExtraInsurance, ExtraInsuranceAmount, PersonalIssues, PersonalIssuesAmount, CarRentalID, Notes });
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dgvEditCar.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvEditCar.Location = new System.Drawing.Point(16, 65);
+            dgvEditCar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dgvEditCar.Name = "dgvEditCar";
+            dgvEditCar.ReadOnly = true;
+            dgvEditCar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvEditCar.Size = new System.Drawing.Size(716, 121);
+            dgvEditCar.TabIndex = 0;
+            dgvEditCar.CellContentClick += dgvEditCar_CellContentClick;
             // 
             // PickUpDate
             // 
-            this.PickUpDate.HeaderText = "Pick Up Date";
-            this.PickUpDate.Name = "PickUpDate";
-            this.PickUpDate.ReadOnly = true;
-            this.PickUpDate.Width = 110;
+            PickUpDate.HeaderText = "Pick Up Date";
+            PickUpDate.Name = "PickUpDate";
+            PickUpDate.ReadOnly = true;
+            PickUpDate.Width = 110;
             // 
             // DropOffDate
             // 
-            this.DropOffDate.HeaderText = "Drop Off Date";
-            this.DropOffDate.Name = "DropOffDate";
-            this.DropOffDate.ReadOnly = true;
-            this.DropOffDate.Width = 110;
+            DropOffDate.HeaderText = "Drop Off Date";
+            DropOffDate.Name = "DropOffDate";
+            DropOffDate.ReadOnly = true;
+            DropOffDate.Width = 110;
             // 
             // CarCostperDay
             // 
-            this.CarCostperDay.HeaderText = "Car Cost per Day";
-            this.CarCostperDay.Name = "CarCostperDay";
-            this.CarCostperDay.ReadOnly = true;
-            this.CarCostperDay.Width = 150;
+            CarCostperDay.HeaderText = "Car Cost per Day";
+            CarCostperDay.Name = "CarCostperDay";
+            CarCostperDay.ReadOnly = true;
+            CarCostperDay.Width = 150;
             // 
             // DistrictPay
             // 
-            this.DistrictPay.HeaderText = "District Pay";
-            this.DistrictPay.Name = "DistrictPay";
-            this.DistrictPay.ReadOnly = true;
+            DistrictPay.HeaderText = "District Pay";
+            DistrictPay.Name = "DistrictPay";
+            DistrictPay.ReadOnly = true;
             // 
             // Total
             // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
+            Total.HeaderText = "Total";
+            Total.Name = "Total";
+            Total.ReadOnly = true;
             // 
             // CarType
             // 
-            this.CarType.HeaderText = "Car Type";
-            this.CarType.Name = "CarType";
-            this.CarType.ReadOnly = true;
-            this.CarType.Visible = false;
+            CarType.HeaderText = "Car Type";
+            CarType.Name = "CarType";
+            CarType.ReadOnly = true;
+            CarType.Visible = false;
             // 
             // RentalCompany
             // 
-            this.RentalCompany.HeaderText = "Rental Company";
-            this.RentalCompany.Name = "RentalCompany";
-            this.RentalCompany.ReadOnly = true;
-            this.RentalCompany.Visible = false;
+            RentalCompany.HeaderText = "Rental Company";
+            RentalCompany.Name = "RentalCompany";
+            RentalCompany.ReadOnly = true;
+            RentalCompany.Visible = false;
             // 
             // Days
             // 
-            this.Days.HeaderText = "Days";
-            this.Days.Name = "Days";
-            this.Days.ReadOnly = true;
-            this.Days.Visible = false;
+            Days.HeaderText = "Days";
+            Days.Name = "Days";
+            Days.ReadOnly = true;
+            Days.Visible = false;
             // 
             // TaxesAndFees
             // 
-            this.TaxesAndFees.HeaderText = "Taxes And Fees";
-            this.TaxesAndFees.Name = "TaxesAndFees";
-            this.TaxesAndFees.ReadOnly = true;
-            this.TaxesAndFees.Visible = false;
+            TaxesAndFees.HeaderText = "Taxes And Fees";
+            TaxesAndFees.Name = "TaxesAndFees";
+            TaxesAndFees.ReadOnly = true;
+            TaxesAndFees.Visible = false;
             // 
             // LDWInsurance
             // 
-            this.LDWInsurance.HeaderText = "LDW Insurance";
-            this.LDWInsurance.Name = "LDWInsurance";
-            this.LDWInsurance.ReadOnly = true;
-            this.LDWInsurance.Visible = false;
+            LDWInsurance.HeaderText = "LDW Insurance";
+            LDWInsurance.Name = "LDWInsurance";
+            LDWInsurance.ReadOnly = true;
+            LDWInsurance.Visible = false;
             // 
             // SupplementalInsurance
             // 
-            this.SupplementalInsurance.HeaderText = "Supplemental Insurance";
-            this.SupplementalInsurance.Name = "SupplementalInsurance";
-            this.SupplementalInsurance.ReadOnly = true;
-            this.SupplementalInsurance.Visible = false;
+            SupplementalInsurance.HeaderText = "Supplemental Insurance";
+            SupplementalInsurance.Name = "SupplementalInsurance";
+            SupplementalInsurance.ReadOnly = true;
+            SupplementalInsurance.Visible = false;
             // 
             // ExtraInsurance
             // 
-            this.ExtraInsurance.HeaderText = "Extra Insurance";
-            this.ExtraInsurance.Name = "ExtraInsurance";
-            this.ExtraInsurance.ReadOnly = true;
-            this.ExtraInsurance.Visible = false;
+            ExtraInsurance.HeaderText = "Extra Insurance";
+            ExtraInsurance.Name = "ExtraInsurance";
+            ExtraInsurance.ReadOnly = true;
+            ExtraInsurance.Visible = false;
             // 
             // ExtraInsuranceAmount
             // 
-            this.ExtraInsuranceAmount.HeaderText = "Extra Insurance Amount";
-            this.ExtraInsuranceAmount.Name = "ExtraInsuranceAmount";
-            this.ExtraInsuranceAmount.ReadOnly = true;
-            this.ExtraInsuranceAmount.Visible = false;
+            ExtraInsuranceAmount.HeaderText = "Extra Insurance Amount";
+            ExtraInsuranceAmount.Name = "ExtraInsuranceAmount";
+            ExtraInsuranceAmount.ReadOnly = true;
+            ExtraInsuranceAmount.Visible = false;
             // 
             // PersonalIssues
             // 
-            this.PersonalIssues.HeaderText = "Personal Issues";
-            this.PersonalIssues.Name = "PersonalIssues";
-            this.PersonalIssues.ReadOnly = true;
-            this.PersonalIssues.Visible = false;
+            PersonalIssues.HeaderText = "Personal Issues";
+            PersonalIssues.Name = "PersonalIssues";
+            PersonalIssues.ReadOnly = true;
+            PersonalIssues.Visible = false;
             // 
             // PersonalIssuesAmount
             // 
-            this.PersonalIssuesAmount.HeaderText = "Personal Issues Amount";
-            this.PersonalIssuesAmount.Name = "PersonalIssuesAmount";
-            this.PersonalIssuesAmount.ReadOnly = true;
-            this.PersonalIssuesAmount.Visible = false;
+            PersonalIssuesAmount.HeaderText = "Personal Issues Amount";
+            PersonalIssuesAmount.Name = "PersonalIssuesAmount";
+            PersonalIssuesAmount.ReadOnly = true;
+            PersonalIssuesAmount.Visible = false;
             // 
             // CarRentalID
             // 
-            this.CarRentalID.HeaderText = "CarRentalID";
-            this.CarRentalID.Name = "CarRentalID";
-            this.CarRentalID.ReadOnly = true;
-            this.CarRentalID.Visible = false;
+            CarRentalID.HeaderText = "CarRentalID";
+            CarRentalID.Name = "CarRentalID";
+            CarRentalID.ReadOnly = true;
+            CarRentalID.Visible = false;
             // 
             // Notes
             // 
-            this.Notes.HeaderText = "Notes";
-            this.Notes.Name = "Notes";
-            this.Notes.ReadOnly = true;
-            this.Notes.Visible = false;
+            Notes.HeaderText = "Notes";
+            Notes.Name = "Notes";
+            Notes.ReadOnly = true;
+            Notes.Visible = false;
             // 
             // tlEditButtons
             // 
-            this.tlEditButtons.ColumnCount = 7;
-            this.tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33834F));
-            this.tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78947F));
-            this.tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.33083F));
-            this.tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.54135F));
-            this.tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.tlEditButtons.Controls.Add(this.btnAddCar, 4, 0);
-            this.tlEditButtons.Controls.Add(this.btnDeleteCar, 2, 0);
-            this.tlEditButtons.Controls.Add(this.label1, 1, 0);
-            this.tlEditButtons.Controls.Add(this.label2, 3, 0);
-            this.tlEditButtons.Controls.Add(this.label3, 5, 0);
-            this.tlEditButtons.Controls.Add(this.btnCancelEditCar, 0, 0);
-            this.tlEditButtons.Controls.Add(this.btnEditCar, 6, 0);
-            this.tlEditButtons.Location = new System.Drawing.Point(405, 4);
-            this.tlEditButtons.Name = "tlEditButtons";
-            this.tlEditButtons.RowCount = 1;
-            this.tlEditButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlEditButtons.Size = new System.Drawing.Size(245, 48);
-            this.tlEditButtons.TabIndex = 2;
-            this.tlEditButtons.Paint += new System.Windows.Forms.PaintEventHandler(this.tlEditButtons_Paint);
+            tlEditButtons.ColumnCount = 7;
+            tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.33834F));
+            tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78947F));
+            tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.33083F));
+            tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.54135F));
+            tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            tlEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            tlEditButtons.Controls.Add(btnAddCar, 4, 0);
+            tlEditButtons.Controls.Add(btnDeleteCar, 2, 0);
+            tlEditButtons.Controls.Add(label1, 1, 0);
+            tlEditButtons.Controls.Add(label2, 3, 0);
+            tlEditButtons.Controls.Add(label3, 5, 0);
+            tlEditButtons.Controls.Add(btnCancelEditCar, 0, 0);
+            tlEditButtons.Controls.Add(btnEditCar, 6, 0);
+            tlEditButtons.Location = new System.Drawing.Point(478, 12);
+            tlEditButtons.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tlEditButtons.Name = "tlEditButtons";
+            tlEditButtons.RowCount = 1;
+            tlEditButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tlEditButtons.Size = new System.Drawing.Size(252, 48);
+            tlEditButtons.TabIndex = 2;
+            tlEditButtons.Paint += tlEditButtons_Paint;
             // 
             // btnAddCar
             // 
-            this.btnAddCar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddCar.FlatAppearance.BorderSize = 0;
-            this.btnAddCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCar.Image = global::TravelExpenses.Properties.Resources.if_add1__32378__1_;
-            this.btnAddCar.Location = new System.Drawing.Point(124, 5);
-            this.btnAddCar.Name = "btnAddCar";
-            this.btnAddCar.Size = new System.Drawing.Size(32, 38);
-            this.btnAddCar.TabIndex = 1;
-            this.btnAddCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddCar.UseVisualStyleBackColor = true;
-            this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
+            btnAddCar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnAddCar.FlatAppearance.BorderSize = 0;
+            btnAddCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnAddCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnAddCar.Image = (System.Drawing.Image)resources.GetObject("btnAddCar.Image");
+            btnAddCar.Location = new System.Drawing.Point(140, 3);
+            btnAddCar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnAddCar.Name = "btnAddCar";
+            btnAddCar.Size = new System.Drawing.Size(37, 42);
+            btnAddCar.TabIndex = 1;
+            btnAddCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnAddCar.UseVisualStyleBackColor = true;
+            btnAddCar.Click += btnAddCar_Click;
             // 
             // btnDeleteCar
             // 
-            this.btnDeleteCar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteCar.FlatAppearance.BorderSize = 0;
-            this.btnDeleteCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCar.Image = global::TravelExpenses.Properties.Resources.if_edit_delete_118920;
-            this.btnDeleteCar.Location = new System.Drawing.Point(66, 5);
-            this.btnDeleteCar.Name = "btnDeleteCar";
-            this.btnDeleteCar.Size = new System.Drawing.Size(29, 38);
-            this.btnDeleteCar.TabIndex = 2;
-            this.btnDeleteCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteCar.UseVisualStyleBackColor = true;
-            this.btnDeleteCar.Click += new System.EventHandler(this.btnDeleteCar_Click);
+            btnDeleteCar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDeleteCar.FlatAppearance.BorderSize = 0;
+            btnDeleteCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDeleteCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnDeleteCar.Image = (System.Drawing.Image)resources.GetObject("btnDeleteCar.Image");
+            btnDeleteCar.Location = new System.Drawing.Point(72, 3);
+            btnDeleteCar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDeleteCar.Name = "btnDeleteCar";
+            btnDeleteCar.Size = new System.Drawing.Size(34, 42);
+            btnDeleteCar.TabIndex = 2;
+            btnDeleteCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnDeleteCar.UseVisualStyleBackColor = true;
+            btnDeleteCar.Click += btnDeleteCar_Click;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "|";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(51, 11);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(13, 25);
+            label1.TabIndex = 4;
+            label1.Text = "|";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "|";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(115, 11);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(14, 25);
+            label2.TabIndex = 5;
+            label2.Text = "|";
+            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(164, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "|";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label3.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(189, 11);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(17, 25);
+            label3.TabIndex = 6;
+            label3.Text = "|";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCancelEditCar
             // 
-            this.btnCancelEditCar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelEditCar.FlatAppearance.BorderSize = 0;
-            this.btnCancelEditCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelEditCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelEditCar.Image = global::TravelExpenses.Properties.Resources.if_Shutdown_Box_Red_34246;
-            this.btnCancelEditCar.Location = new System.Drawing.Point(5, 5);
-            this.btnCancelEditCar.Name = "btnCancelEditCar";
-            this.btnCancelEditCar.Size = new System.Drawing.Size(32, 38);
-            this.btnCancelEditCar.TabIndex = 3;
-            this.btnCancelEditCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelEditCar.UseVisualStyleBackColor = true;
-            this.btnCancelEditCar.Click += new System.EventHandler(this.btnCancelEditCar_Click);
+            btnCancelEditCar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnCancelEditCar.FlatAppearance.BorderSize = 0;
+            btnCancelEditCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancelEditCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancelEditCar.Image = (System.Drawing.Image)resources.GetObject("btnCancelEditCar.Image");
+            btnCancelEditCar.Location = new System.Drawing.Point(5, 3);
+            btnCancelEditCar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancelEditCar.Name = "btnCancelEditCar";
+            btnCancelEditCar.Size = new System.Drawing.Size(37, 42);
+            btnCancelEditCar.TabIndex = 3;
+            btnCancelEditCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancelEditCar.UseVisualStyleBackColor = true;
+            btnCancelEditCar.Click += btnCancelEditCar_Click;
             // 
             // btnEditCar
             // 
-            this.btnEditCar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditCar.FlatAppearance.BorderSize = 0;
-            this.btnEditCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditCar.Image = global::TravelExpenses.Properties.Resources.if_General_Office_09_2530835;
-            this.btnEditCar.Location = new System.Drawing.Point(193, 5);
-            this.btnEditCar.Name = "btnEditCar";
-            this.btnEditCar.Size = new System.Drawing.Size(42, 38);
-            this.btnEditCar.TabIndex = 0;
-            this.btnEditCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditCar.UseVisualStyleBackColor = true;
-            this.btnEditCar.Click += new System.EventHandler(this.btnEditCar_Click);
+            btnEditCar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditCar.FlatAppearance.BorderSize = 0;
+            btnEditCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnEditCar.Image = (System.Drawing.Image)resources.GetObject("btnEditCar.Image");
+            btnEditCar.Location = new System.Drawing.Point(214, 3);
+            btnEditCar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditCar.Name = "btnEditCar";
+            btnEditCar.Size = new System.Drawing.Size(34, 42);
+            btnEditCar.TabIndex = 0;
+            btnEditCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnEditCar.UseVisualStyleBackColor = true;
+            btnEditCar.Click += btnEditCar_Click;
             // 
             // pCarData
             // 
-            this.pCarData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pCarData.Controls.Add(this.tableLayoutPanel3);
-            this.pCarData.Controls.Add(this.pPersonalIssuesAmount);
-            this.pCarData.Controls.Add(this.panel2);
-            this.pCarData.Controls.Add(this.panel1);
-            this.pCarData.Controls.Add(this.tableLayoutPanel2);
-            this.pCarData.Controls.Add(this.lblTaxesAndFees);
-            this.pCarData.Controls.Add(this.txtExtraInsuranceAmount);
-            this.pCarData.Controls.Add(this.lblExtraInsuranceAmount);
-            this.pCarData.Controls.Add(this.chxExtraInsurance);
-            this.pCarData.Controls.Add(this.lblExtraInsurance);
-            this.pCarData.Controls.Add(this.txtTaxesAndFees);
-            this.pCarData.Controls.Add(this.txtSupplementalInsurance);
-            this.pCarData.Controls.Add(this.lblSupplementalInsurance);
-            this.pCarData.Controls.Add(this.lblLDWInsurance);
-            this.pCarData.Controls.Add(this.txtLDWInsurance);
-            this.pCarData.Location = new System.Drawing.Point(26, 185);
-            this.pCarData.Name = "pCarData";
-            this.pCarData.Size = new System.Drawing.Size(614, 456);
-            this.pCarData.TabIndex = 3;
-            this.pCarData.Paint += new System.Windows.Forms.PaintEventHandler(this.pCarData_Paint);
+            pCarData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pCarData.Controls.Add(tableLayoutPanel3);
+            pCarData.Controls.Add(pPersonalIssuesAmount);
+            pCarData.Controls.Add(panel2);
+            pCarData.Controls.Add(panel1);
+            pCarData.Controls.Add(tableLayoutPanel2);
+            pCarData.Controls.Add(lblTaxesAndFees);
+            pCarData.Controls.Add(txtExtraInsuranceAmount);
+            pCarData.Controls.Add(lblExtraInsuranceAmount);
+            pCarData.Controls.Add(chxExtraInsurance);
+            pCarData.Controls.Add(lblExtraInsurance);
+            pCarData.Controls.Add(txtTaxesAndFees);
+            pCarData.Controls.Add(txtSupplementalInsurance);
+            pCarData.Controls.Add(lblSupplementalInsurance);
+            pCarData.Controls.Add(lblLDWInsurance);
+            pCarData.Controls.Add(txtLDWInsurance);
+            pCarData.Location = new System.Drawing.Point(16, 213);
+            pCarData.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pCarData.Name = "pCarData";
+            pCarData.Size = new System.Drawing.Size(716, 430);
+            pCarData.TabIndex = 3;
+            pCarData.Paint += pCarData_Paint;
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.32076F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.67924F));
-            this.tableLayoutPanel3.Controls.Add(this.lblNotes, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.txtNotes, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(69, 383);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(477, 39);
-            this.tableLayoutPanel3.TabIndex = 4;
+            tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.32076F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.67924F));
+            tableLayoutPanel3.Controls.Add(lblNotes, 0, 0);
+            tableLayoutPanel3.Controls.Add(txtNotes, 1, 0);
+            tableLayoutPanel3.Location = new System.Drawing.Point(80, 362);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(556, 45);
+            tableLayoutPanel3.TabIndex = 4;
             // 
             // lblNotes
             // 
-            this.lblNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNotes.AutoSize = true;
-            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotes.Location = new System.Drawing.Point(4, 13);
-            this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(47, 13);
-            this.lblNotes.TabIndex = 0;
-            this.lblNotes.Text = "Notes:";
+            lblNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblNotes.AutoSize = true;
+            lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblNotes.Location = new System.Drawing.Point(5, 16);
+            lblNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new System.Drawing.Size(54, 13);
+            lblNotes.TabIndex = 0;
+            lblNotes.Text = "Notes:";
             // 
             // txtNotes
             // 
-            this.txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNotes.Location = new System.Drawing.Point(58, 4);
-            this.txtNotes.Multiline = true;
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNotes.Size = new System.Drawing.Size(415, 31);
-            this.txtNotes.TabIndex = 1;
+            txtNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtNotes.Location = new System.Drawing.Point(68, 5);
+            txtNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtNotes.Multiline = true;
+            txtNotes.Name = "txtNotes";
+            txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtNotes.Size = new System.Drawing.Size(483, 35);
+            txtNotes.TabIndex = 1;
             // 
             // pPersonalIssuesAmount
             // 
-            this.pPersonalIssuesAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pPersonalIssuesAmount.Controls.Add(this.txtPersonalUseAmount);
-            this.pPersonalIssuesAmount.Controls.Add(this.lblPersonalIssuesAmount);
-            this.pPersonalIssuesAmount.Enabled = false;
-            this.pPersonalIssuesAmount.Location = new System.Drawing.Point(69, 352);
-            this.pPersonalIssuesAmount.Name = "pPersonalIssuesAmount";
-            this.pPersonalIssuesAmount.Size = new System.Drawing.Size(477, 28);
-            this.pPersonalIssuesAmount.TabIndex = 3;
+            pPersonalIssuesAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pPersonalIssuesAmount.Controls.Add(txtPersonalUseAmount);
+            pPersonalIssuesAmount.Controls.Add(lblPersonalIssuesAmount);
+            pPersonalIssuesAmount.Enabled = false;
+            pPersonalIssuesAmount.Location = new System.Drawing.Point(80, 326);
+            pPersonalIssuesAmount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pPersonalIssuesAmount.Name = "pPersonalIssuesAmount";
+            pPersonalIssuesAmount.Size = new System.Drawing.Size(556, 32);
+            pPersonalIssuesAmount.TabIndex = 3;
             // 
             // txtPersonalUseAmount
             // 
-            this.txtPersonalUseAmount.Location = new System.Drawing.Point(376, 3);
-            this.txtPersonalUseAmount.Name = "txtPersonalUseAmount";
-            this.txtPersonalUseAmount.Size = new System.Drawing.Size(88, 20);
-            this.txtPersonalUseAmount.TabIndex = 1;
-            this.txtPersonalUseAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPersonalUseAmount_KeyPress);
+            txtPersonalUseAmount.Location = new System.Drawing.Point(439, 3);
+            txtPersonalUseAmount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtPersonalUseAmount.Name = "txtPersonalUseAmount";
+            txtPersonalUseAmount.Size = new System.Drawing.Size(102, 23);
+            txtPersonalUseAmount.TabIndex = 1;
+            txtPersonalUseAmount.KeyPress += txtPersonalUseAmount_KeyPress;
             // 
             // lblPersonalIssuesAmount
             // 
-            this.lblPersonalIssuesAmount.AutoSize = true;
-            this.lblPersonalIssuesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonalIssuesAmount.Location = new System.Drawing.Point(6, 7);
-            this.lblPersonalIssuesAmount.Name = "lblPersonalIssuesAmount";
-            this.lblPersonalIssuesAmount.Size = new System.Drawing.Size(353, 13);
-            this.lblPersonalIssuesAmount.TabIndex = 0;
-            this.lblPersonalIssuesAmount.Text = "Please provide the amount that you used for personal issues:";
+            lblPersonalIssuesAmount.AutoSize = true;
+            lblPersonalIssuesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblPersonalIssuesAmount.Location = new System.Drawing.Point(7, 8);
+            lblPersonalIssuesAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblPersonalIssuesAmount.Name = "lblPersonalIssuesAmount";
+            lblPersonalIssuesAmount.Size = new System.Drawing.Size(353, 13);
+            lblPersonalIssuesAmount.TabIndex = 0;
+            lblPersonalIssuesAmount.Text = "Please provide the amount that you used for personal issues:";
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.rbNoPersonalIssues);
-            this.panel2.Controls.Add(this.rbYesPeronalIssues);
-            this.panel2.Controls.Add(this.lblPesonalIssues);
-            this.panel2.Location = new System.Drawing.Point(69, 319);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(477, 27);
-            this.panel2.TabIndex = 2;
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(rbNoPersonalIssues);
+            panel2.Controls.Add(rbYesPeronalIssues);
+            panel2.Controls.Add(lblPesonalIssues);
+            panel2.Location = new System.Drawing.Point(80, 288);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(556, 31);
+            panel2.TabIndex = 2;
             // 
             // rbNoPersonalIssues
             // 
-            this.rbNoPersonalIssues.AutoSize = true;
-            this.rbNoPersonalIssues.Location = new System.Drawing.Point(429, 4);
-            this.rbNoPersonalIssues.Name = "rbNoPersonalIssues";
-            this.rbNoPersonalIssues.Size = new System.Drawing.Size(39, 17);
-            this.rbNoPersonalIssues.TabIndex = 2;
-            this.rbNoPersonalIssues.TabStop = true;
-            this.rbNoPersonalIssues.Text = "No";
-            this.rbNoPersonalIssues.UseVisualStyleBackColor = true;
-            this.rbNoPersonalIssues.CheckedChanged += new System.EventHandler(this.rbNoPersonalIssues_CheckedChanged);
+            rbNoPersonalIssues.AutoSize = true;
+            rbNoPersonalIssues.Location = new System.Drawing.Point(500, 5);
+            rbNoPersonalIssues.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbNoPersonalIssues.Name = "rbNoPersonalIssues";
+            rbNoPersonalIssues.Size = new System.Drawing.Size(41, 19);
+            rbNoPersonalIssues.TabIndex = 2;
+            rbNoPersonalIssues.TabStop = true;
+            rbNoPersonalIssues.Text = "No";
+            rbNoPersonalIssues.UseVisualStyleBackColor = true;
+            rbNoPersonalIssues.CheckedChanged += rbNoPersonalIssues_CheckedChanged;
             // 
             // rbYesPeronalIssues
             // 
-            this.rbYesPeronalIssues.AutoSize = true;
-            this.rbYesPeronalIssues.Location = new System.Drawing.Point(376, 4);
-            this.rbYesPeronalIssues.Name = "rbYesPeronalIssues";
-            this.rbYesPeronalIssues.Size = new System.Drawing.Size(43, 17);
-            this.rbYesPeronalIssues.TabIndex = 1;
-            this.rbYesPeronalIssues.TabStop = true;
-            this.rbYesPeronalIssues.Text = "Yes";
-            this.rbYesPeronalIssues.UseVisualStyleBackColor = true;
-            this.rbYesPeronalIssues.CheckedChanged += new System.EventHandler(this.rbYesPeronalIssues_CheckedChanged);
+            rbYesPeronalIssues.AutoSize = true;
+            rbYesPeronalIssues.Location = new System.Drawing.Point(439, 5);
+            rbYesPeronalIssues.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbYesPeronalIssues.Name = "rbYesPeronalIssues";
+            rbYesPeronalIssues.Size = new System.Drawing.Size(42, 19);
+            rbYesPeronalIssues.TabIndex = 1;
+            rbYesPeronalIssues.TabStop = true;
+            rbYesPeronalIssues.Text = "Yes";
+            rbYesPeronalIssues.UseVisualStyleBackColor = true;
+            rbYesPeronalIssues.CheckedChanged += rbYesPeronalIssues_CheckedChanged;
             // 
             // lblPesonalIssues
             // 
-            this.lblPesonalIssues.AutoSize = true;
-            this.lblPesonalIssues.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesonalIssues.Location = new System.Drawing.Point(6, 7);
-            this.lblPesonalIssues.Name = "lblPesonalIssues";
-            this.lblPesonalIssues.Size = new System.Drawing.Size(310, 13);
-            this.lblPesonalIssues.TabIndex = 0;
-            this.lblPesonalIssues.Text = "Did you use any of the car rental for personal issues?";
+            lblPesonalIssues.AutoSize = true;
+            lblPesonalIssues.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblPesonalIssues.Location = new System.Drawing.Point(7, 8);
+            lblPesonalIssues.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblPesonalIssues.Name = "lblPesonalIssues";
+            lblPesonalIssues.Size = new System.Drawing.Size(310, 13);
+            lblPesonalIssues.TabIndex = 0;
+            lblPesonalIssues.Text = "Did you use any of the car rental for personal issues?";
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.rbNoDistrictPay);
-            this.panel1.Controls.Add(this.rbYesDistrictPay);
-            this.panel1.Controls.Add(this.lblDistrictPay);
-            this.panel1.Location = new System.Drawing.Point(69, 287);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(477, 26);
-            this.panel1.TabIndex = 1;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(rbNoDistrictPay);
+            panel1.Controls.Add(rbYesDistrictPay);
+            panel1.Controls.Add(lblDistrictPay);
+            panel1.Location = new System.Drawing.Point(80, 251);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(556, 30);
+            panel1.TabIndex = 1;
             // 
             // rbNoDistrictPay
             // 
-            this.rbNoDistrictPay.AutoSize = true;
-            this.rbNoDistrictPay.Location = new System.Drawing.Point(429, 4);
-            this.rbNoDistrictPay.Name = "rbNoDistrictPay";
-            this.rbNoDistrictPay.Size = new System.Drawing.Size(39, 17);
-            this.rbNoDistrictPay.TabIndex = 2;
-            this.rbNoDistrictPay.TabStop = true;
-            this.rbNoDistrictPay.Text = "No";
-            this.rbNoDistrictPay.UseVisualStyleBackColor = true;
+            rbNoDistrictPay.AutoSize = true;
+            rbNoDistrictPay.Location = new System.Drawing.Point(500, 5);
+            rbNoDistrictPay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbNoDistrictPay.Name = "rbNoDistrictPay";
+            rbNoDistrictPay.Size = new System.Drawing.Size(41, 19);
+            rbNoDistrictPay.TabIndex = 2;
+            rbNoDistrictPay.TabStop = true;
+            rbNoDistrictPay.Text = "No";
+            rbNoDistrictPay.UseVisualStyleBackColor = true;
             // 
             // rbYesDistrictPay
             // 
-            this.rbYesDistrictPay.AutoSize = true;
-            this.rbYesDistrictPay.Location = new System.Drawing.Point(376, 3);
-            this.rbYesDistrictPay.Name = "rbYesDistrictPay";
-            this.rbYesDistrictPay.Size = new System.Drawing.Size(43, 17);
-            this.rbYesDistrictPay.TabIndex = 1;
-            this.rbYesDistrictPay.TabStop = true;
-            this.rbYesDistrictPay.Text = "Yes";
-            this.rbYesDistrictPay.UseVisualStyleBackColor = true;
+            rbYesDistrictPay.AutoSize = true;
+            rbYesDistrictPay.Location = new System.Drawing.Point(439, 3);
+            rbYesDistrictPay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbYesDistrictPay.Name = "rbYesDistrictPay";
+            rbYesDistrictPay.Size = new System.Drawing.Size(42, 19);
+            rbYesDistrictPay.TabIndex = 1;
+            rbYesDistrictPay.TabStop = true;
+            rbYesDistrictPay.Text = "Yes";
+            rbYesDistrictPay.UseVisualStyleBackColor = true;
             // 
             // lblDistrictPay
             // 
-            this.lblDistrictPay.AutoSize = true;
-            this.lblDistrictPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrictPay.Location = new System.Drawing.Point(6, 6);
-            this.lblDistrictPay.Name = "lblDistrictPay";
-            this.lblDistrictPay.Size = new System.Drawing.Size(226, 13);
-            this.lblDistrictPay.TabIndex = 0;
-            this.lblDistrictPay.Text = "Did the district pay for your car rental?";
+            lblDistrictPay.AutoSize = true;
+            lblDistrictPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDistrictPay.Location = new System.Drawing.Point(7, 7);
+            lblDistrictPay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDistrictPay.Name = "lblDistrictPay";
+            lblDistrictPay.Size = new System.Drawing.Size(226, 13);
+            lblDistrictPay.TabIndex = 0;
+            lblDistrictPay.Text = "Did the district pay for your car rental?";
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.34837F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.65163F));
-            this.tableLayoutPanel2.Controls.Add(this.lblPickUpDate, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblDropOffDate, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblCarType, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lblRentalCompany, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lblDays, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lblCarCost, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.dtpPickUpDate, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dtpDropOffDate, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.cbCarType, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.cbRentalCompany, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.nudDays, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtCarCost, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.lblTotal, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.txtTotalCar, 1, 6);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(112, 39);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 7;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(399, 239);
-            this.tableLayoutPanel2.TabIndex = 0;
+            tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.34837F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.65163F));
+            tableLayoutPanel2.Controls.Add(lblPickUpDate, 0, 0);
+            tableLayoutPanel2.Controls.Add(lblDropOffDate, 0, 1);
+            tableLayoutPanel2.Controls.Add(lblCarType, 0, 2);
+            tableLayoutPanel2.Controls.Add(lblRentalCompany, 0, 3);
+            tableLayoutPanel2.Controls.Add(lblDays, 0, 4);
+            tableLayoutPanel2.Controls.Add(lblCarCost, 0, 5);
+            tableLayoutPanel2.Controls.Add(dtpPickUpDate, 1, 0);
+            tableLayoutPanel2.Controls.Add(dtpDropOffDate, 1, 1);
+            tableLayoutPanel2.Controls.Add(cbCarType, 1, 2);
+            tableLayoutPanel2.Controls.Add(cbRentalCompany, 1, 3);
+            tableLayoutPanel2.Controls.Add(nudDays, 1, 4);
+            tableLayoutPanel2.Controls.Add(txtCarCost, 1, 5);
+            tableLayoutPanel2.Controls.Add(lblTotal, 0, 6);
+            tableLayoutPanel2.Controls.Add(txtTotalCar, 1, 6);
+            tableLayoutPanel2.Location = new System.Drawing.Point(131, 7);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 7;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(465, 233);
+            tableLayoutPanel2.TabIndex = 0;
             // 
             // lblPickUpDate
             // 
-            this.lblPickUpDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPickUpDate.AutoSize = true;
-            this.lblPickUpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPickUpDate.Location = new System.Drawing.Point(4, 10);
-            this.lblPickUpDate.Name = "lblPickUpDate";
-            this.lblPickUpDate.Size = new System.Drawing.Size(149, 13);
-            this.lblPickUpDate.TabIndex = 0;
-            this.lblPickUpDate.Text = "Pick Up Date:";
+            lblPickUpDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblPickUpDate.AutoSize = true;
+            lblPickUpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblPickUpDate.Location = new System.Drawing.Point(5, 10);
+            lblPickUpDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblPickUpDate.Name = "lblPickUpDate";
+            lblPickUpDate.Size = new System.Drawing.Size(173, 13);
+            lblPickUpDate.TabIndex = 0;
+            lblPickUpDate.Text = "Pick Up Date:";
             // 
             // lblDropOffDate
             // 
-            this.lblDropOffDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDropOffDate.AutoSize = true;
-            this.lblDropOffDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDropOffDate.Location = new System.Drawing.Point(4, 44);
-            this.lblDropOffDate.Name = "lblDropOffDate";
-            this.lblDropOffDate.Size = new System.Drawing.Size(149, 13);
-            this.lblDropOffDate.TabIndex = 1;
-            this.lblDropOffDate.Text = "Drop Off Date:";
+            lblDropOffDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDropOffDate.AutoSize = true;
+            lblDropOffDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDropOffDate.Location = new System.Drawing.Point(5, 43);
+            lblDropOffDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDropOffDate.Name = "lblDropOffDate";
+            lblDropOffDate.Size = new System.Drawing.Size(173, 13);
+            lblDropOffDate.TabIndex = 1;
+            lblDropOffDate.Text = "Drop Off Date:";
             // 
             // lblCarType
             // 
-            this.lblCarType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCarType.AutoSize = true;
-            this.lblCarType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarType.Location = new System.Drawing.Point(4, 78);
-            this.lblCarType.Name = "lblCarType";
-            this.lblCarType.Size = new System.Drawing.Size(149, 13);
-            this.lblCarType.TabIndex = 2;
-            this.lblCarType.Text = "Car Type:";
+            lblCarType.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblCarType.AutoSize = true;
+            lblCarType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblCarType.Location = new System.Drawing.Point(5, 76);
+            lblCarType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblCarType.Name = "lblCarType";
+            lblCarType.Size = new System.Drawing.Size(173, 13);
+            lblCarType.TabIndex = 2;
+            lblCarType.Text = "Car Type:";
             // 
             // lblRentalCompany
             // 
-            this.lblRentalCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRentalCompany.AutoSize = true;
-            this.lblRentalCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRentalCompany.Location = new System.Drawing.Point(4, 112);
-            this.lblRentalCompany.Name = "lblRentalCompany";
-            this.lblRentalCompany.Size = new System.Drawing.Size(149, 13);
-            this.lblRentalCompany.TabIndex = 3;
-            this.lblRentalCompany.Text = "Rental Company:";
+            lblRentalCompany.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblRentalCompany.AutoSize = true;
+            lblRentalCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblRentalCompany.Location = new System.Drawing.Point(5, 109);
+            lblRentalCompany.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblRentalCompany.Name = "lblRentalCompany";
+            lblRentalCompany.Size = new System.Drawing.Size(173, 13);
+            lblRentalCompany.TabIndex = 3;
+            lblRentalCompany.Text = "Rental Company:";
             // 
             // lblDays
             // 
-            this.lblDays.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDays.AutoSize = true;
-            this.lblDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDays.Location = new System.Drawing.Point(4, 146);
-            this.lblDays.Name = "lblDays";
-            this.lblDays.Size = new System.Drawing.Size(149, 13);
-            this.lblDays.TabIndex = 4;
-            this.lblDays.Text = "Days:";
+            lblDays.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDays.AutoSize = true;
+            lblDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDays.Location = new System.Drawing.Point(5, 142);
+            lblDays.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDays.Name = "lblDays";
+            lblDays.Size = new System.Drawing.Size(173, 13);
+            lblDays.TabIndex = 4;
+            lblDays.Text = "Days:";
             // 
             // lblCarCost
             // 
-            this.lblCarCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCarCost.AutoSize = true;
-            this.lblCarCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarCost.Location = new System.Drawing.Point(4, 180);
-            this.lblCarCost.Name = "lblCarCost";
-            this.lblCarCost.Size = new System.Drawing.Size(149, 13);
-            this.lblCarCost.TabIndex = 5;
-            this.lblCarCost.Text = "Car Cost:";
+            lblCarCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblCarCost.AutoSize = true;
+            lblCarCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblCarCost.Location = new System.Drawing.Point(5, 175);
+            lblCarCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblCarCost.Name = "lblCarCost";
+            lblCarCost.Size = new System.Drawing.Size(173, 13);
+            lblCarCost.TabIndex = 5;
+            lblCarCost.Text = "Car Cost:";
             // 
             // dtpPickUpDate
             // 
-            this.dtpPickUpDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpPickUpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPickUpDate.Location = new System.Drawing.Point(160, 7);
-            this.dtpPickUpDate.Name = "dtpPickUpDate";
-            this.dtpPickUpDate.Size = new System.Drawing.Size(235, 20);
-            this.dtpPickUpDate.TabIndex = 12;
-            this.dtpPickUpDate.ValueChanged += new System.EventHandler(this.dtpPickUpDate_ValueChanged);
+            dtpPickUpDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtpPickUpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpPickUpDate.Location = new System.Drawing.Point(187, 5);
+            dtpPickUpDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpPickUpDate.Name = "dtpPickUpDate";
+            dtpPickUpDate.Size = new System.Drawing.Size(273, 23);
+            dtpPickUpDate.TabIndex = 12;
+            dtpPickUpDate.ValueChanged += dtpPickUpDate_ValueChanged;
             // 
             // dtpDropOffDate
             // 
-            this.dtpDropOffDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDropOffDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDropOffDate.Location = new System.Drawing.Point(160, 40);
-            this.dtpDropOffDate.Name = "dtpDropOffDate";
-            this.dtpDropOffDate.Size = new System.Drawing.Size(235, 20);
-            this.dtpDropOffDate.TabIndex = 13;
-            this.dtpDropOffDate.ValueChanged += new System.EventHandler(this.dtpDropOffDate_ValueChanged);
+            dtpDropOffDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtpDropOffDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpDropOffDate.Location = new System.Drawing.Point(187, 38);
+            dtpDropOffDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpDropOffDate.Name = "dtpDropOffDate";
+            dtpDropOffDate.Size = new System.Drawing.Size(273, 23);
+            dtpDropOffDate.TabIndex = 13;
+            dtpDropOffDate.ValueChanged += dtpDropOffDate_ValueChanged;
             // 
             // cbCarType
             // 
-            this.cbCarType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbCarType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCarType.FormattingEnabled = true;
-            this.cbCarType.Items.AddRange(new object[] {
-            "compact",
-            "mid-size"});
-            this.cbCarType.Location = new System.Drawing.Point(160, 74);
-            this.cbCarType.Name = "cbCarType";
-            this.cbCarType.Size = new System.Drawing.Size(235, 21);
-            this.cbCarType.TabIndex = 14;
+            cbCarType.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbCarType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbCarType.FormattingEnabled = true;
+            cbCarType.Items.AddRange(new object[] { "compact", "mid-size" });
+            cbCarType.Location = new System.Drawing.Point(187, 71);
+            cbCarType.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbCarType.Name = "cbCarType";
+            cbCarType.Size = new System.Drawing.Size(273, 23);
+            cbCarType.TabIndex = 14;
             // 
             // cbRentalCompany
             // 
-            this.cbRentalCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbRentalCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRentalCompany.FormattingEnabled = true;
-            this.cbRentalCompany.Items.AddRange(new object[] {
-            "Enterprise",
-            "National",
-            "Other"});
-            this.cbRentalCompany.Location = new System.Drawing.Point(160, 108);
-            this.cbRentalCompany.Name = "cbRentalCompany";
-            this.cbRentalCompany.Size = new System.Drawing.Size(235, 21);
-            this.cbRentalCompany.TabIndex = 15;
+            cbRentalCompany.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbRentalCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbRentalCompany.FormattingEnabled = true;
+            cbRentalCompany.Items.AddRange(new object[] { "Enterprise", "National", "Other" });
+            cbRentalCompany.Location = new System.Drawing.Point(187, 104);
+            cbRentalCompany.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbRentalCompany.Name = "cbRentalCompany";
+            cbRentalCompany.Size = new System.Drawing.Size(273, 23);
+            cbRentalCompany.TabIndex = 15;
             // 
             // nudDays
             // 
-            this.nudDays.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudDays.Location = new System.Drawing.Point(160, 142);
-            this.nudDays.Name = "nudDays";
-            this.nudDays.ReadOnly = true;
-            this.nudDays.Size = new System.Drawing.Size(235, 20);
-            this.nudDays.TabIndex = 16;
-            this.nudDays.ValueChanged += new System.EventHandler(this.nudDays_ValueChanged);
-            this.nudDays.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nudDays_KeyUp);
+            nudDays.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            nudDays.Location = new System.Drawing.Point(187, 137);
+            nudDays.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            nudDays.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            nudDays.Name = "nudDays";
+            nudDays.ReadOnly = true;
+            nudDays.Size = new System.Drawing.Size(273, 23);
+            nudDays.TabIndex = 16;
+            nudDays.ValueChanged += nudDays_ValueChanged;
+            nudDays.KeyUp += nudDays_KeyUp;
             // 
             // txtCarCost
             // 
-            this.txtCarCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCarCost.Location = new System.Drawing.Point(160, 176);
-            this.txtCarCost.Name = "txtCarCost";
-            this.txtCarCost.Size = new System.Drawing.Size(235, 20);
-            this.txtCarCost.TabIndex = 17;
-            this.txtCarCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarCost_KeyPress);
-            this.txtCarCost.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCarCost_KeyUp);
+            txtCarCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtCarCost.Location = new System.Drawing.Point(187, 170);
+            txtCarCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtCarCost.Name = "txtCarCost";
+            txtCarCost.Size = new System.Drawing.Size(273, 23);
+            txtCarCost.TabIndex = 17;
+            txtCarCost.KeyPress += txtCarCost_KeyPress;
+            txtCarCost.KeyUp += txtCarCost_KeyUp;
             // 
             // lblTotal
             // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(4, 214);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(149, 13);
-            this.lblTotal.TabIndex = 11;
-            this.lblTotal.Text = "Total:";
+            lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTotal.AutoSize = true;
+            lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTotal.Location = new System.Drawing.Point(5, 209);
+            lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new System.Drawing.Size(173, 13);
+            lblTotal.TabIndex = 11;
+            lblTotal.Text = "Total:";
             // 
             // txtTotalCar
             // 
-            this.txtTotalCar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotalCar.Location = new System.Drawing.Point(160, 211);
-            this.txtTotalCar.Name = "txtTotalCar";
-            this.txtTotalCar.Size = new System.Drawing.Size(235, 20);
-            this.txtTotalCar.TabIndex = 23;
-            this.txtTotalCar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalCar_KeyPress);
+            txtTotalCar.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtTotalCar.Location = new System.Drawing.Point(187, 204);
+            txtTotalCar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtTotalCar.Name = "txtTotalCar";
+            txtTotalCar.Size = new System.Drawing.Size(273, 23);
+            txtTotalCar.TabIndex = 23;
+            txtTotalCar.TextChanged += txtTotalCar_TextChanged;
+            txtTotalCar.KeyPress += txtTotalCar_KeyPress;
+            txtTotalCar.KeyUp += txtTotalCar_KeyUp;
             // 
             // lblTaxesAndFees
             // 
-            this.lblTaxesAndFees.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTaxesAndFees.AutoSize = true;
-            this.lblTaxesAndFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaxesAndFees.Location = new System.Drawing.Point(5, 8);
-            this.lblTaxesAndFees.Name = "lblTaxesAndFees";
-            this.lblTaxesAndFees.Size = new System.Drawing.Size(101, 13);
-            this.lblTaxesAndFees.TabIndex = 6;
-            this.lblTaxesAndFees.Text = "Taxes and Fees:";
-            this.lblTaxesAndFees.Visible = false;
+            lblTaxesAndFees.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTaxesAndFees.AutoSize = true;
+            lblTaxesAndFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTaxesAndFees.Location = new System.Drawing.Point(6, -39);
+            lblTaxesAndFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTaxesAndFees.Name = "lblTaxesAndFees";
+            lblTaxesAndFees.Size = new System.Drawing.Size(101, 13);
+            lblTaxesAndFees.TabIndex = 6;
+            lblTaxesAndFees.Text = "Taxes and Fees:";
+            lblTaxesAndFees.Visible = false;
             // 
             // txtExtraInsuranceAmount
             // 
-            this.txtExtraInsuranceAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtExtraInsuranceAmount.Enabled = false;
-            this.txtExtraInsuranceAmount.Location = new System.Drawing.Point(202, 428);
-            this.txtExtraInsuranceAmount.Name = "txtExtraInsuranceAmount";
-            this.txtExtraInsuranceAmount.Size = new System.Drawing.Size(34, 20);
-            this.txtExtraInsuranceAmount.TabIndex = 22;
-            this.txtExtraInsuranceAmount.Visible = false;
-            this.txtExtraInsuranceAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExtraInsuranceAmount_KeyPress);
-            this.txtExtraInsuranceAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtExtraInsuranceAmount_KeyUp);
+            txtExtraInsuranceAmount.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtExtraInsuranceAmount.Enabled = false;
+            txtExtraInsuranceAmount.Location = new System.Drawing.Point(34, 139);
+            txtExtraInsuranceAmount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtExtraInsuranceAmount.Name = "txtExtraInsuranceAmount";
+            txtExtraInsuranceAmount.Size = new System.Drawing.Size(39, 23);
+            txtExtraInsuranceAmount.TabIndex = 22;
+            txtExtraInsuranceAmount.Visible = false;
+            txtExtraInsuranceAmount.KeyPress += txtExtraInsuranceAmount_KeyPress;
+            txtExtraInsuranceAmount.KeyUp += txtExtraInsuranceAmount_KeyUp;
             // 
             // lblExtraInsuranceAmount
             // 
-            this.lblExtraInsuranceAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblExtraInsuranceAmount.AutoSize = true;
-            this.lblExtraInsuranceAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExtraInsuranceAmount.Location = new System.Drawing.Point(54, 431);
-            this.lblExtraInsuranceAmount.Name = "lblExtraInsuranceAmount";
-            this.lblExtraInsuranceAmount.Size = new System.Drawing.Size(146, 13);
-            this.lblExtraInsuranceAmount.TabIndex = 10;
-            this.lblExtraInsuranceAmount.Text = "Extra Insurance Amount:";
-            this.lblExtraInsuranceAmount.Visible = false;
+            lblExtraInsuranceAmount.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblExtraInsuranceAmount.AutoSize = true;
+            lblExtraInsuranceAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblExtraInsuranceAmount.Location = new System.Drawing.Point(9, 123);
+            lblExtraInsuranceAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblExtraInsuranceAmount.Name = "lblExtraInsuranceAmount";
+            lblExtraInsuranceAmount.Size = new System.Drawing.Size(114, 13);
+            lblExtraInsuranceAmount.TabIndex = 10;
+            lblExtraInsuranceAmount.Text = "Extra Insu Amount:";
+            lblExtraInsuranceAmount.Visible = false;
             // 
             // chxExtraInsurance
             // 
-            this.chxExtraInsurance.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.chxExtraInsurance.AutoSize = true;
-            this.chxExtraInsurance.Location = new System.Drawing.Point(526, 9);
-            this.chxExtraInsurance.Name = "chxExtraInsurance";
-            this.chxExtraInsurance.Size = new System.Drawing.Size(15, 14);
-            this.chxExtraInsurance.TabIndex = 21;
-            this.chxExtraInsurance.UseVisualStyleBackColor = true;
-            this.chxExtraInsurance.Visible = false;
-            this.chxExtraInsurance.CheckedChanged += new System.EventHandler(this.chxExtraInsurance_CheckedChanged);
+            chxExtraInsurance.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            chxExtraInsurance.AutoSize = true;
+            chxExtraInsurance.Location = new System.Drawing.Point(104, 91);
+            chxExtraInsurance.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxExtraInsurance.Name = "chxExtraInsurance";
+            chxExtraInsurance.Size = new System.Drawing.Size(15, 14);
+            chxExtraInsurance.TabIndex = 21;
+            chxExtraInsurance.UseVisualStyleBackColor = true;
+            chxExtraInsurance.Visible = false;
+            chxExtraInsurance.CheckedChanged += chxExtraInsurance_CheckedChanged;
             // 
             // lblExtraInsurance
             // 
-            this.lblExtraInsurance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblExtraInsurance.AutoSize = true;
-            this.lblExtraInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExtraInsurance.Location = new System.Drawing.Point(423, 8);
-            this.lblExtraInsurance.Name = "lblExtraInsurance";
-            this.lblExtraInsurance.Size = new System.Drawing.Size(100, 13);
-            this.lblExtraInsurance.TabIndex = 9;
-            this.lblExtraInsurance.Text = "Extra Insurance:";
-            this.lblExtraInsurance.Visible = false;
+            lblExtraInsurance.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblExtraInsurance.AutoSize = true;
+            lblExtraInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblExtraInsurance.Location = new System.Drawing.Point(7, 91);
+            lblExtraInsurance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblExtraInsurance.Name = "lblExtraInsurance";
+            lblExtraInsurance.Size = new System.Drawing.Size(100, 13);
+            lblExtraInsurance.TabIndex = 9;
+            lblExtraInsurance.Text = "Extra Insurance:";
+            lblExtraInsurance.Visible = false;
             // 
             // txtTaxesAndFees
             // 
-            this.txtTaxesAndFees.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTaxesAndFees.Location = new System.Drawing.Point(106, 5);
-            this.txtTaxesAndFees.Name = "txtTaxesAndFees";
-            this.txtTaxesAndFees.Size = new System.Drawing.Size(16, 20);
-            this.txtTaxesAndFees.TabIndex = 18;
-            this.txtTaxesAndFees.Text = "0";
-            this.txtTaxesAndFees.Visible = false;
-            this.txtTaxesAndFees.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxesAndFees_KeyPress);
-            this.txtTaxesAndFees.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTaxesAndFees_KeyUp);
+            txtTaxesAndFees.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtTaxesAndFees.Location = new System.Drawing.Point(105, -39);
+            txtTaxesAndFees.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtTaxesAndFees.Name = "txtTaxesAndFees";
+            txtTaxesAndFees.Size = new System.Drawing.Size(18, 23);
+            txtTaxesAndFees.TabIndex = 18;
+            txtTaxesAndFees.Text = "0";
+            txtTaxesAndFees.Visible = false;
+            txtTaxesAndFees.KeyPress += txtTaxesAndFees_KeyPress;
+            txtTaxesAndFees.KeyUp += txtTaxesAndFees_KeyUp;
             // 
             // txtSupplementalInsurance
             // 
-            this.txtSupplementalInsurance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSupplementalInsurance.Location = new System.Drawing.Point(400, 6);
-            this.txtSupplementalInsurance.Name = "txtSupplementalInsurance";
-            this.txtSupplementalInsurance.Size = new System.Drawing.Size(17, 20);
-            this.txtSupplementalInsurance.TabIndex = 20;
-            this.txtSupplementalInsurance.Text = "0";
-            this.txtSupplementalInsurance.Visible = false;
-            this.txtSupplementalInsurance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSupplementalInsurance_KeyPress);
-            this.txtSupplementalInsurance.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSupplementalInsurance_KeyUp);
+            txtSupplementalInsurance.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtSupplementalInsurance.Location = new System.Drawing.Point(88, 51);
+            txtSupplementalInsurance.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtSupplementalInsurance.Name = "txtSupplementalInsurance";
+            txtSupplementalInsurance.Size = new System.Drawing.Size(19, 23);
+            txtSupplementalInsurance.TabIndex = 20;
+            txtSupplementalInsurance.Text = "0";
+            txtSupplementalInsurance.Visible = false;
+            txtSupplementalInsurance.KeyPress += txtSupplementalInsurance_KeyPress;
+            txtSupplementalInsurance.KeyUp += txtSupplementalInsurance_KeyUp;
             // 
             // lblSupplementalInsurance
             // 
-            this.lblSupplementalInsurance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSupplementalInsurance.AutoSize = true;
-            this.lblSupplementalInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSupplementalInsurance.Location = new System.Drawing.Point(251, 8);
-            this.lblSupplementalInsurance.Name = "lblSupplementalInsurance";
-            this.lblSupplementalInsurance.Size = new System.Drawing.Size(147, 13);
-            this.lblSupplementalInsurance.TabIndex = 8;
-            this.lblSupplementalInsurance.Text = "Supplemental Insurance:";
-            this.lblSupplementalInsurance.Visible = false;
+            lblSupplementalInsurance.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblSupplementalInsurance.AutoSize = true;
+            lblSupplementalInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblSupplementalInsurance.Location = new System.Drawing.Point(4, 35);
+            lblSupplementalInsurance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblSupplementalInsurance.Name = "lblSupplementalInsurance";
+            lblSupplementalInsurance.Size = new System.Drawing.Size(115, 13);
+            lblSupplementalInsurance.TabIndex = 8;
+            lblSupplementalInsurance.Text = "Supplemental Insu:";
+            lblSupplementalInsurance.Visible = false;
             // 
             // lblLDWInsurance
             // 
-            this.lblLDWInsurance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLDWInsurance.AutoSize = true;
-            this.lblLDWInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDWInsurance.Location = new System.Drawing.Point(128, 8);
-            this.lblLDWInsurance.Name = "lblLDWInsurance";
-            this.lblLDWInsurance.Size = new System.Drawing.Size(99, 13);
-            this.lblLDWInsurance.TabIndex = 7;
-            this.lblLDWInsurance.Text = "LDW Insurance:";
-            this.lblLDWInsurance.Visible = false;
+            lblLDWInsurance.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblLDWInsurance.AutoSize = true;
+            lblLDWInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblLDWInsurance.Location = new System.Drawing.Point(4, -3);
+            lblLDWInsurance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblLDWInsurance.Name = "lblLDWInsurance";
+            lblLDWInsurance.Size = new System.Drawing.Size(99, 13);
+            lblLDWInsurance.TabIndex = 7;
+            lblLDWInsurance.Text = "LDW Insurance:";
+            lblLDWInsurance.Visible = false;
             // 
             // txtLDWInsurance
             // 
-            this.txtLDWInsurance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLDWInsurance.Location = new System.Drawing.Point(229, 6);
-            this.txtLDWInsurance.Name = "txtLDWInsurance";
-            this.txtLDWInsurance.Size = new System.Drawing.Size(16, 20);
-            this.txtLDWInsurance.TabIndex = 19;
-            this.txtLDWInsurance.Text = "0";
-            this.txtLDWInsurance.Visible = false;
-            this.txtLDWInsurance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLDWInsurance_KeyPress);
-            this.txtLDWInsurance.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLDWInsurance_KeyUp);
+            txtLDWInsurance.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtLDWInsurance.Location = new System.Drawing.Point(105, -7);
+            txtLDWInsurance.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtLDWInsurance.Name = "txtLDWInsurance";
+            txtLDWInsurance.Size = new System.Drawing.Size(18, 23);
+            txtLDWInsurance.TabIndex = 19;
+            txtLDWInsurance.Text = "0";
+            txtLDWInsurance.Visible = false;
+            txtLDWInsurance.KeyPress += txtLDWInsurance_KeyPress;
+            txtLDWInsurance.KeyUp += txtLDWInsurance_KeyUp;
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.btnSaveCar, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(565, 664);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(86, 44);
-            this.tableLayoutPanel4.TabIndex = 4;
+            tableLayoutPanel4.ColumnCount = 1;
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel4.Location = new System.Drawing.Point(420, 653);
+            tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel4.Size = new System.Drawing.Size(100, 39);
+            tableLayoutPanel4.TabIndex = 4;
             // 
             // btnSaveCar
             // 
-            this.btnSaveCar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSaveCar.FlatAppearance.BorderSize = 0;
-            this.btnSaveCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveCar.Image = global::TravelExpenses.Properties.Resources._1495047519_Save;
-            this.btnSaveCar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveCar.Location = new System.Drawing.Point(4, 6);
-            this.btnSaveCar.Name = "btnSaveCar";
-            this.btnSaveCar.Size = new System.Drawing.Size(78, 32);
-            this.btnSaveCar.TabIndex = 0;
-            this.btnSaveCar.Text = "Save";
-            this.btnSaveCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveCar.UseVisualStyleBackColor = true;
-            this.btnSaveCar.Click += new System.EventHandler(this.btnSaveCar_Click);
+            btnSaveCar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnSaveCar.FlatAppearance.BorderSize = 0;
+            btnSaveCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSaveCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnSaveCar.Image = (System.Drawing.Image)resources.GetObject("btnSaveCar.Image");
+            btnSaveCar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnSaveCar.Location = new System.Drawing.Point(666, 656);
+            btnSaveCar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSaveCar.Name = "btnSaveCar";
+            btnSaveCar.Size = new System.Drawing.Size(75, 33);
+            btnSaveCar.TabIndex = 0;
+            btnSaveCar.Text = "Save";
+            btnSaveCar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnSaveCar.UseVisualStyleBackColor = true;
+            btnSaveCar.Click += btnSaveCar_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(24, 671);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(88, 35);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancel.Image = (System.Drawing.Image)resources.GetObject("btnCancel.Image");
+            btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCancel.Location = new System.Drawing.Point(17, 653);
+            btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(92, 40);
+            btnCancel.TabIndex = 1;
+            btnCancel.Text = "Cancel";
+            btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // button1
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::TravelExpenses.Properties.Resources.if_information_14516;
-            this.button1.Location = new System.Drawing.Point(19, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 23);
-            this.button1.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.button1, "Select a car rental from the list and then click on the option button you want to" +
-        " perform");
-            this.button1.UseVisualStyleBackColor = true;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Image = (System.Drawing.Image)resources.GetObject("button1.Image");
+            button1.Location = new System.Drawing.Point(8, 37);
+            button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(30, 27);
+            button1.TabIndex = 5;
+            toolTip1.SetToolTip(button1, "Select a car rental from the list and then click on the option button you want to perform");
+            button1.UseVisualStyleBackColor = true;
             // 
             // toolTip1
             // 
-            this.toolTip1.AutomaticDelay = 250;
+            toolTip1.AutomaticDelay = 250;
             // 
             // backgroundWorker1
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
             // 
             // EditCarRental
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 703);
-            this.ControlBox = false;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.pCarData);
-            this.Controls.Add(this.tlEditButtons);
-            this.Controls.Add(this.dgvEditCar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "EditCarRental";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit Car Rental";
-            this.Load += new System.EventHandler(this.EditCarRental_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditCar)).EndInit();
-            this.tlEditButtons.ResumeLayout(false);
-            this.tlEditButtons.PerformLayout();
-            this.pCarData.ResumeLayout(false);
-            this.pCarData.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.pPersonalIssuesAmount.ResumeLayout(false);
-            this.pPersonalIssuesAmount.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDays)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(739, 685);
+            ControlBox = false;
+            Controls.Add(btnSaveCar);
+            Controls.Add(button1);
+            Controls.Add(tableLayoutPanel4);
+            Controls.Add(btnCancel);
+            Controls.Add(pCarData);
+            Controls.Add(tlEditButtons);
+            Controls.Add(dgvEditCar);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "EditCarRental";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Edit Car Rental";
+            Load += EditCarRental_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvEditCar).EndInit();
+            tlEditButtons.ResumeLayout(false);
+            tlEditButtons.PerformLayout();
+            pCarData.ResumeLayout(false);
+            pCarData.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            pPersonalIssuesAmount.ResumeLayout(false);
+            pPersonalIssuesAmount.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudDays).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

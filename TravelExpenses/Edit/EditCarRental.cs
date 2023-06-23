@@ -40,10 +40,10 @@ namespace TravelExpenses
                 Control lab3 = tlEditButtons.GetControlFromPosition(5, 0);
                 tlEditButtons.SetCellPosition(del, new TableLayoutPanelCellPosition(5, 0));
                 tlEditButtons.SetCellPosition(lab3, new TableLayoutPanelCellPosition(0, 0));
-                TableLayoutColumnStyleCollection styles =  this.tlEditButtons.ColumnStyles;
+                TableLayoutColumnStyleCollection styles = this.tlEditButtons.ColumnStyles;
                 foreach (ColumnStyle style in styles)
                 {
-                        style.Width = 50;
+                    style.Width = 50;
                 }
 
 
@@ -58,58 +58,58 @@ namespace TravelExpenses
                 label2.Visible = false;
                 label3.Visible = false;
                 //btnEditCar.Text = "View";
-                
+
             }
             else
             {
                 edittravelID = new Guid(CommonVariables.editTravelID.ToString());
-               
+
             }
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[CarRental] where TravelID = '" + edittravelID + "'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
+            {
+                string carRentalId = dr["CarRentalID"].ToString();
+                DateTime pickUpDate = Convert.ToDateTime(dr["PickUPDate"].ToString());
+                DateTime dropOffDate = Convert.ToDateTime(dr["DropOffDate"].ToString());
+                string carType = dr["CarType"].ToString();
+                string company = dr["Company"].ToString();
+                string days = dr["Days"].ToString();
+                string costPerDay = dr["CostPerDay"].ToString();
+                string taxAndFees = dr["TaxesAndFees"].ToString();
+                string ldwInsuranse = dr["LDWInsuranse"].ToString();
+                string suppInsurance = dr["SupplementalInsurance"].ToString();
+                bool extraInsurance = Convert.ToBoolean(dr["ExtarInsurance"].ToString());
+                string extraInsuranceAmount = "";
+                if (dr["ExtarInsurance"].ToString() == "True")
                 {
-                    string carRentalId = dr["CarRentalID"].ToString();
-                    DateTime pickUpDate = Convert.ToDateTime(dr["PickUPDate"].ToString());
-                    DateTime dropOffDate = Convert.ToDateTime(dr["DropOffDate"].ToString());
-                    string carType = dr["CarType"].ToString();
-                    string company = dr["Company"].ToString();
-                    string days = dr["Days"].ToString();
-                    string costPerDay = dr["CostPerDay"].ToString();
-                    string taxAndFees = dr["TaxesAndFees"].ToString();
-                    string ldwInsuranse = dr["LDWInsuranse"].ToString();
-                    string suppInsurance = dr["SupplementalInsurance"].ToString();
-                    bool extraInsurance = Convert.ToBoolean(dr["ExtarInsurance"].ToString());
-                    string extraInsuranceAmount = "";
-                    if (dr["ExtarInsurance"].ToString() == "True")
-                    {
-                        extraInsuranceAmount = dr["ExtarInsuranceAmount"].ToString();
-                    }
-                    bool districtPay = Convert.ToBoolean(dr["DistrictPay"].ToString());
-                    bool personalUse = Convert.ToBoolean(dr["PersonalUse"].ToString());
-                    string personalUseAmount = "";
-                    personalUseAmount = dr["PersonalAmount"].ToString();
-                    string totalCar = dr["TotalCarRental"].ToString();
-                    string notes = dr["Notes"].ToString();
-
-                    dgvEditCar.Rows.Add(pickUpDate.ToShortDateString(), dropOffDate.ToShortDateString(), costPerDay, districtPay, totalCar, carType, company, days, taxAndFees, ldwInsuranse, suppInsurance, extraInsurance, extraInsuranceAmount, personalUse, personalUseAmount, carRentalId, notes);
-                    quantityCar++;
+                    extraInsuranceAmount = dr["ExtarInsuranceAmount"].ToString();
                 }
-                dr.Close();
+                bool districtPay = Convert.ToBoolean(dr["DistrictPay"].ToString());
+                bool personalUse = Convert.ToBoolean(dr["PersonalUse"].ToString());
+                string personalUseAmount = "";
+                personalUseAmount = dr["PersonalAmount"].ToString();
+                string totalCar = dr["TotalCarRental"].ToString();
+                string notes = dr["Notes"].ToString();
 
-                if (quantityCar <= 1)
-                {
-                    btnDeleteCar.Enabled = false;
-                }
-                //setting up the size of the form
-                this.Size = new System.Drawing.Size(681, 218);
+                dgvEditCar.Rows.Add(pickUpDate.ToShortDateString(), dropOffDate.ToShortDateString(), costPerDay, districtPay, totalCar, carType, company, days, taxAndFees, ldwInsuranse, suppInsurance, extraInsurance, extraInsuranceAmount, personalUse, personalUseAmount, carRentalId, notes);
+                quantityCar++;
+            }
+            dr.Close();
 
-                //setting up the values of the datetimepickers and the number of days.
-                dtpDropOffDate.Value = DateTime.Today.AddDays(1);
-                setDaysAndDates();
+            if (quantityCar <= 1)
+            {
+                btnDeleteCar.Enabled = false;
+            }
+            //setting up the size of the form
+            this.Size = new System.Drawing.Size(770, 241);
 
-            
+            //setting up the values of the datetimepickers and the number of days.
+            dtpDropOffDate.Value = DateTime.Today.AddDays(1);
+            setDaysAndDates();
+
+
 
             localCon.Close();
         }
@@ -197,8 +197,8 @@ namespace TravelExpenses
             while (dr.Read())
             {
                 string carRentalId = dr["CarRentalID"].ToString();
-                string pickUpDate = dr["PickUPDate"].ToString();
-                string dropOffDate = dr["DropOffDate"].ToString();
+                string pickUpDate = Convert.ToDateTime(dr["PickUPDate"].ToString()).ToShortDateString();
+                string dropOffDate = Convert.ToDateTime(dr["DropOffDate"].ToString()).ToShortDateString();
                 string carType = dr["CarType"].ToString();
                 string company = dr["Company"].ToString();
                 string days = dr["Days"].ToString();
@@ -228,15 +228,16 @@ namespace TravelExpenses
             {
                 btnDeleteCar.Enabled = false;
             }
-            else {
+            else
+            {
                 btnDeleteCar.Enabled = true;
             }
-            this.Size = new System.Drawing.Size(681, 218);
+            this.Size = new System.Drawing.Size(770, 241);
             tlEditButtons.Visible = true;
             dgvEditCar.Enabled = true;
             clearData();
-            
-            
+
+
 
 
             localCon.Close();
@@ -247,13 +248,13 @@ namespace TravelExpenses
         {
             isNew = true;
             tlEditButtons.Visible = false;
-            this.Size = new System.Drawing.Size(681, 754);
+            this.Size = new System.Drawing.Size(770, 750);
             dgvEditCar.Enabled = false;
         }
 
         private void setDaysAndDates()
         {
-            
+
             DateTime pickDate = dtpPickUpDate.Value;
             DateTime dropDate = dtpDropOffDate.Value;
             int diff;
@@ -483,7 +484,7 @@ namespace TravelExpenses
                         personalUse = false;
                         personalUseAmount = 0;
                     }
-                    
+
                     totalCar = (carCost * days) + taxesAndFees + ldwInsurance + suppInsirance + extraInsAmount;
                     notes = txtNotes.Text;
 
@@ -543,7 +544,7 @@ namespace TravelExpenses
                             }
 
                         }
-                        
+
 
                         SqlDataAdapter upTravel = new SqlDataAdapter();
                         upTravel.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET [TotalTravelAmount] = @TotalTravelAmount ,[TotalTravelReimbursed] = @TotalTravelReimbursed,@TotalTravelNoReimbursed = TotalTravelNoReimbursed  WHERE TravelID ='" + edittravelID + "'", localCon);
@@ -572,7 +573,7 @@ namespace TravelExpenses
                     bool oriPersonalUse = false;
                     double oriPersonalUseAmount = 0;
 
-                    SqlCommand cmd = new SqlCommand("SELECT [DistrictPay],[TotalCarRental],[PersonalUse],[PersonalAmount] FROM [TravelExpenses].[dbo].[CarRental] where CarRentalID = '" + editCarRID +"'", localCon);
+                    SqlCommand cmd = new SqlCommand("SELECT [DistrictPay],[TotalCarRental],[PersonalUse],[PersonalAmount] FROM [TravelExpenses].[dbo].[CarRental] where CarRentalID = '" + editCarRID + "'", localCon);
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -642,7 +643,7 @@ namespace TravelExpenses
                     notes = txtNotes.Text;
 
                     SqlDataAdapter upCar = new SqlDataAdapter();
-                    upCar.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[CarRental] SET [PickUPDate] = @PickUPDate ,[DropOffDate] = @DropOffDate,[CarType] = @CarType,[Company] = @Company,[Days] = @Days,[CostPerDay] = @CostPerDay,[TaxesAndFees] = @TaxesAndFees,[LDWInsuranse] = @LDWInsuranse,[SupplementalInsurance] = @SupplementalInsurance,[ExtarInsurance] = @ExtarInsurance,[ExtarInsuranceAmount] = @ExtarInsuranceAmount,[DistrictPay] = @DistrictPay,[PersonalUse] = @PersonalUse,[PersonalAmount] = @PersonalAmount,[TotalCarRental] = @TotalCarRental,[Notes] = @Notes WHERE CarRentalID = '"+ editCarRID +"'", localCon);
+                    upCar.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[CarRental] SET [PickUPDate] = @PickUPDate ,[DropOffDate] = @DropOffDate,[CarType] = @CarType,[Company] = @Company,[Days] = @Days,[CostPerDay] = @CostPerDay,[TaxesAndFees] = @TaxesAndFees,[LDWInsuranse] = @LDWInsuranse,[SupplementalInsurance] = @SupplementalInsurance,[ExtarInsurance] = @ExtarInsurance,[ExtarInsuranceAmount] = @ExtarInsuranceAmount,[DistrictPay] = @DistrictPay,[PersonalUse] = @PersonalUse,[PersonalAmount] = @PersonalAmount,[TotalCarRental] = @TotalCarRental,[Notes] = @Notes WHERE CarRentalID = '" + editCarRID + "'", localCon);
 
                     upCar.UpdateCommand.Parameters.Add("@PickUPDate", SqlDbType.DateTime).Value = pickUPDate;
                     upCar.UpdateCommand.Parameters.Add("@DropOffDate", SqlDbType.DateTime).Value = dropOffDate;
@@ -665,7 +666,7 @@ namespace TravelExpenses
                     if (ru > 0)
                     {
                         travelAmount = travelAmount + totalCar;
-                        
+
                         if (!districtPay)
                         {
                             if (personalUse)
@@ -709,7 +710,7 @@ namespace TravelExpenses
 
                 }
 
-                
+
             }
 
             localCon.Close();
@@ -752,17 +753,18 @@ namespace TravelExpenses
                 pPersonalIssuesAmount.Enabled = true;
                 txtPersonalUseAmount.Text = dgvEditCar.Rows[rowIndex].Cells[14].Value.ToString();
             }
-            else {
+            else
+            {
                 rbNoPersonalIssues.Checked = true;
             }
 
             txtNotes.Text = dgvEditCar.Rows[rowIndex].Cells[16].Value.ToString();
 
 
-            this.Size = new System.Drawing.Size(681, 754);
+            this.Size = new System.Drawing.Size(770, 750);
             tlEditButtons.Visible = false;
             dgvEditCar.Enabled = false;
-            
+
         }
 
         private void clearData()
@@ -791,7 +793,7 @@ namespace TravelExpenses
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Size = new System.Drawing.Size(681, 218);
+            this.Size = new System.Drawing.Size(770, 241);
             tlEditButtons.Visible = true;
             dgvEditCar.Enabled = true;
             clearData();
@@ -827,7 +829,7 @@ namespace TravelExpenses
                     }
                 }
             }
-            
+
         }
 
         private void txtCarCost_KeyPress(object sender, KeyPressEventArgs e)
@@ -946,6 +948,21 @@ namespace TravelExpenses
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             CommonVariables.sendChangesNotification(edittravelID);
+        }
+
+        private void txtTotalCar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTotalCar_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (txtCarCost.Text != "" && nudDays.Value > 0 && txtTotalCar.Text != "")
+            {
+                double totalValue = Convert.ToDouble(txtTotalCar.Text.ToString());
+                double carCostValue = totalValue / Convert.ToInt32(nudDays.Value);
+                txtCarCost.Text = carCostValue.ToString();
+            }
         }
     }
 }
