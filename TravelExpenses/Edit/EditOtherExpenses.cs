@@ -49,7 +49,7 @@ namespace TravelExpenses
                 label1.Visible = false;*/
                 btnDeleteOtherExp.Visible = false;
                 btnAddOtherExp.Visible = false;
-               // btnEditOtherExp.Text = "VIew";
+                // btnEditOtherExp.Text = "VIew";
                 btnSaveOtherExp.Visible = false;
                 btnClose.Visible = true;
                 label4.Visible = false;
@@ -62,8 +62,8 @@ namespace TravelExpenses
             {
                 edittravelID = new Guid(CommonVariables.editTravelID.ToString());
             }
-            
-            SqlCommand cmd = new SqlCommand("SELECT [OtherExpensesID],[Description],[Amount],[Prepaid],[Notes] FROM [TravelExpenses].[dbo].[OtherExpenses] where TravelID = '"+ edittravelID +"'", localCon);
+
+            SqlCommand cmd = new SqlCommand("SELECT [OtherExpensesID],[Description],[Amount],[Prepaid],[Notes] FROM [TravelExpenses].[dbo].[OtherExpenses] where TravelID = '" + edittravelID + "'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -81,7 +81,7 @@ namespace TravelExpenses
             {
                 btnDeleteOtherExp.Enabled = false;
             }
-            this.Size = new System.Drawing.Size(608, 221);
+            this.Size = new System.Drawing.Size(698, 253);
 
             localCon.Close();
         }
@@ -109,10 +109,11 @@ namespace TravelExpenses
             {
                 btnDeleteOtherExp.Enabled = false;
             }
-            else {
+            else
+            {
                 btnDeleteOtherExp.Enabled = true;
             }
-
+            this.Size = new System.Drawing.Size(698, 253);
             localCon.Close();
 
         }
@@ -145,7 +146,7 @@ namespace TravelExpenses
             isNew = true;
             tlEditButtons.Visible = false;
             dgvEditOtherExp.Enabled = false;
-            this.Size = new System.Drawing.Size(608, 511);
+            this.Size = new System.Drawing.Size(698, 557);
         }
 
         private void btnSaveOtherExp_Click(object sender, EventArgs e)
@@ -215,7 +216,7 @@ namespace TravelExpenses
                     bool oriPrepaid = true;
                     double oriAmount = 0;
 
-                    SqlCommand cmd = new SqlCommand("SELECT [Amount],[Prepaid] FROM [TravelExpenses].[dbo].[OtherExpenses] where OtherExpensesID = '"+ editOEID +"'", localCon);
+                    SqlCommand cmd = new SqlCommand("SELECT [Amount],[Prepaid] FROM [TravelExpenses].[dbo].[OtherExpenses] where OtherExpensesID = '" + editOEID + "'", localCon);
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     while (dr.Read())
@@ -246,7 +247,7 @@ namespace TravelExpenses
                     notes = txtNotes.Text;
 
                     SqlDataAdapter upOE = new SqlDataAdapter();
-                    upOE.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[OtherExpenses] SET [Description] = @Description,[Amount] = @Amount,[Prepaid] = @Prepaid,[Notes] = @Notes WHERE OtherExpensesID = '"+ editOEID +"'", localCon);
+                    upOE.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[OtherExpenses] SET [Description] = @Description,[Amount] = @Amount,[Prepaid] = @Prepaid,[Notes] = @Notes WHERE OtherExpensesID = '" + editOEID + "'", localCon);
                     upOE.UpdateCommand.Parameters.Add("@Description", SqlDbType.NVarChar).Value = description;
                     upOE.UpdateCommand.Parameters.Add("@Amount", SqlDbType.Float).Value = amount;
                     upOE.UpdateCommand.Parameters.Add("@Prepaid", SqlDbType.Bit).Value = prepaid;
@@ -281,7 +282,7 @@ namespace TravelExpenses
 
                 }
                 tlEditButtons.Visible = true;
-                this.Size = new System.Drawing.Size(608, 221);
+                this.Size = new System.Drawing.Size(698, 253);
                 dgvEditOtherExp.Enabled = true;
                 clearData();
 
@@ -304,7 +305,7 @@ namespace TravelExpenses
             txtNotes.Text = dgvEditOtherExp.Rows[rowIndex].Cells[3].Value.ToString();
 
             tlEditButtons.Visible = false;
-            this.Size = new System.Drawing.Size(608, 511);
+            this.Size = new System.Drawing.Size(698, 557);
             dgvEditOtherExp.Enabled = false;
         }
 
@@ -313,7 +314,7 @@ namespace TravelExpenses
             clearData();
             dgvEditOtherExp.Enabled = true;
             tlEditButtons.Visible = true;
-            this.Size = new System.Drawing.Size(608, 221);
+            this.Size = new System.Drawing.Size(698, 253);
         }
 
         private void btnDeleteOtherExp_Click(object sender, EventArgs e)
@@ -397,7 +398,7 @@ namespace TravelExpenses
                     }
                 }
             }
-            
+
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
