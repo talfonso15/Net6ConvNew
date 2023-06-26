@@ -104,7 +104,7 @@ namespace TravelExpenses
             else
             {
                 Guid userIDTR = new Guid(cbEmployee.SelectedValue.ToString());
-                SqlCommand travelscmd = new SqlCommand("SELECT a.TravelID,a.ReturnDate,a.DepartureDate,a.TravelEvent,a.UserID,b.Name as Name, b.LastName as lastname FROM [TravelExpenses].[dbo].[Travel] as a inner join TravelExpenses.dbo.[User] as b on a.UserID = b.UserID where a.UserID = '"+ userIDTR + "' order by a.DepartureDate desc", localCon);
+                SqlCommand travelscmd = new SqlCommand("SELECT a.TravelID,a.ReturnDate,a.DepartureDate,a.TravelEvent,a.UserID,b.Name as Name, b.LastName as lastname FROM [TravelExpenses].[dbo].[Travel] as a inner join TravelExpenses.dbo.[User] as b on a.UserID = b.UserID where a.UserID = '" + userIDTR + "' order by a.DepartureDate desc", localCon);
                 SqlDataReader travelscmdDR = travelscmd.ExecuteReader();
                 if (travelscmdDR.HasRows)
                 {
