@@ -50,7 +50,8 @@ namespace TravelExpenses
                     }
                 }
             }
-            else {
+            else
+            {
                 btnAddTravelItem.Enabled = false;
             }
             localCon.Close();

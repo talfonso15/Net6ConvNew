@@ -174,7 +174,7 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(txtFirstName, null);
             }
@@ -185,7 +185,7 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(txtLastName, null);
             }
@@ -218,7 +218,7 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(txtUsername, null);
             }
@@ -229,7 +229,7 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(txtPassword, null);
             }
@@ -240,11 +240,11 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(txtEmail, null);
             }
-            
+
             if (cbSupervisor.SelectedValue.ToString() == "-1")
             {
                 errorProvider1.SetError(cbSupervisor, "Select a supervisor.");
@@ -252,7 +252,7 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(cbSupervisor, null);
             }
@@ -263,7 +263,7 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(txtEmail, null);
             }
@@ -274,7 +274,7 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(btnSiganture, null);
             }
@@ -291,7 +291,7 @@ namespace TravelExpenses
             }
             checkEmailDR.Close();
             bool usernameInUse = false;
-            SqlCommand checkUsername = new SqlCommand("SELECT *  FROM [TravelExpenses].[dbo].[User] where Username = '"+ txtUsername.Text +"'", localCon);
+            SqlCommand checkUsername = new SqlCommand("SELECT *  FROM [TravelExpenses].[dbo].[User] where Username = '" + txtUsername.Text + "'", localCon);
             SqlDataReader checkUsernameDR = checkUsername.ExecuteReader();
             if (checkUsernameDR.HasRows)
             {
@@ -320,7 +320,7 @@ namespace TravelExpenses
                 lblErrorWarnings.Visible = true;
                 return false;
             }
-            else 
+            else
             {
                 errorProvider1.SetError(txtUsername, null);
             }
