@@ -31,7 +31,7 @@ namespace TravelExpenses
         {
             localCon.Open();
             userID = new Guid(CommonVariables.user.ToString());
-            SqlCommand cmd = new SqlCommand("SELECT a.* FROM [TravelExpenses].[dbo].[Travel] as a Inner join TravelExpenses.dbo.TravelStatus as b on a.TravelID = b.TravelID where a.UserID = '"+ userID + "' and b.Status = 'Pending'", localCon);
+            SqlCommand cmd = new SqlCommand("SELECT a.* FROM [TravelExpenses].[dbo].[Travel] as a Inner join TravelExpenses.dbo.TravelStatus as b on a.TravelID = b.TravelID where a.UserID = '" + userID + "' and b.Status = 'Pending'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -39,14 +39,14 @@ namespace TravelExpenses
                 {
                     /*if (dr["Melas"].ToString() == "False" || dr["AirFare"].ToString() == "False" || dr["Mileage"].ToString() == "False" || dr["Registration"].ToString() == "False" || dr["Lodging"].ToString() == "False" || dr["CarRental"].ToString() == "False" || dr["OtherExpenses"].ToString() == "False")
                     {*/
-                        departureDate = Convert.ToDateTime(dr["DepartureDate"].ToString()).ToShortDateString();
-                        returnDate = Convert.ToDateTime(dr["ReturnDate"].ToString()).ToShortDateString();
-                        travelEvent = dr["TravelEvent"].ToString();
-                        travelPurpose = dr["TravelPurpose"].ToString();
-                        origin = dr["Origin"].ToString();
-                        destination = dr["Destination"].ToString();
-                        dgvTravels.Rows.Add(dr["TravelID"].ToString(), departureDate, returnDate, travelEvent, travelPurpose, origin, destination);
-                   /* }*/
+                    departureDate = Convert.ToDateTime(dr["DepartureDate"].ToString()).ToShortDateString();
+                    returnDate = Convert.ToDateTime(dr["ReturnDate"].ToString()).ToShortDateString();
+                    travelEvent = dr["TravelEvent"].ToString();
+                    travelPurpose = dr["TravelPurpose"].ToString();
+                    origin = dr["Origin"].ToString();
+                    destination = dr["Destination"].ToString();
+                    dgvTravels.Rows.Add(dr["TravelID"].ToString(), departureDate, returnDate, travelEvent, travelPurpose, origin, destination);
+                    /* }*/
                 }
             }
             else
@@ -71,7 +71,7 @@ namespace TravelExpenses
             this.Dispose();
             SelectItemsEdit si = new SelectItemsEdit();
             si.ShowDialog();
-            
+
 
         }
 

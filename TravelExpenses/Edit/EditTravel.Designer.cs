@@ -28,190 +28,190 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dgvTravels = new System.Windows.Forms.DataGridView();
-            this.TravelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReturnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TravelEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TravelPurpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditTravel = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTravels)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditTravel));
+            dgvTravels = new System.Windows.Forms.DataGridView();
+            TravelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            DepartureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ReturnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TravelEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TravelPurpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            btnEditTravel = new System.Windows.Forms.Button();
+            btnCancel = new System.Windows.Forms.Button();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            label1 = new System.Windows.Forms.Label();
+            btnInfo = new System.Windows.Forms.Button();
+            toolTip1 = new System.Windows.Forms.ToolTip(components);
+            ((System.ComponentModel.ISupportInitialize)dgvTravels).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
+            SuspendLayout();
             // 
             // dgvTravels
             // 
-            this.dgvTravels.AllowUserToAddRows = false;
-            this.dgvTravels.AllowUserToDeleteRows = false;
-            this.dgvTravels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTravels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TravelID,
-            this.DepartureDate,
-            this.ReturnDate,
-            this.TravelEvent,
-            this.TravelPurpose,
-            this.Origin,
-            this.Destination});
-            this.dgvTravels.Location = new System.Drawing.Point(11, 56);
-            this.dgvTravels.Name = "dgvTravels";
-            this.dgvTravels.ReadOnly = true;
-            this.dgvTravels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTravels.Size = new System.Drawing.Size(746, 355);
-            this.dgvTravels.TabIndex = 1;
+            dgvTravels.AllowUserToAddRows = false;
+            dgvTravels.AllowUserToDeleteRows = false;
+            dgvTravels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTravels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { TravelID, DepartureDate, ReturnDate, TravelEvent, TravelPurpose, Origin, Destination });
+            dgvTravels.Location = new System.Drawing.Point(13, 65);
+            dgvTravels.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dgvTravels.Name = "dgvTravels";
+            dgvTravels.ReadOnly = true;
+            dgvTravels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvTravels.Size = new System.Drawing.Size(870, 410);
+            dgvTravels.TabIndex = 1;
             // 
             // TravelID
             // 
-            this.TravelID.HeaderText = "TravelID";
-            this.TravelID.Name = "TravelID";
-            this.TravelID.ReadOnly = true;
-            this.TravelID.Visible = false;
+            TravelID.HeaderText = "TravelID";
+            TravelID.Name = "TravelID";
+            TravelID.ReadOnly = true;
+            TravelID.Visible = false;
             // 
             // DepartureDate
             // 
-            this.DepartureDate.HeaderText = "Departure Date";
-            this.DepartureDate.Name = "DepartureDate";
-            this.DepartureDate.ReadOnly = true;
-            this.DepartureDate.Width = 120;
+            DepartureDate.HeaderText = "Departure Date";
+            DepartureDate.Name = "DepartureDate";
+            DepartureDate.ReadOnly = true;
+            DepartureDate.Width = 120;
             // 
             // ReturnDate
             // 
-            this.ReturnDate.HeaderText = "Return Date";
-            this.ReturnDate.Name = "ReturnDate";
-            this.ReturnDate.ReadOnly = true;
+            ReturnDate.HeaderText = "Return Date";
+            ReturnDate.Name = "ReturnDate";
+            ReturnDate.ReadOnly = true;
             // 
             // TravelEvent
             // 
-            this.TravelEvent.HeaderText = "Travel Event";
-            this.TravelEvent.Name = "TravelEvent";
-            this.TravelEvent.ReadOnly = true;
-            this.TravelEvent.Width = 120;
+            TravelEvent.HeaderText = "Travel Event";
+            TravelEvent.Name = "TravelEvent";
+            TravelEvent.ReadOnly = true;
+            TravelEvent.Width = 120;
             // 
             // TravelPurpose
             // 
-            this.TravelPurpose.HeaderText = "Travel Purpose";
-            this.TravelPurpose.Name = "TravelPurpose";
-            this.TravelPurpose.ReadOnly = true;
-            this.TravelPurpose.Width = 120;
+            TravelPurpose.HeaderText = "Travel Purpose";
+            TravelPurpose.Name = "TravelPurpose";
+            TravelPurpose.ReadOnly = true;
+            TravelPurpose.Width = 120;
             // 
             // Origin
             // 
-            this.Origin.HeaderText = "Origin";
-            this.Origin.Name = "Origin";
-            this.Origin.ReadOnly = true;
-            this.Origin.Width = 120;
+            Origin.HeaderText = "Origin";
+            Origin.Name = "Origin";
+            Origin.ReadOnly = true;
+            Origin.Width = 120;
             // 
             // Destination
             // 
-            this.Destination.HeaderText = "Destination";
-            this.Destination.Name = "Destination";
-            this.Destination.ReadOnly = true;
-            this.Destination.Width = 120;
+            Destination.HeaderText = "Destination";
+            Destination.Name = "Destination";
+            Destination.ReadOnly = true;
+            Destination.Width = 120;
             // 
             // btnEditTravel
             // 
-            this.btnEditTravel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditTravel.FlatAppearance.BorderSize = 0;
-            this.btnEditTravel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTravel.Image = global::TravelExpenses.Properties.Resources.if_General_Office_09_2530835;
-            this.btnEditTravel.Location = new System.Drawing.Point(69, 4);
-            this.btnEditTravel.Name = "btnEditTravel";
-            this.btnEditTravel.Size = new System.Drawing.Size(38, 34);
-            this.btnEditTravel.TabIndex = 0;
-            this.btnEditTravel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.btnEditTravel, "Edit Travel");
-            this.btnEditTravel.UseVisualStyleBackColor = true;
-            this.btnEditTravel.Click += new System.EventHandler(this.btnEditTravel_Click);
+            btnEditTravel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditTravel.FlatAppearance.BorderSize = 0;
+            btnEditTravel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnEditTravel.Image = (System.Drawing.Image)resources.GetObject("btnEditTravel.Image");
+            btnEditTravel.Location = new System.Drawing.Point(80, 5);
+            btnEditTravel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditTravel.Name = "btnEditTravel";
+            btnEditTravel.Size = new System.Drawing.Size(44, 39);
+            btnEditTravel.TabIndex = 0;
+            btnEditTravel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            toolTip1.SetToolTip(btnEditTravel, "Edit Travel");
+            btnEditTravel.UseVisualStyleBackColor = true;
+            btnEditTravel.Click += btnEditTravel_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Image = global::TravelExpenses.Properties.Resources.if_Shutdown_Box_Red_34246;
-            this.btnCancel.Location = new System.Drawing.Point(3, 4);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(38, 34);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.btnCancel, "Close");
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancel.Image = (System.Drawing.Image)resources.GetObject("btnCancel.Image");
+            btnCancel.Location = new System.Drawing.Point(4, 5);
+            btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(43, 39);
+            btnCancel.TabIndex = 1;
+            btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            toolTip1.SetToolTip(btnCancel, "Close");
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.Controls.Add(this.btnEditTravel, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCancel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(643, 10);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(110, 43);
-            this.tableLayoutPanel1.TabIndex = 2;
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            tableLayoutPanel1.Controls.Add(btnEditTravel, 2, 0);
+            tableLayoutPanel1.Controls.Add(btnCancel, 0, 0);
+            tableLayoutPanel1.Controls.Add(label1, 1, 0);
+            tableLayoutPanel1.Location = new System.Drawing.Point(750, 12);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(128, 50);
+            tableLayoutPanel1.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "|";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(55, 16);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(17, 17);
+            label1.TabIndex = 2;
+            label1.Text = "|";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnInfo
             // 
-            this.btnInfo.FlatAppearance.BorderSize = 0;
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Image = global::TravelExpenses.Properties.Resources.if_information_14516;
-            this.btnInfo.Location = new System.Drawing.Point(11, 30);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(23, 23);
-            this.btnInfo.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnInfo, "Select the travel that you want to Edit and then select the edit button.");
-            this.btnInfo.UseVisualStyleBackColor = true;
+            btnInfo.FlatAppearance.BorderSize = 0;
+            btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnInfo.Image = (System.Drawing.Image)resources.GetObject("btnInfo.Image");
+            btnInfo.Location = new System.Drawing.Point(13, 35);
+            btnInfo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnInfo.Name = "btnInfo";
+            btnInfo.Size = new System.Drawing.Size(27, 27);
+            btnInfo.TabIndex = 3;
+            toolTip1.SetToolTip(btnInfo, "Select the travel that you want to Edit and then select the edit button.");
+            btnInfo.UseVisualStyleBackColor = true;
             // 
             // toolTip1
             // 
-            this.toolTip1.AutoPopDelay = 5000;
-            this.toolTip1.InitialDelay = 250;
-            this.toolTip1.ReshowDelay = 100;
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 250;
+            toolTip1.ReshowDelay = 100;
             // 
             // EditTravel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 442);
-            this.ControlBox = false;
-            this.Controls.Add(this.btnInfo);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.dgvTravels);
-            this.Name = "EditTravel";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit Travel";
-            this.Load += new System.EventHandler(this.EditTravel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTravels)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(892, 510);
+            ControlBox = false;
+            Controls.Add(btnInfo);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(dgvTravels);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "EditTravel";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Edit Travel";
+            Load += EditTravel_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvTravels).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
