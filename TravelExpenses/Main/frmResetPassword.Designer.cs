@@ -29,248 +29,267 @@ namespace TravelExpenses
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.gbVerificationCode = new System.Windows.Forms.GroupBox();
-            this.btnVerifyCode = new System.Windows.Forms.Button();
-            this.txtVerificationCOde = new System.Windows.Forms.TextBox();
-            this.lblVerificationCode = new System.Windows.Forms.Label();
-            this.btnSendCode = new System.Windows.Forms.Button();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.gbResetPassword = new System.Windows.Forms.GroupBox();
-            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
-            this.lblConfirmNewPassword = new System.Windows.Forms.Label();
-            this.txtNewPassword = new System.Windows.Forms.TextBox();
-            this.lblNewPassword = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnResetPassword = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblSendingEmails = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.gbVerificationCode.SuspendLayout();
-            this.gbResetPassword.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResetPassword));
+            gbVerificationCode = new System.Windows.Forms.GroupBox();
+            btnVerifyCode = new System.Windows.Forms.Button();
+            txtVerificationCOde = new System.Windows.Forms.TextBox();
+            lblVerificationCode = new System.Windows.Forms.Label();
+            btnSendCode = new System.Windows.Forms.Button();
+            txtEmail = new System.Windows.Forms.TextBox();
+            lblEmail = new System.Windows.Forms.Label();
+            gbResetPassword = new System.Windows.Forms.GroupBox();
+            txtConfirmPassword = new System.Windows.Forms.TextBox();
+            lblConfirmNewPassword = new System.Windows.Forms.Label();
+            txtNewPassword = new System.Windows.Forms.TextBox();
+            lblNewPassword = new System.Windows.Forms.Label();
+            btnClose = new System.Windows.Forms.Button();
+            btnResetPassword = new System.Windows.Forms.Button();
+            errorProvider1 = new System.Windows.Forms.ErrorProvider(components);
+            lblSendingEmails = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            gbVerificationCode.SuspendLayout();
+            gbResetPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // gbVerificationCode
             // 
-            this.gbVerificationCode.Controls.Add(this.btnVerifyCode);
-            this.gbVerificationCode.Controls.Add(this.txtVerificationCOde);
-            this.gbVerificationCode.Controls.Add(this.lblVerificationCode);
-            this.gbVerificationCode.Controls.Add(this.btnSendCode);
-            this.gbVerificationCode.Controls.Add(this.txtEmail);
-            this.gbVerificationCode.Controls.Add(this.lblEmail);
-            this.gbVerificationCode.Location = new System.Drawing.Point(29, 30);
-            this.gbVerificationCode.Name = "gbVerificationCode";
-            this.gbVerificationCode.Size = new System.Drawing.Size(475, 130);
-            this.gbVerificationCode.TabIndex = 0;
-            this.gbVerificationCode.TabStop = false;
-            this.gbVerificationCode.Text = "Verification Code";
+            gbVerificationCode.Controls.Add(btnVerifyCode);
+            gbVerificationCode.Controls.Add(txtVerificationCOde);
+            gbVerificationCode.Controls.Add(lblVerificationCode);
+            gbVerificationCode.Controls.Add(btnSendCode);
+            gbVerificationCode.Controls.Add(txtEmail);
+            gbVerificationCode.Controls.Add(lblEmail);
+            gbVerificationCode.Location = new System.Drawing.Point(34, 35);
+            gbVerificationCode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbVerificationCode.Name = "gbVerificationCode";
+            gbVerificationCode.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbVerificationCode.Size = new System.Drawing.Size(554, 150);
+            gbVerificationCode.TabIndex = 0;
+            gbVerificationCode.TabStop = false;
+            gbVerificationCode.Text = "Verification Code";
             // 
             // btnVerifyCode
             // 
-            this.btnVerifyCode.FlatAppearance.BorderSize = 0;
-            this.btnVerifyCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerifyCode.Image = global::TravelExpenses.Properties.Resources._4900847_card_credit_debit_payment_verify_icon;
-            this.btnVerifyCode.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerifyCode.Location = new System.Drawing.Point(359, 76);
-            this.btnVerifyCode.Name = "btnVerifyCode";
-            this.btnVerifyCode.Size = new System.Drawing.Size(102, 26);
-            this.btnVerifyCode.TabIndex = 5;
-            this.btnVerifyCode.Text = "Verify Code";
-            this.btnVerifyCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVerifyCode.UseVisualStyleBackColor = true;
-            this.btnVerifyCode.Click += new System.EventHandler(this.btnVerifyCode_Click);
+            btnVerifyCode.FlatAppearance.BorderSize = 0;
+            btnVerifyCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnVerifyCode.Image = Properties.Resources._4900847_card_credit_debit_payment_verify_icon;
+            btnVerifyCode.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnVerifyCode.Location = new System.Drawing.Point(419, 88);
+            btnVerifyCode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnVerifyCode.Name = "btnVerifyCode";
+            btnVerifyCode.Size = new System.Drawing.Size(119, 30);
+            btnVerifyCode.TabIndex = 5;
+            btnVerifyCode.Text = "Verify Code";
+            btnVerifyCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnVerifyCode.UseVisualStyleBackColor = true;
+            btnVerifyCode.Click += btnVerifyCode_Click;
             // 
             // txtVerificationCOde
             // 
-            this.txtVerificationCOde.Location = new System.Drawing.Point(159, 80);
-            this.txtVerificationCOde.Name = "txtVerificationCOde";
-            this.txtVerificationCOde.Size = new System.Drawing.Size(179, 20);
-            this.txtVerificationCOde.TabIndex = 4;
+            txtVerificationCOde.Location = new System.Drawing.Point(186, 92);
+            txtVerificationCOde.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtVerificationCOde.Name = "txtVerificationCOde";
+            txtVerificationCOde.Size = new System.Drawing.Size(208, 23);
+            txtVerificationCOde.TabIndex = 4;
             // 
             // lblVerificationCode
             // 
-            this.lblVerificationCode.AutoSize = true;
-            this.lblVerificationCode.Location = new System.Drawing.Point(13, 83);
-            this.lblVerificationCode.Name = "lblVerificationCode";
-            this.lblVerificationCode.Size = new System.Drawing.Size(141, 13);
-            this.lblVerificationCode.TabIndex = 3;
-            this.lblVerificationCode.Text = "Enter the code in your email:";
+            lblVerificationCode.AutoSize = true;
+            lblVerificationCode.Location = new System.Drawing.Point(15, 96);
+            lblVerificationCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblVerificationCode.Name = "lblVerificationCode";
+            lblVerificationCode.Size = new System.Drawing.Size(158, 15);
+            lblVerificationCode.TabIndex = 3;
+            lblVerificationCode.Text = "Enter the code in your email:";
             // 
             // btnSendCode
             // 
-            this.btnSendCode.FlatAppearance.BorderSize = 0;
-            this.btnSendCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendCode.Image = global::TravelExpenses.Properties.Resources._1737385_e_mail_email_mail_message_messagesent_icon;
-            this.btnSendCode.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSendCode.Location = new System.Drawing.Point(359, 37);
-            this.btnSendCode.Name = "btnSendCode";
-            this.btnSendCode.Size = new System.Drawing.Size(102, 23);
-            this.btnSendCode.TabIndex = 2;
-            this.btnSendCode.Text = "Send Code";
-            this.btnSendCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSendCode.UseVisualStyleBackColor = true;
-            this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_Click);
+            btnSendCode.FlatAppearance.BorderSize = 0;
+            btnSendCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSendCode.Image = Properties.Resources._1737385_e_mail_email_mail_message_messagesent_icon;
+            btnSendCode.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnSendCode.Location = new System.Drawing.Point(419, 43);
+            btnSendCode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSendCode.Name = "btnSendCode";
+            btnSendCode.Size = new System.Drawing.Size(119, 27);
+            btnSendCode.TabIndex = 2;
+            btnSendCode.Text = "Send Code";
+            btnSendCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnSendCode.UseVisualStyleBackColor = true;
+            btnSendCode.Click += btnSendCode_Click;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(159, 37);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(179, 20);
-            this.txtEmail.TabIndex = 1;
+            txtEmail.Location = new System.Drawing.Point(186, 43);
+            txtEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new System.Drawing.Size(208, 23);
+            txtEmail.TabIndex = 1;
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(56, 40);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(97, 13);
-            this.lblEmail.TabIndex = 0;
-            this.lblEmail.Text = "Provide your Email:";
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new System.Drawing.Point(65, 46);
+            lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(109, 15);
+            lblEmail.TabIndex = 0;
+            lblEmail.Text = "Provide your Email:";
             // 
             // gbResetPassword
             // 
-            this.gbResetPassword.Controls.Add(this.txtConfirmPassword);
-            this.gbResetPassword.Controls.Add(this.lblConfirmNewPassword);
-            this.gbResetPassword.Controls.Add(this.txtNewPassword);
-            this.gbResetPassword.Controls.Add(this.lblNewPassword);
-            this.gbResetPassword.Enabled = false;
-            this.gbResetPassword.Location = new System.Drawing.Point(29, 193);
-            this.gbResetPassword.Name = "gbResetPassword";
-            this.gbResetPassword.Size = new System.Drawing.Size(475, 137);
-            this.gbResetPassword.TabIndex = 1;
-            this.gbResetPassword.TabStop = false;
-            this.gbResetPassword.Text = "Password info";
+            gbResetPassword.Controls.Add(txtConfirmPassword);
+            gbResetPassword.Controls.Add(lblConfirmNewPassword);
+            gbResetPassword.Controls.Add(txtNewPassword);
+            gbResetPassword.Controls.Add(lblNewPassword);
+            gbResetPassword.Enabled = false;
+            gbResetPassword.Location = new System.Drawing.Point(34, 223);
+            gbResetPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbResetPassword.Name = "gbResetPassword";
+            gbResetPassword.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbResetPassword.Size = new System.Drawing.Size(554, 158);
+            gbResetPassword.TabIndex = 1;
+            gbResetPassword.TabStop = false;
+            gbResetPassword.Text = "Password info";
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(159, 82);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(283, 20);
-            this.txtConfirmPassword.TabIndex = 8;
+            txtConfirmPassword.Location = new System.Drawing.Point(186, 95);
+            txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.PasswordChar = '*';
+            txtConfirmPassword.Size = new System.Drawing.Size(330, 23);
+            txtConfirmPassword.TabIndex = 8;
             // 
             // lblConfirmNewPassword
             // 
-            this.lblConfirmNewPassword.AutoSize = true;
-            this.lblConfirmNewPassword.Location = new System.Drawing.Point(30, 85);
-            this.lblConfirmNewPassword.Name = "lblConfirmNewPassword";
-            this.lblConfirmNewPassword.Size = new System.Drawing.Size(119, 13);
-            this.lblConfirmNewPassword.TabIndex = 7;
-            this.lblConfirmNewPassword.Text = "Confirm New Password:";
+            lblConfirmNewPassword.AutoSize = true;
+            lblConfirmNewPassword.Location = new System.Drawing.Point(35, 98);
+            lblConfirmNewPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblConfirmNewPassword.Name = "lblConfirmNewPassword";
+            lblConfirmNewPassword.Size = new System.Drawing.Size(134, 15);
+            lblConfirmNewPassword.TabIndex = 7;
+            lblConfirmNewPassword.Text = "Confirm New Password:";
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(159, 37);
-            this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.PasswordChar = '*';
-            this.txtNewPassword.Size = new System.Drawing.Size(283, 20);
-            this.txtNewPassword.TabIndex = 6;
+            txtNewPassword.Location = new System.Drawing.Point(186, 43);
+            txtNewPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.PasswordChar = '*';
+            txtNewPassword.Size = new System.Drawing.Size(330, 23);
+            txtNewPassword.TabIndex = 6;
             // 
             // lblNewPassword
             // 
-            this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(72, 40);
-            this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(81, 13);
-            this.lblNewPassword.TabIndex = 0;
-            this.lblNewPassword.Text = "New Password:";
+            lblNewPassword.AutoSize = true;
+            lblNewPassword.Location = new System.Drawing.Point(84, 46);
+            lblNewPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblNewPassword.Name = "lblNewPassword";
+            lblNewPassword.Size = new System.Drawing.Size(87, 15);
+            lblNewPassword.TabIndex = 0;
+            lblNewPassword.Text = "New Password:";
             // 
             // btnClose
             // 
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(326, 336);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(79, 46);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
+            btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnClose.Location = new System.Drawing.Point(380, 388);
+            btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new System.Drawing.Size(92, 53);
+            btnClose.TabIndex = 3;
+            btnClose.Text = "Close";
+            btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // btnResetPassword
             // 
-            this.btnResetPassword.Enabled = false;
-            this.btnResetPassword.FlatAppearance.BorderSize = 0;
-            this.btnResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetPassword.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnResetPassword.Image = global::TravelExpenses.Properties.Resources._7023958_password_account_security_reset_safety_icon;
-            this.btnResetPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResetPassword.Location = new System.Drawing.Point(425, 336);
-            this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(86, 46);
-            this.btnResetPassword.TabIndex = 2;
-            this.btnResetPassword.Text = "Reset";
-            this.btnResetPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnResetPassword.UseVisualStyleBackColor = true;
-            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
+            btnResetPassword.Enabled = false;
+            btnResetPassword.FlatAppearance.BorderSize = 0;
+            btnResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnResetPassword.ForeColor = System.Drawing.Color.ForestGreen;
+            btnResetPassword.Image = Properties.Resources._7023958_password_account_security_reset_safety_icon;
+            btnResetPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnResetPassword.Location = new System.Drawing.Point(496, 388);
+            btnResetPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnResetPassword.Name = "btnResetPassword";
+            btnResetPassword.Size = new System.Drawing.Size(100, 53);
+            btnResetPassword.TabIndex = 2;
+            btnResetPassword.Text = "Reset";
+            btnResetPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnResetPassword.UseVisualStyleBackColor = true;
+            btnResetPassword.Click += btnResetPassword_Click;
             // 
             // errorProvider1
             // 
-            this.errorProvider1.ContainerControl = this;
+            errorProvider1.ContainerControl = this;
             // 
             // lblSendingEmails
             // 
-            this.lblSendingEmails.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblSendingEmails.AutoSize = true;
-            this.lblSendingEmails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSendingEmails.Location = new System.Drawing.Point(85, 354);
-            this.lblSendingEmails.Name = "lblSendingEmails";
-            this.lblSendingEmails.Size = new System.Drawing.Size(170, 13);
-            this.lblSendingEmails.TabIndex = 6;
-            this.lblSendingEmails.Text = "SendingVerification Code.....";
-            this.lblSendingEmails.Visible = false;
+            lblSendingEmails.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            lblSendingEmails.AutoSize = true;
+            lblSendingEmails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblSendingEmails.Location = new System.Drawing.Point(99, 408);
+            lblSendingEmails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblSendingEmails.Name = "lblSendingEmails";
+            lblSendingEmails.Size = new System.Drawing.Size(170, 13);
+            lblSendingEmails.TabIndex = 6;
+            lblSendingEmails.Text = "SendingVerification Code.....";
+            lblSendingEmails.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox1.Image = global::TravelExpenses.Properties.Resources.image_1229052;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 342);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            pictureBox1.Image = Properties.Resources.image_1229052;
+            pictureBox1.Location = new System.Drawing.Point(41, 395);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(51, 39);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
             // 
             // backgroundWorker1
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+            backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
             // 
             // frmResetPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 397);
-            this.ControlBox = false;
-            this.Controls.Add(this.lblSendingEmails);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnResetPassword);
-            this.Controls.Add(this.gbResetPassword);
-            this.Controls.Add(this.gbVerificationCode);
-            this.Name = "frmResetPassword";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reset Password";
-            this.gbVerificationCode.ResumeLayout(false);
-            this.gbVerificationCode.PerformLayout();
-            this.gbResetPassword.ResumeLayout(false);
-            this.gbResetPassword.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(629, 458);
+            ControlBox = false;
+            Controls.Add(lblSendingEmails);
+            Controls.Add(pictureBox1);
+            Controls.Add(btnClose);
+            Controls.Add(btnResetPassword);
+            Controls.Add(gbResetPassword);
+            Controls.Add(gbVerificationCode);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "frmResetPassword";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Reset Password";
+            gbVerificationCode.ResumeLayout(false);
+            gbVerificationCode.PerformLayout();
+            gbResetPassword.ResumeLayout(false);
+            gbResetPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

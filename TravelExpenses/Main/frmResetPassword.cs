@@ -34,16 +34,17 @@ namespace TravelExpenses
         }
 
         private void btnSendCode_Click(object sender, EventArgs e)
-        {if (txtEmail.Text != "")
+        {
+            if (txtEmail.Text != "")
             {
                 if (IsValidEmail(txtEmail.Text))
                 {
                     errorProvider1.SetError(txtEmail, null);
-                    try 
+                    try
                     {
                         localCon.Open();
-                        SqlCommand userCMD = new SqlCommand("SELECT [UserID] FROM [TravelExpenses].[dbo].[User_Email_Title] where Email = '"+ txtEmail.Text +"' AND Active = '1'", localCon);
-                        SqlDataReader userDR  = userCMD.ExecuteReader();
+                        SqlCommand userCMD = new SqlCommand("SELECT [UserID] FROM [TravelExpenses].[dbo].[User_Email_Title] where Email = '" + txtEmail.Text + "' AND Active = '1'", localCon);
+                        SqlDataReader userDR = userCMD.ExecuteReader();
                         if (userDR.HasRows)
                         {
                             while (userDR.Read())
@@ -60,7 +61,7 @@ namespace TravelExpenses
                             errorProvider1.SetError(txtEmail, null);
                             Random rand = new Random();
                             randomCode = (rand.Next(999999)).ToString();
-                            
+
                             pictureBox1.Visible = true;
                             lblSendingEmails.Visible = true;
                             gbVerificationCode.Enabled = false;
@@ -70,18 +71,18 @@ namespace TravelExpenses
                             }
 
                         }
-                        else 
+                        else
                         {
                             txtEmail.Focus();
                             errorProvider1.SetError(txtEmail, "There is not user associated with this email or the user is not active.");
                         }
-                    } 
-                    catch (Exception ex) 
+                    }
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message); 
+                        MessageBox.Show(ex.Message);
                     }
                 }
-                else 
+                else
                 {
                     txtEmail.Focus();
                     errorProvider1.SetError(txtEmail, "The email format is not correct.");
@@ -91,7 +92,7 @@ namespace TravelExpenses
 
         private bool IsValidEmail(string email)
         {
-            
+
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(email);
             if (match.Success)
@@ -132,13 +133,13 @@ namespace TravelExpenses
             try
             {
                 SmtpServer.Send(mail);
-                
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -164,7 +165,7 @@ namespace TravelExpenses
                     btnResetPassword.Enabled = true;
                     gbVerificationCode.Enabled = false;
                 }
-                else 
+                else
                 {
                     txtVerificationCOde.Focus();
                     errorProvider1.SetError(txtVerificationCOde, "The code does not match the one we sent you.");
@@ -173,7 +174,7 @@ namespace TravelExpenses
                     gbVerificationCode.Enabled = true;
                 }
             }
-            else 
+            else
             {
                 txtVerificationCOde.Focus();
                 errorProvider1.SetError(txtVerificationCOde, "The verification code can't be empty.");
@@ -211,29 +212,29 @@ namespace TravelExpenses
                             else
                             {
                                 errorProvider1.SetError(txtNewPassword, null);
-                                
-                                    errorProvider1.SetError(txtConfirmPassword, null);
-                                    SqlDataAdapter upPass = new SqlDataAdapter();
-                                    localCon.Open();
-                                    upPass.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[User] SET [Password] = @Password WHERE UserID = '" + userUp + "'", localCon);
-                                    upPass.UpdateCommand.Parameters.Add("@Password", SqlDbType.NVarChar).Value = txtNewPassword.Text;
-                                    int updated = upPass.UpdateCommand.ExecuteNonQuery();
-                                    localCon.Close();
-                                    if (updated > 0)
-                                    {
-                                        MessageBox.Show("Password reset successfully.");
-                                        this.Close();
 
-                                        FormCollection fc = Application.OpenForms;
-                                        Form main = new Form();
-                                        foreach (Form frm in fc)
+                                errorProvider1.SetError(txtConfirmPassword, null);
+                                SqlDataAdapter upPass = new SqlDataAdapter();
+                                localCon.Open();
+                                upPass.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[User] SET [Password] = @Password WHERE UserID = '" + userUp + "'", localCon);
+                                upPass.UpdateCommand.Parameters.Add("@Password", SqlDbType.NVarChar).Value = txtNewPassword.Text;
+                                int updated = upPass.UpdateCommand.ExecuteNonQuery();
+                                localCon.Close();
+                                if (updated > 0)
+                                {
+                                    MessageBox.Show("Password reset successfully.");
+                                    this.Close();
+
+                                    FormCollection fc = Application.OpenForms;
+                                    Form main = new Form();
+                                    foreach (Form frm in fc)
+                                    {
+                                        if (frm.Name == "Login")
                                         {
-                                            if (frm.Name == "Login")
-                                            {
-                                                frm.Show();
-                                            }
+                                            frm.Show();
                                         }
                                     }
+                                }
                             }
                         }
                     }
@@ -242,19 +243,19 @@ namespace TravelExpenses
                         MessageBox.Show(ex.Message);
                     }
                 }
-                else 
+                else
                 {
                     txtConfirmPassword.Focus();
                     errorProvider1.SetError(txtConfirmPassword, "This password does not match with the one above.");
                 }
             }
-            else 
+            else
             {
                 if (txtNewPassword.Text == "")
                 {
                     errorProvider1.SetError(txtNewPassword, "Please provide a password.");
                 }
-                else 
+                else
                 {
                     errorProvider1.SetError(txtNewPassword, null);
                 }
@@ -262,7 +263,7 @@ namespace TravelExpenses
                 {
                     errorProvider1.SetError(txtConfirmPassword, "Please confirm the password.");
                 }
-                else 
+                else
                 {
                     errorProvider1.SetError(txtConfirmPassword, null);
                 }
