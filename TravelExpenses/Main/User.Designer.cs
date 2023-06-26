@@ -28,546 +28,569 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbSupervisor = new System.Windows.Forms.ComboBox();
-            this.lblSupervisor = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.cbDepartment = new System.Windows.Forms.ComboBox();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.lblDistrict = new System.Windows.Forms.Label();
-            this.cbDistrict = new System.Windows.Forms.ComboBox();
-            this.Department = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblAccessLevel = new System.Windows.Forms.Label();
-            this.cbAccessLevel = new System.Windows.Forms.ComboBox();
-            this.lblDigitalSignature = new System.Windows.Forms.Label();
-            this.btnSiganture = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSaveUser = new System.Windows.Forms.Button();
-            this.btnCancelUser = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.gbUserInfo = new System.Windows.Forms.GroupBox();
-            this.btnViewPassword = new System.Windows.Forms.Button();
-            this.gbTitles = new System.Windows.Forms.GroupBox();
-            this.chxExecutiveProcessor = new System.Windows.Forms.RadioButton();
-            this.chxAccountingProcessor = new System.Windows.Forms.RadioButton();
-            this.chxAssistantDirector = new System.Windows.Forms.RadioButton();
-            this.chxExecutiveDirector = new System.Windows.Forms.RadioButton();
-            this.chxDeputyDirectorHyacinth = new System.Windows.Forms.RadioButton();
-            this.chxDeputyDirectorMosquito = new System.Windows.Forms.RadioButton();
-            this.chxCFO = new System.Windows.Forms.RadioButton();
-            this.chxSupervisor = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.gbUserInfo.SuspendLayout();
-            this.gbTitles.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User));
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            lblFirstName = new System.Windows.Forms.Label();
+            txtFirstName = new System.Windows.Forms.TextBox();
+            cbAccessLevel = new System.Windows.Forms.ComboBox();
+            lblAccessLevel = new System.Windows.Forms.Label();
+            cbDepartment = new System.Windows.Forms.ComboBox();
+            lblLastName = new System.Windows.Forms.Label();
+            txtLastName = new System.Windows.Forms.TextBox();
+            lblDistrict = new System.Windows.Forms.Label();
+            cbDistrict = new System.Windows.Forms.ComboBox();
+            Department = new System.Windows.Forms.Label();
+            lblUsername = new System.Windows.Forms.Label();
+            txtUsername = new System.Windows.Forms.TextBox();
+            lblPassword = new System.Windows.Forms.Label();
+            txtPassword = new System.Windows.Forms.TextBox();
+            lblEmail = new System.Windows.Forms.Label();
+            txtEmail = new System.Windows.Forms.TextBox();
+            lblDigitalSignature = new System.Windows.Forms.Label();
+            btnSiganture = new System.Windows.Forms.Button();
+            lblSupervisor = new System.Windows.Forms.Label();
+            cbSupervisor = new System.Windows.Forms.ComboBox();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            btnSaveUser = new System.Windows.Forms.Button();
+            btnCancelUser = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
+            gbUserInfo = new System.Windows.Forms.GroupBox();
+            btnViewPassword = new System.Windows.Forms.Button();
+            gbTitles = new System.Windows.Forms.GroupBox();
+            chxExecutiveProcessor = new System.Windows.Forms.RadioButton();
+            chxAccountingProcessor = new System.Windows.Forms.RadioButton();
+            chxAssistantDirector = new System.Windows.Forms.RadioButton();
+            chxExecutiveDirector = new System.Windows.Forms.RadioButton();
+            chxDeputyDirectorHyacinth = new System.Windows.Forms.RadioButton();
+            chxDeputyDirectorMosquito = new System.Windows.Forms.RadioButton();
+            chxCFO = new System.Windows.Forms.RadioButton();
+            chxSupervisor = new System.Windows.Forms.RadioButton();
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            panel1.SuspendLayout();
+            gbUserInfo.SuspendLayout();
+            gbTitles.SuspendLayout();
+            SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.67974F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.32026F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
-            this.tableLayoutPanel1.Controls.Add(this.lblFirstName, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtFirstName, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cbAccessLevel, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblAccessLevel, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.cbDepartment, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblLastName, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtLastName, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblDistrict, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbDistrict, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Department, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblUsername, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtUsername, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblPassword, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtPassword, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblEmail, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblDigitalSignature, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnSiganture, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblSupervisor, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.cbSupervisor, 3, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 19);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(584, 291);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // cbSupervisor
-            // 
-            this.cbSupervisor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSupervisor.FormattingEnabled = true;
-            this.cbSupervisor.Location = new System.Drawing.Point(390, 192);
-            this.cbSupervisor.Name = "cbSupervisor";
-            this.cbSupervisor.Size = new System.Drawing.Size(191, 21);
-            this.cbSupervisor.TabIndex = 1;
-            // 
-            // lblSupervisor
-            // 
-            this.lblSupervisor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSupervisor.AutoSize = true;
-            this.lblSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSupervisor.Location = new System.Drawing.Point(309, 196);
-            this.lblSupervisor.Name = "lblSupervisor";
-            this.lblSupervisor.Size = new System.Drawing.Size(75, 13);
-            this.lblSupervisor.TabIndex = 0;
-            this.lblSupervisor.Text = "Supervisor:";
+            tableLayoutPanel1.ColumnCount = 4;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.67974F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.32026F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
+            tableLayoutPanel1.Controls.Add(lblFirstName, 0, 0);
+            tableLayoutPanel1.Controls.Add(txtFirstName, 1, 0);
+            tableLayoutPanel1.Controls.Add(cbAccessLevel, 3, 4);
+            tableLayoutPanel1.Controls.Add(lblAccessLevel, 2, 4);
+            tableLayoutPanel1.Controls.Add(cbDepartment, 3, 1);
+            tableLayoutPanel1.Controls.Add(lblLastName, 2, 0);
+            tableLayoutPanel1.Controls.Add(txtLastName, 3, 0);
+            tableLayoutPanel1.Controls.Add(lblDistrict, 0, 1);
+            tableLayoutPanel1.Controls.Add(cbDistrict, 1, 1);
+            tableLayoutPanel1.Controls.Add(Department, 2, 1);
+            tableLayoutPanel1.Controls.Add(lblUsername, 0, 2);
+            tableLayoutPanel1.Controls.Add(txtUsername, 1, 2);
+            tableLayoutPanel1.Controls.Add(lblPassword, 2, 2);
+            tableLayoutPanel1.Controls.Add(txtPassword, 3, 2);
+            tableLayoutPanel1.Controls.Add(lblEmail, 0, 3);
+            tableLayoutPanel1.Controls.Add(txtEmail, 1, 3);
+            tableLayoutPanel1.Controls.Add(lblDigitalSignature, 0, 4);
+            tableLayoutPanel1.Controls.Add(btnSiganture, 1, 4);
+            tableLayoutPanel1.Controls.Add(lblSupervisor, 2, 3);
+            tableLayoutPanel1.Controls.Add(cbSupervisor, 3, 3);
+            tableLayoutPanel1.Location = new System.Drawing.Point(23, 22);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 5;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(681, 336);
+            tableLayoutPanel1.TabIndex = 1;
             // 
             // lblFirstName
             // 
-            this.lblFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(3, 22);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(94, 13);
-            this.lblFirstName.TabIndex = 0;
-            this.lblFirstName.Text = "First Name:";
+            lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblFirstName.AutoSize = true;
+            lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblFirstName.Location = new System.Drawing.Point(4, 27);
+            lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblFirstName.Name = "lblFirstName";
+            lblFirstName.Size = new System.Drawing.Size(108, 13);
+            lblFirstName.TabIndex = 0;
+            lblFirstName.Text = "First Name:";
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(103, 19);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(200, 20);
-            this.txtFirstName.TabIndex = 1;
-            // 
-            // cbDepartment
-            // 
-            this.cbDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Items.AddRange(new object[] {
-            "Accounting/Purchasing 101",
-            "Air/Flee/Bldg & Grounds 102",
-            "Educ & Communication 103",
-            "Executive 104",
-            "Field Validation 105",
-            "Mosquito Group 106",
-            "Pilots 107",
-            "Scientific Intelligence 108",
-            "Hyacinth",
-            "Commissioners"});
-            this.cbDepartment.Location = new System.Drawing.Point(390, 76);
-            this.cbDepartment.Name = "cbDepartment";
-            this.cbDepartment.Size = new System.Drawing.Size(191, 21);
-            this.cbDepartment.TabIndex = 13;
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(309, 22);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(75, 13);
-            this.lblLastName.TabIndex = 2;
-            this.lblLastName.Text = "Last Name:";
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(390, 19);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(191, 20);
-            this.txtLastName.TabIndex = 3;
-            // 
-            // lblDistrict
-            // 
-            this.lblDistrict.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDistrict.AutoSize = true;
-            this.lblDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrict.Location = new System.Drawing.Point(3, 80);
-            this.lblDistrict.Name = "lblDistrict";
-            this.lblDistrict.Size = new System.Drawing.Size(94, 13);
-            this.lblDistrict.TabIndex = 4;
-            this.lblDistrict.Text = "District:";
-            // 
-            // cbDistrict
-            // 
-            this.cbDistrict.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDistrict.FormattingEnabled = true;
-            this.cbDistrict.Items.AddRange(new object[] {
-            "Mosquito",
-            "Hyacinth",
-            "Both"});
-            this.cbDistrict.Location = new System.Drawing.Point(103, 76);
-            this.cbDistrict.Name = "cbDistrict";
-            this.cbDistrict.Size = new System.Drawing.Size(200, 21);
-            this.cbDistrict.TabIndex = 5;
-            // 
-            // Department
-            // 
-            this.Department.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Department.AutoSize = true;
-            this.Department.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.Location = new System.Drawing.Point(309, 80);
-            this.Department.Name = "Department";
-            this.Department.Size = new System.Drawing.Size(75, 13);
-            this.Department.TabIndex = 12;
-            this.Department.Text = "Department:";
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(3, 138);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(94, 13);
-            this.lblUsername.TabIndex = 6;
-            this.lblUsername.Text = "Username:";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(103, 135);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(200, 20);
-            this.txtUsername.TabIndex = 7;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(309, 138);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(75, 13);
-            this.lblPassword.TabIndex = 8;
-            this.lblPassword.Text = "Password:";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(390, 135);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(191, 20);
-            this.txtPassword.TabIndex = 9;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(3, 196);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(94, 13);
-            this.lblEmail.TabIndex = 14;
-            this.lblEmail.Text = "Email:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(103, 193);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 15;
-            // 
-            // lblAccessLevel
-            // 
-            this.lblAccessLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAccessLevel.AutoSize = true;
-            this.lblAccessLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccessLevel.Location = new System.Drawing.Point(309, 255);
-            this.lblAccessLevel.Name = "lblAccessLevel";
-            this.lblAccessLevel.Size = new System.Drawing.Size(75, 13);
-            this.lblAccessLevel.TabIndex = 10;
-            this.lblAccessLevel.Text = "Access Level:";
-            this.lblAccessLevel.Visible = false;
+            txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtFirstName.Location = new System.Drawing.Point(120, 23);
+            txtFirstName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new System.Drawing.Size(232, 20);
+            txtFirstName.TabIndex = 1;
             // 
             // cbAccessLevel
             // 
-            this.cbAccessLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbAccessLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAccessLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAccessLevel.FormattingEnabled = true;
-            this.cbAccessLevel.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.cbAccessLevel.Location = new System.Drawing.Point(390, 251);
-            this.cbAccessLevel.Name = "cbAccessLevel";
-            this.cbAccessLevel.Size = new System.Drawing.Size(191, 21);
-            this.cbAccessLevel.TabIndex = 11;
-            this.cbAccessLevel.Visible = false;
+            cbAccessLevel.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbAccessLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbAccessLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cbAccessLevel.FormattingEnabled = true;
+            cbAccessLevel.Items.AddRange(new object[] { "1", "2", "3" });
+            cbAccessLevel.Location = new System.Drawing.Point(454, 291);
+            cbAccessLevel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbAccessLevel.Name = "cbAccessLevel";
+            cbAccessLevel.Size = new System.Drawing.Size(223, 21);
+            cbAccessLevel.TabIndex = 11;
+            cbAccessLevel.Visible = false;
+            // 
+            // lblAccessLevel
+            // 
+            lblAccessLevel.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblAccessLevel.AutoSize = true;
+            lblAccessLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblAccessLevel.Location = new System.Drawing.Point(360, 295);
+            lblAccessLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblAccessLevel.Name = "lblAccessLevel";
+            lblAccessLevel.Size = new System.Drawing.Size(86, 13);
+            lblAccessLevel.TabIndex = 10;
+            lblAccessLevel.Text = "Access Level:";
+            lblAccessLevel.Visible = false;
+            // 
+            // cbDepartment
+            // 
+            cbDepartment.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cbDepartment.FormattingEnabled = true;
+            cbDepartment.Items.AddRange(new object[] { "Accounting/Purchasing 101", "Air/Flee/Bldg & Grounds 102", "Educ & Communication 103", "Executive 104", "Field Validation 105", "Mosquito Group 106", "Pilots 107", "Scientific Intelligence 108", "Hyacinth", "Commissioners" });
+            cbDepartment.Location = new System.Drawing.Point(454, 90);
+            cbDepartment.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbDepartment.Name = "cbDepartment";
+            cbDepartment.Size = new System.Drawing.Size(223, 21);
+            cbDepartment.TabIndex = 13;
+            // 
+            // lblLastName
+            // 
+            lblLastName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblLastName.AutoSize = true;
+            lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblLastName.Location = new System.Drawing.Point(360, 27);
+            lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblLastName.Name = "lblLastName";
+            lblLastName.Size = new System.Drawing.Size(86, 13);
+            lblLastName.TabIndex = 2;
+            lblLastName.Text = "Last Name:";
+            // 
+            // txtLastName
+            // 
+            txtLastName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtLastName.Location = new System.Drawing.Point(454, 23);
+            txtLastName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new System.Drawing.Size(223, 20);
+            txtLastName.TabIndex = 3;
+            // 
+            // lblDistrict
+            // 
+            lblDistrict.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDistrict.AutoSize = true;
+            lblDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblDistrict.Location = new System.Drawing.Point(4, 94);
+            lblDistrict.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDistrict.Name = "lblDistrict";
+            lblDistrict.Size = new System.Drawing.Size(108, 13);
+            lblDistrict.TabIndex = 4;
+            lblDistrict.Text = "District:";
+            // 
+            // cbDistrict
+            // 
+            cbDistrict.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cbDistrict.FormattingEnabled = true;
+            cbDistrict.Items.AddRange(new object[] { "Mosquito", "Hyacinth", "Both" });
+            cbDistrict.Location = new System.Drawing.Point(120, 90);
+            cbDistrict.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbDistrict.Name = "cbDistrict";
+            cbDistrict.Size = new System.Drawing.Size(232, 21);
+            cbDistrict.TabIndex = 5;
+            // 
+            // Department
+            // 
+            Department.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            Department.AutoSize = true;
+            Department.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Department.Location = new System.Drawing.Point(360, 94);
+            Department.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            Department.Name = "Department";
+            Department.Size = new System.Drawing.Size(86, 13);
+            Department.TabIndex = 12;
+            Department.Text = "Department:";
+            // 
+            // lblUsername
+            // 
+            lblUsername.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblUsername.Location = new System.Drawing.Point(4, 161);
+            lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new System.Drawing.Size(108, 13);
+            lblUsername.TabIndex = 6;
+            lblUsername.Text = "Username:";
+            // 
+            // txtUsername
+            // 
+            txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtUsername.Location = new System.Drawing.Point(120, 157);
+            txtUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new System.Drawing.Size(232, 20);
+            txtUsername.TabIndex = 7;
+            // 
+            // lblPassword
+            // 
+            lblPassword.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblPassword.Location = new System.Drawing.Point(360, 161);
+            lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new System.Drawing.Size(86, 13);
+            lblPassword.TabIndex = 8;
+            lblPassword.Text = "Password:";
+            // 
+            // txtPassword
+            // 
+            txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtPassword.Location = new System.Drawing.Point(454, 157);
+            txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new System.Drawing.Size(223, 20);
+            txtPassword.TabIndex = 9;
+            // 
+            // lblEmail
+            // 
+            lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblEmail.Location = new System.Drawing.Point(4, 228);
+            lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(108, 13);
+            lblEmail.TabIndex = 14;
+            lblEmail.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtEmail.Location = new System.Drawing.Point(120, 224);
+            txtEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new System.Drawing.Size(232, 20);
+            txtEmail.TabIndex = 15;
             // 
             // lblDigitalSignature
             // 
-            this.lblDigitalSignature.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDigitalSignature.AutoSize = true;
-            this.lblDigitalSignature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDigitalSignature.Location = new System.Drawing.Point(3, 255);
-            this.lblDigitalSignature.Name = "lblDigitalSignature";
-            this.lblDigitalSignature.Size = new System.Drawing.Size(94, 13);
-            this.lblDigitalSignature.TabIndex = 16;
-            this.lblDigitalSignature.Text = "Digital Signature:";
+            lblDigitalSignature.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDigitalSignature.AutoSize = true;
+            lblDigitalSignature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblDigitalSignature.Location = new System.Drawing.Point(4, 295);
+            lblDigitalSignature.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDigitalSignature.Name = "lblDigitalSignature";
+            lblDigitalSignature.Size = new System.Drawing.Size(108, 13);
+            lblDigitalSignature.TabIndex = 16;
+            lblDigitalSignature.Text = "Digital Signature:";
             // 
             // btnSiganture
             // 
-            this.btnSiganture.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnSiganture.FlatAppearance.BorderSize = 0;
-            this.btnSiganture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiganture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiganture.Image = global::TravelExpenses.Properties.Resources.contract__4_;
-            this.btnSiganture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSiganture.Location = new System.Drawing.Point(103, 243);
-            this.btnSiganture.Name = "btnSiganture";
-            this.btnSiganture.Size = new System.Drawing.Size(130, 36);
-            this.btnSiganture.TabIndex = 17;
-            this.btnSiganture.Text = "Create Signature";
-            this.btnSiganture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSiganture.UseVisualStyleBackColor = true;
-            this.btnSiganture.Click += new System.EventHandler(this.btnSiganture_Click);
+            btnSiganture.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            btnSiganture.FlatAppearance.BorderSize = 0;
+            btnSiganture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSiganture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnSiganture.Image = Properties.Resources.contract__4_;
+            btnSiganture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnSiganture.Location = new System.Drawing.Point(120, 281);
+            btnSiganture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSiganture.Name = "btnSiganture";
+            btnSiganture.Size = new System.Drawing.Size(131, 42);
+            btnSiganture.TabIndex = 17;
+            btnSiganture.Text = "Create Signature";
+            btnSiganture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnSiganture.UseVisualStyleBackColor = true;
+            btnSiganture.Click += btnSiganture_Click;
+            // 
+            // lblSupervisor
+            // 
+            lblSupervisor.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblSupervisor.AutoSize = true;
+            lblSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblSupervisor.Location = new System.Drawing.Point(360, 228);
+            lblSupervisor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblSupervisor.Name = "lblSupervisor";
+            lblSupervisor.Size = new System.Drawing.Size(86, 13);
+            lblSupervisor.TabIndex = 0;
+            lblSupervisor.Text = "Supervisor:";
+            // 
+            // cbSupervisor
+            // 
+            cbSupervisor.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cbSupervisor.FormattingEnabled = true;
+            cbSupervisor.Location = new System.Drawing.Point(454, 224);
+            cbSupervisor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbSupervisor.Name = "cbSupervisor";
+            cbSupervisor.Size = new System.Drawing.Size(223, 21);
+            cbSupervisor.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.btnSaveUser, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnCancelUser, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(483, 494);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 54);
-            this.tableLayoutPanel2.TabIndex = 2;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(btnCancelUser, 0, 0);
+            tableLayoutPanel2.Controls.Add(btnSaveUser, 1, 0);
+            tableLayoutPanel2.Location = new System.Drawing.Point(564, 570);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(233, 62);
+            tableLayoutPanel2.TabIndex = 2;
             // 
             // btnSaveUser
             // 
-            this.btnSaveUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSaveUser.FlatAppearance.BorderSize = 0;
-            this.btnSaveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveUser.Image = global::TravelExpenses.Properties.Resources._1495047519_Save;
-            this.btnSaveUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveUser.Location = new System.Drawing.Point(116, 10);
-            this.btnSaveUser.Name = "btnSaveUser";
-            this.btnSaveUser.Size = new System.Drawing.Size(81, 34);
-            this.btnSaveUser.TabIndex = 0;
-            this.btnSaveUser.Text = "Save";
-            this.btnSaveUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveUser.UseVisualStyleBackColor = true;
-            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
+            btnSaveUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            btnSaveUser.FlatAppearance.BorderSize = 0;
+            btnSaveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSaveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnSaveUser.Image = (System.Drawing.Image)resources.GetObject("btnSaveUser.Image");
+            btnSaveUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnSaveUser.Location = new System.Drawing.Point(155, 11);
+            btnSaveUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSaveUser.Name = "btnSaveUser";
+            btnSaveUser.Size = new System.Drawing.Size(74, 39);
+            btnSaveUser.TabIndex = 0;
+            btnSaveUser.Text = "Save";
+            btnSaveUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnSaveUser.UseVisualStyleBackColor = true;
+            btnSaveUser.Click += btnSaveUser_Click;
             // 
             // btnCancelUser
             // 
-            this.btnCancelUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCancelUser.FlatAppearance.BorderSize = 0;
-            this.btnCancelUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelUser.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnCancelUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelUser.Location = new System.Drawing.Point(11, 10);
-            this.btnCancelUser.Name = "btnCancelUser";
-            this.btnCancelUser.Size = new System.Drawing.Size(86, 34);
-            this.btnCancelUser.TabIndex = 1;
-            this.btnCancelUser.Text = "Close";
-            this.btnCancelUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelUser.UseVisualStyleBackColor = true;
-            this.btnCancelUser.Click += new System.EventHandler(this.btnCancelUser_Click);
+            btnCancelUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            btnCancelUser.FlatAppearance.BorderSize = 0;
+            btnCancelUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancelUser.Image = (System.Drawing.Image)resources.GetObject("btnCancelUser.Image");
+            btnCancelUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCancelUser.Location = new System.Drawing.Point(29, 11);
+            btnCancelUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancelUser.Name = "btnCancelUser";
+            btnCancelUser.Size = new System.Drawing.Size(83, 39);
+            btnCancelUser.TabIndex = 1;
+            btnCancelUser.Text = "Close";
+            btnCancelUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancelUser.UseVisualStyleBackColor = true;
+            btnCancelUser.Click += btnCancelUser_Click;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.gbUserInfo);
-            this.panel1.Controls.Add(this.gbTitles);
-            this.panel1.Location = new System.Drawing.Point(13, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(667, 476);
-            this.panel1.TabIndex = 3;
+            panel1.BackColor = System.Drawing.SystemColors.Control;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            panel1.Controls.Add(gbUserInfo);
+            panel1.Controls.Add(gbTitles);
+            panel1.Location = new System.Drawing.Point(15, 14);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(778, 549);
+            panel1.TabIndex = 3;
             // 
             // gbUserInfo
             // 
-            this.gbUserInfo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gbUserInfo.Controls.Add(this.btnViewPassword);
-            this.gbUserInfo.Controls.Add(this.tableLayoutPanel1);
-            this.gbUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUserInfo.Location = new System.Drawing.Point(17, 12);
-            this.gbUserInfo.Name = "gbUserInfo";
-            this.gbUserInfo.Size = new System.Drawing.Size(643, 332);
-            this.gbUserInfo.TabIndex = 4;
-            this.gbUserInfo.TabStop = false;
-            this.gbUserInfo.Text = "User Info";
+            gbUserInfo.BackColor = System.Drawing.Color.WhiteSmoke;
+            gbUserInfo.Controls.Add(btnViewPassword);
+            gbUserInfo.Controls.Add(tableLayoutPanel1);
+            gbUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            gbUserInfo.Location = new System.Drawing.Point(20, 14);
+            gbUserInfo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbUserInfo.Name = "gbUserInfo";
+            gbUserInfo.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbUserInfo.Size = new System.Drawing.Size(750, 383);
+            gbUserInfo.TabIndex = 4;
+            gbUserInfo.TabStop = false;
+            gbUserInfo.Text = "User Info";
             // 
             // btnViewPassword
             // 
-            this.btnViewPassword.FlatAppearance.BorderSize = 0;
-            this.btnViewPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewPassword.Image = global::TravelExpenses.Properties.Resources._6351930_eye_password_see_view_icon;
-            this.btnViewPassword.Location = new System.Drawing.Point(610, 157);
-            this.btnViewPassword.Name = "btnViewPassword";
-            this.btnViewPassword.Size = new System.Drawing.Size(21, 19);
-            this.btnViewPassword.TabIndex = 8;
-            this.btnViewPassword.UseVisualStyleBackColor = true;
-            this.btnViewPassword.Click += new System.EventHandler(this.btnViewPassword_Click);
+            btnViewPassword.FlatAppearance.BorderSize = 0;
+            btnViewPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnViewPassword.Image = Properties.Resources._6351930_eye_password_see_view_icon;
+            btnViewPassword.Location = new System.Drawing.Point(712, 181);
+            btnViewPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnViewPassword.Name = "btnViewPassword";
+            btnViewPassword.Size = new System.Drawing.Size(24, 22);
+            btnViewPassword.TabIndex = 8;
+            btnViewPassword.UseVisualStyleBackColor = true;
+            btnViewPassword.Click += btnViewPassword_Click;
             // 
             // gbTitles
             // 
-            this.gbTitles.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gbTitles.Controls.Add(this.chxExecutiveProcessor);
-            this.gbTitles.Controls.Add(this.chxAccountingProcessor);
-            this.gbTitles.Controls.Add(this.chxAssistantDirector);
-            this.gbTitles.Controls.Add(this.chxExecutiveDirector);
-            this.gbTitles.Controls.Add(this.chxDeputyDirectorHyacinth);
-            this.gbTitles.Controls.Add(this.chxDeputyDirectorMosquito);
-            this.gbTitles.Controls.Add(this.chxCFO);
-            this.gbTitles.Controls.Add(this.chxSupervisor);
-            this.gbTitles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTitles.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.gbTitles.Location = new System.Drawing.Point(17, 361);
-            this.gbTitles.Name = "gbTitles";
-            this.gbTitles.Size = new System.Drawing.Size(623, 97);
-            this.gbTitles.TabIndex = 3;
-            this.gbTitles.TabStop = false;
-            this.gbTitles.Text = "Titles";
+            gbTitles.BackColor = System.Drawing.Color.WhiteSmoke;
+            gbTitles.Controls.Add(chxExecutiveProcessor);
+            gbTitles.Controls.Add(chxAccountingProcessor);
+            gbTitles.Controls.Add(chxAssistantDirector);
+            gbTitles.Controls.Add(chxExecutiveDirector);
+            gbTitles.Controls.Add(chxDeputyDirectorHyacinth);
+            gbTitles.Controls.Add(chxDeputyDirectorMosquito);
+            gbTitles.Controls.Add(chxCFO);
+            gbTitles.Controls.Add(chxSupervisor);
+            gbTitles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            gbTitles.ForeColor = System.Drawing.SystemColors.ControlText;
+            gbTitles.Location = new System.Drawing.Point(20, 417);
+            gbTitles.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbTitles.Name = "gbTitles";
+            gbTitles.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbTitles.Size = new System.Drawing.Size(727, 112);
+            gbTitles.TabIndex = 3;
+            gbTitles.TabStop = false;
+            gbTitles.Text = "Titles";
             // 
             // chxExecutiveProcessor
             // 
-            this.chxExecutiveProcessor.AutoSize = true;
-            this.chxExecutiveProcessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxExecutiveProcessor.Location = new System.Drawing.Point(466, 68);
-            this.chxExecutiveProcessor.Name = "chxExecutiveProcessor";
-            this.chxExecutiveProcessor.Size = new System.Drawing.Size(122, 17);
-            this.chxExecutiveProcessor.TabIndex = 17;
-            this.chxExecutiveProcessor.TabStop = true;
-            this.chxExecutiveProcessor.Text = "Executive Processor";
-            this.chxExecutiveProcessor.UseVisualStyleBackColor = true;
-            this.chxExecutiveProcessor.CheckedChanged += new System.EventHandler(this.chxExecutiveProcessor_CheckedChanged);
+            chxExecutiveProcessor.AutoSize = true;
+            chxExecutiveProcessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chxExecutiveProcessor.Location = new System.Drawing.Point(544, 78);
+            chxExecutiveProcessor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxExecutiveProcessor.Name = "chxExecutiveProcessor";
+            chxExecutiveProcessor.Size = new System.Drawing.Size(122, 17);
+            chxExecutiveProcessor.TabIndex = 17;
+            chxExecutiveProcessor.TabStop = true;
+            chxExecutiveProcessor.Text = "Executive Processor";
+            chxExecutiveProcessor.UseVisualStyleBackColor = true;
+            chxExecutiveProcessor.CheckedChanged += chxExecutiveProcessor_CheckedChanged;
             // 
             // chxAccountingProcessor
             // 
-            this.chxAccountingProcessor.AutoSize = true;
-            this.chxAccountingProcessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxAccountingProcessor.Location = new System.Drawing.Point(294, 68);
-            this.chxAccountingProcessor.Name = "chxAccountingProcessor";
-            this.chxAccountingProcessor.Size = new System.Drawing.Size(129, 17);
-            this.chxAccountingProcessor.TabIndex = 16;
-            this.chxAccountingProcessor.TabStop = true;
-            this.chxAccountingProcessor.Text = "Accounting Processor";
-            this.chxAccountingProcessor.UseVisualStyleBackColor = true;
+            chxAccountingProcessor.AutoSize = true;
+            chxAccountingProcessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chxAccountingProcessor.Location = new System.Drawing.Point(343, 78);
+            chxAccountingProcessor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxAccountingProcessor.Name = "chxAccountingProcessor";
+            chxAccountingProcessor.Size = new System.Drawing.Size(129, 17);
+            chxAccountingProcessor.TabIndex = 16;
+            chxAccountingProcessor.TabStop = true;
+            chxAccountingProcessor.Text = "Accounting Processor";
+            chxAccountingProcessor.UseVisualStyleBackColor = true;
             // 
             // chxAssistantDirector
             // 
-            this.chxAssistantDirector.AutoSize = true;
-            this.chxAssistantDirector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxAssistantDirector.Location = new System.Drawing.Point(160, 68);
-            this.chxAssistantDirector.Name = "chxAssistantDirector";
-            this.chxAssistantDirector.Size = new System.Drawing.Size(107, 17);
-            this.chxAssistantDirector.TabIndex = 15;
-            this.chxAssistantDirector.TabStop = true;
-            this.chxAssistantDirector.Text = "Assistant Director";
-            this.chxAssistantDirector.UseVisualStyleBackColor = true;
+            chxAssistantDirector.AutoSize = true;
+            chxAssistantDirector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chxAssistantDirector.Location = new System.Drawing.Point(187, 78);
+            chxAssistantDirector.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxAssistantDirector.Name = "chxAssistantDirector";
+            chxAssistantDirector.Size = new System.Drawing.Size(107, 17);
+            chxAssistantDirector.TabIndex = 15;
+            chxAssistantDirector.TabStop = true;
+            chxAssistantDirector.Text = "Assistant Director";
+            chxAssistantDirector.UseVisualStyleBackColor = true;
             // 
             // chxExecutiveDirector
             // 
-            this.chxExecutiveDirector.AutoSize = true;
-            this.chxExecutiveDirector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxExecutiveDirector.Location = new System.Drawing.Point(20, 68);
-            this.chxExecutiveDirector.Name = "chxExecutiveDirector";
-            this.chxExecutiveDirector.Size = new System.Drawing.Size(112, 17);
-            this.chxExecutiveDirector.TabIndex = 14;
-            this.chxExecutiveDirector.TabStop = true;
-            this.chxExecutiveDirector.Text = "Executive Director";
-            this.chxExecutiveDirector.UseVisualStyleBackColor = true;
+            chxExecutiveDirector.AutoSize = true;
+            chxExecutiveDirector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chxExecutiveDirector.Location = new System.Drawing.Point(23, 78);
+            chxExecutiveDirector.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxExecutiveDirector.Name = "chxExecutiveDirector";
+            chxExecutiveDirector.Size = new System.Drawing.Size(112, 17);
+            chxExecutiveDirector.TabIndex = 14;
+            chxExecutiveDirector.TabStop = true;
+            chxExecutiveDirector.Text = "Executive Director";
+            chxExecutiveDirector.UseVisualStyleBackColor = true;
             // 
             // chxDeputyDirectorHyacinth
             // 
-            this.chxDeputyDirectorHyacinth.AutoSize = true;
-            this.chxDeputyDirectorHyacinth.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxDeputyDirectorHyacinth.Location = new System.Drawing.Point(466, 29);
-            this.chxDeputyDirectorHyacinth.Name = "chxDeputyDirectorHyacinth";
-            this.chxDeputyDirectorHyacinth.Size = new System.Drawing.Size(144, 17);
-            this.chxDeputyDirectorHyacinth.TabIndex = 13;
-            this.chxDeputyDirectorHyacinth.TabStop = true;
-            this.chxDeputyDirectorHyacinth.Text = "Deputy Director Hyacinth";
-            this.chxDeputyDirectorHyacinth.UseVisualStyleBackColor = true;
+            chxDeputyDirectorHyacinth.AutoSize = true;
+            chxDeputyDirectorHyacinth.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chxDeputyDirectorHyacinth.Location = new System.Drawing.Point(544, 33);
+            chxDeputyDirectorHyacinth.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxDeputyDirectorHyacinth.Name = "chxDeputyDirectorHyacinth";
+            chxDeputyDirectorHyacinth.Size = new System.Drawing.Size(144, 17);
+            chxDeputyDirectorHyacinth.TabIndex = 13;
+            chxDeputyDirectorHyacinth.TabStop = true;
+            chxDeputyDirectorHyacinth.Text = "Deputy Director Hyacinth";
+            chxDeputyDirectorHyacinth.UseVisualStyleBackColor = true;
             // 
             // chxDeputyDirectorMosquito
             // 
-            this.chxDeputyDirectorMosquito.AutoSize = true;
-            this.chxDeputyDirectorMosquito.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxDeputyDirectorMosquito.Location = new System.Drawing.Point(294, 29);
-            this.chxDeputyDirectorMosquito.Name = "chxDeputyDirectorMosquito";
-            this.chxDeputyDirectorMosquito.Size = new System.Drawing.Size(145, 17);
-            this.chxDeputyDirectorMosquito.TabIndex = 12;
-            this.chxDeputyDirectorMosquito.TabStop = true;
-            this.chxDeputyDirectorMosquito.Text = "Deputy Director Mosquito";
-            this.chxDeputyDirectorMosquito.UseVisualStyleBackColor = true;
+            chxDeputyDirectorMosquito.AutoSize = true;
+            chxDeputyDirectorMosquito.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chxDeputyDirectorMosquito.Location = new System.Drawing.Point(343, 33);
+            chxDeputyDirectorMosquito.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxDeputyDirectorMosquito.Name = "chxDeputyDirectorMosquito";
+            chxDeputyDirectorMosquito.Size = new System.Drawing.Size(145, 17);
+            chxDeputyDirectorMosquito.TabIndex = 12;
+            chxDeputyDirectorMosquito.TabStop = true;
+            chxDeputyDirectorMosquito.Text = "Deputy Director Mosquito";
+            chxDeputyDirectorMosquito.UseVisualStyleBackColor = true;
             // 
             // chxCFO
             // 
-            this.chxCFO.AutoSize = true;
-            this.chxCFO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxCFO.Location = new System.Drawing.Point(160, 29);
-            this.chxCFO.Name = "chxCFO";
-            this.chxCFO.Size = new System.Drawing.Size(46, 17);
-            this.chxCFO.TabIndex = 11;
-            this.chxCFO.TabStop = true;
-            this.chxCFO.Text = "CFO";
-            this.chxCFO.UseVisualStyleBackColor = true;
+            chxCFO.AutoSize = true;
+            chxCFO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chxCFO.Location = new System.Drawing.Point(187, 33);
+            chxCFO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxCFO.Name = "chxCFO";
+            chxCFO.Size = new System.Drawing.Size(46, 17);
+            chxCFO.TabIndex = 11;
+            chxCFO.TabStop = true;
+            chxCFO.Text = "CFO";
+            chxCFO.UseVisualStyleBackColor = true;
             // 
             // chxSupervisor
             // 
-            this.chxSupervisor.AutoSize = true;
-            this.chxSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxSupervisor.Location = new System.Drawing.Point(20, 29);
-            this.chxSupervisor.Name = "chxSupervisor";
-            this.chxSupervisor.Size = new System.Drawing.Size(75, 17);
-            this.chxSupervisor.TabIndex = 10;
-            this.chxSupervisor.TabStop = true;
-            this.chxSupervisor.Text = "Supervisor";
-            this.chxSupervisor.UseVisualStyleBackColor = true;
+            chxSupervisor.AutoSize = true;
+            chxSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chxSupervisor.Location = new System.Drawing.Point(23, 33);
+            chxSupervisor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            chxSupervisor.Name = "chxSupervisor";
+            chxSupervisor.Size = new System.Drawing.Size(75, 17);
+            chxSupervisor.TabIndex = 10;
+            chxSupervisor.TabStop = true;
+            chxSupervisor.Text = "Supervisor";
+            chxSupervisor.UseVisualStyleBackColor = true;
             // 
             // User
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 563);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "User";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add New User";
-            this.Load += new System.EventHandler(this.User_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.gbUserInfo.ResumeLayout(false);
-            this.gbTitles.ResumeLayout(false);
-            this.gbTitles.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(812, 650);
+            Controls.Add(tableLayoutPanel2);
+            Controls.Add(panel1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "User";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Add New User";
+            Load += User_Load;
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            gbUserInfo.ResumeLayout(false);
+            gbTitles.ResumeLayout(false);
+            gbTitles.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

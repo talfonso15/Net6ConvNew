@@ -74,7 +74,7 @@ namespace TravelExpenses
                     title = "Executive Processor";
                     accessLevel = 1;
                 }
-                
+
                 //int accessLevel = Convert.ToInt32(cbAccessLevel.SelectedItem.ToString());
                 try
                 {
@@ -84,7 +84,7 @@ namespace TravelExpenses
                     if (email != "")
                     {
                         SqlDataAdapter cmd = new SqlDataAdapter();
-                        cmd.InsertCommand = new SqlCommand("INSERT INTO [TravelExpenses].[dbo].[User] (Name, LastName, District, Department, Username, Password, AccessLevel) OUTPUT INSERTED.UserID,'" + email + "','"+ title +"','1' INTO [TravelExpenses].[dbo].[User_Email_Title] (UserID,Email,Title,Active) VALUES (@Name,@LastName,@District,@Department,@Username,@Password,@AccessLevel)", localCon);
+                        cmd.InsertCommand = new SqlCommand("INSERT INTO [TravelExpenses].[dbo].[User] (Name, LastName, District, Department, Username, Password, AccessLevel) OUTPUT INSERTED.UserID,'" + email + "','" + title + "','1' INTO [TravelExpenses].[dbo].[User_Email_Title] (UserID,Email,Title,Active) VALUES (@Name,@LastName,@District,@Department,@Username,@Password,@AccessLevel)", localCon);
                         cmd.InsertCommand.Parameters.Add("@Name", SqlDbType.VarChar).Value = name;
                         cmd.InsertCommand.Parameters.Add("@LastName", SqlDbType.VarChar).Value = lastName;
                         cmd.InsertCommand.Parameters.Add("@District", SqlDbType.VarChar).Value = district;
@@ -94,7 +94,7 @@ namespace TravelExpenses
                         cmd.InsertCommand.Parameters.Add("@Department", SqlDbType.VarChar).Value = department;
 
                         cmd.InsertCommand.ExecuteScalar();
-                        SqlCommand selectIns = new SqlCommand("SELECT  [UserID] FROM [TravelExpenses].[dbo].[User] where Name ='"+ name +"'  AND LastName ='"+ lastName +"' AND Department = '" + department + "' AND Username = '"+ username +"'", localCon);
+                        SqlCommand selectIns = new SqlCommand("SELECT  [UserID] FROM [TravelExpenses].[dbo].[User] where Name ='" + name + "'  AND LastName ='" + lastName + "' AND Department = '" + department + "' AND Username = '" + username + "'", localCon);
                         SqlDataReader dr = selectIns.ExecuteReader();
                         while (dr.Read())
                         {
@@ -102,17 +102,17 @@ namespace TravelExpenses
                         }
                         dr.Close();
                         idInserted = new Guid(id);
-                       
-                        
-                            if (CommonVariables.signatureText != "")
-                            {
-                                SqlDataAdapter cmd2 = new SqlDataAdapter();
-                                cmd2.InsertCommand = new SqlCommand("INSERT INTO [dbo].[UserSignature] ([UserID],[FontType],[SignatureText]) VALUES (@UserID,@FontType,@SignatureText)", localCon);
-                                cmd2.InsertCommand.Parameters.Add("@UserID", SqlDbType.UniqueIdentifier).Value = idInserted;
-                                cmd2.InsertCommand.Parameters.Add("@FontType", SqlDbType.VarChar).Value = CommonVariables.signatureFont;
-                                cmd2.InsertCommand.Parameters.Add("@SignatureText", SqlDbType.VarChar).Value = CommonVariables.signatureText;
-                                cmd2.InsertCommand.ExecuteNonQuery();
-                            }
+
+
+                        if (CommonVariables.signatureText != "")
+                        {
+                            SqlDataAdapter cmd2 = new SqlDataAdapter();
+                            cmd2.InsertCommand = new SqlCommand("INSERT INTO [dbo].[UserSignature] ([UserID],[FontType],[SignatureText]) VALUES (@UserID,@FontType,@SignatureText)", localCon);
+                            cmd2.InsertCommand.Parameters.Add("@UserID", SqlDbType.UniqueIdentifier).Value = idInserted;
+                            cmd2.InsertCommand.Parameters.Add("@FontType", SqlDbType.VarChar).Value = CommonVariables.signatureFont;
+                            cmd2.InsertCommand.Parameters.Add("@SignatureText", SqlDbType.VarChar).Value = CommonVariables.signatureText;
+                            cmd2.InsertCommand.ExecuteNonQuery();
+                        }
 
                         Guid supID = new Guid(cbSupervisor.SelectedValue.ToString());
                         SqlDataAdapter sup = new SqlDataAdapter();
@@ -122,8 +122,8 @@ namespace TravelExpenses
                         sup.InsertCommand.ExecuteNonQuery();
 
                         MessageBox.Show("User inserted Successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        
+
+
                     }
                     else
                     {
@@ -161,7 +161,7 @@ namespace TravelExpenses
 
                             MessageBox.Show("User inserted Successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        
+
                     }
 
 
@@ -200,28 +200,35 @@ namespace TravelExpenses
             this.Close();
         }
 
-        private bool savingValidations() {
-            if (txtFirstName.Text == "") {
+        private bool savingValidations()
+        {
+            if (txtFirstName.Text == "")
+            {
                 MessageBox.Show("Enter the First Name", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtLastName.Text == "") {
+            if (txtLastName.Text == "")
+            {
                 MessageBox.Show("Enter the Last Name", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (cbDistrict.SelectedIndex == -1) {
+            if (cbDistrict.SelectedIndex == -1)
+            {
                 MessageBox.Show("Select a District", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (cbDepartment.SelectedIndex == -1) {
+            if (cbDepartment.SelectedIndex == -1)
+            {
                 MessageBox.Show("Select a Department", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtUsername.Text == "") {
+            if (txtUsername.Text == "")
+            {
                 MessageBox.Show("Enter an Username", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtPassword.Text == "") {
+            if (txtPassword.Text == "")
+            {
                 MessageBox.Show("Enter a Password", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -282,7 +289,7 @@ namespace TravelExpenses
             }
         }
 
-        private void loadSupervisor() 
+        private void loadSupervisor()
         {
             cbSupervisor.DataSource = null;
             string name = "";
