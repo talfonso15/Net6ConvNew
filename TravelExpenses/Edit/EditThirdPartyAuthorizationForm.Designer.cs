@@ -28,1010 +28,1048 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnShowAthorizations = new System.Windows.Forms.Button();
-            this.cbEmployee = new System.Windows.Forms.ComboBox();
-            this.lblEmployees = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvAuthorizations = new System.Windows.Forms.DataGridView();
-            this.DepartureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReturnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TravelPurpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Budgeted = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CityState = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MealsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MealsNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RegistrationCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RegistrationNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LodgingsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LodgingsNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AirfareCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AirfareNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CarRentalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CarRentalNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MileageCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MileageNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OtherExpeneseCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OtherExpeneseNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstimateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pEstimateDetails = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.gbTravelDetails = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDepartureDate = new System.Windows.Forms.Label();
-            this.lblReturnDate = new System.Windows.Forms.Label();
-            this.lblTravelEvent = new System.Windows.Forms.Label();
-            this.txtTravelEvent = new System.Windows.Forms.TextBox();
-            this.lblTravelPurpose = new System.Windows.Forms.Label();
-            this.txtTravelPurpose = new System.Windows.Forms.TextBox();
-            this.lblTravelBudgeted = new System.Windows.Forms.Label();
-            this.lblTravelEstTotal = new System.Windows.Forms.Label();
-            this.lblEstimatedTotalValue = new System.Windows.Forms.Label();
-            this.dtpDepartureDateValue = new System.Windows.Forms.DateTimePicker();
-            this.dtpReturnDateValue = new System.Windows.Forms.DateTimePicker();
-            this.pTravelBudget = new System.Windows.Forms.Panel();
-            this.rbNo = new System.Windows.Forms.RadioButton();
-            this.rbYes = new System.Windows.Forms.RadioButton();
-            this.lblDestination = new System.Windows.Forms.Label();
-            this.txtDestination = new System.Windows.Forms.TextBox();
-            this.gbTravelItems = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblCost = new System.Windows.Forms.Label();
-            this.lblNotes = new System.Windows.Forms.Label();
-            this.lblMeals = new System.Windows.Forms.Label();
-            this.lblRegistration = new System.Windows.Forms.Label();
-            this.lblLodging = new System.Windows.Forms.Label();
-            this.lblCarRental = new System.Windows.Forms.Label();
-            this.lblAirfare = new System.Windows.Forms.Label();
-            this.lblMileage = new System.Windows.Forms.Label();
-            this.lblOtherExpenses = new System.Windows.Forms.Label();
-            this.txtMealsNotes = new System.Windows.Forms.TextBox();
-            this.txtRegistrationNotes = new System.Windows.Forms.TextBox();
-            this.txtLodgingNotes = new System.Windows.Forms.TextBox();
-            this.txtCarRentalNotes = new System.Windows.Forms.TextBox();
-            this.txtAirfareNotes = new System.Windows.Forms.TextBox();
-            this.txtMileageNotes = new System.Windows.Forms.TextBox();
-            this.txtOtherExpNotes = new System.Windows.Forms.TextBox();
-            this.txtMealsCost = new System.Windows.Forms.TextBox();
-            this.txtRegistrationCost = new System.Windows.Forms.TextBox();
-            this.txtLodgingCost = new System.Windows.Forms.TextBox();
-            this.txtCarRentalCost = new System.Windows.Forms.TextBox();
-            this.txtAirfareCost = new System.Windows.Forms.TextBox();
-            this.txtMileageCost = new System.Windows.Forms.TextBox();
-            this.txtOtherExpensesCost = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAuthorizations)).BeginInit();
-            this.pEstimateDetails.SuspendLayout();
-            this.gbTravelDetails.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.pTravelBudget.SuspendLayout();
-            this.gbTravelItems.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditThirdPartyAuthorizationForm));
+            panel1 = new System.Windows.Forms.Panel();
+            btnShowAthorizations = new System.Windows.Forms.Button();
+            cbEmployee = new System.Windows.Forms.ComboBox();
+            lblEmployees = new System.Windows.Forms.Label();
+            panel2 = new System.Windows.Forms.Panel();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            btnClose = new System.Windows.Forms.Button();
+            btnEdit = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            dgvAuthorizations = new System.Windows.Forms.DataGridView();
+            DepartureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ReturnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TravelPurpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Budgeted = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            CityState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            MealsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            MealsNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            RegistrationCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            RegistrationNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            LodgingsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            LodgingsNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            AirfareCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            AirfareNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            CarRentalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            CarRentalNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            MileageCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            MileageNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            OtherExpeneseCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            OtherExpeneseNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            EstimateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            pEstimateDetails = new System.Windows.Forms.Panel();
+            btnCancel = new System.Windows.Forms.Button();
+            btnUpdate = new System.Windows.Forms.Button();
+            gbTravelDetails = new System.Windows.Forms.GroupBox();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            lblDepartureDate = new System.Windows.Forms.Label();
+            lblReturnDate = new System.Windows.Forms.Label();
+            lblTravelEvent = new System.Windows.Forms.Label();
+            txtTravelEvent = new System.Windows.Forms.TextBox();
+            lblTravelPurpose = new System.Windows.Forms.Label();
+            txtTravelPurpose = new System.Windows.Forms.TextBox();
+            lblTravelBudgeted = new System.Windows.Forms.Label();
+            lblTravelEstTotal = new System.Windows.Forms.Label();
+            lblEstimatedTotalValue = new System.Windows.Forms.Label();
+            dtpDepartureDateValue = new System.Windows.Forms.DateTimePicker();
+            dtpReturnDateValue = new System.Windows.Forms.DateTimePicker();
+            pTravelBudget = new System.Windows.Forms.Panel();
+            rbNo = new System.Windows.Forms.RadioButton();
+            rbYes = new System.Windows.Forms.RadioButton();
+            lblDestination = new System.Windows.Forms.Label();
+            txtDestination = new System.Windows.Forms.TextBox();
+            gbTravelItems = new System.Windows.Forms.GroupBox();
+            tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            panel3 = new System.Windows.Forms.Panel();
+            button1 = new System.Windows.Forms.Button();
+            txtMileageCost = new System.Windows.Forms.TextBox();
+            lblName = new System.Windows.Forms.Label();
+            lblCost = new System.Windows.Forms.Label();
+            lblNotes = new System.Windows.Forms.Label();
+            lblMeals = new System.Windows.Forms.Label();
+            lblRegistration = new System.Windows.Forms.Label();
+            lblLodging = new System.Windows.Forms.Label();
+            lblCarRental = new System.Windows.Forms.Label();
+            lblAirfare = new System.Windows.Forms.Label();
+            lblMileage = new System.Windows.Forms.Label();
+            lblOtherExpenses = new System.Windows.Forms.Label();
+            txtMealsNotes = new System.Windows.Forms.TextBox();
+            txtRegistrationNotes = new System.Windows.Forms.TextBox();
+            txtLodgingNotes = new System.Windows.Forms.TextBox();
+            txtCarRentalNotes = new System.Windows.Forms.TextBox();
+            txtAirfareNotes = new System.Windows.Forms.TextBox();
+            txtMileageNotes = new System.Windows.Forms.TextBox();
+            txtOtherExpNotes = new System.Windows.Forms.TextBox();
+            txtMealsCost = new System.Windows.Forms.TextBox();
+            txtRegistrationCost = new System.Windows.Forms.TextBox();
+            txtLodgingCost = new System.Windows.Forms.TextBox();
+            txtCarRentalCost = new System.Windows.Forms.TextBox();
+            txtAirfareCost = new System.Windows.Forms.TextBox();
+            txtOtherExpensesCost = new System.Windows.Forms.TextBox();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAuthorizations).BeginInit();
+            pEstimateDetails.SuspendLayout();
+            gbTravelDetails.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            pTravelBudget.SuspendLayout();
+            gbTravelItems.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            panel3.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnShowAthorizations);
-            this.panel1.Controls.Add(this.cbEmployee);
-            this.panel1.Controls.Add(this.lblEmployees);
-            this.panel1.Location = new System.Drawing.Point(19, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(569, 67);
-            this.panel1.TabIndex = 0;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnShowAthorizations);
+            panel1.Controls.Add(cbEmployee);
+            panel1.Controls.Add(lblEmployees);
+            panel1.Location = new System.Drawing.Point(22, 20);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(664, 77);
+            panel1.TabIndex = 0;
             // 
             // btnShowAthorizations
             // 
-            this.btnShowAthorizations.FlatAppearance.BorderSize = 0;
-            this.btnShowAthorizations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowAthorizations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAthorizations.Image = global::TravelExpenses.Properties.Resources.if_kpdf_1371;
-            this.btnShowAthorizations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowAthorizations.Location = new System.Drawing.Point(396, 16);
-            this.btnShowAthorizations.Name = "btnShowAthorizations";
-            this.btnShowAthorizations.Size = new System.Drawing.Size(166, 42);
-            this.btnShowAthorizations.TabIndex = 2;
-            this.btnShowAthorizations.Text = "Show Authorizations";
-            this.btnShowAthorizations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShowAthorizations.UseVisualStyleBackColor = true;
-            this.btnShowAthorizations.Click += new System.EventHandler(this.btnShowAthorizations_Click);
+            btnShowAthorizations.FlatAppearance.BorderSize = 0;
+            btnShowAthorizations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnShowAthorizations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnShowAthorizations.Image = (System.Drawing.Image)resources.GetObject("btnShowAthorizations.Image");
+            btnShowAthorizations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnShowAthorizations.Location = new System.Drawing.Point(462, 18);
+            btnShowAthorizations.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnShowAthorizations.Name = "btnShowAthorizations";
+            btnShowAthorizations.Size = new System.Drawing.Size(163, 48);
+            btnShowAthorizations.TabIndex = 2;
+            btnShowAthorizations.Text = "Show Authorizations";
+            btnShowAthorizations.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnShowAthorizations.UseVisualStyleBackColor = true;
+            btnShowAthorizations.Click += btnShowAthorizations_Click;
             // 
             // cbEmployee
             // 
-            this.cbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEmployee.FormattingEnabled = true;
-            this.cbEmployee.Location = new System.Drawing.Point(135, 24);
-            this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(250, 21);
-            this.cbEmployee.TabIndex = 1;
+            cbEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbEmployee.FormattingEnabled = true;
+            cbEmployee.Location = new System.Drawing.Point(158, 28);
+            cbEmployee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbEmployee.Name = "cbEmployee";
+            cbEmployee.Size = new System.Drawing.Size(291, 23);
+            cbEmployee.TabIndex = 1;
             // 
             // lblEmployees
             // 
-            this.lblEmployees.AutoSize = true;
-            this.lblEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployees.Location = new System.Drawing.Point(21, 26);
-            this.lblEmployees.Name = "lblEmployees";
-            this.lblEmployees.Size = new System.Drawing.Size(105, 13);
-            this.lblEmployees.TabIndex = 0;
-            this.lblEmployees.Text = "Select Employee:";
+            lblEmployees.AutoSize = true;
+            lblEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblEmployees.Location = new System.Drawing.Point(24, 30);
+            lblEmployees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblEmployees.Name = "lblEmployees";
+            lblEmployees.Size = new System.Drawing.Size(105, 13);
+            lblEmployees.TabIndex = 0;
+            lblEmployees.Text = "Select Employee:";
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Controls.Add(this.dgvAuthorizations);
-            this.panel2.Location = new System.Drawing.Point(19, 98);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(569, 438);
-            this.panel2.TabIndex = 1;
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(tableLayoutPanel1);
+            panel2.Controls.Add(dgvAuthorizations);
+            panel2.Location = new System.Drawing.Point(22, 113);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(664, 505);
+            panel2.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.52941F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.47059F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanel1.Controls.Add(this.btnClose, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnEdit, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(443, 9);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(117, 38);
-            this.tableLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.52941F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.47059F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            tableLayoutPanel1.Controls.Add(btnClose, 2, 0);
+            tableLayoutPanel1.Controls.Add(btnEdit, 0, 0);
+            tableLayoutPanel1.Controls.Add(label1, 1, 0);
+            tableLayoutPanel1.Location = new System.Drawing.Point(517, 10);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(136, 44);
+            tableLayoutPanel1.TabIndex = 1;
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::TravelExpenses.Properties.Resources.if_Shutdown_Box_Red_34246;
-            this.btnClose.Location = new System.Drawing.Point(73, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 32);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
+            btnClose.Location = new System.Drawing.Point(84, 3);
+            btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new System.Drawing.Size(41, 37);
+            btnClose.TabIndex = 0;
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // btnEdit
             // 
-            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Image = global::TravelExpenses.Properties.Resources.if_General_Office_09_2530835;
-            this.btnEdit.Location = new System.Drawing.Point(3, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(41, 32);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEdit.FlatAppearance.BorderSize = 0;
+            btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEdit.Image = (System.Drawing.Image)resources.GetObject("btnEdit.Image");
+            btnEdit.Location = new System.Drawing.Point(4, 3);
+            btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new System.Drawing.Size(46, 37);
+            btnEdit.TabIndex = 1;
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "|";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(58, 13);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(11, 17);
+            label1.TabIndex = 2;
+            label1.Text = "|";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvAuthorizations
             // 
-            this.dgvAuthorizations.AllowUserToAddRows = false;
-            this.dgvAuthorizations.AllowUserToDeleteRows = false;
-            this.dgvAuthorizations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAuthorizations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DepartureDate,
-            this.ReturnDate,
-            this.Event,
-            this.UserName,
-            this.TravelPurpose,
-            this.Budgeted,
-            this.Total,
-            this.CityState,
-            this.MealsCost,
-            this.MealsNotes,
-            this.RegistrationCost,
-            this.RegistrationNotes,
-            this.LodgingsCost,
-            this.LodgingsNotes,
-            this.AirfareCost,
-            this.AirfareNotes,
-            this.CarRentalCost,
-            this.CarRentalNotes,
-            this.MileageCost,
-            this.MileageNotes,
-            this.OtherExpeneseCost,
-            this.OtherExpeneseNotes,
-            this.EstimateID,
-            this.UserID});
-            this.dgvAuthorizations.Location = new System.Drawing.Point(24, 53);
-            this.dgvAuthorizations.MultiSelect = false;
-            this.dgvAuthorizations.Name = "dgvAuthorizations";
-            this.dgvAuthorizations.ReadOnly = true;
-            this.dgvAuthorizations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAuthorizations.Size = new System.Drawing.Size(521, 371);
-            this.dgvAuthorizations.TabIndex = 0;
+            dgvAuthorizations.AllowUserToAddRows = false;
+            dgvAuthorizations.AllowUserToDeleteRows = false;
+            dgvAuthorizations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAuthorizations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { DepartureDate, ReturnDate, Event, UserName, TravelPurpose, Budgeted, Total, CityState, MealsCost, MealsNotes, RegistrationCost, RegistrationNotes, LodgingsCost, LodgingsNotes, AirfareCost, AirfareNotes, CarRentalCost, CarRentalNotes, MileageCost, MileageNotes, OtherExpeneseCost, OtherExpeneseNotes, EstimateID, UserID });
+            dgvAuthorizations.Location = new System.Drawing.Point(28, 61);
+            dgvAuthorizations.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dgvAuthorizations.MultiSelect = false;
+            dgvAuthorizations.Name = "dgvAuthorizations";
+            dgvAuthorizations.ReadOnly = true;
+            dgvAuthorizations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvAuthorizations.Size = new System.Drawing.Size(608, 428);
+            dgvAuthorizations.TabIndex = 0;
             // 
             // DepartureDate
             // 
-            this.DepartureDate.HeaderText = "Departure";
-            this.DepartureDate.Name = "DepartureDate";
-            this.DepartureDate.ReadOnly = true;
-            this.DepartureDate.Width = 80;
+            DepartureDate.HeaderText = "Departure";
+            DepartureDate.Name = "DepartureDate";
+            DepartureDate.ReadOnly = true;
+            DepartureDate.Width = 80;
             // 
             // ReturnDate
             // 
-            this.ReturnDate.HeaderText = "Return";
-            this.ReturnDate.Name = "ReturnDate";
-            this.ReturnDate.ReadOnly = true;
-            this.ReturnDate.Width = 80;
+            ReturnDate.HeaderText = "Return";
+            ReturnDate.Name = "ReturnDate";
+            ReturnDate.ReadOnly = true;
+            ReturnDate.Width = 80;
             // 
             // Event
             // 
-            this.Event.HeaderText = "Event";
-            this.Event.Name = "Event";
-            this.Event.ReadOnly = true;
-            this.Event.Width = 150;
+            Event.HeaderText = "Event";
+            Event.Name = "Event";
+            Event.ReadOnly = true;
+            Event.Width = 150;
             // 
             // UserName
             // 
-            this.UserName.HeaderText = "User";
-            this.UserName.Name = "UserName";
-            this.UserName.ReadOnly = true;
-            this.UserName.Width = 150;
+            UserName.HeaderText = "User";
+            UserName.Name = "UserName";
+            UserName.ReadOnly = true;
+            UserName.Width = 150;
             // 
             // TravelPurpose
             // 
-            this.TravelPurpose.HeaderText = "TravelPurpose";
-            this.TravelPurpose.Name = "TravelPurpose";
-            this.TravelPurpose.ReadOnly = true;
-            this.TravelPurpose.Visible = false;
+            TravelPurpose.HeaderText = "TravelPurpose";
+            TravelPurpose.Name = "TravelPurpose";
+            TravelPurpose.ReadOnly = true;
+            TravelPurpose.Visible = false;
             // 
             // Budgeted
             // 
-            this.Budgeted.HeaderText = "Budgeted";
-            this.Budgeted.Name = "Budgeted";
-            this.Budgeted.ReadOnly = true;
-            this.Budgeted.Visible = false;
+            Budgeted.HeaderText = "Budgeted";
+            Budgeted.Name = "Budgeted";
+            Budgeted.ReadOnly = true;
+            Budgeted.Visible = false;
             // 
             // Total
             // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Visible = false;
+            Total.HeaderText = "Total";
+            Total.Name = "Total";
+            Total.ReadOnly = true;
+            Total.Visible = false;
             // 
             // CityState
             // 
-            this.CityState.HeaderText = "CityState";
-            this.CityState.Name = "CityState";
-            this.CityState.ReadOnly = true;
-            this.CityState.Visible = false;
+            CityState.HeaderText = "CityState";
+            CityState.Name = "CityState";
+            CityState.ReadOnly = true;
+            CityState.Visible = false;
             // 
             // MealsCost
             // 
-            this.MealsCost.HeaderText = "MealsCost";
-            this.MealsCost.Name = "MealsCost";
-            this.MealsCost.ReadOnly = true;
-            this.MealsCost.Visible = false;
+            MealsCost.HeaderText = "MealsCost";
+            MealsCost.Name = "MealsCost";
+            MealsCost.ReadOnly = true;
+            MealsCost.Visible = false;
             // 
             // MealsNotes
             // 
-            this.MealsNotes.HeaderText = "MealsNotes";
-            this.MealsNotes.Name = "MealsNotes";
-            this.MealsNotes.ReadOnly = true;
-            this.MealsNotes.Visible = false;
+            MealsNotes.HeaderText = "MealsNotes";
+            MealsNotes.Name = "MealsNotes";
+            MealsNotes.ReadOnly = true;
+            MealsNotes.Visible = false;
             // 
             // RegistrationCost
             // 
-            this.RegistrationCost.HeaderText = "RegistrationCost";
-            this.RegistrationCost.Name = "RegistrationCost";
-            this.RegistrationCost.ReadOnly = true;
-            this.RegistrationCost.Visible = false;
+            RegistrationCost.HeaderText = "RegistrationCost";
+            RegistrationCost.Name = "RegistrationCost";
+            RegistrationCost.ReadOnly = true;
+            RegistrationCost.Visible = false;
             // 
             // RegistrationNotes
             // 
-            this.RegistrationNotes.HeaderText = "RegistrationNotes";
-            this.RegistrationNotes.Name = "RegistrationNotes";
-            this.RegistrationNotes.ReadOnly = true;
-            this.RegistrationNotes.Visible = false;
+            RegistrationNotes.HeaderText = "RegistrationNotes";
+            RegistrationNotes.Name = "RegistrationNotes";
+            RegistrationNotes.ReadOnly = true;
+            RegistrationNotes.Visible = false;
             // 
             // LodgingsCost
             // 
-            this.LodgingsCost.HeaderText = "LodgingsCost";
-            this.LodgingsCost.Name = "LodgingsCost";
-            this.LodgingsCost.ReadOnly = true;
-            this.LodgingsCost.Visible = false;
+            LodgingsCost.HeaderText = "LodgingsCost";
+            LodgingsCost.Name = "LodgingsCost";
+            LodgingsCost.ReadOnly = true;
+            LodgingsCost.Visible = false;
             // 
             // LodgingsNotes
             // 
-            this.LodgingsNotes.HeaderText = "LodgingsNotes";
-            this.LodgingsNotes.Name = "LodgingsNotes";
-            this.LodgingsNotes.ReadOnly = true;
-            this.LodgingsNotes.Visible = false;
+            LodgingsNotes.HeaderText = "LodgingsNotes";
+            LodgingsNotes.Name = "LodgingsNotes";
+            LodgingsNotes.ReadOnly = true;
+            LodgingsNotes.Visible = false;
             // 
             // AirfareCost
             // 
-            this.AirfareCost.HeaderText = "AirfareCost";
-            this.AirfareCost.Name = "AirfareCost";
-            this.AirfareCost.ReadOnly = true;
-            this.AirfareCost.Visible = false;
+            AirfareCost.HeaderText = "AirfareCost";
+            AirfareCost.Name = "AirfareCost";
+            AirfareCost.ReadOnly = true;
+            AirfareCost.Visible = false;
             // 
             // AirfareNotes
             // 
-            this.AirfareNotes.HeaderText = "AirfareNotes";
-            this.AirfareNotes.Name = "AirfareNotes";
-            this.AirfareNotes.ReadOnly = true;
-            this.AirfareNotes.Visible = false;
+            AirfareNotes.HeaderText = "AirfareNotes";
+            AirfareNotes.Name = "AirfareNotes";
+            AirfareNotes.ReadOnly = true;
+            AirfareNotes.Visible = false;
             // 
             // CarRentalCost
             // 
-            this.CarRentalCost.HeaderText = "CarRentalCost";
-            this.CarRentalCost.Name = "CarRentalCost";
-            this.CarRentalCost.ReadOnly = true;
-            this.CarRentalCost.Visible = false;
+            CarRentalCost.HeaderText = "CarRentalCost";
+            CarRentalCost.Name = "CarRentalCost";
+            CarRentalCost.ReadOnly = true;
+            CarRentalCost.Visible = false;
             // 
             // CarRentalNotes
             // 
-            this.CarRentalNotes.HeaderText = "CarRentalNotes";
-            this.CarRentalNotes.Name = "CarRentalNotes";
-            this.CarRentalNotes.ReadOnly = true;
-            this.CarRentalNotes.Visible = false;
+            CarRentalNotes.HeaderText = "CarRentalNotes";
+            CarRentalNotes.Name = "CarRentalNotes";
+            CarRentalNotes.ReadOnly = true;
+            CarRentalNotes.Visible = false;
             // 
             // MileageCost
             // 
-            this.MileageCost.HeaderText = "MileageCost";
-            this.MileageCost.Name = "MileageCost";
-            this.MileageCost.ReadOnly = true;
-            this.MileageCost.Visible = false;
+            MileageCost.HeaderText = "MileageCost";
+            MileageCost.Name = "MileageCost";
+            MileageCost.ReadOnly = true;
+            MileageCost.Visible = false;
             // 
             // MileageNotes
             // 
-            this.MileageNotes.HeaderText = "MileageNotes";
-            this.MileageNotes.Name = "MileageNotes";
-            this.MileageNotes.ReadOnly = true;
-            this.MileageNotes.Visible = false;
+            MileageNotes.HeaderText = "MileageNotes";
+            MileageNotes.Name = "MileageNotes";
+            MileageNotes.ReadOnly = true;
+            MileageNotes.Visible = false;
             // 
             // OtherExpeneseCost
             // 
-            this.OtherExpeneseCost.HeaderText = "OtherExpeneseCost";
-            this.OtherExpeneseCost.Name = "OtherExpeneseCost";
-            this.OtherExpeneseCost.ReadOnly = true;
-            this.OtherExpeneseCost.Visible = false;
+            OtherExpeneseCost.HeaderText = "OtherExpeneseCost";
+            OtherExpeneseCost.Name = "OtherExpeneseCost";
+            OtherExpeneseCost.ReadOnly = true;
+            OtherExpeneseCost.Visible = false;
             // 
             // OtherExpeneseNotes
             // 
-            this.OtherExpeneseNotes.HeaderText = "OtherExpeneseNotes";
-            this.OtherExpeneseNotes.Name = "OtherExpeneseNotes";
-            this.OtherExpeneseNotes.ReadOnly = true;
-            this.OtherExpeneseNotes.Visible = false;
+            OtherExpeneseNotes.HeaderText = "OtherExpeneseNotes";
+            OtherExpeneseNotes.Name = "OtherExpeneseNotes";
+            OtherExpeneseNotes.ReadOnly = true;
+            OtherExpeneseNotes.Visible = false;
             // 
             // EstimateID
             // 
-            this.EstimateID.HeaderText = "EstimateID";
-            this.EstimateID.Name = "EstimateID";
-            this.EstimateID.ReadOnly = true;
-            this.EstimateID.Visible = false;
+            EstimateID.HeaderText = "EstimateID";
+            EstimateID.Name = "EstimateID";
+            EstimateID.ReadOnly = true;
+            EstimateID.Visible = false;
             // 
             // UserID
             // 
-            this.UserID.HeaderText = "UserID";
-            this.UserID.Name = "UserID";
-            this.UserID.ReadOnly = true;
-            this.UserID.Visible = false;
+            UserID.HeaderText = "UserID";
+            UserID.Name = "UserID";
+            UserID.ReadOnly = true;
+            UserID.Visible = false;
             // 
             // pEstimateDetails
             // 
-            this.pEstimateDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pEstimateDetails.Controls.Add(this.btnCancel);
-            this.pEstimateDetails.Controls.Add(this.btnUpdate);
-            this.pEstimateDetails.Controls.Add(this.gbTravelDetails);
-            this.pEstimateDetails.Controls.Add(this.gbTravelItems);
-            this.pEstimateDetails.Location = new System.Drawing.Point(646, 17);
-            this.pEstimateDetails.Name = "pEstimateDetails";
-            this.pEstimateDetails.Size = new System.Drawing.Size(548, 519);
-            this.pEstimateDetails.TabIndex = 4;
+            pEstimateDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pEstimateDetails.Controls.Add(btnCancel);
+            pEstimateDetails.Controls.Add(btnUpdate);
+            pEstimateDetails.Controls.Add(gbTravelDetails);
+            pEstimateDetails.Controls.Add(gbTravelItems);
+            pEstimateDetails.Location = new System.Drawing.Point(754, 20);
+            pEstimateDetails.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pEstimateDetails.Name = "pEstimateDetails";
+            pEstimateDetails.Size = new System.Drawing.Size(639, 599);
+            pEstimateDetails.TabIndex = 4;
             // 
             // btnCancel
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Maroon;
-            this.btnCancel.Location = new System.Drawing.Point(360, 478);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 27);
-            this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancel.ForeColor = System.Drawing.Color.Maroon;
+            btnCancel.Location = new System.Drawing.Point(420, 552);
+            btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(88, 31);
+            btnCancel.TabIndex = 5;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.Green;
-            this.btnUpdate.Location = new System.Drawing.Point(454, 478);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 27);
-            this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnUpdate.ForeColor = System.Drawing.Color.Green;
+            btnUpdate.Location = new System.Drawing.Point(530, 552);
+            btnUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new System.Drawing.Size(88, 31);
+            btnUpdate.TabIndex = 4;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // gbTravelDetails
             // 
-            this.gbTravelDetails.Controls.Add(this.tableLayoutPanel2);
-            this.gbTravelDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTravelDetails.Location = new System.Drawing.Point(13, 11);
-            this.gbTravelDetails.Name = "gbTravelDetails";
-            this.gbTravelDetails.Size = new System.Drawing.Size(516, 168);
-            this.gbTravelDetails.TabIndex = 3;
-            this.gbTravelDetails.TabStop = false;
-            this.gbTravelDetails.Text = "Travel Details";
+            gbTravelDetails.Controls.Add(tableLayoutPanel2);
+            gbTravelDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            gbTravelDetails.Location = new System.Drawing.Point(15, 13);
+            gbTravelDetails.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbTravelDetails.Name = "gbTravelDetails";
+            gbTravelDetails.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbTravelDetails.Size = new System.Drawing.Size(602, 194);
+            gbTravelDetails.TabIndex = 3;
+            gbTravelDetails.TabStop = false;
+            gbTravelDetails.Text = "Travel Details";
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.2915F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.53036F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.65992F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.51822F));
-            this.tableLayoutPanel2.Controls.Add(this.lblDepartureDate, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblReturnDate, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblTravelEvent, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtTravelEvent, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblTravelPurpose, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtTravelPurpose, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblTravelBudgeted, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lblTravelEstTotal, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lblEstimatedTotalValue, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.dtpDepartureDateValue, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dtpReturnDateValue, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.pTravelBudget, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lblDestination, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtDestination, 1, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 19);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(494, 143);
-            this.tableLayoutPanel2.TabIndex = 0;
+            tableLayoutPanel2.ColumnCount = 4;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.2915F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.53036F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.65992F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.51822F));
+            tableLayoutPanel2.Controls.Add(lblDepartureDate, 0, 0);
+            tableLayoutPanel2.Controls.Add(lblReturnDate, 2, 0);
+            tableLayoutPanel2.Controls.Add(lblTravelEvent, 0, 1);
+            tableLayoutPanel2.Controls.Add(txtTravelEvent, 1, 1);
+            tableLayoutPanel2.Controls.Add(lblTravelPurpose, 2, 1);
+            tableLayoutPanel2.Controls.Add(txtTravelPurpose, 3, 1);
+            tableLayoutPanel2.Controls.Add(lblTravelBudgeted, 0, 2);
+            tableLayoutPanel2.Controls.Add(lblTravelEstTotal, 2, 2);
+            tableLayoutPanel2.Controls.Add(lblEstimatedTotalValue, 3, 2);
+            tableLayoutPanel2.Controls.Add(dtpDepartureDateValue, 1, 0);
+            tableLayoutPanel2.Controls.Add(dtpReturnDateValue, 3, 0);
+            tableLayoutPanel2.Controls.Add(pTravelBudget, 1, 2);
+            tableLayoutPanel2.Controls.Add(lblDestination, 0, 3);
+            tableLayoutPanel2.Controls.Add(txtDestination, 1, 3);
+            tableLayoutPanel2.Location = new System.Drawing.Point(14, 22);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 4;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(576, 165);
+            tableLayoutPanel2.TabIndex = 0;
             // 
             // lblDepartureDate
             // 
-            this.lblDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDepartureDate.AutoSize = true;
-            this.lblDepartureDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartureDate.Location = new System.Drawing.Point(3, 11);
-            this.lblDepartureDate.Name = "lblDepartureDate";
-            this.lblDepartureDate.Size = new System.Drawing.Size(114, 13);
-            this.lblDepartureDate.TabIndex = 0;
-            this.lblDepartureDate.Text = "Departure Date:";
+            lblDepartureDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDepartureDate.AutoSize = true;
+            lblDepartureDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDepartureDate.Location = new System.Drawing.Point(4, 14);
+            lblDepartureDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDepartureDate.Name = "lblDepartureDate";
+            lblDepartureDate.Size = new System.Drawing.Size(131, 13);
+            lblDepartureDate.TabIndex = 0;
+            lblDepartureDate.Text = "Departure Date:";
             // 
             // lblReturnDate
             // 
-            this.lblReturnDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblReturnDate.AutoSize = true;
-            this.lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturnDate.Location = new System.Drawing.Point(258, 11);
-            this.lblReturnDate.Name = "lblReturnDate";
-            this.lblReturnDate.Size = new System.Drawing.Size(101, 13);
-            this.lblReturnDate.TabIndex = 1;
-            this.lblReturnDate.Text = "Return Date:";
+            lblReturnDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblReturnDate.AutoSize = true;
+            lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblReturnDate.Location = new System.Drawing.Point(301, 14);
+            lblReturnDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblReturnDate.Name = "lblReturnDate";
+            lblReturnDate.Size = new System.Drawing.Size(116, 13);
+            lblReturnDate.TabIndex = 1;
+            lblReturnDate.Text = "Return Date:";
             // 
             // lblTravelEvent
             // 
-            this.lblTravelEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelEvent.AutoSize = true;
-            this.lblTravelEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelEvent.Location = new System.Drawing.Point(3, 46);
-            this.lblTravelEvent.Name = "lblTravelEvent";
-            this.lblTravelEvent.Size = new System.Drawing.Size(114, 13);
-            this.lblTravelEvent.TabIndex = 4;
-            this.lblTravelEvent.Text = "Travel Event:";
+            lblTravelEvent.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelEvent.AutoSize = true;
+            lblTravelEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelEvent.Location = new System.Drawing.Point(4, 55);
+            lblTravelEvent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelEvent.Name = "lblTravelEvent";
+            lblTravelEvent.Size = new System.Drawing.Size(131, 13);
+            lblTravelEvent.TabIndex = 4;
+            lblTravelEvent.Text = "Travel Event:";
             // 
             // txtTravelEvent
             // 
-            this.txtTravelEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTravelEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTravelEvent.Location = new System.Drawing.Point(123, 38);
-            this.txtTravelEvent.Multiline = true;
-            this.txtTravelEvent.Name = "txtTravelEvent";
-            this.txtTravelEvent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtTravelEvent.Size = new System.Drawing.Size(129, 29);
-            this.txtTravelEvent.TabIndex = 5;
+            txtTravelEvent.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtTravelEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtTravelEvent.Location = new System.Drawing.Point(143, 45);
+            txtTravelEvent.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtTravelEvent.Multiline = true;
+            txtTravelEvent.Name = "txtTravelEvent";
+            txtTravelEvent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtTravelEvent.Size = new System.Drawing.Size(150, 33);
+            txtTravelEvent.TabIndex = 5;
             // 
             // lblTravelPurpose
             // 
-            this.lblTravelPurpose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelPurpose.AutoSize = true;
-            this.lblTravelPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelPurpose.Location = new System.Drawing.Point(258, 46);
-            this.lblTravelPurpose.Name = "lblTravelPurpose";
-            this.lblTravelPurpose.Size = new System.Drawing.Size(101, 13);
-            this.lblTravelPurpose.TabIndex = 6;
-            this.lblTravelPurpose.Text = "Travel Purpose:";
+            lblTravelPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelPurpose.AutoSize = true;
+            lblTravelPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelPurpose.Location = new System.Drawing.Point(301, 55);
+            lblTravelPurpose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelPurpose.Name = "lblTravelPurpose";
+            lblTravelPurpose.Size = new System.Drawing.Size(116, 13);
+            lblTravelPurpose.TabIndex = 6;
+            lblTravelPurpose.Text = "Travel Purpose:";
             // 
             // txtTravelPurpose
             // 
-            this.txtTravelPurpose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTravelPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTravelPurpose.Location = new System.Drawing.Point(365, 38);
-            this.txtTravelPurpose.Multiline = true;
-            this.txtTravelPurpose.Name = "txtTravelPurpose";
-            this.txtTravelPurpose.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtTravelPurpose.Size = new System.Drawing.Size(126, 29);
-            this.txtTravelPurpose.TabIndex = 7;
+            txtTravelPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtTravelPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtTravelPurpose.Location = new System.Drawing.Point(425, 45);
+            txtTravelPurpose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtTravelPurpose.Multiline = true;
+            txtTravelPurpose.Name = "txtTravelPurpose";
+            txtTravelPurpose.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtTravelPurpose.Size = new System.Drawing.Size(147, 33);
+            txtTravelPurpose.TabIndex = 7;
             // 
             // lblTravelBudgeted
             // 
-            this.lblTravelBudgeted.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelBudgeted.AutoSize = true;
-            this.lblTravelBudgeted.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelBudgeted.Location = new System.Drawing.Point(3, 81);
-            this.lblTravelBudgeted.Name = "lblTravelBudgeted";
-            this.lblTravelBudgeted.Size = new System.Drawing.Size(114, 13);
-            this.lblTravelBudgeted.TabIndex = 8;
-            this.lblTravelBudgeted.Text = "Travel Budgeted:";
+            lblTravelBudgeted.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelBudgeted.AutoSize = true;
+            lblTravelBudgeted.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelBudgeted.Location = new System.Drawing.Point(4, 96);
+            lblTravelBudgeted.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelBudgeted.Name = "lblTravelBudgeted";
+            lblTravelBudgeted.Size = new System.Drawing.Size(131, 13);
+            lblTravelBudgeted.TabIndex = 8;
+            lblTravelBudgeted.Text = "Travel Budgeted:";
             // 
             // lblTravelEstTotal
             // 
-            this.lblTravelEstTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelEstTotal.AutoSize = true;
-            this.lblTravelEstTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelEstTotal.Location = new System.Drawing.Point(258, 81);
-            this.lblTravelEstTotal.Name = "lblTravelEstTotal";
-            this.lblTravelEstTotal.Size = new System.Drawing.Size(101, 13);
-            this.lblTravelEstTotal.TabIndex = 10;
-            this.lblTravelEstTotal.Text = "Estimated Total:";
+            lblTravelEstTotal.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelEstTotal.AutoSize = true;
+            lblTravelEstTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelEstTotal.Location = new System.Drawing.Point(301, 96);
+            lblTravelEstTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelEstTotal.Name = "lblTravelEstTotal";
+            lblTravelEstTotal.Size = new System.Drawing.Size(116, 13);
+            lblTravelEstTotal.TabIndex = 10;
+            lblTravelEstTotal.Text = "Estimated Total:";
             // 
             // lblEstimatedTotalValue
             // 
-            this.lblEstimatedTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEstimatedTotalValue.AutoSize = true;
-            this.lblEstimatedTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstimatedTotalValue.Location = new System.Drawing.Point(365, 81);
-            this.lblEstimatedTotalValue.Name = "lblEstimatedTotalValue";
-            this.lblEstimatedTotalValue.Size = new System.Drawing.Size(126, 13);
-            this.lblEstimatedTotalValue.TabIndex = 11;
+            lblEstimatedTotalValue.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblEstimatedTotalValue.AutoSize = true;
+            lblEstimatedTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblEstimatedTotalValue.Location = new System.Drawing.Point(425, 96);
+            lblEstimatedTotalValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblEstimatedTotalValue.Name = "lblEstimatedTotalValue";
+            lblEstimatedTotalValue.Size = new System.Drawing.Size(147, 13);
+            lblEstimatedTotalValue.TabIndex = 11;
             // 
             // dtpDepartureDateValue
             // 
-            this.dtpDepartureDateValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDepartureDateValue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDepartureDateValue.Location = new System.Drawing.Point(123, 7);
-            this.dtpDepartureDateValue.Name = "dtpDepartureDateValue";
-            this.dtpDepartureDateValue.Size = new System.Drawing.Size(129, 20);
-            this.dtpDepartureDateValue.TabIndex = 12;
-            this.dtpDepartureDateValue.ValueChanged += new System.EventHandler(this.dtpDepartureDateValue_ValueChanged);
+            dtpDepartureDateValue.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtpDepartureDateValue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpDepartureDateValue.Location = new System.Drawing.Point(143, 10);
+            dtpDepartureDateValue.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpDepartureDateValue.Name = "dtpDepartureDateValue";
+            dtpDepartureDateValue.Size = new System.Drawing.Size(150, 20);
+            dtpDepartureDateValue.TabIndex = 12;
+            dtpDepartureDateValue.ValueChanged += dtpDepartureDateValue_ValueChanged;
             // 
             // dtpReturnDateValue
             // 
-            this.dtpReturnDateValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpReturnDateValue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpReturnDateValue.Location = new System.Drawing.Point(365, 7);
-            this.dtpReturnDateValue.Name = "dtpReturnDateValue";
-            this.dtpReturnDateValue.Size = new System.Drawing.Size(126, 20);
-            this.dtpReturnDateValue.TabIndex = 13;
-            this.dtpReturnDateValue.ValueChanged += new System.EventHandler(this.dtpReturnDateValue_ValueChanged);
+            dtpReturnDateValue.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtpReturnDateValue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpReturnDateValue.Location = new System.Drawing.Point(425, 10);
+            dtpReturnDateValue.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpReturnDateValue.Name = "dtpReturnDateValue";
+            dtpReturnDateValue.Size = new System.Drawing.Size(147, 20);
+            dtpReturnDateValue.TabIndex = 13;
+            dtpReturnDateValue.ValueChanged += dtpReturnDateValue_ValueChanged;
             // 
             // pTravelBudget
             // 
-            this.pTravelBudget.Controls.Add(this.rbNo);
-            this.pTravelBudget.Controls.Add(this.rbYes);
-            this.pTravelBudget.Location = new System.Drawing.Point(123, 73);
-            this.pTravelBudget.Name = "pTravelBudget";
-            this.pTravelBudget.Size = new System.Drawing.Size(129, 29);
-            this.pTravelBudget.TabIndex = 14;
+            pTravelBudget.Controls.Add(rbNo);
+            pTravelBudget.Controls.Add(rbYes);
+            pTravelBudget.Location = new System.Drawing.Point(143, 85);
+            pTravelBudget.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pTravelBudget.Name = "pTravelBudget";
+            pTravelBudget.Size = new System.Drawing.Size(150, 33);
+            pTravelBudget.TabIndex = 14;
             // 
             // rbNo
             // 
-            this.rbNo.AutoSize = true;
-            this.rbNo.Location = new System.Drawing.Point(78, 7);
-            this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(41, 17);
-            this.rbNo.TabIndex = 1;
-            this.rbNo.TabStop = true;
-            this.rbNo.Text = "No";
-            this.rbNo.UseVisualStyleBackColor = true;
+            rbNo.AutoSize = true;
+            rbNo.Location = new System.Drawing.Point(91, 8);
+            rbNo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbNo.Name = "rbNo";
+            rbNo.Size = new System.Drawing.Size(41, 17);
+            rbNo.TabIndex = 1;
+            rbNo.TabStop = true;
+            rbNo.Text = "No";
+            rbNo.UseVisualStyleBackColor = true;
             // 
             // rbYes
             // 
-            this.rbYes.AutoSize = true;
-            this.rbYes.Location = new System.Drawing.Point(13, 7);
-            this.rbYes.Name = "rbYes";
-            this.rbYes.Size = new System.Drawing.Size(46, 17);
-            this.rbYes.TabIndex = 0;
-            this.rbYes.TabStop = true;
-            this.rbYes.Text = "Yes";
-            this.rbYes.UseVisualStyleBackColor = true;
+            rbYes.AutoSize = true;
+            rbYes.Location = new System.Drawing.Point(15, 8);
+            rbYes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbYes.Name = "rbYes";
+            rbYes.Size = new System.Drawing.Size(46, 17);
+            rbYes.TabIndex = 0;
+            rbYes.TabStop = true;
+            rbYes.Text = "Yes";
+            rbYes.UseVisualStyleBackColor = true;
             // 
             // lblDestination
             // 
-            this.lblDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDestination.AutoSize = true;
-            this.lblDestination.Location = new System.Drawing.Point(3, 117);
-            this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(114, 13);
-            this.lblDestination.TabIndex = 15;
-            this.lblDestination.Text = "City / State:";
+            lblDestination.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDestination.AutoSize = true;
+            lblDestination.Location = new System.Drawing.Point(4, 137);
+            lblDestination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDestination.Name = "lblDestination";
+            lblDestination.Size = new System.Drawing.Size(131, 13);
+            lblDestination.TabIndex = 15;
+            lblDestination.Text = "City / State:";
             // 
             // txtDestination
             // 
-            this.txtDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDestination.Location = new System.Drawing.Point(123, 108);
-            this.txtDestination.Multiline = true;
-            this.txtDestination.Name = "txtDestination";
-            this.txtDestination.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtDestination.Size = new System.Drawing.Size(129, 32);
-            this.txtDestination.TabIndex = 16;
+            txtDestination.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtDestination.Location = new System.Drawing.Point(143, 126);
+            txtDestination.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtDestination.Multiline = true;
+            txtDestination.Name = "txtDestination";
+            txtDestination.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtDestination.Size = new System.Drawing.Size(150, 36);
+            txtDestination.TabIndex = 16;
             // 
             // gbTravelItems
             // 
-            this.gbTravelItems.Controls.Add(this.tableLayoutPanel3);
-            this.gbTravelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTravelItems.Location = new System.Drawing.Point(13, 188);
-            this.gbTravelItems.Name = "gbTravelItems";
-            this.gbTravelItems.Size = new System.Drawing.Size(516, 282);
-            this.gbTravelItems.TabIndex = 2;
-            this.gbTravelItems.TabStop = false;
-            this.gbTravelItems.Text = "Travel Items";
+            gbTravelItems.Controls.Add(tableLayoutPanel3);
+            gbTravelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            gbTravelItems.Location = new System.Drawing.Point(15, 217);
+            gbTravelItems.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbTravelItems.Name = "gbTravelItems";
+            gbTravelItems.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbTravelItems.Size = new System.Drawing.Size(602, 325);
+            gbTravelItems.TabIndex = 2;
+            gbTravelItems.TabStop = false;
+            gbTravelItems.Text = "Travel Items";
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.42105F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.59919F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.97976F));
-            this.tableLayoutPanel3.Controls.Add(this.panel3, 1, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lblName, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblCost, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblNotes, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblMeals, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lblRegistration, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lblLodging, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lblCarRental, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lblAirfare, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.lblMileage, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lblOtherExpenses, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.txtMealsNotes, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txtRegistrationNotes, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.txtLodgingNotes, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtCarRentalNotes, 2, 4);
-            this.tableLayoutPanel3.Controls.Add(this.txtAirfareNotes, 2, 5);
-            this.tableLayoutPanel3.Controls.Add(this.txtMileageNotes, 2, 6);
-            this.tableLayoutPanel3.Controls.Add(this.txtOtherExpNotes, 2, 7);
-            this.tableLayoutPanel3.Controls.Add(this.txtMealsCost, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txtRegistrationCost, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.txtLodgingCost, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtCarRentalCost, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.txtAirfareCost, 1, 5);
-            this.tableLayoutPanel3.Controls.Add(this.txtOtherExpensesCost, 1, 7);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(12, 21);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 8;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(494, 251);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // lblName
-            // 
-            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(3, 9);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(84, 13);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Item";
-            // 
-            // lblCost
-            // 
-            this.lblCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCost.AutoSize = true;
-            this.lblCost.Location = new System.Drawing.Point(93, 9);
-            this.lblCost.Name = "lblCost";
-            this.lblCost.Size = new System.Drawing.Size(75, 13);
-            this.lblCost.TabIndex = 1;
-            this.lblCost.Text = "Cost";
-            // 
-            // lblNotes
-            // 
-            this.lblNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNotes.AutoSize = true;
-            this.lblNotes.Location = new System.Drawing.Point(174, 9);
-            this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(317, 13);
-            this.lblNotes.TabIndex = 2;
-            this.lblNotes.Text = "Notes";
-            // 
-            // lblMeals
-            // 
-            this.lblMeals.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMeals.AutoSize = true;
-            this.lblMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMeals.Location = new System.Drawing.Point(3, 40);
-            this.lblMeals.Name = "lblMeals";
-            this.lblMeals.Size = new System.Drawing.Size(84, 13);
-            this.lblMeals.TabIndex = 3;
-            this.lblMeals.Text = "Meals";
-            // 
-            // lblRegistration
-            // 
-            this.lblRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRegistration.AutoSize = true;
-            this.lblRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistration.Location = new System.Drawing.Point(3, 71);
-            this.lblRegistration.Name = "lblRegistration";
-            this.lblRegistration.Size = new System.Drawing.Size(84, 13);
-            this.lblRegistration.TabIndex = 4;
-            this.lblRegistration.Text = "Registration";
-            // 
-            // lblLodging
-            // 
-            this.lblLodging.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLodging.AutoSize = true;
-            this.lblLodging.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLodging.Location = new System.Drawing.Point(3, 102);
-            this.lblLodging.Name = "lblLodging";
-            this.lblLodging.Size = new System.Drawing.Size(84, 13);
-            this.lblLodging.TabIndex = 5;
-            this.lblLodging.Text = "Lodging";
-            // 
-            // lblCarRental
-            // 
-            this.lblCarRental.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCarRental.AutoSize = true;
-            this.lblCarRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarRental.Location = new System.Drawing.Point(3, 133);
-            this.lblCarRental.Name = "lblCarRental";
-            this.lblCarRental.Size = new System.Drawing.Size(84, 13);
-            this.lblCarRental.TabIndex = 6;
-            this.lblCarRental.Text = "Car Rental";
-            // 
-            // lblAirfare
-            // 
-            this.lblAirfare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAirfare.AutoSize = true;
-            this.lblAirfare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAirfare.Location = new System.Drawing.Point(3, 164);
-            this.lblAirfare.Name = "lblAirfare";
-            this.lblAirfare.Size = new System.Drawing.Size(84, 13);
-            this.lblAirfare.TabIndex = 7;
-            this.lblAirfare.Text = "Airfare";
-            // 
-            // lblMileage
-            // 
-            this.lblMileage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMileage.AutoSize = true;
-            this.lblMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMileage.Location = new System.Drawing.Point(3, 195);
-            this.lblMileage.Name = "lblMileage";
-            this.lblMileage.Size = new System.Drawing.Size(84, 13);
-            this.lblMileage.TabIndex = 8;
-            this.lblMileage.Text = "Mileage";
-            // 
-            // lblOtherExpenses
-            // 
-            this.lblOtherExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOtherExpenses.AutoSize = true;
-            this.lblOtherExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOtherExpenses.Location = new System.Drawing.Point(3, 227);
-            this.lblOtherExpenses.Name = "lblOtherExpenses";
-            this.lblOtherExpenses.Size = new System.Drawing.Size(84, 13);
-            this.lblOtherExpenses.TabIndex = 9;
-            this.lblOtherExpenses.Text = "Other Expenses";
-            // 
-            // txtMealsNotes
-            // 
-            this.txtMealsNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMealsNotes.Location = new System.Drawing.Point(174, 34);
-            this.txtMealsNotes.Multiline = true;
-            this.txtMealsNotes.Name = "txtMealsNotes";
-            this.txtMealsNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtMealsNotes.Size = new System.Drawing.Size(317, 25);
-            this.txtMealsNotes.TabIndex = 17;
-            // 
-            // txtRegistrationNotes
-            // 
-            this.txtRegistrationNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRegistrationNotes.Location = new System.Drawing.Point(174, 65);
-            this.txtRegistrationNotes.Multiline = true;
-            this.txtRegistrationNotes.Name = "txtRegistrationNotes";
-            this.txtRegistrationNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtRegistrationNotes.Size = new System.Drawing.Size(317, 25);
-            this.txtRegistrationNotes.TabIndex = 18;
-            // 
-            // txtLodgingNotes
-            // 
-            this.txtLodgingNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLodgingNotes.Location = new System.Drawing.Point(174, 96);
-            this.txtLodgingNotes.Multiline = true;
-            this.txtLodgingNotes.Name = "txtLodgingNotes";
-            this.txtLodgingNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtLodgingNotes.Size = new System.Drawing.Size(317, 25);
-            this.txtLodgingNotes.TabIndex = 19;
-            // 
-            // txtCarRentalNotes
-            // 
-            this.txtCarRentalNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCarRentalNotes.Location = new System.Drawing.Point(174, 127);
-            this.txtCarRentalNotes.Multiline = true;
-            this.txtCarRentalNotes.Name = "txtCarRentalNotes";
-            this.txtCarRentalNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCarRentalNotes.Size = new System.Drawing.Size(317, 25);
-            this.txtCarRentalNotes.TabIndex = 20;
-            // 
-            // txtAirfareNotes
-            // 
-            this.txtAirfareNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAirfareNotes.Location = new System.Drawing.Point(174, 158);
-            this.txtAirfareNotes.Multiline = true;
-            this.txtAirfareNotes.Name = "txtAirfareNotes";
-            this.txtAirfareNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAirfareNotes.Size = new System.Drawing.Size(317, 25);
-            this.txtAirfareNotes.TabIndex = 21;
-            // 
-            // txtMileageNotes
-            // 
-            this.txtMileageNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMileageNotes.Location = new System.Drawing.Point(174, 189);
-            this.txtMileageNotes.Multiline = true;
-            this.txtMileageNotes.Name = "txtMileageNotes";
-            this.txtMileageNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtMileageNotes.Size = new System.Drawing.Size(317, 25);
-            this.txtMileageNotes.TabIndex = 22;
-            this.txtMileageNotes.TextChanged += new System.EventHandler(this.txtMileageNotes_TextChanged);
-            // 
-            // txtOtherExpNotes
-            // 
-            this.txtOtherExpNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOtherExpNotes.Location = new System.Drawing.Point(174, 220);
-            this.txtOtherExpNotes.Multiline = true;
-            this.txtOtherExpNotes.Name = "txtOtherExpNotes";
-            this.txtOtherExpNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtOtherExpNotes.Size = new System.Drawing.Size(317, 28);
-            this.txtOtherExpNotes.TabIndex = 23;
-            // 
-            // txtMealsCost
-            // 
-            this.txtMealsCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMealsCost.Location = new System.Drawing.Point(93, 36);
-            this.txtMealsCost.Name = "txtMealsCost";
-            this.txtMealsCost.Size = new System.Drawing.Size(75, 20);
-            this.txtMealsCost.TabIndex = 24;
-            // 
-            // txtRegistrationCost
-            // 
-            this.txtRegistrationCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRegistrationCost.Location = new System.Drawing.Point(93, 67);
-            this.txtRegistrationCost.Name = "txtRegistrationCost";
-            this.txtRegistrationCost.Size = new System.Drawing.Size(75, 20);
-            this.txtRegistrationCost.TabIndex = 25;
-            // 
-            // txtLodgingCost
-            // 
-            this.txtLodgingCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLodgingCost.Location = new System.Drawing.Point(93, 98);
-            this.txtLodgingCost.Name = "txtLodgingCost";
-            this.txtLodgingCost.Size = new System.Drawing.Size(75, 20);
-            this.txtLodgingCost.TabIndex = 26;
-            // 
-            // txtCarRentalCost
-            // 
-            this.txtCarRentalCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCarRentalCost.Location = new System.Drawing.Point(93, 129);
-            this.txtCarRentalCost.Name = "txtCarRentalCost";
-            this.txtCarRentalCost.Size = new System.Drawing.Size(75, 20);
-            this.txtCarRentalCost.TabIndex = 27;
-            // 
-            // txtAirfareCost
-            // 
-            this.txtAirfareCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAirfareCost.Location = new System.Drawing.Point(93, 160);
-            this.txtAirfareCost.Name = "txtAirfareCost";
-            this.txtAirfareCost.Size = new System.Drawing.Size(75, 20);
-            this.txtAirfareCost.TabIndex = 28;
-            // 
-            // txtMileageCost
-            // 
-            this.txtMileageCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMileageCost.Location = new System.Drawing.Point(22, 1);
-            this.txtMileageCost.Name = "txtMileageCost";
-            this.txtMileageCost.ReadOnly = true;
-            this.txtMileageCost.Size = new System.Drawing.Size(50, 20);
-            this.txtMileageCost.TabIndex = 29;
-            // 
-            // txtOtherExpensesCost
-            // 
-            this.txtOtherExpensesCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOtherExpensesCost.Location = new System.Drawing.Point(93, 224);
-            this.txtOtherExpensesCost.Name = "txtOtherExpensesCost";
-            this.txtOtherExpensesCost.Size = new System.Drawing.Size(75, 20);
-            this.txtOtherExpensesCost.TabIndex = 30;
+            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.42105F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.59919F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.97976F));
+            tableLayoutPanel3.Controls.Add(panel3, 1, 6);
+            tableLayoutPanel3.Controls.Add(lblName, 0, 0);
+            tableLayoutPanel3.Controls.Add(lblCost, 1, 0);
+            tableLayoutPanel3.Controls.Add(lblNotes, 2, 0);
+            tableLayoutPanel3.Controls.Add(lblMeals, 0, 1);
+            tableLayoutPanel3.Controls.Add(lblRegistration, 0, 2);
+            tableLayoutPanel3.Controls.Add(lblLodging, 0, 3);
+            tableLayoutPanel3.Controls.Add(lblCarRental, 0, 4);
+            tableLayoutPanel3.Controls.Add(lblAirfare, 0, 5);
+            tableLayoutPanel3.Controls.Add(lblMileage, 0, 6);
+            tableLayoutPanel3.Controls.Add(lblOtherExpenses, 0, 7);
+            tableLayoutPanel3.Controls.Add(txtMealsNotes, 2, 1);
+            tableLayoutPanel3.Controls.Add(txtRegistrationNotes, 2, 2);
+            tableLayoutPanel3.Controls.Add(txtLodgingNotes, 2, 3);
+            tableLayoutPanel3.Controls.Add(txtCarRentalNotes, 2, 4);
+            tableLayoutPanel3.Controls.Add(txtAirfareNotes, 2, 5);
+            tableLayoutPanel3.Controls.Add(txtMileageNotes, 2, 6);
+            tableLayoutPanel3.Controls.Add(txtOtherExpNotes, 2, 7);
+            tableLayoutPanel3.Controls.Add(txtMealsCost, 1, 1);
+            tableLayoutPanel3.Controls.Add(txtRegistrationCost, 1, 2);
+            tableLayoutPanel3.Controls.Add(txtLodgingCost, 1, 3);
+            tableLayoutPanel3.Controls.Add(txtCarRentalCost, 1, 4);
+            tableLayoutPanel3.Controls.Add(txtAirfareCost, 1, 5);
+            tableLayoutPanel3.Controls.Add(txtOtherExpensesCost, 1, 7);
+            tableLayoutPanel3.Location = new System.Drawing.Point(14, 24);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 8;
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(576, 290);
+            tableLayoutPanel3.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.txtMileageCost);
-            this.panel3.Location = new System.Drawing.Point(93, 189);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(75, 24);
-            this.panel3.TabIndex = 6;
+            panel3.Controls.Add(button1);
+            panel3.Controls.Add(txtMileageCost);
+            panel3.Location = new System.Drawing.Point(110, 219);
+            panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(87, 28);
+            panel3.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(21, 21);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button1.Location = new System.Drawing.Point(1, 1);
+            button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(24, 24);
+            button1.TabIndex = 0;
+            button1.Text = "+";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // txtMileageCost
+            // 
+            txtMileageCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtMileageCost.Location = new System.Drawing.Point(26, 1);
+            txtMileageCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtMileageCost.Name = "txtMileageCost";
+            txtMileageCost.ReadOnly = true;
+            txtMileageCost.Size = new System.Drawing.Size(57, 20);
+            txtMileageCost.TabIndex = 29;
+            // 
+            // lblName
+            // 
+            lblName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblName.AutoSize = true;
+            lblName.Location = new System.Drawing.Point(4, 11);
+            lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblName.Name = "lblName";
+            lblName.Size = new System.Drawing.Size(98, 13);
+            lblName.TabIndex = 0;
+            lblName.Text = "Item";
+            // 
+            // lblCost
+            // 
+            lblCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblCost.AutoSize = true;
+            lblCost.Location = new System.Drawing.Point(110, 11);
+            lblCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblCost.Name = "lblCost";
+            lblCost.Size = new System.Drawing.Size(87, 13);
+            lblCost.TabIndex = 1;
+            lblCost.Text = "Cost";
+            // 
+            // lblNotes
+            // 
+            lblNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblNotes.AutoSize = true;
+            lblNotes.Location = new System.Drawing.Point(205, 11);
+            lblNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new System.Drawing.Size(367, 13);
+            lblNotes.TabIndex = 2;
+            lblNotes.Text = "Notes";
+            // 
+            // lblMeals
+            // 
+            lblMeals.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblMeals.AutoSize = true;
+            lblMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblMeals.Location = new System.Drawing.Point(4, 47);
+            lblMeals.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMeals.Name = "lblMeals";
+            lblMeals.Size = new System.Drawing.Size(98, 13);
+            lblMeals.TabIndex = 3;
+            lblMeals.Text = "Meals";
+            // 
+            // lblRegistration
+            // 
+            lblRegistration.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblRegistration.AutoSize = true;
+            lblRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblRegistration.Location = new System.Drawing.Point(4, 83);
+            lblRegistration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblRegistration.Name = "lblRegistration";
+            lblRegistration.Size = new System.Drawing.Size(98, 13);
+            lblRegistration.TabIndex = 4;
+            lblRegistration.Text = "Registration";
+            // 
+            // lblLodging
+            // 
+            lblLodging.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblLodging.AutoSize = true;
+            lblLodging.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblLodging.Location = new System.Drawing.Point(4, 119);
+            lblLodging.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblLodging.Name = "lblLodging";
+            lblLodging.Size = new System.Drawing.Size(98, 13);
+            lblLodging.TabIndex = 5;
+            lblLodging.Text = "Lodging";
+            // 
+            // lblCarRental
+            // 
+            lblCarRental.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblCarRental.AutoSize = true;
+            lblCarRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblCarRental.Location = new System.Drawing.Point(4, 155);
+            lblCarRental.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblCarRental.Name = "lblCarRental";
+            lblCarRental.Size = new System.Drawing.Size(98, 13);
+            lblCarRental.TabIndex = 6;
+            lblCarRental.Text = "Car Rental";
+            // 
+            // lblAirfare
+            // 
+            lblAirfare.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblAirfare.AutoSize = true;
+            lblAirfare.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblAirfare.Location = new System.Drawing.Point(4, 191);
+            lblAirfare.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblAirfare.Name = "lblAirfare";
+            lblAirfare.Size = new System.Drawing.Size(98, 13);
+            lblAirfare.TabIndex = 7;
+            lblAirfare.Text = "Airfare";
+            // 
+            // lblMileage
+            // 
+            lblMileage.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblMileage.AutoSize = true;
+            lblMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblMileage.Location = new System.Drawing.Point(4, 227);
+            lblMileage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMileage.Name = "lblMileage";
+            lblMileage.Size = new System.Drawing.Size(98, 13);
+            lblMileage.TabIndex = 8;
+            lblMileage.Text = "Mileage";
+            // 
+            // lblOtherExpenses
+            // 
+            lblOtherExpenses.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblOtherExpenses.AutoSize = true;
+            lblOtherExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblOtherExpenses.Location = new System.Drawing.Point(4, 264);
+            lblOtherExpenses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblOtherExpenses.Name = "lblOtherExpenses";
+            lblOtherExpenses.Size = new System.Drawing.Size(98, 13);
+            lblOtherExpenses.TabIndex = 9;
+            lblOtherExpenses.Text = "Other Expenses";
+            // 
+            // txtMealsNotes
+            // 
+            txtMealsNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtMealsNotes.Location = new System.Drawing.Point(205, 40);
+            txtMealsNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtMealsNotes.Multiline = true;
+            txtMealsNotes.Name = "txtMealsNotes";
+            txtMealsNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtMealsNotes.Size = new System.Drawing.Size(367, 28);
+            txtMealsNotes.TabIndex = 17;
+            // 
+            // txtRegistrationNotes
+            // 
+            txtRegistrationNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtRegistrationNotes.Location = new System.Drawing.Point(205, 76);
+            txtRegistrationNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtRegistrationNotes.Multiline = true;
+            txtRegistrationNotes.Name = "txtRegistrationNotes";
+            txtRegistrationNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtRegistrationNotes.Size = new System.Drawing.Size(367, 28);
+            txtRegistrationNotes.TabIndex = 18;
+            // 
+            // txtLodgingNotes
+            // 
+            txtLodgingNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtLodgingNotes.Location = new System.Drawing.Point(205, 112);
+            txtLodgingNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtLodgingNotes.Multiline = true;
+            txtLodgingNotes.Name = "txtLodgingNotes";
+            txtLodgingNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtLodgingNotes.Size = new System.Drawing.Size(367, 28);
+            txtLodgingNotes.TabIndex = 19;
+            // 
+            // txtCarRentalNotes
+            // 
+            txtCarRentalNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtCarRentalNotes.Location = new System.Drawing.Point(205, 148);
+            txtCarRentalNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtCarRentalNotes.Multiline = true;
+            txtCarRentalNotes.Name = "txtCarRentalNotes";
+            txtCarRentalNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtCarRentalNotes.Size = new System.Drawing.Size(367, 28);
+            txtCarRentalNotes.TabIndex = 20;
+            // 
+            // txtAirfareNotes
+            // 
+            txtAirfareNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtAirfareNotes.Location = new System.Drawing.Point(205, 184);
+            txtAirfareNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtAirfareNotes.Multiline = true;
+            txtAirfareNotes.Name = "txtAirfareNotes";
+            txtAirfareNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtAirfareNotes.Size = new System.Drawing.Size(367, 28);
+            txtAirfareNotes.TabIndex = 21;
+            // 
+            // txtMileageNotes
+            // 
+            txtMileageNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtMileageNotes.Location = new System.Drawing.Point(205, 220);
+            txtMileageNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtMileageNotes.Multiline = true;
+            txtMileageNotes.Name = "txtMileageNotes";
+            txtMileageNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtMileageNotes.Size = new System.Drawing.Size(367, 28);
+            txtMileageNotes.TabIndex = 22;
+            txtMileageNotes.TextChanged += txtMileageNotes_TextChanged;
+            // 
+            // txtOtherExpNotes
+            // 
+            txtOtherExpNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtOtherExpNotes.Location = new System.Drawing.Point(205, 255);
+            txtOtherExpNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtOtherExpNotes.Multiline = true;
+            txtOtherExpNotes.Name = "txtOtherExpNotes";
+            txtOtherExpNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtOtherExpNotes.Size = new System.Drawing.Size(367, 32);
+            txtOtherExpNotes.TabIndex = 23;
+            // 
+            // txtMealsCost
+            // 
+            txtMealsCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtMealsCost.Location = new System.Drawing.Point(110, 44);
+            txtMealsCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtMealsCost.Name = "txtMealsCost";
+            txtMealsCost.Size = new System.Drawing.Size(87, 20);
+            txtMealsCost.TabIndex = 24;
+            // 
+            // txtRegistrationCost
+            // 
+            txtRegistrationCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtRegistrationCost.Location = new System.Drawing.Point(110, 80);
+            txtRegistrationCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtRegistrationCost.Name = "txtRegistrationCost";
+            txtRegistrationCost.Size = new System.Drawing.Size(87, 20);
+            txtRegistrationCost.TabIndex = 25;
+            // 
+            // txtLodgingCost
+            // 
+            txtLodgingCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtLodgingCost.Location = new System.Drawing.Point(110, 116);
+            txtLodgingCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtLodgingCost.Name = "txtLodgingCost";
+            txtLodgingCost.Size = new System.Drawing.Size(87, 20);
+            txtLodgingCost.TabIndex = 26;
+            // 
+            // txtCarRentalCost
+            // 
+            txtCarRentalCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtCarRentalCost.Location = new System.Drawing.Point(110, 152);
+            txtCarRentalCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtCarRentalCost.Name = "txtCarRentalCost";
+            txtCarRentalCost.Size = new System.Drawing.Size(87, 20);
+            txtCarRentalCost.TabIndex = 27;
+            // 
+            // txtAirfareCost
+            // 
+            txtAirfareCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtAirfareCost.Location = new System.Drawing.Point(110, 188);
+            txtAirfareCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtAirfareCost.Name = "txtAirfareCost";
+            txtAirfareCost.Size = new System.Drawing.Size(87, 20);
+            txtAirfareCost.TabIndex = 28;
+            // 
+            // txtOtherExpensesCost
+            // 
+            txtOtherExpensesCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtOtherExpensesCost.Location = new System.Drawing.Point(110, 261);
+            txtOtherExpensesCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtOtherExpensesCost.Name = "txtOtherExpensesCost";
+            txtOtherExpensesCost.Size = new System.Drawing.Size(87, 20);
+            txtOtherExpensesCost.TabIndex = 30;
             // 
             // EditThirdPartyAuthorizationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 543);
-            this.ControlBox = false;
-            this.Controls.Add(this.pEstimateDetails);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "EditThirdPartyAuthorizationForm";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit Third Party Authorization Form";
-            this.Load += new System.EventHandler(this.EditThirdPartyAuthorizationForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAuthorizations)).EndInit();
-            this.pEstimateDetails.ResumeLayout(false);
-            this.gbTravelDetails.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.pTravelBudget.ResumeLayout(false);
-            this.pTravelBudget.PerformLayout();
-            this.gbTravelItems.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1403, 634);
+            ControlBox = false;
+            Controls.Add(pEstimateDetails);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "EditThirdPartyAuthorizationForm";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Edit Third Party Authorization Form";
+            Load += EditThirdPartyAuthorizationForm_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAuthorizations).EndInit();
+            pEstimateDetails.ResumeLayout(false);
+            gbTravelDetails.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            pTravelBudget.ResumeLayout(false);
+            pTravelBudget.PerformLayout();
+            gbTravelItems.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

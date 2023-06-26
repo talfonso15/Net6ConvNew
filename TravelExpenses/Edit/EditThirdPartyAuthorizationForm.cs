@@ -133,15 +133,15 @@ namespace TravelExpenses
             }
 
             localCon.Close();
-           // dtpReturnDateValue.MinDate = dtpDepartureDateValue.Value;
-            this.Size = new System.Drawing.Size(627, 586);
+            // dtpReturnDateValue.MinDate = dtpDepartureDateValue.Value;
+            this.Size = new System.Drawing.Size(726, 673);
             loadingForm = false;
         }
 
         private void btnShowAthorizations_Click(object sender, EventArgs e)
         {
             dgvAuthorizations.Rows.Clear();
-            
+
             if (cbEmployee.SelectedValue.ToString() == "-1")
             {
                 localCon.Open();
@@ -149,7 +149,7 @@ namespace TravelExpenses
                 SqlDataReader authoDR = autho.ExecuteReader();
                 if (authoDR.HasRows)
                 {
-                    
+
 
                     while (authoDR.Read())
                     {
@@ -240,106 +240,207 @@ namespace TravelExpenses
             {
                 refreshAuthorizations();
             }
-            
+
         }
 
         private void refreshAuthorizations()
         {
-            dgvAuthorizations.Rows.Clear();
-            localCon.Open();
-            Guid userIDTR = new Guid(cbEmployee.SelectedValue.ToString());
-            SqlCommand autho = new SqlCommand("SELECT a.TravelEstimateID,a.UserID,[DepartureDate],[ReturnDate],[TravelEvent],[TravelPurpose],[BudgetedTravel],[EstimatedTravelCost],[Meals],[MealsCost],[MealsNotes],[Registration],[RegistrationCost],[RegistrationNotes],[Lodgings],[LodgingsCost],[LodgingsNotes],[CarRental],[CarRentalCost],[CarRentalNotes],[AirFare],[AirFareCost],[AirFareNotes],[Mileage],[MileageCost],[MileageNotes],[MileagePersonal],[OtherExpenses],[OtherExpensesCost],[OtherExpensesNotes],[Destination],b.Name,b.LastName FROM [TravelExpenses].[dbo].[EstimateTravel] as a inner join TravelExpenses.dbo.[User] as b on a.UserID = b.UserID where a.UserID = '"+ userIDTR + "' order by a.DepartureDate desc", localCon);
-            SqlDataReader authoDR = autho.ExecuteReader();
-            if (authoDR.HasRows)
+            if (cbEmployee.SelectedValue.ToString() != "-1")
             {
-                
-
-                while (authoDR.Read())
+                dgvAuthorizations.Rows.Clear();
+                localCon.Open();
+                Guid userIDTR = new Guid(cbEmployee.SelectedValue.ToString());
+                SqlCommand autho = new SqlCommand("SELECT a.TravelEstimateID,a.UserID,[DepartureDate],[ReturnDate],[TravelEvent],[TravelPurpose],[BudgetedTravel],[EstimatedTravelCost],[Meals],[MealsCost],[MealsNotes],[Registration],[RegistrationCost],[RegistrationNotes],[Lodgings],[LodgingsCost],[LodgingsNotes],[CarRental],[CarRentalCost],[CarRentalNotes],[AirFare],[AirFareCost],[AirFareNotes],[Mileage],[MileageCost],[MileageNotes],[MileagePersonal],[OtherExpenses],[OtherExpensesCost],[OtherExpensesNotes],[Destination],b.Name,b.LastName FROM [TravelExpenses].[dbo].[EstimateTravel] as a inner join TravelExpenses.dbo.[User] as b on a.UserID = b.UserID where a.UserID = '" + userIDTR + "' order by a.DepartureDate desc", localCon);
+                SqlDataReader authoDR = autho.ExecuteReader();
+                if (authoDR.HasRows)
                 {
-                    DateTime startDate;
-                    DateTime endDate;
-                    string travelEvent = "";
-                    string travelPurpose = "";
-                    string budgeted = "";
-                    string total = "";
-                    string mealsCost = "";
-                    string mealsNotes = "";
-                    string registartionCost = "";
-                    string registrationNotes = "";
-                    string lodgingCost = "";
-                    string lodgingNotes = "";
-                    string airfareCost = "";
-                    string airfareNotes = "";
-                    string carRentalCost = "";
-                    string carRentalNotes = "";
-                    string mileageCost = "";
-                    string mileageNotes = "";
-                    string otherExpensesCost = "";
-                    string otherExpensesNotes = "";
-                    string estimateID = "";
-                    string userID = "";
-                    string username = "";
-                    string destination = "";
 
 
-                    startDate = Convert.ToDateTime(authoDR["DepartureDate"].ToString());
-                    endDate = Convert.ToDateTime(authoDR["ReturnDate"].ToString());
-                    travelEvent = authoDR["TravelEvent"].ToString();
-                    travelPurpose = authoDR["TravelPurpose"].ToString();
-                    if (authoDR["BudgetedTravel"].ToString() == "True")
+                    while (authoDR.Read())
                     {
-                        budgeted = "Yes";
+                        DateTime startDate;
+                        DateTime endDate;
+                        string travelEvent = "";
+                        string travelPurpose = "";
+                        string budgeted = "";
+                        string total = "";
+                        string mealsCost = "";
+                        string mealsNotes = "";
+                        string registartionCost = "";
+                        string registrationNotes = "";
+                        string lodgingCost = "";
+                        string lodgingNotes = "";
+                        string airfareCost = "";
+                        string airfareNotes = "";
+                        string carRentalCost = "";
+                        string carRentalNotes = "";
+                        string mileageCost = "";
+                        string mileageNotes = "";
+                        string otherExpensesCost = "";
+                        string otherExpensesNotes = "";
+                        string estimateID = "";
+                        string userID = "";
+                        string username = "";
+                        string destination = "";
+
+
+                        startDate = Convert.ToDateTime(authoDR["DepartureDate"].ToString());
+                        endDate = Convert.ToDateTime(authoDR["ReturnDate"].ToString());
+                        travelEvent = authoDR["TravelEvent"].ToString();
+                        travelPurpose = authoDR["TravelPurpose"].ToString();
+                        if (authoDR["BudgetedTravel"].ToString() == "True")
+                        {
+                            budgeted = "Yes";
+                        }
+                        else
+                        {
+                            budgeted = "No";
+                        }
+                        total = authoDR["EstimatedTravelCost"].ToString();
+                        if (authoDR["Meals"].ToString() == "True")
+                        {
+                            mealsCost = authoDR["MealsCost"].ToString();
+                            mealsNotes = authoDR["MealsNotes"].ToString();
+                        }
+                        if (authoDR["Registration"].ToString() == "True")
+                        {
+                            registartionCost = authoDR["RegistrationCost"].ToString();
+                            registrationNotes = authoDR["RegistrationNotes"].ToString();
+                        }
+                        if (authoDR["Lodgings"].ToString() == "True")
+                        {
+                            lodgingCost = authoDR["LodgingsCost"].ToString();
+                            lodgingNotes = authoDR["LodgingsNotes"].ToString();
+                        }
+                        if (authoDR["CarRental"].ToString() == "True")
+                        {
+                            carRentalCost = authoDR["CarRentalCost"].ToString();
+                            carRentalNotes = authoDR["CarRentalNotes"].ToString();
+                        }
+                        if (authoDR["AirFare"].ToString() == "True")
+                        {
+                            airfareCost = authoDR["AirFareCost"].ToString();
+                            airfareNotes = authoDR["AirFareNotes"].ToString();
+                        }
+                        if (authoDR["Mileage"].ToString() == "True")
+                        {
+                            mileageCost = authoDR["MileageCost"].ToString();
+                            mileageNotes = authoDR["MileageNotes"].ToString();
+                        }
+                        if (authoDR["OtherExpenses"].ToString() == "True")
+                        {
+                            otherExpensesCost = authoDR["OtherExpensesCost"].ToString();
+                            otherExpensesNotes = authoDR["OtherExpensesNotes"].ToString();
+                        }
+                        destination = authoDR["Destination"].ToString();
+                        username = authoDR["Name"].ToString() + " " + authoDR["LastName"].ToString();
+                        userID = authoDR["UserID"].ToString();
+                        estimateID = authoDR["TravelEstimateID"].ToString();
+                        dgvAuthorizations.Rows.Add(startDate.ToShortDateString(), endDate.ToShortDateString(), travelEvent, username, travelPurpose, budgeted, total, destination, mealsCost, mealsNotes, registartionCost, registrationNotes, lodgingCost, lodgingNotes, airfareCost, airfareNotes, carRentalCost, carRentalNotes, mileageCost, mileageNotes, otherExpensesCost, otherExpensesNotes, estimateID, userID);
                     }
-                    else
-                    {
-                        budgeted = "No";
-                    }
-                    total = authoDR["EstimatedTravelCost"].ToString();
-                    if (authoDR["Meals"].ToString() == "True")
-                    {
-                        mealsCost = authoDR["MealsCost"].ToString();
-                        mealsNotes = authoDR["MealsNotes"].ToString();
-                    }
-                    if (authoDR["Registration"].ToString() == "True")
-                    {
-                        registartionCost = authoDR["RegistrationCost"].ToString();
-                        registrationNotes = authoDR["RegistrationNotes"].ToString();
-                    }
-                    if (authoDR["Lodgings"].ToString() == "True")
-                    {
-                        lodgingCost = authoDR["LodgingsCost"].ToString();
-                        lodgingNotes = authoDR["LodgingsNotes"].ToString();
-                    }
-                    if (authoDR["CarRental"].ToString() == "True")
-                    {
-                        carRentalCost = authoDR["CarRentalCost"].ToString();
-                        carRentalNotes = authoDR["CarRentalNotes"].ToString();
-                    }
-                    if (authoDR["AirFare"].ToString() == "True")
-                    {
-                        airfareCost = authoDR["AirFareCost"].ToString();
-                        airfareNotes = authoDR["AirFareNotes"].ToString();
-                    }
-                    if (authoDR["Mileage"].ToString() == "True")
-                    {
-                        mileageCost = authoDR["MileageCost"].ToString();
-                        mileageNotes = authoDR["MileageNotes"].ToString();
-                    }
-                    if (authoDR["OtherExpenses"].ToString() == "True")
-                    {
-                        otherExpensesCost = authoDR["OtherExpensesCost"].ToString();
-                        otherExpensesNotes = authoDR["OtherExpensesNotes"].ToString();
-                    }
-                    destination = authoDR["Destination"].ToString();
-                    username = authoDR["Name"].ToString() + " " + authoDR["LastName"].ToString();
-                    userID = authoDR["UserID"].ToString();
-                    estimateID = authoDR["TravelEstimateID"].ToString();
-                    dgvAuthorizations.Rows.Add(startDate.ToShortDateString(), endDate.ToShortDateString(), travelEvent, username, travelPurpose, budgeted, total, destination, mealsCost, mealsNotes, registartionCost, registrationNotes, lodgingCost, lodgingNotes, airfareCost, airfareNotes, carRentalCost, carRentalNotes, mileageCost, mileageNotes, otherExpensesCost, otherExpensesNotes, estimateID, userID);
+                    authoDR.Close();
+                    localCon.Close();
                 }
-                authoDR.Close();
-                localCon.Close();
+                CommonVariables.estimateMileageCost = 0;
             }
-            CommonVariables.estimateMileageCost = 0;
+            else 
+            {
+                dgvAuthorizations.Rows.Clear();
+                localCon.Open();
+                //Guid userIDTR = new Guid(cbEmployee.SelectedValue.ToString());
+                SqlCommand autho = new SqlCommand("SELECT a.TravelEstimateID,a.UserID,[DepartureDate],[ReturnDate],[TravelEvent],[TravelPurpose],[BudgetedTravel],[EstimatedTravelCost],[Meals],[MealsCost],[MealsNotes],[Registration],[RegistrationCost],[RegistrationNotes],[Lodgings],[LodgingsCost],[LodgingsNotes],[CarRental],[CarRentalCost],[CarRentalNotes],[AirFare],[AirFareCost],[AirFareNotes],[Mileage],[MileageCost],[MileageNotes],[MileagePersonal],[OtherExpenses],[OtherExpensesCost],[OtherExpensesNotes],[Destination],b.Name,b.LastName FROM [TravelExpenses].[dbo].[EstimateTravel] as a inner join TravelExpenses.dbo.[User] as b on a.UserID = b.UserID  order by a.DepartureDate desc", localCon);
+                SqlDataReader authoDR = autho.ExecuteReader();
+                if (authoDR.HasRows)
+                {
+
+
+                    while (authoDR.Read())
+                    {
+                        DateTime startDate;
+                        DateTime endDate;
+                        string travelEvent = "";
+                        string travelPurpose = "";
+                        string budgeted = "";
+                        string total = "";
+                        string mealsCost = "";
+                        string mealsNotes = "";
+                        string registartionCost = "";
+                        string registrationNotes = "";
+                        string lodgingCost = "";
+                        string lodgingNotes = "";
+                        string airfareCost = "";
+                        string airfareNotes = "";
+                        string carRentalCost = "";
+                        string carRentalNotes = "";
+                        string mileageCost = "";
+                        string mileageNotes = "";
+                        string otherExpensesCost = "";
+                        string otherExpensesNotes = "";
+                        string estimateID = "";
+                        string userID = "";
+                        string username = "";
+                        string destination = "";
+
+
+                        startDate = Convert.ToDateTime(authoDR["DepartureDate"].ToString());
+                        endDate = Convert.ToDateTime(authoDR["ReturnDate"].ToString());
+                        travelEvent = authoDR["TravelEvent"].ToString();
+                        travelPurpose = authoDR["TravelPurpose"].ToString();
+                        if (authoDR["BudgetedTravel"].ToString() == "True")
+                        {
+                            budgeted = "Yes";
+                        }
+                        else
+                        {
+                            budgeted = "No";
+                        }
+                        total = authoDR["EstimatedTravelCost"].ToString();
+                        if (authoDR["Meals"].ToString() == "True")
+                        {
+                            mealsCost = authoDR["MealsCost"].ToString();
+                            mealsNotes = authoDR["MealsNotes"].ToString();
+                        }
+                        if (authoDR["Registration"].ToString() == "True")
+                        {
+                            registartionCost = authoDR["RegistrationCost"].ToString();
+                            registrationNotes = authoDR["RegistrationNotes"].ToString();
+                        }
+                        if (authoDR["Lodgings"].ToString() == "True")
+                        {
+                            lodgingCost = authoDR["LodgingsCost"].ToString();
+                            lodgingNotes = authoDR["LodgingsNotes"].ToString();
+                        }
+                        if (authoDR["CarRental"].ToString() == "True")
+                        {
+                            carRentalCost = authoDR["CarRentalCost"].ToString();
+                            carRentalNotes = authoDR["CarRentalNotes"].ToString();
+                        }
+                        if (authoDR["AirFare"].ToString() == "True")
+                        {
+                            airfareCost = authoDR["AirFareCost"].ToString();
+                            airfareNotes = authoDR["AirFareNotes"].ToString();
+                        }
+                        if (authoDR["Mileage"].ToString() == "True")
+                        {
+                            mileageCost = authoDR["MileageCost"].ToString();
+                            mileageNotes = authoDR["MileageNotes"].ToString();
+                        }
+                        if (authoDR["OtherExpenses"].ToString() == "True")
+                        {
+                            otherExpensesCost = authoDR["OtherExpensesCost"].ToString();
+                            otherExpensesNotes = authoDR["OtherExpensesNotes"].ToString();
+                        }
+                        destination = authoDR["Destination"].ToString();
+                        username = authoDR["Name"].ToString() + " " + authoDR["LastName"].ToString();
+                        userID = authoDR["UserID"].ToString();
+                        estimateID = authoDR["TravelEstimateID"].ToString();
+                        dgvAuthorizations.Rows.Add(startDate.ToShortDateString(), endDate.ToShortDateString(), travelEvent, username, travelPurpose, budgeted, total, destination, mealsCost, mealsNotes, registartionCost, registrationNotes, lodgingCost, lodgingNotes, airfareCost, airfareNotes, carRentalCost, carRentalNotes, mileageCost, mileageNotes, otherExpensesCost, otherExpensesNotes, estimateID, userID);
+                    }
+                    authoDR.Close();
+                    localCon.Close();
+                }
+                CommonVariables.estimateMileageCost = 0;
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -397,7 +498,7 @@ namespace TravelExpenses
                 txtOtherExpNotes.Text = dgvAuthorizations.Rows[index].Cells[21].Value.ToString();
             }
 
-            this.Size = new System.Drawing.Size(1230, 586);
+            this.Size = new System.Drawing.Size(1419, 673);
             panel2.Enabled = false;
             panel1.Enabled = false;
             loadingData = false;
@@ -405,9 +506,9 @@ namespace TravelExpenses
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Size = new System.Drawing.Size(627, 586);
-           // panel2.Enabled = true;
-           // panel1.Enabled = true;
+            this.Size = new System.Drawing.Size(726, 673);
+            // panel2.Enabled = true;
+            // panel1.Enabled = true;
             cleanForm();
         }
 
@@ -444,7 +545,7 @@ namespace TravelExpenses
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 localCon.Open();
@@ -508,12 +609,12 @@ namespace TravelExpenses
                 int index = dgvAuthorizations.CurrentRow.Index;
                 Guid estID = new Guid(dgvAuthorizations.Rows[index].Cells[22].Value.ToString());
                 SqlDataAdapter upAutho = new SqlDataAdapter();
-                upAutho.UpdateCommand = new SqlCommand("UPDATE [dbo].[EstimateTravel] SET [DepartureDate] = @DepartureDate,[ReturnDate] = @ReturnDate,[TravelEvent] = @TravelEvent,[TravelPurpose] = @TravelPurpose,[BudgetedTravel] = @BudgetedTravel,[EstimatedTravelCost] = @EstimatedTravelCost,[Meals] = @Meals,[MealsCost] = @MealsCost,[MealsNotes] = @MealsNotes,[Registration] = @Registration,[RegistrationCost] = @RegistrationCost,[RegistrationNotes] = @RegistrationNotes,[Lodgings] = @Lodgings,[LodgingsCost] = @LodgingsCost,[LodgingsNotes] = @LodgingsNotes,[CarRental] = @CarRental,[CarRentalCost] = @CarRentalCost,[CarRentalNotes] = @CarRentalNotes,[AirFare] = @AirFare,[AirFareCost] = @AirFareCost,[AirFareNotes] = @AirFareNotes,[Mileage] = @Mileage,[MileageCost] = @MileageCost,[MileageNotes] = @MileageNotes,[MileagePersonal] = @MileagePersonal,[OtherExpenses] = @OtherExpenses,[OtherExpensesCost] = @OtherExpensesCost,[OtherExpensesNotes] = @OtherExpensesNotes,[Destination] = @Destination WHERE TravelEstimateID = '"+ estID + "'", localCon);
+                upAutho.UpdateCommand = new SqlCommand("UPDATE [dbo].[EstimateTravel] SET [DepartureDate] = @DepartureDate,[ReturnDate] = @ReturnDate,[TravelEvent] = @TravelEvent,[TravelPurpose] = @TravelPurpose,[BudgetedTravel] = @BudgetedTravel,[EstimatedTravelCost] = @EstimatedTravelCost,[Meals] = @Meals,[MealsCost] = @MealsCost,[MealsNotes] = @MealsNotes,[Registration] = @Registration,[RegistrationCost] = @RegistrationCost,[RegistrationNotes] = @RegistrationNotes,[Lodgings] = @Lodgings,[LodgingsCost] = @LodgingsCost,[LodgingsNotes] = @LodgingsNotes,[CarRental] = @CarRental,[CarRentalCost] = @CarRentalCost,[CarRentalNotes] = @CarRentalNotes,[AirFare] = @AirFare,[AirFareCost] = @AirFareCost,[AirFareNotes] = @AirFareNotes,[Mileage] = @Mileage,[MileageCost] = @MileageCost,[MileageNotes] = @MileageNotes,[MileagePersonal] = @MileagePersonal,[OtherExpenses] = @OtherExpenses,[OtherExpensesCost] = @OtherExpensesCost,[OtherExpensesNotes] = @OtherExpensesNotes,[Destination] = @Destination WHERE TravelEstimateID = '" + estID + "'", localCon);
                 upAutho.UpdateCommand.Parameters.Add("@DepartureDate", SqlDbType.DateTime).Value = dtpDepartureDateValue.Value;
                 upAutho.UpdateCommand.Parameters.Add("@ReturnDate", SqlDbType.DateTime).Value = dtpReturnDateValue.Value;
                 upAutho.UpdateCommand.Parameters.Add("@TravelEvent", SqlDbType.NVarChar).Value = txtTravelEvent.Text;
                 upAutho.UpdateCommand.Parameters.Add("@TravelPurpose", SqlDbType.NVarChar).Value = txtTravelPurpose.Text;
-                if(rbYes.Checked)
+                if (rbYes.Checked)
                 {
                     upAutho.UpdateCommand.Parameters.Add("@BudgetedTravel", SqlDbType.Bit).Value = true;
                 }
@@ -618,7 +719,7 @@ namespace TravelExpenses
                 MessageBox.Show(ex.ToString());
                 localCon.Close();
             }
-            this.Size = new System.Drawing.Size(627, 586);
+            this.Size = new System.Drawing.Size(726, 673);
         }
 
         private void txtMileageNotes_TextChanged(object sender, EventArgs e)
