@@ -132,7 +132,7 @@ namespace TravelExpenses
                     da.InsertCommand.Parameters.Add("@UserID", SqlDbType.UniqueIdentifier).Value = userID;
                     da.InsertCommand.Parameters.Add("@FontType", SqlDbType.VarChar).Value = CommonVariables.signatureFont;
                     da.InsertCommand.Parameters.Add("@SignatureText", SqlDbType.VarChar).Value = CommonVariables.signatureText;
-                    int rows =  da.InsertCommand.ExecuteNonQuery();
+                    int rows = da.InsertCommand.ExecuteNonQuery();
                     if (rows > 0)
                     {
                         MessageBox.Show("Signature inserted successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -141,7 +141,7 @@ namespace TravelExpenses
                     CommonVariables.signatureText = "";
                     CommonVariables.isUserSignatureExist = false;
                 }
-                
+
                 localCon.Close();
                 this.Close();
             }

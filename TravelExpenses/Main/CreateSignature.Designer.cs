@@ -28,246 +28,263 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rbScriptMTBold = new System.Windows.Forms.RadioButton();
-            this.rbBradleyHand = new System.Windows.Forms.RadioButton();
-            this.rbMVBoli = new System.Windows.Forms.RadioButton();
-            this.rbRageItalic = new System.Windows.Forms.RadioButton();
-            this.rbMistral = new System.Windows.Forms.RadioButton();
-            this.lblFont = new System.Windows.Forms.Label();
-            this.lblSignatureText = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtSignatureText = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblSignaturePreviewvalue = new System.Windows.Forms.Label();
-            this.lblPreview = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateSignature));
+            panel1 = new System.Windows.Forms.Panel();
+            rbScriptMTBold = new System.Windows.Forms.RadioButton();
+            rbBradleyHand = new System.Windows.Forms.RadioButton();
+            rbMVBoli = new System.Windows.Forms.RadioButton();
+            rbRageItalic = new System.Windows.Forms.RadioButton();
+            rbMistral = new System.Windows.Forms.RadioButton();
+            lblFont = new System.Windows.Forms.Label();
+            lblSignatureText = new System.Windows.Forms.Label();
+            panel2 = new System.Windows.Forms.Panel();
+            txtSignatureText = new System.Windows.Forms.TextBox();
+            panel3 = new System.Windows.Forms.Panel();
+            lblSignaturePreviewvalue = new System.Windows.Forms.Label();
+            lblPreview = new System.Windows.Forms.Label();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            btnSave = new System.Windows.Forms.Button();
+            btnCancel = new System.Windows.Forms.Button();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.rbScriptMTBold);
-            this.panel1.Controls.Add(this.rbBradleyHand);
-            this.panel1.Controls.Add(this.rbMVBoli);
-            this.panel1.Controls.Add(this.rbRageItalic);
-            this.panel1.Controls.Add(this.rbMistral);
-            this.panel1.Location = new System.Drawing.Point(54, 56);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 278);
-            this.panel1.TabIndex = 0;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(rbScriptMTBold);
+            panel1.Controls.Add(rbBradleyHand);
+            panel1.Controls.Add(rbMVBoli);
+            panel1.Controls.Add(rbRageItalic);
+            panel1.Controls.Add(rbMistral);
+            panel1.Location = new System.Drawing.Point(63, 65);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(250, 320);
+            panel1.TabIndex = 0;
             // 
             // rbScriptMTBold
             // 
-            this.rbScriptMTBold.AutoSize = true;
-            this.rbScriptMTBold.Font = new System.Drawing.Font("Script MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbScriptMTBold.Location = new System.Drawing.Point(35, 220);
-            this.rbScriptMTBold.Name = "rbScriptMTBold";
-            this.rbScriptMTBold.Size = new System.Drawing.Size(130, 28);
-            this.rbScriptMTBold.TabIndex = 4;
-            this.rbScriptMTBold.TabStop = true;
-            this.rbScriptMTBold.Text = "Sample Text";
-            this.rbScriptMTBold.UseVisualStyleBackColor = true;
-            this.rbScriptMTBold.CheckedChanged += new System.EventHandler(this.rbScriptMTBold_CheckedChanged);
+            rbScriptMTBold.AutoSize = true;
+            rbScriptMTBold.Font = new System.Drawing.Font("Script MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            rbScriptMTBold.Location = new System.Drawing.Point(41, 254);
+            rbScriptMTBold.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbScriptMTBold.Name = "rbScriptMTBold";
+            rbScriptMTBold.Size = new System.Drawing.Size(130, 28);
+            rbScriptMTBold.TabIndex = 4;
+            rbScriptMTBold.TabStop = true;
+            rbScriptMTBold.Text = "Sample Text";
+            rbScriptMTBold.UseVisualStyleBackColor = true;
+            rbScriptMTBold.CheckedChanged += rbScriptMTBold_CheckedChanged;
             // 
             // rbBradleyHand
             // 
-            this.rbBradleyHand.AutoSize = true;
-            this.rbBradleyHand.Font = new System.Drawing.Font("Bradley Hand ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbBradleyHand.Location = new System.Drawing.Point(34, 169);
-            this.rbBradleyHand.Name = "rbBradleyHand";
-            this.rbBradleyHand.Size = new System.Drawing.Size(133, 29);
-            this.rbBradleyHand.TabIndex = 3;
-            this.rbBradleyHand.TabStop = true;
-            this.rbBradleyHand.Text = "Sample Text";
-            this.rbBradleyHand.UseVisualStyleBackColor = true;
-            this.rbBradleyHand.CheckedChanged += new System.EventHandler(this.rbBradleyHand_CheckedChanged);
+            rbBradleyHand.AutoSize = true;
+            rbBradleyHand.Font = new System.Drawing.Font("Bradley Hand ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            rbBradleyHand.Location = new System.Drawing.Point(40, 195);
+            rbBradleyHand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbBradleyHand.Name = "rbBradleyHand";
+            rbBradleyHand.Size = new System.Drawing.Size(133, 29);
+            rbBradleyHand.TabIndex = 3;
+            rbBradleyHand.TabStop = true;
+            rbBradleyHand.Text = "Sample Text";
+            rbBradleyHand.UseVisualStyleBackColor = true;
+            rbBradleyHand.CheckedChanged += rbBradleyHand_CheckedChanged;
             // 
             // rbMVBoli
             // 
-            this.rbMVBoli.AutoSize = true;
-            this.rbMVBoli.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMVBoli.Location = new System.Drawing.Point(35, 122);
-            this.rbMVBoli.Name = "rbMVBoli";
-            this.rbMVBoli.Size = new System.Drawing.Size(149, 30);
-            this.rbMVBoli.TabIndex = 2;
-            this.rbMVBoli.TabStop = true;
-            this.rbMVBoli.Text = "Sample Text";
-            this.rbMVBoli.UseVisualStyleBackColor = true;
-            this.rbMVBoli.CheckedChanged += new System.EventHandler(this.rbMVBoli_CheckedChanged);
+            rbMVBoli.AutoSize = true;
+            rbMVBoli.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            rbMVBoli.Location = new System.Drawing.Point(41, 141);
+            rbMVBoli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbMVBoli.Name = "rbMVBoli";
+            rbMVBoli.Size = new System.Drawing.Size(149, 30);
+            rbMVBoli.TabIndex = 2;
+            rbMVBoli.TabStop = true;
+            rbMVBoli.Text = "Sample Text";
+            rbMVBoli.UseVisualStyleBackColor = true;
+            rbMVBoli.CheckedChanged += rbMVBoli_CheckedChanged;
             // 
             // rbRageItalic
             // 
-            this.rbRageItalic.AutoSize = true;
-            this.rbRageItalic.Font = new System.Drawing.Font("Rage Italic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRageItalic.Location = new System.Drawing.Point(35, 76);
-            this.rbRageItalic.Name = "rbRageItalic";
-            this.rbRageItalic.Size = new System.Drawing.Size(116, 29);
-            this.rbRageItalic.TabIndex = 1;
-            this.rbRageItalic.TabStop = true;
-            this.rbRageItalic.Text = "Sample text";
-            this.rbRageItalic.UseVisualStyleBackColor = true;
-            this.rbRageItalic.CheckedChanged += new System.EventHandler(this.rbRageItalic_CheckedChanged);
+            rbRageItalic.AutoSize = true;
+            rbRageItalic.Font = new System.Drawing.Font("Rage Italic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            rbRageItalic.Location = new System.Drawing.Point(41, 88);
+            rbRageItalic.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbRageItalic.Name = "rbRageItalic";
+            rbRageItalic.Size = new System.Drawing.Size(116, 29);
+            rbRageItalic.TabIndex = 1;
+            rbRageItalic.TabStop = true;
+            rbRageItalic.Text = "Sample text";
+            rbRageItalic.UseVisualStyleBackColor = true;
+            rbRageItalic.CheckedChanged += rbRageItalic_CheckedChanged;
             // 
             // rbMistral
             // 
-            this.rbMistral.AutoSize = true;
-            this.rbMistral.Font = new System.Drawing.Font("Mistral", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMistral.Location = new System.Drawing.Point(35, 30);
-            this.rbMistral.Name = "rbMistral";
-            this.rbMistral.Size = new System.Drawing.Size(102, 27);
-            this.rbMistral.TabIndex = 0;
-            this.rbMistral.TabStop = true;
-            this.rbMistral.Text = "Sample Text";
-            this.rbMistral.UseVisualStyleBackColor = true;
-            this.rbMistral.CheckedChanged += new System.EventHandler(this.rbMistral_CheckedChanged);
+            rbMistral.AutoSize = true;
+            rbMistral.Font = new System.Drawing.Font("Mistral", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            rbMistral.Location = new System.Drawing.Point(41, 35);
+            rbMistral.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbMistral.Name = "rbMistral";
+            rbMistral.Size = new System.Drawing.Size(102, 27);
+            rbMistral.TabIndex = 0;
+            rbMistral.TabStop = true;
+            rbMistral.Text = "Sample Text";
+            rbMistral.UseVisualStyleBackColor = true;
+            rbMistral.CheckedChanged += rbMistral_CheckedChanged;
             // 
             // lblFont
             // 
-            this.lblFont.AutoSize = true;
-            this.lblFont.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFont.Location = new System.Drawing.Point(39, 26);
-            this.lblFont.Name = "lblFont";
-            this.lblFont.Size = new System.Drawing.Size(248, 17);
-            this.lblFont.TabIndex = 1;
-            this.lblFont.Text = "Select the font of your signature:";
+            lblFont.AutoSize = true;
+            lblFont.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblFont.Location = new System.Drawing.Point(46, 30);
+            lblFont.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblFont.Name = "lblFont";
+            lblFont.Size = new System.Drawing.Size(248, 17);
+            lblFont.TabIndex = 1;
+            lblFont.Text = "Select the font of your signature:";
             // 
             // lblSignatureText
             // 
-            this.lblSignatureText.AutoSize = true;
-            this.lblSignatureText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignatureText.Location = new System.Drawing.Point(367, 26);
-            this.lblSignatureText.Name = "lblSignatureText";
-            this.lblSignatureText.Size = new System.Drawing.Size(229, 17);
-            this.lblSignatureText.TabIndex = 2;
-            this.lblSignatureText.Text = "Introduce your Signature Text:";
+            lblSignatureText.AutoSize = true;
+            lblSignatureText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblSignatureText.Location = new System.Drawing.Point(428, 30);
+            lblSignatureText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblSignatureText.Name = "lblSignatureText";
+            lblSignatureText.Size = new System.Drawing.Size(229, 17);
+            lblSignatureText.TabIndex = 2;
+            lblSignatureText.Text = "Introduce your Signature Text:";
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtSignatureText);
-            this.panel2.Location = new System.Drawing.Point(314, 56);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 68);
-            this.panel2.TabIndex = 3;
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(txtSignatureText);
+            panel2.Location = new System.Drawing.Point(366, 65);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(401, 78);
+            panel2.TabIndex = 3;
             // 
             // txtSignatureText
             // 
-            this.txtSignatureText.Location = new System.Drawing.Point(11, 15);
-            this.txtSignatureText.Multiline = true;
-            this.txtSignatureText.Name = "txtSignatureText";
-            this.txtSignatureText.Size = new System.Drawing.Size(317, 38);
-            this.txtSignatureText.TabIndex = 0;
-            this.txtSignatureText.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            txtSignatureText.Location = new System.Drawing.Point(13, 17);
+            txtSignatureText.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtSignatureText.Multiline = true;
+            txtSignatureText.Name = "txtSignatureText";
+            txtSignatureText.Size = new System.Drawing.Size(369, 43);
+            txtSignatureText.TabIndex = 0;
+            txtSignatureText.KeyUp += textBox1_KeyUp;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.lblSignaturePreviewvalue);
-            this.panel3.Location = new System.Drawing.Point(314, 179);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(344, 73);
-            this.panel3.TabIndex = 4;
+            panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel3.Controls.Add(lblSignaturePreviewvalue);
+            panel3.Location = new System.Drawing.Point(366, 207);
+            panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(401, 84);
+            panel3.TabIndex = 4;
             // 
             // lblSignaturePreviewvalue
             // 
-            this.lblSignaturePreviewvalue.AutoSize = true;
-            this.lblSignaturePreviewvalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignaturePreviewvalue.Location = new System.Drawing.Point(50, 23);
-            this.lblSignaturePreviewvalue.Name = "lblSignaturePreviewvalue";
-            this.lblSignaturePreviewvalue.Size = new System.Drawing.Size(0, 25);
-            this.lblSignaturePreviewvalue.TabIndex = 0;
+            lblSignaturePreviewvalue.AutoSize = true;
+            lblSignaturePreviewvalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblSignaturePreviewvalue.Location = new System.Drawing.Point(58, 27);
+            lblSignaturePreviewvalue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblSignaturePreviewvalue.Name = "lblSignaturePreviewvalue";
+            lblSignaturePreviewvalue.Size = new System.Drawing.Size(0, 25);
+            lblSignaturePreviewvalue.TabIndex = 0;
             // 
             // lblPreview
             // 
-            this.lblPreview.AutoSize = true;
-            this.lblPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreview.Location = new System.Drawing.Point(311, 145);
-            this.lblPreview.Name = "lblPreview";
-            this.lblPreview.Size = new System.Drawing.Size(144, 17);
-            this.lblPreview.TabIndex = 5;
-            this.lblPreview.Text = "Signature Preview:";
+            lblPreview.AutoSize = true;
+            lblPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblPreview.Location = new System.Drawing.Point(363, 167);
+            lblPreview.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblPreview.Name = "lblPreview";
+            lblPreview.Size = new System.Drawing.Size(144, 17);
+            lblPreview.TabIndex = 5;
+            lblPreview.Text = "Signature Preview:";
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.btnSave, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCancel, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(378, 285);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 47);
-            this.tableLayoutPanel1.TabIndex = 6;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(btnSave, 1, 0);
+            tableLayoutPanel1.Controls.Add(btnCancel, 0, 0);
+            tableLayoutPanel1.Location = new System.Drawing.Point(441, 329);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(327, 54);
+            tableLayoutPanel1.TabIndex = 6;
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = global::TravelExpenses.Properties.Resources._1495047519_Save;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(165, 6);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(89, 34);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnSave.Image = (System.Drawing.Image)resources.GetObject("btnSave.Image");
+            btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnSave.Location = new System.Drawing.Point(204, 7);
+            btnSave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new System.Drawing.Size(82, 39);
+            btnSave.TabIndex = 0;
+            btnSave.Text = "Save";
+            btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(23, 6);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(93, 34);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Close";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancel.Image = (System.Drawing.Image)resources.GetObject("btnCancel.Image");
+            btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCancel.Location = new System.Drawing.Point(36, 7);
+            btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new System.Drawing.Size(90, 39);
+            btnCancel.TabIndex = 1;
+            btnCancel.Text = "Close";
+            btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // CreateSignature
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 342);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.lblPreview);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lblSignatureText);
-            this.Controls.Add(this.lblFont);
-            this.Controls.Add(this.panel1);
-            this.Name = "CreateSignature";
-            this.ShowIcon = false;
-            this.Text = "Create Signature";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(786, 395);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(lblPreview);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(lblSignatureText);
+            Controls.Add(lblFont);
+            Controls.Add(panel1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "CreateSignature";
+            ShowIcon = false;
+            Text = "Create Signature";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

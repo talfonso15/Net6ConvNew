@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+  <!--
     Microsoft ResX Schema 
-    
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,4 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAHgSURBVEhL7ZM5SwNBFIAnhyab3YQ1EMGACDYW2lgoHmBj
+        ISlSWtiIWliIRlsrQRAED7BRCwvxB1gLaUUFsbEVjUeEZDfrxoN457kzWYOLu46TZMHCBx88GN773lyo
+        GLx4hKq9j6jK8+R0ufJeXnjFIIcDOF54x3g4X97pchfXrKiq9rw7BXFP68oVmpsFlm1JgGbj0NzZA6cp
+        meAPBGBtO06YXliF9q7u4poVcwtL4PAH89om9rXOFtIKCz3RCUCRsUdNeqB1N5HaIcT9LKV2CTG9I0/6
+        8X4JO4WYcFNWN+lhIezti4DgDxB8vACj4zFDczNMhY2tim7Sw0JYCmzC5SMI1IYhOjBYMi1tHeDun/6l
+        EDOzA2h8o3QmNwFtXDII7eBfWHEshesn4KtrAK9fLBuuJkS+2c/CCvzDT4bGYoCGF38nPEvLkFRUSKQz
+        BJzTOJcUQx2T8CpzA7nnF0iptwSc01DuHwx1TEKzI2KFSZjMqPDy9gbp7B0B5zTUh5yhjnmH+B4+p01I
+        2l1SwPf3tY5JeCErhYn1B4FzGin1zlDHJDzXJpZu7+FSviHIWk7jWska6v7oo1k5Bi4YItJyqQnXA5ra
+        ogh1Kd5p2czvFvpRhXbwTciLh0RqHxmEEPoAQAnizswhnowAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAALYSURBVFhHzVZNTxNRFGWnJurOBOPOoDsNBl4hhaQ/gK+V
+        Cj+HjSbEFSGIfCwIP8SYGApjY5u4cwUtLSkuxfTDxXjO6x06nbnTvmlZeJKTdubde895n/PGXHGSyTwE
+        18A90AOvwLaQ//luNz8zs/o1m30gaaPj1Jjn4AGK/znNZHwX2lhj9mHmmZRJj+PZ2Xso9AGF/moiLkR+
+        G/kbn3O5u1LWDXSO5B9a0aFoTL4wNfVYyveHNz39CuJXaqFRaEwFHXspMjqk57cvHhAmwHGR6wXnCY0l
+        LdGbn4+9G8RvuZz6HhoFri+R7cIuOCWhvLnpNy8v/dLKSqwticXlZb95ceHXDg/VdphYF9kO8IJbLbba
+        KR7A1UQgHkA1YcxvsDsVeDiIBnnZrN+sVKRMB3wuLi31xIVZoni1KtEdNM7ObK1oLEZ824rjD0849ZCh
+        WMxEwkhosY1y2S8uLMRiSWhe2xMTf9a0gIAuJtKKB8SWf0sDe1pjmP1MDCtuacwnGvDUxgi1+aVwTBzP
+        TuIkTkga+KU2KrS9Da3wKJq1WqrtCgN1GmipjQmMbrMAac8KEtrN/8KA+xQkiAdIbUKmwG0RojDnOAxt
+        EfKZa0WrEaMswl21MUSt58GCKy4u2pUfhvNIGLPDT/Cq2ijUxO0+h/BNzPAmXvMzfB+jcK00Josr+zyt
+        CWpS234PMBT70YACvufROR90wqknJp61uwGn3ooTchNqR4PKW1tSxv14jY5E7egoFgOtFr4DT0W+A4zC
+        RjSQpInG+bn78QoGJjRxEgbei2wXciXLawne3Fzs3SAmXeMgfvxzYuKOyPYCBsYRUNYSb4XGVHEffCJy
+        Onh1RmBFLTAC2TGIvxCZ/vg+OfkICV+0QsOQw87RlfJu4DwhaR3J6hnhQuS2UONd4py7gM5RaDuNERuL
+        205sq40Cnlq8w6HwDngC1tlD6WWd7/D/I37f3JxwAzE29g/yNCznU9lh3QAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
