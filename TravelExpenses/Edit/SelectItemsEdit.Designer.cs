@@ -28,1065 +28,1059 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabTravelDetails = new System.Windows.Forms.TabPage();
-            this.btnSaveDetails = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtNotes = new System.Windows.Forms.TextBox();
-            this.lblNotes = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDepartureDate = new System.Windows.Forms.Label();
-            this.lblDepartureTime = new System.Windows.Forms.Label();
-            this.txtOtherPurpose = new System.Windows.Forms.TextBox();
-            this.lblOtherPurpose = new System.Windows.Forms.Label();
-            this.cbTravelPurpose = new System.Windows.Forms.ComboBox();
-            this.lblTravelPurpose = new System.Windows.Forms.Label();
-            this.lblReturnDate = new System.Windows.Forms.Label();
-            this.lblReturnTime = new System.Windows.Forms.Label();
-            this.lblTravelEvent = new System.Windows.Forms.Label();
-            this.lblOtherEvent = new System.Windows.Forms.Label();
-            this.lblOrigin = new System.Windows.Forms.Label();
-            this.dtpDepartureDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpReturnDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpReturnTime = new System.Windows.Forms.DateTimePicker();
-            this.cbTravelEvent = new System.Windows.Forms.ComboBox();
-            this.txtOtherEvent = new System.Windows.Forms.TextBox();
-            this.txtOrigin = new System.Windows.Forms.TextBox();
-            this.dtpDepartureTime = new System.Windows.Forms.DateTimePicker();
-            this.lblTravelState = new System.Windows.Forms.Label();
-            this.cbTravelState = new System.Windows.Forms.ComboBox();
-            this.lblTravelReimb = new System.Windows.Forms.Label();
-            this.lblTravelReimbAmount = new System.Windows.Forms.Label();
-            this.lblTravelTotal = new System.Windows.Forms.Label();
-            this.lblTravelTotalAmount = new System.Windows.Forms.Label();
-            this.lblDestination = new System.Windows.Forms.Label();
-            this.txtDestination = new System.Windows.Forms.TextBox();
-            this.tabTravelItems = new System.Windows.Forms.TabPage();
-            this.btnAddNewItem = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblColorExplanation = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblItemName = new System.Windows.Forms.Label();
-            this.lblEdit = new System.Windows.Forms.Label();
-            this.lblDelete = new System.Windows.Forms.Label();
-            this.btnEditMeals = new System.Windows.Forms.Button();
-            this.btnDeleteMeals = new System.Windows.Forms.Button();
-            this.lblMeals = new System.Windows.Forms.Label();
-            this.lblRegistration = new System.Windows.Forms.Label();
-            this.btnEditRegistration = new System.Windows.Forms.Button();
-            this.btnDeleteRegistration = new System.Windows.Forms.Button();
-            this.lblCarRental = new System.Windows.Forms.Label();
-            this.btnEditCarRental = new System.Windows.Forms.Button();
-            this.btnDeleteCarRental = new System.Windows.Forms.Button();
-            this.lblAirFare = new System.Windows.Forms.Label();
-            this.btnEditAirFare = new System.Windows.Forms.Button();
-            this.btnDeleteAirFare = new System.Windows.Forms.Button();
-            this.lblLodgings = new System.Windows.Forms.Label();
-            this.btnEditLodging = new System.Windows.Forms.Button();
-            this.btnDeleteLodging = new System.Windows.Forms.Button();
-            this.lblMileage = new System.Windows.Forms.Label();
-            this.btnEditMileage = new System.Windows.Forms.Button();
-            this.btnDeleteMileage = new System.Windows.Forms.Button();
-            this.lblOtherExpenses = new System.Windows.Forms.Label();
-            this.btnEditOtherExpenses = new System.Windows.Forms.Button();
-            this.btnDeleteOtherExpenses = new System.Windows.Forms.Button();
-            this.btnCloseEdit = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
-            this.tabTravelDetails.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tabTravelItems.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectItemsEdit));
+            tabControl1 = new System.Windows.Forms.TabControl();
+            tabTravelDetails = new System.Windows.Forms.TabPage();
+            btnSaveDetails = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            txtNotes = new System.Windows.Forms.TextBox();
+            lblNotes = new System.Windows.Forms.Label();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            lblDepartureDate = new System.Windows.Forms.Label();
+            lblDepartureTime = new System.Windows.Forms.Label();
+            txtOtherPurpose = new System.Windows.Forms.TextBox();
+            lblOtherPurpose = new System.Windows.Forms.Label();
+            cbTravelPurpose = new System.Windows.Forms.ComboBox();
+            lblTravelPurpose = new System.Windows.Forms.Label();
+            lblReturnDate = new System.Windows.Forms.Label();
+            lblReturnTime = new System.Windows.Forms.Label();
+            lblTravelEvent = new System.Windows.Forms.Label();
+            lblOtherEvent = new System.Windows.Forms.Label();
+            lblOrigin = new System.Windows.Forms.Label();
+            dtpDepartureDate = new System.Windows.Forms.DateTimePicker();
+            dtpReturnDate = new System.Windows.Forms.DateTimePicker();
+            dtpReturnTime = new System.Windows.Forms.DateTimePicker();
+            cbTravelEvent = new System.Windows.Forms.ComboBox();
+            txtOtherEvent = new System.Windows.Forms.TextBox();
+            txtOrigin = new System.Windows.Forms.TextBox();
+            dtpDepartureTime = new System.Windows.Forms.DateTimePicker();
+            lblTravelState = new System.Windows.Forms.Label();
+            cbTravelState = new System.Windows.Forms.ComboBox();
+            lblTravelReimb = new System.Windows.Forms.Label();
+            lblTravelReimbAmount = new System.Windows.Forms.Label();
+            lblTravelTotal = new System.Windows.Forms.Label();
+            lblTravelTotalAmount = new System.Windows.Forms.Label();
+            lblDestination = new System.Windows.Forms.Label();
+            txtDestination = new System.Windows.Forms.TextBox();
+            tabTravelItems = new System.Windows.Forms.TabPage();
+            btnAddNewItem = new System.Windows.Forms.Button();
+            panel3 = new System.Windows.Forms.Panel();
+            lblColorExplanation = new System.Windows.Forms.Label();
+            panel2 = new System.Windows.Forms.Panel();
+            tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            lblItemName = new System.Windows.Forms.Label();
+            lblEdit = new System.Windows.Forms.Label();
+            lblDelete = new System.Windows.Forms.Label();
+            btnEditMeals = new System.Windows.Forms.Button();
+            btnDeleteMeals = new System.Windows.Forms.Button();
+            lblMeals = new System.Windows.Forms.Label();
+            lblRegistration = new System.Windows.Forms.Label();
+            btnEditRegistration = new System.Windows.Forms.Button();
+            btnDeleteRegistration = new System.Windows.Forms.Button();
+            lblCarRental = new System.Windows.Forms.Label();
+            btnEditCarRental = new System.Windows.Forms.Button();
+            btnDeleteCarRental = new System.Windows.Forms.Button();
+            lblAirFare = new System.Windows.Forms.Label();
+            btnEditAirFare = new System.Windows.Forms.Button();
+            btnDeleteAirFare = new System.Windows.Forms.Button();
+            lblLodgings = new System.Windows.Forms.Label();
+            btnEditLodging = new System.Windows.Forms.Button();
+            btnDeleteLodging = new System.Windows.Forms.Button();
+            lblMileage = new System.Windows.Forms.Label();
+            btnEditMileage = new System.Windows.Forms.Button();
+            btnDeleteMileage = new System.Windows.Forms.Button();
+            lblOtherExpenses = new System.Windows.Forms.Label();
+            btnEditOtherExpenses = new System.Windows.Forms.Button();
+            btnDeleteOtherExpenses = new System.Windows.Forms.Button();
+            btnCloseEdit = new System.Windows.Forms.Button();
+            tabControl1.SuspendLayout();
+            tabTravelDetails.SuspendLayout();
+            panel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            tabTravelItems.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabTravelDetails);
-            this.tabControl1.Controls.Add(this.tabTravelItems);
-            this.tabControl1.Location = new System.Drawing.Point(22, 30);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(737, 473);
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            tabControl1.Controls.Add(tabTravelDetails);
+            tabControl1.Controls.Add(tabTravelItems);
+            tabControl1.Location = new System.Drawing.Point(26, 35);
+            tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new System.Drawing.Size(860, 546);
+            tabControl1.TabIndex = 0;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabTravelDetails
             // 
-            this.tabTravelDetails.Controls.Add(this.btnSaveDetails);
-            this.tabTravelDetails.Controls.Add(this.panel1);
-            this.tabTravelDetails.Location = new System.Drawing.Point(4, 22);
-            this.tabTravelDetails.Name = "tabTravelDetails";
-            this.tabTravelDetails.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTravelDetails.Size = new System.Drawing.Size(729, 447);
-            this.tabTravelDetails.TabIndex = 0;
-            this.tabTravelDetails.Text = "Travel Details";
-            this.tabTravelDetails.UseVisualStyleBackColor = true;
+            tabTravelDetails.Controls.Add(btnSaveDetails);
+            tabTravelDetails.Controls.Add(panel1);
+            tabTravelDetails.Location = new System.Drawing.Point(4, 24);
+            tabTravelDetails.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabTravelDetails.Name = "tabTravelDetails";
+            tabTravelDetails.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabTravelDetails.Size = new System.Drawing.Size(852, 518);
+            tabTravelDetails.TabIndex = 0;
+            tabTravelDetails.Text = "Travel Details";
+            tabTravelDetails.UseVisualStyleBackColor = true;
             // 
             // btnSaveDetails
             // 
-            this.btnSaveDetails.FlatAppearance.BorderSize = 0;
-            this.btnSaveDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveDetails.Image = global::TravelExpenses.Properties.Resources._1495047519_Save;
-            this.btnSaveDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveDetails.Location = new System.Drawing.Point(593, 401);
-            this.btnSaveDetails.Name = "btnSaveDetails";
-            this.btnSaveDetails.Size = new System.Drawing.Size(120, 40);
-            this.btnSaveDetails.TabIndex = 1;
-            this.btnSaveDetails.Text = "Save Details";
-            this.btnSaveDetails.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveDetails.UseVisualStyleBackColor = true;
-            this.btnSaveDetails.Click += new System.EventHandler(this.btnSaveDetails_Click);
+            btnSaveDetails.FlatAppearance.BorderSize = 0;
+            btnSaveDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSaveDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnSaveDetails.Image = (System.Drawing.Image)resources.GetObject("btnSaveDetails.Image");
+            btnSaveDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnSaveDetails.Location = new System.Drawing.Point(712, 463);
+            btnSaveDetails.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnSaveDetails.Name = "btnSaveDetails";
+            btnSaveDetails.Size = new System.Drawing.Size(120, 46);
+            btnSaveDetails.TabIndex = 1;
+            btnSaveDetails.Text = "Save Details";
+            btnSaveDetails.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnSaveDetails.UseVisualStyleBackColor = true;
+            btnSaveDetails.Click += btnSaveDetails_Click;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.tableLayoutPanel2);
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(21, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 382);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(tableLayoutPanel2);
+            panel1.Controls.Add(tableLayoutPanel1);
+            panel1.Location = new System.Drawing.Point(24, 15);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(807, 440);
+            panel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.2614F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.7386F));
-            this.tableLayoutPanel2.Controls.Add(this.txtNotes, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblNotes, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(16, 276);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(658, 101);
-            this.tableLayoutPanel2.TabIndex = 1;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.2614F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.7386F));
+            tableLayoutPanel2.Controls.Add(txtNotes, 1, 0);
+            tableLayoutPanel2.Controls.Add(lblNotes, 0, 0);
+            tableLayoutPanel2.Location = new System.Drawing.Point(19, 318);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(768, 117);
+            tableLayoutPanel2.TabIndex = 1;
             // 
             // txtNotes
             // 
-            this.txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNotes.Location = new System.Drawing.Point(110, 3);
-            this.txtNotes.Multiline = true;
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNotes.Size = new System.Drawing.Size(545, 95);
-            this.txtNotes.TabIndex = 1;
+            txtNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtNotes.Location = new System.Drawing.Point(128, 4);
+            txtNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtNotes.Multiline = true;
+            txtNotes.Name = "txtNotes";
+            txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtNotes.Size = new System.Drawing.Size(636, 109);
+            txtNotes.TabIndex = 1;
             // 
             // lblNotes
             // 
-            this.lblNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNotes.AutoSize = true;
-            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotes.Location = new System.Drawing.Point(3, 5);
-            this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(101, 91);
-            this.lblNotes.TabIndex = 0;
-            this.lblNotes.Text = "Specific skills or strategies obtained as a result of participating in this trave" +
-    "l event:";
-            this.lblNotes.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblNotes.AutoSize = true;
+            lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblNotes.Location = new System.Drawing.Point(4, 26);
+            lblNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new System.Drawing.Size(116, 65);
+            lblNotes.TabIndex = 0;
+            lblNotes.Text = "Specific skills or strategies obtained as a result of participating in this travel event:";
+            lblNotes.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.41337F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.85106F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.03647F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.00304F));
-            this.tableLayoutPanel1.Controls.Add(this.lblDepartureDate, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblDepartureTime, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtOtherPurpose, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lblOtherPurpose, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cbTravelPurpose, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblTravelPurpose, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblReturnDate, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblReturnTime, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblTravelEvent, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblOtherEvent, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblOrigin, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.dtpDepartureDate, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dtpReturnDate, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dtpReturnTime, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbTravelEvent, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtOtherEvent, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtOrigin, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.dtpDepartureTime, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblTravelState, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.cbTravelState, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lblTravelReimb, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblTravelReimbAmount, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblTravelTotal, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblTravelTotalAmount, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblDestination, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtDestination, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 17);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.04008F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(658, 253);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.ColumnCount = 4;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.41337F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.85106F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.03647F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.00304F));
+            tableLayoutPanel1.Controls.Add(lblDepartureDate, 0, 0);
+            tableLayoutPanel1.Controls.Add(lblDepartureTime, 2, 0);
+            tableLayoutPanel1.Controls.Add(txtOtherPurpose, 3, 5);
+            tableLayoutPanel1.Controls.Add(lblOtherPurpose, 2, 5);
+            tableLayoutPanel1.Controls.Add(cbTravelPurpose, 3, 4);
+            tableLayoutPanel1.Controls.Add(lblTravelPurpose, 2, 4);
+            tableLayoutPanel1.Controls.Add(lblReturnDate, 0, 1);
+            tableLayoutPanel1.Controls.Add(lblReturnTime, 2, 1);
+            tableLayoutPanel1.Controls.Add(lblTravelEvent, 0, 2);
+            tableLayoutPanel1.Controls.Add(lblOtherEvent, 0, 3);
+            tableLayoutPanel1.Controls.Add(lblOrigin, 0, 4);
+            tableLayoutPanel1.Controls.Add(dtpDepartureDate, 1, 0);
+            tableLayoutPanel1.Controls.Add(dtpReturnDate, 1, 1);
+            tableLayoutPanel1.Controls.Add(dtpReturnTime, 3, 1);
+            tableLayoutPanel1.Controls.Add(cbTravelEvent, 1, 2);
+            tableLayoutPanel1.Controls.Add(txtOtherEvent, 1, 3);
+            tableLayoutPanel1.Controls.Add(txtOrigin, 1, 4);
+            tableLayoutPanel1.Controls.Add(dtpDepartureTime, 3, 0);
+            tableLayoutPanel1.Controls.Add(lblTravelState, 0, 6);
+            tableLayoutPanel1.Controls.Add(cbTravelState, 1, 6);
+            tableLayoutPanel1.Controls.Add(lblTravelReimb, 2, 3);
+            tableLayoutPanel1.Controls.Add(lblTravelReimbAmount, 3, 3);
+            tableLayoutPanel1.Controls.Add(lblTravelTotal, 2, 2);
+            tableLayoutPanel1.Controls.Add(lblTravelTotalAmount, 3, 2);
+            tableLayoutPanel1.Controls.Add(lblDestination, 0, 5);
+            tableLayoutPanel1.Controls.Add(txtDestination, 1, 5);
+            tableLayoutPanel1.Location = new System.Drawing.Point(19, 20);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 7;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.32665F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.04008F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(768, 292);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // lblDepartureDate
             // 
-            this.lblDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDepartureDate.AutoSize = true;
-            this.lblDepartureDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartureDate.Location = new System.Drawing.Point(3, 10);
-            this.lblDepartureDate.Name = "lblDepartureDate";
-            this.lblDepartureDate.Size = new System.Drawing.Size(101, 13);
-            this.lblDepartureDate.TabIndex = 0;
-            this.lblDepartureDate.Text = "Departure Date:";
-            this.lblDepartureDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblDepartureDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDepartureDate.AutoSize = true;
+            lblDepartureDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDepartureDate.Location = new System.Drawing.Point(4, 12);
+            lblDepartureDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDepartureDate.Name = "lblDepartureDate";
+            lblDepartureDate.Size = new System.Drawing.Size(117, 13);
+            lblDepartureDate.TabIndex = 0;
+            lblDepartureDate.Text = "Departure Date:";
+            lblDepartureDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblDepartureTime
             // 
-            this.lblDepartureTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDepartureTime.AutoSize = true;
-            this.lblDepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartureTime.Location = new System.Drawing.Point(312, 10);
-            this.lblDepartureTime.Name = "lblDepartureTime";
-            this.lblDepartureTime.Size = new System.Drawing.Size(138, 13);
-            this.lblDepartureTime.TabIndex = 1;
-            this.lblDepartureTime.Text = "Departure Time:";
-            this.lblDepartureTime.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblDepartureTime.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDepartureTime.AutoSize = true;
+            lblDepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDepartureTime.Location = new System.Drawing.Point(365, 12);
+            lblDepartureTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDepartureTime.Name = "lblDepartureTime";
+            lblDepartureTime.Size = new System.Drawing.Size(160, 13);
+            lblDepartureTime.TabIndex = 1;
+            lblDepartureTime.Text = "Departure Time:";
+            lblDepartureTime.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtOtherPurpose
             // 
-            this.txtOtherPurpose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOtherPurpose.Enabled = false;
-            this.txtOtherPurpose.Location = new System.Drawing.Point(456, 168);
-            this.txtOtherPurpose.Multiline = true;
-            this.txtOtherPurpose.Name = "txtOtherPurpose";
-            this.txtOtherPurpose.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtOtherPurpose.Size = new System.Drawing.Size(199, 27);
-            this.txtOtherPurpose.TabIndex = 19;
-            this.txtOtherPurpose.Visible = false;
+            txtOtherPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtOtherPurpose.Enabled = false;
+            txtOtherPurpose.Location = new System.Drawing.Point(533, 193);
+            txtOtherPurpose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtOtherPurpose.Multiline = true;
+            txtOtherPurpose.Name = "txtOtherPurpose";
+            txtOtherPurpose.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtOtherPurpose.Size = new System.Drawing.Size(231, 31);
+            txtOtherPurpose.TabIndex = 19;
+            txtOtherPurpose.Visible = false;
             // 
             // lblOtherPurpose
             // 
-            this.lblOtherPurpose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOtherPurpose.AutoSize = true;
-            this.lblOtherPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOtherPurpose.Location = new System.Drawing.Point(312, 175);
-            this.lblOtherPurpose.Name = "lblOtherPurpose";
-            this.lblOtherPurpose.Size = new System.Drawing.Size(138, 13);
-            this.lblOtherPurpose.TabIndex = 7;
-            this.lblOtherPurpose.Text = "Other Purpose:";
-            this.lblOtherPurpose.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblOtherPurpose.Visible = false;
+            lblOtherPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblOtherPurpose.AutoSize = true;
+            lblOtherPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblOtherPurpose.Location = new System.Drawing.Point(365, 202);
+            lblOtherPurpose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblOtherPurpose.Name = "lblOtherPurpose";
+            lblOtherPurpose.Size = new System.Drawing.Size(160, 13);
+            lblOtherPurpose.TabIndex = 7;
+            lblOtherPurpose.Text = "Other Purpose:";
+            lblOtherPurpose.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblOtherPurpose.Visible = false;
             // 
             // cbTravelPurpose
             // 
-            this.cbTravelPurpose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbTravelPurpose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTravelPurpose.FormattingEnabled = true;
-            this.cbTravelPurpose.Items.AddRange(new object[] {
-            "Training",
-            "Professional",
-            "Industry-related",
-            "Work outside district",
-            "Seminar",
-            "Workshops",
-            "Other"});
-            this.cbTravelPurpose.Location = new System.Drawing.Point(456, 138);
-            this.cbTravelPurpose.Name = "cbTravelPurpose";
-            this.cbTravelPurpose.Size = new System.Drawing.Size(199, 21);
-            this.cbTravelPurpose.TabIndex = 17;
-            this.cbTravelPurpose.Visible = false;
-            this.cbTravelPurpose.SelectedIndexChanged += new System.EventHandler(this.cbTravelPurpose_SelectedIndexChanged);
+            cbTravelPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbTravelPurpose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbTravelPurpose.FormattingEnabled = true;
+            cbTravelPurpose.Items.AddRange(new object[] { "Training", "Professional", "Industry-related", "Work outside district", "Seminar", "Workshops", "Other" });
+            cbTravelPurpose.Location = new System.Drawing.Point(533, 159);
+            cbTravelPurpose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbTravelPurpose.Name = "cbTravelPurpose";
+            cbTravelPurpose.Size = new System.Drawing.Size(231, 23);
+            cbTravelPurpose.TabIndex = 17;
+            cbTravelPurpose.Visible = false;
+            cbTravelPurpose.SelectedIndexChanged += cbTravelPurpose_SelectedIndexChanged;
             // 
             // lblTravelPurpose
             // 
-            this.lblTravelPurpose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelPurpose.AutoSize = true;
-            this.lblTravelPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelPurpose.Location = new System.Drawing.Point(312, 142);
-            this.lblTravelPurpose.Name = "lblTravelPurpose";
-            this.lblTravelPurpose.Size = new System.Drawing.Size(138, 13);
-            this.lblTravelPurpose.TabIndex = 5;
-            this.lblTravelPurpose.Text = "Travel Purpose:";
-            this.lblTravelPurpose.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblTravelPurpose.Visible = false;
+            lblTravelPurpose.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelPurpose.AutoSize = true;
+            lblTravelPurpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelPurpose.Location = new System.Drawing.Point(365, 164);
+            lblTravelPurpose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelPurpose.Name = "lblTravelPurpose";
+            lblTravelPurpose.Size = new System.Drawing.Size(160, 13);
+            lblTravelPurpose.TabIndex = 5;
+            lblTravelPurpose.Text = "Travel Purpose:";
+            lblTravelPurpose.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblTravelPurpose.Visible = false;
             // 
             // lblReturnDate
             // 
-            this.lblReturnDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblReturnDate.AutoSize = true;
-            this.lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturnDate.Location = new System.Drawing.Point(3, 43);
-            this.lblReturnDate.Name = "lblReturnDate";
-            this.lblReturnDate.Size = new System.Drawing.Size(101, 13);
-            this.lblReturnDate.TabIndex = 2;
-            this.lblReturnDate.Text = "Return Date:";
-            this.lblReturnDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblReturnDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblReturnDate.AutoSize = true;
+            lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblReturnDate.Location = new System.Drawing.Point(4, 50);
+            lblReturnDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblReturnDate.Name = "lblReturnDate";
+            lblReturnDate.Size = new System.Drawing.Size(117, 13);
+            lblReturnDate.TabIndex = 2;
+            lblReturnDate.Text = "Return Date:";
+            lblReturnDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblReturnTime
             // 
-            this.lblReturnTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblReturnTime.AutoSize = true;
-            this.lblReturnTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturnTime.Location = new System.Drawing.Point(312, 43);
-            this.lblReturnTime.Name = "lblReturnTime";
-            this.lblReturnTime.Size = new System.Drawing.Size(138, 13);
-            this.lblReturnTime.TabIndex = 3;
-            this.lblReturnTime.Text = "Return Time:";
-            this.lblReturnTime.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblReturnTime.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblReturnTime.AutoSize = true;
+            lblReturnTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblReturnTime.Location = new System.Drawing.Point(365, 50);
+            lblReturnTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblReturnTime.Name = "lblReturnTime";
+            lblReturnTime.Size = new System.Drawing.Size(160, 13);
+            lblReturnTime.TabIndex = 3;
+            lblReturnTime.Text = "Return Time:";
+            lblReturnTime.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblTravelEvent
             // 
-            this.lblTravelEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelEvent.AutoSize = true;
-            this.lblTravelEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelEvent.Location = new System.Drawing.Point(3, 76);
-            this.lblTravelEvent.Name = "lblTravelEvent";
-            this.lblTravelEvent.Size = new System.Drawing.Size(101, 13);
-            this.lblTravelEvent.TabIndex = 4;
-            this.lblTravelEvent.Text = "Travel Event:";
-            this.lblTravelEvent.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblTravelEvent.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelEvent.AutoSize = true;
+            lblTravelEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelEvent.Location = new System.Drawing.Point(4, 88);
+            lblTravelEvent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelEvent.Name = "lblTravelEvent";
+            lblTravelEvent.Size = new System.Drawing.Size(117, 13);
+            lblTravelEvent.TabIndex = 4;
+            lblTravelEvent.Text = "Travel Event:";
+            lblTravelEvent.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblOtherEvent
             // 
-            this.lblOtherEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOtherEvent.AutoSize = true;
-            this.lblOtherEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOtherEvent.Location = new System.Drawing.Point(3, 109);
-            this.lblOtherEvent.Name = "lblOtherEvent";
-            this.lblOtherEvent.Size = new System.Drawing.Size(101, 13);
-            this.lblOtherEvent.TabIndex = 6;
-            this.lblOtherEvent.Text = "Other Event:";
-            this.lblOtherEvent.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblOtherEvent.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblOtherEvent.AutoSize = true;
+            lblOtherEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblOtherEvent.Location = new System.Drawing.Point(4, 126);
+            lblOtherEvent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblOtherEvent.Name = "lblOtherEvent";
+            lblOtherEvent.Size = new System.Drawing.Size(117, 13);
+            lblOtherEvent.TabIndex = 6;
+            lblOtherEvent.Text = "Other Event:";
+            lblOtherEvent.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblOrigin
             // 
-            this.lblOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOrigin.AutoSize = true;
-            this.lblOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrigin.Location = new System.Drawing.Point(3, 142);
-            this.lblOrigin.Name = "lblOrigin";
-            this.lblOrigin.Size = new System.Drawing.Size(101, 13);
-            this.lblOrigin.TabIndex = 8;
-            this.lblOrigin.Text = "Origin:";
-            this.lblOrigin.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblOrigin.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblOrigin.AutoSize = true;
+            lblOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblOrigin.Location = new System.Drawing.Point(4, 164);
+            lblOrigin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblOrigin.Name = "lblOrigin";
+            lblOrigin.Size = new System.Drawing.Size(117, 13);
+            lblOrigin.TabIndex = 8;
+            lblOrigin.Text = "Origin:";
+            lblOrigin.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // dtpDepartureDate
             // 
-            this.dtpDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDepartureDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDepartureDate.Location = new System.Drawing.Point(110, 6);
-            this.dtpDepartureDate.Name = "dtpDepartureDate";
-            this.dtpDepartureDate.Size = new System.Drawing.Size(196, 20);
-            this.dtpDepartureDate.TabIndex = 12;
+            dtpDepartureDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtpDepartureDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpDepartureDate.Location = new System.Drawing.Point(129, 7);
+            dtpDepartureDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpDepartureDate.Name = "dtpDepartureDate";
+            dtpDepartureDate.Size = new System.Drawing.Size(228, 23);
+            dtpDepartureDate.TabIndex = 12;
             // 
             // dtpReturnDate
             // 
-            this.dtpReturnDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpReturnDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpReturnDate.Location = new System.Drawing.Point(110, 39);
-            this.dtpReturnDate.Name = "dtpReturnDate";
-            this.dtpReturnDate.Size = new System.Drawing.Size(196, 20);
-            this.dtpReturnDate.TabIndex = 14;
+            dtpReturnDate.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtpReturnDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpReturnDate.Location = new System.Drawing.Point(129, 45);
+            dtpReturnDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpReturnDate.Name = "dtpReturnDate";
+            dtpReturnDate.Size = new System.Drawing.Size(228, 23);
+            dtpReturnDate.TabIndex = 14;
             // 
             // dtpReturnTime
             // 
-            this.dtpReturnTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpReturnTime.CustomFormat = "hh:mm tt";
-            this.dtpReturnTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpReturnTime.Location = new System.Drawing.Point(456, 39);
-            this.dtpReturnTime.Name = "dtpReturnTime";
-            this.dtpReturnTime.Size = new System.Drawing.Size(199, 20);
-            this.dtpReturnTime.TabIndex = 15;
+            dtpReturnTime.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtpReturnTime.CustomFormat = "hh:mm tt";
+            dtpReturnTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dtpReturnTime.Location = new System.Drawing.Point(533, 45);
+            dtpReturnTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpReturnTime.Name = "dtpReturnTime";
+            dtpReturnTime.Size = new System.Drawing.Size(231, 23);
+            dtpReturnTime.TabIndex = 15;
             // 
             // cbTravelEvent
             // 
-            this.cbTravelEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbTravelEvent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTravelEvent.FormattingEnabled = true;
-            this.cbTravelEvent.Items.AddRange(new object[] {
-            "FMCA Aerial Fly In",
-            "AMCA Annual Meeting",
-            "FMCA Annual Meeting",
-            "FASD Annual Meeting",
-            "Chemical Response Training",
-            "FMCA Legislative",
-            "AMCA Legislative",
-            "FGFOA Accounting",
-            "FMCA Dodd Short Course",
-            "FASD Legislative",
-            "FRS Training",
-            "Other"});
-            this.cbTravelEvent.Location = new System.Drawing.Point(110, 72);
-            this.cbTravelEvent.Name = "cbTravelEvent";
-            this.cbTravelEvent.Size = new System.Drawing.Size(196, 21);
-            this.cbTravelEvent.TabIndex = 16;
-            this.cbTravelEvent.SelectedIndexChanged += new System.EventHandler(this.cbTravelEvent_SelectedIndexChanged);
+            cbTravelEvent.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbTravelEvent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbTravelEvent.FormattingEnabled = true;
+            cbTravelEvent.Items.AddRange(new object[] { "FMCA Aerial Fly In", "AMCA Annual Meeting", "FMCA Annual Meeting", "FASD Annual Meeting", "Chemical Response Training", "FMCA Legislative", "AMCA Legislative", "FGFOA Accounting", "FMCA Dodd Short Course", "FASD Legislative", "FRS Training", "Other" });
+            cbTravelEvent.Location = new System.Drawing.Point(129, 83);
+            cbTravelEvent.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbTravelEvent.Name = "cbTravelEvent";
+            cbTravelEvent.Size = new System.Drawing.Size(228, 23);
+            cbTravelEvent.TabIndex = 16;
+            cbTravelEvent.SelectedIndexChanged += cbTravelEvent_SelectedIndexChanged;
             // 
             // txtOtherEvent
             // 
-            this.txtOtherEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOtherEvent.Enabled = false;
-            this.txtOtherEvent.Location = new System.Drawing.Point(110, 102);
-            this.txtOtherEvent.Multiline = true;
-            this.txtOtherEvent.Name = "txtOtherEvent";
-            this.txtOtherEvent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtOtherEvent.Size = new System.Drawing.Size(196, 27);
-            this.txtOtherEvent.TabIndex = 18;
+            txtOtherEvent.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtOtherEvent.Enabled = false;
+            txtOtherEvent.Location = new System.Drawing.Point(129, 117);
+            txtOtherEvent.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtOtherEvent.Multiline = true;
+            txtOtherEvent.Name = "txtOtherEvent";
+            txtOtherEvent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtOtherEvent.Size = new System.Drawing.Size(228, 31);
+            txtOtherEvent.TabIndex = 18;
             // 
             // txtOrigin
             // 
-            this.txtOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOrigin.Location = new System.Drawing.Point(110, 135);
-            this.txtOrigin.Multiline = true;
-            this.txtOrigin.Name = "txtOrigin";
-            this.txtOrigin.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtOrigin.Size = new System.Drawing.Size(196, 27);
-            this.txtOrigin.TabIndex = 20;
+            txtOrigin.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtOrigin.Location = new System.Drawing.Point(129, 155);
+            txtOrigin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtOrigin.Multiline = true;
+            txtOrigin.Name = "txtOrigin";
+            txtOrigin.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtOrigin.Size = new System.Drawing.Size(228, 31);
+            txtOrigin.TabIndex = 20;
             // 
             // dtpDepartureTime
             // 
-            this.dtpDepartureTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDepartureTime.CustomFormat = "hh:mm tt";
-            this.dtpDepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDepartureTime.Location = new System.Drawing.Point(456, 6);
-            this.dtpDepartureTime.Name = "dtpDepartureTime";
-            this.dtpDepartureTime.Size = new System.Drawing.Size(199, 20);
-            this.dtpDepartureTime.TabIndex = 13;
+            dtpDepartureTime.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtpDepartureTime.CustomFormat = "hh:mm tt";
+            dtpDepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dtpDepartureTime.Location = new System.Drawing.Point(533, 7);
+            dtpDepartureTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dtpDepartureTime.Name = "dtpDepartureTime";
+            dtpDepartureTime.Size = new System.Drawing.Size(231, 23);
+            dtpDepartureTime.TabIndex = 13;
             // 
             // lblTravelState
             // 
-            this.lblTravelState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelState.AutoSize = true;
-            this.lblTravelState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelState.Location = new System.Drawing.Point(3, 219);
-            this.lblTravelState.Name = "lblTravelState";
-            this.lblTravelState.Size = new System.Drawing.Size(101, 13);
-            this.lblTravelState.TabIndex = 10;
-            this.lblTravelState.Text = "Travel State:";
-            this.lblTravelState.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblTravelState.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelState.AutoSize = true;
+            lblTravelState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelState.Location = new System.Drawing.Point(4, 253);
+            lblTravelState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelState.Name = "lblTravelState";
+            lblTravelState.Size = new System.Drawing.Size(117, 13);
+            lblTravelState.TabIndex = 10;
+            lblTravelState.Text = "Travel State:";
+            lblTravelState.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // cbTravelState
             // 
-            this.cbTravelState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbTravelState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTravelState.FormattingEnabled = true;
-            this.cbTravelState.Items.AddRange(new object[] {
-            "Alabama,AL",
-            "Alaska,AK",
-            "Arizona,AZ",
-            "Arkansas,AR",
-            "California,CA",
-            "Colorado,CO",
-            "Connecticut,CT",
-            "Delaware,DE",
-            "Florida,FL",
-            "Georgia,GA",
-            "Hawaii,HI",
-            "Idaho,ID",
-            "Illinois,IL",
-            "Indiana,IN",
-            "Iowa,IA",
-            "Kansas,KS",
-            "Kentucky,KY",
-            "Louisiana,LA",
-            "Maine,ME",
-            "Maryland,MD",
-            "Massachusetts,MA",
-            "Michigan,MI",
-            "Minnesota,MN",
-            "Mississippi,MS",
-            "Missouri,MO",
-            "Montana,MT",
-            "Nebraska,NE",
-            "Nevada,NV",
-            "New Hampshire,NH",
-            "New Jersey,NJ",
-            "New Mexico,NM",
-            "New York,NY",
-            "North Carolina,NC",
-            "North Dakota,ND",
-            "Ohio,OH",
-            "Oklahoma,OK",
-            "Oregon,OR",
-            "Pennsylvania,PA",
-            "Rhode Island,RI",
-            "South Carolina,SC",
-            "South Dakota,SD",
-            "Tennessee,TN",
-            "Texas,TX",
-            "Utah,UT",
-            "Vermont,VT",
-            "Virginia,VA",
-            "Washington,WA",
-            "West Virginia,WV",
-            "Wisconsin,WI",
-            "Wyoming,WY",
-            "Other"});
-            this.cbTravelState.Location = new System.Drawing.Point(110, 215);
-            this.cbTravelState.Name = "cbTravelState";
-            this.cbTravelState.Size = new System.Drawing.Size(196, 21);
-            this.cbTravelState.TabIndex = 22;
+            cbTravelState.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            cbTravelState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbTravelState.FormattingEnabled = true;
+            cbTravelState.Items.AddRange(new object[] { "Alabama,AL", "Alaska,AK", "Arizona,AZ", "Arkansas,AR", "California,CA", "Colorado,CO", "Connecticut,CT", "Delaware,DE", "Florida,FL", "Georgia,GA", "Hawaii,HI", "Idaho,ID", "Illinois,IL", "Indiana,IN", "Iowa,IA", "Kansas,KS", "Kentucky,KY", "Louisiana,LA", "Maine,ME", "Maryland,MD", "Massachusetts,MA", "Michigan,MI", "Minnesota,MN", "Mississippi,MS", "Missouri,MO", "Montana,MT", "Nebraska,NE", "Nevada,NV", "New Hampshire,NH", "New Jersey,NJ", "New Mexico,NM", "New York,NY", "North Carolina,NC", "North Dakota,ND", "Ohio,OH", "Oklahoma,OK", "Oregon,OR", "Pennsylvania,PA", "Rhode Island,RI", "South Carolina,SC", "South Dakota,SD", "Tennessee,TN", "Texas,TX", "Utah,UT", "Vermont,VT", "Virginia,VA", "Washington,WA", "West Virginia,WV", "Wisconsin,WI", "Wyoming,WY", "Other" });
+            cbTravelState.Location = new System.Drawing.Point(129, 248);
+            cbTravelState.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbTravelState.Name = "cbTravelState";
+            cbTravelState.Size = new System.Drawing.Size(228, 23);
+            cbTravelState.TabIndex = 22;
             // 
             // lblTravelReimb
             // 
-            this.lblTravelReimb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelReimb.AutoSize = true;
-            this.lblTravelReimb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelReimb.Location = new System.Drawing.Point(312, 109);
-            this.lblTravelReimb.Name = "lblTravelReimb";
-            this.lblTravelReimb.Size = new System.Drawing.Size(138, 13);
-            this.lblTravelReimb.TabIndex = 24;
-            this.lblTravelReimb.Text = "Travel Reimbursement:";
-            this.lblTravelReimb.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblTravelReimb.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelReimb.AutoSize = true;
+            lblTravelReimb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelReimb.Location = new System.Drawing.Point(365, 126);
+            lblTravelReimb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelReimb.Name = "lblTravelReimb";
+            lblTravelReimb.Size = new System.Drawing.Size(160, 13);
+            lblTravelReimb.TabIndex = 24;
+            lblTravelReimb.Text = "Travel Reimbursement:";
+            lblTravelReimb.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblTravelReimbAmount
             // 
-            this.lblTravelReimbAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelReimbAmount.AutoSize = true;
-            this.lblTravelReimbAmount.Location = new System.Drawing.Point(456, 109);
-            this.lblTravelReimbAmount.Name = "lblTravelReimbAmount";
-            this.lblTravelReimbAmount.Size = new System.Drawing.Size(199, 13);
-            this.lblTravelReimbAmount.TabIndex = 26;
+            lblTravelReimbAmount.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelReimbAmount.AutoSize = true;
+            lblTravelReimbAmount.Location = new System.Drawing.Point(533, 125);
+            lblTravelReimbAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelReimbAmount.Name = "lblTravelReimbAmount";
+            lblTravelReimbAmount.Size = new System.Drawing.Size(231, 15);
+            lblTravelReimbAmount.TabIndex = 26;
             // 
             // lblTravelTotal
             // 
-            this.lblTravelTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelTotal.AutoSize = true;
-            this.lblTravelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTravelTotal.Location = new System.Drawing.Point(312, 76);
-            this.lblTravelTotal.Name = "lblTravelTotal";
-            this.lblTravelTotal.Size = new System.Drawing.Size(138, 13);
-            this.lblTravelTotal.TabIndex = 23;
-            this.lblTravelTotal.Text = "Travel Total:";
-            this.lblTravelTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblTravelTotal.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelTotal.AutoSize = true;
+            lblTravelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblTravelTotal.Location = new System.Drawing.Point(365, 88);
+            lblTravelTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelTotal.Name = "lblTravelTotal";
+            lblTravelTotal.Size = new System.Drawing.Size(160, 13);
+            lblTravelTotal.TabIndex = 23;
+            lblTravelTotal.Text = "Travel Total:";
+            lblTravelTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblTravelTotalAmount
             // 
-            this.lblTravelTotalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTravelTotalAmount.AutoSize = true;
-            this.lblTravelTotalAmount.Location = new System.Drawing.Point(456, 76);
-            this.lblTravelTotalAmount.Name = "lblTravelTotalAmount";
-            this.lblTravelTotalAmount.Size = new System.Drawing.Size(199, 13);
-            this.lblTravelTotalAmount.TabIndex = 25;
+            lblTravelTotalAmount.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblTravelTotalAmount.AutoSize = true;
+            lblTravelTotalAmount.Location = new System.Drawing.Point(533, 87);
+            lblTravelTotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblTravelTotalAmount.Name = "lblTravelTotalAmount";
+            lblTravelTotalAmount.Size = new System.Drawing.Size(231, 15);
+            lblTravelTotalAmount.TabIndex = 25;
             // 
             // lblDestination
             // 
-            this.lblDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDestination.AutoSize = true;
-            this.lblDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDestination.Location = new System.Drawing.Point(3, 175);
-            this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(101, 13);
-            this.lblDestination.TabIndex = 9;
-            this.lblDestination.Text = "Destination:";
-            this.lblDestination.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblDestination.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDestination.AutoSize = true;
+            lblDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDestination.Location = new System.Drawing.Point(4, 202);
+            lblDestination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDestination.Name = "lblDestination";
+            lblDestination.Size = new System.Drawing.Size(117, 13);
+            lblDestination.TabIndex = 9;
+            lblDestination.Text = "Destination:";
+            lblDestination.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtDestination
             // 
-            this.txtDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDestination.Location = new System.Drawing.Point(110, 168);
-            this.txtDestination.Multiline = true;
-            this.txtDestination.Name = "txtDestination";
-            this.txtDestination.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtDestination.Size = new System.Drawing.Size(196, 27);
-            this.txtDestination.TabIndex = 21;
+            txtDestination.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtDestination.Location = new System.Drawing.Point(129, 193);
+            txtDestination.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtDestination.Multiline = true;
+            txtDestination.Name = "txtDestination";
+            txtDestination.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtDestination.Size = new System.Drawing.Size(228, 31);
+            txtDestination.TabIndex = 21;
             // 
             // tabTravelItems
             // 
-            this.tabTravelItems.Controls.Add(this.btnAddNewItem);
-            this.tabTravelItems.Controls.Add(this.panel3);
-            this.tabTravelItems.Controls.Add(this.panel2);
-            this.tabTravelItems.Location = new System.Drawing.Point(4, 22);
-            this.tabTravelItems.Name = "tabTravelItems";
-            this.tabTravelItems.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTravelItems.Size = new System.Drawing.Size(729, 447);
-            this.tabTravelItems.TabIndex = 1;
-            this.tabTravelItems.Text = "Travel Items";
-            this.tabTravelItems.UseVisualStyleBackColor = true;
+            tabTravelItems.Controls.Add(btnAddNewItem);
+            tabTravelItems.Controls.Add(panel3);
+            tabTravelItems.Controls.Add(panel2);
+            tabTravelItems.Location = new System.Drawing.Point(4, 24);
+            tabTravelItems.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabTravelItems.Name = "tabTravelItems";
+            tabTravelItems.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabTravelItems.Size = new System.Drawing.Size(852, 518);
+            tabTravelItems.TabIndex = 1;
+            tabTravelItems.Text = "Travel Items";
+            tabTravelItems.UseVisualStyleBackColor = true;
             // 
             // btnAddNewItem
             // 
-            this.btnAddNewItem.Enabled = false;
-            this.btnAddNewItem.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAddNewItem.FlatAppearance.BorderSize = 0;
-            this.btnAddNewItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewItem.ForeColor = System.Drawing.Color.Green;
-            this.btnAddNewItem.Image = global::TravelExpenses.Properties.Resources.iconfinder_add_3855641;
-            this.btnAddNewItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNewItem.Location = new System.Drawing.Point(595, 4);
-            this.btnAddNewItem.Name = "btnAddNewItem";
-            this.btnAddNewItem.Size = new System.Drawing.Size(131, 48);
-            this.btnAddNewItem.TabIndex = 2;
-            this.btnAddNewItem.Text = "Add New Item";
-            this.btnAddNewItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddNewItem.UseVisualStyleBackColor = true;
-            this.btnAddNewItem.Click += new System.EventHandler(this.btnAddNewItem_Click);
+            btnAddNewItem.Enabled = false;
+            btnAddNewItem.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            btnAddNewItem.FlatAppearance.BorderSize = 0;
+            btnAddNewItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnAddNewItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnAddNewItem.ForeColor = System.Drawing.Color.Green;
+            btnAddNewItem.Image = (System.Drawing.Image)resources.GetObject("btnAddNewItem.Image");
+            btnAddNewItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnAddNewItem.Location = new System.Drawing.Point(717, 5);
+            btnAddNewItem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnAddNewItem.Name = "btnAddNewItem";
+            btnAddNewItem.Size = new System.Drawing.Size(130, 55);
+            btnAddNewItem.TabIndex = 2;
+            btnAddNewItem.Text = "Add New Item";
+            btnAddNewItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnAddNewItem.UseVisualStyleBackColor = true;
+            btnAddNewItem.Click += btnAddNewItem_Click;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.lblColorExplanation);
-            this.panel3.Location = new System.Drawing.Point(63, 377);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(580, 31);
-            this.panel3.TabIndex = 1;
+            panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel3.Controls.Add(lblColorExplanation);
+            panel3.Location = new System.Drawing.Point(74, 435);
+            panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(676, 35);
+            panel3.TabIndex = 1;
             // 
             // lblColorExplanation
             // 
-            this.lblColorExplanation.AutoSize = true;
-            this.lblColorExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColorExplanation.Location = new System.Drawing.Point(13, 7);
-            this.lblColorExplanation.Name = "lblColorExplanation";
-            this.lblColorExplanation.Size = new System.Drawing.Size(556, 15);
-            this.lblColorExplanation.TabIndex = 0;
-            this.lblColorExplanation.Text = "* Red item means you don\'t have that item in your travel and green means you have" +
-    " it.";
+            lblColorExplanation.AutoSize = true;
+            lblColorExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblColorExplanation.Location = new System.Drawing.Point(15, 8);
+            lblColorExplanation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblColorExplanation.Name = "lblColorExplanation";
+            lblColorExplanation.Size = new System.Drawing.Size(556, 15);
+            lblColorExplanation.TabIndex = 0;
+            lblColorExplanation.Text = "* Red item means you don't have that item in your travel and green means you have it.";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tableLayoutPanel3);
-            this.panel2.Location = new System.Drawing.Point(122, 44);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(451, 324);
-            this.panel2.TabIndex = 0;
+            panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(tableLayoutPanel3);
+            panel2.Location = new System.Drawing.Point(142, 51);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(526, 374);
+            panel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.AutoSize = true;
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.lblItemName, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblEdit, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblDelete, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnEditMeals, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.btnDeleteMeals, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lblMeals, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lblRegistration, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btnEditRegistration, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btnDeleteRegistration, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lblCarRental, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.btnEditCarRental, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.btnDeleteCarRental, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lblAirFare, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.btnEditAirFare, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.btnDeleteAirFare, 2, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lblLodgings, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.btnEditLodging, 1, 5);
-            this.tableLayoutPanel3.Controls.Add(this.btnDeleteLodging, 2, 5);
-            this.tableLayoutPanel3.Controls.Add(this.lblMileage, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.btnEditMileage, 1, 6);
-            this.tableLayoutPanel3.Controls.Add(this.btnDeleteMileage, 2, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lblOtherExpenses, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.btnEditOtherExpenses, 1, 7);
-            this.tableLayoutPanel3.Controls.Add(this.btnDeleteOtherExpenses, 2, 7);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(16, 15);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 8;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(417, 292);
-            this.tableLayoutPanel3.TabIndex = 0;
+            tableLayoutPanel3.AutoSize = true;
+            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            tableLayoutPanel3.Controls.Add(lblItemName, 0, 0);
+            tableLayoutPanel3.Controls.Add(lblEdit, 1, 0);
+            tableLayoutPanel3.Controls.Add(lblDelete, 2, 0);
+            tableLayoutPanel3.Controls.Add(btnEditMeals, 1, 1);
+            tableLayoutPanel3.Controls.Add(btnDeleteMeals, 2, 1);
+            tableLayoutPanel3.Controls.Add(lblMeals, 0, 1);
+            tableLayoutPanel3.Controls.Add(lblRegistration, 0, 2);
+            tableLayoutPanel3.Controls.Add(btnEditRegistration, 1, 2);
+            tableLayoutPanel3.Controls.Add(btnDeleteRegistration, 2, 2);
+            tableLayoutPanel3.Controls.Add(lblCarRental, 0, 3);
+            tableLayoutPanel3.Controls.Add(btnEditCarRental, 1, 3);
+            tableLayoutPanel3.Controls.Add(btnDeleteCarRental, 2, 3);
+            tableLayoutPanel3.Controls.Add(lblAirFare, 0, 4);
+            tableLayoutPanel3.Controls.Add(btnEditAirFare, 1, 4);
+            tableLayoutPanel3.Controls.Add(btnDeleteAirFare, 2, 4);
+            tableLayoutPanel3.Controls.Add(lblLodgings, 0, 5);
+            tableLayoutPanel3.Controls.Add(btnEditLodging, 1, 5);
+            tableLayoutPanel3.Controls.Add(btnDeleteLodging, 2, 5);
+            tableLayoutPanel3.Controls.Add(lblMileage, 0, 6);
+            tableLayoutPanel3.Controls.Add(btnEditMileage, 1, 6);
+            tableLayoutPanel3.Controls.Add(btnDeleteMileage, 2, 6);
+            tableLayoutPanel3.Controls.Add(lblOtherExpenses, 0, 7);
+            tableLayoutPanel3.Controls.Add(btnEditOtherExpenses, 1, 7);
+            tableLayoutPanel3.Controls.Add(btnDeleteOtherExpenses, 2, 7);
+            tableLayoutPanel3.Location = new System.Drawing.Point(19, 17);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 8;
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(486, 337);
+            tableLayoutPanel3.TabIndex = 0;
             // 
             // lblItemName
             // 
-            this.lblItemName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblItemName.AutoSize = true;
-            this.lblItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemName.Location = new System.Drawing.Point(3, 9);
-            this.lblItemName.Name = "lblItemName";
-            this.lblItemName.Size = new System.Drawing.Size(160, 17);
-            this.lblItemName.TabIndex = 0;
-            this.lblItemName.Text = "Item *";
-            this.lblItemName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblItemName.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblItemName.AutoSize = true;
+            lblItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblItemName.Location = new System.Drawing.Point(4, 12);
+            lblItemName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblItemName.Name = "lblItemName";
+            lblItemName.Size = new System.Drawing.Size(186, 17);
+            lblItemName.TabIndex = 0;
+            lblItemName.Text = "Item *";
+            lblItemName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblEdit
             // 
-            this.lblEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEdit.AutoSize = true;
-            this.lblEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdit.Location = new System.Drawing.Point(169, 9);
-            this.lblEdit.Name = "lblEdit";
-            this.lblEdit.Size = new System.Drawing.Size(119, 17);
-            this.lblEdit.TabIndex = 1;
-            this.lblEdit.Text = "Edit";
-            this.lblEdit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblEdit.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblEdit.AutoSize = true;
+            lblEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblEdit.Location = new System.Drawing.Point(198, 12);
+            lblEdit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblEdit.Name = "lblEdit";
+            lblEdit.Size = new System.Drawing.Size(137, 17);
+            lblEdit.TabIndex = 1;
+            lblEdit.Text = "Edit";
+            lblEdit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblDelete
             // 
-            this.lblDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDelete.AutoSize = true;
-            this.lblDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDelete.Location = new System.Drawing.Point(294, 9);
-            this.lblDelete.Name = "lblDelete";
-            this.lblDelete.Size = new System.Drawing.Size(120, 17);
-            this.lblDelete.TabIndex = 2;
-            this.lblDelete.Text = "Delete";
-            this.lblDelete.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblDelete.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDelete.AutoSize = true;
+            lblDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblDelete.Location = new System.Drawing.Point(343, 12);
+            lblDelete.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDelete.Name = "lblDelete";
+            lblDelete.Size = new System.Drawing.Size(139, 17);
+            lblDelete.TabIndex = 2;
+            lblDelete.Text = "Delete";
+            lblDelete.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEditMeals
             // 
-            this.btnEditMeals.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditMeals.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEditMeals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEditMeals.Enabled = false;
-            this.btnEditMeals.FlatAppearance.BorderSize = 0;
-            this.btnEditMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditMeals.Image = global::TravelExpenses.Properties.Resources._1493081488_pen;
-            this.btnEditMeals.Location = new System.Drawing.Point(202, 39);
-            this.btnEditMeals.Name = "btnEditMeals";
-            this.btnEditMeals.Size = new System.Drawing.Size(52, 30);
-            this.btnEditMeals.TabIndex = 3;
-            this.btnEditMeals.UseVisualStyleBackColor = false;
-            this.btnEditMeals.Click += new System.EventHandler(this.btnEditMeals_Click);
+            btnEditMeals.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditMeals.BackColor = System.Drawing.Color.WhiteSmoke;
+            btnEditMeals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnEditMeals.Enabled = false;
+            btnEditMeals.FlatAppearance.BorderSize = 0;
+            btnEditMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditMeals.Image = (System.Drawing.Image)resources.GetObject("btnEditMeals.Image");
+            btnEditMeals.Location = new System.Drawing.Point(236, 45);
+            btnEditMeals.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditMeals.Name = "btnEditMeals";
+            btnEditMeals.Size = new System.Drawing.Size(61, 35);
+            btnEditMeals.TabIndex = 3;
+            btnEditMeals.UseVisualStyleBackColor = false;
+            btnEditMeals.Click += btnEditMeals_Click;
             // 
             // btnDeleteMeals
             // 
-            this.btnDeleteMeals.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteMeals.Enabled = false;
-            this.btnDeleteMeals.FlatAppearance.BorderSize = 0;
-            this.btnDeleteMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteMeals.Image = global::TravelExpenses.Properties.Resources._1493082053_1_04;
-            this.btnDeleteMeals.Location = new System.Drawing.Point(328, 39);
-            this.btnDeleteMeals.Name = "btnDeleteMeals";
-            this.btnDeleteMeals.Size = new System.Drawing.Size(52, 30);
-            this.btnDeleteMeals.TabIndex = 4;
-            this.btnDeleteMeals.UseVisualStyleBackColor = true;
-            this.btnDeleteMeals.Click += new System.EventHandler(this.btnDeleteMeals_Click);
+            btnDeleteMeals.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDeleteMeals.Enabled = false;
+            btnDeleteMeals.FlatAppearance.BorderSize = 0;
+            btnDeleteMeals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDeleteMeals.Image = (System.Drawing.Image)resources.GetObject("btnDeleteMeals.Image");
+            btnDeleteMeals.Location = new System.Drawing.Point(382, 45);
+            btnDeleteMeals.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDeleteMeals.Name = "btnDeleteMeals";
+            btnDeleteMeals.Size = new System.Drawing.Size(61, 35);
+            btnDeleteMeals.TabIndex = 4;
+            btnDeleteMeals.UseVisualStyleBackColor = true;
+            btnDeleteMeals.Click += btnDeleteMeals_Click;
             // 
             // lblMeals
             // 
-            this.lblMeals.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMeals.AutoSize = true;
-            this.lblMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMeals.Location = new System.Drawing.Point(3, 46);
-            this.lblMeals.Name = "lblMeals";
-            this.lblMeals.Size = new System.Drawing.Size(160, 15);
-            this.lblMeals.TabIndex = 5;
-            this.lblMeals.Text = "Meals";
-            this.lblMeals.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblMeals.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblMeals.AutoSize = true;
+            lblMeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblMeals.Location = new System.Drawing.Point(4, 55);
+            lblMeals.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMeals.Name = "lblMeals";
+            lblMeals.Size = new System.Drawing.Size(186, 15);
+            lblMeals.TabIndex = 5;
+            lblMeals.Text = "Meals";
+            lblMeals.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblRegistration
             // 
-            this.lblRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRegistration.AutoSize = true;
-            this.lblRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistration.Location = new System.Drawing.Point(3, 82);
-            this.lblRegistration.Name = "lblRegistration";
-            this.lblRegistration.Size = new System.Drawing.Size(160, 15);
-            this.lblRegistration.TabIndex = 6;
-            this.lblRegistration.Text = "Registration";
-            this.lblRegistration.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblRegistration.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblRegistration.AutoSize = true;
+            lblRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblRegistration.Location = new System.Drawing.Point(4, 97);
+            lblRegistration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblRegistration.Name = "lblRegistration";
+            lblRegistration.Size = new System.Drawing.Size(186, 15);
+            lblRegistration.TabIndex = 6;
+            lblRegistration.Text = "Registration";
+            lblRegistration.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEditRegistration
             // 
-            this.btnEditRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditRegistration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEditRegistration.Enabled = false;
-            this.btnEditRegistration.FlatAppearance.BorderSize = 0;
-            this.btnEditRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditRegistration.Image = global::TravelExpenses.Properties.Resources._1493081488_pen;
-            this.btnEditRegistration.Location = new System.Drawing.Point(202, 75);
-            this.btnEditRegistration.Name = "btnEditRegistration";
-            this.btnEditRegistration.Size = new System.Drawing.Size(52, 30);
-            this.btnEditRegistration.TabIndex = 7;
-            this.btnEditRegistration.UseVisualStyleBackColor = true;
-            this.btnEditRegistration.Click += new System.EventHandler(this.btnEditRegistration_Click);
+            btnEditRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditRegistration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnEditRegistration.Enabled = false;
+            btnEditRegistration.FlatAppearance.BorderSize = 0;
+            btnEditRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditRegistration.Image = (System.Drawing.Image)resources.GetObject("btnEditRegistration.Image");
+            btnEditRegistration.Location = new System.Drawing.Point(236, 87);
+            btnEditRegistration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditRegistration.Name = "btnEditRegistration";
+            btnEditRegistration.Size = new System.Drawing.Size(61, 35);
+            btnEditRegistration.TabIndex = 7;
+            btnEditRegistration.UseVisualStyleBackColor = true;
+            btnEditRegistration.Click += btnEditRegistration_Click;
             // 
             // btnDeleteRegistration
             // 
-            this.btnDeleteRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteRegistration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDeleteRegistration.Enabled = false;
-            this.btnDeleteRegistration.FlatAppearance.BorderSize = 0;
-            this.btnDeleteRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteRegistration.Image = global::TravelExpenses.Properties.Resources._1493082053_1_04;
-            this.btnDeleteRegistration.Location = new System.Drawing.Point(328, 75);
-            this.btnDeleteRegistration.Name = "btnDeleteRegistration";
-            this.btnDeleteRegistration.Size = new System.Drawing.Size(52, 30);
-            this.btnDeleteRegistration.TabIndex = 8;
-            this.btnDeleteRegistration.UseVisualStyleBackColor = true;
-            this.btnDeleteRegistration.Click += new System.EventHandler(this.btnDeleteRegistration_Click);
+            btnDeleteRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDeleteRegistration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnDeleteRegistration.Enabled = false;
+            btnDeleteRegistration.FlatAppearance.BorderSize = 0;
+            btnDeleteRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDeleteRegistration.Image = (System.Drawing.Image)resources.GetObject("btnDeleteRegistration.Image");
+            btnDeleteRegistration.Location = new System.Drawing.Point(382, 87);
+            btnDeleteRegistration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDeleteRegistration.Name = "btnDeleteRegistration";
+            btnDeleteRegistration.Size = new System.Drawing.Size(61, 35);
+            btnDeleteRegistration.TabIndex = 8;
+            btnDeleteRegistration.UseVisualStyleBackColor = true;
+            btnDeleteRegistration.Click += btnDeleteRegistration_Click;
             // 
             // lblCarRental
             // 
-            this.lblCarRental.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCarRental.AutoSize = true;
-            this.lblCarRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarRental.Location = new System.Drawing.Point(3, 118);
-            this.lblCarRental.Name = "lblCarRental";
-            this.lblCarRental.Size = new System.Drawing.Size(160, 15);
-            this.lblCarRental.TabIndex = 9;
-            this.lblCarRental.Text = "Car Rental";
-            this.lblCarRental.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblCarRental.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblCarRental.AutoSize = true;
+            lblCarRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblCarRental.Location = new System.Drawing.Point(4, 139);
+            lblCarRental.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblCarRental.Name = "lblCarRental";
+            lblCarRental.Size = new System.Drawing.Size(186, 15);
+            lblCarRental.TabIndex = 9;
+            lblCarRental.Text = "Car Rental";
+            lblCarRental.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEditCarRental
             // 
-            this.btnEditCarRental.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditCarRental.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEditCarRental.Enabled = false;
-            this.btnEditCarRental.FlatAppearance.BorderSize = 0;
-            this.btnEditCarRental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditCarRental.Image = global::TravelExpenses.Properties.Resources._1493081488_pen;
-            this.btnEditCarRental.Location = new System.Drawing.Point(202, 111);
-            this.btnEditCarRental.Name = "btnEditCarRental";
-            this.btnEditCarRental.Size = new System.Drawing.Size(52, 30);
-            this.btnEditCarRental.TabIndex = 10;
-            this.btnEditCarRental.UseVisualStyleBackColor = true;
-            this.btnEditCarRental.Click += new System.EventHandler(this.btnEditCarRental_Click);
+            btnEditCarRental.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditCarRental.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnEditCarRental.Enabled = false;
+            btnEditCarRental.FlatAppearance.BorderSize = 0;
+            btnEditCarRental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditCarRental.Image = (System.Drawing.Image)resources.GetObject("btnEditCarRental.Image");
+            btnEditCarRental.Location = new System.Drawing.Point(236, 129);
+            btnEditCarRental.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditCarRental.Name = "btnEditCarRental";
+            btnEditCarRental.Size = new System.Drawing.Size(61, 35);
+            btnEditCarRental.TabIndex = 10;
+            btnEditCarRental.UseVisualStyleBackColor = true;
+            btnEditCarRental.Click += btnEditCarRental_Click;
             // 
             // btnDeleteCarRental
             // 
-            this.btnDeleteCarRental.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteCarRental.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDeleteCarRental.Enabled = false;
-            this.btnDeleteCarRental.FlatAppearance.BorderSize = 0;
-            this.btnDeleteCarRental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteCarRental.Image = global::TravelExpenses.Properties.Resources._1493082053_1_04;
-            this.btnDeleteCarRental.Location = new System.Drawing.Point(328, 111);
-            this.btnDeleteCarRental.Name = "btnDeleteCarRental";
-            this.btnDeleteCarRental.Size = new System.Drawing.Size(52, 30);
-            this.btnDeleteCarRental.TabIndex = 11;
-            this.btnDeleteCarRental.UseVisualStyleBackColor = true;
-            this.btnDeleteCarRental.Click += new System.EventHandler(this.btnDeleteCarRental_Click);
+            btnDeleteCarRental.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDeleteCarRental.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnDeleteCarRental.Enabled = false;
+            btnDeleteCarRental.FlatAppearance.BorderSize = 0;
+            btnDeleteCarRental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDeleteCarRental.Image = (System.Drawing.Image)resources.GetObject("btnDeleteCarRental.Image");
+            btnDeleteCarRental.Location = new System.Drawing.Point(382, 129);
+            btnDeleteCarRental.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDeleteCarRental.Name = "btnDeleteCarRental";
+            btnDeleteCarRental.Size = new System.Drawing.Size(61, 35);
+            btnDeleteCarRental.TabIndex = 11;
+            btnDeleteCarRental.UseVisualStyleBackColor = true;
+            btnDeleteCarRental.Click += btnDeleteCarRental_Click;
             // 
             // lblAirFare
             // 
-            this.lblAirFare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAirFare.AutoSize = true;
-            this.lblAirFare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAirFare.Location = new System.Drawing.Point(3, 154);
-            this.lblAirFare.Name = "lblAirFare";
-            this.lblAirFare.Size = new System.Drawing.Size(160, 15);
-            this.lblAirFare.TabIndex = 12;
-            this.lblAirFare.Text = "Air Fare";
-            this.lblAirFare.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblAirFare.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblAirFare.AutoSize = true;
+            lblAirFare.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblAirFare.Location = new System.Drawing.Point(4, 181);
+            lblAirFare.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblAirFare.Name = "lblAirFare";
+            lblAirFare.Size = new System.Drawing.Size(186, 15);
+            lblAirFare.TabIndex = 12;
+            lblAirFare.Text = "Air Fare";
+            lblAirFare.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEditAirFare
             // 
-            this.btnEditAirFare.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditAirFare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEditAirFare.Enabled = false;
-            this.btnEditAirFare.FlatAppearance.BorderSize = 0;
-            this.btnEditAirFare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditAirFare.Image = global::TravelExpenses.Properties.Resources._1493081488_pen;
-            this.btnEditAirFare.Location = new System.Drawing.Point(202, 147);
-            this.btnEditAirFare.Name = "btnEditAirFare";
-            this.btnEditAirFare.Size = new System.Drawing.Size(52, 30);
-            this.btnEditAirFare.TabIndex = 13;
-            this.btnEditAirFare.UseVisualStyleBackColor = true;
-            this.btnEditAirFare.Click += new System.EventHandler(this.btnEditAirFare_Click);
+            btnEditAirFare.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditAirFare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnEditAirFare.Enabled = false;
+            btnEditAirFare.FlatAppearance.BorderSize = 0;
+            btnEditAirFare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditAirFare.Image = (System.Drawing.Image)resources.GetObject("btnEditAirFare.Image");
+            btnEditAirFare.Location = new System.Drawing.Point(236, 171);
+            btnEditAirFare.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditAirFare.Name = "btnEditAirFare";
+            btnEditAirFare.Size = new System.Drawing.Size(61, 35);
+            btnEditAirFare.TabIndex = 13;
+            btnEditAirFare.UseVisualStyleBackColor = true;
+            btnEditAirFare.Click += btnEditAirFare_Click;
             // 
             // btnDeleteAirFare
             // 
-            this.btnDeleteAirFare.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteAirFare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDeleteAirFare.Enabled = false;
-            this.btnDeleteAirFare.FlatAppearance.BorderSize = 0;
-            this.btnDeleteAirFare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteAirFare.Image = global::TravelExpenses.Properties.Resources._1493082053_1_04;
-            this.btnDeleteAirFare.Location = new System.Drawing.Point(328, 147);
-            this.btnDeleteAirFare.Name = "btnDeleteAirFare";
-            this.btnDeleteAirFare.Size = new System.Drawing.Size(52, 30);
-            this.btnDeleteAirFare.TabIndex = 14;
-            this.btnDeleteAirFare.UseVisualStyleBackColor = true;
-            this.btnDeleteAirFare.Click += new System.EventHandler(this.btnDeleteAirFare_Click);
+            btnDeleteAirFare.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDeleteAirFare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnDeleteAirFare.Enabled = false;
+            btnDeleteAirFare.FlatAppearance.BorderSize = 0;
+            btnDeleteAirFare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDeleteAirFare.Image = (System.Drawing.Image)resources.GetObject("btnDeleteAirFare.Image");
+            btnDeleteAirFare.Location = new System.Drawing.Point(382, 171);
+            btnDeleteAirFare.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDeleteAirFare.Name = "btnDeleteAirFare";
+            btnDeleteAirFare.Size = new System.Drawing.Size(61, 35);
+            btnDeleteAirFare.TabIndex = 14;
+            btnDeleteAirFare.UseVisualStyleBackColor = true;
+            btnDeleteAirFare.Click += btnDeleteAirFare_Click;
             // 
             // lblLodgings
             // 
-            this.lblLodgings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLodgings.AutoSize = true;
-            this.lblLodgings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLodgings.Location = new System.Drawing.Point(3, 190);
-            this.lblLodgings.Name = "lblLodgings";
-            this.lblLodgings.Size = new System.Drawing.Size(160, 15);
-            this.lblLodgings.TabIndex = 15;
-            this.lblLodgings.Text = "Lodging";
-            this.lblLodgings.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblLodgings.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblLodgings.AutoSize = true;
+            lblLodgings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblLodgings.Location = new System.Drawing.Point(4, 223);
+            lblLodgings.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblLodgings.Name = "lblLodgings";
+            lblLodgings.Size = new System.Drawing.Size(186, 15);
+            lblLodgings.TabIndex = 15;
+            lblLodgings.Text = "Lodging";
+            lblLodgings.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEditLodging
             // 
-            this.btnEditLodging.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditLodging.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEditLodging.Enabled = false;
-            this.btnEditLodging.FlatAppearance.BorderSize = 0;
-            this.btnEditLodging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditLodging.Image = global::TravelExpenses.Properties.Resources._1493081488_pen;
-            this.btnEditLodging.Location = new System.Drawing.Point(202, 183);
-            this.btnEditLodging.Name = "btnEditLodging";
-            this.btnEditLodging.Size = new System.Drawing.Size(52, 30);
-            this.btnEditLodging.TabIndex = 16;
-            this.btnEditLodging.UseVisualStyleBackColor = true;
-            this.btnEditLodging.Click += new System.EventHandler(this.btnEditLodging_Click);
+            btnEditLodging.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditLodging.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnEditLodging.Enabled = false;
+            btnEditLodging.FlatAppearance.BorderSize = 0;
+            btnEditLodging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditLodging.Image = (System.Drawing.Image)resources.GetObject("btnEditLodging.Image");
+            btnEditLodging.Location = new System.Drawing.Point(236, 213);
+            btnEditLodging.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditLodging.Name = "btnEditLodging";
+            btnEditLodging.Size = new System.Drawing.Size(61, 35);
+            btnEditLodging.TabIndex = 16;
+            btnEditLodging.UseVisualStyleBackColor = true;
+            btnEditLodging.Click += btnEditLodging_Click;
             // 
             // btnDeleteLodging
             // 
-            this.btnDeleteLodging.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteLodging.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDeleteLodging.Enabled = false;
-            this.btnDeleteLodging.FlatAppearance.BorderSize = 0;
-            this.btnDeleteLodging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteLodging.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteLodging.Image = global::TravelExpenses.Properties.Resources._1493082053_1_04;
-            this.btnDeleteLodging.Location = new System.Drawing.Point(328, 183);
-            this.btnDeleteLodging.Name = "btnDeleteLodging";
-            this.btnDeleteLodging.Size = new System.Drawing.Size(52, 30);
-            this.btnDeleteLodging.TabIndex = 17;
-            this.btnDeleteLodging.UseVisualStyleBackColor = true;
-            this.btnDeleteLodging.Click += new System.EventHandler(this.btnDeleteLodging_Click);
+            btnDeleteLodging.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDeleteLodging.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnDeleteLodging.Enabled = false;
+            btnDeleteLodging.FlatAppearance.BorderSize = 0;
+            btnDeleteLodging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDeleteLodging.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnDeleteLodging.Image = (System.Drawing.Image)resources.GetObject("btnDeleteLodging.Image");
+            btnDeleteLodging.Location = new System.Drawing.Point(382, 213);
+            btnDeleteLodging.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDeleteLodging.Name = "btnDeleteLodging";
+            btnDeleteLodging.Size = new System.Drawing.Size(61, 35);
+            btnDeleteLodging.TabIndex = 17;
+            btnDeleteLodging.UseVisualStyleBackColor = true;
+            btnDeleteLodging.Click += btnDeleteLodging_Click;
             // 
             // lblMileage
             // 
-            this.lblMileage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMileage.AutoSize = true;
-            this.lblMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMileage.Location = new System.Drawing.Point(3, 226);
-            this.lblMileage.Name = "lblMileage";
-            this.lblMileage.Size = new System.Drawing.Size(160, 15);
-            this.lblMileage.TabIndex = 18;
-            this.lblMileage.Text = "Mileage";
-            this.lblMileage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblMileage.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblMileage.AutoSize = true;
+            lblMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblMileage.Location = new System.Drawing.Point(4, 265);
+            lblMileage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMileage.Name = "lblMileage";
+            lblMileage.Size = new System.Drawing.Size(186, 15);
+            lblMileage.TabIndex = 18;
+            lblMileage.Text = "Mileage";
+            lblMileage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEditMileage
             // 
-            this.btnEditMileage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditMileage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEditMileage.Enabled = false;
-            this.btnEditMileage.FlatAppearance.BorderSize = 0;
-            this.btnEditMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditMileage.Image = global::TravelExpenses.Properties.Resources._1493081488_pen;
-            this.btnEditMileage.Location = new System.Drawing.Point(202, 219);
-            this.btnEditMileage.Name = "btnEditMileage";
-            this.btnEditMileage.Size = new System.Drawing.Size(52, 30);
-            this.btnEditMileage.TabIndex = 19;
-            this.btnEditMileage.UseVisualStyleBackColor = true;
-            this.btnEditMileage.Click += new System.EventHandler(this.btnEditMileage_Click);
+            btnEditMileage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditMileage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnEditMileage.Enabled = false;
+            btnEditMileage.FlatAppearance.BorderSize = 0;
+            btnEditMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditMileage.Image = (System.Drawing.Image)resources.GetObject("btnEditMileage.Image");
+            btnEditMileage.Location = new System.Drawing.Point(236, 255);
+            btnEditMileage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditMileage.Name = "btnEditMileage";
+            btnEditMileage.Size = new System.Drawing.Size(61, 35);
+            btnEditMileage.TabIndex = 19;
+            btnEditMileage.UseVisualStyleBackColor = true;
+            btnEditMileage.Click += btnEditMileage_Click;
             // 
             // btnDeleteMileage
             // 
-            this.btnDeleteMileage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteMileage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDeleteMileage.Enabled = false;
-            this.btnDeleteMileage.FlatAppearance.BorderSize = 0;
-            this.btnDeleteMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteMileage.Image = global::TravelExpenses.Properties.Resources._1493082053_1_04;
-            this.btnDeleteMileage.Location = new System.Drawing.Point(328, 219);
-            this.btnDeleteMileage.Name = "btnDeleteMileage";
-            this.btnDeleteMileage.Size = new System.Drawing.Size(52, 30);
-            this.btnDeleteMileage.TabIndex = 20;
-            this.btnDeleteMileage.UseVisualStyleBackColor = true;
-            this.btnDeleteMileage.Click += new System.EventHandler(this.btnDeleteMileage_Click);
+            btnDeleteMileage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDeleteMileage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnDeleteMileage.Enabled = false;
+            btnDeleteMileage.FlatAppearance.BorderSize = 0;
+            btnDeleteMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDeleteMileage.Image = (System.Drawing.Image)resources.GetObject("btnDeleteMileage.Image");
+            btnDeleteMileage.Location = new System.Drawing.Point(382, 255);
+            btnDeleteMileage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDeleteMileage.Name = "btnDeleteMileage";
+            btnDeleteMileage.Size = new System.Drawing.Size(61, 35);
+            btnDeleteMileage.TabIndex = 20;
+            btnDeleteMileage.UseVisualStyleBackColor = true;
+            btnDeleteMileage.Click += btnDeleteMileage_Click;
             // 
             // lblOtherExpenses
             // 
-            this.lblOtherExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOtherExpenses.AutoSize = true;
-            this.lblOtherExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOtherExpenses.Location = new System.Drawing.Point(3, 264);
-            this.lblOtherExpenses.Name = "lblOtherExpenses";
-            this.lblOtherExpenses.Size = new System.Drawing.Size(160, 15);
-            this.lblOtherExpenses.TabIndex = 21;
-            this.lblOtherExpenses.Text = "Other Expenses";
-            this.lblOtherExpenses.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            lblOtherExpenses.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblOtherExpenses.AutoSize = true;
+            lblOtherExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblOtherExpenses.Location = new System.Drawing.Point(4, 308);
+            lblOtherExpenses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblOtherExpenses.Name = "lblOtherExpenses";
+            lblOtherExpenses.Size = new System.Drawing.Size(186, 15);
+            lblOtherExpenses.TabIndex = 21;
+            lblOtherExpenses.Text = "Other Expenses";
+            lblOtherExpenses.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEditOtherExpenses
             // 
-            this.btnEditOtherExpenses.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditOtherExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEditOtherExpenses.Enabled = false;
-            this.btnEditOtherExpenses.FlatAppearance.BorderSize = 0;
-            this.btnEditOtherExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditOtherExpenses.Image = global::TravelExpenses.Properties.Resources._1493081488_pen;
-            this.btnEditOtherExpenses.Location = new System.Drawing.Point(202, 257);
-            this.btnEditOtherExpenses.Name = "btnEditOtherExpenses";
-            this.btnEditOtherExpenses.Size = new System.Drawing.Size(52, 30);
-            this.btnEditOtherExpenses.TabIndex = 22;
-            this.btnEditOtherExpenses.UseVisualStyleBackColor = true;
-            this.btnEditOtherExpenses.Click += new System.EventHandler(this.btnEditOtherExpenses_Click);
+            btnEditOtherExpenses.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnEditOtherExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnEditOtherExpenses.Enabled = false;
+            btnEditOtherExpenses.FlatAppearance.BorderSize = 0;
+            btnEditOtherExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEditOtherExpenses.Image = (System.Drawing.Image)resources.GetObject("btnEditOtherExpenses.Image");
+            btnEditOtherExpenses.Location = new System.Drawing.Point(236, 298);
+            btnEditOtherExpenses.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEditOtherExpenses.Name = "btnEditOtherExpenses";
+            btnEditOtherExpenses.Size = new System.Drawing.Size(61, 35);
+            btnEditOtherExpenses.TabIndex = 22;
+            btnEditOtherExpenses.UseVisualStyleBackColor = true;
+            btnEditOtherExpenses.Click += btnEditOtherExpenses_Click;
             // 
             // btnDeleteOtherExpenses
             // 
-            this.btnDeleteOtherExpenses.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteOtherExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDeleteOtherExpenses.Enabled = false;
-            this.btnDeleteOtherExpenses.FlatAppearance.BorderSize = 0;
-            this.btnDeleteOtherExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteOtherExpenses.Image = global::TravelExpenses.Properties.Resources._1493082053_1_04;
-            this.btnDeleteOtherExpenses.Location = new System.Drawing.Point(328, 257);
-            this.btnDeleteOtherExpenses.Name = "btnDeleteOtherExpenses";
-            this.btnDeleteOtherExpenses.Size = new System.Drawing.Size(52, 30);
-            this.btnDeleteOtherExpenses.TabIndex = 23;
-            this.btnDeleteOtherExpenses.UseVisualStyleBackColor = true;
-            this.btnDeleteOtherExpenses.Click += new System.EventHandler(this.btnDeleteOtherExpenses_Click);
+            btnDeleteOtherExpenses.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnDeleteOtherExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            btnDeleteOtherExpenses.Enabled = false;
+            btnDeleteOtherExpenses.FlatAppearance.BorderSize = 0;
+            btnDeleteOtherExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDeleteOtherExpenses.Image = (System.Drawing.Image)resources.GetObject("btnDeleteOtherExpenses.Image");
+            btnDeleteOtherExpenses.Location = new System.Drawing.Point(382, 298);
+            btnDeleteOtherExpenses.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDeleteOtherExpenses.Name = "btnDeleteOtherExpenses";
+            btnDeleteOtherExpenses.Size = new System.Drawing.Size(61, 35);
+            btnDeleteOtherExpenses.TabIndex = 23;
+            btnDeleteOtherExpenses.UseVisualStyleBackColor = true;
+            btnDeleteOtherExpenses.Click += btnDeleteOtherExpenses_Click;
             // 
             // btnCloseEdit
             // 
-            this.btnCloseEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCloseEdit.FlatAppearance.BorderSize = 0;
-            this.btnCloseEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloseEdit.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnCloseEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseEdit.Location = new System.Drawing.Point(26, 509);
-            this.btnCloseEdit.Name = "btnCloseEdit";
-            this.btnCloseEdit.Size = new System.Drawing.Size(81, 43);
-            this.btnCloseEdit.TabIndex = 1;
-            this.btnCloseEdit.Text = "Close";
-            this.btnCloseEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCloseEdit.UseVisualStyleBackColor = true;
-            this.btnCloseEdit.Click += new System.EventHandler(this.btnCloseEdit_Click);
+            btnCloseEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnCloseEdit.FlatAppearance.BorderSize = 0;
+            btnCloseEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCloseEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCloseEdit.Image = (System.Drawing.Image)resources.GetObject("btnCloseEdit.Image");
+            btnCloseEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCloseEdit.Location = new System.Drawing.Point(30, 587);
+            btnCloseEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCloseEdit.Name = "btnCloseEdit";
+            btnCloseEdit.Size = new System.Drawing.Size(84, 50);
+            btnCloseEdit.TabIndex = 1;
+            btnCloseEdit.Text = "Close";
+            btnCloseEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCloseEdit.UseVisualStyleBackColor = true;
+            btnCloseEdit.Click += btnCloseEdit_Click;
             // 
             // SelectItemsEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 559);
-            this.ControlBox = false;
-            this.Controls.Add(this.btnCloseEdit);
-            this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "SelectItemsEdit";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editing Travel";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SelectItemsEdit_FormClosed);
-            this.Load += new System.EventHandler(this.SelectItemsEdit_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabTravelDetails.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tabTravelItems.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(902, 640);
+            ControlBox = false;
+            Controls.Add(btnCloseEdit);
+            Controls.Add(tabControl1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "SelectItemsEdit";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Editing Travel";
+            FormClosed += SelectItemsEdit_FormClosed;
+            Load += SelectItemsEdit_Load;
+            tabControl1.ResumeLayout(false);
+            tabTravelDetails.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tabTravelItems.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

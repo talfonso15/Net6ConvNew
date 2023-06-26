@@ -30,7 +30,7 @@ namespace TravelExpenses
         {
             edittravelID = new Guid(CommonVariables.editTravelID.ToString());
             localCon.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Travel] where TravelID = '"+ edittravelID + "'", localCon);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + edittravelID + "'", localCon);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -38,14 +38,15 @@ namespace TravelExpenses
                 {
                     dtpDepartureDate.Value = Convert.ToDateTime(dr["DepartureDate"].ToString());
                     depDate = Convert.ToDateTime(dr["DepartureDate"].ToString());
-                    dtpDepartureTime.Value  = Convert.ToDateTime(dr["DepartureTime"].ToString());
+                    dtpDepartureTime.Value = Convert.ToDateTime(dr["DepartureTime"].ToString());
                     depTime = Convert.ToDateTime(dr["DepartureTime"].ToString());
                     dtpReturnDate.Value = Convert.ToDateTime(dr["ReturnDate"].ToString());
                     retDate = Convert.ToDateTime(dr["ReturnDate"].ToString());
-                    dtpReturnTime.Value  = Convert.ToDateTime(dr["ReturnTime"].ToString());
+                    dtpReturnTime.Value = Convert.ToDateTime(dr["ReturnTime"].ToString());
                     retTime = Convert.ToDateTime(dr["ReturnTime"].ToString());
                     int i = cbTravelEvent.Items.Count - 1;
-                    while (i > 0) {
+                    while (i > 0)
+                    {
                         if (cbTravelEvent.Items[i].ToString() == dr["TravelEvent"].ToString())
                         {
                             cbTravelEvent.SelectedItem = cbTravelEvent.Items[i];
@@ -124,7 +125,7 @@ namespace TravelExpenses
 
 
                     //setting the delete and edit buttons
-                        if (dr["Melas"].ToString() == "True")
+                    if (dr["Melas"].ToString() == "True")
                     {
                         if (quantItems > 1)
                         {
@@ -133,7 +134,8 @@ namespace TravelExpenses
                         btnEditMeals.Enabled = true;
                         lblMeals.ForeColor = System.Drawing.Color.Green;
                     }
-                    else {
+                    else
+                    {
                         lblMeals.ForeColor = System.Drawing.Color.Red;
                     }
                     if (dr["Registration"].ToString() == "True")
@@ -145,7 +147,8 @@ namespace TravelExpenses
                         btnEditRegistration.Enabled = true;
                         lblRegistration.ForeColor = System.Drawing.Color.Green;
                     }
-                    else {
+                    else
+                    {
                         lblRegistration.ForeColor = System.Drawing.Color.Red;
                     }
                     if (dr["Lodging"].ToString() == "True")
@@ -157,7 +160,8 @@ namespace TravelExpenses
                         btnEditLodging.Enabled = true;
                         lblLodgings.ForeColor = System.Drawing.Color.Green;
                     }
-                    else {
+                    else
+                    {
                         lblLodgings.ForeColor = System.Drawing.Color.Red;
                     }
                     if (dr["CarRental"].ToString() == "True")
@@ -169,7 +173,8 @@ namespace TravelExpenses
                         btnEditCarRental.Enabled = true;
                         lblCarRental.ForeColor = System.Drawing.Color.Green;
                     }
-                    else {
+                    else
+                    {
                         lblCarRental.ForeColor = System.Drawing.Color.Red;
                     }
                     if (dr["AirFare"].ToString() == "True")
@@ -181,7 +186,8 @@ namespace TravelExpenses
                         btnEditAirFare.Enabled = true;
                         lblAirFare.ForeColor = System.Drawing.Color.Green;
                     }
-                    else {
+                    else
+                    {
                         lblAirFare.ForeColor = System.Drawing.Color.Red;
                     }
                     if (dr["Mileage"].ToString() == "True")
@@ -193,7 +199,8 @@ namespace TravelExpenses
                         btnEditMileage.Enabled = true;
                         lblMileage.ForeColor = System.Drawing.Color.Green;
                     }
-                    else {
+                    else
+                    {
                         lblMileage.ForeColor = System.Drawing.Color.Red;
                     }
                     if (dr["OtherExpenses"].ToString() == "True")
@@ -205,14 +212,15 @@ namespace TravelExpenses
                         btnEditOtherExpenses.Enabled = true;
                         lblOtherExpenses.ForeColor = System.Drawing.Color.Green;
                     }
-                    else {
+                    else
+                    {
                         lblOtherExpenses.ForeColor = System.Drawing.Color.Red;
                     }
                     if (quantItems < 7)
                     {
                         btnAddNewItem.Enabled = true;
                     }
-                    
+
                 }
             }
 
@@ -221,10 +229,10 @@ namespace TravelExpenses
 
         private void btnDeleteMeals_Click(object sender, EventArgs e)
         {
-            DialogResult meald = MessageBox.Show("Do you really want to delete the meals from your travel?","",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult meald = MessageBox.Show("Do you really want to delete the meals from your travel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (meald == DialogResult.Yes)
             {
-                
+
                 localCon.Open();
                 double totalMeals = 0;
                 double travelAmount = 0;
@@ -292,13 +300,13 @@ namespace TravelExpenses
             this.Hide();
             EditMeals em = new EditMeals();
             em.ShowDialog();
-            
+
         }
 
         private void btnDeleteRegistration_Click(object sender, EventArgs e)
         {
 
-            DialogResult meald = MessageBox.Show("Do you really want to delete the Registration from your travel?", "", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult meald = MessageBox.Show("Do you really want to delete the Registration from your travel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (meald == DialogResult.Yes)
             {
                 localCon.Open();
@@ -364,7 +372,8 @@ namespace TravelExpenses
             }
         }
 
-        private int itemsNumber() {
+        private int itemsNumber()
+        {
             localCon.Open();
             int itemNumbers = 0;
             SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + edittravelID + "'", localCon);
@@ -416,10 +425,11 @@ namespace TravelExpenses
 
             localCon.Close();
             return itemNumbers;
-            
+
         }
 
-        private void enableDeleteButtons() {
+        private void enableDeleteButtons()
+        {
             btnDeleteMeals.Enabled = false;
             btnDeleteRegistration.Enabled = false;
             btnDeleteCarRental.Enabled = false;
@@ -471,7 +481,7 @@ namespace TravelExpenses
                     breakfast = totalDays;
                     lunch = totalDays;
                     dinner = totalDays;
-                    
+
 
 
                     int departureTimeHour = Convert.ToInt32(dtpDepartureTime.Value.ToString("hh", CultureInfo.InvariantCulture));
@@ -505,8 +515,8 @@ namespace TravelExpenses
                     if (departureTimeHour == 12 && dayTimeDeparture == "PM" && departureTimeMinutes > 0)
                     {
 
-                       firstBreakfast = true;
-                       firstLunch = true;
+                        firstBreakfast = true;
+                        firstLunch = true;
                     }
                     if (departureTimeHour == 6 && dayTimeDeparture == "PM" && departureTimeMinutes > 0)
                     {
@@ -629,7 +639,7 @@ namespace TravelExpenses
                         if (delDates > 0)
                         {
                             Guid mealIDdate = new Guid(mealID);
-                            for(int i = 0; i < totalDays; i++)
+                            for (int i = 0; i < totalDays; i++)
                             {
                                 SqlDataAdapter inMealDate = new SqlDataAdapter();
                                 inMealDate.InsertCommand = new SqlCommand("INSERT INTO [TravelExpenses].[dbo].[MealDate] ([MealsID],[Date],[Breaksfast],[Lunch],[Dinner]) VALUES(@MealsID,@Date,@Breaksfast,@Lunch,@Dinner)", localCon);
@@ -696,7 +706,7 @@ namespace TravelExpenses
                 {
                     upTravDet.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET [TravelEvent] = @TravelEvent ,[TravelPurpose] = @TravelPurpose,[Origin] = @Origin,[Destination] = @Destination,[TravelState] = @TravelState,[Notes] = @Notes WHERE TravelID = '" + edittravelID + "'", localCon);
                 }
-                
+
                 if (cbTravelEvent.SelectedItem.ToString() != "Other")
                 {
                     upTravDet.UpdateCommand.Parameters.Add("@TravelEvent", SqlDbType.NVarChar).Value = cbTravelEvent.SelectedItem.ToString();
@@ -731,13 +741,14 @@ namespace TravelExpenses
                     }
 
                 }
-                
+
                 localCon.Close();
                 refreshData();
             }
         }
 
-        public void refreshData() {
+        public void refreshData()
+        {
             localCon.Open();
             quantItems = 0;
             SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + edittravelID + "'", localCon);
@@ -941,7 +952,7 @@ namespace TravelExpenses
 
         private void btnDeleteMileage_Click(object sender, EventArgs e)
         {
-            DialogResult meald = MessageBox.Show("Do you really want to delete the Mileage from your travel?", "", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult meald = MessageBox.Show("Do you really want to delete the Mileage from your travel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (meald == DialogResult.Yes)
             {
 
@@ -1019,7 +1030,7 @@ namespace TravelExpenses
             this.Hide();
             EditMileage em = new EditMileage();
             em.ShowDialog();
-                
+
         }
 
         private void btnDeleteCarRental_Click(object sender, EventArgs e)
@@ -1107,7 +1118,7 @@ namespace TravelExpenses
 
         private void btnDeleteLodging_Click(object sender, EventArgs e)
         {
-            DialogResult meald = MessageBox.Show("Do you really want to delete the Lodgings from your travel?", "", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult meald = MessageBox.Show("Do you really want to delete the Lodgings from your travel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (meald == DialogResult.Yes)
             {
 
@@ -1162,7 +1173,7 @@ namespace TravelExpenses
                         }
                     }
                 }
-                
+
                 localCon.Close();
             }
         }
@@ -1183,7 +1194,7 @@ namespace TravelExpenses
 
         private void btnDeleteAirFare_Click(object sender, EventArgs e)
         {
-            DialogResult meald = MessageBox.Show("Do you really want to delete the Airfare from your travel?", "", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult meald = MessageBox.Show("Do you really want to delete the Airfare from your travel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (meald == DialogResult.Yes)
             {
                 localCon.Open();
@@ -1255,7 +1266,7 @@ namespace TravelExpenses
                         }
                     }
                 }
-                
+
                 localCon.Close();
             }
         }
@@ -1269,7 +1280,7 @@ namespace TravelExpenses
 
         private void btnDeleteOtherExpenses_Click(object sender, EventArgs e)
         {
-            DialogResult meald = MessageBox.Show("Do you really want to delete the Other Expenses from your travel?", "", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult meald = MessageBox.Show("Do you really want to delete the Other Expenses from your travel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (meald == DialogResult.Yes)
             {
 
@@ -1373,7 +1384,7 @@ namespace TravelExpenses
                 MessageBox.Show("Select the state of your travel");
                 return false;
             }
-            
+
             return true;
         }
 
@@ -1408,19 +1419,19 @@ namespace TravelExpenses
             CommonVariables.editTravelID = "";
             this.Dispose();
 
-           /* FormCollection fc = Application.OpenForms;
-            Form main = new Form();
-            foreach (Form frm in fc)
-            {
-                string name = frm.Name;
-                if (frm.Name == "Main")
-                {
-                    main = frm;
-                }
-            }
-            EditTravel et = new EditTravel();
-            et.MdiParent = main;
-            et.Show();*/
+            /* FormCollection fc = Application.OpenForms;
+             Form main = new Form();
+             foreach (Form frm in fc)
+             {
+                 string name = frm.Name;
+                 if (frm.Name == "Main")
+                 {
+                     main = frm;
+                 }
+             }
+             EditTravel et = new EditTravel();
+             et.MdiParent = main;
+             et.Show();*/
         }
 
         private void btnAddNewItem_Click(object sender, EventArgs e)
