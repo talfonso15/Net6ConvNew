@@ -35,12 +35,12 @@ namespace TravelExpenses
         bool pdfCreated = false;
         string winUser = Environment.UserName;
         bool loading = false;
-        
-        
+
+
         public EstimateTravel()
         {
             InitializeComponent();
-            
+
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -50,11 +50,12 @@ namespace TravelExpenses
 
         private void btnMileageCalculator_Click(object sender, EventArgs e)
         {
-            
-                MileageCalculator mc = new MileageCalculator();
-                mc.ShowDialog();
-                txtMileageCost.Text = CommonVariables.estimateMileageCost.ToString();
-            
+
+            MileageCalculator mc = new MileageCalculator();
+            mc.ShowDialog();
+            double milcost = Math.Round( CommonVariables.estimateMileageCost,2);
+            txtMileageCost.Text = milcost.ToString();
+
         }
 
         private void cbTravelEvent_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,7 +64,8 @@ namespace TravelExpenses
             {
                 txtOtherEvent.Enabled = true;
             }
-            else {
+            else
+            {
                 txtOtherEvent.Enabled = false;
             }
         }
@@ -74,7 +76,8 @@ namespace TravelExpenses
             {
                 txtOtherPurpose.Enabled = true;
             }
-            else {
+            else
+            {
                 txtOtherPurpose.Enabled = false;
             }
         }
@@ -110,7 +113,8 @@ namespace TravelExpenses
                 txtRegistrationCost.Enabled = true;
                 txtRegistrationNotes.Enabled = true;
             }
-            else {
+            else
+            {
                 txtRegistrationCost.Enabled = false;
                 txtRegistrationNotes.Enabled = false;
             }
@@ -123,7 +127,8 @@ namespace TravelExpenses
                 txtLodgingsCost.Enabled = true;
                 txtLodgingNotes.Enabled = true;
             }
-            else {
+            else
+            {
                 txtLodgingsCost.Enabled = false;
                 txtLodgingNotes.Enabled = false;
             }
@@ -136,7 +141,8 @@ namespace TravelExpenses
                 txtCarRentalCost.Enabled = true;
                 txtCarRentalNotes.Enabled = true;
             }
-            else {
+            else
+            {
                 txtCarRentalCost.Enabled = false;
                 txtCarRentalNotes.Enabled = false;
             }
@@ -149,7 +155,8 @@ namespace TravelExpenses
                 txtAirFareCost.Enabled = true;
                 txtAirFareNotes.Enabled = true;
             }
-            else {
+            else
+            {
                 txtAirFareCost.Enabled = false;
                 txtAirFareNotes.Enabled = false;
             }
@@ -163,7 +170,8 @@ namespace TravelExpenses
                 txtMileageNotes.Enabled = true;
                 btnMileageCalculator.Enabled = true;
             }
-            else {
+            else
+            {
                 txtMileageCost.Enabled = false;
                 txtMileageNotes.Enabled = false;
                 btnMileageCalculator.Enabled = false;
@@ -179,7 +187,8 @@ namespace TravelExpenses
                 txtOtherExpensesCost.Enabled = true;
                 txtOtherExpensesNotes.Enabled = true;
             }
-            else {
+            else
+            {
                 txtOtherExpensesCost.Enabled = false;
                 txtOtherExpensesNotes.Enabled = false;
             }
@@ -292,7 +301,7 @@ namespace TravelExpenses
                     if (dr["Destination"].ToString() != "")
                     {
                         txtDestination.Text = dr["Destination"].ToString();
-                        
+
                     }
 
                 }
@@ -302,16 +311,18 @@ namespace TravelExpenses
             {
                 dtpReturnDate.Value = DateTime.Today.AddDays(1);
             }
-            
+
         }
 
-        private bool validateData() {
+        private bool validateData()
+        {
             if (cbTravelEvent.SelectedIndex == -1)
             {
                 MessageBox.Show("Select your Travel Event", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (cbTravelEvent.SelectedItem.ToString() == "Other" && txtOtherEvent.Text == "") {
+            else if (cbTravelEvent.SelectedItem.ToString() == "Other" && txtOtherEvent.Text == "")
+            {
                 MessageBox.Show("Type your Travel Event", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -322,25 +333,30 @@ namespace TravelExpenses
                 MessageBox.Show("Select your Travel Purpose", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (cbTravelPurpose.SelectedItem.ToString() == "Other" && txtOtherPurpose.Text == "") {
+            else if (cbTravelPurpose.SelectedItem.ToString() == "Other" && txtOtherPurpose.Text == "")
+            {
                 MessageBox.Show("Type your Travel Purpose", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (chxMeals.Checked && txtMealsCost.Text == "") {
+            if (chxMeals.Checked && txtMealsCost.Text == "")
+            {
                 MessageBox.Show("Type your Meals Cost", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (chxRegistration.Checked && txtRegistrationCost.Text == "") {
+            if (chxRegistration.Checked && txtRegistrationCost.Text == "")
+            {
                 MessageBox.Show("Type your Registration Cost", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (chxLodgings.Checked && txtLodgingsCost.Text == "") {
+            if (chxLodgings.Checked && txtLodgingsCost.Text == "")
+            {
                 MessageBox.Show("Type your Lodgings Cost", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (chxCarRental.Checked && txtCarRentalCost.Text == "") {
+            if (chxCarRental.Checked && txtCarRentalCost.Text == "")
+            {
                 MessageBox.Show("Type your Car Rental Cost", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -349,16 +365,19 @@ namespace TravelExpenses
                 MessageBox.Show("Type your AirFare Cost", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (chxMileage.Checked && txtMileageCost.Text == "") {
+            if (chxMileage.Checked && txtMileageCost.Text == "")
+            {
                 MessageBox.Show("Make a click on the + button and enter your estimated Mileage", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (chxOtherExpenses.Checked && txtOtherExpensesCost.Text == "") {
+            if (chxOtherExpenses.Checked && txtOtherExpensesCost.Text == "")
+            {
                 MessageBox.Show("Type your Other Expenses Cost", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (!chxMeals.Checked && !chxRegistration.Checked && !chxCarRental.Checked && !chxAirFare.Checked && !chxLodgings.Checked && !chxMileage.Checked && !chxOtherExpenses.Checked) {
+            if (!chxMeals.Checked && !chxRegistration.Checked && !chxCarRental.Checked && !chxAirFare.Checked && !chxLodgings.Checked && !chxMileage.Checked && !chxOtherExpenses.Checked)
+            {
                 MessageBox.Show("Select at least one item for your travel", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -372,9 +391,9 @@ namespace TravelExpenses
                 MessageBox.Show("Type the Meals Per Diem Rate", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            
+
             return true;
-            
+
         }
 
         private void dtpDepartureDate_ValueChanged(object sender, EventArgs e)
@@ -394,7 +413,7 @@ namespace TravelExpenses
         {
             if (validateData())
             {
-                
+
 
                 /*SupervisorList sl = new SupervisorList();
                 sl.ShowDialog();*/
@@ -405,7 +424,7 @@ namespace TravelExpenses
                     if (travelSaved && pdfCreated)
                     {
 
-                        
+
 
                         this.Close();
                         MessageBox.Show("Travel estimation inserted successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -422,8 +441,8 @@ namespace TravelExpenses
                     this.Close();
                     if (CommonVariables.isGroup)
                     {
-                       
-                        MessageBox.Show("The travel authorizations were created successfully","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                        MessageBox.Show("The travel authorizations were created successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -448,10 +467,11 @@ namespace TravelExpenses
 
         private void txtMealsCost_KeyPress(object sender, KeyPressEventArgs e)
         {
-            OnlyNumbers(sender,e);
+            OnlyNumbers(sender, e);
         }
 
-        private void OnlyNumbers(object sender, KeyPressEventArgs e) {
+        private void OnlyNumbers(object sender, KeyPressEventArgs e)
+        {
 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
@@ -470,7 +490,8 @@ namespace TravelExpenses
             OnlyNumbers(sender, e);
         }
 
-        private void createTravelEstimatePDF() {
+        private void createTravelEstimatePDF()
+        {
 
             localCon.Open();
             string name = "";
@@ -508,7 +529,7 @@ namespace TravelExpenses
             //end of new code
 
             PdfReader pdfReader = new PdfReader(pdfTemplate);
-            
+
             /*PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create)); //commented for net6
             AcroFields pdfFormFields = pdfStamper.AcroFields;*/ //commented for net6
 
@@ -564,7 +585,8 @@ namespace TravelExpenses
                     fields.TryGetValue("Travel_Budgeted_No", out toSet);
                     toSet.SetValue("Off");
                 }
-                else {
+                else
+                {
                     //pdfFormFields.SetField("Travel_Budgeted_No", "Choice2"); //commented for net6
                     fields.TryGetValue("Travel_Budgeted_No", out toSet);
                     toSet.SetValue("Choice2");
@@ -584,7 +606,8 @@ namespace TravelExpenses
                     toSet.SetValue("Off");
 
                 }
-                else {
+                else
+                {
                     //pdfFormFields.SetField("District_Vehicle_Yes", "Choice1"); //commented for net6
                     fields.TryGetValue("District_Vehicle_Yes", out toSet);
                     toSet.SetValue("Choice1");
@@ -595,7 +618,8 @@ namespace TravelExpenses
                 }
 
                 //travel items
-                if (CommonVariables.et.Meals) {
+                if (CommonVariables.et.Meals)
+                {
                     //pdfFormFields.SetField("Estimated CostMeals", CommonVariables.et.MealsCost.ToString()); //commented for net6
                     fields.TryGetValue("Estimated CostMeals", out toSet);
                     toSet.SetValue(CommonVariables.et.MealsCost.ToString());
@@ -609,7 +633,8 @@ namespace TravelExpenses
                     toSet.SetValue(CommonVariables.et.MealPerDiem.ToString());
 
                 }
-                if (CommonVariables.et.Registration) {
+                if (CommonVariables.et.Registration)
+                {
                     //pdfFormFields.SetField("Estimated CostRegistration", CommonVariables.et.ResgistrationCost.ToString()); //commented for net6
                     fields.TryGetValue("Estimated CostRegistration", out toSet);
                     toSet.SetValue(CommonVariables.et.ResgistrationCost.ToString());
@@ -618,7 +643,8 @@ namespace TravelExpenses
                     fields.TryGetValue("NotesRegistration", out toSet);
                     toSet.SetValue(CommonVariables.et.RegistrationNotes.ToString());
                 }
-                if (CommonVariables.et.Lodgings) {
+                if (CommonVariables.et.Lodgings)
+                {
                     //pdfFormFields.SetField("Estimated CostLodgings", CommonVariables.et.LodgingsCost.ToString()); //commented for net6
                     fields.TryGetValue("Estimated CostLodgings", out toSet);
                     toSet.SetValue(CommonVariables.et.LodgingsCost.ToString());
@@ -627,7 +653,8 @@ namespace TravelExpenses
                     fields.TryGetValue("NotesLodgings", out toSet);
                     toSet.SetValue(CommonVariables.et.LodgingsNotes.ToString());
                 }
-                if (CommonVariables.et.CarRental) {
+                if (CommonVariables.et.CarRental)
+                {
                     //pdfFormFields.SetField("Estimated CostCar Rental", CommonVariables.et.CarRentalCost.ToString()); //commented for net6
                     fields.TryGetValue("Estimated CostCar Rental", out toSet);
                     toSet.SetValue(CommonVariables.et.CarRentalCost.ToString());
@@ -636,7 +663,8 @@ namespace TravelExpenses
                     fields.TryGetValue("NotesCar Rental", out toSet);
                     toSet.SetValue(CommonVariables.et.CarRentalNotes.ToString());
                 }
-                if (CommonVariables.et.AirFare) {
+                if (CommonVariables.et.AirFare)
+                {
                     //pdfFormFields.SetField("Estimated CostAir Fare", CommonVariables.et.AirFareCost.ToString()); //commented for net6
                     fields.TryGetValue("Estimated CostAir Fare", out toSet);
                     toSet.SetValue(CommonVariables.et.AirFareCost.ToString());
@@ -645,7 +673,8 @@ namespace TravelExpenses
                     fields.TryGetValue("NotesAir Fare", out toSet);
                     toSet.SetValue(CommonVariables.et.AirFareNotes.ToString());
                 }
-                if (CommonVariables.et.Mileage) {
+                if (CommonVariables.et.Mileage)
+                {
                     //pdfFormFields.SetField("Estimated CostMileage", CommonVariables.et.MileageCost.ToString()); //commented for net6
                     fields.TryGetValue("Estimated CostMileage", out toSet);
                     toSet.SetValue(CommonVariables.et.MileageCost.ToString());
@@ -654,7 +683,8 @@ namespace TravelExpenses
                     fields.TryGetValue("NotesMileage", out toSet);
                     toSet.SetValue(CommonVariables.et.MileageNotes.ToString());
                 }
-                if (CommonVariables.et.OtherExpenses) {
+                if (CommonVariables.et.OtherExpenses)
+                {
                     //pdfFormFields.SetField("Estimated CostOther Expenses", CommonVariables.et.OtherExpensesCost.ToString()); //commented for net6
                     fields.TryGetValue("Estimated CostOther Expenses", out toSet);
                     toSet.SetValue(CommonVariables.et.OtherExpensesCost.ToString());
@@ -676,10 +706,11 @@ namespace TravelExpenses
             //pdfStamper.Close(); //commented for net6
             localCon.Close();
 
-            
+
         }
 
-        private void saveEstimateTravel() {
+        private void saveEstimateTravel()
+        {
             bool valid = validateData();
             localCon.Open();
             if (valid)
@@ -903,7 +934,7 @@ namespace TravelExpenses
                                 if (rows.ToString() != "" && status > 0)
                                 {
                                     travelSaved = true;
-                                    
+
                                 }
                             }
                         }
@@ -1009,7 +1040,7 @@ namespace TravelExpenses
 
                             }
                         }
-                       
+
 
                     }
                     else
@@ -1122,7 +1153,7 @@ namespace TravelExpenses
                 }
             }
             localCon.Close();
-            
+
         }
 
         private void txtRegistrationCost_KeyPress(object sender, KeyPressEventArgs e)
@@ -1145,7 +1176,8 @@ namespace TravelExpenses
             OnlyNumbers(sender, e);
         }
 
-        private void cleanFields() {
+        private void cleanFields()
+        {
 
             //form fields
             cbTravelEvent.SelectedValue = "";
@@ -1192,7 +1224,7 @@ namespace TravelExpenses
             CommonVariables.tpt_Type = "";
             CommonVariables.usersID = new List<string>();
 
-       
+
 
         }
 
@@ -1215,8 +1247,8 @@ namespace TravelExpenses
 
                 Form[] childs = main.MdiChildren;
                 foreach (Form child in childs)
-                    {
-                        string name = child.Name;
+                {
+                    string name = child.Name;
                     if (child.Name == "AdminAuthorization")
                     {
                         child.Focus();
@@ -1232,8 +1264,8 @@ namespace TravelExpenses
                         child.Focus();
                         child.Show();
                     }
-                  }
-                
+                }
+
             }
             CommonVariables.et = new EstimateTravelcl();
             CommonVariables.estimateMileageCost = 0;
@@ -1248,10 +1280,11 @@ namespace TravelExpenses
 
         private void EstimateTravel_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+
         }
 
-        private double CalculateMealsCost() {
+        private double CalculateMealsCost()
+        {
             double totalMeals = 0;
             double perDiemRate = 0;
             perDiemRate = Convert.ToDouble(txtMealsPerDiem.Text);
@@ -1279,7 +1312,7 @@ namespace TravelExpenses
         private void sendApprovalRequest()
         {
             localCon.Open();
-           
+
             Guid userID = new Guid(CommonVariables.user);
             string email = "";
             string supEmail = "";
@@ -1298,7 +1331,7 @@ namespace TravelExpenses
             userDR.Close();
 
             //supervisor
-            SqlCommand supervisor = new SqlCommand("SELECT b.Email as Email FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join TravelExpenses.dbo.User_Email_Title as b on b.UserID = a.SupervisorID where a.UserID = '"+ userID +"'", localCon);
+            SqlCommand supervisor = new SqlCommand("SELECT b.Email as Email FROM [TravelExpenses].[dbo].[Supervisor_Employee] as a inner join TravelExpenses.dbo.User_Email_Title as b on b.UserID = a.SupervisorID where a.UserID = '" + userID + "'", localCon);
             SqlDataReader supervisorDR = supervisor.ExecuteReader();
             while (supervisorDR.Read())
             {
@@ -1320,48 +1353,48 @@ namespace TravelExpenses
             DateTime depDate = CommonVariables.et.DepartureDate;
             DateTime retDate = CommonVariables.et.ReturnDate;
             string travEvent = CommonVariables.et.TravelEvent;
-            
 
-                if (depDate.ToShortDateString() == retDate.ToShortDateString())
-                {
-                    mail.Body = "Please enter to the travel program and review the travel authorization of " + fullname  + " on " + depDate.ToShortDateString() + " in order to " + "attend to " + travEvent + " event";
 
-                }
-                else
-                {
-                    mail.Body = "Please enter to the travel program and review the travel authorization of " + fullname + " on " + depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + " in order to attend to " + travEvent + " event";
-                }
-            
+            if (depDate.ToShortDateString() == retDate.ToShortDateString())
+            {
+                mail.Body = "Please enter to the travel program and review the travel authorization of " + fullname + " on " + depDate.ToShortDateString() + " in order to " + "attend to " + travEvent + " event";
+
+            }
+            else
+            {
+                mail.Body = "Please enter to the travel program and review the travel authorization of " + fullname + " on " + depDate.ToShortDateString() + " to " + retDate.ToShortDateString() + " in order to attend to " + travEvent + " event";
+            }
+
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
 
             try
             {
                 SmtpServer.Send(mail);
-                
+
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-           
+
+
             localCon.Close();
-            
+
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-           
+
             BackgroundWorker worker = sender as BackgroundWorker;
             sendApprovalRequest();
-            
-            
+
+
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            
-            
+
+
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
