@@ -33,7 +33,8 @@ namespace TravelExpenses
             }
         }
 
-        public void createDatagridview(double mealsPerDiemRate, double breakfastPerDiemRate, double lunchPerDiemRate, double dinnerPerDiemRate) {
+        public void createDatagridview(double mealsPerDiemRate, double breakfastPerDiemRate, double lunchPerDiemRate, double dinnerPerDiemRate)
+        {
 
             if (!CommonVariables.viewDetails)
             {
@@ -392,7 +393,8 @@ namespace TravelExpenses
                 }
 
             }
-            else if (columnIndex == 3) {
+            else if (columnIndex == 3)
+            {
 
                 if (rowValue == false)
                 {
@@ -414,14 +416,15 @@ namespace TravelExpenses
                 }
             }
 
-                dtgMeals.CurrentCell.Value = rowValue;
+            dtgMeals.CurrentCell.Value = rowValue;
             updateTotalMeals();
         }
 
         public void updateTotalMeals()
         {
             double totalMeals = 0;
-            for (int i = 0; i < totalDays; i++) {
+            for (int i = 0; i < totalDays; i++)
+            {
 
                 totalMeals = totalMeals + Convert.ToDouble(dtgMeals.Rows[i].Cells[4].Value);
             }
@@ -655,7 +658,7 @@ namespace TravelExpenses
                 }
                 this.Hide();
             }
-            else 
+            else
             {
                 MessageBox.Show("Enter the Meals Per Diem Rate and hit Calculate");
             }
@@ -725,7 +728,7 @@ namespace TravelExpenses
                 tlNavButtons.Visible = false;
 
             }
-            
+
         }
 
         public void ViewDetailsGridview()
@@ -739,11 +742,11 @@ namespace TravelExpenses
             string dinnerPDR = "";
             string totalPDR = "";
             string zipCode = "";
-            
+
             txtMealsPerDiemRate.Enabled = false;
             txtLunch.Enabled = false;
             txtDinner.Enabled = false;
-            
+
             SqlCommand selMealId = new SqlCommand("SELECT [MealsID],[TotalMeals],[BreakfastPerDiemRate],[LunchPerDiemRate],[DinnerPerDiemRate],[TotalPerDiemRate],[PerDiemLoactionZipCode] FROM [TravelExpenses].[dbo].[Meals] where TravelID = '" + travID + "'", localCon);
             SqlDataReader selMealIdDR = selMealId.ExecuteReader();
             if (selMealIdDR.HasRows)
@@ -764,7 +767,7 @@ namespace TravelExpenses
             txtMealsPerDiemRate.Text = breakfastPDR;
             txtLunch.Text = lunchPDR;
             txtDinner.Text = dinnerPDR;
-           // txtMealsTotal.Text = mealsTotal;
+            // txtMealsTotal.Text = mealsTotal;
             txtZipCode.Text = zipCode;
 
             if (mealdIDString != "")
@@ -790,7 +793,7 @@ namespace TravelExpenses
                     bool dinner = Convert.ToBoolean(dr["Dinner"].ToString());
                     if (dinner)
                     {
-                        total = total + Convert.ToDouble( dinnerPDR);
+                        total = total + Convert.ToDouble(dinnerPDR);
                     }
                     string mealdateID = dr["MealDateId"].ToString();
 
@@ -798,7 +801,7 @@ namespace TravelExpenses
                 }
                 dr.Close();
             }
-           
+
             localCon.Close();
             btnCalculateMeals.Visible = false;
             dtgMeals.Enabled = false;
@@ -839,7 +842,7 @@ namespace TravelExpenses
             }
         }
 
-        private void enableCalculateButton() 
+        private void enableCalculateButton()
         {
             if (txtMealsPerDiemRate.Text != "" && txtLunch.Text != "" && txtDinner.Text != "" && txtZipCode.Text != "")
             {
@@ -937,5 +940,5 @@ namespace TravelExpenses
         }
     }
 
-    
+
 }
