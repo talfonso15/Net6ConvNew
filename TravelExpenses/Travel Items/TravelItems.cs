@@ -31,7 +31,8 @@ namespace TravelExpenses
                 chxRegistration.Checked = true;
                 chxCarRental.Checked = true;
             }
-            else {
+            else
+            {
                 chxMeals.Checked = false;
                 chxMileage.Checked = false;
                 chxOtherExpenses.Checked = false;
@@ -57,10 +58,11 @@ namespace TravelExpenses
                             CommonVariables.isMeals = true;
                         }
                     }
-                    else {
+                    else
+                    {
                         CommonVariables.isMeals = true;
                     }
-                    
+
                 }
                 else
                 {
@@ -97,7 +99,7 @@ namespace TravelExpenses
                     {
                         CommonVariables.isCarRental = true;
                     }
-                    
+
                 }
                 else
                 {
@@ -149,8 +151,8 @@ namespace TravelExpenses
                         }
                     }
                     else
-                    { 
-                    CommonVariables.isOtherExpenses = true;
+                    {
+                        CommonVariables.isOtherExpenses = true;
                     }
                 }
                 else
@@ -186,7 +188,7 @@ namespace TravelExpenses
                         main = frm;
                     }
                 }
-                Form[] childs = main.MdiChildren; 
+                Form[] childs = main.MdiChildren;
 
                 if (CommonVariables.isMeals == true)
                 {
@@ -345,8 +347,10 @@ namespace TravelExpenses
             }
         }
 
-        private bool nextValidation() {
-            if (!chxMeals.Checked && !chxRegistration.Checked && !chxCarRental.Checked && !chxFlight.Checked && !chxMileage.Checked && !chxLodging.Checked && !chxOtherExpenses.Checked && !chxSelectAll.Checked) {
+        private bool nextValidation()
+        {
+            if (!chxMeals.Checked && !chxRegistration.Checked && !chxCarRental.Checked && !chxFlight.Checked && !chxMileage.Checked && !chxLodging.Checked && !chxOtherExpenses.Checked && !chxSelectAll.Checked)
+            {
                 MessageBox.Show("Select at least one Item for your Travel", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -355,13 +359,13 @@ namespace TravelExpenses
 
         private void btnBackTravelItems_Click(object sender, EventArgs e)
         {
-            
+
             FormCollection fc = Application.OpenForms;
             int cant = Application.OpenForms.Count;
             bool FormFound = false;
             foreach (Form frm in fc)
             {
-                
+
                 string name = frm.Name;
                 if (frm.Name == "Main")
                 {
@@ -386,53 +390,61 @@ namespace TravelExpenses
             CommonVariables.CancelTravel();
         }
 
-       /* private void TravelItems_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void TravelItems_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
         private void TravelItems_Load(object sender, EventArgs e)
         {
-            
-            if (CommonVariables.addingItems) {
+
+            if (CommonVariables.addingItems)
+            {
                 localCon.Open();
                 Guid travID = new Guid(CommonVariables.addingTravelID);
-                SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Travel] where TravelID = '"+ travID + "'", localCon);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     string meals = dr["Melas"].ToString();
-                    if (meals == "True") {
+                    if (meals == "True")
+                    {
                         chxMeals.Checked = true;
                         chxMeals.Enabled = false;
                     }
                     string registration = dr["Registration"].ToString();
-                    if (registration == "True") {
+                    if (registration == "True")
+                    {
                         chxRegistration.Checked = true;
                         chxRegistration.Enabled = false;
                     }
                     string lodging = dr["Lodging"].ToString();
-                    if (lodging == "True") {
+                    if (lodging == "True")
+                    {
                         chxLodging.Checked = true;
                         chxLodging.Enabled = false;
                     }
                     string carRental = dr["CarRental"].ToString();
-                    if (carRental == "True") {
+                    if (carRental == "True")
+                    {
                         chxCarRental.Checked = true;
                         chxCarRental.Enabled = false;
                     }
                     string airfare = dr["AirFare"].ToString();
-                    if (airfare == "True") {
+                    if (airfare == "True")
+                    {
                         chxFlight.Checked = true;
                         chxFlight.Enabled = false;
                     }
                     string mileage = dr["Mileage"].ToString();
-                    if (mileage == "True") {
+                    if (mileage == "True")
+                    {
                         chxMileage.Checked = true;
                         chxMileage.Enabled = false;
                     }
                     string otherExpenses = dr["OtherExpenses"].ToString();
-                    if (otherExpenses == "True") {
+                    if (otherExpenses == "True")
+                    {
                         chxOtherExpenses.Checked = true;
                         chxOtherExpenses.Enabled = false;
                     }

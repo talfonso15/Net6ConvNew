@@ -80,7 +80,7 @@
             dtpDepartureTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             dtpDepartureTime.CustomFormat = "hh:mm tt";
             dtpDepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            dtpDepartureTime.Location = new System.Drawing.Point(261, 60);
+            dtpDepartureTime.Location = new System.Drawing.Point(272, 60);
             dtpDepartureTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             dtpDepartureTime.Name = "dtpDepartureTime";
             dtpDepartureTime.ShowUpDown = true;
@@ -102,7 +102,7 @@
             // 
             dtpDepartureDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             dtpDepartureDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            dtpDepartureDate.Location = new System.Drawing.Point(261, 96);
+            dtpDepartureDate.Location = new System.Drawing.Point(272, 96);
             dtpDepartureDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             dtpDepartureDate.Name = "dtpDepartureDate";
             dtpDepartureDate.Size = new System.Drawing.Size(138, 23);
@@ -125,7 +125,7 @@
             dtpReturnTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             dtpReturnTime.CustomFormat = "hh:mm tt";
             dtpReturnTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            dtpReturnTime.Location = new System.Drawing.Point(261, 134);
+            dtpReturnTime.Location = new System.Drawing.Point(272, 134);
             dtpReturnTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             dtpReturnTime.Name = "dtpReturnTime";
             dtpReturnTime.ShowUpDown = true;
@@ -164,7 +164,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(btnTravelNext, 1, 0);
-            tableLayoutPanel1.Location = new System.Drawing.Point(338, 632);
+            tableLayoutPanel1.Location = new System.Drawing.Point(360, 632);
             tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
@@ -212,7 +212,7 @@
             cbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             cbState.FormattingEnabled = true;
             cbState.Items.AddRange(new object[] { "Alabama,AL", "Alaska,AK", "Arizona,AZ", "Arkansas,AR", "California,CA", "Colorado,CO", "Connecticut,CT", "Delaware,DE", "Florida,FL", "Georgia,GA", "Hawaii,HI", "Idaho,ID", "Illinois,IL", "Indiana,IN", "Iowa,IA", "Kansas,KS", "Kentucky,KY", "Louisiana,LA", "Maine,ME", "Maryland,MD", "Massachusetts,MA", "Michigan,MI", "Minnesota,MN", "Mississippi,MS", "Missouri,MO", "Montana,MT", "Nebraska,NE", "Nevada,NV", "New Hampshire,NH", "New Jersey,NJ", "New Mexico,NM", "New York,NY", "North Carolina,NC", "North Dakota,ND", "Ohio,OH", "Oklahoma,OK", "Oregon,OR", "Pennsylvania,PA", "Rhode Island,RI", "South Carolina,SC", "South Dakota,SD", "Tennessee,TN", "Texas,TX", "Utah,UT", "Vermont,VT", "Virginia,VA", "Washington,WA", "West Virginia,WV", "Wisconsin,WI", "Wyoming,WY", "Other" });
-            cbState.Location = new System.Drawing.Point(261, 366);
+            cbState.Location = new System.Drawing.Point(272, 366);
             cbState.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             cbState.Name = "cbState";
             cbState.Size = new System.Drawing.Size(223, 23);
@@ -254,7 +254,7 @@
             // txtDestination
             // 
             txtDestination.Anchor = System.Windows.Forms.AnchorStyles.None;
-            txtDestination.Location = new System.Drawing.Point(261, 327);
+            txtDestination.Location = new System.Drawing.Point(272, 327);
             txtDestination.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             txtDestination.Name = "txtDestination";
             txtDestination.Size = new System.Drawing.Size(226, 23);
@@ -263,7 +263,7 @@
             // txtOrigin
             // 
             txtOrigin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            txtOrigin.Location = new System.Drawing.Point(261, 288);
+            txtOrigin.Location = new System.Drawing.Point(272, 288);
             txtOrigin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             txtOrigin.Name = "txtOrigin";
             txtOrigin.Size = new System.Drawing.Size(226, 23);
@@ -273,7 +273,7 @@
             // 
             txtOtherPurpose.Anchor = System.Windows.Forms.AnchorStyles.None;
             txtOtherPurpose.Enabled = false;
-            txtOtherPurpose.Location = new System.Drawing.Point(261, 450);
+            txtOtherPurpose.Location = new System.Drawing.Point(272, 450);
             txtOtherPurpose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             txtOtherPurpose.Name = "txtOtherPurpose";
             txtOtherPurpose.Size = new System.Drawing.Size(226, 23);
@@ -299,7 +299,7 @@
             cbTravelPurpose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             cbTravelPurpose.FormattingEnabled = true;
             cbTravelPurpose.Items.AddRange(new object[] { "Training", "Professional", "Industry-related", "Work outside district", "Seminar", "Workshops", "Other" });
-            cbTravelPurpose.Location = new System.Drawing.Point(261, 415);
+            cbTravelPurpose.Location = new System.Drawing.Point(272, 415);
             cbTravelPurpose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             cbTravelPurpose.Name = "cbTravelPurpose";
             cbTravelPurpose.Size = new System.Drawing.Size(226, 23);
@@ -323,7 +323,7 @@
             // 
             txtOtherEvent.Anchor = System.Windows.Forms.AnchorStyles.None;
             txtOtherEvent.Enabled = false;
-            txtOtherEvent.Location = new System.Drawing.Point(261, 249);
+            txtOtherEvent.Location = new System.Drawing.Point(272, 249);
             txtOtherEvent.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             txtOtherEvent.Name = "txtOtherEvent";
             txtOtherEvent.Size = new System.Drawing.Size(226, 23);
@@ -347,7 +347,7 @@
             cbTravelEvent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             cbTravelEvent.FormattingEnabled = true;
             cbTravelEvent.Items.AddRange(new object[] { "FMCA Aerial Fly In", "AMCA Annual Meeting", "FMCA Annual Meeting", "FASD Annual Meeting", "Chemical Response Training", "FMCA Legislative", "AMCA Legislative", "FGFOA Accounting", "FMCA Dodd Short Course", "FASD Legislative", "FRS Training", "Aquatic Weed Shortcourse", "FAPMS", "APMS", "SFAPMS", "FLMS", "CHNEP", "Other" });
-            cbTravelEvent.Location = new System.Drawing.Point(261, 211);
+            cbTravelEvent.Location = new System.Drawing.Point(272, 211);
             cbTravelEvent.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             cbTravelEvent.Name = "cbTravelEvent";
             cbTravelEvent.Size = new System.Drawing.Size(226, 23);
@@ -369,7 +369,7 @@
             // 
             dtpReturnDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             dtpReturnDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            dtpReturnDate.Location = new System.Drawing.Point(261, 174);
+            dtpReturnDate.Location = new System.Drawing.Point(272, 174);
             dtpReturnDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             dtpReturnDate.Name = "dtpReturnDate";
             dtpReturnDate.Size = new System.Drawing.Size(138, 23);
@@ -413,7 +413,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(563, 677);
+            ClientSize = new System.Drawing.Size(581, 673);
             ControlBox = false;
             Controls.Add(btnInfo);
             Controls.Add(label1);
