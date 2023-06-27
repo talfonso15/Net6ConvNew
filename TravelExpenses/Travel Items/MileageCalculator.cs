@@ -21,7 +21,8 @@ namespace TravelExpenses
 
         private void btnCalculateMileageCost_Click(object sender, EventArgs e)
         {
-            if (txtMileage.Text != "") {
+            if (txtMileage.Text != "")
+            {
                 double mileageCost = Convert.ToDouble(txtMileage.Text) * mileageRate;
                 CommonVariables.estimateMileageCost = mileageCost;
             }
