@@ -115,20 +115,24 @@ namespace TravelExpenses
 
         private void rbNoDistrictProvidedVehicle_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbNoDistrictProvidedVehicle.Checked) {
+            if (rbNoDistrictProvidedVehicle.Checked)
+            {
                 pDirectorApproved.Enabled = true;
             }
         }
 
         private void rbYesDistrictProvidedVehicle_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbYesDistrictProvidedVehicle.Checked) {
+            if (rbYesDistrictProvidedVehicle.Checked)
+            {
                 pDirectorApproved.Enabled = false;
             }
         }
 
-        private bool nextValidations() {
-            if (txtMapMileageClaimed.Text == "") {
+        private bool nextValidations()
+        {
+            if (txtMapMileageClaimed.Text == "")
+            {
                 MessageBox.Show("Enter the Mileage Map", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -151,7 +155,8 @@ namespace TravelExpenses
             Form[] childs = main.MdiChildren;
             //int cant = Application.OpenForms.Count;
             bool FormFound = false;
-            if (CommonVariables.isAirFare == true) {
+            if (CommonVariables.isAirFare == true)
+            {
                 foreach (Form child in childs)
                 {
                     string name = child.Name;
@@ -274,10 +279,10 @@ namespace TravelExpenses
             CommonVariables.CancelTravel();
         }
 
-       /* private void Mileage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void Mileage_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
         private void Mileage_Load(object sender, EventArgs e)
         {

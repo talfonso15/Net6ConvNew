@@ -28,341 +28,364 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rbNoDistrictProvidedVehicle = new System.Windows.Forms.RadioButton();
-            this.rbYesDistrictProvidedVehicle = new System.Windows.Forms.RadioButton();
-            this.lblMileageDistrictVehicule = new System.Windows.Forms.Label();
-            this.pDirectorApproved = new System.Windows.Forms.Panel();
-            this.rbNoReimbursementMileage = new System.Windows.Forms.RadioButton();
-            this.rbYesReimbursementMileage = new System.Windows.Forms.RadioButton();
-            this.lblDirectorAprovedReimbursement = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblMapMileageClaimed = new System.Windows.Forms.Label();
-            this.txtMapMileageClaimed = new System.Windows.Forms.TextBox();
-            this.lblVicinityMileage = new System.Windows.Forms.Label();
-            this.txtVicinityMileage = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnNextMileage = new System.Windows.Forms.Button();
-            this.btnBackMileage = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCancelMileage = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblMileageNotes = new System.Windows.Forms.Label();
-            this.txtMileageNotes = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblCurrentMileageRate = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.pDirectorApproved.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mileage));
+            panel1 = new System.Windows.Forms.Panel();
+            rbNoDistrictProvidedVehicle = new System.Windows.Forms.RadioButton();
+            rbYesDistrictProvidedVehicle = new System.Windows.Forms.RadioButton();
+            lblMileageDistrictVehicule = new System.Windows.Forms.Label();
+            pDirectorApproved = new System.Windows.Forms.Panel();
+            rbNoReimbursementMileage = new System.Windows.Forms.RadioButton();
+            rbYesReimbursementMileage = new System.Windows.Forms.RadioButton();
+            lblDirectorAprovedReimbursement = new System.Windows.Forms.Label();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            lblMapMileageClaimed = new System.Windows.Forms.Label();
+            txtMapMileageClaimed = new System.Windows.Forms.TextBox();
+            lblVicinityMileage = new System.Windows.Forms.Label();
+            txtVicinityMileage = new System.Windows.Forms.TextBox();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            btnNextMileage = new System.Windows.Forms.Button();
+            btnBackMileage = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            btnCancelMileage = new System.Windows.Forms.Button();
+            tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            lblMileageNotes = new System.Windows.Forms.Label();
+            txtMileageNotes = new System.Windows.Forms.TextBox();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            lblCurrentMileageRate = new System.Windows.Forms.Label();
+            panel1.SuspendLayout();
+            pDirectorApproved.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.rbNoDistrictProvidedVehicle);
-            this.panel1.Controls.Add(this.rbYesDistrictProvidedVehicle);
-            this.panel1.Controls.Add(this.lblMileageDistrictVehicule);
-            this.panel1.Location = new System.Drawing.Point(30, 30);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(608, 54);
-            this.panel1.TabIndex = 0;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(rbNoDistrictProvidedVehicle);
+            panel1.Controls.Add(rbYesDistrictProvidedVehicle);
+            panel1.Controls.Add(lblMileageDistrictVehicule);
+            panel1.Location = new System.Drawing.Point(35, 35);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(709, 62);
+            panel1.TabIndex = 0;
             // 
             // rbNoDistrictProvidedVehicle
             // 
-            this.rbNoDistrictProvidedVehicle.AutoSize = true;
-            this.rbNoDistrictProvidedVehicle.Location = new System.Drawing.Point(545, 18);
-            this.rbNoDistrictProvidedVehicle.Name = "rbNoDistrictProvidedVehicle";
-            this.rbNoDistrictProvidedVehicle.Size = new System.Drawing.Size(39, 17);
-            this.rbNoDistrictProvidedVehicle.TabIndex = 2;
-            this.rbNoDistrictProvidedVehicle.Text = "No";
-            this.rbNoDistrictProvidedVehicle.UseVisualStyleBackColor = true;
-            this.rbNoDistrictProvidedVehicle.CheckedChanged += new System.EventHandler(this.rbNoDistrictProvidedVehicle_CheckedChanged);
+            rbNoDistrictProvidedVehicle.AutoSize = true;
+            rbNoDistrictProvidedVehicle.Location = new System.Drawing.Point(636, 21);
+            rbNoDistrictProvidedVehicle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbNoDistrictProvidedVehicle.Name = "rbNoDistrictProvidedVehicle";
+            rbNoDistrictProvidedVehicle.Size = new System.Drawing.Size(41, 19);
+            rbNoDistrictProvidedVehicle.TabIndex = 2;
+            rbNoDistrictProvidedVehicle.Text = "No";
+            rbNoDistrictProvidedVehicle.UseVisualStyleBackColor = true;
+            rbNoDistrictProvidedVehicle.CheckedChanged += rbNoDistrictProvidedVehicle_CheckedChanged;
             // 
             // rbYesDistrictProvidedVehicle
             // 
-            this.rbYesDistrictProvidedVehicle.AutoSize = true;
-            this.rbYesDistrictProvidedVehicle.Checked = true;
-            this.rbYesDistrictProvidedVehicle.Location = new System.Drawing.Point(486, 18);
-            this.rbYesDistrictProvidedVehicle.Name = "rbYesDistrictProvidedVehicle";
-            this.rbYesDistrictProvidedVehicle.Size = new System.Drawing.Size(43, 17);
-            this.rbYesDistrictProvidedVehicle.TabIndex = 1;
-            this.rbYesDistrictProvidedVehicle.TabStop = true;
-            this.rbYesDistrictProvidedVehicle.Text = "Yes";
-            this.rbYesDistrictProvidedVehicle.UseVisualStyleBackColor = true;
-            this.rbYesDistrictProvidedVehicle.CheckedChanged += new System.EventHandler(this.rbYesDistrictProvidedVehicle_CheckedChanged);
+            rbYesDistrictProvidedVehicle.AutoSize = true;
+            rbYesDistrictProvidedVehicle.Checked = true;
+            rbYesDistrictProvidedVehicle.Location = new System.Drawing.Point(567, 21);
+            rbYesDistrictProvidedVehicle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbYesDistrictProvidedVehicle.Name = "rbYesDistrictProvidedVehicle";
+            rbYesDistrictProvidedVehicle.Size = new System.Drawing.Size(42, 19);
+            rbYesDistrictProvidedVehicle.TabIndex = 1;
+            rbYesDistrictProvidedVehicle.TabStop = true;
+            rbYesDistrictProvidedVehicle.Text = "Yes";
+            rbYesDistrictProvidedVehicle.UseVisualStyleBackColor = true;
+            rbYesDistrictProvidedVehicle.CheckedChanged += rbYesDistrictProvidedVehicle_CheckedChanged;
             // 
             // lblMileageDistrictVehicule
             // 
-            this.lblMileageDistrictVehicule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblMileageDistrictVehicule.AutoSize = true;
-            this.lblMileageDistrictVehicule.Location = new System.Drawing.Point(22, 22);
-            this.lblMileageDistrictVehicule.Name = "lblMileageDistrictVehicule";
-            this.lblMileageDistrictVehicule.Size = new System.Drawing.Size(230, 13);
-            this.lblMileageDistrictVehicule.TabIndex = 0;
-            this.lblMileageDistrictVehicule.Text = "Did the district provided you a district\'s vehicle?";
+            lblMileageDistrictVehicule.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
+            lblMileageDistrictVehicule.AutoSize = true;
+            lblMileageDistrictVehicule.Location = new System.Drawing.Point(26, 25);
+            lblMileageDistrictVehicule.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMileageDistrictVehicule.Name = "lblMileageDistrictVehicule";
+            lblMileageDistrictVehicule.Size = new System.Drawing.Size(258, 15);
+            lblMileageDistrictVehicule.TabIndex = 0;
+            lblMileageDistrictVehicule.Text = "Did the district provided you a district's vehicle?";
             // 
             // pDirectorApproved
             // 
-            this.pDirectorApproved.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pDirectorApproved.Controls.Add(this.rbNoReimbursementMileage);
-            this.pDirectorApproved.Controls.Add(this.rbYesReimbursementMileage);
-            this.pDirectorApproved.Controls.Add(this.lblDirectorAprovedReimbursement);
-            this.pDirectorApproved.Enabled = false;
-            this.pDirectorApproved.Location = new System.Drawing.Point(30, 90);
-            this.pDirectorApproved.Name = "pDirectorApproved";
-            this.pDirectorApproved.Size = new System.Drawing.Size(608, 53);
-            this.pDirectorApproved.TabIndex = 1;
+            pDirectorApproved.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pDirectorApproved.Controls.Add(rbNoReimbursementMileage);
+            pDirectorApproved.Controls.Add(rbYesReimbursementMileage);
+            pDirectorApproved.Controls.Add(lblDirectorAprovedReimbursement);
+            pDirectorApproved.Enabled = false;
+            pDirectorApproved.Location = new System.Drawing.Point(35, 104);
+            pDirectorApproved.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pDirectorApproved.Name = "pDirectorApproved";
+            pDirectorApproved.Size = new System.Drawing.Size(709, 61);
+            pDirectorApproved.TabIndex = 1;
             // 
             // rbNoReimbursementMileage
             // 
-            this.rbNoReimbursementMileage.AutoSize = true;
-            this.rbNoReimbursementMileage.Location = new System.Drawing.Point(545, 19);
-            this.rbNoReimbursementMileage.Name = "rbNoReimbursementMileage";
-            this.rbNoReimbursementMileage.Size = new System.Drawing.Size(39, 17);
-            this.rbNoReimbursementMileage.TabIndex = 2;
-            this.rbNoReimbursementMileage.Text = "No";
-            this.rbNoReimbursementMileage.UseVisualStyleBackColor = true;
+            rbNoReimbursementMileage.AutoSize = true;
+            rbNoReimbursementMileage.Location = new System.Drawing.Point(636, 22);
+            rbNoReimbursementMileage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbNoReimbursementMileage.Name = "rbNoReimbursementMileage";
+            rbNoReimbursementMileage.Size = new System.Drawing.Size(41, 19);
+            rbNoReimbursementMileage.TabIndex = 2;
+            rbNoReimbursementMileage.Text = "No";
+            rbNoReimbursementMileage.UseVisualStyleBackColor = true;
             // 
             // rbYesReimbursementMileage
             // 
-            this.rbYesReimbursementMileage.AutoSize = true;
-            this.rbYesReimbursementMileage.Location = new System.Drawing.Point(486, 19);
-            this.rbYesReimbursementMileage.Name = "rbYesReimbursementMileage";
-            this.rbYesReimbursementMileage.Size = new System.Drawing.Size(43, 17);
-            this.rbYesReimbursementMileage.TabIndex = 1;
-            this.rbYesReimbursementMileage.Text = "Yes";
-            this.rbYesReimbursementMileage.UseVisualStyleBackColor = true;
+            rbYesReimbursementMileage.AutoSize = true;
+            rbYesReimbursementMileage.Location = new System.Drawing.Point(567, 22);
+            rbYesReimbursementMileage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbYesReimbursementMileage.Name = "rbYesReimbursementMileage";
+            rbYesReimbursementMileage.Size = new System.Drawing.Size(42, 19);
+            rbYesReimbursementMileage.TabIndex = 1;
+            rbYesReimbursementMileage.Text = "Yes";
+            rbYesReimbursementMileage.UseVisualStyleBackColor = true;
             // 
             // lblDirectorAprovedReimbursement
             // 
-            this.lblDirectorAprovedReimbursement.AutoSize = true;
-            this.lblDirectorAprovedReimbursement.Location = new System.Drawing.Point(22, 23);
-            this.lblDirectorAprovedReimbursement.Name = "lblDirectorAprovedReimbursement";
-            this.lblDirectorAprovedReimbursement.Size = new System.Drawing.Size(410, 13);
-            this.lblDirectorAprovedReimbursement.TabIndex = 0;
-            this.lblDirectorAprovedReimbursement.Text = "Did the Executive Director approved mileage reimbursement of your personal vehicl" +
-    "e?";
+            lblDirectorAprovedReimbursement.AutoSize = true;
+            lblDirectorAprovedReimbursement.Location = new System.Drawing.Point(26, 27);
+            lblDirectorAprovedReimbursement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDirectorAprovedReimbursement.Name = "lblDirectorAprovedReimbursement";
+            lblDirectorAprovedReimbursement.Size = new System.Drawing.Size(459, 15);
+            lblDirectorAprovedReimbursement.TabIndex = 0;
+            lblDirectorAprovedReimbursement.Text = "Did the Executive Director approved mileage reimbursement of your personal vehicle?";
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.30769F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.69231F));
-            this.tableLayoutPanel1.Controls.Add(this.lblMapMileageClaimed, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtMapMileageClaimed, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblVicinityMileage, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtVicinityMileage, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 158);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(325, 80);
-            this.tableLayoutPanel1.TabIndex = 2;
+            tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.30769F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.69231F));
+            tableLayoutPanel1.Controls.Add(lblMapMileageClaimed, 0, 0);
+            tableLayoutPanel1.Controls.Add(txtMapMileageClaimed, 1, 0);
+            tableLayoutPanel1.Controls.Add(lblVicinityMileage, 0, 1);
+            tableLayoutPanel1.Controls.Add(txtVicinityMileage, 1, 1);
+            tableLayoutPanel1.Location = new System.Drawing.Point(35, 182);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(379, 92);
+            tableLayoutPanel1.TabIndex = 2;
             // 
             // lblMapMileageClaimed
             // 
-            this.lblMapMileageClaimed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMapMileageClaimed.AutoSize = true;
-            this.lblMapMileageClaimed.Location = new System.Drawing.Point(4, 13);
-            this.lblMapMileageClaimed.Name = "lblMapMileageClaimed";
-            this.lblMapMileageClaimed.Size = new System.Drawing.Size(162, 13);
-            this.lblMapMileageClaimed.TabIndex = 0;
-            this.lblMapMileageClaimed.Text = "Map Mileage Claimed:";
+            lblMapMileageClaimed.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblMapMileageClaimed.AutoSize = true;
+            lblMapMileageClaimed.Location = new System.Drawing.Point(5, 15);
+            lblMapMileageClaimed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMapMileageClaimed.Name = "lblMapMileageClaimed";
+            lblMapMileageClaimed.Size = new System.Drawing.Size(188, 15);
+            lblMapMileageClaimed.TabIndex = 0;
+            lblMapMileageClaimed.Text = "Map Mileage Claimed:";
             // 
             // txtMapMileageClaimed
             // 
-            this.txtMapMileageClaimed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMapMileageClaimed.Location = new System.Drawing.Point(173, 10);
-            this.txtMapMileageClaimed.Name = "txtMapMileageClaimed";
-            this.txtMapMileageClaimed.Size = new System.Drawing.Size(148, 20);
-            this.txtMapMileageClaimed.TabIndex = 1;
-            this.txtMapMileageClaimed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMapMileageClaimed_KeyPress);
+            txtMapMileageClaimed.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtMapMileageClaimed.Location = new System.Drawing.Point(202, 11);
+            txtMapMileageClaimed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtMapMileageClaimed.Name = "txtMapMileageClaimed";
+            txtMapMileageClaimed.Size = new System.Drawing.Size(172, 23);
+            txtMapMileageClaimed.TabIndex = 1;
+            txtMapMileageClaimed.KeyPress += txtMapMileageClaimed_KeyPress;
             // 
             // lblVicinityMileage
             // 
-            this.lblVicinityMileage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVicinityMileage.AutoSize = true;
-            this.lblVicinityMileage.Location = new System.Drawing.Point(4, 53);
-            this.lblVicinityMileage.Name = "lblVicinityMileage";
-            this.lblVicinityMileage.Size = new System.Drawing.Size(162, 13);
-            this.lblVicinityMileage.TabIndex = 2;
-            this.lblVicinityMileage.Text = "Vicinity Mileage Claimed:";
+            lblVicinityMileage.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblVicinityMileage.AutoSize = true;
+            lblVicinityMileage.Location = new System.Drawing.Point(5, 61);
+            lblVicinityMileage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblVicinityMileage.Name = "lblVicinityMileage";
+            lblVicinityMileage.Size = new System.Drawing.Size(188, 15);
+            lblVicinityMileage.TabIndex = 2;
+            lblVicinityMileage.Text = "Vicinity Mileage Claimed:";
             // 
             // txtVicinityMileage
             // 
-            this.txtVicinityMileage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVicinityMileage.Location = new System.Drawing.Point(173, 49);
-            this.txtVicinityMileage.Name = "txtVicinityMileage";
-            this.txtVicinityMileage.Size = new System.Drawing.Size(148, 20);
-            this.txtVicinityMileage.TabIndex = 3;
-            this.txtVicinityMileage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVicinityMileage_KeyPress);
+            txtVicinityMileage.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtVicinityMileage.Location = new System.Drawing.Point(202, 57);
+            txtVicinityMileage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtVicinityMileage.Name = "txtVicinityMileage";
+            txtVicinityMileage.Size = new System.Drawing.Size(172, 23);
+            txtVicinityMileage.TabIndex = 3;
+            txtVicinityMileage.KeyPress += txtVicinityMileage_KeyPress;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.39449F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.6055F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel2.Controls.Add(this.btnNextMileage, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnBackMileage, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(463, 363);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(175, 34);
-            this.tableLayoutPanel2.TabIndex = 3;
+            tableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            tableLayoutPanel2.ColumnCount = 3;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.17117F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.8288288F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            tableLayoutPanel2.Controls.Add(btnNextMileage, 2, 0);
+            tableLayoutPanel2.Controls.Add(btnBackMileage, 0, 0);
+            tableLayoutPanel2.Controls.Add(label1, 1, 0);
+            tableLayoutPanel2.Location = new System.Drawing.Point(565, 419);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(179, 41);
+            tableLayoutPanel2.TabIndex = 3;
             // 
             // btnNextMileage
             // 
-            this.btnNextMileage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNextMileage.FlatAppearance.BorderSize = 0;
-            this.btnNextMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextMileage.Image = global::TravelExpenses.Properties.Resources.next;
-            this.btnNextMileage.Location = new System.Drawing.Point(101, 3);
-            this.btnNextMileage.Name = "btnNextMileage";
-            this.btnNextMileage.Size = new System.Drawing.Size(69, 28);
-            this.btnNextMileage.TabIndex = 2;
-            this.btnNextMileage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNextMileage.UseVisualStyleBackColor = true;
-            this.btnNextMileage.Click += new System.EventHandler(this.btnNextMileage_Click);
+            btnNextMileage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnNextMileage.FlatAppearance.BorderSize = 0;
+            btnNextMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnNextMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnNextMileage.Image = (System.Drawing.Image)resources.GetObject("btnNextMileage.Image");
+            btnNextMileage.Location = new System.Drawing.Point(115, 3);
+            btnNextMileage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnNextMileage.Name = "btnNextMileage";
+            btnNextMileage.Size = new System.Drawing.Size(60, 35);
+            btnNextMileage.TabIndex = 2;
+            btnNextMileage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnNextMileage.UseVisualStyleBackColor = true;
+            btnNextMileage.Click += btnNextMileage_Click;
             // 
             // btnBackMileage
             // 
-            this.btnBackMileage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBackMileage.FlatAppearance.BorderSize = 0;
-            this.btnBackMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackMileage.Image = global::TravelExpenses.Properties.Resources.back;
-            this.btnBackMileage.Location = new System.Drawing.Point(5, 3);
-            this.btnBackMileage.Name = "btnBackMileage";
-            this.btnBackMileage.Size = new System.Drawing.Size(60, 28);
-            this.btnBackMileage.TabIndex = 1;
-            this.btnBackMileage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBackMileage.UseVisualStyleBackColor = true;
-            this.btnBackMileage.Click += new System.EventHandler(this.btnBackMileage_Click);
+            btnBackMileage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnBackMileage.FlatAppearance.BorderSize = 0;
+            btnBackMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnBackMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnBackMileage.Image = (System.Drawing.Image)resources.GetObject("btnBackMileage.Image");
+            btnBackMileage.Location = new System.Drawing.Point(4, 3);
+            btnBackMileage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnBackMileage.Name = "btnBackMileage";
+            btnBackMileage.Size = new System.Drawing.Size(70, 35);
+            btnBackMileage.TabIndex = 1;
+            btnBackMileage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnBackMileage.UseVisualStyleBackColor = true;
+            btnBackMileage.Click += btnBackMileage_Click;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "|";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(83, 8);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(24, 25);
+            label1.TabIndex = 3;
+            label1.Text = "|";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCancelMileage
             // 
-            this.btnCancelMileage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancelMileage.FlatAppearance.BorderSize = 0;
-            this.btnCancelMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelMileage.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnCancelMileage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelMileage.Location = new System.Drawing.Point(12, 363);
-            this.btnCancelMileage.Name = "btnCancelMileage";
-            this.btnCancelMileage.Size = new System.Drawing.Size(95, 34);
-            this.btnCancelMileage.TabIndex = 0;
-            this.btnCancelMileage.Text = "Cancel";
-            this.btnCancelMileage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelMileage.UseVisualStyleBackColor = true;
-            this.btnCancelMileage.Click += new System.EventHandler(this.btnCancelMileage_Click);
+            btnCancelMileage.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnCancelMileage.FlatAppearance.BorderSize = 0;
+            btnCancelMileage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancelMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancelMileage.Image = (System.Drawing.Image)resources.GetObject("btnCancelMileage.Image");
+            btnCancelMileage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCancelMileage.Location = new System.Drawing.Point(14, 419);
+            btnCancelMileage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancelMileage.Name = "btnCancelMileage";
+            btnCancelMileage.Size = new System.Drawing.Size(95, 39);
+            btnCancelMileage.TabIndex = 0;
+            btnCancelMileage.Text = "Cancel";
+            btnCancelMileage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancelMileage.UseVisualStyleBackColor = true;
+            btnCancelMileage.Click += btnCancelMileage_Click;
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.881579F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.11842F));
-            this.tableLayoutPanel3.Controls.Add(this.lblMileageNotes, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.txtMileageNotes, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(30, 256);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(608, 53);
-            this.tableLayoutPanel3.TabIndex = 4;
+            tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.881579F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.11842F));
+            tableLayoutPanel3.Controls.Add(lblMileageNotes, 0, 0);
+            tableLayoutPanel3.Controls.Add(txtMileageNotes, 1, 0);
+            tableLayoutPanel3.Location = new System.Drawing.Point(35, 295);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(709, 61);
+            tableLayoutPanel3.TabIndex = 4;
             // 
             // lblMileageNotes
             // 
-            this.lblMileageNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMileageNotes.AutoSize = true;
-            this.lblMileageNotes.Location = new System.Drawing.Point(4, 20);
-            this.lblMileageNotes.Name = "lblMileageNotes";
-            this.lblMileageNotes.Size = new System.Drawing.Size(47, 13);
-            this.lblMileageNotes.TabIndex = 0;
-            this.lblMileageNotes.Text = "Notes:";
+            lblMileageNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblMileageNotes.AutoSize = true;
+            lblMileageNotes.Location = new System.Drawing.Point(5, 23);
+            lblMileageNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMileageNotes.Name = "lblMileageNotes";
+            lblMileageNotes.Size = new System.Drawing.Size(54, 15);
+            lblMileageNotes.TabIndex = 0;
+            lblMileageNotes.Text = "Notes:";
             // 
             // txtMileageNotes
             // 
-            this.txtMileageNotes.Location = new System.Drawing.Point(58, 4);
-            this.txtMileageNotes.Multiline = true;
-            this.txtMileageNotes.Name = "txtMileageNotes";
-            this.txtMileageNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtMileageNotes.Size = new System.Drawing.Size(546, 45);
-            this.txtMileageNotes.TabIndex = 1;
+            txtMileageNotes.Location = new System.Drawing.Point(68, 4);
+            txtMileageNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtMileageNotes.Multiline = true;
+            txtMileageNotes.Name = "txtMileageNotes";
+            txtMileageNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtMileageNotes.Size = new System.Drawing.Size(636, 51);
+            txtMileageNotes.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TravelExpenses.Properties.Resources.if_information_14516;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 320);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(41, 369);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(23, 23);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
             // lblCurrentMileageRate
             // 
-            this.lblCurrentMileageRate.AutoSize = true;
-            this.lblCurrentMileageRate.Location = new System.Drawing.Point(58, 324);
-            this.lblCurrentMileageRate.Name = "lblCurrentMileageRate";
-            this.lblCurrentMileageRate.Size = new System.Drawing.Size(0, 13);
-            this.lblCurrentMileageRate.TabIndex = 6;
+            lblCurrentMileageRate.AutoSize = true;
+            lblCurrentMileageRate.Location = new System.Drawing.Point(68, 374);
+            lblCurrentMileageRate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblCurrentMileageRate.Name = "lblCurrentMileageRate";
+            lblCurrentMileageRate.Size = new System.Drawing.Size(0, 15);
+            lblCurrentMileageRate.TabIndex = 6;
             // 
             // Mileage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 409);
-            this.ControlBox = false;
-            this.Controls.Add(this.lblCurrentMileageRate);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.btnCancelMileage);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pDirectorApproved);
-            this.Controls.Add(this.panel1);
-            this.Name = "Mileage";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mileage";
-            this.Load += new System.EventHandler(this.Mileage_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.pDirectorApproved.ResumeLayout(false);
-            this.pDirectorApproved.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(758, 472);
+            ControlBox = false;
+            Controls.Add(lblCurrentMileageRate);
+            Controls.Add(pictureBox1);
+            Controls.Add(tableLayoutPanel3);
+            Controls.Add(tableLayoutPanel2);
+            Controls.Add(btnCancelMileage);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(pDirectorApproved);
+            Controls.Add(panel1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "Mileage";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Mileage";
+            Load += Mileage_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            pDirectorApproved.ResumeLayout(false);
+            pDirectorApproved.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
