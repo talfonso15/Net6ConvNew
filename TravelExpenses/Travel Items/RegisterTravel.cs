@@ -48,7 +48,7 @@ namespace TravelExpenses
 
         private void btnTravelNext_Click(object sender, EventArgs e)
         {
-           bool validate =  Validations();
+            bool validate = Validations();
 
             if (validate)
             {
@@ -64,15 +64,15 @@ namespace TravelExpenses
                 {
                     CommonVariables.travelEvent = cbTravelEvent.SelectedItem.ToString();
                 }
-               /* if (cbTravelPurpose.SelectedItem.ToString() == "Other")
-                {
+                /* if (cbTravelPurpose.SelectedItem.ToString() == "Other")
+                 {
 
-                    CommonVariables.travelPurpose = txtOtherPurpose.Text;
-                }
-                else
-                {
-                    CommonVariables.travelPurpose = cbTravelPurpose.SelectedItem.ToString();
-                }*/
+                     CommonVariables.travelPurpose = txtOtherPurpose.Text;
+                 }
+                 else
+                 {
+                     CommonVariables.travelPurpose = cbTravelPurpose.SelectedItem.ToString();
+                 }*/
                 CommonVariables.travelOrigin = txtOrigin.Text;
                 CommonVariables.travelDestination = txtDestination.Text;
                 CommonVariables.travelState = cbState.SelectedItem.ToString();
@@ -107,10 +107,10 @@ namespace TravelExpenses
                         }
                     }
                 }
-                
+
                 if (!tiFormFound)
                 {
-                    
+
                     TravelItems ti = new TravelItems();
                     ti.MdiParent = main;
                     ti.Show();
@@ -127,7 +127,8 @@ namespace TravelExpenses
                 txtOtherEvent.Enabled = true;
                 lblOtherEvent.Enabled = true;
             }
-            else {
+            else
+            {
                 txtOtherEvent.Enabled = false;
                 lblOtherEvent.Enabled = false;
             }
@@ -140,19 +141,22 @@ namespace TravelExpenses
                 txtOtherPurpose.Enabled = true;
                 lblOtherPurpose.Enabled = true;
             }
-            else {
+            else
+            {
                 txtOtherPurpose.Enabled = false;
                 lblOtherPurpose.Enabled = false;
             }
         }
 
-        private bool Validations() {
+        private bool Validations()
+        {
             if (cbTravelEvent.SelectedIndex.ToString() == "-1")
             {
                 MessageBox.Show("Select your Travel Event", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (cbTravelEvent.SelectedItem.ToString() == "Other" && txtOtherEvent.Text == "") {
+            else if (cbTravelEvent.SelectedItem.ToString() == "Other" && txtOtherEvent.Text == "")
+            {
 
                 MessageBox.Show("Write your Travel Event", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -167,18 +171,21 @@ namespace TravelExpenses
                 return false;
             }*/
 
-            if (txtOrigin.Text == "") {
+            if (txtOrigin.Text == "")
+            {
                 MessageBox.Show("Enter your travel Origin", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (txtDestination.Text == "") {
+            if (txtDestination.Text == "")
+            {
 
                 MessageBox.Show("Enter your travel Destination", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (cbState.SelectedIndex.ToString() == "-1") {
+            if (cbState.SelectedIndex.ToString() == "-1")
+            {
                 MessageBox.Show("Select your travel State", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -198,10 +205,10 @@ namespace TravelExpenses
             CommonVariables.CancelTravel();
         }
 
-       /* private void RegisterTravel_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void RegisterTravel_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
         private void dtpDepartureDate_ValueChanged(object sender, EventArgs e)
         {
