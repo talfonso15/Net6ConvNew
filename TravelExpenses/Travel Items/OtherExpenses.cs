@@ -71,20 +71,24 @@ namespace TravelExpenses
 
         private bool addingValidations()
         {
-            if (txtExpenseDescription.Text == "") {
+            if (txtExpenseDescription.Text == "")
+            {
                 MessageBox.Show("Enter the Expense Description", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtExpenseAmount.Text == "") {
+            if (txtExpenseAmount.Text == "")
+            {
                 MessageBox.Show("Enter the Expense Amount", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
         }
 
-        private bool nextValidation() {
+        private bool nextValidation()
+        {
             int quantExps = dgvOtherExpenses.RowCount;
-            if (quantExps <=0) {
+            if (quantExps <= 0)
+            {
                 MessageBox.Show("Add at least one Expense", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -93,7 +97,7 @@ namespace TravelExpenses
 
         private void btnBackExpenses_Click(object sender, EventArgs e)
         {
-            CommonVariables.isSummary = false; 
+            CommonVariables.isSummary = false;
             FormCollection fc = Application.OpenForms;
             Form main = new Form();
             foreach (Form frm in fc)
@@ -107,7 +111,8 @@ namespace TravelExpenses
             Form[] childs = main.MdiChildren;
             //int cant = Application.OpenForms.Count;
             bool FormFound = false;
-            if (CommonVariables.isMileage == true) {
+            if (CommonVariables.isMileage == true)
+            {
                 foreach (Form child in childs)
                 {
                     string name = child.Name;
@@ -215,10 +220,10 @@ namespace TravelExpenses
             CommonVariables.CancelTravel();
         }
 
-       /* private void OtherExpenses_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void OtherExpenses_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
         private void txtExpenseAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
