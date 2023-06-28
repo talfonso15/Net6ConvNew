@@ -28,252 +28,269 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblResgistrationCost = new System.Windows.Forms.Label();
-            this.txtResgistrationCost = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rbNoRegistrationPayDistrict = new System.Windows.Forms.RadioButton();
-            this.rbYesRegistrationPayDistrict = new System.Windows.Forms.RadioButton();
-            this.lblDistrictPayRegistration = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblRegistrationNotes = new System.Windows.Forms.Label();
-            this.txtRegistrationNotes = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnNextRegistration = new System.Windows.Forms.Button();
-            this.btnBackRegistration = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCancelRegistration = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            lblResgistrationCost = new System.Windows.Forms.Label();
+            txtResgistrationCost = new System.Windows.Forms.TextBox();
+            panel1 = new System.Windows.Forms.Panel();
+            rbNoRegistrationPayDistrict = new System.Windows.Forms.RadioButton();
+            rbYesRegistrationPayDistrict = new System.Windows.Forms.RadioButton();
+            lblDistrictPayRegistration = new System.Windows.Forms.Label();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            lblRegistrationNotes = new System.Windows.Forms.Label();
+            txtRegistrationNotes = new System.Windows.Forms.TextBox();
+            tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            btnNextRegistration = new System.Windows.Forms.Button();
+            btnBackRegistration = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            btnCancelRegistration = new System.Windows.Forms.Button();
+            panel2 = new System.Windows.Forms.Panel();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.82722F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.17278F));
-            this.tableLayoutPanel1.Controls.Add(this.lblResgistrationCost, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtResgistrationCost, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblDistrictPayRegistration, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 52);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 104);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.82722F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.17278F));
+            tableLayoutPanel1.Controls.Add(lblResgistrationCost, 0, 0);
+            tableLayoutPanel1.Controls.Add(txtResgistrationCost, 1, 0);
+            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
+            tableLayoutPanel1.Controls.Add(lblDistrictPayRegistration, 0, 1);
+            tableLayoutPanel1.Location = new System.Drawing.Point(38, 60);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(446, 120);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // lblResgistrationCost
             // 
-            this.lblResgistrationCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblResgistrationCost.AutoSize = true;
-            this.lblResgistrationCost.Location = new System.Drawing.Point(4, 20);
-            this.lblResgistrationCost.Name = "lblResgistrationCost";
-            this.lblResgistrationCost.Size = new System.Drawing.Size(232, 13);
-            this.lblResgistrationCost.TabIndex = 0;
-            this.lblResgistrationCost.Text = "Registration Cost:";
+            lblResgistrationCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblResgistrationCost.AutoSize = true;
+            lblResgistrationCost.Location = new System.Drawing.Point(5, 23);
+            lblResgistrationCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblResgistrationCost.Name = "lblResgistrationCost";
+            lblResgistrationCost.Size = new System.Drawing.Size(270, 15);
+            lblResgistrationCost.TabIndex = 0;
+            lblResgistrationCost.Text = "Registration Cost:";
             // 
             // txtResgistrationCost
             // 
-            this.txtResgistrationCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResgistrationCost.Location = new System.Drawing.Point(243, 16);
-            this.txtResgistrationCost.Name = "txtResgistrationCost";
-            this.txtResgistrationCost.Size = new System.Drawing.Size(135, 20);
-            this.txtResgistrationCost.TabIndex = 1;
-            this.txtResgistrationCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtResgistrationCost_KeyPress);
+            txtResgistrationCost.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtResgistrationCost.Location = new System.Drawing.Point(284, 19);
+            txtResgistrationCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtResgistrationCost.Name = "txtResgistrationCost";
+            txtResgistrationCost.Size = new System.Drawing.Size(157, 23);
+            txtResgistrationCost.TabIndex = 1;
+            txtResgistrationCost.KeyPress += txtResgistrationCost_KeyPress;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.rbNoRegistrationPayDistrict);
-            this.panel1.Controls.Add(this.rbYesRegistrationPayDistrict);
-            this.panel1.Location = new System.Drawing.Point(243, 56);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 43);
-            this.panel1.TabIndex = 1;
+            panel1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            panel1.Controls.Add(rbNoRegistrationPayDistrict);
+            panel1.Controls.Add(rbYesRegistrationPayDistrict);
+            panel1.Location = new System.Drawing.Point(284, 65);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(157, 50);
+            panel1.TabIndex = 1;
             // 
             // rbNoRegistrationPayDistrict
             // 
-            this.rbNoRegistrationPayDistrict.AutoSize = true;
-            this.rbNoRegistrationPayDistrict.Location = new System.Drawing.Point(63, 16);
-            this.rbNoRegistrationPayDistrict.Name = "rbNoRegistrationPayDistrict";
-            this.rbNoRegistrationPayDistrict.Size = new System.Drawing.Size(39, 17);
-            this.rbNoRegistrationPayDistrict.TabIndex = 2;
-            this.rbNoRegistrationPayDistrict.Text = "No";
-            this.rbNoRegistrationPayDistrict.UseVisualStyleBackColor = true;
+            rbNoRegistrationPayDistrict.AutoSize = true;
+            rbNoRegistrationPayDistrict.Location = new System.Drawing.Point(74, 18);
+            rbNoRegistrationPayDistrict.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbNoRegistrationPayDistrict.Name = "rbNoRegistrationPayDistrict";
+            rbNoRegistrationPayDistrict.Size = new System.Drawing.Size(41, 19);
+            rbNoRegistrationPayDistrict.TabIndex = 2;
+            rbNoRegistrationPayDistrict.Text = "No";
+            rbNoRegistrationPayDistrict.UseVisualStyleBackColor = true;
             // 
             // rbYesRegistrationPayDistrict
             // 
-            this.rbYesRegistrationPayDistrict.AutoSize = true;
-            this.rbYesRegistrationPayDistrict.Checked = true;
-            this.rbYesRegistrationPayDistrict.Location = new System.Drawing.Point(11, 15);
-            this.rbYesRegistrationPayDistrict.Name = "rbYesRegistrationPayDistrict";
-            this.rbYesRegistrationPayDistrict.Size = new System.Drawing.Size(43, 17);
-            this.rbYesRegistrationPayDistrict.TabIndex = 1;
-            this.rbYesRegistrationPayDistrict.TabStop = true;
-            this.rbYesRegistrationPayDistrict.Text = "Yes";
-            this.rbYesRegistrationPayDistrict.UseVisualStyleBackColor = true;
+            rbYesRegistrationPayDistrict.AutoSize = true;
+            rbYesRegistrationPayDistrict.Checked = true;
+            rbYesRegistrationPayDistrict.Location = new System.Drawing.Point(13, 17);
+            rbYesRegistrationPayDistrict.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbYesRegistrationPayDistrict.Name = "rbYesRegistrationPayDistrict";
+            rbYesRegistrationPayDistrict.Size = new System.Drawing.Size(42, 19);
+            rbYesRegistrationPayDistrict.TabIndex = 1;
+            rbYesRegistrationPayDistrict.TabStop = true;
+            rbYesRegistrationPayDistrict.Text = "Yes";
+            rbYesRegistrationPayDistrict.UseVisualStyleBackColor = true;
             // 
             // lblDistrictPayRegistration
             // 
-            this.lblDistrictPayRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDistrictPayRegistration.AutoSize = true;
-            this.lblDistrictPayRegistration.Location = new System.Drawing.Point(4, 71);
-            this.lblDistrictPayRegistration.Name = "lblDistrictPayRegistration";
-            this.lblDistrictPayRegistration.Size = new System.Drawing.Size(232, 13);
-            this.lblDistrictPayRegistration.TabIndex = 0;
-            this.lblDistrictPayRegistration.Text = "Did the district pay for your registration cost?";
+            lblDistrictPayRegistration.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblDistrictPayRegistration.AutoSize = true;
+            lblDistrictPayRegistration.Location = new System.Drawing.Point(5, 82);
+            lblDistrictPayRegistration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDistrictPayRegistration.Name = "lblDistrictPayRegistration";
+            lblDistrictPayRegistration.Size = new System.Drawing.Size(270, 15);
+            lblDistrictPayRegistration.TabIndex = 0;
+            lblDistrictPayRegistration.Text = "Did the district pay for your registration cost?";
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.65445F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.34555F));
-            this.tableLayoutPanel2.Controls.Add(this.lblRegistrationNotes, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtRegistrationNotes, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 5);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(376, 60);
-            this.tableLayoutPanel2.TabIndex = 2;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.65445F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.34555F));
+            tableLayoutPanel2.Controls.Add(lblRegistrationNotes, 0, 0);
+            tableLayoutPanel2.Controls.Add(txtRegistrationNotes, 1, 0);
+            tableLayoutPanel2.Location = new System.Drawing.Point(4, 6);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(439, 69);
+            tableLayoutPanel2.TabIndex = 2;
             // 
             // lblRegistrationNotes
             // 
-            this.lblRegistrationNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRegistrationNotes.AutoSize = true;
-            this.lblRegistrationNotes.Location = new System.Drawing.Point(3, 23);
-            this.lblRegistrationNotes.Name = "lblRegistrationNotes";
-            this.lblRegistrationNotes.Size = new System.Drawing.Size(90, 13);
-            this.lblRegistrationNotes.TabIndex = 0;
-            this.lblRegistrationNotes.Text = "Notes:";
+            lblRegistrationNotes.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblRegistrationNotes.AutoSize = true;
+            lblRegistrationNotes.Location = new System.Drawing.Point(4, 27);
+            lblRegistrationNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblRegistrationNotes.Name = "lblRegistrationNotes";
+            lblRegistrationNotes.Size = new System.Drawing.Size(104, 15);
+            lblRegistrationNotes.TabIndex = 0;
+            lblRegistrationNotes.Text = "Notes:";
             // 
             // txtRegistrationNotes
             // 
-            this.txtRegistrationNotes.Location = new System.Drawing.Point(99, 3);
-            this.txtRegistrationNotes.Multiline = true;
-            this.txtRegistrationNotes.Name = "txtRegistrationNotes";
-            this.txtRegistrationNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtRegistrationNotes.Size = new System.Drawing.Size(274, 54);
-            this.txtRegistrationNotes.TabIndex = 1;
+            txtRegistrationNotes.Location = new System.Drawing.Point(116, 3);
+            txtRegistrationNotes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtRegistrationNotes.Multiline = true;
+            txtRegistrationNotes.Name = "txtRegistrationNotes";
+            txtRegistrationNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            txtRegistrationNotes.Size = new System.Drawing.Size(319, 62);
+            txtRegistrationNotes.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.39024F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.60976F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.tableLayoutPanel3.Controls.Add(this.btnNextRegistration, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnBackRegistration, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(276, 333);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(156, 41);
-            this.tableLayoutPanel3.TabIndex = 3;
+            tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.39024F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.60976F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            tableLayoutPanel3.Controls.Add(btnNextRegistration, 2, 0);
+            tableLayoutPanel3.Controls.Add(btnBackRegistration, 0, 0);
+            tableLayoutPanel3.Controls.Add(label1, 1, 0);
+            tableLayoutPanel3.Location = new System.Drawing.Point(322, 384);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(182, 47);
+            tableLayoutPanel3.TabIndex = 3;
             // 
             // btnNextRegistration
             // 
-            this.btnNextRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNextRegistration.FlatAppearance.BorderSize = 0;
-            this.btnNextRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextRegistration.Image = global::TravelExpenses.Properties.Resources.next;
-            this.btnNextRegistration.Location = new System.Drawing.Point(91, 3);
-            this.btnNextRegistration.Name = "btnNextRegistration";
-            this.btnNextRegistration.Size = new System.Drawing.Size(61, 34);
-            this.btnNextRegistration.TabIndex = 2;
-            this.btnNextRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNextRegistration.UseVisualStyleBackColor = true;
-            this.btnNextRegistration.Click += new System.EventHandler(this.btnNextRegistration_Click);
+            btnNextRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnNextRegistration.FlatAppearance.BorderSize = 0;
+            btnNextRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnNextRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnNextRegistration.Image = (System.Drawing.Image)resources.GetObject("btnNextRegistration.Image");
+            btnNextRegistration.Location = new System.Drawing.Point(106, 4);
+            btnNextRegistration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnNextRegistration.Name = "btnNextRegistration";
+            btnNextRegistration.Size = new System.Drawing.Size(71, 39);
+            btnNextRegistration.TabIndex = 2;
+            btnNextRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnNextRegistration.UseVisualStyleBackColor = true;
+            btnNextRegistration.Click += btnNextRegistration_Click;
             // 
             // btnBackRegistration
             // 
-            this.btnBackRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBackRegistration.FlatAppearance.BorderSize = 0;
-            this.btnBackRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackRegistration.Image = global::TravelExpenses.Properties.Resources.back;
-            this.btnBackRegistration.Location = new System.Drawing.Point(3, 3);
-            this.btnBackRegistration.Name = "btnBackRegistration";
-            this.btnBackRegistration.Size = new System.Drawing.Size(59, 34);
-            this.btnBackRegistration.TabIndex = 1;
-            this.btnBackRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBackRegistration.UseVisualStyleBackColor = true;
-            this.btnBackRegistration.Click += new System.EventHandler(this.btnBackRegistration_Click);
+            btnBackRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            btnBackRegistration.FlatAppearance.BorderSize = 0;
+            btnBackRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnBackRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnBackRegistration.Image = (System.Drawing.Image)resources.GetObject("btnBackRegistration.Image");
+            btnBackRegistration.Location = new System.Drawing.Point(4, 4);
+            btnBackRegistration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnBackRegistration.Name = "btnBackRegistration";
+            btnBackRegistration.Size = new System.Drawing.Size(67, 39);
+            btnBackRegistration.TabIndex = 1;
+            btnBackRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnBackRegistration.UseVisualStyleBackColor = true;
+            btnBackRegistration.Click += btnBackRegistration_Click;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "|";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(79, 11);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(18, 25);
+            label1.TabIndex = 3;
+            label1.Text = "|";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCancelRegistration
             // 
-            this.btnCancelRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancelRegistration.FlatAppearance.BorderSize = 0;
-            this.btnCancelRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelRegistration.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnCancelRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelRegistration.Location = new System.Drawing.Point(12, 341);
-            this.btnCancelRegistration.Name = "btnCancelRegistration";
-            this.btnCancelRegistration.Size = new System.Drawing.Size(94, 34);
-            this.btnCancelRegistration.TabIndex = 0;
-            this.btnCancelRegistration.Text = "Cancel";
-            this.btnCancelRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelRegistration.UseVisualStyleBackColor = true;
-            this.btnCancelRegistration.Click += new System.EventHandler(this.btnCancelRegistration_Click);
+            btnCancelRegistration.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            btnCancelRegistration.FlatAppearance.BorderSize = 0;
+            btnCancelRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnCancelRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancelRegistration.Image = (System.Drawing.Image)resources.GetObject("btnCancelRegistration.Image");
+            btnCancelRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnCancelRegistration.Location = new System.Drawing.Point(14, 393);
+            btnCancelRegistration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCancelRegistration.Name = "btnCancelRegistration";
+            btnCancelRegistration.Size = new System.Drawing.Size(94, 39);
+            btnCancelRegistration.TabIndex = 0;
+            btnCancelRegistration.Text = "Cancel";
+            btnCancelRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnCancelRegistration.UseVisualStyleBackColor = true;
+            btnCancelRegistration.Click += btnCancelRegistration_Click;
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tableLayoutPanel2);
-            this.panel2.Location = new System.Drawing.Point(33, 189);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(382, 68);
-            this.panel2.TabIndex = 4;
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(tableLayoutPanel2);
+            panel2.Location = new System.Drawing.Point(38, 218);
+            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(445, 78);
+            panel2.TabIndex = 4;
             // 
             // Registration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 386);
-            this.ControlBox = false;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.btnCancelRegistration);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Registration";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registration";
-            this.Load += new System.EventHandler(this.Registration_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(518, 445);
+            ControlBox = false;
+            Controls.Add(panel2);
+            Controls.Add(tableLayoutPanel3);
+            Controls.Add(btnCancelRegistration);
+            Controls.Add(tableLayoutPanel1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "Registration";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Registration";
+            Load += Registration_Load;
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion

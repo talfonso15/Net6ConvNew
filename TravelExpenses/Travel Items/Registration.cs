@@ -176,8 +176,10 @@ namespace TravelExpenses
             }
         }
 
-        private bool nextValidations() {
-            if (txtResgistrationCost.Text == "") {
+        private bool nextValidations()
+        {
+            if (txtResgistrationCost.Text == "")
+            {
                 MessageBox.Show("Enter the Registration Cost", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -268,10 +270,10 @@ namespace TravelExpenses
             }
         }
 
-       /* private void Registration_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void Registration_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
         private void Registration_Load(object sender, EventArgs e)
         {

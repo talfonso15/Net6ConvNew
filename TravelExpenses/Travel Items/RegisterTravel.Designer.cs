@@ -164,12 +164,12 @@
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(btnTravelNext, 1, 0);
-            tableLayoutPanel1.Location = new System.Drawing.Point(360, 632);
+            tableLayoutPanel1.Location = new System.Drawing.Point(360, 626);
             tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(224, 46);
+            tableLayoutPanel1.Size = new System.Drawing.Size(207, 40);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // btnTravelNext
@@ -179,10 +179,10 @@
             btnTravelNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnTravelNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnTravelNext.Image = (System.Drawing.Image)resources.GetObject("btnTravelNext.Image");
-            btnTravelNext.Location = new System.Drawing.Point(123, 3);
+            btnTravelNext.Location = new System.Drawing.Point(110, 3);
             btnTravelNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             btnTravelNext.Name = "btnTravelNext";
-            btnTravelNext.Size = new System.Drawing.Size(89, 39);
+            btnTravelNext.Size = new System.Drawing.Size(89, 34);
             btnTravelNext.TabIndex = 0;
             btnTravelNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnTravelNext.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@
             btnCancelTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnCancelTravel.Image = (System.Drawing.Image)resources.GetObject("btnCancelTravel.Image");
             btnCancelTravel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnCancelTravel.Location = new System.Drawing.Point(19, 636);
+            btnCancelTravel.Location = new System.Drawing.Point(19, 627);
             btnCancelTravel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             btnCancelTravel.Name = "btnCancelTravel";
             btnCancelTravel.Size = new System.Drawing.Size(94, 39);
@@ -413,7 +413,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(581, 673);
+            ClientSize = new System.Drawing.Size(577, 669);
             ControlBox = false;
             Controls.Add(btnInfo);
             Controls.Add(label1);
