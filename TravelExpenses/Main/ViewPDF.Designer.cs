@@ -90,7 +90,7 @@
             this.btnApproveSIgn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnApproveSIgn.Location = new System.Drawing.Point(627, 585);
             this.btnApproveSIgn.Name = "btnApproveSIgn";
-            this.btnApproveSIgn.Size = new System.Drawing.Size(149, 41);
+            this.btnApproveSIgn.Size = new System.Drawing.Size(135, 41);
             this.btnApproveSIgn.TabIndex = 2;
             this.btnApproveSIgn.Text = "Approve and Sign";
             this.btnApproveSIgn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
