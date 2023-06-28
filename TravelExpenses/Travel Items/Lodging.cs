@@ -50,7 +50,7 @@ namespace TravelExpenses
 
                 double nightCost = Convert.ToDouble(txtCostPerNight.Text) + Convert.ToDouble(txtTaxesAndFees.Text);
 
-                dtgLodgings.Rows.Add(txtFacilityName.Text, nudNumberNights.Value.ToString(), nightCost.ToString(), txtOtherTaxesAndFees.Text, txtTotal.Text, districtPay, directorApproved, txtLodgingNotes.Text,txtTaxesAndFees.Text);
+                dtgLodgings.Rows.Add(txtFacilityName.Text, nudNumberNights.Value.ToString(), nightCost.ToString(), txtOtherTaxesAndFees.Text, txtTotal.Text, districtPay, directorApproved, txtLodgingNotes.Text, txtTaxesAndFees.Text);
                 txtFacilityName.Text = "";
                 txtCostPerNight.Text = "0";
                 txtCostPerNight.Text = "";
@@ -212,14 +212,16 @@ namespace TravelExpenses
 
         private void rbNoDistrictPayLodging_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbNoDistrictPayLodging.Checked == true) {
+            if (rbNoDistrictPayLodging.Checked == true)
+            {
                 pnDirectorApprovedLodging.Visible = true;
             }
         }
 
         private void rbYesDistrictPayLodging_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbYesDistrictPayLodging.Checked == true) {
+            if (rbYesDistrictPayLodging.Checked == true)
+            {
 
                 pnDirectorApprovedLodging.Visible = false;
                 rbYesApprovedLodging.Checked = false;
@@ -249,7 +251,8 @@ namespace TravelExpenses
             //int cant = Application.OpenForms.Count;
             bool FormFound = false;
 
-            if (CommonVariables.isRegistartion == true) {
+            if (CommonVariables.isRegistartion == true)
+            {
 
                 foreach (Form child in childs)
                 {
@@ -277,7 +280,8 @@ namespace TravelExpenses
                     }
                 }
             }
-            else if (CommonVariables.isMeals == false) {
+            else if (CommonVariables.isMeals == false)
+            {
                 foreach (Form child in childs)
                 {
                     string name = child.Name;
@@ -308,11 +312,13 @@ namespace TravelExpenses
             {
                 e.Handled = true;
             }
-            
+
         }
 
-        private bool addingValidations() {
-            if (txtFacilityName.Text == "") {
+        private bool addingValidations()
+        {
+            if (txtFacilityName.Text == "")
+            {
                 MessageBox.Show("Enter the facility name", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -321,16 +327,19 @@ namespace TravelExpenses
                 MessageBox.Show("Enter the number of night", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtCostPerNight.Text == "") {
+            if (txtCostPerNight.Text == "")
+            {
                 MessageBox.Show("Enter the cost per night", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            
-            if (txtTaxesAndFees.Text == "") {
+
+            if (txtTaxesAndFees.Text == "")
+            {
                 MessageBox.Show("Enter the taxes and fees per night or if you do not have any just put zero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtOtherTaxesAndFees.Text == "") {
+            if (txtOtherTaxesAndFees.Text == "")
+            {
                 MessageBox.Show("Enter other taxes and fees or if you do not have any just put zero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -343,10 +352,12 @@ namespace TravelExpenses
             return true;
         }
 
-        private bool nextValidation() {
+        private bool nextValidation()
+        {
             int cantLodg = dtgLodgings.RowCount;
             //cantLodg = cantLodg - 1;
-            if (cantLodg <= 0) {
+            if (cantLodg <= 0)
+            {
                 MessageBox.Show("Add at least one lodging", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -367,14 +378,15 @@ namespace TravelExpenses
             }
         }
 
-       /* private void Lodging_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void Lodging_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
         private void txtTaxesAndFees_KeyUp(object sender, KeyEventArgs e)
         {
-            if (txtCostPerNight.Text != "" && txtTaxesAndFees.Text != "" && nudNumberNights.Value > 0 && txtOtherTaxesAndFees.Text != "") {
+            if (txtCostPerNight.Text != "" && txtTaxesAndFees.Text != "" && nudNumberNights.Value > 0 && txtOtherTaxesAndFees.Text != "")
+            {
                 double totalPerNight = Convert.ToDouble(txtCostPerNight.Text) + Convert.ToDouble(txtTaxesAndFees.Text);
                 double totalLod = (totalPerNight * Convert.ToInt32(nudNumberNights.Value)) + Convert.ToDouble(txtOtherTaxesAndFees.Text);
                 txtTotal.Text = totalLod.ToString();
@@ -438,7 +450,7 @@ namespace TravelExpenses
         private void txtTotal_KeyUp(object sender, KeyEventArgs e)
         {
             // if (rbYesDiffRates.Checked && nudNumberNights.Value.ToString() != "0" && txtTotal.Text != "") this is before deleting the cost per nigh requested by jessica
-            if ( nudNumberNights.Value.ToString() != "0" && txtTotal.Text != "")
+            if (nudNumberNights.Value.ToString() != "0" && txtTotal.Text != "")
             {
                 double total = Convert.ToDouble(txtTotal.Text);
                 int totalNights = Convert.ToInt32(nudNumberNights.Value.ToString());
