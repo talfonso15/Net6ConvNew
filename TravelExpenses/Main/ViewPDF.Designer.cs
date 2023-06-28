@@ -50,7 +50,7 @@
             this.axAcroPDF1.Location = new System.Drawing.Point(17, 26);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(759, 549);
+            this.axAcroPDF1.Size = new System.Drawing.Size(870, 620);
             this.axAcroPDF1.TabIndex = 0;
             // 
             // btnClose
@@ -59,14 +59,15 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::TravelExpenses.Properties.Resources.if_Close_1891023;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
+            //this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnClose.ForeColor = System.Drawing.Color.DarkRed;
             this.btnClose.Location = new System.Drawing.Point(12, 592);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(84, 34);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 

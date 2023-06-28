@@ -129,7 +129,7 @@ please enter the total in your invoice if it different from the calculated one.<
   <data name="btnAddFlight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAA0hJREFUWEe9V11LFFEYdrvo4yLQnXZWofQPpCISBV14E5vrB0QgEQZ1k1ok0od6
+        DwAACw8BkvkDpQAAA0hJREFUWEe9V11LFFEYdrvo4yLQnXZWofQPpCISBV14E5vrB0QgEQZ1k1ok0od6
         Fdpt2h/IDyzWhF2FoL/Qh10FQUWllf6AkAIDvbDn2Z4zzOzH7Gk2euBhznne97zve86cmTlT8xeIdXV1
         nezu7h5Pp9NL4Cr4QWSb2lhnZ+cJ+v4Z8g+AgAcQ+Bb4BQXsWXIN/iN9fX37FSYSOONLCPStMDj4EPok
         VmOAZBvajGyer4q+qHj26OjoOIiBGV+gbfA+kh2XS1nArxmc4hjf+AWupFzCgQH1GLDqG/wYg4/KbI1U
@@ -179,7 +179,7 @@ please enter the total in your invoice if it different from the calculated one.<
   <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAOpJREFUSEutllEOgkAMRPnyHsAfRyB6PvFaEm+iXgNbM0sq6Ui74SUT09nZYUkw
+        DwAACw8BkvkDpQAAAOpJREFUSEutllEOgkAMRPnyHsAfRyB6PvFaEm+iXgNbM0sq6Ui74SUT09nZYUkw
         0OwxDMOp7/ub6C1aVF3XveR30jXE6tGiUuxoQqwenFbLRljqndXTNVj1oHzBuMJ8FznJo2w4UDPqv6eZ
         N4tH6I76X5xgSqjheJsyQg3H25QRajibDWN5JINz7gKwVg8jna1H8cLR2XoULxydrUfxwtHZehQvHJ2t
         R/HC0dl6FC8cna1H8cLR2XoUG9Y/Udu2l+isQg3HhmuEGo6cqrzB0pK9T9RwJPjvHbynK2o4+IqYMneC
@@ -189,7 +189,7 @@ please enter the total in your invoice if it different from the calculated one.<
   <data name="btnNextFlight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABB5JREFUWEetV1loFEEQbe8DBFHxwC8VEVHw039BEEHxRLw+FPXLDxVERXRlZnYT
+        DwAACw8BkvkDpQAABB5JREFUWEetV1loFEEQbe8DBFHxwC8VEVHw039BEEHxRLw+FPXLDxVERXRlZnYT
         E2O8D/BL9ENRBBGieCAiHhAxTvdsLo0xHjGaGLNx3ZjVtFU1PZvd2c7uZJMHj+zsVter6a6qrrB+46Ic
         wcLR+SzsrGBG9QZixFnKDGc2C8mhymqQEaocy0yxnZn8ATAOlFoa/AezxC0WFmvYdTlMrR4A8I1Crzcx
         w25KiYSrJSuul6ykQbLSRpdH37nfWU56QHVgu0F5KgDFfC68ddR1JlzB8i+SnfyWm8c/QTBv0wIRj1io
@@ -213,7 +213,7 @@ please enter the total in your invoice if it different from the calculated one.<
   <data name="btnBackFlight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABExJREFUWEe1V11sFFUUvigYlIgagi/E6IvhwRiNMSZGIjzwpDFKgr+JwZ/EB030
+        DwAACw8BkvkDpQAABExJREFUWEe1V11sFFUUvigYlIgagi/E6IvhwRiNMSZGIjzwpDFKgr+JwZ/EB030
         TYwYRmZm221rCyhSagJPPpCIJgTRSIz4gISHSrozs7MtpYUitNJuge3vdm33eM69Z8r+nO6f+CVfdmfm
         3POde8+5Z+6oumEnH1ZO+Lpy/E+Vk+zQdP0dyk69gVzPVrcYbt865QStyvaGUBgq0g0vKTfZjoE9yKP/
         A1pSdyunZ6dyvEkjEIBqPgeq7SKoL/4C1XHZkP7TPXpGNiaYHP7vVE3hGvZWJ3aFT6OTEZ4VilwCtecq
@@ -237,7 +237,7 @@ please enter the total in your invoice if it different from the calculated one.<
   <data name="btnCancelFlight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAA1tJREFUWEetV1tPU0EQ3nj7BQK7B4oa33g1guKrD2oEIwT/iIpQnyRREbwgf0Af
+        DwAACw8BkvkDpQAAA1tJREFUWEetV1tPU0EQ3nj7BQK7B4oa33g1guKrD2oEIwT/iIpQnyRREbwgf0Af
         ePJJRUJA5LSUkBYqYAIkYFTuqJRrSWjwYZ3ZLrDn1rMt/ZJJmjkz30xn5+zMIbqYKCs7FaL0eoixVpDO
         kMFGQowuChG/QcdYC9qgrXQ7OgYDAQOJTUbXIBDXEkYT6BMuPc0kTfYwCTkBJEEg3HEE0Jcdk7EG5JK0
         ehD/2qCDLoQ5Co1oV+NLoOC8abCfbkThQAn/dqeOz71u44m+z3wrHuebsRj/2/lR6Earq4SNmy9yIrcM

@@ -700,6 +700,7 @@
             btnCancelFlight.FlatAppearance.BorderSize = 0;
             btnCancelFlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnCancelFlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnCancelFlight.ForeColor = System.Drawing.SystemColors.ControlText;
             btnCancelFlight.Image = (System.Drawing.Image)resources.GetObject("btnCancelFlight.Image");
             btnCancelFlight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnCancelFlight.Location = new System.Drawing.Point(51, 860);
