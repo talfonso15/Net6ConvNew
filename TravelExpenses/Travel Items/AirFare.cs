@@ -18,7 +18,8 @@ namespace TravelExpenses
 
         private void txtFlightTaxesAndFees_KeyUp(object sender, KeyEventArgs e)
         {
-            if (txtFlightCost.Text != "" && txtFlightTaxesAndFees.Text != "") {
+            if (txtFlightCost.Text != "" && txtFlightTaxesAndFees.Text != "")
+            {
                 double totalFlight = Convert.ToDouble(txtFlightCost.Text) + Convert.ToDouble(txtFlightTaxesAndFees.Text);
                 txtFlightTotal.Text = totalFlight.ToString();
             }
@@ -30,7 +31,8 @@ namespace TravelExpenses
             {
                 txtPersonalAmountFlight.Enabled = true;
             }
-            else if (rbNoPersonalUseFlight.Checked == true) {
+            else if (rbNoPersonalUseFlight.Checked == true)
+            {
 
                 txtPersonalAmountFlight.Enabled = false;
             }
@@ -52,7 +54,8 @@ namespace TravelExpenses
                 {
                     personalUse = true;
                 }
-                if (rbYesRoundTrip.Checked) {
+                if (rbYesRoundTrip.Checked)
+                {
                     retDate = dtpFlightReturnDate.Text;
                 }
 
@@ -90,10 +93,11 @@ namespace TravelExpenses
                         {
                             afare.ReturnDate = Convert.ToDateTime(dgvFlight.Rows[i].Cells[1].Value);
                         }
-                        else {
+                        else
+                        {
                             afare.ReturnDate = null;
                         }
-                        
+
                         afare.AirFareCost = Convert.ToDouble(dgvFlight.Rows[i].Cells[2].Value);
                         afare.TaxesAndFees = Convert.ToDouble(dgvFlight.Rows[i].Cells[3].Value);
                         afare.DistrictPay = Convert.ToBoolean(dgvFlight.Rows[i].Cells[4].Value);
@@ -190,39 +194,46 @@ namespace TravelExpenses
                 }
                 this.Hide();
             }
-    }
+        }
 
         private void rbYesRoundTrip_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbYesRoundTrip.Checked) {
+            if (rbYesRoundTrip.Checked)
+            {
                 dtpFlightReturnDate.Enabled = true;
             }
         }
 
         private void rbNoRoundTrip_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbNoRoundTrip.Checked) {
+            if (rbNoRoundTrip.Checked)
+            {
                 dtpFlightReturnDate.Enabled = false;
             }
         }
 
         private void rbNoPersonalUseFlight_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbNoPersonalUseFlight.Checked) {
+            if (rbNoPersonalUseFlight.Checked)
+            {
                 txtPersonalAmountFlight.Enabled = false;
             }
         }
 
-        private bool addingValidations() {
-            if (txtFlightCost.Text == "") {
+        private bool addingValidations()
+        {
+            if (txtFlightCost.Text == "")
+            {
                 MessageBox.Show("Enter the Flight Cost", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtFlightTaxesAndFees.Text == "") {
+            if (txtFlightTaxesAndFees.Text == "")
+            {
                 MessageBox.Show("Enter the Taxes and Fees or if you do not have any just put 0", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (rbYesPersonalUseFlight.Checked && txtPersonalAmountFlight.Text == "") {
+            if (rbYesPersonalUseFlight.Checked && txtPersonalAmountFlight.Text == "")
+            {
                 MessageBox.Show("Enter the Personal Use Amount", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -234,9 +245,11 @@ namespace TravelExpenses
             return true;
         }
 
-        private bool nextValidation() {
+        private bool nextValidation()
+        {
             int quantFlights = dgvFlight.RowCount;
-            if (quantFlights <= 0) {
+            if (quantFlights <= 0)
+            {
                 MessageBox.Show("Add at least a Flight", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -389,14 +402,15 @@ namespace TravelExpenses
             CommonVariables.CancelTravel();
         }
 
-       /* private void AirFare_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void AirFare_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
         private void txtFlightCost_KeyUp(object sender, KeyEventArgs e)
         {
-            if (txtFlightCost.Text != "" && txtFlightTaxesAndFees.Text != "") {
+            if (txtFlightCost.Text != "" && txtFlightTaxesAndFees.Text != "")
+            {
                 double totalFLight = Convert.ToDouble(txtFlightCost.Text) + Convert.ToDouble(txtFlightTaxesAndFees.Text);
                 txtFlightTotal.Text = totalFLight.ToString();
             }
