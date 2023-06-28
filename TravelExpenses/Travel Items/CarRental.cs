@@ -38,14 +38,16 @@ namespace TravelExpenses
 
         private void rbYesPersonalUseCarRental_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbYesPersonalUseCarRental.Checked == true) {
+            if (rbYesPersonalUseCarRental.Checked == true)
+            {
                 pPersonalAmount.Enabled = true;
             }
         }
 
         private void rbNoPersonalUseCarRental_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbNoPersonalUseCarRental.Checked == true) {
+            if (rbNoPersonalUseCarRental.Checked == true)
+            {
                 pPersonalAmount.Enabled = false;
             }
         }
@@ -78,8 +80,8 @@ namespace TravelExpenses
                     personalUseAmount = 0;
                 }
 
-                string pikUpDate = dtpPickUpDateCarRental.Text;
-                string dropOffDate = dtpDropOffDateCarRental.Text;
+                DateTime pikUpDate = dtpPickUpDateCarRental.Value.Date;
+                DateTime dropOffDate = dtpDropOffDateCarRental.Value.Date;
                 string carType = cbCarType.SelectedItem.ToString();
                 string rentalCOmpany = cbRentalCompany.SelectedItem.ToString();
                 string days = nudDays.Value.ToString();
@@ -97,7 +99,7 @@ namespace TravelExpenses
                 }
 
 
-                dgvCarRental.Rows.Add(pikUpDate, dropOffDate, carType, rentalCOmpany, days, carCost, taxesAndFees, districtPay, personalUse, personalUseAmount.ToString(), ldwInsurance, supplementalIns, extraIns, extraInsAmount, TotalCaRental, notes);
+                dgvCarRental.Rows.Add(pikUpDate.ToShortDateString(), dropOffDate.ToShortDateString(), carType, rentalCOmpany, days, carCost, taxesAndFees, districtPay, personalUse, personalUseAmount.ToString(), ldwInsurance, supplementalIns, extraIns, extraInsAmount, TotalCaRental, notes);
 
                 dtpPickUpDateCarRental.Value = DateTime.Today;
                 dtpDropOffDateCarRental.Value = DateTime.Today.AddDays(1);
@@ -277,7 +279,8 @@ namespace TravelExpenses
 
                 txtExtraInsuranceAmount.Enabled = true;
             }
-            else {
+            else
+            {
                 txtExtraInsuranceAmount.Enabled = false;
                 txtExtraInsuranceAmount.Text = "";
             }
@@ -296,38 +299,47 @@ namespace TravelExpenses
             //dailyCostCalculation();
         }
 
-        private bool addingValidations() {
-            
-            
-            if (cbCarType.SelectedIndex == -1) {
+        private bool addingValidations()
+        {
+
+
+            if (cbCarType.SelectedIndex == -1)
+            {
                 MessageBox.Show("Select a Car Type", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (cbRentalCompany.SelectedIndex == -1) {
+            if (cbRentalCompany.SelectedIndex == -1)
+            {
                 MessageBox.Show("Select a Rental Company", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (nudDays.Value <= 0) {
+            if (nudDays.Value <= 0)
+            {
                 MessageBox.Show("Enter the number of Days", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtCarCost.Text == "") {
+            if (txtCarCost.Text == "")
+            {
                 MessageBox.Show("Enter the Car Cost Per Day", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtCarTaxesAndFees.Text == "") {
+            if (txtCarTaxesAndFees.Text == "")
+            {
                 MessageBox.Show("Enter the Taxes and Fees or if you do not have any put zero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtLDWInsurance.Text == "") {
+            if (txtLDWInsurance.Text == "")
+            {
                 MessageBox.Show("Enter the LDW Insurance Amount or if this amount is included on the cost per day just put zero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (txtSupplementalInsurance.Text == "") {
+            if (txtSupplementalInsurance.Text == "")
+            {
                 MessageBox.Show("Enter the Supplemental Insurance Amount or if this amount is included on the cost per day just put zero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (chxExtraInsurance.Checked == true && txtExtraInsuranceAmount.Text == "") {
+            if (chxExtraInsurance.Checked == true && txtExtraInsuranceAmount.Text == "")
+            {
                 MessageBox.Show("Enter the Extra Insurance Amount", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -339,9 +351,11 @@ namespace TravelExpenses
             return true;
         }
 
-        private bool nextValidation() {
+        private bool nextValidation()
+        {
             int carCount = dgvCarRental.RowCount;
-            if (carCount <= 0) {
+            if (carCount <= 0)
+            {
                 MessageBox.Show("Add at least one car rental", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
@@ -475,7 +489,8 @@ namespace TravelExpenses
             Form[] childs = main.MdiChildren;
             //int cant = Application.OpenForms.Count;
             bool FormFound = false;
-            if (CommonVariables.isLodging == true) {
+            if (CommonVariables.isLodging == true)
+            {
                 foreach (Form child in childs)
                 {
                     string name = child.Name;
@@ -487,7 +502,8 @@ namespace TravelExpenses
                         FormFound = true;
                     }
                 }
-            } else if (CommonVariables.isRegistartion == true)
+            }
+            else if (CommonVariables.isRegistartion == true)
             {
                 foreach (Form child in childs)
                 {
@@ -540,20 +556,23 @@ namespace TravelExpenses
             CommonVariables.CancelTravel();
         }
 
-       /* private void CarRental_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void CarRental_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
-        private void calculateTotalCar() {
-            if (nudDays.Value > 0 && txtCarCost.Text != "" && txtCarTaxesAndFees.Text != "" && txtLDWInsurance.Text != "" && txtSupplementalInsurance.Text != "") {
+        private void calculateTotalCar()
+        {
+            if (nudDays.Value > 0 && txtCarCost.Text != "" && txtCarTaxesAndFees.Text != "" && txtLDWInsurance.Text != "" && txtSupplementalInsurance.Text != "")
+            {
                 double totalCar = 0;
                 if (chxExtraInsurance.Checked && txtExtraInsuranceAmount.Text != "")
                 {
-                     totalCar = (Convert.ToDouble(txtCarCost.Text) * Convert.ToInt32(nudDays.Value)) + Convert.ToDouble(txtCarTaxesAndFees.Text) + Convert.ToDouble(txtLDWInsurance.Text) + Convert.ToDouble(txtSupplementalInsurance.Text) + Convert.ToDouble(txtExtraInsuranceAmount.Text);
+                    totalCar = (Convert.ToDouble(txtCarCost.Text) * Convert.ToInt32(nudDays.Value)) + Convert.ToDouble(txtCarTaxesAndFees.Text) + Convert.ToDouble(txtLDWInsurance.Text) + Convert.ToDouble(txtSupplementalInsurance.Text) + Convert.ToDouble(txtExtraInsuranceAmount.Text);
                     txtTotalCarRental.Text = totalCar.ToString();
                 }
-                else {
+                else
+                {
                     totalCar = (Convert.ToDouble(txtCarCost.Text) * Convert.ToInt32(nudDays.Value)) + Convert.ToDouble(txtCarTaxesAndFees.Text) + Convert.ToDouble(txtLDWInsurance.Text) + Convert.ToDouble(txtSupplementalInsurance.Text);
                     txtTotalCarRental.Text = totalCar.ToString();
                 }
@@ -575,7 +594,7 @@ namespace TravelExpenses
         private void txtCarCost_KeyUp(object sender, KeyEventArgs e)
         {
             calculateTotalCar();
-            
+
         }
 
         private void txtLDWInsurance_KeyUp(object sender, KeyEventArgs e)
