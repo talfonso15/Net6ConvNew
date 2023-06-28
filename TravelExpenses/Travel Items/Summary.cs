@@ -55,14 +55,14 @@ namespace TravelExpenses
             double totalTravel = 0;
             double notReimbursement = 0;
             double totalReimbursement = 0;
-            
+
 
             //Travel details
             if (CommonVariables.addingItems)
             {
                 localCon.Open();
                 Guid travAddID = new Guid(CommonVariables.addingTravelID);
-                SqlCommand td = new SqlCommand("SELECT [DepartureTime],[DepartureDate],[ReturnTime],[ReturnDate],[TravelEvent],[TravelPurpose],[Origin],[Destination],[TravelState],[Notes] FROM [TravelExpenses].[dbo].[Travel] where TravelID = '"+ travAddID + "'", localCon);
+                SqlCommand td = new SqlCommand("SELECT [DepartureTime],[DepartureDate],[ReturnTime],[ReturnDate],[TravelEvent],[TravelPurpose],[Origin],[Destination],[TravelState],[Notes] FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + travAddID + "'", localCon);
                 SqlDataReader dr = td.ExecuteReader();
                 while (dr.Read())
                 {
@@ -92,7 +92,7 @@ namespace TravelExpenses
                 txtDestinationSummary.Text = CommonVariables.travelDestination.ToString();
                 txtTravelStateSummary.Text = CommonVariables.travelState.ToString();
                 txtDetailNotesSummary.Text = CommonVariables.travelNotes.ToString();
-                
+
             }
 
             //Meals
@@ -116,7 +116,8 @@ namespace TravelExpenses
                 txtDinnerPerDiemRate.Text = CommonVariables.mcl.DinnerPerDiemRate.ToString();
                 txtZipCode.Text = CommonVariables.mcl.PerDiemLoactionZipCode.ToString();
             }
-            else {
+            else
+            {
                 tabMeals.Visible = false;
                 tcTravelSummary.TabPages.Remove(tabMeals);
             }
@@ -133,7 +134,8 @@ namespace TravelExpenses
                 }
                 totalTravel = totalTravel + Convert.ToDouble(CommonVariables.rg.RegistrationAmount.ToString());
             }
-            else {
+            else
+            {
                 tcTravelSummary.TabPages.Remove(tabRegistration);
             }
 
@@ -171,7 +173,8 @@ namespace TravelExpenses
                     totalTravel = totalTravel + totalLod;
                 }
             }
-            else {
+            else
+            {
                 tcTravelSummary.TabPages.Remove(tabLodgings);
             }
 
@@ -209,7 +212,7 @@ namespace TravelExpenses
                             {
                                 totalReimbursement = totalReimbursement + Convert.ToDouble(CommonVariables.crcl[i].TotalCarRental.ToString());
                             }
-                                
+
                         }
                         if (CommonVariables.crcl[i].PersonalUseAmount.ToString() != "")
                         {
@@ -248,7 +251,8 @@ namespace TravelExpenses
                     totalTravel = totalTravel + totalCar;
                 }
             }
-            else {
+            else
+            {
                 tcTravelSummary.TabPages.Remove(tabRentalCars);
             }
 
@@ -292,7 +296,7 @@ namespace TravelExpenses
                             {
                                 totalReimbursement = totalReimbursement + Convert.ToDouble(CommonVariables.afcl[i].TotalAirFare.ToString());
                             }
-                                
+
                         }
                         if (CommonVariables.afcl[i].PersonalUseAmount.ToString() != "")
                         {
@@ -314,7 +318,8 @@ namespace TravelExpenses
 
 
             }
-            else {
+            else
+            {
                 tcTravelSummary.TabPages.Remove(tabAirFare);
             }
 
@@ -347,7 +352,8 @@ namespace TravelExpenses
                 txtMapTotal.Text = CommonVariables.micl.TotalMileage.ToString();
                 totalTravel = totalTravel + Convert.ToDouble(CommonVariables.micl.TotalMileage.ToString());
             }
-            else {
+            else
+            {
                 tcTravelSummary.TabPages.Remove(tabMileage);
             }
 
@@ -383,10 +389,11 @@ namespace TravelExpenses
                     tlpOtherExpenses.GetControlFromPosition(2, 8).Text = expTotal.ToString();
                     totalTravel = totalTravel + expTotal;
                 }
-                
+
 
             }
-            else {
+            else
+            {
                 tcTravelSummary.TabPages.Remove(tabOtherExpenses);
             }
 
@@ -428,10 +435,10 @@ namespace TravelExpenses
 
         }
 
-       /* private void Summary_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CommonVariables.CancelTravel();
-        }*/
+        /* private void Summary_FormClosed(object sender, FormClosedEventArgs e)
+         {
+             CommonVariables.CancelTravel();
+         }*/
 
         private void btnSaveSplitTravel_Click(object sender, EventArgs e)
         {
@@ -464,7 +471,7 @@ namespace TravelExpenses
             }
             else
             {
-                
+
                 if (travelSaved)
                 {
                     //generateSummarizedPDF();
@@ -520,7 +527,8 @@ namespace TravelExpenses
         }
 
 
-        private void generateSummarizedPDF() {
+        private void generateSummarizedPDF()
+        {
 
             localCon.Open();
             string name = "";
@@ -538,7 +546,7 @@ namespace TravelExpenses
                 lastname = drUser["LastName"].ToString();
                 district = drUser["District"].ToString();
                 department = drUser["Department"].ToString();
-                username = drUser["Username"].ToString(); 
+                username = drUser["Username"].ToString();
             }
             drUser.Close();
             fullName = name + " " + lastname;
@@ -549,7 +557,7 @@ namespace TravelExpenses
             string pdfName = fullName + "_" + CommonVariables.travelDepartureDate.ToShortDateString() + "_" + "to" + "_" + CommonVariables.travelReturnDate.ToShortDateString() + ".pdf";
             pdfName = pdfName.Replace("/", "-");
             winUser = winUser.Replace("/", "-");
-            string newFile = @"\\LCMHCD\Home\"+ winUser + "\\" + "travel\\travel_form(Summarized)_" + pdfName;
+            string newFile = @"\\LCMHCD\Home\" + winUser + "\\" + "travel\\travel_form(Summarized)_" + pdfName;
             CommonVariables.filePath = newFile;
 
             //new code for net 6
@@ -617,10 +625,11 @@ namespace TravelExpenses
             toSet.SetValue(CommonVariables.travelState);
 
             //Meals Details
-            if (CommonVariables.isMeals) {
+            if (CommonVariables.isMeals)
+            {
                 string mealCost = CommonVariables.mcl.MealsTotal.ToString("C", CultureInfo.CurrentCulture);
                 mealCost = mealCost.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostMeals", mealCost); //commented for net6
                 fields.TryGetValue("CostMeals", out toSet);
                 toSet.SetValue(mealCost);
@@ -631,10 +640,11 @@ namespace TravelExpenses
             }
 
             //Registration
-            if (CommonVariables.isRegistartion) {
+            if (CommonVariables.isRegistartion)
+            {
                 string regCost = CommonVariables.rg.RegistrationAmount.ToString("C", CultureInfo.CurrentCulture);
                 regCost = regCost.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostRegistration", regCost); //commented for net6
                 fields.TryGetValue("CostRegistration", out toSet);
                 toSet.SetValue(regCost);
@@ -645,9 +655,11 @@ namespace TravelExpenses
             }
 
             //Lodgings
-            if (CommonVariables.isLodging) {
+            if (CommonVariables.isLodging)
+            {
                 string notesLod = "";
-                for (int i = 0; i < CommonVariables.lcl.Count; i++) {
+                for (int i = 0; i < CommonVariables.lcl.Count; i++)
+                {
                     if (CommonVariables.lcl[i].Notes != "")
                     {
                         notesLod += CommonVariables.lcl[i].Notes + ". ";
@@ -656,7 +668,7 @@ namespace TravelExpenses
                 double lodCostDouble = Convert.ToDouble(txtTotalLod.Text);
                 string lodCost = lodCostDouble.ToString("C", CultureInfo.CurrentCulture);
                 lodCost = lodCost.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostLodgings", lodCost); //commented for net6
                 fields.TryGetValue("CostLodgings", out toSet);
                 toSet.SetValue(lodCost);
@@ -667,9 +679,11 @@ namespace TravelExpenses
             }
 
             //Car Rentals
-            if (CommonVariables.isCarRental) {
+            if (CommonVariables.isCarRental)
+            {
                 string notesCar = "";
-                for (int i = 0; i < CommonVariables.crcl.Count; i++) {
+                for (int i = 0; i < CommonVariables.crcl.Count; i++)
+                {
                     if (CommonVariables.crcl[i].Notes != "")
                     {
                         notesCar = CommonVariables.crcl[i].Notes + ". ";
@@ -679,7 +693,7 @@ namespace TravelExpenses
                 double carCostDouble = Convert.ToDouble(txtTotalCar.Text);
                 string carCost = carCostDouble.ToString("C", CultureInfo.CurrentCulture);
                 carCost = carCost.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostCar Rental", carCost); //commented for net6
                 fields.TryGetValue("CostCar Rental", out toSet);
                 toSet.SetValue(carCost);
@@ -690,9 +704,11 @@ namespace TravelExpenses
             }
 
             //Air Fare
-            if (CommonVariables.isAirFare) {
+            if (CommonVariables.isAirFare)
+            {
                 string notesAir = "";
-                for (int i = 0; i < CommonVariables.afcl.Count; i++) {
+                for (int i = 0; i < CommonVariables.afcl.Count; i++)
+                {
                     if (CommonVariables.afcl[i].Notes != "")
                     {
                         notesAir += CommonVariables.afcl[i].Notes + ". ";
@@ -701,7 +717,7 @@ namespace TravelExpenses
                 double flighCOstDouble = Convert.ToDouble(txtTotalFlight.Text);
                 string flighCOst = flighCOstDouble.ToString("C", CultureInfo.CurrentCulture);
                 flighCOst = flighCOst.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostAir Fare", flighCOst); //commented for net6
                 fields.TryGetValue("CostAir Fare", out toSet);
                 toSet.SetValue(flighCOst);
@@ -712,10 +728,11 @@ namespace TravelExpenses
             }
 
             //Mileage
-            if (CommonVariables.isMileage) {
+            if (CommonVariables.isMileage)
+            {
                 string milCost = CommonVariables.micl.TotalMileage.ToString("C", CultureInfo.CurrentCulture);
                 milCost = milCost.Substring(1);
-                
+
                 //pdfFormFields.SetField("NotesMileage", CommonVariables.micl.Notes); //commented for net6
                 fields.TryGetValue("NotesMileage", out toSet);
                 toSet.SetValue(CommonVariables.micl.Notes);
@@ -726,9 +743,11 @@ namespace TravelExpenses
             }
 
             //Other Expenses
-            if (CommonVariables.isOtherExpenses) {
+            if (CommonVariables.isOtherExpenses)
+            {
                 string notesOE = "";
-                for (int i = 0; i < CommonVariables.oxcl.Count; i++) {
+                for (int i = 0; i < CommonVariables.oxcl.Count; i++)
+                {
                     if (CommonVariables.oxcl[i].Notes != "")
                     {
                         notesOE += CommonVariables.oxcl[i].Notes + ". ";
@@ -737,7 +756,7 @@ namespace TravelExpenses
                 double oeCOstDouble = Convert.ToDouble(txtTotalAmountExpenses.Text);
                 string oeCOst = oeCOstDouble.ToString("C", CultureInfo.CurrentCulture);
                 oeCOst = oeCOst.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostOther Expenses", oeCOst); //commented for net6
                 fields.TryGetValue("CostOther Expenses", out toSet);
                 toSet.SetValue(oeCOst);
@@ -754,7 +773,7 @@ namespace TravelExpenses
             reim = reim.Substring(1);
             string noReim = CommonVariables.totalNotReimbursement.ToString("C", CultureInfo.CurrentCulture);
             noReim = noReim.Substring(1);
-            
+
             //pdfFormFields.SetField("Travel Total", travTol); //commented for net6
             fields.TryGetValue("Travel Total", out toSet);
             toSet.SetValue(travTol);
@@ -788,7 +807,7 @@ namespace TravelExpenses
 
                     // BaseFont bf = BaseFont.CreateFont(); //commented for net6
                     PdfFont font = PdfFontFactory.CreateFont();
-                    
+
                     if (drPDF["FontType"].ToString() == "Mistral")
                     {
                         //bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\MISTRAL.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); //commented for net6
@@ -863,11 +882,12 @@ namespace TravelExpenses
             pdfDoc.Close();
             localCon.Close();
 
-           
+
 
         }
 
-        private void generateDetailPDF() {
+        private void generateDetailPDF()
+        {
 
             localCon.Open();
             string name = "";
@@ -1002,7 +1022,8 @@ namespace TravelExpenses
                     fields.TryGetValue("Provided Meals", out toSet);
                     toSet.SetValue("Yes");
                 }
-                else {
+                else
+                {
                     //pdfFormFields.SetField("Provided Meals", "No"); //commented for net6
                     fields.TryGetValue("Provided Meals", out toSet);
                     toSet.SetValue("No");
@@ -1057,7 +1078,8 @@ namespace TravelExpenses
                         fields.TryGetValue("Lodging Director Approval" + row, out toSet);
                         toSet.SetValue("");
                     }
-                    else {
+                    else
+                    {
                         //pdfFormFields.SetField("Lodging District Pay" + row, "No");//commented for net6
                         fields.TryGetValue("Lodging District Pay" + row, out toSet);
                         toSet.SetValue("No");
@@ -1075,7 +1097,7 @@ namespace TravelExpenses
                             toSet.SetValue("No");
                         }
                     }
-                    
+
                     //pdfFormFields.SetField("Facility  Notes" + row, CommonVariables.lcl[i].Notes); //commented for net6
                     fields.TryGetValue("Facility  Notes" + row, out toSet);
                     toSet.SetValue(CommonVariables.lcl[i].Notes);
@@ -1083,7 +1105,7 @@ namespace TravelExpenses
                     row++;
                 }
                 string lodCost = Convert.ToDouble(txtTotalLod.Text).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("Lodging Total", lodCost); //commented for net6
                 fields.TryGetValue("Lodging Total", out toSet);
                 toSet.SetValue(lodCost);
@@ -1145,7 +1167,8 @@ namespace TravelExpenses
                         fields.TryGetValue("Car District Pay" + carRow, out toSet);
                         toSet.SetValue("Yes");
                     }
-                    else {
+                    else
+                    {
                         //pdfFormFields.SetField("Car District Pay" + carRow, "No"); //commented for net6
                         fields.TryGetValue("Car District Pay" + carRow, out toSet);
                         toSet.SetValue("No");
@@ -1161,9 +1184,9 @@ namespace TravelExpenses
                     carRow++;
                 }
                 string carCost = Convert.ToDouble(txtTotalCar.Text).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("Car Rental Total", carCost); //commented for net6
-                fields.TryGetValue("Car Rental Total" , out toSet);
+                fields.TryGetValue("Car Rental Total", out toSet);
                 toSet.SetValue(carCost);
             }
 
@@ -1180,7 +1203,7 @@ namespace TravelExpenses
                     if (CommonVariables.afcl[i].ReturnDate.ToString() != "")
                     {
                         DateTime rd = Convert.ToDateTime(CommonVariables.afcl[i].ReturnDate);
-                        
+
                         //pdfFormFields.SetField("Flight_Return Date" + flightRow, rd.ToShortDateString()); //commented for net6
                         fields.TryGetValue("Flight_Return Date" + flightRow, out toSet);
                         toSet.SetValue(rd.ToShortDateString());
@@ -1199,7 +1222,8 @@ namespace TravelExpenses
                         fields.TryGetValue("Flight District Pay" + flightRow, out toSet);
                         toSet.SetValue("Yes");
                     }
-                    else {
+                    else
+                    {
                         //pdfFormFields.SetField("Flight District Pay" + flightRow, "No"); //commented for net6
                         fields.TryGetValue("Flight District Pay" + flightRow, out toSet);
                         toSet.SetValue("No");
@@ -1215,7 +1239,7 @@ namespace TravelExpenses
                     flightRow++;
                 }
                 string flightCost = Convert.ToDouble(txtTotalFlight.Text).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("Air Fare Total", flightCost); //commented for net6
                 fields.TryGetValue("Air Fare Total", out toSet);
                 toSet.SetValue(flightCost);
@@ -1243,7 +1267,8 @@ namespace TravelExpenses
                     fields.TryGetValue("Provided Vehicle", out toSet);
                     toSet.SetValue("Yes");
                 }
-                else {
+                else
+                {
                     //pdfFormFields.SetField("Provided Vehicle", "No"); //commented for net6
                     fields.TryGetValue("Provided Vehicle", out toSet);
                     toSet.SetValue("No");
@@ -1254,7 +1279,8 @@ namespace TravelExpenses
                         fields.TryGetValue("Mileage Director Approval", out toSet);
                         toSet.SetValue("Yes");
                     }
-                    else {
+                    else
+                    {
                         //pdfFormFields.SetField("Mileage Director Approval", "No"); //commented for net6
                         fields.TryGetValue("Mileage Director Approval", out toSet);
                         toSet.SetValue("No");
@@ -1282,18 +1308,18 @@ namespace TravelExpenses
                     //pdfFormFields.SetField("ExpNotes" + oxRow, CommonVariables.oxcl[i].Notes); //commented for net6
                     fields.TryGetValue("ExpNotes" + oxRow, out toSet);
                     toSet.SetValue(CommonVariables.oxcl[i].Notes);
-                    
+
                     oxRow++;
                 }
                 string oeCost = Convert.ToDouble(txtTotalAmountExpenses.Text).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("Other Expenses Total", oeCost); //commented for net6
                 fields.TryGetValue("Other Expenses Total" + oxRow, out toSet);
                 toSet.SetValue(oeCost);
             }
 
             //Tratel Totals
-            
+
             //pdfFormFields.SetField("Travel Total Cost", CommonVariables.totalTravel.ToString("C", CultureInfo.CurrentCulture).Substring(1)); //commented for net6
             fields.TryGetValue("Travel Total Cost", out toSet);
             toSet.SetValue(CommonVariables.totalTravel.ToString("C", CultureInfo.CurrentCulture).Substring(1));
@@ -1316,7 +1342,8 @@ namespace TravelExpenses
             localCon.Close();
         }
 
-        private void saveTravel() {
+        private void saveTravel()
+        {
             localCon.Open();
             Guid userID;
 
@@ -1561,7 +1588,7 @@ namespace TravelExpenses
                                         cmdOtherEx.InsertCommand.ExecuteNonQuery();
                                     }
                                 }
-                                
+
                                 travelSaved = true;
                             }
                         }
@@ -2083,7 +2110,7 @@ namespace TravelExpenses
                     MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
+
             localCon.Close();
         }
 
@@ -2119,7 +2146,8 @@ namespace TravelExpenses
                 //btnSaveSplitTravel.Enabled = false; //commented for net6
                 btnSave.Enabled = false;
             }
-            else {
+            else
+            {
                 tsmSummarizedPDF.Enabled = false;
             }
             btnBackSummary.Enabled = false;
@@ -2133,7 +2161,8 @@ namespace TravelExpenses
                 {
                     generateDetailPDFUp();
                 }
-                else {
+                else
+                {
                     addTravelItems();
                     generateDetailPDFUp();
                 }
@@ -2156,20 +2185,22 @@ namespace TravelExpenses
                 //btnSaveSplitTravel.Enabled = false; // commented for net6
                 btnSave.Enabled = false;
             }
-            else {
+            else
+            {
                 tsmDetailed.Enabled = false;
             }
             btnBackSummary.Enabled = false;
         }
 
-        private void addTravelItems() {
+        private void addTravelItems()
+        {
 
-             travId = new Guid(CommonVariables.addingTravelID);
+            travId = new Guid(CommonVariables.addingTravelID);
             double totalTravel = 0;
             double notReimbursement = 0;
             double totalReimbursement = 0;
-            
-            
+
+
 
 
             localCon.Open();
@@ -2216,17 +2247,17 @@ namespace TravelExpenses
                         cmdMealsDate.InsertCommand.ExecuteNonQuery();
                     }
                 }
-                
+
                 //update the total
                 totalTravel = totalTravel + CommonVariables.mcl.MealsTotal;
                 totalReimbursement = totalReimbursement + CommonVariables.mcl.MealsTotal;
 
                 //Update travel table
                 SqlDataAdapter cmdMealsUp = new SqlDataAdapter();
-                cmdMealsUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET [Melas] = @Meals WHERE TravelID = '"+ travId + "'", localCon);
+                cmdMealsUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET [Melas] = @Meals WHERE TravelID = '" + travId + "'", localCon);
                 cmdMealsUp.UpdateCommand.Parameters.Add("@Meals", SqlDbType.Bit).Value = CommonVariables.isMeals;
                 cmdMealsUp.UpdateCommand.ExecuteNonQuery();
-                
+
             }
 
             if (CommonVariables.isRegistartion)
@@ -2241,14 +2272,15 @@ namespace TravelExpenses
                 cmdRegist.InsertCommand.ExecuteNonQuery();
 
                 //update the total
-                if (!CommonVariables.rg.DistrictPay) {
+                if (!CommonVariables.rg.DistrictPay)
+                {
                     totalReimbursement = totalReimbursement + CommonVariables.rg.RegistrationAmount;
                 }
                 totalTravel = totalTravel + CommonVariables.rg.RegistrationAmount;
 
                 //update travel table
                 SqlDataAdapter cmdRegistUP = new SqlDataAdapter();
-                cmdRegistUP.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET Registration = @Registration WHERE TravelID = '"+ travId+"'", localCon);
+                cmdRegistUP.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET Registration = @Registration WHERE TravelID = '" + travId + "'", localCon);
                 cmdRegistUP.UpdateCommand.Parameters.Add("@Registration", SqlDbType.Bit).Value = CommonVariables.isRegistartion;
                 cmdRegistUP.UpdateCommand.ExecuteNonQuery();
             }
@@ -2286,7 +2318,7 @@ namespace TravelExpenses
 
                 //update the travel table
                 SqlDataAdapter cmdLodgUp = new SqlDataAdapter();
-                cmdLodgUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET Lodging = @Lodging WHERE TravelID = '"+ travId+"'", localCon);
+                cmdLodgUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET Lodging = @Lodging WHERE TravelID = '" + travId + "'", localCon);
                 cmdLodgUp.UpdateCommand.Parameters.Add("@Lodging", SqlDbType.Bit).Value = CommonVariables.isLodging;
                 cmdLodgUp.UpdateCommand.ExecuteNonQuery();
 
@@ -2337,14 +2369,14 @@ namespace TravelExpenses
                         {
                             totalReimbursement = totalReimbursement + Convert.ToDouble(CommonVariables.crcl[i].TotalCarRental.ToString());
                         }
-                            
+
                     }
-                    totalTravel = totalTravel + Convert.ToDouble(CommonVariables.crcl[i].TotalCarRental.ToString()); 
+                    totalTravel = totalTravel + Convert.ToDouble(CommonVariables.crcl[i].TotalCarRental.ToString());
                 }
 
                 //update the travel table
                 SqlDataAdapter cmdCarRUp = new SqlDataAdapter();
-                cmdCarRUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET CarRental = @CarRental WHERE TravelID = '"+ travId+"'", localCon);
+                cmdCarRUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET CarRental = @CarRental WHERE TravelID = '" + travId + "'", localCon);
                 cmdCarRUp.UpdateCommand.Parameters.Add("@CarRental", SqlDbType.Bit).Value = CommonVariables.isCarRental;
                 cmdCarRUp.UpdateCommand.ExecuteNonQuery();
             }
@@ -2379,7 +2411,7 @@ namespace TravelExpenses
                     //update the total
                     if (CommonVariables.afcl[i].DistrictPay == true)
                     {
-                       
+
                         if (CommonVariables.afcl[i].PersonalUse == true)
                         {
                             notReimbursement = notReimbursement + Convert.ToDouble(CommonVariables.afcl[i].PersonalUseAmount.ToString());
@@ -2396,14 +2428,14 @@ namespace TravelExpenses
                         {
                             totalReimbursement = totalReimbursement + Convert.ToDouble(CommonVariables.afcl[i].TotalAirFare.ToString());
                         }
-                            
+
                     }
                     totalTravel = totalTravel + Convert.ToDouble(CommonVariables.afcl[i].TotalAirFare.ToString());
                 }
 
                 //update the travel table
                 SqlDataAdapter cmdAirFareUP = new SqlDataAdapter();
-                cmdAirFareUP.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET AirFare = @AirFare  WHERE TravelID = '"+ travId +"'", localCon);
+                cmdAirFareUP.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET AirFare = @AirFare  WHERE TravelID = '" + travId + "'", localCon);
                 cmdAirFareUP.UpdateCommand.Parameters.Add("@AirFare", SqlDbType.Bit).Value = CommonVariables.isAirFare;
                 cmdAirFareUP.UpdateCommand.ExecuteNonQuery();
 
@@ -2432,7 +2464,7 @@ namespace TravelExpenses
 
                 //update the total
                 if (CommonVariables.micl.DistricticProvidedVehicle == false)
-                { 
+                {
 
                     if (CommonVariables.micl.DirectorApprovedPersonal == false)
                     {
@@ -2447,7 +2479,7 @@ namespace TravelExpenses
 
                 //update the travel table
                 SqlDataAdapter cmdMileageUp = new SqlDataAdapter();
-                cmdMileageUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET Mileage = @Mileage WHERE TravelID = '"+ travId +"'", localCon);
+                cmdMileageUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET Mileage = @Mileage WHERE TravelID = '" + travId + "'", localCon);
                 cmdMileageUp.UpdateCommand.Parameters.Add("@Mileage", SqlDbType.Bit).Value = CommonVariables.isMileage;
                 cmdMileageUp.UpdateCommand.ExecuteNonQuery();
 
@@ -2477,16 +2509,17 @@ namespace TravelExpenses
 
                 //update the travel table
                 SqlDataAdapter cmdOtherExUp = new SqlDataAdapter();
-                cmdOtherExUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET OtherExpenses = @OtherExpenses WHERE TravelID = '"+ travId +"'", localCon);
+                cmdOtherExUp.UpdateCommand = new SqlCommand("UPDATE [TravelExpenses].[dbo].[Travel] SET OtherExpenses = @OtherExpenses WHERE TravelID = '" + travId + "'", localCon);
                 cmdOtherExUp.UpdateCommand.Parameters.Add("@OtherExpenses", SqlDbType.Bit).Value = CommonVariables.isOtherExpenses;
                 cmdOtherExUp.UpdateCommand.ExecuteNonQuery();
             }
 
             //Update the total in the travel table
 
-            SqlCommand cmdSleTotalTravel = new SqlCommand("SELECT [TotalTravelAmount] ,[TotalTravelReimbursed] ,[TotalTravelNoReimbursed] FROM [TravelExpenses].[dbo].[Travel] where TravelID = '"+ travId +"'", localCon);
+            SqlCommand cmdSleTotalTravel = new SqlCommand("SELECT [TotalTravelAmount] ,[TotalTravelReimbursed] ,[TotalTravelNoReimbursed] FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + travId + "'", localCon);
             SqlDataReader drTotals = cmdSleTotalTravel.ExecuteReader();
-            while (drTotals.Read()) {
+            while (drTotals.Read())
+            {
                 string total = drTotals["TotalTravelAmount"].ToString();
                 string reim = drTotals["TotalTravelReimbursed"].ToString();
                 string totalNR = drTotals["TotalTravelNoReimbursed"].ToString();
@@ -2513,7 +2546,8 @@ namespace TravelExpenses
             localCon.Close();
         }
 
-        private void generateDetailPDFUp() {
+        private void generateDetailPDFUp()
+        {
 
             localCon.Open();
             string name = "";
@@ -2584,10 +2618,11 @@ namespace TravelExpenses
             toSet.SetValue(department);
 
             //travel details
-            SqlCommand cmdTD = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Travel] where TravelID = '"+ travID + "'", localCon);
+            SqlCommand cmdTD = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Travel] where TravelID = '" + travID + "'", localCon);
             SqlDataReader drTD = cmdTD.ExecuteReader();
-            while (drTD.Read()) {
-                
+            while (drTD.Read())
+            {
+
                 //pdfFormFields.SetField("Travel Event", drTD["TravelEvent"].ToString()); //commented for net6
                 fields.TryGetValue("Travel Event", out toSet);
                 toSet.SetValue(drTD["TravelEvent"].ToString());
@@ -2652,25 +2687,32 @@ namespace TravelExpenses
                 toSet.SetValue(DateTime.Today.ToShortDateString());
 
                 //set up the travel common variables
-                if (drTD["Melas"].ToString() == "True") {
+                if (drTD["Melas"].ToString() == "True")
+                {
                     CommonVariables.isMeals = true;
                 }
-                if (drTD["Registration"].ToString() == "True") {
+                if (drTD["Registration"].ToString() == "True")
+                {
                     CommonVariables.isRegistartion = true;
                 }
-                if (drTD["CarRental"].ToString() == "True") {
+                if (drTD["CarRental"].ToString() == "True")
+                {
                     CommonVariables.isCarRental = true;
                 }
-                if (drTD["Lodging"].ToString() == "True") {
+                if (drTD["Lodging"].ToString() == "True")
+                {
                     CommonVariables.isLodging = true;
                 }
-                if (drTD["AirFare"].ToString() == "True") {
+                if (drTD["AirFare"].ToString() == "True")
+                {
                     CommonVariables.isAirFare = true;
                 }
-                if (drTD["Mileage"].ToString() == "True") {
+                if (drTD["Mileage"].ToString() == "True")
+                {
                     CommonVariables.isMileage = true;
                 }
-                if (drTD["OtherExpenses"].ToString() == "True") {
+                if (drTD["OtherExpenses"].ToString() == "True")
+                {
                     CommonVariables.isOtherExpenses = true;
                 }
 
@@ -2679,12 +2721,14 @@ namespace TravelExpenses
             drTD.Close();
 
             //Meals Details
-            if (CommonVariables.isMeals) {
+            if (CommonVariables.isMeals)
+            {
 
-                SqlCommand cmdMeals = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Meals] where TravelID = '"+ travID +"'", localCon);
+                SqlCommand cmdMeals = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Meals] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drMeals = cmdMeals.ExecuteReader();
 
-                while (drMeals.Read()) {
+                while (drMeals.Read())
+                {
                     //pdfFormFields.SetField("BreakfastQuantity", drMeals["Breakfast"].ToString()); //commented for net6
                     fields.TryGetValue("BreakfastQuantity", out toSet);
                     toSet.SetValue(drMeals["Breakfast"].ToString());
@@ -2730,33 +2774,37 @@ namespace TravelExpenses
                     toSet.SetValue(mealCost);
                 }
                 drMeals.Close();
-                
+
             }
 
             //Registration Details
-            if (CommonVariables.isRegistartion) {
+            if (CommonVariables.isRegistartion)
+            {
 
-                SqlCommand cmdRegis = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Registration] where TravelID = '"+ travID +"'", localCon);
+                SqlCommand cmdRegis = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Registration] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drRegis = cmdRegis.ExecuteReader();
-                while (drRegis.Read()) {
+                while (drRegis.Read())
+                {
                     string regCost = Convert.ToDouble(drRegis["RegistrationAMount"].ToString()).ToString("C", CultureInfo.CurrentCulture).Substring(1);
                     //pdfFormFields.SetField("Registration Cost", regCost); //commented for net6
                     fields.TryGetValue("Registration Cost", out toSet);
                     toSet.SetValue(regCost);
                 }
                 drRegis.Close();
-                
+
             }
 
             //Lodging
-            if (CommonVariables.isLodging) {
+            if (CommonVariables.isLodging)
+            {
 
-                SqlCommand cmdLod = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Lodging] where TravelID = '"+ travID +"'", localCon);
+                SqlCommand cmdLod = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[Lodging] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drLod = cmdLod.ExecuteReader();
 
                 int row = 1;
                 double totalLod = 0;
-                while (drLod.Read()) {
+                while (drLod.Read())
+                {
                     //pdfFormFields.SetField("Facility Name" + row, drLod["FacilityName"].ToString()); //commented for net6
                     fields.TryGetValue("Facility Name" + row, out toSet);
                     toSet.SetValue(drLod["FacilityName"].ToString());
@@ -2813,15 +2861,16 @@ namespace TravelExpenses
 
                     row++;
                 }
-                drLod.Close();  
+                drLod.Close();
                 //pdfFormFields.SetField("Lodging Total", totalLod.ToString("C", CultureInfo.CurrentCulture).Substring(1)); //commented for net6
                 fields.TryGetValue("Lodging Total", out toSet);
                 toSet.SetValue(totalLod.ToString("C", CultureInfo.CurrentCulture).Substring(1));
             }
 
             //Car Rental Details
-            if (CommonVariables.isCarRental) {
-                SqlCommand cmdCR = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[CarRental] where TravelID = '"+ travID +"'", localCon);
+            if (CommonVariables.isCarRental)
+            {
+                SqlCommand cmdCR = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[CarRental] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drCR = cmdCR.ExecuteReader();
 
                 int carRow = 1;
@@ -2903,8 +2952,9 @@ namespace TravelExpenses
             }
 
             //AirFare Details
-            if (CommonVariables.isAirFare) {
-                SqlCommand cmdAF = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[AirFare] where TravelID = '"+ travID +"'", localCon);
+            if (CommonVariables.isAirFare)
+            {
+                SqlCommand cmdAF = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[AirFare] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drAF = cmdAF.ExecuteReader();
 
                 int flightRow = 1;
@@ -3014,8 +3064,9 @@ namespace TravelExpenses
             }
 
             //Other Expenses
-            if (CommonVariables.isOtherExpenses) {
-                SqlCommand cmdOE = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[OtherExpenses] where TravelID = '"+ travID +"'", localCon);
+            if (CommonVariables.isOtherExpenses)
+            {
+                SqlCommand cmdOE = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[OtherExpenses] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drOE = cmdOE.ExecuteReader();
 
                 int oxRow = 1;
@@ -3049,7 +3100,8 @@ namespace TravelExpenses
             localCon.Close();
         }
 
-        private void generateSummarizedPDFUp() {
+        private void generateSummarizedPDFUp()
+        {
 
             localCon.Open();
             string name = "";
@@ -3080,8 +3132,8 @@ namespace TravelExpenses
             SqlDataReader drTDates = cmdTDates.ExecuteReader();
             while (drTDates.Read())
             {
-                 departureDate = Convert.ToDateTime(drTDates["DepartureDate"].ToString()).ToShortDateString();
-                 returnDate = Convert.ToDateTime(drTDates["ReturnDate"].ToString()).ToShortDateString();
+                departureDate = Convert.ToDateTime(drTDates["DepartureDate"].ToString()).ToShortDateString();
+                returnDate = Convert.ToDateTime(drTDates["ReturnDate"].ToString()).ToShortDateString();
             }
             drTDates.Close();
 
@@ -3099,11 +3151,11 @@ namespace TravelExpenses
             //end of new code
 
             PdfReader pdfReader = new PdfReader(pdfTemplate);
-           
+
             /* PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
             AcroFields pdfFormFields = pdfStamper.AcroFields;*/ //commented for net6
 
-            
+
 
             //user details
             //pdfFormFields.SetField("Full Name", fullName); //commented for net6
@@ -3215,7 +3267,7 @@ namespace TravelExpenses
                     CommonVariables.isOtherExpenses = true;
                 }
 
-                
+
 
 
             }
@@ -3302,7 +3354,7 @@ namespace TravelExpenses
                 SqlCommand cmdCR = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[CarRental] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drCR = cmdCR.ExecuteReader();
 
-                
+
                 double totalCR = 0;
                 string notesCR = "";
                 while (drCR.Read())
@@ -3329,9 +3381,9 @@ namespace TravelExpenses
             {
                 SqlCommand cmdAF = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[AirFare] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drAF = cmdAF.ExecuteReader();
-               
+
                 double totalAF = 0;
-                string notesAF = ""; 
+                string notesAF = "";
 
                 while (drAF.Read())
                 {
@@ -3362,7 +3414,7 @@ namespace TravelExpenses
                 {
                     double milCostValue = Convert.ToDouble(drMi["TotalMileage"].ToString());
                     string milcost = milCostValue.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("CostMileage", milcost); //commented for net6
                     fields.TryGetValue("CostMileage", out toSet);
                     toSet.SetValue(milcost);
@@ -3379,7 +3431,7 @@ namespace TravelExpenses
             {
                 SqlCommand cmdOE = new SqlCommand("SELECT * FROM [TravelExpenses].[dbo].[OtherExpenses] where TravelID = '" + travID + "'", localCon);
                 SqlDataReader drOE = cmdOE.ExecuteReader();
-                
+
                 double totalOE = 0;
                 string notesOE = "";
                 while (drOE.Read())
@@ -3495,7 +3547,7 @@ namespace TravelExpenses
             pdfDoc.Close();
             localCon.Close();
 
-           
+
 
         }
 
@@ -3517,7 +3569,8 @@ namespace TravelExpenses
             //int cant = Application.OpenForms.Count;
             bool FormFound = false;
 
-            if (CommonVariables.isOtherExpenses == true) {
+            if (CommonVariables.isOtherExpenses == true)
+            {
                 foreach (Form child in childs)
                 {
                     string name = child.Name;
@@ -3684,7 +3737,7 @@ namespace TravelExpenses
             string supEmail = "";
             string fullname = "";
             string department = "";
-            
+
             //user
             SqlCommand user = new SqlCommand("SELECT b.Email as Email, a.Name as Name, a.LastName as LastName, a.Department as Department  FROM [TravelExpenses].[dbo].[User] as a inner join TravelExpenses.dbo.User_Email_Title as b on b.UserID = a.UserID where a.UserID = '" + userID + "'", localCon);
             SqlDataReader userDR = user.ExecuteReader();
@@ -3708,7 +3761,7 @@ namespace TravelExpenses
             userDR.Close();*/
 
 
-            SmtpClient SmtpServer = new SmtpClient("mail.lcmcd.org",587);
+            SmtpClient SmtpServer = new SmtpClient("mail.lcmcd.org", 587);
             SmtpServer.Credentials = new System.Net.NetworkCredential("xerox@lchcd.org", "Pa$$w0rd1");
             SmtpServer.EnableSsl = true;
 
@@ -3728,8 +3781,8 @@ namespace TravelExpenses
                 SqlDataReader dr = td.ExecuteReader();
                 while (dr.Read())
                 {
-                    depDate = Convert.ToDateTime( dr["DepartureDate"].ToString());
-                    retDate = Convert.ToDateTime( dr["ReturnDate"].ToString());
+                    depDate = Convert.ToDateTime(dr["DepartureDate"].ToString());
+                    retDate = Convert.ToDateTime(dr["ReturnDate"].ToString());
                     travEvent = dr["TravelEvent"].ToString();
                     destination = dr["Destination"].ToString();
                 }
@@ -3790,7 +3843,7 @@ namespace TravelExpenses
             }
             Form[] childs = main.MdiChildren;
 
-     
+
             bool FormFound = false;
 
             if (CommonVariables.isMeals == true)
@@ -4164,7 +4217,7 @@ namespace TravelExpenses
 
             //pdfFormFields.SetField("Travel Notes", CommonVariables.travelNotes); //commented for net6
             fields.TryGetValue("Travel Notes", out toSet);
-            toSet.SetValue(CommonVariables.travelState);
+            toSet.SetValue(CommonVariables.travelNotes);
 
             //Meals Details
             if (CommonVariables.isMeals)
@@ -4200,7 +4253,7 @@ namespace TravelExpenses
                 toSet.SetValue(brekCost.ToString());
 
                 double lunchCost = CommonVariables.mcl.Lunch * CommonVariables.mcl.LunchPerDiemRate;
-               //pdfFormFields.SetField("LunchCost", lunchCost.ToString()); //commented for net6
+                //pdfFormFields.SetField("LunchCost", lunchCost.ToString()); //commented for net6
                 fields.TryGetValue("LunchCost", out toSet);
                 toSet.SetValue(lunchCost.ToString());
 
@@ -4253,7 +4306,7 @@ namespace TravelExpenses
 
                 //setting the value for the meals reimbursement
                 mealsReimbursement = CommonVariables.mcl.MealsTotal;
-                
+
 
 
                 //meals dates
@@ -4279,7 +4332,7 @@ namespace TravelExpenses
                     if (lunch)
                     {
                         //String[] checkboxstates = pdfFormFields.GetAppearanceStates("Lunch" + rowInc); //commented for net6
-                        
+
                         //pdfFormFields.SetField("Lunch" + rowInc, "Yes"); //commented for net6
                         fields.TryGetValue("Lunch" + rowInc, out toSet);
                         toSet.SetValue("Yes");
@@ -4287,7 +4340,7 @@ namespace TravelExpenses
                     if (dinner)
                     {
                         //String[] checkboxstates = pdfFormFields.GetAppearanceStates("Dinner" + rowInc); //commented for net6
-                        
+
                         //pdfFormFields.SetField("Dinner" + rowInc, "Yes"); //commented for net6
                         fields.TryGetValue("Dinner" + rowInc, out toSet);
                         toSet.SetValue("Yes");
@@ -4296,7 +4349,7 @@ namespace TravelExpenses
 
                 }
 
-                
+
             }
 
             //Registration
@@ -4338,7 +4391,7 @@ namespace TravelExpenses
 
                 }
 
-                
+
 
             }
 
@@ -4374,30 +4427,30 @@ namespace TravelExpenses
                     toSet.SetValue(CommonVariables.lcl[i].FacilityName);
 
                     //pdfFormFields.SetField("Facility Total Cost" + row, CommonVariables.lcl[i].TotalLodging.ToString()); //commented for net6
-                    fields.TryGetValue("Facility Name" + row, out toSet);
-                    toSet.SetValue(CommonVariables.lcl[i].FacilityName);
+                    fields.TryGetValue("Facility Total Cost" + row, out toSet);
+                    toSet.SetValue(CommonVariables.lcl[i].TotalLodging.ToString());
 
                     //pdfFormFields.SetField("Lodging Nights" + row, CommonVariables.lcl[i].NumberOfNights.ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Nights" + row, out toSet);
-                    toSet.SetValue(CommonVariables.lcl[i].NumberOfNights.ToString());
+                    //fields.TryGetValue("Lodging Nights" + row, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.lcl[i].NumberOfNights.ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Lodging Night Cost" + row, CommonVariables.lcl[i].CostPerNight.ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Night Cost" + row, out toSet);
-                    toSet.SetValue(CommonVariables.lcl[i].CostPerNight.ToString());
+                    //fields.TryGetValue("Lodging Night Cost" + row, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.lcl[i].CostPerNight.ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Lodging Taxes Fees" + row, CommonVariables.lcl[i].TaxesAndFees.ToString()); //commented for net6
-                    fields.TryGetValue("Lodging Night Cost" + row, out toSet);
-                    toSet.SetValue(CommonVariables.lcl[i].TaxesAndFees.ToString());
+                    //fields.TryGetValue("Lodging Night Cost" + row, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.lcl[i].TaxesAndFees.ToString()); //commented for net6
 
                     if (CommonVariables.lcl[i].DistrictPay)
                     {
                         //pdfFormFields.SetField("Lodging District Pay" + row, "Yes"); //commented for net6
-                        fields.TryGetValue("Lodging District Pay" + row, out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Lodging District Pay" + row, out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
 
                         //pdfFormFields.SetField("Lodging Director Approval" + row, ""); //commented for net6
-                        fields.TryGetValue("Lodging Director Approval" + row, out toSet);
-                        toSet.SetValue("");
+                        //fields.TryGetValue("Lodging Director Approval" + row, out toSet); //commented for net6
+                        //toSet.SetValue(""); //commented for net6
                     }
                     else
                     {
@@ -4423,13 +4476,13 @@ namespace TravelExpenses
                     }
 
                     //pdfFormFields.SetField("Facility  Notes" + row, CommonVariables.lcl[i].Notes); //commented for net6
-                    fields.TryGetValue("Facility  Notes" + row, out toSet);
-                    toSet.SetValue(CommonVariables.lcl[i].Notes);
+                    //fields.TryGetValue("Facility  Notes" + row, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.lcl[i].Notes); //commented for net6
 
                     row++;
                 }
                 //string lodCost = Convert.ToDouble(txtTotalLod.Text).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("Lodging Total", lodCost); //commented for net6
                 fields.TryGetValue("Lodging Total", out toSet);
                 toSet.SetValue(lodCost);
@@ -4451,7 +4504,7 @@ namespace TravelExpenses
                 double carCostDouble = Convert.ToDouble(txtTotalCar.Text);
                 string carCost = carCostDouble.ToString("C", CultureInfo.CurrentCulture);
                 carCost = carCost.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostCar Rental", carCost); //commented for net6
                 fields.TryGetValue("CostCar Rental", out toSet);
                 toSet.SetValue(carCost);
@@ -4470,11 +4523,11 @@ namespace TravelExpenses
 
                     //pdfFormFields.SetField("Drop off Date" + carRow, CommonVariables.crcl[i].DropOffDate.ToShortDateString()); //commented for net6
                     fields.TryGetValue("Drop off Date" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].PickUpDate.ToShortDateString());
+                    toSet.SetValue(CommonVariables.crcl[i].DropOffDate.ToShortDateString());
 
                     //pdfFormFields.SetField("Car_Day Cost" + carRow, CommonVariables.crcl[i].CostPerDay.ToString()); //commented for net6
-                    fields.TryGetValue("Drop off Date" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].PickUpDate.ToShortDateString());
+                    //fields.TryGetValue("Car_Day Cost" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.crcl[i].CostPerDay.ToString()); //commented for net6
 
 
                     //pdfFormFields.SetField("Car Total" + carRow, CommonVariables.crcl[i].TotalCarRental.ToString()); //commented for net6
@@ -4490,30 +4543,30 @@ namespace TravelExpenses
                     toSet.SetValue(CommonVariables.crcl[i].Company);
 
                     //pdfFormFields.SetField("Car Rental Days" + carRow, CommonVariables.crcl[i].Days.ToString()); //commented for net6
-                    fields.TryGetValue("Car Rental Days" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].Days.ToString());
+                    //fields.TryGetValue("Car Rental Days" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.crcl[i].Days.ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Car Rental Taxes Fees" + carRow, CommonVariables.crcl[i].TaxesAndFees.ToString()); //commented for net6
-                    fields.TryGetValue("Car Rental Taxes Fees" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].TaxesAndFees.ToString());
+                    //fields.TryGetValue("Car Rental Taxes Fees" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.crcl[i].TaxesAndFees.ToString()); //commented for net6
 
                     //pdfFormFields.SetField("LDW Insurance" + carRow, CommonVariables.crcl[i].LDWInsuranse.ToString()); //commented for net6
-                    fields.TryGetValue("LDW Insurance" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].LDWInsuranse.ToString());
+                    //fields.TryGetValue("LDW Insurance" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.crcl[i].LDWInsuranse.ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Supplemental Insurance" + carRow, CommonVariables.crcl[i].SupplementalInsurance.ToString()); //commented for net6
-                    fields.TryGetValue("Supplemental Insurance" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].SupplementalInsurance.ToString());
+                    //fields.TryGetValue("Supplemental Insurance" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.crcl[i].SupplementalInsurance.ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Extra Insurance" + carRow, CommonVariables.crcl[i].ExtraInsuranceAmount.ToString()); //commented for net6
-                    fields.TryGetValue("Extra Insurance" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].ExtraInsuranceAmount.ToString());
+                    //fields.TryGetValue("Extra Insurance" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.crcl[i].ExtraInsuranceAmount.ToString()); //commented for net6
 
                     if (CommonVariables.crcl[i].DistrictPay)
                     {
                         //pdfFormFields.SetField("Car District Pay" + carRow, "Yes"); //commented for net6
-                        fields.TryGetValue("Car District Pay" + carRow, out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Car District Pay" + carRow, out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
                     }
                     else
                     {
@@ -4525,17 +4578,17 @@ namespace TravelExpenses
                         carRentalReimbursement += CommonVariables.crcl[i].TotalCarRental;
                     }
                     //pdfFormFields.SetField("Car Personal Amount" + carRow, CommonVariables.crcl[i].PersonalUseAmount.ToString()); //commented for net6
-                    fields.TryGetValue("Car Personal Amount" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].PersonalUseAmount.ToString());
+                    //fields.TryGetValue("Car Personal Amount" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.crcl[i].PersonalUseAmount.ToString()); //commented for net6
 
                     //pdfFormFields.SetField("Car Notes" + carRow, CommonVariables.crcl[i].Notes); //commented for net6
-                    fields.TryGetValue("Car Notes" + carRow, out toSet);
-                    toSet.SetValue(CommonVariables.crcl[i].Notes);
+                    //fields.TryGetValue("Car Notes" + carRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.crcl[i].Notes); //commented for net6
 
                     carRow++;
                 }
                 //string carCost = Convert.ToDouble(txtTotalCar.Text).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("Car Rental Total", carCost); //commented for net6
                 fields.TryGetValue("Car Rental Total", out toSet);
                 toSet.SetValue(carCost);
@@ -4555,7 +4608,7 @@ namespace TravelExpenses
                 double flighCOstDouble = Convert.ToDouble(txtTotalFlight.Text);
                 string flighCOst = flighCOstDouble.ToString("C", CultureInfo.CurrentCulture);
                 flighCOst = flighCOst.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostAir Fare", flighCOst); //commented for net6
                 fields.TryGetValue("CostAir Fare", out toSet);
                 toSet.SetValue(flighCOst);
@@ -4584,14 +4637,14 @@ namespace TravelExpenses
                     toSet.SetValue(CommonVariables.afcl[i].TotalAirFare.ToString());
 
                     //pdfFormFields.SetField("Flight Taxes  Fees" + flightRow, CommonVariables.afcl[i].TaxesAndFees.ToString()); //commented for net6
-                    fields.TryGetValue("Flight Taxes  Fees" + flightRow, out toSet);
-                    toSet.SetValue(CommonVariables.afcl[i].TaxesAndFees.ToString());
+                    //fields.TryGetValue("Flight Taxes  Fees" + flightRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.afcl[i].TaxesAndFees.ToString()); //commented for net6
 
                     if (CommonVariables.afcl[i].DistrictPay)
                     {
                         //pdfFormFields.SetField("Flight District Pay" + flightRow, "Yes"); //commented for net6
-                        fields.TryGetValue("Flight District Pay" + flightRow, out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Flight District Pay" + flightRow, out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
                     }
                     else
                     {
@@ -4607,8 +4660,8 @@ namespace TravelExpenses
                     toSet.SetValue(CommonVariables.afcl[i].PersonalUseAmount.ToString());
 
                     //pdfFormFields.SetField("Air Fare Notes" + flightRow, CommonVariables.afcl[i].Notes); //commented for net6
-                    fields.TryGetValue("Air Fare Notes" + flightRow, out toSet);
-                    toSet.SetValue(CommonVariables.afcl[i].Notes);
+                    //fields.TryGetValue("Air Fare Notes" + flightRow, out toSet); //commented for net6
+                    //toSet.SetValue(CommonVariables.afcl[i].Notes); //commented for net6
 
                     flightRow++;
                 }
@@ -4647,8 +4700,8 @@ namespace TravelExpenses
                 if (CommonVariables.micl.DistricticProvidedVehicle)
                 {
                     //pdfFormFields.SetField("Provided Vehicle", "Yes"); //commented for net6
-                    fields.TryGetValue("Provided Vehicle", out toSet);
-                    toSet.SetValue("Yes");
+                    //fields.TryGetValue("Provided Vehicle", out toSet); //commented for net6
+                    //toSet.SetValue("Yes"); //commented for net6
                 }
                 else
                 {
@@ -4659,8 +4712,8 @@ namespace TravelExpenses
                     if (CommonVariables.micl.DirectorApprovedPersonal)
                     {
                         //pdfFormFields.SetField("Mileage Director Approval", "Yes"); //commented for net6
-                        fields.TryGetValue("Mileage Director Approval", out toSet);
-                        toSet.SetValue("Yes");
+                        //fields.TryGetValue("Mileage Director Approval", out toSet); //commented for net6
+                        //toSet.SetValue("Yes"); //commented for net6
 
                         //setting the value for the mileage reimbursement
                         mileagReimbursement = CommonVariables.micl.TotalMileage;
@@ -4691,7 +4744,7 @@ namespace TravelExpenses
                 double oeCOstDouble = Convert.ToDouble(txtTotalAmountExpenses.Text);
                 string oeCOst = oeCOstDouble.ToString("C", CultureInfo.CurrentCulture);
                 oeCOst = oeCOst.Substring(1);
-                
+
                 //pdfFormFields.SetField("CostOther Expenses", oeCOst); //commented for net6
                 fields.TryGetValue("CostOther Expenses", out toSet);
                 toSet.SetValue(oeCOst);
@@ -4734,7 +4787,7 @@ namespace TravelExpenses
                     oxRow++;
                 }
                 //string oeCost = Convert.ToDouble(txtTotalAmountExpenses.Text).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("Other Expenses Total", oeCOst); //commented for net6
                 fields.TryGetValue("Other Expenses Total", out toSet);
                 toSet.SetValue(oeCOst);
@@ -4747,7 +4800,7 @@ namespace TravelExpenses
             reim = reim.Substring(1);
             string noReim = CommonVariables.totalNotReimbursement.ToString("C", CultureInfo.CurrentCulture);
             noReim = noReim.Substring(1);
-            
+
             //pdfFormFields.SetField("Travel Total", travTol); //commented for net6
             fields.TryGetValue("Travel Total", out toSet);
             toSet.SetValue(travTol);
@@ -4757,24 +4810,24 @@ namespace TravelExpenses
             toSet.SetValue(reim);
 
             //pdfFormFields.SetField("No Reimbursed", noReim); //commented for net6
-            fields.TryGetValue("No Reimbursed", out toSet);
-            toSet.SetValue(noReim);
+            //fields.TryGetValue("No Reimbursed", out toSet); //commented for net6
+            //toSet.SetValue(noReim); //commented for net6
 
             //pdfFormFields.SetField("Travel Total Cost", CommonVariables.totalTravel.ToString("C", CultureInfo.CurrentCulture).Substring(1)); //commented for net6
-            fields.TryGetValue("Travel Total Cost", out toSet);
-            toSet.SetValue(CommonVariables.totalTravel.ToString("C", CultureInfo.CurrentCulture).Substring(1));
+            //fields.TryGetValue("Travel Total Cost", out toSet); //commented for net6
+            //toSet.SetValue(CommonVariables.totalTravel.ToString("C", CultureInfo.CurrentCulture).Substring(1)); //commented for net6
 
             //pdfFormFields.SetField("Reimbursement", CommonVariables.totalReimbursement.ToString("C", CultureInfo.CurrentCulture).Substring(1)); //commented for net6
-            fields.TryGetValue("Reimbursement", out toSet);
-            toSet.SetValue(CommonVariables.totalReimbursement.ToString("C", CultureInfo.CurrentCulture).Substring(1));
+            //fields.TryGetValue("Reimbursement", out toSet); //commented for net6
+            //toSet.SetValue(CommonVariables.totalReimbursement.ToString("C", CultureInfo.CurrentCulture).Substring(1)); //commented for net6
 
             //pdfFormFields.SetField("No Reimbursed Total", CommonVariables.totalNotReimbursement.ToString("C", CultureInfo.CurrentCulture).Substring(1)); //commented for net6
-            fields.TryGetValue("No Reimbursed Total", out toSet);
-            toSet.SetValue(CommonVariables.totalNotReimbursement.ToString("C", CultureInfo.CurrentCulture).Substring(1));
+            //fields.TryGetValue("No Reimbursed Total", out toSet); //commented for net6
+            //toSet.SetValue(CommonVariables.totalNotReimbursement.ToString("C", CultureInfo.CurrentCulture).Substring(1)); //commented for net6
 
             //pdfFormFields.SetField("Date", DateTime.Today.ToShortDateString()); //commented for net6
-            fields.TryGetValue("Date", out toSet);
-            toSet.SetValue(DateTime.Today.ToShortDateString());
+            //fields.TryGetValue("Date", out toSet); //commented for net6
+            //toSet.SetValue(DateTime.Today.ToShortDateString()); //commented for net6
 
 
             //Accounting accounts
@@ -4828,7 +4881,7 @@ namespace TravelExpenses
 
                     //BaseFont bf = BaseFont.CreateFont(); //commented for net6
                     PdfFont font = PdfFontFactory.CreateFont();
-                    
+
                     if (drPDF["FontType"].ToString() == "Mistral")
                     {
                         //bf = BaseFont.CreateFont(@"\\LCMHCD\Employees\Travel Temp\fonts\MISTRAL.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED); //commented for net6
@@ -5109,7 +5162,7 @@ namespace TravelExpenses
                     double mealCostValue = Convert.ToDouble(drMeals["TotalMeals"].ToString());
                     mealIDvalue = drMeals["MealsID"].ToString();
                     string mealCost = mealCostValue.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("CostMeals", mealCost); //commented for net6
                     fields.TryGetValue("CostMeals", out toSet);
                     toSet.SetValue(mealCost);
@@ -5184,7 +5237,7 @@ namespace TravelExpenses
                         toSet.SetValue("No");
                     }
                     //string mealCost = Convert.ToDouble(drMeals["TotalMeals"].ToString()).ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("Meals_Total", mealCost); //commented for net6
                     fields.TryGetValue("Meals_Total", out toSet);
                     toSet.SetValue(mealCost);
@@ -5198,12 +5251,12 @@ namespace TravelExpenses
 
                 Guid mealID = new Guid(mealIDvalue);
                 int rowInc = 1;
-                SqlCommand meadDate = new SqlCommand("SELECT [Date] ,[Breaksfast],[Lunch] ,[Dinner] FROM [TravelExpenses].[dbo].[MealDate] where MealsID = '"+ mealID + "' order by date asc", localCon);
+                SqlCommand meadDate = new SqlCommand("SELECT [Date] ,[Breaksfast],[Lunch] ,[Dinner] FROM [TravelExpenses].[dbo].[MealDate] where MealsID = '" + mealID + "' order by date asc", localCon);
                 SqlDataReader meadDateDR = meadDate.ExecuteReader();
                 while (meadDateDR.Read())
                 {
                     DateTime date = Convert.ToDateTime(meadDateDR["Date"].ToString());
-                    
+
                     //pdfFormFields.SetField("MealDate" + rowInc, date.ToShortDateString()); //commented for net6
                     fields.TryGetValue("MealDate" + rowInc, out toSet);
                     toSet.SetValue(date.ToShortDateString());
@@ -5246,7 +5299,7 @@ namespace TravelExpenses
                         travelACC = travelACC * -1;
                     }
                     string totalReg = trainingACC.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                    
+
                     //pdfFormFields.SetField("CostRegistration", totalReg); //commented for net6
                     fields.TryGetValue("CostRegistration", out toSet);
                     toSet.SetValue(totalReg);
@@ -5312,7 +5365,7 @@ namespace TravelExpenses
                     toSet.SetValue(drLod["TotalLodging"].ToString());
 
                     //totalLod = totalLod + Convert.ToDouble(drLod["TotalLodging"].ToString());
-                    
+
                     //pdfFormFields.SetField("Lodging Nights" + rowLod, drLod["NumberOfNights"].ToString()); //commented for net6
                     fields.TryGetValue("Lodging Nights" + rowLod, out toSet);
                     toSet.SetValue(drLod["NumberOfNights"].ToString());
@@ -5364,7 +5417,7 @@ namespace TravelExpenses
                 }
                 drLod.Close();
                 string lodgCost = totalLod.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostLodgings", lodgCost); //commented for net6
                 fields.TryGetValue("CostLodgings", out toSet);
                 toSet.SetValue(lodgCost);
@@ -5416,7 +5469,7 @@ namespace TravelExpenses
                     toSet.SetValue(drCR["TotalCarRental"].ToString());
 
                     //totalCR = totalCR + Convert.ToDouble(drCR["TotalCarRental"].ToString());
-                    
+
                     //pdfFormFields.SetField("Car Type" + carRow, drCR["CarType"].ToString()); //commented for net6
                     fields.TryGetValue("Car Type" + carRow, out toSet);
                     toSet.SetValue(drCR["CarType"].ToString());
@@ -5472,7 +5525,7 @@ namespace TravelExpenses
                 }
                 drCR.Close();
                 string carCost = totalCR.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostCar Rental", carCost); //commented for net6
                 fields.TryGetValue("CostCar Rental", out toSet);
                 toSet.SetValue(carCost);
@@ -5505,7 +5558,7 @@ namespace TravelExpenses
                     }
 
                     //details
-                    DateTime depDateFligh = Convert.ToDateTime(drAF["DepartureDate"].ToString()); 
+                    DateTime depDateFligh = Convert.ToDateTime(drAF["DepartureDate"].ToString());
                     //pdfFormFields.SetField("Flight_Departure Date" + flightRow, depDateFligh.ToShortDateString()); //commented for net6
                     fields.TryGetValue("Flight_Departure Date" + flightRow, out toSet);
                     toSet.SetValue(depDateFligh.ToShortDateString());
@@ -5522,7 +5575,7 @@ namespace TravelExpenses
                     toSet.SetValue(drAF["AirFareTotal"].ToString());
 
                     //totalAF = totalAF + Convert.ToDouble(drAF["AirFareTotal"].ToString());
-                    
+
                     //pdfFormFields.SetField("Flight Taxes  Fees" + flightRow, drAF["TaxesAndFees"].ToString()); //commented for net6
                     fields.TryGetValue("Flight Taxes  Fees" + flightRow, out toSet);
                     toSet.SetValue(drAF["TaxesAndFees"].ToString());
@@ -5554,7 +5607,7 @@ namespace TravelExpenses
                 }
                 drAF.Close();
                 string flightCost = totalAF.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostAir Fare", flightCost); //commented for net6
                 fields.TryGetValue("CostAir Fare", out toSet);
                 toSet.SetValue(flightCost);
@@ -5685,7 +5738,7 @@ namespace TravelExpenses
                 }
                 drOE.Close();
                 string oeCost = totalOE.ToString("C", CultureInfo.CurrentCulture).Substring(1);
-                
+
                 //pdfFormFields.SetField("CostOther Expenses", oeCost); //commented for net6
                 fields.TryGetValue("CostOther Expenses", out toSet);
                 toSet.SetValue(oeCost);
