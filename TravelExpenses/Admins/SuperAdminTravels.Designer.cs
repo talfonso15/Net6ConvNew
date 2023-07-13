@@ -73,10 +73,10 @@
             pnCriteria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pnCriteria.Controls.Add(tableLayoutPanel1);
             pnCriteria.Controls.Add(btnShow);
-            pnCriteria.Location = new System.Drawing.Point(24, 35);
-            pnCriteria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pnCriteria.Location = new System.Drawing.Point(27, 47);
+            pnCriteria.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             pnCriteria.Name = "pnCriteria";
-            pnCriteria.Size = new System.Drawing.Size(736, 125);
+            pnCriteria.Size = new System.Drawing.Size(841, 166);
             pnCriteria.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -90,14 +90,14 @@
             tableLayoutPanel1.Controls.Add(cbtravels, 1, 0);
             tableLayoutPanel1.Controls.Add(cbEmployee, 1, 1);
             tableLayoutPanel1.Controls.Add(cbDepartments, 1, 2);
-            tableLayoutPanel1.Location = new System.Drawing.Point(21, 13);
-            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel1.Location = new System.Drawing.Point(24, 17);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(586, 99);
+            tableLayoutPanel1.Size = new System.Drawing.Size(670, 132);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // lblShowBy
@@ -105,10 +105,10 @@
             lblShowBy.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblShowBy.AutoSize = true;
             lblShowBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblShowBy.Location = new System.Drawing.Point(4, 8);
-            lblShowBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblShowBy.Location = new System.Drawing.Point(5, 12);
+            lblShowBy.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblShowBy.Name = "lblShowBy";
-            lblShowBy.Size = new System.Drawing.Size(157, 17);
+            lblShowBy.Size = new System.Drawing.Size(179, 20);
             lblShowBy.TabIndex = 0;
             lblShowBy.Text = "Filter travels by:";
             // 
@@ -117,10 +117,10 @@
             lblEmployee.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblEmployee.AutoSize = true;
             lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblEmployee.Location = new System.Drawing.Point(4, 42);
-            lblEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblEmployee.Location = new System.Drawing.Point(5, 57);
+            lblEmployee.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblEmployee.Name = "lblEmployee";
-            lblEmployee.Size = new System.Drawing.Size(157, 15);
+            lblEmployee.Size = new System.Drawing.Size(179, 18);
             lblEmployee.TabIndex = 1;
             lblEmployee.Text = "Select Employee:";
             // 
@@ -129,10 +129,10 @@
             lblDepartments.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             lblDepartments.AutoSize = true;
             lblDepartments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            lblDepartments.Location = new System.Drawing.Point(4, 75);
-            lblDepartments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDepartments.Location = new System.Drawing.Point(5, 101);
+            lblDepartments.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblDepartments.Name = "lblDepartments";
-            lblDepartments.Size = new System.Drawing.Size(157, 15);
+            lblDepartments.Size = new System.Drawing.Size(179, 18);
             lblDepartments.TabIndex = 2;
             lblDepartments.Text = "Select Department:";
             // 
@@ -141,10 +141,10 @@
             cbtravels.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             cbtravels.FormattingEnabled = true;
             cbtravels.Items.AddRange(new object[] { "All", "Department", "Employee" });
-            cbtravels.Location = new System.Drawing.Point(169, 5);
-            cbtravels.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbtravels.Location = new System.Drawing.Point(194, 8);
+            cbtravels.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             cbtravels.Name = "cbtravels";
-            cbtravels.Size = new System.Drawing.Size(413, 23);
+            cbtravels.Size = new System.Drawing.Size(471, 28);
             cbtravels.TabIndex = 3;
             cbtravels.SelectedIndexChanged += cbtravels_SelectedIndexChanged;
             // 
@@ -152,10 +152,10 @@
             // 
             cbEmployee.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             cbEmployee.FormattingEnabled = true;
-            cbEmployee.Location = new System.Drawing.Point(169, 38);
-            cbEmployee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbEmployee.Location = new System.Drawing.Point(194, 52);
+            cbEmployee.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             cbEmployee.Name = "cbEmployee";
-            cbEmployee.Size = new System.Drawing.Size(413, 23);
+            cbEmployee.Size = new System.Drawing.Size(471, 28);
             cbEmployee.TabIndex = 4;
             // 
             // cbDepartments
@@ -163,10 +163,10 @@
             cbDepartments.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             cbDepartments.FormattingEnabled = true;
             cbDepartments.Items.AddRange(new object[] { "Accounting/Purchasing 101", "Air/Flee/Bldg & Grounds 102", "Educ & Communication 103", "Executive 104", "Field Validation 105", "Mosquito Group 106", "Pilots 107", "Scientific Intelligence 108", "Hyacinth", "Commissioners" });
-            cbDepartments.Location = new System.Drawing.Point(169, 71);
-            cbDepartments.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            cbDepartments.Location = new System.Drawing.Point(194, 96);
+            cbDepartments.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             cbDepartments.Name = "cbDepartments";
-            cbDepartments.Size = new System.Drawing.Size(413, 23);
+            cbDepartments.Size = new System.Drawing.Size(471, 28);
             cbDepartments.TabIndex = 5;
             // 
             // btnShow
@@ -177,10 +177,10 @@
             btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnShow.Image = (System.Drawing.Image)resources.GetObject("btnShow.Image");
             btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnShow.Location = new System.Drawing.Point(621, 82);
-            btnShow.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnShow.Location = new System.Drawing.Point(710, 109);
+            btnShow.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             btnShow.Name = "btnShow";
-            btnShow.Size = new System.Drawing.Size(106, 38);
+            btnShow.Size = new System.Drawing.Size(121, 51);
             btnShow.TabIndex = 1;
             btnShow.Text = "Show";
             btnShow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -192,10 +192,10 @@
             panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel2.Controls.Add(tableLayoutPanel2);
             panel2.Controls.Add(dgvTravels);
-            panel2.Location = new System.Drawing.Point(24, 193);
-            panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel2.Location = new System.Drawing.Point(27, 257);
+            panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(1162, 475);
+            panel2.Size = new System.Drawing.Size(1328, 633);
             panel2.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -219,12 +219,12 @@
             tableLayoutPanel2.Controls.Add(label1, 3, 0);
             tableLayoutPanel2.Controls.Add(label4, 1, 0);
             tableLayoutPanel2.Controls.Add(btnDelete, 2, 0);
-            tableLayoutPanel2.Location = new System.Drawing.Point(814, 14);
-            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tableLayoutPanel2.Location = new System.Drawing.Point(930, 19);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new System.Drawing.Size(340, 47);
+            tableLayoutPanel2.Size = new System.Drawing.Size(389, 63);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // btnChangeStatus
@@ -233,10 +233,10 @@
             btnChangeStatus.FlatAppearance.BorderSize = 0;
             btnChangeStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnChangeStatus.Image = (System.Drawing.Image)resources.GetObject("btnChangeStatus.Image");
-            btnChangeStatus.Location = new System.Drawing.Point(4, 3);
-            btnChangeStatus.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnChangeStatus.Location = new System.Drawing.Point(5, 5);
+            btnChangeStatus.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             btnChangeStatus.Name = "btnChangeStatus";
-            btnChangeStatus.Size = new System.Drawing.Size(45, 40);
+            btnChangeStatus.Size = new System.Drawing.Size(51, 53);
             btnChangeStatus.TabIndex = 8;
             toolTip1.SetToolTip(btnChangeStatus, "Change Status");
             btnChangeStatus.UseVisualStyleBackColor = true;
@@ -249,10 +249,10 @@
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnClose.Image = (System.Drawing.Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new System.Drawing.Point(287, 3);
-            btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnClose.Location = new System.Drawing.Point(330, 5);
+            btnClose.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             btnClose.Name = "btnClose";
-            btnClose.Size = new System.Drawing.Size(46, 40);
+            btnClose.Size = new System.Drawing.Size(53, 53);
             btnClose.TabIndex = 2;
             toolTip1.SetToolTip(btnClose, "Close");
             btnClose.UseVisualStyleBackColor = true;
@@ -263,10 +263,10 @@
             label3.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(267, 15);
-            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Location = new System.Drawing.Point(309, 21);
+            label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(9, 17);
+            label3.Size = new System.Drawing.Size(10, 20);
             label3.TabIndex = 5;
             label3.Text = "|";
             label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -277,10 +277,10 @@
             btnPDF.FlatAppearance.BorderSize = 0;
             btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnPDF.Image = (System.Drawing.Image)resources.GetObject("btnPDF.Image");
-            btnPDF.Location = new System.Drawing.Point(214, 3);
-            btnPDF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnPDF.Location = new System.Drawing.Point(248, 5);
+            btnPDF.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             btnPDF.Name = "btnPDF";
-            btnPDF.Size = new System.Drawing.Size(45, 40);
+            btnPDF.Size = new System.Drawing.Size(51, 53);
             btnPDF.TabIndex = 1;
             toolTip1.SetToolTip(btnPDF, "Generate PDF");
             btnPDF.UseVisualStyleBackColor = true;
@@ -291,10 +291,10 @@
             label2.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(197, 15);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Location = new System.Drawing.Point(228, 21);
+            label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(9, 17);
+            label2.Size = new System.Drawing.Size(10, 20);
             label2.TabIndex = 4;
             label2.Text = "|";
             label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,10 +305,10 @@
             btnView.FlatAppearance.BorderSize = 0;
             btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnView.Image = (System.Drawing.Image)resources.GetObject("btnView.Image");
-            btnView.Location = new System.Drawing.Point(144, 3);
-            btnView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnView.Location = new System.Drawing.Point(167, 5);
+            btnView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             btnView.Name = "btnView";
-            btnView.Size = new System.Drawing.Size(45, 40);
+            btnView.Size = new System.Drawing.Size(51, 53);
             btnView.TabIndex = 0;
             toolTip1.SetToolTip(btnView, "View Details");
             btnView.UseVisualStyleBackColor = true;
@@ -319,10 +319,10 @@
             label1.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(127, 15);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Location = new System.Drawing.Point(147, 21);
+            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(9, 17);
+            label1.Size = new System.Drawing.Size(10, 20);
             label1.TabIndex = 3;
             label1.Text = "|";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -333,10 +333,10 @@
             label4.Anchor = System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(57, 15);
-            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label4.Location = new System.Drawing.Point(66, 21);
+            label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(9, 17);
+            label4.Size = new System.Drawing.Size(10, 20);
             label4.TabIndex = 7;
             label4.Text = "|";
             label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -348,10 +348,10 @@
             btnDelete.FlatAppearance.BorderSize = 0;
             btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnDelete.Image = (System.Drawing.Image)resources.GetObject("btnDelete.Image");
-            btnDelete.Location = new System.Drawing.Point(74, 3);
-            btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDelete.Location = new System.Drawing.Point(86, 5);
+            btnDelete.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new System.Drawing.Size(45, 40);
+            btnDelete.Size = new System.Drawing.Size(51, 53);
             btnDelete.TabIndex = 6;
             toolTip1.SetToolTip(btnDelete, "Delete Travel");
             btnDelete.UseVisualStyleBackColor = true;
@@ -364,18 +364,20 @@
             dgvTravels.AllowUserToResizeRows = false;
             dgvTravels.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTravels.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Departure, Return, Event, Destination, Employee, Status, Total, TravelID, UserID });
-            dgvTravels.Location = new System.Drawing.Point(21, 68);
-            dgvTravels.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dgvTravels.Location = new System.Drawing.Point(24, 91);
+            dgvTravels.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             dgvTravels.MultiSelect = false;
             dgvTravels.Name = "dgvTravels";
             dgvTravels.ReadOnly = true;
+            dgvTravels.RowHeadersWidth = 51;
             dgvTravels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            dgvTravels.Size = new System.Drawing.Size(1118, 383);
+            dgvTravels.Size = new System.Drawing.Size(1278, 511);
             dgvTravels.TabIndex = 0;
             // 
             // Departure
             // 
             Departure.HeaderText = "Departure";
+            Departure.MinimumWidth = 6;
             Departure.Name = "Departure";
             Departure.ReadOnly = true;
             Departure.Width = 80;
@@ -383,6 +385,7 @@
             // Return
             // 
             Return.HeaderText = "Return";
+            Return.MinimumWidth = 6;
             Return.Name = "Return";
             Return.ReadOnly = true;
             Return.Width = 80;
@@ -390,6 +393,7 @@
             // Event
             // 
             Event.HeaderText = "Event";
+            Event.MinimumWidth = 6;
             Event.Name = "Event";
             Event.ReadOnly = true;
             Event.Width = 250;
@@ -397,6 +401,7 @@
             // Destination
             // 
             Destination.HeaderText = "Destination";
+            Destination.MinimumWidth = 6;
             Destination.Name = "Destination";
             Destination.ReadOnly = true;
             Destination.Width = 225;
@@ -404,6 +409,7 @@
             // Employee
             // 
             Employee.HeaderText = "Employee";
+            Employee.MinimumWidth = 6;
             Employee.Name = "Employee";
             Employee.ReadOnly = true;
             Employee.Width = 140;
@@ -411,6 +417,7 @@
             // Status
             // 
             Status.HeaderText = "Status";
+            Status.MinimumWidth = 6;
             Status.Name = "Status";
             Status.ReadOnly = true;
             Status.Width = 70;
@@ -418,6 +425,7 @@
             // Total
             // 
             Total.HeaderText = "Total";
+            Total.MinimumWidth = 6;
             Total.Name = "Total";
             Total.ReadOnly = true;
             Total.Width = 60;
@@ -425,16 +433,20 @@
             // TravelID
             // 
             TravelID.HeaderText = "TravelID";
+            TravelID.MinimumWidth = 6;
             TravelID.Name = "TravelID";
             TravelID.ReadOnly = true;
             TravelID.Visible = false;
+            TravelID.Width = 125;
             // 
             // UserID
             // 
             UserID.HeaderText = "UserID";
+            UserID.MinimumWidth = 6;
             UserID.Name = "UserID";
             UserID.ReadOnly = true;
             UserID.Visible = false;
+            UserID.Width = 125;
             // 
             // toolTip1
             // 
@@ -443,12 +455,12 @@
             // SuperAdminTravels
             // 
             AcceptButton = btnShow;
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1222, 696);
+            ClientSize = new System.Drawing.Size(1397, 928);
             Controls.Add(panel2);
             Controls.Add(pnCriteria);
-            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "SuperAdminTravels";

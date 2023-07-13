@@ -44,7 +44,7 @@ namespace TravelExpenses
 
             cbtravels.SelectedItem = "All";
 
-            pnCriteria.Size = new System.Drawing.Size(736, 51);
+            pnCriteria.Size = new System.Drawing.Size(841, 67);
 
             //string username = "";
             Guid logUser = new Guid(CommonVariables.user);
@@ -260,7 +260,7 @@ namespace TravelExpenses
             {
                 lblEmployee.Visible = true;
                 cbEmployee.Visible = true;
-                pnCriteria.Size = new System.Drawing.Size(736, 87);
+                pnCriteria.Size = new System.Drawing.Size(841, 107);
             }
             else
             {
@@ -268,18 +268,18 @@ namespace TravelExpenses
                 cbEmployee.Visible = false;
                 if (cbtravels.SelectedItem.ToString() == "Department")
                 {
-                    pnCriteria.Size = new System.Drawing.Size(736, 125);
+                    pnCriteria.Size = new System.Drawing.Size(841, 166);
                 }
                 else if (cbtravels.SelectedItem.ToString() == "All")
                 {
-                    pnCriteria.Size = new System.Drawing.Size(736, 51);
+                    pnCriteria.Size = new System.Drawing.Size(841, 67);
                 }
             }
             if (cbtravels.SelectedItem.ToString() == "Department")
             {
                 lblDepartments.Visible = true;
                 cbDepartments.Visible = true;
-                pnCriteria.Size = new System.Drawing.Size(736, 125);
+                pnCriteria.Size = new System.Drawing.Size(841, 166);
             }
             else
             {
@@ -287,11 +287,11 @@ namespace TravelExpenses
                 cbDepartments.Visible = false;
                 if (cbtravels.SelectedItem.ToString() == "Employee")
                 {
-                    pnCriteria.Size = new System.Drawing.Size(736, 87);
+                    pnCriteria.Size = new System.Drawing.Size(841, 107);
                 }
                 else if (cbtravels.SelectedItem.ToString() == "All")
                 {
-                    pnCriteria.Size = new System.Drawing.Size(736, 51);
+                    pnCriteria.Size = new System.Drawing.Size(841, 67);
                 }
             }
         }
