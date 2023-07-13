@@ -4,7 +4,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>\\LCMCDSQL\ServiceRequest_Test\Travel Expenses\</PublishUrl>
+    <PublishUrl>\\lcmcdsql\ServiceRequest\TravelExpenses v2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -14,7 +14,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>\\LCMCDSQL\ServiceRequest_Test\Travel Expenses\</UpdateUrl>
+    <UpdateUrl>\\lcmcdsql\ServiceRequest\TravelExpenses v2\</UpdateUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>167</ApplicationRevision>
@@ -28,7 +28,7 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>B9744396F0D2FF3CE33FBD442D61E54A3640D265</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>7D93E4EF0B76CB9C52D62DA848F849108BC85085</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>TravelExpenses_TemporaryKey.pfx</ManifestKeyFile>
@@ -41,6 +41,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>1491947336_icon-58.ico</ApplicationIcon>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BetterSplitButton, Version=3.15.0.0, Culture=neutral, PublicKeyToken=e6c91a3add447be2, processorArchitecture=MSIL" />

@@ -78,7 +78,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>w9Cp7xRCHSb6dbdh3ZHGZAQSh2xpxlYqmX8eSt+YaoU=</dsig:DigestValue>
+      <dsig:DigestValue>UmNvl7jiGrTZALStFyvsIsKMoyjoH5628eSvKJOBQis=</dsig:DigestValue>
     </hash>
   </file>
   <file name="BouncyCastle.Crypto.dll" size="2932912">
@@ -168,7 +168,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>gL46vxTf1sjPh+7/Lh4l3tW+yzYXELq2rKhGfei0j6w=</dsig:DigestValue>
+      <dsig:DigestValue>PKvOrzGQEPRDpINmS+ppUF4EbZd5amhxYzDOB5OeUs8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="it\System.Private.ServiceModel.resources.dll" size="219512">
@@ -1392,16 +1392,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>qAKQA0+YWHxm6FktHRvuFFe/XqeEshe+BphD/w5Cf6g=</dsig:DigestValue>
+      <dsig:DigestValue>1Dai752l9JV95CtiRGqaH6oFpglBSC6EtbekKBHv/rQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TravelExpenses.dll.config" size="1300">
+  <file name="TravelExpenses.dll.config" size="80">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ftgvKWvCjsxasMLKlh63JBCv0AVF/2vloH723gDQSEg=</dsig:DigestValue>
+      <dsig:DigestValue>Eb/Ua4ajoFWyFH3GXLvley+g+4lT+AGkSotpr9mBfs4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TravelExpenses.exe" size="524800">

@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "TravelExpenses.Properties.Settings.TravelExpensesConnectionString": "Data Source=LCMCDSQL\\SQL2014;Initial Catalog=TravelExpenses;Integrated Security=True"
+  }
+}

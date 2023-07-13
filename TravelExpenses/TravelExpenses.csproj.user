@@ -12,6 +12,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
+    <_LastSelectedProfileId>C:\Users\Thaisa\Desktop\Travel Expenses Conv\TravelExpenses\Properties\PublishProfiles\ClickOnceProfile5.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="Admins\Admin.cs">

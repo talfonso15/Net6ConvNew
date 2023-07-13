@@ -8,20 +8,20 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="file://lcmcdsql/ServiceRequest_Test/Travel%20Expenses/TravelExpenses.application" />
+    <deploymentProvider codebase="file://lcmcdsql/ServiceRequest/TravelExpenses%20v2/TravelExpenses.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="TravelExpenses.dll.manifest" size="69132">
+    <dependentAssembly dependencyType="install" codebase="TravelExpenses.dll.manifest" size="69130">
       <assemblyIdentity name="TravelExpenses.exe" version="1.0.0.167" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZeHB1SKtCT4H9pU28LxMtgkxT5CeH2ZTdhPvQrXqSM4=</dsig:DigestValue>
+        <dsig:DigestValue>kahe3hVMoqMSPrKhruqNVKs8k3e/Q/zLBb3oYYD6cic=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
